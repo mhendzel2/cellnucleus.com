@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cell Imaging Database - Enhanced | CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .methodology-card { transition: all 0.3s ease; border-left: 4px solid #3b82f6; }
+        .methodology-card:hover { border-left-color: #1d4ed8; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">Live Cell Imaging Database</h1>
+                    <p class="text-xl opacity-90">Dynamic Nuclear Processes in Living Cells</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-lg">CellNucleus.com</p>
+                    <p class="opacity-75">Enhanced Collection</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="#overview" class="text-blue-600 hover:text-blue-800 font-medium">Overview</a>
+                    <a href="#methodologies" class="text-blue-600 hover:text-blue-800 font-medium">Methodologies</a>
+                    <a href="#dynamic-processes" class="text-blue-600 hover:text-blue-800 font-medium">Dynamic Processes</a>
+                    <a href="#comprehensive-reviews" class="text-blue-600 hover:text-blue-800 font-medium">Reviews</a>
+                    <a href="#applications" class="text-blue-600 hover:text-blue-800 font-medium">Applications</a>
+                </div>
+                <a href="/" class="text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-home mr-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-12">
+            <div class="bg-white rounded-lg card-shadow p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                    <i class="fas fa-microscope mr-3 text-blue-600"></i>
+                    Studying Nuclear Dynamics in Living Cells
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Live cell imaging has revolutionized our understanding of nuclear organization and dynamics. 
+                            By visualizing the living nucleus in real-time, we can observe the dynamic properties of the 
+                            genome and nuclear structures, revealing insights into transcription, replication, DNA repair, 
+                            and RNA processing that are impossible to obtain from fixed specimens.
+                        </p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <h3 class="font-semibold text-blue-800 mb-2">Key Advantages:</h3>
+                            <ul class="text-blue-700 space-y-1">
+                                <li>• Real-time observation of nuclear processes</li>
+                                <li>• Quantitative analysis of molecular kinetics</li>
+                                <li>• Single-cell resolution and heterogeneity</li>
+                                <li>• Temporal correlation of multiple processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <img src="https://www.researchgate.net/publication/277489510/figure/fig3/AS:11431281177795699@1690614322914/The-GFP-tagged-PCNA-labels-subnuclear-DNA-replication-factories-A-The-subcellular.jpeg" 
+                             alt="GFP-tagged PCNA in replication factories" 
+                             class="rounded-lg shadow-lg mx-auto hover-scale">
+                        <p class="text-sm text-gray-600 mt-2">GFP-tagged PCNA labels subnuclear DNA replication factories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodologies Section -->
+        <section id="methodologies" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                <i class="fas fa-cogs mr-3 text-green-600"></i>
+                Live Imaging Methodologies
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- FRAP -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-chart-line text-3xl text-blue-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">FRAP Analysis</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Fluorescence Recovery After Photobleaching measures molecular diffusion and binding kinetics 
+                        within nuclear compartments.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Protein residence times, chromatin accessibility, 
+                        nuclear body dynamics
+                    </div>
+                </div>
+
+                <!-- FCS -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-wave-square text-3xl text-green-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">FCS Techniques</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Fluorescence Correlation Spectroscopy analyzes fluctuations in fluorescence intensity 
+                        to measure molecular concentrations and dynamics.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Molecular counting, interaction analysis, 
+                        oligomerization states
+                    </div>
+                </div>
+
+                <!-- Time-lapse -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-clock text-3xl text-purple-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">Time-lapse Microscopy</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Long-term imaging of cellular processes to capture nuclear reorganization, 
+                        cell cycle progression, and stress responses.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Cell cycle analysis, stress response, 
+                        developmental processes
+                    </div>
+                </div>
+
+                <!-- Single-molecule -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-dot-circle text-3xl text-red-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">Single-Molecule Tracking</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Individual molecule visualization to understand local environments and 
+                        heterogeneity in nuclear processes.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Transcription factor search, DNA repair tracking, 
+                        enzyme kinetics
+                    </div>
+                </div>
+
+                <!-- Multicolor -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-palette text-3xl text-yellow-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">Multicolor Imaging</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Simultaneous visualization of multiple nuclear components to study 
+                        interactions and colocalization.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Protein-protein interactions, pathway analysis, 
+                        nuclear organization
+                    </div>
+                </div>
+
+                <!-- 4D Imaging -->
+                <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cube text-3xl text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold">4D Microscopy</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Three-dimensional imaging over time to capture the complete spatial-temporal 
+                        dynamics of nuclear processes.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded text-sm">
+                        <strong>Applications:</strong> Nuclear architecture, organelle dynamics, 
+                        chromosome movement
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Processes Section -->
+        <section id="dynamic-processes" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                <i class="fas fa-sync-alt mr-3 text-purple-600"></i>
+                Dynamic Nuclear Processes
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- DNA Replication -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">DNA Replication Dynamics</h3>
+                    <div class="mb-4">
+                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fncomms11231/MediaObjects/41467_2016_Article_BFncomms11231_Fig1_HTML.jpg" 
+                             alt="4D visualization of replication foci" 
+                             class="w-full rounded-lg shadow-md hover-scale">
+                        <p class="text-sm text-gray-600 mt-2">4D visualization of replication foci in mammalian cells</p>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Live imaging reveals the spatiotemporal organization of DNA replication into discrete 
+                        nuclear factories that change pattern and location throughout S-phase.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Key Observations:</h4>
+                        <ul class="text-blue-700 text-sm space-y-1">
+                            <li>• Early S-phase: Small, punctate foci (euchromatin)</li>
+                            <li>• Mid S-phase: Larger foci at nuclear periphery</li>
+                            <li>• Late S-phase: Intense foci surrounding nucleolus</li>
+                            <li>• Dynamic protein exchange within stable factories</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Transcription Dynamics -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-800">Transcriptional Dynamics</h3>
+                    <div class="mb-4">
+                        <img src="https://www.researchgate.net/publication/6329399/figure/fig1/AS:667222578065422@1536089667825/Localization-of-DNA-replication-foci-and-PCNA-in-interphase-nuclei-of-individual-subphase.png" 
+                             alt="PCNA and replication foci dynamics" 
+                             class="w-full rounded-lg shadow-md hover-scale">
+                        <p class="text-sm text-gray-600 mt-2">Localization of replication foci and PCNA in interphase nuclei</p>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Real-time visualization of transcription reveals burst kinetics, polymerase trafficking, 
+                        and the formation of transcriptional condensates.
+                    </p>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">Dynamic Features:</h4>
+                        <ul class="text-green-700 text-sm space-y-1">
+                            <li>• Transcriptional bursting and stochastic activation</li>
+                            <li>• RNA polymerase II clustering and tracking</li>
+                            <li>• Nuclear speckle dynamics and splicing</li>
+                            <li>• Stress-induced transcriptional reorganization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DNA Repair -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-800">DNA Repair Focus Dynamics</h3>
+                    <div class="mb-4">
+                        <img src="https://www.researchgate.net/publication/228116551/figure/fig10/AS:391693615550466@1470398443584/Evolution-of-DNA-damage-dependent-g-H2AX-green-and-53BP1-red-focus-formation-as.png" 
+                             alt="DNA damage foci evolution" 
+                             class="w-full rounded-lg shadow-md hover-scale">
+                        <p class="text-sm text-gray-600 mt-2">Evolution of DNA damage-dependent γ-H2AX and 53BP1 focus formation</p>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Live tracking of DNA repair foci reveals the temporal recruitment of repair factors 
+                        and the coordination of multiple repair pathways.
+                    </p>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-800 mb-2">Repair Dynamics:</h4>
+                        <ul class="text-red-700 text-sm space-y-1">
+                            <li>• Hierarchical protein recruitment to damage sites</li>
+                            <li>• Focus formation and resolution kinetics</li>
+                            <li>• Checkpoint activation and signaling</li>
+                            <li>• Repair pathway choice and competition</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Nuclear Bodies -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-800">Nuclear Body Dynamics</h3>
+                    <div class="mb-4">
+                        <img src="https://www.researchgate.net/publication/277489510/figure/fig5/AS:11431281177786125@1690614323519/Dynamics-of-replication-factories-in-living-cells-A-Two-possible-models-to-explain-the.jpeg" 
+                             alt="Nuclear factory dynamics models" 
+                             class="w-full rounded-lg shadow-md hover-scale">
+                        <p class="text-sm text-gray-600 mt-2">Two models explaining nuclear factory dynamics in living cells</p>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Nuclear bodies exhibit complex dynamics including fusion, fission, movement, 
+                        and compositional changes throughout the cell cycle.
+                    </p>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">Body Behaviors:</h4>
+                        <ul class="text-purple-700 text-sm space-y-1">
+                            <li>• Cajal body mobility and gene targeting</li>
+                            <li>• Nuclear speckle reorganization during stress</li>
+                            <li>• PML body formation and dissolution</li>
+                            <li>• Nucleolar dynamics during ribosome biogenesis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Reviews Section -->
+        <section id="comprehensive-reviews" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                <i class="fas fa-book-open mr-3 text-indigo-600"></i>
+                Comprehensive Reviews Collection
+            </h2>
+            
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
+                <p class="text-lg text-gray-700 mb-6">
+                    Explore our extensive collection of comprehensive reviews covering all aspects of nuclear biology 
+                    and live cell imaging techniques. Each review provides in-depth analysis with the latest research findings.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Live Cell Reviews -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+                        <h3 class="font-semibold text-lg mb-2 text-blue-800">Live Cell Imaging</h3>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="live_cell_transcription_imaging_review.html" class="text-blue-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Live Cell Transcription Imaging
+                            </a></li>
+                            <li><a href="nuclear_stress_response_review.html" class="text-blue-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Stress Response
+                            </a></li>
+                            <li><a href="intranuclear_mrna_transport_review.html" class="text-blue-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Intranuclear mRNA Transport
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- DNA Dynamics -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+                        <h3 class="font-semibold text-lg mb-2 text-green-800">DNA Dynamics</h3>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="dna_replication_site_dynamics_review.html" class="text-green-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>DNA Replication Site Dynamics
+                            </a></li>
+                            <li><a href="dsb_repair_foci_comprehensive_review.html" class="text-green-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>DSB Repair Foci Architecture
+                            </a></li>
+                            <li><a href="chromatin_architecture_dynamics_review.html" class="text-green-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Chromatin Architecture Dynamics
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Nuclear Bodies -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+                        <h3 class="font-semibold text-lg mb-2 text-purple-800">Nuclear Bodies</h3>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="cajal_bodies_comprehensive_review.html" class="text-purple-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Cajal Bodies Dynamics
+                            </a></li>
+                            <li><a href="nuclear_speckles_comprehensive_review.html" class="text-purple-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Speckles
+                            </a></li>
+                            <li><a href="paraspeckles_comprehensive_review.html" class="text-purple-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Paraspeckles
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Nuclear Architecture -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+                        <h3 class="font-semibold text-lg mb-2 text-red-800">Nuclear Architecture</h3>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="nuclear_envelope_comprehensive_review.html" class="text-red-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Envelope
+                            </a></li>
+                            <li><a href="nuclear_pore_complex_comprehensive_review.html" class="text-red-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Pore Complex
+                            </a></li>
+                            <li><a href="nuclear_lamina_comprehensive_review.html" class="text-red-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Lamina
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Condensates -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+                        <h3 class="font-semibold text-lg mb-2 text-yellow-800">Biomolecular Condensates</h3>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="nuclear_condensates_comprehensive_review.html" class="text-yellow-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Condensates
+                            </a></li>
+                            <li><a href="transcriptional_condensates_comprehensive_review.html" class="text-yellow-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Transcriptional Condensates
+                            </a></li>
+                            <li><a href="nuclear_biophysical_properties_review.html" class="text-yellow-600 hover:underline">
+                                <i class="fas fa-external-link-alt mr-1"></i>Nuclear Biophysical Properties
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Complete Collection -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover-scale border-2 border-indigo-200">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-800">Complete Collection</h3>
+                        <p class="text-sm text-gray-600 mb-3">Access all 25 comprehensive reviews</p>
+                        <a href="nuclear_biology_reviews_index.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-list mr-2"></i>View All Reviews
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="applications" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                <i class="fas fa-flask mr-3 text-teal-600"></i>
+                Research Applications
+            </h2>
+            
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Basic Research -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-800">Basic Research</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Nuclear organization mechanisms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Chromatin dynamics and regulation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>Gene expression control</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+                            <span>DNA repair pathway analysis</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Disease Research -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-red-800">Disease Research</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Cancer cell nuclear abnormalities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Aging and senescence markers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Neurodegenerative processes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+                            <span>Viral infection responses</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Drug Development -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Drug Development</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Target identification and validation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Compound screening assays</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Mechanism of action studies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+                            <span>Toxicity and safety assessment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Information -->
+        <section class="bg-gray-800 text-white rounded-lg p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">About This Database</h3>
+                    <p class="text-gray-300 mb-4">
+                        This enhanced live cell imaging database integrates cutting-edge research with comprehensive 
+                        educational resources. All content is based on peer-reviewed research and provides both 
+                        methodological guidance and theoretical frameworks.
+                    </p>
+                    <p class="text-gray-300">
+                        Original content provided by the Michael Hendzel Laboratory, Department of Oncology, 
+                        University of Alberta, enhanced with comprehensive review collection.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Navigation</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <a href="/" class="text-blue-300 hover:text-blue-100 block mb-2">Home</a>
+                            <a href="nuclear_biology_reviews_index.html" class="text-blue-300 hover:text-blue-100 block mb-2">All Reviews</a>
+                            <a href="enhanced_structures_database.html" class="text-blue-300 hover:text-blue-100 block mb-2">Structures Database</a>
+                        </div>
+                        <div>
+                            <a href="#methodologies" class="text-blue-300 hover:text-blue-100 block mb-2">Methodologies</a>
+                            <a href="#dynamic-processes" class="text-blue-300 hover:text-blue-100 block mb-2">Dynamic Processes</a>
+                            <a href="#applications" class="text-blue-300 hover:text-blue-100 block mb-2">Applications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 mt-6 text-center text-gray-400">
+                <p>&copy; 2007-2025 Michael J. Hendzel, Ph.D., Department of Oncology, University of Alberta</p>
+                <p class="mt-2">Enhanced with comprehensive nuclear biology review collection</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsCv4DUvp2ryuPH%2Bs42wplQIhaPTsZkdstOpjfs1MLpnhMwi%2B4BFYf324Pm9psquETefsiW956HFxlE1pTaJ2AhYFMUoCZUiJxiVsnaW1BTKwJXFqMzEQr7dEPOp%2FhheuBJpeC0FH6lu9JjRx%2F0%2Bb324BXZpT596DCeh25MZS1CgSinI%2FdrxIz%2F3W9MT9ZyHWPhCyeMlaIv10dXtYlRAQT6voesQAtvfRzINiv0yHcUXT7P8XGjVr3bUQPWJJ%2B5ZDLIi0Jv4wJ1fRckrJs%2B5sSYWiUFnwkT4uyTr0AGlnipJodPOhYi7Rpa3%2F5man%2BQ8qT0%2BMIFWZb4v5bwJuQXb1rHnnUiVtcWt2P1SsTVjA7z2uJB3SEnFnxybMsaAQNvyZ28pmSAvGkjHYvjfc9xvfiEb65y5AxsMMA0yQH7zbpKZRRUjWe4ZgzVlxf%2FqN1oWiE6N5mG48aj6yYY6s8JLyis6kU%2FE%2Fn6HcrgAHbAHmL2A6UaBISwUYl84GYhx1fSX8FMfgc0eCDIIDirhthraWHc%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsCv4DUvp2ryuPH+s42wplQIhaPTsZkdstOpjfs1MLpnhMwi+4BFYf324Pm9psquETefsiW956HFxlE1pTaJ2AhYFMUoCZUiJxiVsnaW1BTKwJXFqMzEQr7dEPOp/hheuBJpeC0FH6lu9JjRx/0+b324BXZpT596DCeh25MZS1CgSinI/drxIz/3W9MT9ZyHWPhCyeMlaIv10dXtYlRAQT6voesQAtvfRzINiv0yHcUXT7P8XGjVr3bUQPWJJ+5ZDLIi0Jv4wJ1fRckrJs+5sSYWiUFnwkT4uyTr0AGlnipJodPOhYi7Rpa3/5man+Q8qT0+MIFWZb4v5bwJuQXb1rHnnUiVtcWt2P1SsTVjA7z2uJB3SEnFnxybMsaAQNvyZ28pmSAvGkjHYvjfc9xvfiEb65y5AxsMMA0yQH7zbpKZRRUjWe4ZgzVlxf/qN1oWiE6N5mG48aj6yYY6s8JLyis6kU/E/n6HcrgAHbAHmL2A6UaBISwUYl84GYhx1fSX8FMfgc0eCDIIDirhthraWHc=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
