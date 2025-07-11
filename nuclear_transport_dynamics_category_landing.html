@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Transport & Dynamics - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">CellNucleus.com</h1>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Research Categories</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-4">
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400 text-xs"></i></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Research Categories</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400 text-xs"></i></li>
+                    <li><span class="text-gray-500 text-sm">Nuclear Transport & Dynamics</span></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-bg relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Nuclear Transport & Dynamics</h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8">8 Comprehensive Reviews • Nucleocytoplasmic Transport • Nuclear Pore Complex</p>
+                <div class="max-w-4xl mx-auto">
+                    <img src="images/nuclear_pores/nuclear_pore_cellular_environment_nature.png" 
+                         alt="Nuclear Pore Complex in Cellular Environment" 
+                         class="rounded-lg shadow-2xl mx-auto max-h-96 object-contain">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Category Overview -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Nuclear transport and dynamics encompass the regulated exchange of macromolecules between the nucleus and cytoplasm, the organization of nuclear pore complexes, and the dynamic processes that maintain nuclear-cytoplasmic communication. This collection of 8 comprehensive reviews explores the molecular mechanisms, regulation, and significance of nucleocytoplasmic transport systems.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Key Research Areas</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-door-open text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Nuclear Pore Complex</h4>
+                                <p class="text-gray-600">Structure, assembly, and function of nuclear gates</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-exchange-alt text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Import/Export Machinery</h4>
+                                <p class="text-gray-600">Importins, exportins, and cargo recognition</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-dna text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">RNA Transport</h4>
+                                <p class="text-gray-600">Nuclear export of various RNA species</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-microscope text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Microscopy Advances</h4>
+                                <p class="text-gray-600">Visualization of transport processes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Collection -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Reviews Collection (8 Reviews)</h2>
+            
+            <!-- Nuclear Pore Complex -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-blue-700 mb-6">Nuclear Pore Complex</h3>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-start">
+                        <i class="fas fa-door-open text-blue-600 text-2xl mr-4 mt-1"></i>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Nuclear Pore Complex Comprehensive Review</h4>
+                            <p class="text-gray-600 mb-3">Structure, assembly, and function of nuclear pore complexes</p>
+                            <p class="text-sm text-gray-500 mb-4">Key Topics: Nucleoporins, FG-repeat domains, transport selectivity, pore assembly</p>
+                            <a href="nuclear_biology_reviews/nuclear_pore_complex_comprehensive_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transport Mechanisms -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-green-700 mb-6">Transport Mechanisms</h3>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-start">
+                        <i class="fas fa-exchange-alt text-green-600 text-2xl mr-4 mt-1"></i>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Nuclear Transport Compartment Dynamics</h4>
+                            <p class="text-gray-600 mb-3">Compartmentalization and regulation of nuclear transport</p>
+                            <p class="text-sm text-gray-500 mb-4">Key Topics: Ran gradient, importin/exportin cycles, cargo specificity</p>
+                            <a href="nuclear_biology_reviews/nuclear_transport_compartment_dynamics.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RNA Transport & Processing -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-purple-700 mb-6">RNA Transport & Processing</h3>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-start">
+                        <i class="fas fa-dna text-purple-600 text-2xl mr-4 mt-1"></i>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Intranuclear RNA Transport Imaging Review</h4>
+                            <p class="text-gray-600 mb-3">Visualization and dynamics of RNA trafficking within the nucleus</p>
+                            <p class="text-sm text-gray-500 mb-4">Key Topics: mRNA export, RNA localization, splicing-export coupling</p>
+                            <a href="nuclear_biology_reviews/intranuclear_rna_transport_imaging_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuclear Dynamics & Biophysics -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-red-700 mb-6">Nuclear Dynamics & Biophysics</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-line text-red-600 text-xl mr-3 mt-1"></i>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Nuclear Microrheology Detailed Review</h4>
+                                <p class="text-gray-600 mb-3 text-sm">Mechanical properties and molecular dynamics within the nucleus</p>
+                                <a href="nuclear_biology_reviews/nuclear_microrheology_detailed_review.html" 
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-area text-red-600 text-xl mr-3 mt-1"></i>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Nuclear Microrheology Enhanced Graphics</h4>
+                                <p class="text-gray-600 mb-3 text-sm">Advanced visualization of nuclear mechanical properties</p>
+                                <a href="nuclear_biology_reviews/nuclear_microrheology_enhanced_graphics.html" 
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="flex items-start">
+                            <i class="fas fa-atom text-red-600 text-xl mr-3 mt-1"></i>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Nuclear Polymer Phase Separation Review</h4>
+                                <p class="text-gray-600 mb-3 text-sm">Phase separation phenomena in nuclear organization</p>
+                                <a href="nuclear_biology_reviews/nuclear_polymer_phase_separation_review.html" 
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="flex items-start">
+                            <i class="fas fa-circle text-red-600 text-xl mr-3 mt-1"></i>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Phase Separation Nucleus Review</h4>
+                                <p class="text-gray-600 mb-3 text-sm">Phase separation mechanisms in nuclear compartmentalization</p>
+                                <a href="nuclear_biology_reviews/phase_separation_nucleus_review.html" 
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Microscopy -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6">Advanced Microscopy</h3>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="flex items-start">
+                        <i class="fas fa-microscope text-indigo-600 text-2xl mr-4 mt-1"></i>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">ESI Nuclear Analysis Microscopy Review</h4>
+                            <p class="text-gray-600 mb-3">Advanced microscopy techniques for nuclear analysis</p>
+                            <p class="text-sm text-gray-500 mb-4">Key Topics: Super-resolution imaging, live-cell analysis, nuclear dynamics visualization</p>
+                            <a href="nuclear_biology_reviews/esi_nuclear_analysis_microscopy_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Themes -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Research Themes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Transport Mechanisms</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Nuclear Import pathways</li>
+                        <li>• Nuclear Export routes</li>
+                        <li>• Bidirectional Transport</li>
+                        <li>• Size Selectivity</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-door-open text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Nuclear Pore Complex</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Nucleoporin organization</li>
+                        <li>• Pore biogenesis</li>
+                        <li>• Cell cycle regulation</li>
+                        <li>• Disease mechanisms</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-atom text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Nuclear Organization</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Compartmentalization</li>
+                        <li>• Protein/RNA mobility</li>
+                        <li>• Phase Separation</li>
+                        <li>• Crowding Effects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transport Pathways -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Transport Pathways</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">Protein Import</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                            <span><strong>Classical NLS:</strong> Importin-α/β-mediated nuclear import</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                            <span><strong>Non-classical Pathways:</strong> Alternative import mechanisms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                            <span><strong>Cargo Recognition:</strong> Nuclear localization signal diversity</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">RNA Export</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-left text-green-500 mt-1 mr-2"></i>
+                            <span><strong>mRNA Export:</strong> TAP/NXF1-mediated mRNA nuclear export</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-left text-green-500 mt-1 mr-2"></i>
+                            <span><strong>tRNA Export:</strong> Exportin-t and tRNA trafficking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-left text-green-500 mt-1 mr-2"></i>
+                            <span><strong>miRNA Export:</strong> microRNA nuclear-cytoplasmic transport</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-purple-700 mb-4">Quality Control</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span><strong>Export Surveillance:</strong> mRNA quality control mechanisms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span><strong>Retention Mechanisms:</strong> Nuclear retention of defective RNAs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span><strong>Stress Responses:</strong> Transport shutdown during cellular stress</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clinical Significance -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Clinical Significance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-red-700 mb-4">Disease Mechanisms</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Nucleoporinopathies</li>
+                        <li>• Viral Hijacking</li>
+                        <li>• Cancer Transport Dysregulation</li>
+                        <li>• Neurodegeneration</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">Therapeutic Targets</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Nuclear Export Inhibitors</li>
+                        <li>• Transport Modulators</li>
+                        <li>• Antiviral Strategies</li>
+                        <li>• Neuroprotection</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Diagnostic Applications</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Transport Biomarkers</li>
+                        <li>• Imaging Diagnostics</li>
+                        <li>• Drug Screening</li>
+                        <li>• Nuclear-cytoplasmic ratios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Categories -->
+        <div class="bg-gray-100 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Related Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-lg font-bold text-blue-700 mb-2">Nuclear Envelope & Lamins</h3>
+                    <p class="text-gray-600 text-sm">Nuclear pore complex integration</p>
+                </a>
+                <a href="#" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-lg font-bold text-green-700 mb-2">Nuclear Bodies & Compartments</h3>
+                    <p class="text-gray-600 text-sm">Transport to nuclear domains</p>
+                </a>
+                <a href="#" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-lg font-bold text-purple-700 mb-2">Epigenetics & Gene Regulation</h3>
+                    <p class="text-gray-600 text-sm">RNA export and gene expression</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Research Highlights -->
+        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg p-8 text-white mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Research Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <i class="fas fa-atom text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Cryo-EM Structures</h3>
+                    <p class="text-indigo-100">High-resolution nuclear pore complex architecture</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-circle-nodes text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Phase Separation</h3>
+                    <p class="text-indigo-100">Role in nuclear organization and transport</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Single-Cell Analysis</h3>
+                    <p class="text-indigo-100">Heterogeneity in transport dynamics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-lg font-bold mb-4">CellNucleus.com</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive nuclear biology research resource with 71+ expert reviews covering all aspects of nuclear structure and function.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">All Reviews</a></li>
+                        <li><a href="#" class="hover:text-white">Categories</a></li>
+                        <li><a href="#" class="hover:text-white">Search</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: info@cellnucleus.com</li>
+                        <li>Research Inquiries</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm">
+                        © 2024 CellNucleus.com. Scientific images courtesy of Nature Publishing Group, Springer Nature, and other academic publishers. Used under fair use for educational purposes.
+                    </p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDh6Z2%2F47rp7WDjnca08NRrmk7mp5nXN%2BGbdxIxRLQkpwpXOSlWC4qZtjIhCx9T%2B0vZ63lbP8UAip46qjVfCun6m3rItPKcZzGDB2yY2%2BQ0Hkr%2F33MGvIyFGwgEvIxGfVQd9B1tEQrvocI9%2Fl%2FG5KWYfXr4HqUc7VizJZnxQqOPda293sAEmF89lvxR6fz%2BFxE8T8YqifiU7WfmTfCuwRYhYImPOBelnTyQ4D4XlX8JU%2BgQ0glf6j%2BNfzt%2F6zr%2F1FZsYk6qEvmz8KY7M%2BM%2FoFBf4G62CqTSbydoVUnFjFrxBAmAGPynAYVgSn%2FfQ1bhK1CfL%2BwDW4iRpS6oC2JOD7XBIMv57Ax14Ib%2FDby1WrPRAanfWiH%2FSxubpWcH7ZRN6QlYGIBso97v48nqEDJ%2BdPe8kyWE2RJftWK1Cin4MSSj%2FqbDMC%2B08VoGkihvYODCCZHwAyQrR6vtYoG5Z7iEqx75TOYRk%2BHawU7i1L1Rrz0OgYsdQgI868Mm7snA9YUkTs9Ql9TnIDh%2B1jW7x5%2BM3ZwubmCbazfULwlRVhSgPnn6Ew";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDh6Z2/47rp7WDjnca08NRrmk7mp5nXN+GbdxIxRLQkpwpXOSlWC4qZtjIhCx9T+0vZ63lbP8UAip46qjVfCun6m3rItPKcZzGDB2yY2+Q0Hkr/33MGvIyFGwgEvIxGfVQd9B1tEQrvocI9/l/G5KWYfXr4HqUc7VizJZnxQqOPda293sAEmF89lvxR6fz+FxE8T8YqifiU7WfmTfCuwRYhYImPOBelnTyQ4D4XlX8JU+gQ0glf6j+Nfzt/6zr/1FZsYk6qEvmz8KY7M+M/oFBf4G62CqTSbydoVUnFjFrxBAmAGPynAYVgSn/fQ1bhK1CfL+wDW4iRpS6oC2JOD7XBIMv57Ax14Ib/Dby1WrPRAanfWiH/SxubpWcH7ZRN6QlYGIBso97v48nqEDJ+dPe8kyWE2RJftWK1Cin4MSSj/qbDMC+08VoGkihvYODCCZHwAyQrR6vtYoG5Z7iEqx75TOYRk+HawU7i1L1Rrz0OgYsdQgI868Mm7snA9YUkTs9Ql9TnIDh+1jW7x5+M3ZwubmCbazfULwlRVhSgPnn6Ew";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

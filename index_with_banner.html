@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com - Nuclear Biology Research Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Horizontal Banner -->
+    <header class="bg-white shadow-md border-b-2 border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo and Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dna text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">CellNucleus</h1>
+                        <p class="text-sm text-gray-600">Nuclear Biology Hub</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-blue-600 font-medium">Home</a>
+                    <a href="#research-reviews" class="nav-link text-gray-700 font-medium">Research Reviews</a>
+                    <a href="#microscopy" class="nav-link text-gray-700 font-medium">Microscopy</a>
+                    <a href="#nuclear-structure" class="nav-link text-gray-700 font-medium">Nuclear Structure</a>
+                    <a href="#downloads" class="nav-link text-gray-700 font-medium">Downloads</a>
+                    <a href="#about" class="nav-link text-gray-700 font-medium">About</a>
+                </nav>
+
+                <!-- Contact Info -->
+                <div class="text-right text-sm">
+                    <div class="text-gray-600">Contact: <a href="mailto:mhendzel@ualberta.ca" class="text-blue-600 hover:underline">mhendzel@ualberta.ca</a></div>
+                    <div class="text-gray-600">Share: <span class="text-blue-600">www.cellnucleus.com</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Hero Section -->
+        <section id="home" class="text-center mb-16">
+            <div class="mb-8">
+                <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">Nuclear Biology Hub</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive research platform for nuclear biology education and discovery.
+                    Access 37+ research reviews, microscopy galleries, and educational resources.
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" placeholder="Ask anything about nuclear biology, search research topics..." 
+                           class="w-full px-6 py-4 text-lg border-2 border-green-300 rounded-full focus:outline-none focus:border-green-500 shadow-lg">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-green-500">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book-open text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">All Research Reviews</h3>
+                    <p class="text-gray-600 mb-6">Browse 37+ comprehensive research articles</p>
+                    <a href="#research-reviews" class="text-blue-600 hover:underline font-medium">Explore Reviews →</a>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Microscopy Gallery</h3>
+                    <p class="text-gray-600 mb-6">High-resolution nuclear imaging collection</p>
+                    <a href="#microscopy" class="text-green-600 hover:underline font-medium">View Gallery →</a>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Educational Resources</h3>
+                    <p class="text-gray-600 mb-6">Teaching materials and study guides</p>
+                    <a href="#about" class="text-purple-600 hover:underline font-medium">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Reviews Section -->
+        <section id="research-reviews" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Research Reviews by Topic</h2>
+            
+            <!-- Chromatin & Gene Expression -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                    <i class="fas fa-dna mr-3"></i>
+                    Chromatin & Gene Expression
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/chromosome_condensation_mechanisms_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Chromosome Condensation Mechanisms</h4>
+                        <p class="text-sm text-gray-600">Architecture of inheritance and temporal regulation</p>
+                        <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">NEW</span>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/chromatin_biophysics_function_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Chromatin Biophysics and Function</h4>
+                        <p class="text-sm text-gray-600">Genome biophysical landscape</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/chromatin_condensates_critical_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Chromatin Condensates Critical Review</h4>
+                        <p class="text-sm text-gray-600">Biophysical principles & controversies</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/euchromatin_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Euchromatin Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">Structure, function, and regulation</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/heterochromatin_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Heterochromatin Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">Chromatin organization and gene silencing</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/histone_ptms_neurodegeneration_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Histone PTMs in Neurodegeneration</h4>
+                        <p class="text-sm text-gray-600">Disease-specific mechanisms</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Microscopy Section -->
+            <div class="mb-12" id="microscopy">
+                <h3 class="text-2xl font-bold text-green-600 mb-6 flex items-center">
+                    <i class="fas fa-microscope mr-3"></i>
+                    Advanced Microscopy & Analysis
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/esi_nuclear_analysis_microscopy_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">The Architecture of Life: Advanced Microscopy Review</h4>
+                        <p class="text-sm text-gray-600">4D nucleome, FCS, FRAP, single-molecule tracking</p>
+                        <span class="inline-block mt-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">NEWEST</span>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/live_cell_transcription_imaging_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Live-Cell Transcription Imaging</h4>
+                        <p class="text-sm text-gray-600">Real-time visualization of gene expression</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/intranuclear_rna_transport_imaging_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Intranuclear RNA Transport Imaging</h4>
+                        <p class="text-sm text-gray-600">Advanced microscopy techniques</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Nuclear Bodies & Organelles -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6 flex items-center" id="nuclear-structure">
+                    <i class="fas fa-circle-nodes mr-3"></i>
+                    Nuclear Bodies & Organelles
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/nuclear_speckles_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Nuclear Speckles Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">RNA processing and splicing domains</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/cajal_bodies_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Cajal Bodies Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">Nuclear organelle biology and function</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/nucleolus_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Nucleolus Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">Ribosome biogenesis and nuclear organization</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/paraspeckles_comprehensive_review.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Paraspeckles Comprehensive Review</h4>
+                        <p class="text-sm text-gray-600">Nuclear bodies and RNA regulation</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Biophysics & Mechanics -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-red-600 mb-6 flex items-center">
+                    <i class="fas fa-wave-square mr-3"></i>
+                    Biophysics & Mechanics
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/nuclear_microrheology_enhanced_graphics.html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Nuclear Microrheology Enhanced</h4>
+                        <p class="text-sm text-gray-600">Viscoelastic properties with graphics</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/nuclear_viscosity_properties_regulation(1).html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Nuclear Viscosity Properties</h4>
+                        <p class="text-sm text-gray-600">Multiscale material properties</p>
+                    </a>
+                    <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews/nuclear_macromolecular_crowding_review(1).html" 
+                       class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100">
+                        <h4 class="font-semibold text-gray-900 mb-2">Nuclear Macromolecular Crowding</h4>
+                        <p class="text-sm text-gray-600">Biophysical crowding framework</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="mb-16 bg-white rounded-xl p-8 shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Downloads</h2>
+            <p class="text-center text-gray-600 mb-8">Access original source documents and materials</p>
+            <div class="text-center">
+                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews" 
+                   class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                    <i class="fas fa-download mr-2"></i>
+                    Download Source Documents
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">About CellNucleus.com</h2>
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-gray-700 mb-6">
+                        CellNucleus.com is a comprehensive research platform dedicated to advancing our understanding 
+                        of nuclear biology through cutting-edge research, advanced microscopy, and educational resources.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Our platform features 37 comprehensive research reviews covering all aspects of nuclear biology, 
+                        from chromatin dynamics and gene expression to advanced microscopy techniques and biophysical analysis.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-900 mb-3">Research Areas</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Chromatin Structure & Dynamics</li>
+                                <li>• Nuclear Bodies & Organelles</li>
+                                <li>• Advanced Microscopy Techniques</li>
+                                <li>• Nuclear Biophysics & Mechanics</li>
+                                <li>• Gene Expression Regulation</li>
+                            </ul>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-900 mb-3">Resources</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 37+ Comprehensive Research Reviews</li>
+                                <li>• Advanced Microscopy Gallery</li>
+                                <li>• Educational Materials</li>
+                                <li>• Source Document Downloads</li>
+                                <li>• Research Collaboration Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t-2 border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <div class="mb-6">
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-share-alt mr-2"></i>
+                        Share with Colleagues
+                    </button>
+                </div>
+                <p class="text-gray-600">Spread Nuclear Biology Knowledge</p>
+                <div class="mt-4 space-y-1">
+                    <p class="text-sm text-gray-500">Contact: <a href="mailto:mhendzel@ualberta.ca" class="text-blue-600 hover:underline">mhendzel@ualberta.ca</a></p>
+                    <p class="text-sm text-gray-500">Website: <span class="text-blue-600">www.cellnucleus.com</span></p>
+                    <p class="text-xs text-gray-400 mt-4">© 2024 CellNucleus.com - Nuclear Biology Research Hub</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Search functionality
+        document.querySelector('input[type="text"]').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.toLowerCase();
+                const reviewLinks = document.querySelectorAll('a[href*="nuclear_biology_reviews"]');
+                reviewLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    const parent = link.closest('.grid > *');
+                    if (text.includes(query) || query === '') {
+                        parent.style.display = 'block';
+                    } else {
+                        parent.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpJALTNZtsE%2BNugoEBwfAVSTjQ1LbCdm1BR4%2BEqDuSiNIrJgnZTKtPN5CTlIyhBS0DD8gxAmGJDsBkZFTcHDu8uopbuJp3tDzbZspqbnv0EBY6zMgU5BkYNpkbDXpYtm7windzGdUfvo0UkFthP%2Fo1GLNeEnid41TTjQRXnOoYtTvqHuKkK0EEjLFMcQDaT%2B0Xh8quzwr7cRpTtOwfZTtxZPRxJAJ%2BATtHWjv9O17m8ofOBksCnfCieoifnTjHuw20ilWGdNXUAX5QKCXa0uXlHgrXiY%2Fk4C1UIhrD0mQCqf4trgHS2D2F0V3vxjnCDLPPG1TI9Qt%2F4dtZdwxbeiWubCH8hrXH8o2Lhzhud4Yd4R%2BlRafAWyaBnX3ShfNMTynWn0hTV2Hif%2FS%2FIr8CZgs8VbkRdkJ4cuIUkcHoI4GAu9JgK1RD2MQegJMy6FJEy%2F0iEBqH0xBUIl339ajU3jyEtUeSagMAkXAZ5YmpuQ9e9uK%2Fz%2BXjddjJJQf1QK%2F38LsHwvdYx1EC2gIfxU8aKdiaU%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpJALTNZtsE+NugoEBwfAVSTjQ1LbCdm1BR4+EqDuSiNIrJgnZTKtPN5CTlIyhBS0DD8gxAmGJDsBkZFTcHDu8uopbuJp3tDzbZspqbnv0EBY6zMgU5BkYNpkbDXpYtm7windzGdUfvo0UkFthP/o1GLNeEnid41TTjQRXnOoYtTvqHuKkK0EEjLFMcQDaT+0Xh8quzwr7cRpTtOwfZTtxZPRxJAJ+ATtHWjv9O17m8ofOBksCnfCieoifnTjHuw20ilWGdNXUAX5QKCXa0uXlHgrXiY/k4C1UIhrD0mQCqf4trgHS2D2F0V3vxjnCDLPPG1TI9Qt/4dtZdwxbeiWubCH8hrXH8o2Lhzhud4Yd4R+lRafAWyaBnX3ShfNMTynWn0hTV2Hif/S/Ir8CZgs8VbkRdkJ4cuIUkcHoI4GAu9JgK1RD2MQegJMy6FJEy/0iEBqH0xBUIl339ajU3jyEtUeSagMAkXAZ5YmpuQ9e9uK/z+XjddjJJQf1QK/38LsHwvdYx1EC2gIfxU8aKdiaU=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

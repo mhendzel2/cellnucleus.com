@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histone Deacetylase Superfamily Review - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .category-badge {
+            background: linear-gradient(135deg, #8E44AD, #9B59B6);
+        }
+        .hero-image {
+            background: linear-gradient(rgba(142, 68, 173, 0.1), rgba(142, 68, 173, 0.1));
+        }
+        .table-of-contents a {
+            transition: all 0.3s ease;
+        }
+        .table-of-contents a:hover {
+            color: #8E44AD;
+            transform: translateX(5px);
+        }
+        .sidebar-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid #8E44AD;
+        }
+        .main-content h3 {
+            color: #2d3748;
+            border-bottom: 2px solid #8E44AD;
+            padding-bottom: 0.5rem;
+        }
+        .main-content h4 {
+            color: #4a5568;
+        }
+        .key-points li::before {
+            content: "▶";
+            color: #8E44AD;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center text-sm text-gray-600 mb-2">
+                <a href="#" class="hover:text-purple-600">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <a href="#" class="hover:text-purple-600">Epigenetics & Gene Regulation</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-gray-800">Histone Deacetylase Superfamily Review</span>
+            </nav>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <span class="category-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Epigenetics & Gene Regulation
+                    </span>
+                    <h1 class="text-2xl font-bold text-gray-800">CellNucleus.com</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 text-sm">
+                    <span><i class="fas fa-calendar-alt text-purple-600"></i> Published: June 2024</span>
+                    <span><i class="fas fa-clock text-purple-600"></i> 45 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <!-- Title Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                        Histone Deacetylase Superfamily: From Catalytic Mechanisms to Therapeutic Frontiers
+                    </h1>
+                    <div class="flex flex-wrap items-center text-sm text-gray-600 mb-6">
+                        <span class="mr-6"><i class="fas fa-user text-purple-600"></i> Dr. Michael Hendzel, University of Alberta</span>
+                        <span class="mr-6"><i class="fas fa-calendar text-purple-600"></i> Last Updated: June 27, 2025</span>
+                        <span><i class="fas fa-clock text-purple-600"></i> Reading Time: 45 minutes</span>
+                    </div>
+                    
+                    <!-- Hero Image -->
+                    <div class="hero-image rounded-lg p-6 mb-6">
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center mb-4">
+                            <div class="text-center text-gray-600">
+                                <i class="fas fa-microscope text-6xl mb-4 text-purple-600"></i>
+                                <p class="text-lg font-medium">Super-resolution Chromatin Microscopy</p>
+                                <p class="text-sm">Chromatin decondensation and histone modification dynamics</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 italic text-center">
+                            Super-resolution microscopy revealing chromatin decondensation and the dynamic regulation of histone modifications. 
+                            Image courtesy of Nature Scientific Reports, doi:10.1038/srep04477
+                        </p>
+                    </div>
+
+                    <!-- Abstract -->
+                    <div class="bg-purple-50 border-l-4 border-purple-600 p-6 mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Abstract</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            The human histone deacetylase (HDAC) superfamily comprises 18 enzymes that serve as master regulators of the cellular acetylome, 
+                            controlling gene expression, chromatin structure, and cellular homeostasis. This comprehensive review examines the classification, 
+                            catalytic mechanisms, biological functions, and therapeutic targeting of both zinc-dependent and NAD+-dependent deacetylases.
+                        </p>
+                    </div>
+
+                    <!-- Key Points -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Key Points</h2>
+                        <ul class="key-points space-y-3 text-gray-700">
+                            <li>The HDAC superfamily consists of 18 enzymes classified into four classes based on sequence homology and cofactor requirements</li>
+                            <li>Class I, II, and IV HDACs are zinc-dependent metalloproteases, while Class III sirtuins require NAD+ as a cofactor</li>
+                            <li>HDACs target thousands of acetylated lysine residues on nuclear, cytoplasmic, and mitochondrial proteins</li>
+                            <li>Aberrant HDAC expression is implicated in cancer, neurodegeneration, metabolic disorders, and inflammatory diseases</li>
+                            <li>HDAC inhibitors represent a promising therapeutic strategy with several FDA-approved drugs for cancer treatment</li>
+                        </ul>
+                    </div>
+
+                    <!-- Table of Contents -->
+                    <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                        <ol class="table-of-contents space-y-2 text-gray-700">
+                            <li><a href="#section1" class="hover:text-purple-600">1. Introduction to Lysine Acylation and Cellular Regulation</a></li>
+                            <li><a href="#section2" class="hover:text-purple-600">2. Classification and Cofactor Dependencies of Human HDACs</a></li>
+                            <li><a href="#section3" class="hover:text-purple-600">3. Part I: Zinc-Dependent Deacetylases (Classes I, II, and IV)</a></li>
+                            <li><a href="#section4" class="hover:text-purple-600">4. Class I HDACs: Nuclear Transcriptional Regulators</a></li>
+                            <li><a href="#section5" class="hover:text-purple-600">5. Class IIa HDACs: Signal-Responsive Shuttling Enzymes</a></li>
+                            <li><a href="#section6" class="hover:text-purple-600">6. Class IIb HDACs: Cytoplasmic and Specialized Functions</a></li>
+                            <li><a href="#section7" class="hover:text-purple-600">7. Part II: NAD+-Dependent Deacylases (Class III Sirtuins)</a></li>
+                            <li><a href="#section8" class="hover:text-purple-600">8. Sirtuin Family: Cellular Energy Sensors and Longevity Regulators</a></li>
+                            <li><a href="#section9" class="hover:text-purple-600">9. HDAC Redundancy, Specificity, and Functional Overlap</a></li>
+                            <li><a href="#section10" class="hover:text-purple-600">10. Disease Implications and Therapeutic Targeting Strategies</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Main Content Sections -->
+                <div class="main-content bg-white rounded-lg shadow-lg p-8 space-y-8">
+                    <section id="section1">
+                        <h3 class="text-2xl font-bold mb-4">1. Introduction to Lysine Acylation and Cellular Regulation</h3>
+                        <p class="text-gray-700 mb-4">
+                            Post-translational modifications represent fundamental mechanisms by which cellular complexity emerges from the finite genome. 
+                            Among these modifications, reversible lysine acylation has emerged as a central regulatory node influencing gene expression, 
+                            metabolism, signal transduction, and protein stability.
+                        </p>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Historical Context</h4>
+                        <p class="text-gray-700 mb-4">
+                            The discovery of histone acetylation in the 1960s marked the beginning of our understanding of epigenetic regulation. 
+                            The subsequent identification of histone acetyltransferases (HATs) and histone deacetylases (HDACs) revealed the dynamic 
+                            nature of chromatin modification.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mb-3">Functional Significance</h4>
+                        <p class="text-gray-700 mb-2">Lysine acetylation serves multiple regulatory functions:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Neutralization of positive lysine charges affecting protein-DNA interactions</li>
+                            <li>Creation of binding sites for bromodomain-containing proteins</li>
+                            <li>Regulation of protein stability and subcellular localization</li>
+                            <li>Modulation of enzyme activity and protein-protein interactions</li>
+                        </ul>
+                    </section>
+
+                    <section id="section2">
+                        <h3 class="text-2xl font-bold mb-4">2. Classification and Cofactor Dependencies of Human HDACs</h3>
+                        <p class="text-gray-700 mb-4">
+                            The 18 human HDACs are categorized into four classes based on sequence homology to yeast orthologs, 
+                            cofactor requirements, and catalytic mechanisms.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mb-3">Class Distribution</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Class I:</strong> HDAC1, 2, 3, 8 (nuclear, zinc-dependent)</li>
+                                <li><strong>Class IIa:</strong> HDAC4, 5, 7, 9 (shuttling, zinc-dependent)</li>
+                                <li><strong>Class IIb:</strong> HDAC6, 10 (cytoplasmic, zinc-dependent)</li>
+                                <li><strong>Class IV:</strong> HDAC11 (nuclear/cytoplasmic, zinc-dependent)</li>
+                                <li><strong>Class III:</strong> SIRT1-7 (diverse localization, NAD+-dependent)</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Cofactor Requirements</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li><strong>Zinc-Dependent Classes (I, II, IV):</strong> Require Zn²⁺ for catalytic activity</li>
+                            <li><strong>NAD+-Dependent Class (III):</strong> Utilize NAD+ as stoichiometric cofactor</li>
+                        </ul>
+                    </section>
+
+                    <section id="section3">
+                        <h3 class="text-2xl font-bold mb-4">3. Part I: Zinc-Dependent Deacetylases (Classes I, II, and IV)</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Structural Architecture</h4>
+                        <p class="text-gray-700 mb-2">All zinc-dependent HDACs share a conserved catalytic domain containing:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-4">
+                            <li>Active site zinc ion coordinated by two aspartate and one histidine residue</li>
+                            <li>Catalytic tyrosine residue for substrate positioning</li>
+                            <li>Substrate binding tunnel accommodating acetylated lysine</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold mb-3">Catalytic Mechanism</h4>
+                        <p class="text-gray-700 mb-2">The deacetylation reaction proceeds through:</p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Substrate binding and zinc coordination</li>
+                            <li>Nucleophilic attack by zinc-activated water molecule</li>
+                            <li>Tetrahedral intermediate formation</li>
+                            <li>Product release and enzyme regeneration</li>
+                        </ol>
+                    </section>
+
+                    <section id="section4">
+                        <h3 class="text-2xl font-bold mb-4">4. Class I HDACs: Nuclear Transcriptional Regulators</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">HDAC1 and HDAC2</h4>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Complexes:</strong> NuRD, Sin3A, CoREST complexes</li>
+                                <li><strong>Functions:</strong> Transcriptional repression, DNA repair, cell cycle control</li>
+                                <li><strong>Substrates:</strong> Core histones, p53, Rb, E2F1</li>
+                                <li><strong>Disease Relevance:</strong> Cancer, neurodegeneration</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">HDAC3</h4>
+                        <div class="bg-green-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Complexes:</strong> NCoR/SMRT corepressor complexes</li>
+                                <li><strong>Functions:</strong> Circadian regulation, metabolism, inflammatory responses</li>
+                                <li><strong>Unique Features:</strong> Requires association with NCoR/SMRT for activity</li>
+                                <li><strong>Therapeutic Targeting:</strong> Metabolic diseases, cancer</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">HDAC8</h4>
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Characteristics:</strong> Monomeric enzyme, unique among Class I HDACs</li>
+                                <li><strong>Functions:</strong> SMC3 deacetylation, cell cycle progression</li>
+                                <li><strong>Disease Associations:</strong> Cornelia de Lange syndrome, cancer</li>
+                                <li><strong>Structural Features:</strong> Flexible active site enabling substrate diversity</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section5">
+                        <h3 class="text-2xl font-bold mb-4">5. Class IIa HDACs: Signal-Responsive Shuttling Enzymes</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">HDAC4, 5, 7, 9</h4>
+                        <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Localization:</strong> Nuclear-cytoplasmic shuttling regulated by phosphorylation</li>
+                                <li><strong>Functions:</strong> Muscle differentiation, bone development, neuronal function</li>
+                                <li><strong>Regulation:</strong> 14-3-3 protein binding, CRM1-mediated export</li>
+                                <li><strong>Substrates:</strong> Primarily non-histone proteins including transcription factors</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Unique Features</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Large N-terminal regulatory domains</li>
+                            <li>Tissue-specific expression patterns</li>
+                            <li>Signal-dependent subcellular localization</li>
+                            <li>Association with MEF2 transcription factors</li>
+                        </ul>
+                    </section>
+
+                    <section id="section6">
+                        <h3 class="text-2xl font-bold mb-4">6. Class IIb HDACs: Cytoplasmic and Specialized Functions</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">HDAC6</h4>
+                        <div class="bg-red-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Localization:</strong> Predominantly cytoplasmic</li>
+                                <li><strong>Substrates:</strong> α-tubulin, cortactin, HSP90</li>
+                                <li><strong>Functions:</strong> Microtubule dynamics, protein trafficking, stress responses</li>
+                                <li><strong>Unique Features:</strong> Two catalytic domains, zinc-finger ubiquitin binding domain</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">HDAC10</h4>
+                        <div class="bg-indigo-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Characteristics:</strong> Cytoplasmic localization, polyamine deacetylase activity</li>
+                                <li><strong>Functions:</strong> Autophagy regulation, DNA repair</li>
+                                <li><strong>Substrates:</strong> Polyamines, selected proteins</li>
+                                <li><strong>Disease Relevance:</strong> Cancer, neurodegeneration</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section7">
+                        <h3 class="text-2xl font-bold mb-4">7. Part II: NAD+-Dependent Deacylases (Class III Sirtuins)</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Evolutionary Origin</h4>
+                        <p class="text-gray-700 mb-4">
+                            Sirtuins are evolutionarily conserved from bacteria to humans, reflecting their fundamental importance in 
+                            cellular metabolism and survival.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mb-3">Catalytic Mechanism</h4>
+                        <p class="text-gray-700 mb-2">Sirtuins utilize NAD+ as a stoichiometric cofactor, producing:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Deacylated substrate</li>
+                            <li>Nicotinamide</li>
+                            <li>O-acetyl-ADP-ribose</li>
+                        </ul>
+                    </section>
+
+                    <section id="section8">
+                        <h3 class="text-2xl font-bold mb-4">8. Sirtuin Family: Cellular Energy Sensors and Longevity Regulators</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Nuclear Sirtuins</h4>
+                        <div class="bg-teal-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>SIRT1:</strong> Histone deacetylation, p53 regulation, metabolic control</li>
+                                <li><strong>SIRT6:</strong> DNA repair, telomere maintenance, glucose homeostasis</li>
+                                <li><strong>SIRT7:</strong> rRNA transcription, ribosome biogenesis</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Cytoplasmic Sirtuins</h4>
+                        <div class="bg-orange-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>SIRT2:</strong> Tubulin deacetylation, cell cycle regulation</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Mitochondrial Sirtuins</h4>
+                        <div class="bg-pink-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>SIRT3:</strong> Metabolic enzyme deacetylation, oxidative stress response</li>
+                                <li><strong>SIRT4:</strong> ADP-ribosylation, metabolic regulation</li>
+                                <li><strong>SIRT5:</strong> Desuccinylation, demalonylation, metabolic control</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section9">
+                        <h3 class="text-2xl font-bold mb-4">9. HDAC Redundancy, Specificity, and Functional Overlap</h3>
+                        <p class="text-gray-700 mb-4">
+                            The HDAC superfamily exhibits both functional redundancy and specific roles, particularly evident in 
+                            HDAC1/HDAC2 relationships.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mb-3">Compensatory Mechanisms</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-4">
+                            <li>Overlapping substrate specificity</li>
+                            <li>Shared complex associations</li>
+                            <li>Developmental compensation</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold mb-3">Functional Specialization</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Tissue-specific expression</li>
+                            <li>Unique substrate preferences</li>
+                            <li>Distinct regulatory mechanisms</li>
+                        </ul>
+                    </section>
+
+                    <section id="section10">
+                        <h3 class="text-2xl font-bold mb-4">10. Disease Implications and Therapeutic Targeting Strategies</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Cancer Applications</h4>
+                        <div class="bg-red-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Approved HDAC Inhibitors:</strong> Vorinostat, romidepsin, belinostat, panobinostat</li>
+                                <li><strong>Mechanisms:</strong> Tumor suppressor reactivation, apoptosis induction</li>
+                                <li><strong>Combination Therapies:</strong> DNA methyltransferase inhibitors, immunotherapy</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Neurological Disorders</h4>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Targets:</strong> Memory formation, neuroprotection, synaptic plasticity</li>
+                                <li><strong>Therapeutic Potential:</strong> Alzheimer's disease, Huntington's disease</li>
+                                <li><strong>Challenges:</strong> Blood-brain barrier penetration, selectivity</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-lg font-semibold mb-3">Metabolic Diseases</h4>
+                        <div class="bg-green-50 p-4 rounded-lg mb-4">
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>Sirtuin Activators:</strong> Resveratrol, synthetic SIRT1 activators</li>
+                                <li><strong>Applications:</strong> Diabetes, obesity, aging-related disorders</li>
+                                <li><strong>Mechanisms:</strong> Metabolic enzyme regulation, mitochondrial biogenesis</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Clinical Applications -->
+                    <section class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">Clinical Applications</h3>
+                        
+                        <h4 class="text-lg font-semibold mb-3">Therapeutic Development</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-4">
+                            <li><strong>Pan-HDAC Inhibitors:</strong> Broad-spectrum activity, significant toxicity</li>
+                            <li><strong>Selective Inhibitors:</strong> Class- or isoform-specific targeting</li>
+                            <li><strong>Combination Strategies:</strong> Synergistic effects with other epigenetic drugs</li>
+                            <li><strong>Biomarker Development:</strong> Predictive markers for treatment response</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold mb-3">Drug Resistance Mechanisms</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li><strong>Upregulation:</strong> Compensatory HDAC expression</li>
+                            <li><strong>Mutations:</strong> Active site modifications</li>
+                            <li><strong>Efflux Pumps:</strong> Increased drug export</li>
+                            <li><strong>Alternative Pathways:</strong> Bypass mechanisms</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1 space-y-6">
+                <!-- Related Reviews -->
+                <div class="sidebar-section bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">
+                        <i class="fas fa-link text-purple-600 mr-2"></i>Related Reviews
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-blue-600 hover:text-purple-600 text-sm">Histone PTMs Comprehensive Review</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-purple-600 text-sm">Epigenetic Inheritance Complete</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-purple-600 text-sm">Chromatin Remodeling Complexes Review</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-purple-600 text-sm">Eukaryotic Gene Expression Review</a></li>
+                    </ul>
+                </div>
+
+                <!-- Key Terms -->
+                <div class="sidebar-section bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">
+                        <i class="fas fa-book text-purple-600 mr-2"></i>Key Terms
+                    </h3>
+                    <dl class="space-y-3 text-sm">
+                        <dt class="font-semibold text-gray-800">Histone Deacetylases (HDACs)</dt>
+                        <dd class="text-gray-600 ml-4">Enzymes that remove acetyl groups from lysine residues</dd>
+                        
+                        <dt class="font-semibold text-gray-800">Sirtuins</dt>
+                        <dd class="text-gray-600 ml-4">NAD+-dependent deacetylases with diverse acylation specificity</dd>
+                        
+                        <dt class="font-semibold text-gray-800">Bromodomains</dt>
+                        <dd class="text-gray-600 ml-4">Protein domains that recognize acetylated lysine residues</dd>
+                        
+                        <dt class="font-semibold text-gray-800">HDAC Inhibitors</dt>
+                        <dd class="text-gray-600 ml-4">Small molecules that block HDAC enzymatic activity</dd>
+                    </dl>
+                </div>
+
+                <!-- Quick Facts -->
+                <div class="sidebar-section bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">
+                        <i class="fas fa-chart-bar text-purple-600 mr-2"></i>Quick Facts
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>Total HDACs:</strong> 18 enzymes in human genome</li>
+                        <li><strong>Class I HDACs:</strong> Nuclear localization, transcriptional repression</li>
+                        <li><strong>Sirtuin substrates:</strong> >4,000 identified acetylated proteins</li>
+                        <li><strong>FDA approvals:</strong> 4 HDAC inhibitors for cancer treatment</li>
+                        <li><strong>Clinical trials:</strong> >100 ongoing studies with HDAC inhibitors</li>
+                    </ul>
+                </div>
+
+                <!-- Research Timeline -->
+                <div class="sidebar-section bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">
+                        <i class="fas fa-timeline text-purple-600 mr-2"></i>Research Timeline
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>1964:</strong> Discovery of histone acetylation</li>
+                        <li><strong>1996:</strong> First HDAC1 cloning and characterization</li>
+                        <li><strong>2000:</strong> Sirtuin NAD+ dependence discovered</li>
+                        <li><strong>2006:</strong> First HDAC inhibitor (vorinostat) FDA approval</li>
+                        <li><strong>2020s:</strong> Selective HDAC inhibitor development</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- References -->
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">References (Selection)</h3>
+                    <ol class="space-y-2 text-sm text-gray-300">
+                        <li>1. Seto & Yoshida (2014). Erasers of histone acetylation: the histone deacetylase enzymes. Cold Spring Harb Perspect Biol.</li>
+                        <li>2. Haberland et al. (2009). The many roles of histone deacetylases in development and physiology. Nat Rev Genet.</li>
+                        <li>3. Falkenberg & Johnstone (2014). Histone deacetylases and their inhibitors in cancer, neurological diseases and immune disorders. Nat Rev Drug Discov.</li>
+                        <li>4. Imai et al. (2000). Transcriptional silencing and longevity protein Sir2 is an NAD-dependent histone deacetylase. Nature.</li>
+                    </ol>
+                </div>
+
+                <!-- Attribution -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Image Attribution</h3>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Header image: Chromatin decondensation super-resolution microscopy, Nature Scientific Reports, 
+                        doi:10.1038/srep04477. Used under fair use for educational purposes.
+                    </p>
+                    
+                    <!-- Navigation -->
+                    <div class="flex flex-col space-y-2 text-sm">
+                        <a href="#" class="text-blue-400 hover:text-blue-300">← Previous Review: Histone PTMs Comprehensive Review</a>
+                        <a href="#" class="text-blue-400 hover:text-blue-300">Next Review: Epigenetic Inheritance Complete →</a>
+                        <a href="#" class="text-blue-400 hover:text-blue-300">Category: Epigenetics & Gene Regulation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 CellNucleus.com - Comprehensive Nuclear Biology Resource</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Reading progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            const progressBar = document.createElement('div');
+            
+            if (!document.querySelector('.progress-bar')) {
+                progressBar.className = 'progress-bar fixed top-0 left-0 h-1 bg-purple-600 z-50 transition-all duration-300';
+                progressBar.style.width = (scrollPercent * 100) + '%';
+                document.body.appendChild(progressBar);
+            } else {
+                document.querySelector('.progress-bar').style.width = (scrollPercent * 100) + '%';
+            }
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDhxYpmyTccV1BDaFtMc9BsKjBVGJGmQB1VzPfXH6WI%2FSbJ7O0EQhsoW7e1Esq2FctGwbzdybJJa9W3cVghJu7PMtdhDDtjoUTDXNARLUFjS%2FAoNR8qqQ9R6wRMx8PJKUpz4ujYe5gyRErYTQepOl9Ct3yQ2hEoU9N5srZGbSSt3iVQbubzJvbHzIDPypXos3sT94CBPtAGhv1f3NnRfREuaqS1UY1FLOK5cmbiWZRHN7I5mLWKWpAiYYZ9C6aXUUGgmYg0nw43aF7E3D3DhRW6YE6D1%2BQQrV3WBzc8ngVyOIb%2BEmXnAMoqPSwEWRaehQ9C06YQXtHYwwoCL46zSLoTP06%2BQHTvsYd%2FT487wSiKy5sgBlm%2Fk0fW01ekX%2BLeG3IgdVFk4o%2BEg9%2FvXJZoEYptDGjXQFwZGaruf%2Bp5ZvdrDAlof1tVH8UJInD5Y%2FOZ9NCjmLrTersb48%2FYzweE%2BtxijX3pKk%2BV8rkPgUsoZ%2FdVadMyzdjEqdCsbCxkpHfmaa302Z2kHgCAA%2BcyoJOozZGBg%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDhxYpmyTccV1BDaFtMc9BsKjBVGJGmQB1VzPfXH6WI/SbJ7O0EQhsoW7e1Esq2FctGwbzdybJJa9W3cVghJu7PMtdhDDtjoUTDXNARLUFjS/AoNR8qqQ9R6wRMx8PJKUpz4ujYe5gyRErYTQepOl9Ct3yQ2hEoU9N5srZGbSSt3iVQbubzJvbHzIDPypXos3sT94CBPtAGhv1f3NnRfREuaqS1UY1FLOK5cmbiWZRHN7I5mLWKWpAiYYZ9C6aXUUGgmYg0nw43aF7E3D3DhRW6YE6D1+QQrV3WBzc8ngVyOIb+EmXnAMoqPSwEWRaehQ9C06YQXtHYwwoCL46zSLoTP06+QHTvsYd/T487wSiKy5sgBlm/k0fW01ekX+LeG3IgdVFk4o+Eg9/vXJZoEYptDGjXQFwZGaruf+p5ZvdrDAlof1tVH8UJInD5Y/OZ9NCjmLrTersb48/YzweE+txijX3pKk+V8rkPgUsoZ/dVadMyzdjEqdCsbCxkpHfmaa302Z2kHgCAA+cyoJOozZGBg=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Bodies Comprehensive Review - CellNucleus.com</title>
+    <meta name="description" content="Comprehensive review of nuclear bodies, their structure, assembly, and regulation through phase separation mechanisms in cellular biology.">
+    <meta name="keywords" content="nuclear bodies, phase separation, nucleolus, nuclear speckles, Cajal bodies, PML bodies, nuclear biology">
+    <meta name="author" content="Dr. Michael Hendzel">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --accent-teal: #0d9488;
+            --success-green: #059669;
+            --warning-amber: #d97706;
+            --error-red: #dc2626;
+            --neutral-gray: #6b7280;
+            --light-gray: #f9fafb;
+            --border-gray: #e5e7eb;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .heading-font {
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .category-nuclear-bodies {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--accent-teal);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+        
+        .hero-image {
+            background: linear-gradient(rgba(13, 148, 136, 0.1), rgba(13, 148, 136, 0.1)), url('images/nuclear_bodies/nuclear_condensates_overview_springer.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .toc-item {
+            transition: all 0.2s ease;
+        }
+        
+        .toc-item:hover {
+            background-color: #f0fdfa;
+            border-left: 3px solid var(--accent-teal);
+            padding-left: 1rem;
+        }
+        
+        .sidebar-card {
+            background: #ffffff;
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section {
+            scroll-margin-top: 100px;
+        }
+        
+        .reference-item {
+            border-left: 3px solid var(--accent-teal);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+         {
+            .progress-bar, .sticky, .fixed {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+            }
+            
+            .sidebar-card {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Navigation -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-xl font-bold text-blue-600 heading-font">CellNucleus.com</div>
+                    <nav class="hidden md:flex space-x-1 text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-700">Home</a>
+                        <span class="text-gray-300">/</span>
+                        <a href="#" class="text-gray-500 hover:text-gray-700">Research Categories</a>
+                        <span class="text-gray-300">/</span>
+                        <a href="#" class="text-gray-500 hover:text-gray-700">Nuclear Bodies & Compartments</a>
+                        <span class="text-gray-300">/</span>
+                        <span class="text-gray-700 font-medium">Nuclear Bodies Comprehensive Review</span>
+                    </nav>
+                </div>
+                
+                <!-- Share Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                    <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-link"></i>
+                    </button>
+                    <button class="p-2 text-gray-400 hover:text-green-600 transition-colors">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3">
+                
+                <!-- Category Badge and Title -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white category-nuclear-bodies">
+                            <i class="fas fa-circle-nodes mr-2"></i>
+                            Nuclear Bodies & Compartments
+                        </span>
+                        <span class="ml-4 text-sm text-gray-500">
+                            <i class="fas fa-clock mr-1"></i>
+                            25 min read
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 heading-font mb-4">
+                        Nuclear Bodies Comprehensive Review
+                    </h1>
+                    
+                    <div class="flex items-center text-sm text-gray-600 space-x-4">
+                        <span><i class="fas fa-user mr-1"></i>Dr. Michael Hendzel</span>
+                        <span><i class="fas fa-calendar mr-1"></i>Published: March 2024</span>
+                        <span><i class="fas fa-sync mr-1"></i>Last Updated: June 2024</span>
+                    </div>
+                </div>
+
+                <!-- Hero Image Section -->
+                <div class="hero-image rounded-lg p-8 mb-8 text-white">
+                    <div class="bg-black bg-opacity-50 rounded-lg p-6">
+                        <h2 class="text-2xl font-bold mb-3">Abstract</h2>
+                        <p class="text-lg leading-relaxed">
+                            Nuclear bodies represent dynamic, membraneless organelles that compartmentalize specific cellular functions through phase separation mechanisms. This comprehensive review examines the structure, assembly, and regulation of major nuclear bodies including nucleoli, nuclear speckles, Cajal bodies, and PML bodies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Key Points -->
+                <section class="mb-8 bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-key text-teal-600 mr-2"></i>
+                        Key Points
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mt-1 mr-3"></i>
+                            <span>Nuclear bodies form through liquid-liquid phase separation mechanisms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mt-1 mr-3"></i>
+                            <span>Each nuclear body has specialized functions in RNA processing or DNA repair</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mt-1 mr-3"></i>
+                            <span>Phase separation is regulated by post-translational modifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mt-1 mr-3"></i>
+                            <span>Nuclear body dysfunction contributes to various diseases</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-teal-600 mt-1 mr-3"></i>
+                            <span>Therapeutic targeting of nuclear bodies shows promise</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Table of Contents -->
+                <section class="mb-8 bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-list text-blue-600 mr-2"></i>
+                        Table of Contents
+                    </h3>
+                    <nav class="space-y-2">
+                        <a href="#introduction" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            1. Introduction to Nuclear Body Organization
+                        </a>
+                        <a href="#phase-separation" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            2. Phase Separation Mechanisms
+                        </a>
+                        <a href="#major-bodies" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            3. Major Nuclear Body Types
+                        </a>
+                        <a href="#regulatory" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            4. Regulatory Networks
+                        </a>
+                        <a href="#methodology" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            5. Research Methodology
+                        </a>
+                        <a href="#disease" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            6. Disease Implications
+                        </a>
+                        <a href="#therapeutic" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            7. Therapeutic Opportunities
+                        </a>
+                        <a href="#future" class="toc-item block py-2 px-3 text-blue-600 hover:text-blue-800 rounded transition-all">
+                            8. Future Research Directions
+                        </a>
+                    </nav>
+                </section>
+
+                <!-- Introduction Section -->
+                <section id="introduction" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        1. Introduction to Nuclear Body Organization
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Background Context</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Nuclear bodies are membrane-less organelles that represent one of the most fascinating aspects of nuclear organization. These dynamic structures compartmentalize specific biochemical processes within the nucleus, creating specialized microenvironments for cellular functions such as RNA processing, ribosome biogenesis, and DNA repair.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Historical Perspective</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        The discovery of nuclear bodies dates back to the early days of cell biology when researchers first observed distinct structures within the nucleus using light microscopy. The nucleolus, being the largest and most prominent nuclear body, was among the first to be characterized in detail. Over the decades, advances in electron microscopy and fluorescence imaging have revealed the complex organization and dynamic nature of these structures.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Current Importance</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Modern understanding of nuclear bodies has been revolutionized by the concept of liquid-liquid phase separation. This physical principle explains how nuclear bodies can form, maintain their organization, and dynamically respond to cellular conditions without the need for membrane boundaries. This paradigm shift has profound implications for understanding cellular organization and disease mechanisms.
+                    </p>
+                </section>
+
+                <!-- Phase Separation Section -->
+                <section id="phase-separation" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        2. Phase Separation Mechanisms
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Molecular Mechanisms</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Liquid-liquid phase separation (LLPS) is the fundamental mechanism underlying nuclear body formation. This process involves the spontaneous demixing of biomolecular solutions into two distinct phases: a dense phase enriched in specific proteins and nucleic acids, and a dilute phase representing the surrounding nucleoplasm.
+                    </p>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-info-circle text-blue-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-blue-700">
+                                    <strong>Key Insight:</strong> Phase separation is driven by multivalent interactions between proteins containing intrinsically disordered regions (IDRs) and RNA molecules, creating a network of weak but numerous molecular contacts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Regulatory Factors</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        The formation and dissolution of nuclear bodies are tightly regulated by various cellular factors including:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                        <li>Post-translational modifications (phosphorylation, methylation, ubiquitination)</li>
+                        <li>RNA concentration and binding affinity</li>
+                        <li>Protein concentration and stoichiometry</li>
+                        <li>Ionic strength and pH conditions</li>
+                        <li>Temperature and osmotic stress</li>
+                    </ul>
+                </section>
+
+                <!-- Major Nuclear Bodies Section -->
+                <section id="major-bodies" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        3. Major Nuclear Body Types
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-teal-600 mb-3">
+                                <i class="fas fa-circle text-teal-600 mr-2"></i>
+                                Nucleolus
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                The largest nuclear body, responsible for ribosome biogenesis and rRNA processing. Contains three distinct subcompartments: fibrillar centers, dense fibrillar components, and granular components.
+                            </p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-blue-600 mb-3">
+                                <i class="fas fa-circle text-blue-600 mr-2"></i>
+                                Nuclear Speckles
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Storage and modification sites for pre-mRNA splicing factors. Rich in SR proteins and small nuclear ribonucleoproteins (snRNPs).
+                            </p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-purple-600 mb-3">
+                                <i class="fas fa-circle text-purple-600 mr-2"></i>
+                                Cajal Bodies
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Sites of snRNP assembly and modification. Contain coilin protein and various small Cajal body-specific RNAs (scaRNAs).
+                            </p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-red-600 mb-3">
+                                <i class="fas fa-circle text-red-600 mr-2"></i>
+                                PML Bodies
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Involved in DNA damage response, antiviral defense, and tumor suppression. Named after the promyelocytic leukemia (PML) protein.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Methodology Section -->
+                <section id="methodology" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        5. Research Methodology
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Advanced Imaging Techniques</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Super-resolution Microscopy</h4>
+                            <p class="text-blue-700 text-sm">STORM, PALM, and SIM techniques for nanoscale visualization of nuclear body organization.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-2">Live-cell Imaging</h4>
+                            <p class="text-green-700 text-sm">Real-time monitoring of nuclear body dynamics and phase transitions.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg">
+                            <h4 class="font-semibold text-purple-800 mb-2">Correlative Microscopy</h4>
+                            <p class="text-purple-700 text-sm">Integration of light and electron microscopy for comprehensive structural analysis.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Disease Implications Section -->
+                <section id="disease" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        6. Disease Implications
+                    </h2>
+                    
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
+                        <h3 class="text-lg font-semibold text-red-800 mb-4">
+                            <i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>
+                            Clinical Significance
+                        </h3>
+                        <p class="text-red-700 mb-4">
+                            Dysfunction of nuclear bodies is implicated in numerous human diseases, including cancer, neurodegeneration, and viral infections. Understanding these connections opens new avenues for therapeutic intervention.
+                        </p>
+                        <ul class="list-disc list-inside text-red-700 space-y-1">
+                            <li>Nucleolar stress in cancer development</li>
+                            <li>PML body disruption in acute promyelocytic leukemia</li>
+                            <li>Nuclear speckle alterations in neurodegenerative diseases</li>
+                            <li>Viral hijacking of nuclear body components</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Future Directions Section -->
+                <section id="future" class="content-section mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        8. Future Research Directions
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Outstanding Questions</h3>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <span class="inline-flex items-center justify-center w-6 h-6 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mr-3 mt-1">?</span>
+                            <span class="text-gray-700">How do nuclear bodies coordinate their functions during different cell cycle phases?</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="inline-flex items-center justify-center w-6 h-6 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mr-3 mt-1">?</span>
+                            <span class="text-gray-700">What are the evolutionary origins and conservation of nuclear body organization?</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="inline-flex items-center justify-center w-6 h-6 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mr-3 mt-1">?</span>
+                            <span class="text-gray-700">Can we therapeutically modulate phase separation for disease treatment?</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References Section -->
+                <section class="mb-12 bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 heading-font mb-6">
+                        References
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="reference-item">
+                            <p class="text-sm text-gray-700">
+                                <strong>1.</strong> Banani, S.F., Lee, H.O., Hyman, A.A., and Rosen, M.K. (2017). Biomolecular condensates: organizers of cellular biochemistry. <em>Nat Rev Mol Cell Biol</em> 18, 285-298.
+                            </p>
+                        </div>
+                        <div class="reference-item">
+                            <p class="text-sm text-gray-700">
+                                <strong>2.</strong> Shin, Y., and Brangwynne, C.P. (2017). Liquid phase condensation in cell physiology and disease. <em>Science</em> 357, eaaf4382.
+                            </p>
+                        </div>
+                        <div class="reference-item">
+                            <p class="text-sm text-gray-700">
+                                <strong>3.</strong> Lafontaine, D.L.J., Riback, J.A., Bascetin, R., and Brangwynne, C.P. (2021). The nucleolus as a multiphase liquid condensate. <em>Nat Rev Mol Cell Biol</em> 22, 165-182.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    
+                    <!-- Related Reviews -->
+                    <div class="sidebar-card p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-link text-teal-600 mr-2"></i>
+                            Related Reviews
+                        </h3>
+                        <div class="space-y-3">
+                            <a href="#" class="block text-blue-600 hover:text-blue-800 text-sm transition-colors">
+                                Nucleolus Comprehensive Review
+                            </a>
+                            <a href="#" class="block text-blue-600 hover:text-blue-800 text-sm transition-colors">
+                                Nuclear Speckles Comprehensive Review
+                            </a>
+                            <a href="#" class="block text-blue-600 hover:text-blue-800 text-sm transition-colors">
+                                Phase Separation Nucleus Review
+                            </a>
+                            <a href="#" class="block text-blue-600 hover:text-blue-800 text-sm transition-colors">
+                                Nuclear Condensates Comprehensive Review
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Facts -->
+                    <div class="sidebar-card p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-chart-bar text-blue-600 mr-2"></i>
+                            Quick Facts
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Nuclear Bodies Types:</span>
+                                <span class="font-semibold text-gray-900">20+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Discovery Year:</span>
+                                <span class="font-semibold text-gray-900">1865</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Phase Separation:</span>
+                                <span class="font-semibold text-gray-900">2009</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Disease Links:</span>
+                                <span class="font-semibold text-gray-900">100+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Timeline -->
+                    <div class="sidebar-card p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-timeline text-purple-600 mr-2"></i>
+                            Research Timeline
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3"></div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">1865</div>
+                                    <div class="text-xs text-gray-600">Nucleolus first described</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3"></div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">1959</div>
+                                    <div class="text-xs text-gray-600">Nuclear speckles discovered</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3"></div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">2009</div>
+                                    <div class="text-xs text-gray-600">Phase separation concept</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3"></div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">2024</div>
+                                    <div class="text-xs text-gray-600">Therapeutic targeting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Terms -->
+                    <div class="sidebar-card p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-book text-green-600 mr-2"></i>
+                            Key Terms
+                        </h3>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900">Phase Separation</h4>
+                                <p class="text-xs text-gray-600">Physical process forming distinct cellular compartments</p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900">Condensate</h4>
+                                <p class="text-xs text-gray-600">Dense phase formed by biomolecular demixing</p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900">IDR</h4>
+                                <p class="text-xs text-gray-600">Intrinsically disordered protein regions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Image Attribution</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        Scientific images courtesy of Nature Publishing Group, Springer Nature, and associated academic publishers. All images used under fair use provisions for educational and research purposes.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Header image: Nuclear condensates overview, courtesy of Biophysical Reviews, Springer Nature (2020).
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Related Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Chromatin Architecture</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Nuclear Transport</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Epigenetics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Additional Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Research Database</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Methodology Guides</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Citation Manager</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2024 CellNucleus.com. All rights reserved. Educational content for academic and research purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Copy link functionality
+        document.querySelector('.fa-link').parentElement.addEventListener('click', function() {
+            navigator.clipboard.writeText(window.location.href);
+            this.innerHTML = '<i class="fas fa-check"></i>';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-link"></i>';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsrn2G0B%2Fy3GaqyeXoN1c6bE5oJ7ao4x%2Br8xZ%2FkCOzHAJVaXOFTqjuE%2FVq8s4%2BlkDmwB7%2B1E9qPNsyQn%2BCOiZQbCnmHwl7Hmq%2F8%2BxGnBN%2Fe4meWA7wqEEPsbba2zjuQrsdrgJSphE9z1JkB%2FgGgPZ7zLDZVJq8N9F0Lw6lwyXZvarY2UR6GRKtCNRGgZCFXRzAbUNdtKeA0T0Fo%2BStukB0oZRBLxP4qfEU2nfjjLHaxXJZHRCnYL2qKX2N06MkgWTdx3EML0X2Q1DekoQthj%2FKuez6v4GXrIwo9IYbGFHvVtl8Tqs9gGHW3MH0Z9%2Fm9f7Q%2FLsT5ZqjmiJdT0PL85cLz4l3byFitfWwH3wbrE0luunUF1mqfnU6VQl1sAl4Q6XOXzCEQRYGwDk%2FSNSINKdvlV3Pc%2Bly9%2FODxiQ3giZnYr%2FwhNShL2oh%2BmtObvNW8%2BSfB8QnxPLxYvScrLLPuiE8KbG25WOTH4fkThehnQYRquUiit5Uzi23Iu3wBjFMGFvorELONnrEDoty55f7om7xQ%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsrn2G0B/y3GaqyeXoN1c6bE5oJ7ao4x+r8xZ/kCOzHAJVaXOFTqjuE/Vq8s4+lkDmwB7+1E9qPNsyQn+COiZQbCnmHwl7Hmq/8+xGnBN/e4meWA7wqEEPsbba2zjuQrsdrgJSphE9z1JkB/gGgPZ7zLDZVJq8N9F0Lw6lwyXZvarY2UR6GRKtCNRGgZCFXRzAbUNdtKeA0T0Fo+StukB0oZRBLxP4qfEU2nfjjLHaxXJZHRCnYL2qKX2N06MkgWTdx3EML0X2Q1DekoQthj/Kuez6v4GXrIwo9IYbGFHvVtl8Tqs9gGHW3MH0Z9/m9f7Q/LsT5ZqjmiJdT0PL85cLz4l3byFitfWwH3wbrE0luunUF1mqfnU6VQl1sAl4Q6XOXzCEQRYGwDk/SNSINKdvlV3Pc+ly9/ODxiQ3giZnYr/whNShL2oh+mtObvNW8+SfB8QnxPLxYvScrLLPuiE8KbG25WOTH4fkThehnQYRquUiit5Uzi23Iu3wBjFMGFvorELONnrEDoty55f7om7xQ=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

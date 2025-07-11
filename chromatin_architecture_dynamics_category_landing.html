@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatin Architecture & Dynamics - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(147, 51, 234, 0.8)); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .category-badge { background: linear-gradient(135deg, #3B82F6, #8B5CF6); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">CellNucleus.com</a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="/reviews" class="text-gray-700 hover:text-blue-600 transition-colors">All Reviews</a>
+                    <a href="/categories" class="text-gray-700 hover:text-blue-600 transition-colors">Categories</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-4">
+                    <li><a href="/" class="text-gray-500 hover:text-gray-700">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                    <li><a href="/categories" class="text-gray-500 hover:text-gray-700">Research Categories</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                    <li class="text-gray-900 font-medium">Chromatin Architecture & Dynamics</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative h-96 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="images/chromatin/chromatin_super_resolution_nature.png" 
+                 alt="Super-resolution chromatin structure" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-5xl font-bold mb-4">Chromatin Architecture & Dynamics</h1>
+                <p class="text-xl mb-6">15 Comprehensive Reviews • Higher-Order Organization • Nucleosome Dynamics</p>
+                <div class="flex items-center space-x-6 text-sm">
+                    <span><i class="fas fa-microscope mr-2"></i>Super-Resolution Imaging</span>
+                    <span><i class="fas fa-dna mr-2"></i>3D Genome Organization</span>
+                    <span><i class="fas fa-chart-line mr-2"></i>Dynamic Modeling</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Overview -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Category Overview</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Chromatin architecture represents one of the most fundamental aspects of nuclear organization, 
+                    governing gene accessibility, DNA repair, and cellular function. This collection of 15 comprehensive 
+                    reviews explores the dynamic nature of chromatin organization from nucleosome positioning to 3D genome architecture.
+                </p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Stats</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Total Reviews</span>
+                        <span class="font-bold text-blue-600">15</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Research Areas</span>
+                        <span class="font-bold text-blue-600">6</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Latest Update</span>
+                        <span class="font-bold text-blue-600">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Research Areas -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8">Key Research Areas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cube text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">4D Genome Organization</h4>
+                    <p class="text-gray-600">Temporal dynamics of chromatin structure</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cogs text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromatin Remodeling</h4>
+                    <p class="text-gray-600">ATP-dependent chromatin modification complexes</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-atom text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Nucleosome Dynamics</h4>
+                    <p class="text-gray-600">Histone modifications and chromatin accessibility</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-compress-arrows-alt text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromosome Condensation</h4>
+                    <p class="text-gray-600">Mitotic chromatin organization mechanisms</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Computational Modeling</h4>
+                    <p class="text-gray-600">Predictive models of chromatin behavior</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 category-badge rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Disease Mechanisms</h4>
+                    <p class="text-gray-600">Chromatinopathies and therapeutic targets</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Collection -->
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Reviews Collection</h2>
+            
+            <!-- Flagship Reviews -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-star text-yellow-500 mr-3"></i>Flagship Reviews
+                </h3>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="w-full h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                                <i class="fas fa-project-diagram text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">4D Genome Organization</h4>
+                            <p class="text-gray-600 mb-4">Temporal dynamics of 3D genome architecture</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">TADs</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Compartments</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Loop Extrusion</span>
+                            </div>
+                            <a href="nuclear_biology_reviews/4d_genome_organization_comprehensive_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="w-full h-32 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
+                                <i class="fas fa-exchange-alt text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Chromatin Architecture Dynamics</h4>
+                            <p class="text-gray-600 mb-4">Dynamic changes in higher-order chromatin structure</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Chromatin Loops</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Enhancer-Promoter</span>
+                            </div>
+                            <a href="nuclear_biology_reviews/chromatin_architecture_dynamics_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="w-full h-32 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
+                                <i class="fas fa-tint text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Chromatin Condensates</h4>
+                            <p class="text-gray-600 mb-4">Phase separation in chromatin organization</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Phase Separation</span>
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Nuclear Droplets</span>
+                            </div>
+                            <a href="nuclear_biology_reviews/chromatin_condensates_critical_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Reviews Sections -->
+            <div class="space-y-12">
+                <!-- Structural Organization Reviews -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-layer-group text-blue-500 mr-3"></i>Structural Organization
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromosome Condensation Mechanisms</h4>
+                            <p class="text-gray-600 mb-3">Mitotic chromosome condensation pathways</p>
+                            <a href="nuclear_biology_reviews/chromosome_condensation_mechanisms_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Euchromatin Comprehensive</h4>
+                            <p class="text-gray-600 mb-3">Open chromatin structure and transcriptional accessibility</p>
+                            <a href="nuclear_biology_reviews/euchromatin_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heterochromatin Comprehensive</h4>
+                            <p class="text-gray-600 mb-3">Repressive chromatin domains and silencing mechanisms</p>
+                            <a href="nuclear_biology_reviews/heterochromatin_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heterochromatin Timeline</h4>
+                            <p class="text-gray-600 mb-3">Historical development of heterochromatin research</p>
+                            <a href="nuclear_biology_reviews/heterochromatin_comprehensive_review_timeline.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regulatory Mechanisms -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-cogs text-green-500 mr-3"></i>Regulatory Mechanisms
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromatin Remodeling Complexes</h4>
+                            <p class="text-gray-600 mb-3">ATP-dependent chromatin remodeling machinery</p>
+                            <a href="nuclear_biology_reviews/chromatin_remodeling_complexes_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">H1 PCG H3K27me3 Regulation</h4>
+                            <p class="text-gray-600 mb-3">Histone H1 and Polycomb group protein interactions</p>
+                            <a href="nuclear_biology_reviews/h1_pcg_h3k27me3_regulation_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Histone H1 Family</h4>
+                            <p class="text-gray-600 mb-3">Linker histone variants and chromatin compaction</p>
+                            <a href="nuclear_biology_reviews/histone_h1_family_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disease & Computational Reviews -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-laptop-code text-purple-500 mr-3"></i>Disease & Computational Analysis
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromatinopathies Mechanisms</h4>
+                            <p class="text-gray-600 mb-3">Chromatin-related diseases and therapeutic strategies</p>
+                            <a href="nuclear_biology_reviews/chromatinopathies_mechanisms_therapies_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Comparative Nuclear Organization</h4>
+                            <p class="text-gray-600 mb-3">Species-specific chromatin organization patterns</p>
+                            <a href="nuclear_biology_reviews/comparative_nuclear_organization_complete.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Computational Nucleus Modeling</h4>
+                            <p class="text-gray-600 mb-3">Mathematical models of nuclear organization</p>
+                            <a href="nuclear_biology_reviews/computational_cell_nucleus_modeling_enhanced_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromatin Modeling Enhanced</h4>
+                            <p class="text-gray-600 mb-3">Predictive modeling of chromatin dynamics</p>
+                            <a href="nuclear_biology_reviews/chromatin_modeling_critical_review_enhanced.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Chromatin Biophysics Function</h4>
+                            <p class="text-gray-600 mb-3">Physical properties of chromatin and functional consequences</p>
+                            <a href="nuclear_biology_reviews/chromatin_biophysics_function_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Categories -->
+        <div class="mt-20">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="epigenetics-gene-regulation.html" class="block bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-dna text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Epigenetics & Gene Regulation</h3>
+                    <p class="text-gray-600">Histone modifications and transcriptional control</p>
+                </a>
+                <a href="nuclear-bodies-compartments.html" class="block bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-circle text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Nuclear Bodies & Compartments</h3>
+                    <p class="text-gray-600">Chromatin organization within nuclear domains</p>
+                </a>
+                <a href="dna-repair-replication.html" class="block bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">DNA Repair & Replication</h3>
+                    <p class="text-gray-600">Chromatin accessibility in DNA processing</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Research Highlights -->
+        <div class="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6">Research Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Latest Discoveries</h3>
+                    <p class="text-blue-100">Recent breakthroughs in 4D genome organization revealing temporal dynamics of chromatin structure</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Technical Advances</h3>
+                    <p class="text-blue-100">Super-resolution imaging techniques enabling visualization of nanoscale chromatin architecture</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Clinical Relevance</h3>
+                    <p class="text-blue-100">Development of chromatin-targeted therapeutics for treating genetic diseases and cancer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CellNucleus.com</h3>
+                    <p class="text-gray-400">Comprehensive nuclear biology resource with expert reviews and latest research.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <div class="space-y-2">
+                        <a href="/" class="block text-gray-400 hover:text-white">Home</a>
+                        <a href="/reviews" class="block text-gray-400 hover:text-white">All Reviews</a>
+                        <a href="/categories" class="block text-gray-400 hover:text-white">Categories</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Image Attribution</h3>
+                    <p class="text-gray-400 text-sm">Super-resolution chromatin imaging courtesy of Nature Communications. Used under fair use for educational purposes.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CellNucleus.com. All rights reserved. Educational use only.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDt3wCqTW%2Fays2kQ8ApVPcW3b47%2BN%2Bk7VNUUEWzjQAfgNXYH7ObaKu%2FMV9VQrvnT5TlGlS%2BhtObTc94Ld0%2B56cv8dSj1g0%2FhXbrYGNM4HwoYxte0HX4SWhoIeuaU1sRrKWDPuOVyoxzx7%2BCdXdCDS%2Bz6TMzsgAeFctX1uMeo6mqlOPt8n40gC3ES69PRgS%2FR9d5iFOHHt7wElJd8p%2FUZLM0olPj9m9AdGj71LRJISPz8yaROPJjTaN5tNb%2BxEpxpwKQ%2FL14cQwgWwUMfvcKpsjhxV89ZRjC8DGXSBqMRPv%2BDbYxUxkCmQr1SlNc61DaXMOIZSMlZDBwxRDnTx5rW2vfQXmWktld3pOU0nT3brRE5TvCLwckxrUL3YcDuLvM2IHCds9UGov9NFLswr5Mj5GyQ%2BCYMfXUXsReZMwZuIwtGeeS3sTRNQMTZDoEqFW%2BnIGYH%2FRsaqjyhdZR1wYIlp99cZZRdAeYBwIF%2BC517PoHUbkrBbnonozba80rCXkyZukbrCVOK4ZWwOjw1d2G4qFf57Uz%2Bfzu8fnHdim7w81Tew";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDt3wCqTW/ays2kQ8ApVPcW3b47+N+k7VNUUEWzjQAfgNXYH7ObaKu/MV9VQrvnT5TlGlS+htObTc94Ld0+56cv8dSj1g0/hXbrYGNM4HwoYxte0HX4SWhoIeuaU1sRrKWDPuOVyoxzx7+CdXdCDS+z6TMzsgAeFctX1uMeo6mqlOPt8n40gC3ES69PRgS/R9d5iFOHHt7wElJd8p/UZLM0olPj9m9AdGj71LRJISPz8yaROPJjTaN5tNb+xEpxpwKQ/L14cQwgWwUMfvcKpsjhxV89ZRjC8DGXSBqMRPv+DbYxUxkCmQr1SlNc61DaXMOIZSMlZDBwxRDnTx5rW2vfQXmWktld3pOU0nT3brRE5TvCLwckxrUL3YcDuLvM2IHCds9UGov9NFLswr5Mj5GyQ+CYMfXUXsReZMwZuIwtGeeS3sTRNQMTZDoEqFW+nIGYH/RsaqjyhdZR1wYIlp99cZZRdAeYBwIF+C517PoHUbkrBbnonozba80rCXkyZukbrCVOK4ZWwOjw1d2G4qFf57Uz+fzu8fnHdim7w81Tew";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

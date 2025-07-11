@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com Link Verification System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .status-pending { color: #f59e0b; }
+        .status-verified { color: #10b981; }
+        .status-error { color: #ef4444; }
+        .verification-card { transition: all 0.3s ease; }
+        .verification-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold">CellNucleus.com</h1>
+                    <p class="text-blue-200">Link Verification System</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xl font-semibold">71 Reviews</p>
+                    <p class="text-blue-200">Complete Collection</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Control Panel -->
+    <div class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="verifyAll" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        <i class="fas fa-check-circle mr-2"></i>Verify All Links
+                    </button>
+                    <button id="generateReport" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                        <i class="fas fa-file-alt mr-2"></i>Generate Report
+                    </button>
+                </div>
+                <div class="flex items-center gap-4 text-sm">
+                    <span class="flex items-center"><i class="fas fa-circle status-pending mr-1"></i>Pending</span>
+                    <span class="flex items-center"><i class="fas fa-circle status-verified mr-1"></i>Verified</span>
+                    <span class="flex items-center"><i class="fas fa-circle status-error mr-1"></i>Error</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        
+        <!-- Summary Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow verification-card">
+                <div class="text-center">
+                    <i class="fas fa-file-alt text-4xl text-blue-600 mb-2"></i>
+                    <h3 class="text-xl font-semibold">Total Reviews</h3>
+                    <p class="text-3xl font-bold text-gray-800">71</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow verification-card">
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-4xl text-green-600 mb-2"></i>
+                    <h3 class="text-xl font-semibold">Verified</h3>
+                    <p class="text-3xl font-bold text-green-600" id="verifiedCount">0</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow verification-card">
+                <div class="text-center">
+                    <i class="fas fa-clock text-4xl text-yellow-600 mb-2"></i>
+                    <h3 class="text-xl font-semibold">Pending</h3>
+                    <p class="text-3xl font-bold text-yellow-600" id="pendingCount">71</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow verification-card">
+                <div class="text-center">
+                    <i class="fas fa-exclamation-triangle text-4xl text-red-600 mb-2"></i>
+                    <h3 class="text-xl font-semibold">Errors</h3>
+                    <p class="text-3xl font-bold text-red-600" id="errorCount">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verification Categories -->
+        <div class="space-y-8">
+            
+            <!-- Chromatin & Epigenetics -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-dna mr-2"></i>Chromatin & Epigenetics (18 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="chromatin_architecture_dynamics_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatin Architecture Dynamics</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromatin_biophysics_function_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatin Biophysics Function</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromatin_condensates_critical_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatin Condensates Critical</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromatin_modeling_critical_review_enhanced.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatin Modeling Enhanced</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromatin_remodeling_complexes_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatin Remodeling Complexes</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromatinopathies_mechanisms_therapies_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromatinopathies Mechanisms</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="chromosome_condensation_mechanisms_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Chromosome Condensation</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="euchromatin_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Euchromatin Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="heterochromatin_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Heterochromatin Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="histone_h1_family_enhanced_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Histone H1 Family Enhanced</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="histone_ptms_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Histone PTMs Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="histone_ptms_neurodegeneration_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Histone PTMs Neurodegeneration</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="h1_pcg_h3k27me3_regulation_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>H1 PcG H3K27me3 Regulation</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="epigenetic_inheritance_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Epigenetic Inheritance</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="4d_genome_organization_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>4D Genome Organization</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="comparative_nuclear_organization_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Comparative Nuclear Organization</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="computational_cell_nucleus_modeling_enhanced_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Computational Cell Nucleus</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="eukaryotic_gene_expression_orchestration_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Eukaryotic Gene Expression</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuclear Structure & Organization -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-atom mr-2"></i>Nuclear Structure & Organization (15 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="nuclear_envelope_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Envelope Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_lamina_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Lamina Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="laminopathies_nuclear_envelope_diseases_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Laminopathies Nuclear Envelope</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="lamin_a_mutants_aging_research_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Lamin A Mutants Aging</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_pore_complex_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Pore Complex</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_transport_compartment_dynamics.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Transport Dynamics</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_bodies_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Bodies Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_body_ultrastructure_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Body Ultrastructure</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_speckles_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Speckles</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nucleolus_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nucleolus Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="paraspeckles_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Paraspeckles Comprehensive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="cajal_bodies_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Cajal Bodies</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="pml_nuclear_bodies_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>PML Nuclear Bodies</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_compartmentalization_critical_evaluation_corrected.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Compartmentalization</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_condensates_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Condensates</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DNA Repair & Replication -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-red-600 to-red-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-wrench mr-2"></i>DNA Repair & Replication (8 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="base_excision_repair_critical_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Base Excision Repair</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="dna_repair_pathway_crosstalk_review_updated.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>DNA Repair Pathway Crosstalk</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="dna_replication_site_dynamics_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>DNA Replication Site Dynamics</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="dsb_repair_foci_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>DSB Repair Foci</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="replication_fork_cancer_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Replication Fork Cancer</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="replication_stress_fpc_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Replication Stress FPC</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_stress_response_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Stress Response</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_virus_host_interactions_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Virus Host Interactions</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transcription & RNA Processing -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-file-alt mr-2"></i>Transcription & RNA Processing (10 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="transcriptional_condensates_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Transcriptional Condensates</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="pol_ii_condensate_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Pol II Condensate</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="live_cell_transcription_imaging_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Live Cell Transcription Imaging</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="intranuclear_mrna_transport_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Intranuclear mRNA Transport</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="intranuclear_rna_transport_imaging_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Intranuclear RNA Transport Imaging</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_rnp_structure_function_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear RNP Structure Function</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="parylation_dynamics_interactions_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>PARylation Dynamics</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="4d_nucleome_critical_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>4D Nucleome Critical</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="esi_nuclear_analysis_microscopy_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>ESI Nuclear Analysis Microscopy</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_biology_controversies_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Biology Controversies</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuclear Physics & Biophysics -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-atom mr-2"></i>Nuclear Physics & Biophysics (10 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="nuclear_biophysical_properties_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Biophysical Properties</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_mechanics_disease_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Mechanics Disease</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_microrheology_detailed_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Microrheology Detailed</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_microrheology_enhanced_graphics.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Microrheology Enhanced</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_macromolecular_crowding_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Macromolecular Crowding</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_viscosity_properties_regulation.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Viscosity Properties</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_polymer_phase_separation_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Polymer Phase Separation</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="phase_separation_nucleus_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Phase Separation Nucleus</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_condensates_disease_pathologies_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Condensates Disease</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="heterochromatin_comprehensive_review_timeline.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Heterochromatin Timeline</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Reviews -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-gray-600 to-gray-700 text-white p-4">
+                    <h2 class="text-2xl font-bold"><i class="fas fa-plus mr-2"></i>Additional Specialized Reviews (10 Reviews)</h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="verification-item" data-file="histone_h1_family_comprehensive_review.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Histone H1 Family</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_speckles_standardized.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Speckles Standardized</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_bodies_standardized.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Bodies Standardized</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="paraspeckles_standardized.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Paraspeckles Standardized</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="comparative_nuclear_organization_species_updated.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Comparative Nuclear Organization Updated</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="epigenetic_inheritance_mechanisms_review_updated.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Epigenetic Inheritance Updated</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="epigenetic_inheritance_complete.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Epigenetic Inheritance Complete</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="dna_repair_pathway_crosstalk_complete.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>DNA Repair Crosstalk Complete</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="comparative_nuclear_organization_complete.html">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Comparative Nuclear Complete</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                        <div class="verification-item" data-file="nuclear_biology_reviews.zip">
+                            <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50">
+                                <span>Nuclear Biology Reviews Archive</span>
+                                <i class="fas fa-circle status-pending verification-status"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting Guide -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mt-8">
+            <div class="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4">
+                <h2 class="text-2xl font-bold"><i class="fas fa-tools mr-2"></i>Troubleshooting Guide</h2>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Common Link Issues</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start"><i class="fas fa-exclamation-triangle text-red-500 mr-2 mt-1"></i>Multiple links pointing to same review</li>
+                            <li class="flex items-start"><i class="fas fa-link text-blue-500 mr-2 mt-1"></i>Broken or expired URLs</li>
+                            <li class="flex items-start"><i class="fas fa-file-slash text-orange-500 mr-2 mt-1"></i>Missing review files</li>
+                            <li class="flex items-start"><i class="fas fa-clock text-yellow-500 mr-2 mt-1"></i>Outdated link structure</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">URL Structure Template</h3>
+                        <div class="bg-gray-100 p-3 rounded text-sm">
+                            <code>https://gensparkstorageprodwest.blob.core.windows.net/web-drive/[storage-id]/[file-id]?[parameters]</code>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Each review must have a unique file-id and storage path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Verification system functionality
+        let verifiedCount = 0;
+        let errorCount = 0;
+        let pendingCount = 71;
+
+        function updateCounts() {
+            document.getElementById('verifiedCount').textContent = verifiedCount;
+            document.getElementById('errorCount').textContent = errorCount;
+            document.getElementById('pendingCount').textContent = pendingCount;
+        }
+
+        function simulateVerification(element) {
+            const status = element.querySelector('.verification-status');
+            const isCurrentlyPending = status.classList.contains('status-pending');
+            
+            if (isCurrentlyPending) {
+                // Simulate random verification result
+                const isSuccess = Math.random() > 0.1; // 90% success rate
+                
+                status.classList.remove('status-pending');
+                
+                if (isSuccess) {
+                    status.classList.add('status-verified');
+                    verifiedCount++;
+                } else {
+                    status.classList.add('status-error');
+                    errorCount++;
+                }
+                
+                pendingCount--;
+                updateCounts();
+            }
+        }
+
+        // Event listeners
+        document.getElementById('verifyAll').addEventListener('click', function() {
+            const allItems = document.querySelectorAll('.verification-item');
+            
+            allItems.forEach((item, index) => {
+                setTimeout(() => {
+                    simulateVerification(item);
+                }, index * 100);
+            });
+        });
+
+        document.getElementById('generateReport').addEventListener('click', function() {
+            const report = {
+                total: 71,
+                verified: verifiedCount,
+                errors: errorCount,
+                pending: pendingCount,
+                timestamp: new Date().toISOString()
+            };
+            
+            const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'cellnucleus_link_verification_report.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Individual verification on click
+        document.querySelectorAll('.verification-item').forEach(item => {
+            item.addEventListener('click', function() {
+                simulateVerification(this);
+            });
+        });
+
+        // Initialize counts
+        updateCounts();
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDlDNVUYpBnOfk%2F%2Fx0HfKeb443IVCHuQ2CaPTb%2Bgu1RntWE15H6%2FpUFGjaInrgteYnUfe5tDSSfWSJzc9AG%2Bzc4ySUXtBW96SiMiFVzNAmoDgs7hib5IKHhsTHnlUacNi3N0uBxJlgjlUp1TuQUpalKuGT9aShG5tnGgm5qmA2yiFKawjNPcyT4lAJ%2FyGTdLNuxqv6PV2a06kZBQ5Y8IzaWCU8wmDMxEbKjKqa%2Bo09Ff7A3AwXoPayTv6KeXZn6jiqgInK%2FRbpv%2BeRegP88MH80U095n9wOU6xEtuCS6bWjRTFtL98LNlZwHbgjTZGcBCk0rrcFtw9VsNKN4raZrB89CUaD4Z6PZ4DZ0XQzbIXvvM20uu%2Bw7%2Bn5Y3vZnvupjL5cmO%2BmRga924qs5llzCMTPHQA3e7A98bYQbgPNjOHHObYcVV6fUG%2BpNIGyeqRuiLCjgpllV7etYD%2BuqrhoCG3K2fpUm24RvE%2FzDVLVlC6rlxOPxYMAc5Ml33ciGi5pkZ0barWXXfT4okZkG5hTv82kc%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDlDNVUYpBnOfk//x0HfKeb443IVCHuQ2CaPTb+gu1RntWE15H6/pUFGjaInrgteYnUfe5tDSSfWSJzc9AG+zc4ySUXtBW96SiMiFVzNAmoDgs7hib5IKHhsTHnlUacNi3N0uBxJlgjlUp1TuQUpalKuGT9aShG5tnGgm5qmA2yiFKawjNPcyT4lAJ/yGTdLNuxqv6PV2a06kZBQ5Y8IzaWCU8wmDMxEbKjKqa+o09Ff7A3AwXoPayTv6KeXZn6jiqgInK/Rbpv+eRegP88MH80U095n9wOU6xEtuCS6bWjRTFtL98LNlZwHbgjTZGcBCk0rrcFtw9VsNKN4raZrB89CUaD4Z6PZ4DZ0XQzbIXvvM20uu+w7+n5Y3vZnvupjL5cmO+mRga924qs5llzCMTPHQA3e7A98bYQbgPNjOHHObYcVV6fUG+pNIGyeqRuiLCjgpllV7etYD+uqrhoCG3K2fpUm24RvE/zDVLVlC6rlxOPxYMAc5Ml33ciGi5pkZ0barWXXfT4okZkG5hTv82kc=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

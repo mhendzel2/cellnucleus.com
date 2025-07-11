@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Reviews - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .sidebar-active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .review-card {
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .search-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-lg border-r border-gray-200">
+            <!-- Logo/Brand -->
+            <div class="p-6 border-b border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dna text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Cellnucleus</h1>
+                        <p class="text-sm text-gray-500">Nuclear Biology Hub</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="mt-6 px-4 space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-home w-5 mr-3"></i>
+                    Home
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-atom w-5 mr-3"></i>
+                    Nuclear Structure
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-microscope w-5 mr-3"></i>
+                    Microscopy
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-white rounded-lg sidebar-active transition-colors">
+                    <i class="fas fa-book-open w-5 mr-3"></i>
+                    Research Reviews
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-database w-5 mr-3"></i>
+                    Databases
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-graduation-cap w-5 mr-3"></i>
+                    Educational Resources
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-download w-5 mr-3"></i>
+                    Downloads
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-info-circle w-5 mr-3"></i>
+                    About
+                </a>
+            </nav>
+
+            <!-- Bottom Section -->
+            <div class="absolute bottom-6 left-4 right-4">
+                <div class="bg-blue-500 text-white p-4 rounded-lg text-center">
+                    <h3 class="font-semibold mb-2">Share with Colleagues</h3>
+                    <p class="text-sm opacity-90">Spread Nuclear Biology Knowledge</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-auto">
+            <div class="p-8">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-3 h-3 bg-blue-500 rounded-full mb-4"></div>
+                    <h1 class="text-4xl font-bold text-blue-600 mb-4">Research Reviews</h1>
+                    <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+                        Comprehensive collection of 36 nuclear biology research reviews covering chromatin dynamics, 
+                        nuclear bodies, biophysics, and cellular mechanisms.
+                    </p>
+                </div>
+
+                <!-- Search Box -->
+                <div class="search-box rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search reviews by topic, keyword, or mechanism..." 
+                               class="w-full px-6 py-4 text-lg border-2 border-green-200 rounded-xl focus:outline-none focus:border-green-400 transition-colors">
+                        <button class="absolute right-3 top-3 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-search text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Featured Reviews -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-star text-yellow-500 mr-3"></i>
+                        Featured Reviews
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="review-card bg-white rounded-xl p-6 shadow-md border border-gray-200">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-dna text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Chromosome Condensation Mechanisms</h3>
+                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">NEWEST</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Architecture of inheritance and temporal regulation during cell division</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Cell Division</span>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Condensin</span>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Mitosis</span>
+                            </div>
+                            <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                               class="text-blue-600 hover:text-blue-800 font-medium">Access Review →</a>
+                        </div>
+
+                        <div class="review-card bg-white rounded-xl p-6 shadow-md border border-gray-200">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-wave-square text-green-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Nuclear Microrheology</h3>
+                                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">ENHANCED</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Viscoelastic properties with comprehensive scientific graphics</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Biophysics</span>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Rheology</span>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Mechanics</span>
+                            </div>
+                            <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                               class="text-blue-600 hover:text-blue-800 font-medium">Access Review →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Categories -->
+                <div class="space-y-8">
+                    <!-- Recent Reviews -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-3"></i>
+                            Recent Reviews
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Viscosity Properties</h3>
+                                <p class="text-gray-600 text-sm mb-3">Multiscale material properties and mechanobiology</p>
+                                <div class="flex flex-wrap gap-1 mb-3">
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Viscosity</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Materials</span>
+                                </div>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Transport Dynamics</h3>
+                                <p class="text-gray-600 text-sm mb-3">Intranuclear transport and compartmentalization</p>
+                                <div class="flex flex-wrap gap-1 mb-3">
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Transport</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Dynamics</span>
+                                </div>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Macromolecular Crowding</h3>
+                                <p class="text-gray-600 text-sm mb-3">Biophysical framework for genome organization</p>
+                                <div class="flex flex-wrap gap-1 mb-3">
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Crowding</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Organization</span>
+                                </div>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chromatin & Gene Expression -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                            <i class="fas fa-dna text-purple-500 mr-3"></i>
+                            Chromatin & Gene Expression
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Chromatin Biophysics & Function</h3>
+                                <p class="text-gray-600 text-sm mb-3">Biophysical landscape of genome organization</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Chromatin Condensates</h3>
+                                <p class="text-gray-600 text-sm mb-3">Biophysical principles and controversies</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Histone PTMs</h3>
+                                <p class="text-gray-600 text-sm mb-3">Post-translational modifications comprehensive review</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Euchromatin Structure</h3>
+                                <p class="text-gray-600 text-sm mb-3">Function and regulation mechanisms</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Heterochromatin</h3>
+                                <p class="text-gray-600 text-sm mb-3">Comprehensive review with timeline</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Gene Expression Orchestration</h3>
+                                <p class="text-gray-600 text-sm mb-3">Regulatory networks and mechanisms</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nuclear Bodies & Organelles -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                            <i class="fas fa-circle-dot text-green-500 mr-3"></i>
+                            Nuclear Bodies & Organelles
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Bodies</h3>
+                                <p class="text-gray-600 text-sm mb-3">Comprehensive review and update</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Speckles</h3>
+                                <p class="text-gray-600 text-sm mb-3">Enhanced visual review with comprehensive analysis</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Cajal Bodies</h3>
+                                <p class="text-gray-600 text-sm mb-3">Biology and function comprehensive review</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Paraspeckles</h3>
+                                <p class="text-gray-600 text-sm mb-3">Biology, function, and regulation</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">PML Nuclear Bodies</h3>
+                                <p class="text-gray-600 text-sm mb-3">Comprehensive biology and function analysis</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                            <div class="review-card bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                                <h3 class="font-semibold text-gray-900 mb-2">Nucleolus</h3>
+                                <p class="text-gray-600 text-sm mb-3">Cell biology and biochemistry</p>
+                                <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">Access →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Access -->
+                    <div class="bg-blue-50 rounded-xl p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Need Quick Access?</h3>
+                        <p class="text-gray-600 mb-6">Browse all 36 nuclear biology reviews directly in your AI Drive</p>
+                        <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" 
+                           class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-folder-open mr-2"></i>
+                            Browse All Reviews
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const reviewCards = document.querySelectorAll('.review-card');
+            
+            reviewCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('span')).map(span => span.textContent.toLowerCase()).join(' ');
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDrYEFq6QVukOBF%2BAz3yb7tBI5fV%2F9cKBOIK9tdo0ASaaKI4auCkGBK4IVLmJ6wADXxjbm%2B8azVJ%2B1lVXarbgUsnlR1VBpTTNuvK%2FivrwFkNb8T38t%2F9ihwWnu0%2F%2FIuodoXZiZodc3LowWEYkFPvmGjQz0yha0PKt3AZmLLGsWtdxJn3d5vaChqzNfs4GTPpvmldMgHdpJ4fo0OKewF4RyZtjv1FWBB077SxM8s3Kd398FjvRuCq5QW7XHGaGr17%2F16IbspBfDUjF0%2FvHySDY1nBi1I5QAEe%2BhjiOe3%2Fni2cGTwnK8pl1JWgV8aB5Cppkfu6joDMsIu%2B3FGH5HRZUXAUWEUmpBDiESKs6OPDoySOTc%2Bq8q4WNdYYNoLEY1lhvBtzxnqShJ5j87NAMwDIJeMo4p8Wkdxaiqw0qQQpoljKlqUaC2sWNo30AbRCb%2BtiLLzo%2BtC3tpqFCzWb%2FjXx2bWF9hlU2epnWJAdsctANC9dfFlWZWBlv6BR%2F6Ge9Lab4WSvMmwibOwxz7MCZsfVbAdA%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDrYEFq6QVukOBF+Az3yb7tBI5fV/9cKBOIK9tdo0ASaaKI4auCkGBK4IVLmJ6wADXxjbm+8azVJ+1lVXarbgUsnlR1VBpTTNuvK/ivrwFkNb8T38t/9ihwWnu0//IuodoXZiZodc3LowWEYkFPvmGjQz0yha0PKt3AZmLLGsWtdxJn3d5vaChqzNfs4GTPpvmldMgHdpJ4fo0OKewF4RyZtjv1FWBB077SxM8s3Kd398FjvRuCq5QW7XHGaGr17/16IbspBfDUjF0/vHySDY1nBi1I5QAEe+hjiOe3/ni2cGTwnK8pl1JWgV8aB5Cppkfu6joDMsIu+3FGH5HRZUXAUWEUmpBDiESKs6OPDoySOTc+q8q4WNdYYNoLEY1lhvBtzxnqShJ5j87NAMwDIJeMo4p8Wkdxaiqw0qQQpoljKlqUaC2sWNo30AbRCb+tiLLzo+tC3tpqFCzWb/jXx2bWF9hlU2epnWJAdsctANC9dfFlWZWBlv6BR/6Ge9Lab4WSvMmwibOwxz7MCZsfVbAdA=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

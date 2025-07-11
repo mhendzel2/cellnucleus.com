@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Bodies & Compartments - Cell Nucleus Research Hub</title>
+    <meta name="description" content="Comprehensive resource on nuclear bodies, compartments, and phase separation. Explore nucleoli, Cajal bodies, nuclear speckles, and other membrane-less organelles.">
+    <meta name="keywords" content="nuclear bodies, nuclear compartments, phase separation, nucleolus, Cajal bodies, nuclear speckles, molecular condensates">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links .active {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .main-content {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .content-section {
+            padding: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #718096;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .highlight-section {
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 5px solid #38b2ac;
+        }
+
+        .highlight-section h3 {
+            color: #234e52;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .highlight-section p {
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .featured-review {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 2px solid #e53e3e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-review::before {
+            content: "NEW COMPREHENSIVE REVIEW";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #e53e3e;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+            transform-origin: center;
+            margin-top: 1rem;
+            margin-right: -2rem;
+        }
+
+        .featured-review h3 {
+            color: #2d3748;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-review p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .featured-review .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #e53e3e;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+        }
+
+        .featured-review .cta-button:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(229, 62, 62, 0.4);
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .topic-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-left-color: #4c51bf;
+        }
+
+        .topic-card h4 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .topic-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .topic-card .features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .topic-card .features li {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .topic-card .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
+        }
+
+        .topic-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .topic-card a:hover {
+            color: #4c51bf;
+        }
+
+        .research-areas {
+            background: #f7fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .research-areas h3 {
+            color: #2d3748;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .research-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .research-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .research-item .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-item h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-item p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .key-concepts {
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .key-concepts h3 {
+            color: #2c5282;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .concepts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .concept-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #3182ce;
+        }
+
+        .concept-item h4 {
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+
+        .concept-item p {
+            color: #2d3748;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .related-links {
+            background: #2d3748;
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .related-links h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .link-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🧬 Cell Nucleus</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">All Reviews</a></li>
+                <li><a href="nuclear-bodies.html" class="active">Nuclear Bodies</a></li>
+                <li><a href="nuclear-transport.html">Transport</a></li>
+                <li><a href="nuclear-biophysics.html">Biophysics</a></li>
+                <li><a href="nuclear-mechanics.html">Mechanics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>🔬 Nuclear Bodies & Compartments</h1>
+                <p>Explore the fascinating world of membrane-less organelles, phase separation, and nuclear compartmentalization. Discover how cells organize their nuclear space through dynamic, self-assembling structures.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="reviews.html">Reviews</a> / Nuclear Bodies & Compartments
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="main-content">
+                <!-- Featured New Review Section -->
+                <section class="featured-review">
+                    <h3>🆕 Nuclear Body Biophysics: Comprehensive Review</h3>
+                    <p>Dive deep into the biophysical principles governing nuclear body formation and function. This comprehensive review covers phase separation mechanisms, molecular condensates, liquid-liquid phase separation, and the dynamic properties that make nuclear bodies essential for cellular organization and gene regulation.</p>
+                    <p><strong>Key Topics Covered:</strong> Phase separation thermodynamics, molecular condensate properties, nuclear body dynamics, regulatory mechanisms, disease implications, and cutting-edge experimental approaches.</p>
+                    <a href="nuclear_body_biophysics_comprehensive_review.html" class="cta-button">
+                        📖 Read Comprehensive Review
+                    </a>
+                </section>
+
+                <section class="content-section">
+                    <div class="highlight-section">
+                        <h3>🎯 What Are Nuclear Bodies?</h3>
+                        <p>Nuclear bodies are membrane-less organelles that form through liquid-liquid phase separation, creating distinct compartments within the nucleus. These dynamic structures concentrate specific proteins and RNAs to facilitate various cellular processes, from ribosome biogenesis to RNA processing and gene regulation. Understanding their biophysical properties is crucial for comprehending nuclear organization and cellular function.</p>
+                    </div>
+
+                    <h2 class="section-title">
+                        🏗️ Major Nuclear Body Types
+                    </h2>
+                    <p class="section-subtitle">Explore the diverse family of nuclear compartments, each with specialized functions and unique biophysical properties</p>
+
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <h4>🔵 Nucleolus</h4>
+                            <p>The largest and most prominent nuclear body, responsible for ribosome biogenesis and rRNA processing.</p>
+                            <ul class="features">
+                                <li>Tripartite structure (FC, DFC, GC)</li>
+                                <li>rRNA transcription and processing</li>
+                                <li>Ribosome assembly</li>
+                                <li>Stress response regulation</li>
+                                <li>Cell cycle coordination</li>
+                            </ul>
+                            <a href="#">Explore Nucleolus Research →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🟢 Cajal Bodies</h4>
+                            <p>Dynamic structures involved in snRNP biogenesis and histone mRNA processing.</p>
+                            <ul class="features">
+                                <li>snRNP assembly and modification</li>
+                                <li>Histone mRNA 3' end processing</li>
+                                <li>Telomerase RNA maturation</li>
+                                <li>U7 snRNP localization</li>
+                                <li>Coilin protein organization</li>
+                            </ul>
+                            <a href="#">Explore Cajal Bodies →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🟡 Nuclear Speckles</h4>
+                            <p>Splicing factor storage and assembly sites that regulate pre-mRNA processing.</p>
+                            <ul class="features">
+                                <li>Splicing factor concentration</li>
+                                <li>Pre-mRNA processing regulation</li>
+                                <li>Alternative splicing control</li>
+                                <li>Transcriptional coupling</li>
+                                <li>RNA polymerase II regulation</li>
+                            </ul>
+                            <a href="#">Explore Nuclear Speckles →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🟠 PML Bodies</h4>
+                            <p>Tumor suppressor-associated structures involved in transcriptional regulation and DNA repair.</p>
+                            <ul class="features">
+                                <li>PML protein organization</li>
+                                <li>Transcriptional regulation</li>
+                                <li>DNA damage response</li>
+                                <li>Apoptosis regulation</li>
+                                <li>Viral defense mechanisms</li>
+                            </ul>
+                            <a href="#">Explore PML Bodies →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🔴 Paraspeckles</h4>
+                            <p>RNA-dependent nuclear bodies that regulate gene expression through RNA retention.</p>
+                            <ul class="features">
+                                <li>NEAT1 lncRNA scaffolding</li>
+                                <li>RNA editing regulation</li>
+                                <li>mRNA retention control</li>
+                                <li>Stress response modulation</li>
+                                <li>DBHS protein family organization</li>
+                            </ul>
+                            <a href="#">Explore Paraspeckles →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🟣 Histone Locus Bodies</h4>
+                            <p>Specialized structures for histone gene expression and mRNA processing during S phase.</p>
+                            <ul class="features">
+                                <li>Histone gene clustering</li>
+                                <li>S-phase specific expression</li>
+                                <li>3' end processing machinery</li>
+                                <li>Cell cycle regulation</li>
+                                <li>Chromatin assembly coupling</li>
+                            </ul>
+                            <a href="#">Explore Histone Locus Bodies →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="key-concepts">
+                    <h3>🔬 Key Biophysical Concepts</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item">
+                            <h4>Phase Separation</h4>
+                            <p>The thermodynamic process by which nuclear bodies form through liquid-liquid demixing, concentrating specific biomolecules while excluding others.</p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h4>Molecular Condensates</h4>
+                            <p>Biomolecular assemblies that behave like liquid droplets, exhibiting dynamic exchange with the surrounding nucleoplasm.</p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h4>Multivalent Interactions</h4>
+                            <p>Weak, multiple binding interactions between proteins and RNAs that drive phase separation and maintain nuclear body integrity.</p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h4>Critical Concentration</h4>
+                            <p>The minimum concentration threshold required for phase separation and nuclear body formation.</p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h4>Viscoelastic Properties</h4>
+                            <p>The material properties of nuclear bodies that determine their fluidity, fusion behavior, and response to cellular forces.</p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h4>Compositional Control</h4>
+                            <p>Mechanisms that regulate which molecules partition into nuclear bodies and which are excluded from these compartments.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="research-areas">
+                    <h3>🔬 Current Research Areas</h3>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="icon">🧪</div>
+                            <h4>Phase Separation Mechanisms</h4>
+                            <p>Understanding the molecular basis of nuclear body formation</p>
+                        </div>
+
+                        <div class="research-item">
+                            <div class="icon">⚡</div>
+                            <h4>Dynamic Properties</h4>
+                            <p>Studying fusion, fission, and exchange dynamics</p>
+                        </div>
+
+                        <div class="research-item">
+                            <div class="icon">🎯</div>
+                            <h4>Functional Roles</h4>
+                            <p>Linking structure to biological function</p>
+                        </div>
+
+                        <div class="research-item">
+                            <div class="icon">🔧</div>
+                            <h4>Regulatory Mechanisms</h4>
+                            <p>Post-translational modifications and control</p>
+                        </div>
+
+                        <div class="research-item">
+                            <div class="icon">🏥</div>
+                            <h4>Disease Connections</h4>
+                            <p>Nuclear body dysfunction in pathology</p>
+                        </div>
+
+                        <div class="research-item">
+                            <div class="icon">🔬</div>
+                            <h4>Advanced Techniques</h4>
+                            <p>New methods for studying nuclear bodies</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-links">
+                    <h3>🔗 Related Topics & Resources</h3>
+                    <div class="links-grid">
+                        <div class="link-item">
+                            <a href="intranuclear_transport_comprehensive_review.html">Intranuclear Transport</a>
+                            <p>How molecules move to and within nuclear bodies</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="chromatin_biophysics_comprehensive_review.html">Chromatin Biophysics</a>
+                            <p>Chromatin organization and nuclear body interactions</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="nuclear-transport.html">Nuclear Transport</a>
+                            <p>Nucleocytoplasmic transport mechanisms</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="nuclear-biophysics.html">Nuclear Biophysics</a>
+                            <p>Physical principles of nuclear organization</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="reviews.html">All Reviews</a>
+                            <p>Complete collection of nuclear biology reviews</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="index.html">Research Hub</a>
+                            <p>Main portal for nuclear biology resources</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cell Nucleus Research Hub. Advancing understanding of nuclear compartmentalization and phase separation.</p>
+        </div>
+    </footer>
+</body>
+</html>

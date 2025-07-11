@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatin Biophysics and Function: Genome Mechanics - Cell Nucleus Research</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .section-divider {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+            height: 3px;
+            margin: 2rem 0;
+        }
+        .data-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 1px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-dna text-blue-600 mr-3"></i>
+                Chromatin Biophysics and Function: Genome Mechanics
+            </h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Comprehensive review of chromatin biophysics covering mechanical properties, hierarchical organization, 
+                phase separation, and functional integration with quantitative measurements and disease implications
+            </p>
+        </header>
+
+        <!-- Abstract -->
+        <section class="mb-8">
+            <div class="highlight-box p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-book-open text-blue-600 mr-3"></i>Abstract
+                </h2>
+                <p class="text-lg leading-relaxed">
+                    Chromatin represents one of nature's most sophisticated packaging solutions, compacting approximately 
+                    two meters of DNA into a nucleus mere microns in diameter. This review explores chromatin as a dynamic, 
+                    information-rich biopolymer whose physical properties are intrinsically linked to genomic function. 
+                    We examine the biophysical characteristics—mechanics, electrostatics, and material state—that regulate 
+                    essential cellular processes from transcription to DNA repair, integrating principles from polymer physics, 
+                    soft matter science, and molecular biology.
+                </p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Hierarchical Organization -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-layer-group text-purple-600 mr-3"></i>
+                Hierarchical Organization of Chromatin
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Structural Levels</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-circle text-blue-500 mr-3 text-xs"></i>
+                            <span><strong>Nucleosome Core:</strong> 146-147 bp DNA wrapped around histone octamer</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle text-green-500 mr-3 text-xs"></i>
+                            <span><strong>10-nm Fiber:</strong> "Beads-on-a-string" flexible polymer chain</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle text-yellow-500 mr-3 text-xs"></i>
+                            <span><strong>Chromatin Loops:</strong> TADs with 10-30 minute lifetimes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle text-red-500 mr-3 text-xs"></i>
+                            <span><strong>Chromosome Territories:</strong> Large-scale nuclear organization</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Organizational Models</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-project-diagram text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Fractal Globule:</strong> Compact yet unentangled polymer state allowing 
+                                dynamic unfolding and refolding
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-sync-alt text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Loop Extrusion:</strong> SMC complexes (cohesin/condensin) actively 
+                                extrude loops until encountering CTCF boundaries
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-cubes text-purple-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Chromatin Clutches:</strong> Irregularly folded domains with 
+                                regulated packing density
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Chromatin Compaction Levels</h3>
+                <canvas id="compactionChart" style="height: 400px;"></canvas>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Mechanical Properties -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-weight-hanging text-blue-600 mr-3"></i>
+                Mechanical Properties and Quantitative Measurements
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="data-card p-6 rounded-lg text-center">
+                    <i class="fas fa-ruler text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Persistence Length</h3>
+                    <div class="text-2xl font-bold text-blue-600 mb-2">~50 nm</div>
+                    <p class="text-sm text-gray-600">Naked DNA flexibility</p>
+                    <div class="text-xl font-bold text-purple-600 mt-2">~200 nm</div>
+                    <p class="text-sm text-gray-600">Heterochromatin stiffness</p>
+                </div>
+                
+                <div class="data-card p-6 rounded-lg text-center">
+                    <i class="fas fa-expand-arrows-alt text-green-600 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Young's Modulus</h3>
+                    <div class="text-2xl font-bold text-green-600 mb-2">1-5 kPa</div>
+                    <p class="text-sm text-gray-600">Chromatin fiber elasticity</p>
+                    <div class="text-sm text-gray-500 mt-2">Measured via optical tweezers</div>
+                </div>
+                
+                <div class="data-card p-6 rounded-lg text-center">
+                    <i class="fas fa-balance-scale text-purple-600 text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Stiffness Ratio</h3>
+                    <div class="text-2xl font-bold text-purple-600 mb-2">4:1</div>
+                    <p class="text-sm text-gray-600">Heterochromatin vs Euchromatin</p>
+                    <div class="text-sm text-gray-500 mt-2">Differential mechanical properties</div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Mechanical Properties Comparison</h3>
+                <canvas id="mechanicalChart" style="height: 400px;"></canvas>
+            </div>
+
+            <div class="highlight-box p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-microscope text-blue-600 mr-3"></i>
+                    Measurement Techniques
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Single-Molecule Methods</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li>• Optical tweezers for force-extension curves</li>
+                            <li>• Magnetic tweezers for torsional studies</li>
+                            <li>• AFM for local stiffness mapping</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Ensemble Techniques</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li>• Microrheology for bulk viscoelasticity</li>
+                            <li>• SAXS for structural characterization</li>
+                            <li>• Cryo-EM for native state imaging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Phase Separation -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-water text-blue-600 mr-3"></i>
+                Liquid-Liquid Phase Separation and Material States
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-981-99-4886-4_8/MediaObjects/517108_1_En_8_Fig1_HTML.png" 
+                         alt="Phase-separated nuclear bodies formation diagram" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Nuclear Body Formation</h3>
+                    <p class="text-sm text-gray-600">
+                        Biomolecular condensates form through liquid-liquid phase separation, 
+                        creating functionally specialized nuclear compartments.
+                    </p>
+                </div>
+
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">LLPS Mechanisms</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-atom text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Multivalent Interactions:</strong> Weak, multiple binding sites 
+                                drive condensate formation
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-dna text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>IDR Proteins:</strong> Intrinsically disordered regions 
+                                facilitate phase separation
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-network-wired text-purple-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>RNA Scaffolds:</strong> Nucleic acids provide structural 
+                                framework for condensates
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Chromatin Material States</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <i class="fas fa-water text-blue-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Liquid-like</h4>
+                        <p class="text-sm text-gray-600 mt-2">Active euchromatin, rapid exchange</p>
+                    </div>
+                    <div class="text-center p-4 bg-yellow-50 rounded-lg">
+                        <i class="fas fa-tint text-yellow-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Gel-like</h4>
+                        <p class="text-sm text-gray-600 mt-2">Intermediate compaction states</p>
+                    </div>
+                    <div class="text-center p-4 bg-red-50 rounded-lg">
+                        <i class="fas fa-cube text-red-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Solid-like</h4>
+                        <p class="text-sm text-gray-600 mt-2">Heterochromatin, stable domains</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Dynamic Properties -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-sync-alt text-green-600 mr-3"></i>
+                Dynamic Properties and Functional Integration
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Nucleosome Dynamics</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Breathing Events</span>
+                            <span class="text-sm text-blue-600 font-semibold">Transient unwrapping</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Sliding Motion</span>
+                            <span class="text-sm text-green-600 font-semibold">ATP-dependent</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Histone Exchange</span>
+                            <span class="text-sm text-purple-600 font-semibold">Variant-dependent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Chromatin Loop Dynamics</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">TAD Formation</span>
+                            <span class="text-sm text-blue-600 font-semibold">Cohesin-mediated</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Loop Lifetime</span>
+                            <span class="text-sm text-green-600 font-semibold">10-30 minutes</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">CTCF Anchoring</span>
+                            <span class="text-sm text-purple-600 font-semibold">Boundary elements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Dynamic Timescales</h3>
+                <canvas id="timescaleChart" style="height: 400px;"></canvas>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Functional Integration -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-cogs text-purple-600 mr-3"></i>
+                Functional Integration: From Mechanics to Biology
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <i class="fas fa-dna text-blue-600 text-2xl mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Transcription</h4>
+                    <p class="text-xs text-gray-600 mt-1">Chromatin breathing enables TF access</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <i class="fas fa-copy text-green-600 text-2xl mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Replication</h4>
+                    <p class="text-xs text-gray-600 mt-1">Fork progression requires disassembly</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                    <i class="fas fa-wrench text-yellow-600 text-2xl mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">DNA Repair</h4>
+                    <p class="text-xs text-gray-600 mt-1">Fluid-like state permits factor access</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <i class="fas fa-exchange-alt text-purple-600 text-2xl mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Recombination</h4>
+                    <p class="text-xs text-gray-600 mt-1">Controlled mobility for locus pairing</p>
+                </div>
+            </div>
+
+            <div class="highlight-box p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Biophysical Regulation Mechanisms</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-toggle-on text-blue-600 mr-2"></i>
+                            Accessibility Control
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>• Chromatin compaction regulates factor binding</li>
+                            <li>• Nucleosome positioning controls accessibility</li>
+                            <li>• Phase separation creates functional domains</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-search text-green-600 mr-2"></i>
+                            Search Mechanisms
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>• 3D diffusion in nuclear space</li>
+                            <li>• 1D sliding along DNA</li>
+                            <li>• Intersegmental transfer between loci</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Advanced Techniques -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-microscope text-blue-600 mr-3"></i>
+                Advanced Research Techniques and Methodologies
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <i class="fas fa-sitemap text-blue-600 text-2xl mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">3D Structure Mapping</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Hi-C contact mapping</li>
+                        <li>• ATAC-seq accessibility</li>
+                        <li>• ChIP-seq protein binding</li>
+                        <li>• Super-resolution microscopy</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <i class="fas fa-atom text-green-600 text-2xl mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Single-Molecule Analysis</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Optical/magnetic tweezers</li>
+                        <li>• FRET dynamics</li>
+                        <li>• Single-particle tracking</li>
+                        <li>• Cryo-electron tomography</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <i class="fas fa-calculator text-purple-600 text-2xl mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Computational Modeling</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Polymer physics simulations</li>
+                        <li>• Molecular dynamics</li>
+                        <li>• Coarse-grained models</li>
+                        <li>• Machine learning integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Disease Implications -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-stethoscope text-red-600 mr-3"></i>
+                Disease Implications and Chromatin Dysfunction
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+                    <h3 class="text-xl font-semibold text-red-800 mb-4 flex items-center">
+                        <i class="fas fa-cancer text-red-600 mr-3"></i>
+                        Cancer Biology
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Altered chromatin compaction in tumors</li>
+                        <li>• Disrupted phase separation dynamics</li>
+                        <li>• Oncogene accessibility changes</li>
+                        <li>• Metastatic chromatin remodeling</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                        <i class="fas fa-brain text-blue-600 mr-3"></i>
+                        Neurodegeneration
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Protein aggregation in chromatin</li>
+                        <li>• Loss of nuclear organization</li>
+                        <li>• Impaired DNA repair mechanisms</li>
+                        <li>• Aberrant gene expression patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Therapeutic Implications</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2 flex items-center">
+                            <i class="fas fa-pills text-blue-600 mr-2"></i>
+                            Epigenetic Drugs
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Targeting chromatin remodeling complexes, histone modifying enzymes, 
+                            and DNA methylation machinery to restore normal chromatin states.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2 flex items-center">
+                            <i class="fas fa-dna text-green-600 mr-2"></i>
+                            Chromatin Engineering
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Designing synthetic chromatin architectures and programmable 
+                            phase separation systems for therapeutic applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Conclusions -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-lightbulb text-yellow-600 mr-3"></i>
+                Conclusions and Future Perspectives
+            </h2>
+
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Insights</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                                Chromatin is a dynamic, tunable biomaterial whose physical properties directly regulate genome function
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                                Phase separation creates functionally specialized nuclear domains with distinct biophysical properties
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+                                Mechanical properties span orders of magnitude and are actively regulated during cellular processes
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Future Directions</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2 mt-1"></i>
+                                Single-cell chromatin biophysics and heterogeneity
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2 mt-1"></i>
+                                Artificial chromatin systems and synthetic biology
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2 mt-1"></i>
+                                Therapeutic targeting of chromatin mechanical states
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References and Community -->
+        <section class="mb-8">
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-users text-blue-600 mr-3"></i>
+                    Community Collaboration
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    This review represents a comprehensive synthesis of current knowledge in chromatin biophysics. 
+                    We encourage community feedback and collaboration to advance this rapidly evolving field.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                        <i class="fas fa-microscope mr-1"></i>Experimental Methods
+                    </span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                        <i class="fas fa-calculator mr-1"></i>Computational Modeling
+                    </span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                        <i class="fas fa-dna mr-1"></i>Biophysical Analysis
+                    </span>
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+                        <i class="fas fa-stethoscope mr-1"></i>Disease Applications
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Chromatin Compaction Chart
+        const compactionCtx = document.getElementById('compactionChart').getContext('2d');
+        new Chart(compactionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Extended DNA', 'Nucleosome', '10-nm Fiber', 'Condensed Loops', 'Metaphase Chromosome'],
+                datasets: [{
+                    label: 'Compaction Factor',
+                    data: [1, 6, 40, 1000, 10000],
+                    backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
+                    borderColor: ['#1d4ed8', '#059669', '#d97706', '#dc2626', '#7c3aed'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Compaction Factor (log scale)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Hierarchical Chromatin Compaction Levels'
+                    }
+                }
+            }
+        });
+
+        // Mechanical Properties Chart
+        const mechanicalCtx = document.getElementById('mechanicalChart').getContext('2d');
+        new Chart(mechanicalCtx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Euchromatin',
+                    data: [{x: 50, y: 2.5}],
+                    backgroundColor: '#10b981',
+                    borderColor: '#059669',
+                    pointRadius: 10
+                }, {
+                    label: 'Heterochromatin',
+                    data: [{x: 200, y: 10}],
+                    backgroundColor: '#ef4444',
+                    borderColor: '#dc2626',
+                    pointRadius: 10
+                }, {
+                    label: 'Naked DNA',
+                    data: [{x: 50, y: 0.1}],
+                    backgroundColor: '#3b82f6',
+                    borderColor: '#1d4ed8',
+                    pointRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Persistence Length (nm)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Young's Modulus (kPa)"
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Chromatin Mechanical Properties: Stiffness vs Flexibility'
+                    }
+                }
+            }
+        });
+
+        // Dynamic Timescales Chart
+        const timescaleCtx = document.getElementById('timescaleChart').getContext('2d');
+        new Chart(timescaleCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Nucleosome Breathing', 'Histone Exchange', 'Loop Formation', 'TAD Reorganization', 'Replication'],
+                datasets: [{
+                    label: 'Timescale (seconds)',
+                    data: [0.1, 60, 600, 1800, 3600],
+                    backgroundColor: ['#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
+                    borderColor: ['#0891b2', '#059669', '#d97706', '#dc2626', '#7c3aed'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Time (seconds, log scale)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Dynamic Processes in Chromatin: Characteristic Timescales'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDrTLHO456TXi89OJx7aOkKy8u1C5gKKEGcLSWjWoI4nBbAsofI%2FHEvkC9G0rRKbckd8ZbvZ5Myvj4paPCwZBVbV6mmNK3H9fz8cUwQt9Y%2Fbc2xRNGNM%2Fus9DOOHPPX5EpkRRQxrtJnaJky63MavnWrLq7Ye5%2Fsz%2BJSjtJOWgR0XcZESQ4hiXMfd6SrUgyrAcfuilM8UXQTaVgaEeoGPcx4Um8tdLJkl24u3zPYfhbAV07upzRZuS5RkYykmRlGGif25%2BdFrfwR%2BYfyknNxpCrO%2F0lGhBZPUGr6AHm%2B7VEnruotHS9NnEjUIf8inGZmAp6gvbBPk6sBRXBpg4MBvPfXIlqv4Es%2BenYVJh4QPOfq0nqiOovQ9vqibpmrwEkPSsUmW3TB4hQ%2BzbJSuzAgYn40jKnqntvucP9KZQY25ZIhcwn0A8SwDDR3RD1pdTjOhFg6XJpWuY1zOXAJ02ZljN1gumISf5OhDJ800Kx%2B5NZVekjGKaDPgENckCb%2B33GRFms8CA%2BOh0m9meAJ7DiZZP3452xfsLJvnAg0AXfaBzdpds";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDrTLHO456TXi89OJx7aOkKy8u1C5gKKEGcLSWjWoI4nBbAsofI/HEvkC9G0rRKbckd8ZbvZ5Myvj4paPCwZBVbV6mmNK3H9fz8cUwQt9Y/bc2xRNGNM/us9DOOHPPX5EpkRRQxrtJnaJky63MavnWrLq7Ye5/sz+JSjtJOWgR0XcZESQ4hiXMfd6SrUgyrAcfuilM8UXQTaVgaEeoGPcx4Um8tdLJkl24u3zPYfhbAV07upzRZuS5RkYykmRlGGif25+dFrfwR+YfyknNxpCrO/0lGhBZPUGr6AHm+7VEnruotHS9NnEjUIf8inGZmAp6gvbBPk6sBRXBpg4MBvPfXIlqv4Es+enYVJh4QPOfq0nqiOovQ9vqibpmrwEkPSsUmW3TB4hQ+zbJSuzAgYn40jKnqntvucP9KZQY25ZIhcwn0A8SwDDR3RD1pdTjOhFg6XJpWuY1zOXAJ02ZljN1gumISf5OhDJ800Kx+5NZVekjGKaDPgENckCb+33GRFms8CA+Oh0m9meAJ7DiZZP3452xfsLJvnAg0AXfaBzdpds";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

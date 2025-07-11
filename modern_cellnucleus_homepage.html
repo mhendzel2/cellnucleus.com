@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com - Nuclear Biology Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .sidebar-item:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.5rem;
+        }
+        .sidebar-item.active {
+            background-color: #dbeafe;
+            border-radius: 0.5rem;
+            color: #2563eb;
+        }
+        .feature-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .search-container {
+            position: relative;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-72 bg-white border-r border-gray-200 flex flex-col">
+            <!-- Logo/Branding -->
+            <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-microscope text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Cellnucleus</h1>
+                        <p class="text-sm text-gray-500">Nuclear Biology Hub</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="#" class="sidebar-item active flex items-center space-x-3 px-3 py-2 text-sm font-medium">
+                    <i class="fas fa-home w-5"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-atom w-5"></i>
+                    <span>Nuclear Structure</span>
+                </a>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-microscope w-5"></i>
+                    <span>Microscopy</span>
+                </a>
+                <div class="space-y-1">
+                    <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                        <i class="fas fa-book-open w-5"></i>
+                        <span>Research Reviews</span>
+                        <i class="fas fa-chevron-right ml-auto text-xs"></i>
+                    </a>
+                </div>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-database w-5"></i>
+                    <span>Databases</span>
+                </a>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-graduation-cap w-5"></i>
+                    <span>Educational Resources</span>
+                </a>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-download w-5"></i>
+                    <span>Downloads</span>
+                </a>
+                <a href="#" class="sidebar-item flex items-center space-x-3 px-3 py-2 text-sm font-medium text-gray-700">
+                    <i class="fas fa-info-circle w-5"></i>
+                    <span>About</span>
+                </a>
+            </nav>
+
+            <!-- Bottom Action -->
+            <div class="p-4 border-t border-gray-100">
+                <button class="w-full bg-blue-500 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
+                    <i class="fas fa-share-alt mr-2"></i>
+                    Share with Colleagues
+                </button>
+                <p class="text-xs text-gray-500 mt-2 text-center">Spread Nuclear Biology Knowledge</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto">
+            <div class="max-w-4xl mx-auto px-8 py-12">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <div class="mb-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            <i class="fas fa-circle text-blue-500 mr-2" style="font-size: 0.5rem;"></i>
+                            Cellnucleus.com
+                        </span>
+                    </div>
+                    <h1 class="text-5xl font-bold text-gray-900 mb-6">Nuclear Biology Hub</h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Comprehensive research platform for nuclear biology education and discovery.
+                        Access 40+ research reviews, microscopy galleries, and educational resources.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="search-container max-w-2xl mx-auto">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                placeholder="Ask anything about nuclear biology, search research topics..."
+                                class="search-input w-full px-6 py-4 border-2 border-green-200 rounded-xl text-lg focus:border-green-500 transition-colors"
+                            >
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition-colors">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- Research Reviews Card -->
+                    <div class="feature-card bg-white rounded-xl p-8 shadow-md border border-gray-100">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-book-open text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">All Research Reviews</h3>
+                        <p class="text-gray-600 mb-6">Browse 40+ comprehensive research articles covering all aspects of nuclear biology</p>
+                        <a href="https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews" class="text-blue-500 font-medium hover:text-blue-600 transition-colors">
+                            Explore Reviews →
+                        </a>
+                    </div>
+
+                    <!-- Microscopy Gallery Card -->
+                    <div class="feature-card bg-white rounded-xl p-8 shadow-md border border-gray-100">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-microscope text-green-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Microscopy Gallery</h3>
+                        <p class="text-gray-600 mb-6">High-resolution nuclear imaging collection with advanced microscopy techniques</p>
+                        <a href="#" class="text-green-500 font-medium hover:text-green-600 transition-colors">
+                            View Gallery →
+                        </a>
+                    </div>
+
+                    <!-- Educational Resources Card -->
+                    <div class="feature-card bg-white rounded-xl p-8 shadow-md border border-gray-100">
+                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-purple-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Educational Resources</h3>
+                        <p class="text-gray-600 mb-6">Teaching materials and study guides for nuclear biology education</p>
+                        <a href="#" class="text-purple-500 font-medium hover:text-purple-600 transition-colors">
+                            Access Resources →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Access Section -->
+                <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8 mb-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Latest Research Reviews</h2>
+                    <p class="text-gray-600 mb-6">Access our most recent comprehensive reviews in nuclear biology research</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/ad2df8d2-dbcb-4c77-b067-301dc8088aa5" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-gray-900">Chromosome Condensation Mechanisms</h4>
+                            <p class="text-sm text-gray-600">Architecture of inheritance and temporal regulation</p>
+                        </a>
+                        <a href="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/55a2ab62-692d-4f7e-8cf2-33846e89b994" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-gray-900">Nuclear Microrheology</h4>
+                            <p class="text-sm text-gray-600">Viscoelastic properties and genome organization</p>
+                        </a>
+                        <a href="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/e9f04a19-7db8-4bec-9dbd-faa6085637ac" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-gray-900">Chromatin Biophysics</h4>
+                            <p class="text-sm text-gray-600">Biophysical landscape of genome mechanics</p>
+                        </a>
+                        <a href="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/67e9b0b2-ba2e-4635-b8fd-e0670c1939c1" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-gray-900">Chromatin Condensates</h4>
+                            <p class="text-sm text-gray-600">Critical review of biophysical principles</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Statistics Section -->
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-3xl font-bold text-blue-500 mb-2">40+</div>
+                        <div class="text-gray-600">Research Reviews</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-3xl font-bold text-green-500 mb-2">500+</div>
+                        <div class="text-gray-600">Research Images</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-3xl font-bold text-purple-500 mb-2">50+</div>
+                        <div class="text-gray-600">Educational Resources</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-3xl font-bold text-red-500 mb-2">1000+</div>
+                        <div class="text-gray-600">Monthly Users</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    alert('Search functionality coming soon! Currently you can browse all reviews through the sidebar navigation.');
+                }
+            });
+
+            // Add click handlers for navigation items
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (!this.classList.contains('active')) {
+                        sidebarItems.forEach(i => i.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDgm4EX991llDoufmc4WnzftRGOy7oHqj8e8m4yVVB77wVbM5cHFLYllRliBuyxplGWqBA71sfVFfvh5nC5xIhoRuDwSIXjSeZCEvnQszly5xgG1OfftbJLyrJ4%2Bz6qj2odA0V9OR6HCB86OExIgQNziZenDigbziEciyeLrihmljh77wJ2RDcFHwAo33eAfym4eLUqZ8L9zzCRHohtWc4MkkUjnpTMPaqSsKKYZkb1zqvMfpCXtg%2BTX0Rp%2FN3ZJbZCAzP3VCORqbeZUokGigg4RKjRCHnjvSql8ZGfGOtk9dDkQ03a2kxFAt%2BwSEMDzCflRuGIgYHmAItQ2tD%2FWOWQByZSZ4Tj5rICqDFmHSbpNELNpSqTzK8JHZUnl1hzLmpXnjjv9wKk76gmhytvAlGmoRS0goaUSaSaYDY89ItDXbtfUwEuv%2BaTsz56leELD%2Bt%2FhZfByaxG5cM41%2FL7psOMBM9VJ7FJmfpUUgJTN1YwYOdh9q0JDLYiyFLhjyHQYNZ2AARlUPbKHWJXdEUx8IkmQ%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDgm4EX991llDoufmc4WnzftRGOy7oHqj8e8m4yVVB77wVbM5cHFLYllRliBuyxplGWqBA71sfVFfvh5nC5xIhoRuDwSIXjSeZCEvnQszly5xgG1OfftbJLyrJ4+z6qj2odA0V9OR6HCB86OExIgQNziZenDigbziEciyeLrihmljh77wJ2RDcFHwAo33eAfym4eLUqZ8L9zzCRHohtWc4MkkUjnpTMPaqSsKKYZkb1zqvMfpCXtg+TX0Rp/N3ZJbZCAzP3VCORqbeZUokGigg4RKjRCHnjvSql8ZGfGOtk9dDkQ03a2kxFAt+wSEMDzCflRuGIgYHmAItQ2tD/WOWQByZSZ4Tj5rICqDFmHSbpNELNpSqTzK8JHZUnl1hzLmpXnjjv9wKk76gmhytvAlGmoRS0goaUSaSaYDY89ItDXbtfUwEuv+aTsz56leELD+t/hZfByaxG5cM41/L7psOMBM9VJ7FJmfpUUgJTN1YwYOdh9q0JDLYiyFLhjyHQYNZ2AARlUPbKHWJXdEUx8IkmQ=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

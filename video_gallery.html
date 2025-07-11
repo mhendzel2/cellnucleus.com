@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery - Advanced Nuclear Microscopy | CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .video-container {
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3B82F6;
+            transform: translateY(-1px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+            height: 1px;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Horizontal Banner Navigation -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo and Site Name -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-atom text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">CellNucleus</h1>
+                        <p class="text-sm text-gray-500">Nuclear Biology Hub</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Research Reviews</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Microscopy</a>
+                    <a href="#" class="nav-link text-blue-600 font-semibold">Video Gallery</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Downloads</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-blue-600 font-medium">About</a>
+                </nav>
+
+                <!-- Contact Info -->
+                <div class="hidden lg:flex items-center space-x-4 text-sm">
+                    <div class="text-gray-600">
+                        <i class="fas fa-envelope mr-1"></i>
+                        <a href="mailto:mhendzel@ualberta.ca" class="hover:text-blue-600">mhendzel@ualberta.ca</a>
+                    </div>
+                    <div class="text-gray-600">
+                        <i class="fas fa-share-alt mr-1"></i>
+                        <span>www.cellnucleus.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Advanced Nuclear Microscopy
+            </h1>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Explore cutting-edge visualization of nuclear architecture through FIB-SEM and live-cell imaging
+            </p>
+            <div class="flex items-center justify-center space-x-4 text-blue-100">
+                <i class="fas fa-microscope text-2xl"></i>
+                <span class="text-lg">Original data obtained from Janelia Farms</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- FIB-SEM Studies Section -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-cube text-blue-500 mr-3"></i>
+                    FIB-SEM Studies
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    High-resolution focused ion beam scanning electron microscopy revealing nuclear ultrastructure 
+                    and chromatin organization in unprecedented detail.
+                </p>
+                <div class="mt-4 flex items-center justify-center text-sm text-gray-500">
+                    <i class="fas fa-building mr-2"></i>
+                    <span>Data courtesy of Janelia Farms Research Campus</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Macrophage Nucleus PcG Subregion (Main) -->
+                <div class="video-container">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-dna text-purple-500 mr-2"></i>
+                            Macrophage Nucleus - PcG Subregions
+                        </h3>
+                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4" poster="">
+                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/48c7d8e7-7f20-42de-a35b-925b2a2d01c7?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregion_1.mp4%22&sig=Fc%2B1dJSdM99CR/Kr6hcaQ%2BXnaB5PErGCCrOUvEeRl04%3D" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Technique:</strong> FIB-SEM multiview reconstruction</p>
+                            <p><strong>Sample:</strong> Macrophage nucleus showing Polycomb group (PcG) protein subregions</p>
+                            <p><strong>Resolution:</strong> Nanometer-scale 3D visualization</p>
+                            <p><strong>File Size:</strong> 381 MB</p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                <i class="fas fa-tag mr-1"></i>
+                                Featured Video
+                            </span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                Related Reviews <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Macrophage Nucleus PcG Subregion 3 -->
+                <div class="video-container">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-layer-group text-green-500 mr-2"></i>
+                            PcG Subregion Analysis - View 3
+                        </h3>
+                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
+                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/134c1d3f-4189-4284-8bd7-6b92098ae3a6?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregion3.mp4%22&sig=9wTWjjeeXaI/m9/iF5Q34QOT3QJ9AoRv0qnRItxKNGk%3D" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Technique:</strong> FIB-SEM serial sectioning</p>
+                            <p><strong>Focus:</strong> Alternative view of PcG subregion organization</p>
+                            <p><strong>Application:</strong> Chromatin territory mapping</p>
+                            <p><strong>File Size:</strong> 76.8 MB</p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-microscope mr-1"></i>
+                                High Resolution
+                            </span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                Related Reviews <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Macrophage Nucleus Shadow -->
+                <div class="video-container">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-eye text-indigo-500 mr-2"></i>
+                            Shadow Volume Reconstruction
+                        </h3>
+                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
+                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/3cbb31dd-2806-40c6-87ec-11aeaa6ca5ad?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregionshadow.mp4%22&sig=t4SI5W7A32O6KdrR1c1bRe3aBTc/LNy6LV9kpcPPI6U%3D" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Technique:</strong> Shadow volume visualization</p>
+                            <p><strong>Enhancement:</strong> 3D depth perception through shadow mapping</p>
+                            <p><strong>Purpose:</strong> Structural context and spatial relationships</p>
+                            <p><strong>File Size:</strong> 148.6 MB</p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                <i class="fas fa-cube mr-1"></i>
+                                3D Visualization
+                            </span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                Related Reviews <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HeLa Cell Figure 1 -->
+                <div class="video-container">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-chart-line text-red-500 mr-2"></i>
+                            HeLa Cell Analysis - Figure 1
+                        </h3>
+                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
+                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/c457a473-fe40-4984-a294-d99f09eba5b8?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22HeLaFigure1.mp4%22&sig=E5A9qwDYttHHUiFFT2d/2W0vfx0bY/5qasvaETlxdh8%3D" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p><strong>Cell Type:</strong> HeLa cervical cancer cell line</p>
+                            <p><strong>Application:</strong> Publication-quality figure generation</p>
+                            <p><strong>Features:</strong> Complete nuclear architecture visualization</p>
+                            <p><strong>File Size:</strong> 300.7 MB</p>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                <i class="fas fa-star mr-1"></i>
+                                Publication Quality
+                            </span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                Related Reviews <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Live-Cell Imaging Section -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-video text-green-500 mr-3"></i>
+                    Live-Cell Imaging
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Dynamic visualization of nuclear processes in living cells, capturing real-time molecular 
+                    movements and structural changes within the nuclear environment.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Nuclear Speckles GFP HeLa -->
+                <div class="video-container">
+                    <div class="p-8 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                            <i class="fas fa-dot-circle text-green-500 mr-2"></i>
+                            Nuclear Speckles Dynamics
+                        </h3>
+                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-6">
+                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/0b5bc60e-fee0-4244-8a2b-75ec713d0a13?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22gfphela16_cell1.mp4%22&sig=G401f8Qh0YeFYae9a2OGDiNOticBIFnln5yDL8W%2B9Fw%3D" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Technical Details</h4>
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <p><strong>Technique:</strong> Live-cell fluorescence microscopy</p>
+                                    <p><strong>Marker:</strong> GFP-labeled nuclear speckle proteins</p>
+                                    <p><strong>Cell Line:</strong> HeLa cervical cancer cells</p>
+                                    <p><strong>Duration:</strong> Time-lapse sequence</p>
+                                    <p><strong>File Size:</strong> 15.6 MB</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Biological Significance</h4>
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <p>Nuclear speckles are dynamic subnuclear compartments enriched in pre-mRNA splicing factors.</p>
+                                    <p>This visualization captures their mobility and structural reorganization during cellular processes.</p>
+                                    <p>Critical for understanding RNA processing and gene expression regulation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-play mr-1"></i>
+                                    Live Imaging
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-lightbulb mr-1"></i>
+                                    GFP Fluorescence
+                                </span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Nuclear Speckles Reviews <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attribution Section -->
+        <section class="bg-gray-100 rounded-lg p-8 text-center">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                <i class="fas fa-university text-blue-500 mr-2"></i>
+                Data Attribution
+            </h3>
+            <p class="text-gray-700 mb-4">
+                All FIB-SEM datasets presented in this gallery were generously provided by 
+                <strong>Janelia Farms Research Campus</strong>, a world-leading institution in 
+                biological imaging and neuroscience research.
+            </p>
+            <div class="flex items-center justify-center space-x-6 text-sm text-gray-600">
+                <div class="flex items-center">
+                    <i class="fas fa-microscope mr-2 text-blue-500"></i>
+                    <span>Advanced Imaging Facility</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-database mr-2 text-green-500"></i>
+                    <span>Open Science Initiative</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-share-alt mr-2 text-purple-500"></i>
+                    <span>Research Collaboration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Resources -->
+        <section class="mt-16">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Explore Related Resources</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="#" class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+                        <i class="fas fa-book-open text-2xl text-blue-500 mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Nuclear Speckles Review</h4>
+                        <p class="text-sm text-gray-600">Comprehensive analysis of nuclear speckle biology and function</p>
+                    </a>
+                    <a href="#" class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+                        <i class="fas fa-atom text-2xl text-green-500 mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">4D Nucleome Project</h4>
+                        <p class="text-sm text-gray-600">Dynamic genome architecture and spatial organization</p>
+                    </a>
+                    <a href="#" class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+                        <i class="fas fa-dna text-2xl text-purple-500 mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Chromatin Organization</h4>
+                        <p class="text-sm text-gray-600">Structure and function of chromatin domains</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">CellNucleus.com</h3>
+                <p class="text-gray-400">Advancing nuclear biology through visualization and research</p>
+            </div>
+            <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+                <span>
+                    <i class="fas fa-envelope mr-2"></i>
+                    mhendzel@ualberta.ca
+                </span>
+                <span>
+                    <i class="fas fa-globe mr-2"></i>
+                    www.cellnucleus.com
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDmDZttZ4k5lUAKoyeJrrh29g7vqyEVmfsm4d%2F3JimFqi4qIudeDtwZDnqJy%2F0RZvhTd%2Fj%2BiHt24arX%2F%2Bn0tFEHn4D6kfhX6GmAWvOu19Zc38YiqAhcFmfJcaqJlgep4rUa43U17JtDcVi9faWB99pTrA42vuf5aOnVvAVTGwrACT3Bxs0Ctjf5vhX7YPMGkrDbs55AyCkv4qvv2gz3pGQ8Epup7mFyAQHEXhLDbRVs1yzZ5So3PiykQWazPZ1lduCrk%2Fz0OwjJIvhiubk6kP6Iy4ff3iXwj7jWDY8J4hBzw%2BKBCuyjBc3TlLgB5lGRCYbKeBnfuS8w8ZgPNek%2FZoqsSyYT%2FZCWbbxxRXcy3rOGu5heC4JswvUapwcKE3y9JSMbU2ZOznYTCHqgdRzIpnTzxUlPvD9lEXfmCb8KdKDINIBFRH57WmY2wdCycqVQ3d0vq1mUvg0FT7irML91weCO7vP2%2B5zNIFV2QSG%2Bs8Ai6dnXO7Hk2Yl5n1p60qnL06noPqIIKbezr1hYKwoGmAnVE%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDmDZttZ4k5lUAKoyeJrrh29g7vqyEVmfsm4d/3JimFqi4qIudeDtwZDnqJy/0RZvhTd/j+iHt24arX/+n0tFEHn4D6kfhX6GmAWvOu19Zc38YiqAhcFmfJcaqJlgep4rUa43U17JtDcVi9faWB99pTrA42vuf5aOnVvAVTGwrACT3Bxs0Ctjf5vhX7YPMGkrDbs55AyCkv4qvv2gz3pGQ8Epup7mFyAQHEXhLDbRVs1yzZ5So3PiykQWazPZ1lduCrk/z0OwjJIvhiubk6kP6Iy4ff3iXwj7jWDY8J4hBzw+KBCuyjBc3TlLgB5lGRCYbKeBnfuS8w8ZgPNek/ZoqsSyYT/ZCWbbxxRXcy3rOGu5heC4JswvUapwcKE3y9JSMbU2ZOznYTCHqgdRzIpnTzxUlPvD9lEXfmCb8KdKDINIBFRH57WmY2wdCycqVQ3d0vq1mUvg0FT7irML91weCO7vP2+5zNIFV2QSG+s8Ai6dnXO7Hk2Yl5n1p60qnL06noPqIIKbezr1hYKwoGmAnVE=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Biophysics & Mechanics - Cell Nucleus Research Hub</title>
+    <meta name="description" content="Comprehensive resource on nuclear biophysics, mechanics, and physical properties. Explore chromatin dynamics, nuclear forces, and mechanical regulation of gene expression.">
+    <meta name="keywords" content="nuclear biophysics, nuclear mechanics, chromatin biophysics, nuclear forces, mechanobiology, nuclear actin">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links .active {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .main-content {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .content-section {
+            padding: 3rem;
+        }
+
+        .featured-reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .featured-review {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 2px solid #e53e3e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-review::before {
+            content: "NEW";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e53e3e;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .featured-review h3 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-review p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .featured-review .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #e53e3e;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .featured-review .cta-button:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .topic-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .topic-card h4 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .topic-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .topic-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .topic-card a:hover {
+            color: #4c51bf;
+        }
+
+        .related-links {
+            background: #2d3748;
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .related-links h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .link-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-reviews {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🧬 Cell Nucleus</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">All Reviews</a></li>
+                <li><a href="nuclear-bodies.html">Nuclear Bodies</a></li>
+                <li><a href="nuclear-transport.html">Transport</a></li>
+                <li><a href="nuclear-biophysics.html" class="active">Biophysics</a></li>
+                <li><a href="nuclear-mechanics.html">Mechanics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>⚛️ Nuclear Biophysics & Mechanics</h1>
+                <p>Explore the physical principles governing nuclear organization, chromatin dynamics, and mechanical regulation of gene expression. Discover how forces and physical properties shape nuclear function.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="reviews.html">Reviews</a> / Nuclear Biophysics & Mechanics
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="main-content">
+                <section class="content-section">
+                    <h2 style="font-size: 2.5rem; color: #2d3748; margin-bottom: 2rem; text-align: center;">🆕 Latest Comprehensive Reviews</h2>
+
+                    <div class="featured-reviews">
+                        <div class="featured-review">
+                            <h3>Enhanced Nuclear Biophysics: Comprehensive Review</h3>
+                            <p>Advanced perspectives on nuclear biophysics and mechanical properties. Integrates cutting-edge techniques and theoretical frameworks to understand nuclear behavior at multiple scales.</p>
+                            <a href="enhanced_nuclear_biophysics_comprehensive_review.html" class="cta-button">
+                                📖 Read Review
+                            </a>
+                        </div>
+
+                        <div class="featured-review">
+                            <h3>Nuclear Actin: Comprehensive Review</h3>
+                            <p>Comprehensive examination of actin functions within the nucleus. Explores nuclear actin's roles in transcription, chromatin remodeling, and nuclear organization.</p>
+                            <a href="nuclear_actin_comprehensive_review.html" class="cta-button">
+                                📖 Read Review
+                            </a>
+                        </div>
+
+                        <div class="featured-review">
+                            <h3>Chromatin Biophysics: Comprehensive Review</h3>
+                            <p>Detailed analysis of chromatin structure, dynamics, and mechanical properties. Covers multi-scale organization from nucleosomes to chromosome territories.</p>
+                            <a href="chromatin_biophysics_comprehensive_review.html" class="cta-button">
+                                📖 Read Review
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 style="font-size: 2.2rem; color: #2d3748; margin-bottom: 2rem;">🔬 Research Topics</h2>
+
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <h4>🧬 Chromatin Mechanics</h4>
+                            <p>Physical properties of chromatin fibers, nucleosome dynamics, and higher-order chromatin organization.</p>
+                            <a href="chromatin_biophysics_comprehensive_review.html">Explore Chromatin Biophysics →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🎯 Nuclear Actin Systems</h4>
+                            <p>Roles of actin and actin-related proteins in nuclear processes, transcription, and chromatin remodeling.</p>
+                            <a href="nuclear_actin_comprehensive_review.html">Explore Nuclear Actin →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>⚡ Nuclear Forces</h4>
+                            <p>Force generation and transmission within the nucleus, mechanotransduction, and cellular responses.</p>
+                            <a href="enhanced_nuclear_biophysics_comprehensive_review.html">Explore Nuclear Forces →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🔧 Nuclear Envelope Mechanics</h4>
+                            <p>Mechanical properties of the nuclear envelope, lamin networks, and nuclear shape regulation.</p>
+                            <a href="#">Explore Nuclear Envelope →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>📊 Single-Cell Nuclear Dynamics</h4>
+                            <p>Advanced techniques for measuring nuclear properties and dynamics at the single-cell level.</p>
+                            <a href="#">Explore Single-Cell Methods →</a>
+                        </div>
+
+                        <div class="topic-card">
+                            <h4>🧪 Experimental Techniques</h4>
+                            <p>Cutting-edge methods for studying nuclear biophysics, from AFM to optical tweezers.</p>
+                            <a href="#">Explore Techniques →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-links">
+                    <h3>🔗 Related Topics & Resources</h3>
+                    <div class="links-grid">
+                        <div class="link-item">
+                            <a href="nuclear_body_biophysics_comprehensive_review.html">Nuclear Body Biophysics</a>
+                            <p>Phase separation and nuclear compartmentalization</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="intranuclear_transport_comprehensive_review.html">Intranuclear Transport</a>
+                            <p>Molecular dynamics within the nucleus</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="nuclear-transport.html">Nuclear Transport</a>
+                            <p>Nucleocytoplasmic transport mechanisms</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="nuclear-bodies.html">Nuclear Bodies</a>
+                            <p>Nuclear compartments and organization</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="reviews.html">All Reviews</a>
+                            <p>Complete collection of reviews</p>
+                        </div>
+
+                        <div class="link-item">
+                            <a href="index.html">Research Hub</a>
+                            <p>Main portal for nuclear biology</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cell Nucleus Research Hub. Advancing nuclear biophysics and mechanobiology research.</p>
+        </div>
+    </footer>
+</body>
+</html>

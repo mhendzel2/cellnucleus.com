@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Repair & Replication - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #581c87 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-dna text-blue-600 text-2xl"></i>
+                    <h1 class="text-xl font-bold text-gray-900">CellNucleus.com</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="../reviews_index.html" class="text-gray-600 hover:text-blue-600 transition-colors">Reviews</a>
+                    <a href="#" class="text-blue-600 font-medium">Categories</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="../reviews_index.html" class="hover:text-blue-600 transition-colors">Research Categories</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-gray-900 font-medium">DNA Repair & Replication</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="title-font text-4xl lg:text-5xl font-bold mb-6">
+                        DNA Repair & Replication
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        10 Comprehensive Reviews • Genome Stability • DNA Damage Response
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <span class="bg-blue-800 bg-opacity-50 px-3 py-1 rounded-full">
+                            <i class="fas fa-shield-alt mr-2"></i>Genome Stability
+                        </span>
+                        <span class="bg-blue-800 bg-opacity-50 px-3 py-1 rounded-full">
+                            <i class="fas fa-tools mr-2"></i>DNA Repair Mechanisms
+                        </span>
+                        <span class="bg-blue-800 bg-opacity-50 px-3 py-1 rounded-full">
+                            <i class="fas fa-copy mr-2"></i>Replication Dynamics
+                        </span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-4">
+                        <img src="images/dna_repair/gamma_h2ax_dna_repair_foci_springer.png" 
+                             alt="γ-H2AX DNA repair foci immunofluorescence microscopy" 
+                             class="rounded-xl w-full h-80 object-cover shadow-2xl">
+                        <p class="text-xs text-blue-100 mt-2 opacity-75">
+                            γ-H2AX DNA repair foci visualization • EJNMMI Research
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <h2 class="title-font text-3xl font-bold text-gray-900 mb-8">Category Overview</h2>
+                <div class="prose prose-lg text-gray-600 mb-12">
+                    <p class="text-xl leading-relaxed mb-6">
+                        DNA repair and replication represent critical processes for maintaining genome integrity and cellular survival. This collection of 10 comprehensive reviews explores the molecular mechanisms, regulation, and clinical significance of DNA damage response pathways and replication machinery within the nuclear environment.
+                    </p>
+                </div>
+
+                <!-- Key Research Areas -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-dna text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Double-Strand Break Repair</h3>
+                        <p class="text-sm text-gray-600">Homologous recombination and non-homologous end joining</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-wrench text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Base Excision Repair</h3>
+                        <p class="text-sm text-gray-600">Single-base damage correction mechanisms</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-exclamation-triangle text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Replication Stress</h3>
+                        <p class="text-sm text-gray-600">Fork protection and restart mechanisms</p>
+                    </div>
+                    <div class="bg-red-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-crosshairs text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">DNA Damage Foci</h3>
+                        <p class="text-sm text-gray-600">Recruitment and organization of repair proteins</p>
+                    </div>
+                    <div class="bg-yellow-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-project-diagram text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Pathway Crosstalk</h3>
+                        <p class="text-sm text-gray-600">Integration of multiple repair pathways</p>
+                    </div>
+                    <div class="bg-indigo-50 rounded-lg p-6">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-pills text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Cancer Biology</h3>
+                        <p class="text-sm text-gray-600">Therapeutic targeting of DNA repair defects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Collection -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="title-font text-3xl font-bold text-gray-900 mb-12 text-center">
+                Reviews Collection
+                <span class="block text-lg font-normal text-gray-600 mt-2">10 Comprehensive Reviews</span>
+            </h2>
+
+            <!-- DNA Damage Response Pathways -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 mr-3"></i>
+                    DNA Damage Response Pathways
+                </h3>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bullseye text-blue-600"></i>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Core Pathway</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">DSB Repair Foci Comprehensive Review</h4>
+                            <p class="text-gray-600 text-sm mb-4">Double-strand break repair protein recruitment and foci formation</p>
+                            <div class="mb-4">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Key Topics:</strong></p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">γ-H2AX</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">53BP1</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">BRCA1</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">NHEJ</span>
+                                </div>
+                            </div>
+                            <a href="nuclear_biology_reviews/dsb_repair_foci_comprehensive_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-tools text-green-600"></i>
+                                </div>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Repair Mechanism</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Base Excision Repair Critical Review</h4>
+                            <p class="text-gray-600 text-sm mb-4">Single-base damage repair mechanisms and regulation</p>
+                            <div class="mb-4">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Key Topics:</strong></p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">DNA glycosylases</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">AP endonucleases</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">DNA polymerases</span>
+                                </div>
+                            </div>
+                            <a href="nuclear_biology_reviews/base_excision_repair_critical_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-project-diagram text-purple-600"></i>
+                                </div>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Integration</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">DNA Repair Pathway Crosstalk Complete</h4>
+                            <p class="text-gray-600 text-sm mb-4">Integration and coordination of multiple repair pathways</p>
+                            <div class="mb-4">
+                                <p class="text-xs text-gray-500 mb-2"><strong>Key Topics:</strong></p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Pathway choice</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Protein interactions</span>
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Checkpoint signaling</span>
+                                </div>
+                            </div>
+                            <a href="nuclear_biology_reviews/dna_repair_pathway_crosstalk_complete.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Replication Machinery & Dynamics -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-copy text-green-600 mr-3"></i>
+                    Replication Machinery & Dynamics
+                </h3>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marked-alt text-blue-600"></i>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Spatial Organization</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">DNA Replication Site Dynamics Review</h4>
+                            <p class="text-gray-600 text-sm mb-4">Spatial and temporal organization of replication machinery</p>
+                            <a href="nuclear_biology_reviews/dna_replication_site_dynamics_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Stress Response</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Replication Stress FPC Review</h4>
+                            <p class="text-gray-600 text-sm mb-4">Fork protection complex and replication stress response</p>
+                            <a href="nuclear_biology_reviews/replication_stress_fpc_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-disease text-pink-600"></i>
+                                </div>
+                                <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Cancer Biology</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Replication Fork Cancer Review</h4>
+                            <p class="text-gray-600 text-sm mb-4">Replication stress in cancer development and therapy</p>
+                            <a href="nuclear_biology_reviews/replication_fork_cancer_review.html" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                Read Review <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Additional Reviews -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-flask text-purple-600 mr-3"></i>
+                    Additional Research Areas
+                </h3>
+                <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-6">
+                    <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-cog text-orange-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Parylation Dynamics Interactions Review</h4>
+                            <p class="text-gray-600 text-xs mb-3">PARP-mediated ADP-ribosylation in DNA repair</p>
+                        </div>
+                        <a href="nuclear_biology_reviews/parylation_dynamics_interactions_review.html" 
+                           class="text-blue-600 hover:text-blue-800 font-medium text-xs">
+                            Read Review →
+                        </a>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-microscope text-teal-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Live Cell Transcription Imaging Review</h4>
+                            <p class="text-gray-600 text-xs mb-3">Real-time analysis of DNA damage and repair processes</p>
+                        </div>
+                        <a href="nuclear_biology_reviews/live_cell_transcription_imaging_review.html" 
+                           class="text-blue-600 hover:text-blue-800 font-medium text-xs">
+                            Read Review →
+                        </a>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-pills text-indigo-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Current DNA Repair Review</h4>
+                            <p class="text-gray-600 text-xs mb-3">Contemporary understanding of DNA repair mechanisms</p>
+                        </div>
+                        <a href="nuclear_biology_reviews/current_dna_repair_review.html" 
+                           class="text-blue-600 hover:text-blue-800 font-medium text-xs">
+                            Read Review →
+                        </a>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mb-3">
+                                <i class="fas fa-question-circle text-yellow-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Nuclear Biology Controversies Review</h4>
+                            <p class="text-gray-600 text-xs mb-3">Debated mechanisms and conflicting findings</p>
+                        </div>
+                        <a href="nuclear_biology_reviews/nuclear_biology_controversies_review.html" 
+                           class="text-blue-600 hover:text-blue-800 font-medium text-xs">
+                            Read Review →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Themes -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="title-font text-3xl font-bold text-gray-900 mb-12 text-center">Research Themes</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Molecular Mechanisms</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2 text-sm"></i>Damage Recognition</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2 text-sm"></i>Repair Protein Recruitment</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2 text-sm"></i>Pathway Choice</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2 text-sm"></i>Quality Control</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Regulation & Coordination</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-600 mr-2 text-sm"></i>Cell Cycle Integration</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-600 mr-2 text-sm"></i>Chromatin Context</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-600 mr-2 text-sm"></i>Metabolic Regulation</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-600 mr-2 text-sm"></i>Stress Response</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-hospital text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Clinical Significance</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-600 mr-2 text-sm"></i>Cancer Therapy</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-600 mr-2 text-sm"></i>Genetic Diseases</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-600 mr-2 text-sm"></i>Aging</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-600 mr-2 text-sm"></i>Drug Development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pathway Interactions -->
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Major Repair Pathways</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-link text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Homologous Recombination</h4>
+                        <p class="text-xs text-gray-600">High-fidelity DSB repair</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-cut text-red-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Non-Homologous End Joining</h4>
+                        <p class="text-xs text-gray-600">Quick but error-prone DSB repair</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-tools text-green-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Base Excision Repair</h4>
+                        <p class="text-xs text-gray-600">Single-base damage correction</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-eraser text-yellow-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Nucleotide Excision Repair</h4>
+                        <p class="text-xs text-gray-600">Bulky lesion removal</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-spell-check text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Mismatch Repair</h4>
+                        <p class="text-xs text-gray-600">Replication error correction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Categories -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="title-font text-3xl font-bold text-gray-900 mb-12 text-center">Related Categories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="chromatin_architecture_dynamics_category.html" class="group">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-dna text-blue-600"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                Chromatin Architecture & Dynamics
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Chromatin accessibility in DNA repair</p>
+                    </div>
+                </a>
+                
+                <a href="nuclear_bodies_compartments_category.html" class="group">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-circle text-green-600"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                Nuclear Bodies & Compartments
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Repair protein compartmentalization</p>
+                    </div>
+                </a>
+                
+                <a href="epigenetics_gene_regulation_category.html" class="group">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-layer-group text-purple-600"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                Epigenetics & Gene Regulation
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Repair-dependent chromatin modifications</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i class="fas fa-dna text-blue-400 text-2xl"></i>
+                        <h3 class="text-xl font-bold">CellNucleus.com</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Comprehensive nuclear biology resource featuring 71 in-depth reviews covering all aspects of nuclear structure, function, and regulation.
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Scientific images courtesy of Nature Publishing Group, Springer Nature, and other academic publishers. Used under fair use for educational purposes.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="../reviews_index.html" class="hover:text-blue-400 transition-colors">All Reviews</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Categories</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Research Highlights</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• PARP inhibitors and synthetic lethality</li>
+                        <li>• Single-cell DNA damage analysis</li>
+                        <li>• Chromatin context in repair</li>
+                        <li>• Therapeutic targeting strategies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CellNucleus.com. Educational resource for nuclear biology research.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDqFWm6IpA2gWi6q9WPtejL6HmILSdflCVC838sDwX7jCK10kGypssMUm7uD%2Fygo6qdU4L2H%2BqCYXJWlOCynP8sdaZf%2FItQ%2BvMiFOcL%2F6%2F2NEOxibnna3wtKe87iAByYtU2gqCxqdc1%2FN4FvHxm2HM%2B%2F8Hoitzrf2oLA%2FmnIcrcUmuBrBs%2FVY%2FK62%2FSc5kuhaTsnMxS%2FjjhPkCobLhxIjQplnen3SNtSgChYoqTcQRu4Lm8KMG0NitIoZdRulj3Z8HzgqhP%2Fdlxvfmme4OnftvXaMrP%2FQDwmgkJ%2B1GavwWWErFb8cNv4EAzGQqW8p%2FeNjW3A0XYu5k1UKUsJqwmOM%2Buovtj9FaxriNs29993Qxcd8CElPjcsBbc4rup07BAkXZdNJA26Kd%2B01k6t8gopFSZXp1hZINSOwyfx1JZGk%2BRI0OGCfwoLXgWCO0oDQfc7DzJ%2FSTFhgafXm0iS3na1ipuh0ljm8dDI27NK3%2FTjV9Ec5QhP%2B4ePfQ0aOLDjip%2FMCozOLiIUP0E7HiROdkR1H6tU%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDqFWm6IpA2gWi6q9WPtejL6HmILSdflCVC838sDwX7jCK10kGypssMUm7uD/ygo6qdU4L2H+qCYXJWlOCynP8sdaZf/ItQ+vMiFOcL/6/2NEOxibnna3wtKe87iAByYtU2gqCxqdc1/N4FvHxm2HM+/8Hoitzrf2oLA/mnIcrcUmuBrBs/VY/K62/Sc5kuhaTsnMxS/jjhPkCobLhxIjQplnen3SNtSgChYoqTcQRu4Lm8KMG0NitIoZdRulj3Z8HzgqhP/dlxvfmme4OnftvXaMrP/QDwmgkJ+1GavwWWErFb8cNv4EAzGQqW8p/eNjW3A0XYu5k1UKUsJqwmOM+uovtj9FaxriNs29993Qxcd8CElPjcsBbc4rup07BAkXZdNJA26Kd+01k6t8gopFSZXp1hZINSOwyfx1JZGk+RI0OGCfwoLXgWCO0oDQfc7DzJ/STFhgafXm0iS3na1ipuh0ljm8dDI27NK3/TjV9Ec5QhP+4ePfQ0aOLDjip/MCozOLiIUP0E7HiROdkR1H6tU=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

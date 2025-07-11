@@ -1,0 +1,43 @@
+
+CELLNUCLEUS.COM LINK VERIFICATION REPORT
+========================================
+Generated: 2025-06-28 15:36:51
+
+OVERVIEW:
+- Total Links Verified: 247
+- Working Links: 85 (34.4%)
+- Broken Links: 162 (65.6%)
+- Files Affected: 49
+
+PRIORITY ACTIONS:
+- High Priority Fixes: 161
+- Medium Priority Fixes: 0
+- Links with Suggested Fixes: 115
+
+TOP 10 MOST CRITICAL BROKEN LINKS:
+
+ 1. cdn-cgi/l/email-protection (45 references)
+ 2. https://www.genspark.ai/aidrive/files/cellnucleus.com/nuclear_biology_reviews (20 references)
+ 3. cajal_bodies_comprehensive_review.html (8 references)
+    → Suggested fix: nuclear_biology_reviews/cajal_bodies_comprehensive_review.html (high confidence)
+ 4. nuclear_biophysical_properties_review.html (8 references)
+    → Suggested fix: nuclear_biology_reviews/nuclear_biophysical_properties_review.html (high confidence)
+ 5. categories (8 references)
+ 6. live_cell_transcription_imaging_review.html (7 references)
+    → Suggested fix: nuclear_biology_reviews/live_cell_transcription_imaging_review.html (high confidence)
+ 7. nuclear_speckles_comprehensive_review.html (7 references)
+    → Suggested fix: nuclear_biology_reviews/nuclear_speckles_comprehensive_review.html (high confidence)
+ 8. paraspeckles_comprehensive_review.html (7 references)
+    → Suggested fix: nuclear_biology_reviews/paraspeckles_comprehensive_review.html (high confidence)
+ 9. nuclear_envelope_comprehensive_review.html (7 references)
+    → Suggested fix: nuclear_biology_reviews/nuclear_envelope_comprehensive_review.html (high confidence)
+10. nuclear_pore_complex_comprehensive_review.html (7 references)
+    → Suggested fix: nuclear_biology_reviews/nuclear_pore_complex_comprehensive_review.html (high confidence)
+
+RECOMMENDATIONS:
+1. Fix 161 high-priority broken links immediately
+2. Review 0 medium-priority suggestions
+3. Audit 49 files containing broken links
+4. Target 95%+ link success rate (currently 34.4%)
+
+Full interactive report: /home/user/output/link_verification_report.html

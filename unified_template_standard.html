@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com - Unified Visual Template Standard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-paper: #ffffff;
+            --border-light: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+        }
+
+        .serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .review-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+        }
+
+        .section-divider {
+            border-top: 3px solid var(--accent-blue);
+            margin: 2rem 0;
+        }
+
+        .figure-container {
+            background: var(--bg-paper);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .reference-link {
+            color: var(--secondary-blue);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--secondary-blue);
+        }
+
+        .reference-link:hover {
+            border-bottom: 1px solid var(--secondary-blue);
+        }
+
+        .key-point {
+            background: linear-gradient(to right, rgba(96, 165, 250, 0.1), rgba(96, 165, 250, 0.05));
+            border-left: 4px solid var(--accent-blue);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .methodology-box {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .controversy-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--secondary-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: -7.5px;
+            top: 0.5rem;
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(96, 165, 250, 0.1);
+            border-radius: 6px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--secondary-blue);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 0 0.5rem;
+            }
+            
+            .review-header {
+                padding: 1.5rem 0;
+            }
+            
+            .figure-container {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="content-wrapper">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-microscope text-2xl text-blue-600"></i>
+                        <div>
+                            <h1 class="text-xl font-bold text-gray-900">CellNucleus.com</h1>
+                            <p class="text-xs text-gray-600">Nuclear Biology Research Hub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-home mr-1"></i>Home
+                    </a>
+                    <a href="../reviews_index.html" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-book mr-1"></i>Reviews
+                    </a>
+                    <a href="../downloads.html" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-download mr-1"></i>Downloads
+                    </a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Review Header Section -->
+    <section class="review-header py-12">
+        <div class="content-wrapper">
+            <div class="max-w-4xl">
+                <div class="flex items-center space-x-2 text-blue-200 mb-4">
+                    <i class="fas fa-dna"></i>
+                    <span class="text-sm font-medium">EXPERT REVIEW</span>
+                    <span class="text-blue-300">•</span>
+                    <span class="text-sm">Nuclear Biology</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold serif mb-6">
+                    [Review Title Goes Here]
+                </h1>
+                <p class="text-xl text-blue-100 leading-relaxed mb-8">
+                    [Abstract/Summary paragraph that introduces the key concepts and scope of the review]
+                </p>
+                <div class="flex flex-wrap items-center gap-6 text-sm text-blue-200">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Expert Analysis</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-calendar"></i>
+                        <span>[Publication Date]</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock"></i>
+                        <span>[Reading Time] min read</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-tags"></i>
+                        <span>[Key Topics]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="content-wrapper">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                
+                <!-- Table of Contents Sidebar -->
+                <aside class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-6">
+                        <h3 class="font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-list mr-2 text-blue-600"></i>
+                            Contents
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#introduction" class="block text-gray-600 hover:text-blue-600 py-1">Introduction</a>
+                            <a href="#background" class="block text-gray-600 hover:text-blue-600 py-1">Background</a>
+                            <a href="#mechanisms" class="block text-gray-600 hover:text-blue-600 py-1">Molecular Mechanisms</a>
+                            <a href="#methods" class="block text-gray-600 hover:text-blue-600 py-1">Methodology</a>
+                            <a href="#findings" class="block text-gray-600 hover:text-blue-600 py-1">Key Findings</a>
+                            <a href="#controversies" class="block text-gray-600 hover:text-blue-600 py-1">Controversies</a>
+                            <a href="#implications" class="block text-gray-600 hover:text-blue-600 py-1">Implications</a>
+                            <a href="#conclusions" class="block text-gray-600 hover:text-blue-600 py-1">Conclusions</a>
+                            <a href="#references" class="block text-gray-600 hover:text-blue-600 py-1">References</a>
+                        </nav>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <h4 class="font-medium text-gray-900 mb-3">Quick Actions</h4>
+                            <div class="space-y-2">
+                                <button class="w-full text-left text-sm text-gray-600 hover:text-blue-600 py-1">
+                                    <i class="fas fa-download mr-2"></i>Download PDF
+                                </button>
+                                <button class="w-full text-left text-sm text-gray-600 hover:text-blue-600 py-1">
+                                    <i class="fas fa-share mr-2"></i>Share Review
+                                </button>
+                                <button class="w-full text-left text-sm text-gray-600 hover:text-blue-600 py-1">
+                                    <i class="fas fa-bookmark mr-2"></i>Bookmark
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Article Content -->
+                <article class="lg:col-span-3">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12">
+                        
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Introduction</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    [Introduction content explaining the context and importance of the topic...]
+                                </p>
+                                
+                                <div class="key-point">
+                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                        <i class="fas fa-lightbulb mr-2 text-yellow-500"></i>
+                                        Key Insight
+                                    </h4>
+                                    <p class="text-gray-700">
+                                        [Highlight important concepts or findings that set the stage for the review...]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Background Section -->
+                        <section id="background" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Historical Background</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-8">
+                                    [Background information providing historical context...]
+                                </p>
+
+                                <!-- Timeline Example -->
+                                <div class="timeline-item">
+                                    <h4 class="font-semibold text-gray-900 mb-2">[Year] - Discovery Title</h4>
+                                    <p class="text-gray-700">
+                                        [Description of key discovery or milestone...]
+                                    </p>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <h4 class="font-semibold text-gray-900 mb-2">[Year] - Technical Advancement</h4>
+                                    <p class="text-gray-700">
+                                        [Description of methodological or technical breakthrough...]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Molecular Mechanisms Section -->
+                        <section id="mechanisms" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Molecular Mechanisms</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    [Detailed explanation of the molecular mechanisms involved...]
+                                </p>
+
+                                <!-- Figure Placeholder -->
+                                <div class="figure-container">
+                                    <div class="bg-gray-100 h-64 rounded-lg flex items-center justify-center mb-4">
+                                        <div class="text-center text-gray-500">
+                                            <i class="fas fa-image text-4xl mb-2"></i>
+                                            <p>Figure Placeholder</p>
+                                            <p class="text-sm">Molecular mechanism diagram</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">
+                                        <strong>Figure [X]:</strong> [Figure caption explaining the molecular mechanism or pathway shown...]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Methodology Section -->
+                        <section id="methods" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Experimental Methodology</h2>
+                            
+                            <div class="methodology-box">
+                                <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                                    <i class="fas fa-flask mr-2"></i>
+                                    Standard Methodologies
+                                </h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start space-x-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>[Methodology 1 - e.g., Live cell imaging techniques]</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>[Methodology 2 - e.g., Fluorescence microscopy]</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>[Methodology 3 - e.g., Biochemical assays]</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Key Findings Section -->
+                        <section id="findings" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Key Findings</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    [Summary of the most important findings and discoveries...]
+                                </p>
+
+                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                                        <h4 class="font-semibold text-blue-900 mb-3">
+                                            <i class="fas fa-star mr-2"></i>
+                                            Major Discovery 1
+                                        </h4>
+                                        <p class="text-blue-800">
+                                            [Description of significant finding...]
+                                        </p>
+                                    </div>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                                        <h4 class="font-semibold text-blue-900 mb-3">
+                                            <i class="fas fa-star mr-2"></i>
+                                            Major Discovery 2
+                                        </h4>
+                                        <p class="text-blue-800">
+                                            [Description of significant finding...]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Controversies Section -->
+                        <section id="controversies" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Current Controversies</h2>
+                            
+                            <div class="controversy-box">
+                                <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Ongoing Debates
+                                </h4>
+                                <p class="text-red-800 mb-4">
+                                    [Description of current controversies or unresolved questions in the field...]
+                                </p>
+                                <ul class="space-y-2 text-red-700">
+                                    <li class="flex items-start space-x-2">
+                                        <i class="fas fa-question-circle mt-1"></i>
+                                        <span>[Controversy 1]</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <i class="fas fa-question-circle mt-1"></i>
+                                        <span>[Controversy 2]</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Clinical/Research Implications -->
+                        <section id="implications" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Research Implications</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    [Discussion of how these findings impact the broader field...]
+                                </p>
+
+                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6 mb-6">
+                                    <h4 class="font-semibold text-purple-900 mb-3">
+                                        <i class="fas fa-rocket mr-2"></i>
+                                        Future Directions
+                                    </h4>
+                                    <p class="text-purple-800">
+                                        [Potential future research directions and applications...]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- Conclusions Section -->
+                        <section id="conclusions" class="mb-12">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">Conclusions</h2>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-700 leading-relaxed mb-6">
+                                    [Summary of key conclusions and their significance...]
+                                </p>
+
+                                <div class="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-r-lg">
+                                    <h4 class="font-semibold text-gray-900 mb-3">Summary Points</h4>
+                                    <ul class="space-y-2 text-gray-700">
+                                        <li class="flex items-start space-x-2">
+                                            <i class="fas fa-arrow-right text-gray-500 mt-1"></i>
+                                            <span>[Key conclusion 1]</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <i class="fas fa-arrow-right text-gray-500 mt-1"></i>
+                                            <span>[Key conclusion 2]</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <i class="fas fa-arrow-right text-gray-500 mt-1"></i>
+                                            <span>[Key conclusion 3]</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="section-divider">
+
+                        <!-- References Section -->
+                        <section id="references" class="mb-8">
+                            <h2 class="text-3xl font-bold serif text-gray-900 mb-6">References</h2>
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <ol class="space-y-3 text-sm text-gray-700">
+                                    <li class="flex items-start space-x-3">
+                                        <span class="font-medium text-blue-600 min-w-[2rem]">[1]</span>
+                                        <span>
+                                            [Author et al.] ([Year]). [Title]. <em>[Journal]</em> <strong>[Volume]</strong>([Issue]), [Pages]. 
+                                            <a href="#" class="reference-link">DOI: [DOI]</a>
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start space-x-3">
+                                        <span class="font-medium text-blue-600 min-w-[2rem]">[2]</span>
+                                        <span>
+                                            [Author et al.] ([Year]). [Title]. <em>[Journal]</em> <strong>[Volume]</strong>([Issue]), [Pages]. 
+                                            <a href="#" class="reference-link">DOI: [DOI]</a>
+                                        </span>
+                                    </li>
+                                    <!-- Add more references as needed -->
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Article Footer -->
+                        <footer class="border-t border-gray-200 pt-8">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <p class="text-sm text-gray-600">
+                                        <i class="fas fa-calendar mr-2"></i>
+                                        Last updated: [Date]
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        <i class="fas fa-user mr-2"></i>
+                                        Expert review by CellNucleus.com
+                                    </p>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <button class="text-gray-600 hover:text-blue-600 transition-colors" title="Share on Twitter">
+                                        <i class="fab fa-twitter text-lg"></i>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-blue-600 transition-colors" title="Share on LinkedIn">
+                                        <i class="fab fa-linkedin text-lg"></i>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-blue-600 transition-colors" title="Copy link">
+                                        <i class="fas fa-link text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Articles Section -->
+    <section class="bg-white py-12 border-t border-gray-200">
+        <div class="content-wrapper">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Related Reviews</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                    <h4 class="font-semibold text-gray-900 mb-2">[Related Review 1 Title]</h4>
+                    <p class="text-sm text-gray-600 mb-4">[Brief description...]</p>
+                    <a href="#" class="text-blue-600 text-sm font-medium">Read Review →</a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                    <h4 class="font-semibold text-gray-900 mb-2">[Related Review 2 Title]</h4>
+                    <p class="text-sm text-gray-600 mb-4">[Brief description...]</p>
+                    <a href="#" class="text-blue-600 text-sm font-medium">Read Review →</a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                    <h4 class="font-semibold text-gray-900 mb-2">[Related Review 3 Title]</h4>
+                    <p class="text-sm text-gray-600 mb-4">[Brief description...]</p>
+                    <a href="#" class="text-blue-600 text-sm font-medium">Read Review →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="content-wrapper">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-microscope text-2xl text-blue-400"></i>
+                        <div>
+                            <h3 class="text-xl font-bold">CellNucleus.com</h3>
+                            <p class="text-sm text-gray-400">Nuclear Biology Research Hub</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Expert reviews and analysis of nuclear biology research, providing comprehensive insights into cellular mechanisms and molecular processes.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">All Reviews</a></li>
+                        <li><a href="#" class="hover:text-white">Recent Updates</a></li>
+                        <li><a href="#" class="hover:text-white">Downloads</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">DNA Repair</a></li>
+                        <li><a href="#" class="hover:text-white">Nuclear Organization</a></li>
+                        <li><a href="#" class="hover:text-white">Epigenetics</a></li>
+                        <li><a href="#" class="hover:text-white">Chromatin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 CellNucleus.com. All rights reserved. | Expert nuclear biology research reviews.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                // Add mobile menu toggle logic here
+                console.log('Mobile menu toggle');
+            });
+        }
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDkrZm4FpFYrr3GeGTXoSImKz0Ruk2wLM%2FgYxHJt2CTs%2BZkhCj6gymIY4w8UVlw1QvhAI0r4vkFxqQFYE20b9Is8sJQlOL%2FiZ4%2FybWd6Vg1dc9%2FxSEerCoYPyJCxxwgZDTmYORF8WOY%2F2mqdW4k5FXIi7SEEd4u6MpOzvnEIPQUQmPPP7sau2neE11z%2B9Gjriczszn8FRApXBZr0vN3f1AYJ2UcvtutNaNexJT%2FbxvVxzS4D18Y06i1YlASfwLBQQYNpPUPFS8DIVYQ%2Fq6DUs0H5TraGihQ%2Bw3sO%2BwUUDdn%2FWenZxiqhSLRkYWEiEaoXtL2T136fO5CeaApbnoIj4A3zbDW8u3Skf9ikSOwC8M539OZX8Hi27TEySPOn1ROgQ%2FOVrt6e9aGbeN2797yVXS%2BYDilOrfi5iw%2BoUUeST2wy0d2ELnLWwKI0cQVfEpwctrYrIaiP3l8re%2Baxclrz5gE%2BMi6ARkGil2o1Ocu0VbYWGpL3WQKU8OvMGBzFNuKqgcC5PUDAFK6m5vknXWDZIqR8%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDkrZm4FpFYrr3GeGTXoSImKz0Ruk2wLM/gYxHJt2CTs+ZkhCj6gymIY4w8UVlw1QvhAI0r4vkFxqQFYE20b9Is8sJQlOL/iZ4/ybWd6Vg1dc9/xSEerCoYPyJCxxwgZDTmYORF8WOY/2mqdW4k5FXIi7SEEd4u6MpOzvnEIPQUQmPPP7sau2neE11z+9Gjriczszn8FRApXBZr0vN3f1AYJ2UcvtutNaNexJT/bxvVxzS4D18Y06i1YlASfwLBQQYNpPUPFS8DIVYQ/q6DUs0H5TraGihQ+w3sO+wUUDdn/WenZxiqhSLRkYWEiEaoXtL2T136fO5CeaApbnoIj4A3zbDW8u3Skf9ikSOwC8M539OZX8Hi27TEySPOn1ROgQ/OVrt6e9aGbeN2797yVXS+YDilOrfi5iw+oUUeST2wy0d2ELnLWwKI0cQVfEpwctrYrIaiP3l8re+axclrz5gE+Mi6ARkGil2o1Ocu0VbYWGpL3WQKU8OvMGBzFNuKqgcC5PUDAFK6m5vknXWDZIqR8=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

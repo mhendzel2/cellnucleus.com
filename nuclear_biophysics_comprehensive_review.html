@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Biophysics: Mechanical Properties and Disease - Cell Nucleus Research</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .highlight-table { border: 3px solid #3B82F6; background: linear-gradient(45deg, #EBF8FF, #DBEAFE); }
+        .chart-container { height: 400px; }
+         {
+            body { font-size: 12px; }
+            .chart-container { height: 300px; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header Section -->
+<header class="gradient-bg text-white py-12">
+    <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <i class="fas fa-atom mr-3"></i>Nuclear Biophysics: Mechanical Properties and Disease
+        </h1>
+        <p class="text-xl opacity-90 max-w-4xl">
+            Comprehensive analysis of the nucleus as a dynamic mechanical organelle, featuring quantitative measurements, experimental techniques, and disease implications
+        </p>
+        <div class="mt-6 flex flex-wrap gap-4 text-sm">
+            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                <i class="fas fa-microscope mr-1"></i>Biophysics
+            </span>
+            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                <i class="fas fa-chart-bar mr-1"></i>Quantitative Analysis
+            </span>
+            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                <i class="fas fa-dna mr-1"></i>Nuclear Mechanics
+            </span>
+            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                <i class="fas fa-stethoscope mr-1"></i>Disease Research
+            </span>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-6 py-8">
+
+<!-- Abstract -->
+<section class="bg-white rounded-lg card-shadow p-8 mb-8">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">
+        <i class="fas fa-file-alt mr-2"></i>Abstract
+    </h2>
+    <p class="text-lg leading-relaxed text-gray-700">
+        The mammalian cell nucleus, traditionally viewed as a passive repository for the genome, is now understood to be a dynamic and mechanically responsive organelle. Its biophysical properties are critical for cellular functions ranging from gene regulation and differentiation to migration and division. This comprehensive review analyzes the mechanical nature of the nucleus, synthesizing foundational principles with recent discoveries. We examine the nucleus through its primary mechanical components: the nuclear lamina (acting as a strain-stiffening elastic shell), chromatin (behaving as a viscoelastic polymer gel), and the LINC complex (serving as the crucial bridge transmitting forces from the cytoskeleton to the nuclear interior).
+    </p>
+</section>
+
+<!-- Key Findings -->
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-8">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">
+        <i class="fas fa-lightbulb mr-2"></i>Key Findings
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg card-shadow">
+            <div class="text-3xl font-bold text-blue-600 mb-2">0.1-16 kPa</div>
+            <div class="text-gray-600">Nuclear Young's Modulus Range</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg card-shadow">
+            <div class="text-3xl font-bold text-green-600 mb-2">6-fold</div>
+            <div class="text-gray-600">Stiffness Increase During Differentiation</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg card-shadow">
+            <div class="text-3xl font-bold text-purple-600 mb-2">100-200 Pa·s</div>
+            <div class="text-gray-600">Nuclear Viscosity Range</div>
+        </div>
+    </div>
+</section>
+
+<!-- Nuclear Architecture -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-building mr-2"></i>Physical Architecture of the Nucleus
+    </h2>
+    
+    <div class="grid lg:grid-cols-3 gap-8 mb-8">
+        <!-- Nuclear Lamina -->
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-shield-alt mr-2 text-blue-500"></i>Nuclear Lamina
+            </h3>
+            <img src="https://embryology.med.unsw.edu.au/embryology/images/3/3e/Nuclear_lamina_cartoon.jpg" 
+                 alt="Nuclear lamina structure" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 text-sm mb-4">
+                Strain-stiffening elastic shell composed of intermediate filament proteins (lamins A/C, B1, B2) providing mechanical stability and force transmission.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Type A lamins: Lamin A/C</li>
+                <li>• Type B lamins: B1, B2</li>
+                <li>• Strain-stiffening behavior</li>
+                <li>• Disease-associated mutations</li>
+            </ul>
+        </div>
+
+        <!-- Chromatin -->
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-dna mr-2 text-green-500"></i>Chromatin
+            </h3>
+            <img src="https://www.researchgate.net/publication/317851887/figure/fig1/AS:11431281207985168@1701361022370/Chromatin-gel-model-A-network-of-DNA-is-swollen-in-a-solution-of-RNA-polymerase-and.jpg" 
+                 alt="Chromatin gel model" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 text-sm mb-4">
+                Viscoelastic polymer gel with ~2 meters of genomic DNA compacted into ~10 μm diameter nucleus, exhibiting both elastic and time-dependent properties.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Heterochromatin (condensed)</li>
+                <li>• Euchromatin (relaxed)</li>
+                <li>• Viscoelastic properties</li>
+                <li>• Gene regulation coupling</li>
+            </ul>
+        </div>
+
+        <!-- LINC Complex -->
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-link mr-2 text-purple-500"></i>LINC Complex
+            </h3>
+            <img src="https://changlab.fhs.um.edu.mo/wp-content/uploads/2022/10/linc-jcb-001.png" 
+                 alt="LINC complex structure" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-600 text-sm mb-4">
+                Linker of Nucleoskeleton and Cytoskeleton - SUN/KASH protein bridge transmitting mechanical forces between cytoskeleton and nuclear interior.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+                <li>• SUN proteins (inner membrane)</li>
+                <li>• KASH proteins (outer membrane)</li>
+                <li>• Force transmission</li>
+                <li>• Mechanosensing functions</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Quantitative Measurements - Highlighted Tables -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-calculator mr-2"></i>Quantitative Biophysical Measurements
+    </h2>
+
+    <!-- Table 1: Young's Modulus -->
+    <div class="highlight-table rounded-lg p-6 mb-8">
+        <h3 class="text-2xl font-bold text-blue-800 mb-6">
+            <i class="fas fa-table mr-2"></i>Table 1: Nuclear Elasticity (Young's Modulus) Across Cell Types
+        </h3>
+        <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-lg shadow-lg">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left">Cell Type</th>
+                        <th class="px-4 py-3 text-left">Condition</th>
+                        <th class="px-4 py-3 text-left">Young's Modulus (kPa)</th>
+                        <th class="px-4 py-3 text-left">Method</th>
+                        <th class="px-4 py-3 text-left">Notes</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">hESC</td>
+                        <td class="px-4 py-3">Undifferentiated</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">1-2</td>
+                        <td class="px-4 py-3">Micropipette</td>
+                        <td class="px-4 py-3">Soft, pluripotent state</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">hESC</td>
+                        <td class="px-4 py-3">Differentiated</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">6-12</td>
+                        <td class="px-4 py-3">Micropipette</td>
+                        <td class="px-4 py-3">6-fold stiffer than undifferentiated</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">hMSC</td>
+                        <td class="px-4 py-3">Undifferentiated</td>
+                        <td class="px-4 py-3 text-yellow-600 font-bold">3.5</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Mesenchymal stem cells</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">hMSC</td>
+                        <td class="px-4 py-3">Osteogenic</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">7.0</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">After differentiation</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">MEF</td>
+                        <td class="px-4 py-3">Wild type</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">10.0</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Mouse embryonic fibroblast</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">MEF</td>
+                        <td class="px-4 py-3">Lmna -/-</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">2.5</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Lamin A/C knockout</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">MCF-10A</td>
+                        <td class="px-4 py-3">Non-tumorigenic</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">0.2-0.9</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Breast epithelial</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">MCF-7</td>
+                        <td class="px-4 py-3">Cancer</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">0.1-0.4</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Breast cancer - softer</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">HCV29</td>
+                        <td class="px-4 py-3">Non-tumorigenic</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">10-16</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Bladder epithelial</td>
+                    </tr>
+                    <tr class="hover:bg-blue-50">
+                        <td class="px-4 py-3 font-medium">T24</td>
+                        <td class="px-4 py-3">Cancer</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">2.1</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Bladder cancer - softer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Table 2: Viscoelastic Parameters -->
+    <div class="highlight-table rounded-lg p-6 mb-8">
+        <h3 class="text-2xl font-bold text-blue-800 mb-6">
+            <i class="fas fa-wave-square mr-2"></i>Table 2: Viscoelastic Parameters of the Nucleus
+        </h3>
+        <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-lg shadow-lg">
+                <thead class="bg-purple-600 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left">Cell Type/Component</th>
+                        <th class="px-4 py-3 text-left">Parameter</th>
+                        <th class="px-4 py-3 text-left">Value/Range</th>
+                        <th class="px-4 py-3 text-left">Method</th>
+                        <th class="px-4 py-3 text-left">Significance</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Neutrophil (whole cell)</td>
+                        <td class="px-4 py-3">Apparent viscosity (η)</td>
+                        <td class="px-4 py-3 text-blue-600 font-bold">100-200 Pa·s</td>
+                        <td class="px-4 py-3">MA</td>
+                        <td class="px-4 py-3">High viscosity for migration</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">General</td>
+                        <td class="px-4 py-3">Cortical tension</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">~30 pN/μm</td>
+                        <td class="px-4 py-3">Various</td>
+                        <td class="px-4 py-3">Surface tension effects</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Chondrocyte (nucleus)</td>
+                        <td class="px-4 py-3">Instantaneous modulus</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">1.8 kPa</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Immediate elastic response</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Chondrocyte (nucleus)</td>
+                        <td class="px-4 py-3">Equilibrium modulus</td>
+                        <td class="px-4 py-3 text-yellow-600 font-bold">0.5 kPa</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Long-term response</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Human HSC</td>
+                        <td class="px-4 py-3">Creep exponent (α)</td>
+                        <td class="px-4 py-3 text-blue-600 font-bold">~0.6</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Fluid-like behavior</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Fibroblast</td>
+                        <td class="px-4 py-3">Creep exponent (α)</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">~0.2</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Solid-like behavior</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">MCF-7</td>
+                        <td class="px-4 py-3">Fast relaxation time</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">~0.1 s</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Chromatin/membrane response</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">MCF-7</td>
+                        <td class="px-4 py-3">Slow relaxation time</td>
+                        <td class="px-4 py-3 text-purple-600 font-bold">~1.0 s</td>
+                        <td class="px-4 py-3">AFM</td>
+                        <td class="px-4 py-3">Lamina/cytoskeleton response</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Xenopus nucleolus</td>
+                        <td class="px-4 py-3">Interfacial tension</td>
+                        <td class="px-4 py-3 text-blue-600 font-bold">~0.4 μN/m</td>
+                        <td class="px-4 py-3">Various</td>
+                        <td class="px-4 py-3">Phase separation dynamics</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-3 font-medium">Xenopus nucleolus</td>
+                        <td class="px-4 py-3">Viscosity</td>
+                        <td class="px-4 py-3 text-green-600 font-bold">12-32 Pa·s</td>
+                        <td class="px-4 py-3">Various</td>
+                        <td class="px-4 py-3">Internal fluidity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Table 3: Nuclear Proteins and Disease -->
+    <div class="highlight-table rounded-lg p-6 mb-8">
+        <h3 class="text-2xl font-bold text-blue-800 mb-6">
+            <i class="fas fa-exclamation-triangle mr-2"></i>Table 3: Key Nuclear Proteins, Mechanical Roles, and Associated Pathologies
+        </h3>
+        <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-lg shadow-lg">
+                <thead class="bg-red-600 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left">Protein/Complex</th>
+                        <th class="px-4 py-3 text-left">Mechanical Role</th>
+                        <th class="px-4 py-3 text-left">Associated Disease/Pathology</th>
+                        <th class="px-4 py-3 text-left">Clinical Impact</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-red-50">
+                        <td class="px-4 py-3 font-medium">Lamin A/C</td>
+                        <td class="px-4 py-3">Primary determinant of nuclear stiffness</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">EDMD, HGPS, DCM</td>
+                        <td class="px-4 py-3">Muscular dystrophy, premature aging</td>
+                    </tr>
+                    <tr class="hover:bg-red-50">
+                        <td class="px-4 py-3 font-medium">Lamin B1/B2</td>
+                        <td class="px-4 py-3">Nuclear shape maintenance</td>
+                        <td class="px-4 py-3 text-orange-600 font-bold">Leukodystrophy</td>
+                        <td class="px-4 py-3">Progressive neurodegeneration</td>
+                    </tr>
+                    <tr class="hover:bg-red-50">
+                        <td class="px-4 py-3 font-medium">Emerin</td>
+                        <td class="px-4 py-3">Lamina organization and stability</td>
+                        <td class="px-4 py-3 text-red-600 font-bold">X-linked EDMD</td>
+                        <td class="px-4 py-3">Cardiac conduction defects</td>
+                    </tr>
+                    <tr class="hover:bg-red-50">
+                        <td class="px-4 py-3 font-medium">LINC Complex</td>
+                        <td class="px-4 py-3">Mechanotransduction, force transmission</td>
+                        <td class="px-4 py-3 text-yellow-600 font-bold">Cancer metastasis</td>
+                        <td class="px-4 py-3">Enhanced cell motility</td>
+                    </tr>
+                    <tr class="hover:bg-red-50">
+                        <td class="px-4 py-3 font-medium">Chromatin (general)</td>
+                        <td class="px-4 py-3">Viscoelastic support, gene regulation</td>
+                        <td class="px-4 py-3 text-purple-600 font-bold">Cancer, aging</td>
+                        <td class="px-4 py-3">Altered nuclear deformability</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Charts Section -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-chart-line mr-2"></i>Data Visualization
+    </h2>
+    
+    <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Young's Modulus Chart -->
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold mb-4">Nuclear Stiffness Across Cell Types</h3>
+            <div class="chart-container">
+                <canvas id="modulusChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Disease vs Normal Comparison -->
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold mb-4">Disease vs Normal Cell Stiffness</h3>
+            <div class="chart-container">
+                <canvas id="diseaseChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experimental Methods -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-flask mr-2"></i>Experimental Methods for Nuclear Mechanics
+    </h2>
+    
+    <div class="grid lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-microscope mr-2 text-blue-500"></i>Atomic Force Microscopy (AFM)
+            </h3>
+            <img src="https://www.researchgate.net/publication/260562587/figure/fig3/AS:667095037648917@1536059259898/Measurement-of-nuclear-stiffness-by-atomic-force-microscopy-AFM-A-Schematic-view-of.png" 
+                 alt="AFM nuclear measurement" class="w-full h-48 object-cover rounded-lg mb-4">
+            <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                    <span class="font-medium">Force Range:</span>
+                    <span class="text-blue-600 font-bold">pN to nN</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-green-50 rounded">
+                    <span class="font-medium">Spatial Resolution:</span>
+                    <span class="text-green-600 font-bold">~10-100 nm</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-purple-50 rounded">
+                    <span class="font-medium">Applications:</span>
+                    <span class="text-purple-600 font-bold">Local indentation, modulus mapping</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg card-shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-arrows-alt mr-2 text-green-500"></i>Other Key Techniques
+            </h3>
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Micropipette Aspiration</h4>
+                    <p class="text-sm text-gray-600">Whole-cell deformation for viscoelastic properties</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Optical/Magnetic Tweezers</h4>
+                    <p class="text-sm text-gray-600">Precise force application at pN scale</p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Confined Migration</h4>
+                    <p class="text-sm text-gray-600">Microfluidic channels for deformability testing</p>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Brillouin Microscopy</h4>
+                    <p class="text-sm text-gray-600">Non-invasive elasticity mapping</p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">RT-DC (Real-time Deformability)</h4>
+                    <p class="text-sm text-gray-600">High-throughput mechanical phenotyping</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Disease Implications -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-stethoscope mr-2"></i>Nuclear Mechanopathology
+    </h2>
+    
+    <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Laminopathies -->
+        <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-lg p-6 border-2 border-red-200">
+            <h3 class="text-xl font-bold text-red-700 mb-4">
+                <i class="fas fa-exclamation-circle mr-2"></i>Laminopathies
+            </h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg border border-red-200">
+                    <h4 class="font-semibold text-red-800 mb-2">Emery-Dreifuss Muscular Dystrophy (EDMD)</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Lamin A/C or Emerin mutations</li>
+                        <li>• Reduced nuclear stiffness</li>
+                        <li>• Cardiac conduction defects</li>
+                        <li>• Progressive muscle weakness</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-red-200">
+                    <h4 class="font-semibold text-red-800 mb-2">Hutchinson-Gilford Progeria (HGPS)</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Lamin A processing defect</li>
+                        <li>• Abnormal nuclear morphology</li>
+                        <li>• Premature aging phenotype</li>
+                        <li>• Cardiovascular complications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancer Metastasis -->
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200">
+            <h3 class="text-xl font-bold text-blue-700 mb-4">
+                <i class="fas fa-search mr-2"></i>Cancer Metastasis
+            </h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 class="font-semibold text-blue-800 mb-2">Nuclear Softening</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Reduced Young's modulus in cancer cells</li>
+                        <li>• Enhanced deformability for invasion</li>
+                        <li>• LINC complex alterations</li>
+                        <li>• Chromatin reorganization</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 class="font-semibold text-blue-800 mb-2">Clinical Examples</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Breast cancer: 0.1-0.4 kPa (vs 0.2-0.9 normal)</li>
+                        <li>• Bladder cancer: ~2.1 kPa (vs 10-16 normal)</li>
+                        <li>• Melanoma: 0.3-0.7 kPa (metastatic variants)</li>
+                        <li>• Nuclear deformability as biomarker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Functional Integration -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-cogs mr-2"></i>Functional Integration of Nuclear Mechanics
+    </h2>
+    
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-seedling text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Development</h3>
+                <p class="text-sm text-gray-600">
+                    Plastic-to-stiff transition during stem cell differentiation. ESCs: 1-2 kPa → 6-12 kPa upon lineage commitment.
+                </p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-exchange-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Mechanotransduction</h3>
+                <p class="text-sm text-gray-600">
+                    LINC complex transmits cytoskeletal forces to chromatin, influencing gene expression and cellular responses.
+                </p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clock text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Aging</h3>
+                <p class="text-sm text-gray-600">
+                    Nuclear mechanical decline in cellular senescence. Lamin expression changes and chromatin reorganization.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Conclusions -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">
+        <i class="fas fa-lightbulb mr-2"></i>Synthesis and Future Perspectives
+    </h2>
+    
+    <div class="bg-white rounded-lg card-shadow p-8">
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Insights</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                        <span>Nuclear mechanics span 3 orders of magnitude (0.1-100 kPa) across different cell types and conditions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                        <span>Differentiation consistently increases nuclear stiffness, supporting the mechanostat hypothesis</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                        <span>Disease states often correlate with altered nuclear mechanics (soft cancers, stiff aged cells)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                        <span>Multiple time scales govern nuclear mechanics (ms to hours)</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Future Directions</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                        <span>Single-cell mechanical profiling for disease diagnosis</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                        <span>Therapeutic targeting of nuclear mechanics in laminopathies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                        <span>Real-time mechanomics during cell fate transitions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                        <span>Integration with epigenetic and transcriptional networks</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- References Section -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">
+        <i class="fas fa-book mr-2"></i>Key References & Methods
+    </h2>
+    <div class="bg-gray-100 rounded-lg p-6">
+        <p class="text-gray-700 mb-4">
+            This review synthesizes data from multiple experimental approaches including atomic force microscopy, micropipette aspiration, 
+            optical tweezers, and microfluidic-based assays. Key methodological advances in nuclear mechanics measurement have enabled 
+            quantitative characterization across diverse cell types and disease states.
+        </p>
+        <p class="text-sm text-gray-600">
+            <strong>Original Document Source:</strong> "Biophysics of the Mammalian Nucleus" - Comprehensive academic review covering 
+            nuclear architecture, quantitative measurements, functional integration, and disease implications.
+        </p>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="gradient-bg text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+        <p class="text-lg opacity-90">
+            © 2024 CellNucleus.com - Advancing Nuclear Biology Research
+        </p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-white hover:text-blue-200">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-blue-200">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-blue-200">
+                <i class="fas fa-envelope text-xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Young's Modulus Chart
+const ctx1 = document.getElementById('modulusChart').getContext('2d');
+new Chart(ctx1, {
+    type: 'bar',
+    data: {
+        labels: ['hESC (undiff)', 'hESC (diff)', 'hMSC', 'MEF (WT)', 'MEF (Lmna-/-)', 'Lung Fibroblast', 'MCF-10A', 'HCV29'],
+        datasets: [{
+            label: 'Young\'s Modulus (kPa)',
+            data: [1.5, 9, 3.5, 10, 2.5, 3.3, 0.55, 13],
+            backgroundColor: [
+                '#10B981', '#EF4444', '#F59E0B', '#EF4444', '#10B981', '#8B5CF6', '#10B981', '#EF4444'
+            ],
+            borderColor: '#374151',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Young\'s Modulus (kPa)'
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Cell Type'
+                }
+            }
+        }
+    }
+});
+
+// Disease vs Normal Comparison Chart
+const ctx2 = document.getElementById('diseaseChart').getContext('2d');
+new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        labels: ['Soft Cancer Cells (0.1-2.1 kPa)', 'Normal Cells (3-16 kPa)', 'Differentiated Cells (6-12 kPa)'],
+        datasets: [{
+            data: [25, 45, 30],
+            backgroundColor: ['#EF4444', '#10B981', '#3B82F6'],
+            borderWidth: 2,
+            borderColor: '#ffffff'
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 20
+                }
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDiKEKz1fXnQaFzgzUmqRn9ZmIQw9O4tT1vYqQCXrCVWnybwYVv2xGy%2BiyKQfekbnebQrQ3%2Fl1rai%2BNqC7XnUbNFMLekj38c%2F9k8CEOGPO4htqpDl41Hq5b8Rk589H89WQPUD1TnC4%2Boib5goHxWdDm4KApoks6Q34wTZfp0lpUN9kD%2B%2Btf2mPAmzgj7cHBFnRWvAgYtXEa94O05%2BuJj4IERfgBgpqBjGoKI9Y1YfdpJDREHig757r4c7LXM%2BWZ%2F7UVj0KuTDStB9%2BAD%2FpSQx2xYClGb3qTk2oreRB9hG%2BYdkT%2F4Mu2qI%2B9Fuoc0NwVH4x64cNFRWuG%2Bc7RPooGAiNhUgYkDK8AhoD565FzhClbsTV%2F2qVmr3csgGWHnFQOY5w96z1JYyPAEF1nUzkEcSUMmhNbPdXNzjOhpkgpN7BmBkfzBbDyNzyUbnOY4xg68%2FX0TSn6UCBr4hs2dPWADHrihmMqI3pbpgELs88QKsZCd6HMjzXn45NRpGNw9vj8Pvf%2FS%2BQiVP%2Bf%2FKENW30MeAzjI%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDiKEKz1fXnQaFzgzUmqRn9ZmIQw9O4tT1vYqQCXrCVWnybwYVv2xGy+iyKQfekbnebQrQ3/l1rai+NqC7XnUbNFMLekj38c/9k8CEOGPO4htqpDl41Hq5b8Rk589H89WQPUD1TnC4+oib5goHxWdDm4KApoks6Q34wTZfp0lpUN9kD++tf2mPAmzgj7cHBFnRWvAgYtXEa94O05+uJj4IERfgBgpqBjGoKI9Y1YfdpJDREHig757r4c7LXM+WZ/7UVj0KuTDStB9+AD/pSQx2xYClGb3qTk2oreRB9hG+YdkT/4Mu2qI+9Fuoc0NwVH4x64cNFRWuG+c7RPooGAiNhUgYkDK8AhoD565FzhClbsTV/2qVmr3csgGWHnFQOY5w96z1JYyPAEF1nUzkEcSUMmhNbPdXNzjOhpkgpN7BmBkfzBbDyNzyUbnOY4xg68/X0TSn6UCBr4hs2dPWADHrihmMqI3pbpgELs88QKsZCd6HMjzXn45NRpGNw9vj8Pvf/S+QiVP+f/KENW30MeAzjI=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

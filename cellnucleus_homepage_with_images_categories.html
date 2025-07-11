@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com - Premier Nuclear Biology Research Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .category-image { height: 200px; object-fit: cover; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-atom text-3xl text-blue-600"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">CellNucleus.com</h1>
+                        <p class="text-sm text-gray-600">Premier Nuclear Biology Research Hub</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#categories" class="text-gray-700 hover:text-blue-600 transition">Categories</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6">Explore Nuclear Biology</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Discover comprehensive reviews, cutting-edge research, and expert insights into chromatin organization, nuclear dynamics, and cellular mechanisms</p>
+            <div class="flex justify-center items-center space-x-4 mb-8">
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <div class="text-3xl font-bold">71</div>
+                    <div class="text-sm">Expert Reviews</div>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <div class="text-3xl font-bold">7</div>
+                    <div class="text-sm">Research Categories</div>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <div class="text-3xl font-bold">100+</div>
+                    <div class="text-sm">Scientific Images</div>
+                </div>
+            </div>
+            <a href="#categories" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Explore Research Categories</a>
+        </div>
+    </section>
+
+    <!-- Featured Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Nuclear Biology Research at Your Fingertips</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">From chromatin architecture to disease mechanisms, explore the most comprehensive collection of nuclear biology reviews available online</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="https://www.researchgate.net/publication/49803582/figure/fig1/AS:277572576399377@1443189868148/Nuclear-structure-and-organization-The-nuclear-envelope-surrounds-the-nucleus.png" alt="Nuclear Organization" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Comprehensive Coverage</h4>
+                    <p class="text-gray-600">Detailed analysis of nuclear structure, organization, and molecular mechanisms</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fnrm.2017.101/MediaObjects/41580_2017_Article_BFnrm2017101_Figa_HTML.jpg" alt="Gene Regulation" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Expert Analysis</h4>
+                    <p class="text-gray-600">Professional-grade reviews with scientific depth and academic rigor</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://www.frontiersin.org/files/Articles/633825/fimmu-12-633825-HTML-r1/image_m/fimmu-12-633825-g001.jpg" alt="Chromatin Organization" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Visual Learning</h4>
+                    <p class="text-gray-600">Enhanced with high-quality scientific images and detailed diagrams</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Categories -->
+    <section id="categories" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Research Categories</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Explore our comprehensive collection organized by specialized research areas</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Chromatin Architecture & Organization -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fnrm.2017.101/MediaObjects/41580_2017_Article_BFnrm2017101_Figa_HTML.jpg" alt="Chromatin Architecture" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-dna text-blue-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Chromatin Architecture & Organization</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Explore the fundamental principles of chromatin structure, nucleosome organization, and higher-order folding mechanisms.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">15 Reviews</span>
+                            <a href="#chromatin-category" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuclear Envelope & Lamins -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://www.researchgate.net/publication/49803582/figure/fig1/AS:277572576399377@1443189868148/Nuclear-structure-and-organization-The-nuclear-envelope-surrounds-the-nucleus.png" alt="Nuclear Envelope" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-circle-notch text-green-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Nuclear Envelope & Lamins</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive analysis of nuclear envelope structure, lamin proteins, and their roles in nuclear mechanics and disease.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">8 Reviews</span>
+                            <a href="#envelope-category" class="text-green-600 hover:text-green-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuclear Bodies & Condensates -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://www.frontiersin.org/files/Articles/781981/fmolb-08-781981-HTML/image_m/fmolb-08-781981-g001.jpg" alt="Nuclear Bodies" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-atom text-purple-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Nuclear Bodies & Condensates</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Detailed studies of nuclear speckles, nucleoli, PML bodies, and phase separation mechanisms in nuclear organization.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">12 Reviews</span>
+                            <a href="#bodies-category" class="text-purple-600 hover:text-purple-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DNA Repair & Replication -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://microbenotes.com/wp-content/uploads/2023/09/DNA-Repair-Mechanisms.jpeg" alt="DNA Repair" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-tools text-red-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">DNA Repair & Replication</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive coverage of DNA damage response pathways, repair mechanisms, and replication dynamics in the nucleus.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">9 Reviews</span>
+                            <a href="#repair-category" class="text-red-600 hover:text-red-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epigenetics & Gene Regulation -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Epigenetic_mechanisms.png" alt="Epigenetics" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-layer-group text-indigo-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Epigenetics & Gene Regulation</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">In-depth analysis of epigenetic modifications, chromatin remodeling complexes, and transcriptional regulation mechanisms.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">11 Reviews</span>
+                            <a href="#epigenetics-category" class="text-indigo-600 hover:text-indigo-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computational & Modeling -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/110/2016/05/02233021/Figure_04_03_04.jpg" alt="Computational Modeling" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-laptop-code text-teal-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Computational & Modeling</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Advanced computational approaches, polymer physics models, and machine learning applications in nuclear biology research.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">6 Reviews</span>
+                            <a href="#computational-category" class="text-teal-600 hover:text-teal-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disease & Pathology -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41392-021-00648-7/MediaObjects/41392_2021_648_Fig5_HTML.png" alt="Disease Pathology" class="w-full category-image">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-microscope text-orange-600 text-xl mr-3"></i>
+                            <h4 class="text-xl font-semibold">Disease & Pathology</h4>
+                        </div>
+                        <p class="text-gray-600 mb-4">Clinical implications of nuclear dysfunction, laminopathies, chromatinopathies, and therapeutic approaches.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">10 Reviews</span>
+                            <a href="#disease-category" class="text-orange-600 hover:text-orange-800 font-semibold">Explore Category →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Reviews -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Featured Reviews</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Highlighting our most comprehensive and recently updated research reviews</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        <span class="text-sm text-gray-500">Enhanced with Images</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2">Computational Cell Nucleus Modeling</h4>
+                    <p class="text-gray-600 mb-4">Critical review of polymer physics and machine learning approaches to chromatin organization.</p>
+                    <a href="#computational-nucleus" class="text-blue-600 hover:text-blue-800 font-semibold">Read Review →</a>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        <span class="text-sm text-gray-500">Comprehensive Analysis</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2">Histone H1 Family Review</h4>
+                    <p class="text-gray-600 mb-4">Complete analysis of linker histone structure, function, and regulatory mechanisms.</p>
+                    <a href="#h1-family" class="text-blue-600 hover:text-blue-800 font-semibold">Read Review →</a>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        <span class="text-sm text-gray-500">Clinical Focus</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2">Nuclear Condensates in Disease</h4>
+                    <p class="text-gray-600 mb-4">Pathological implications of nuclear condensate dysregulation in human diseases.</p>
+                    <a href="#condensates-disease" class="text-blue-600 hover:text-blue-800 font-semibold">Read Review →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">71</div>
+                    <div class="text-gray-300">Comprehensive Reviews</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">7</div>
+                    <div class="text-gray-300">Research Categories</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-gray-300">Scientific References</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">100+</div>
+                    <div class="text-gray-300">Scientific Images</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-atom text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">CellNucleus.com</span>
+                    </div>
+                    <p class="text-gray-400">Premier resource for nuclear biology research and education.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#categories" class="hover:text-white transition">Research Categories</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Research Areas</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Chromatin Architecture</li>
+                        <li>Nuclear Envelope</li>
+                        <li>DNA Repair</li>
+                        <li>Epigenetics</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-researchgate text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CellNucleus.com. All rights reserved. Advancing nuclear biology research and education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDnrMi85kfLemE5r67Ex1tlAOVXZdphD8%2Bn%2FjoPOQI457mqYCE8vf5DrvV70JgVc8LA%2FjvcViarpaBE7PU%2B0pTzhOXbN%2B21mOcNM5nURhgQ8YoIU8bY7D9Ro4H%2BzVLPrQzHMGWJT479KWQQWDIlzwr6KdskzcrUeauqrLwSTHUUdXEVuggAuOnNr4v%2BjGWag8Mk2pEIquN8kIGzc4okLt55g%2FB%2FKIy8uShy3yEYIRq%2Bim7%2FWAuYoBcpIrPYCnuhakCMMHRiuZnVxgh4B7t90Gtsh6Llc6t7HFKRhuMhvjFFk%2BqBxnUUESvyRMcQa%2BPLUOEg1f0s%2FsPTb58sTEQyzXytjaLy3exbWB6UlYP4TDRzQHzBRFyjxOEp%2F3StWFHInsuYnLz7Iu5Im2tCy0vlxVHXilBNxG05HWl3nmfss5YI8sOzXx4ldqfm9Nv7bBLyaRmjfdR66JSINTvG74StBbM%2F7dveFFTrzwm4XEwgTsiEA%2FHIITBRewjiP28bRRX%2Bvy%2FwkOXgVcsPGA8DCU5S5v%2FqGNvF7EuB3OtXWcpFUhlqE8";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDnrMi85kfLemE5r67Ex1tlAOVXZdphD8+n/joPOQI457mqYCE8vf5DrvV70JgVc8LA/jvcViarpaBE7PU+0pTzhOXbN+21mOcNM5nURhgQ8YoIU8bY7D9Ro4H+zVLPrQzHMGWJT479KWQQWDIlzwr6KdskzcrUeauqrLwSTHUUdXEVuggAuOnNr4v+jGWag8Mk2pEIquN8kIGzc4okLt55g/B/KIy8uShy3yEYIRq+im7/WAuYoBcpIrPYCnuhakCMMHRiuZnVxgh4B7t90Gtsh6Llc6t7HFKRhuMhvjFFk+qBxnUUESvyRMcQa+PLUOEg1f0s/sPTb58sTEQyzXytjaLy3exbWB6UlYP4TDRzQHzBRFyjxOEp/3StWFHInsuYnLz7Iu5Im2tCy0vlxVHXilBNxG05HWl3nmfss5YI8sOzXx4ldqfm9Nv7bBLyaRmjfdR66JSINTvG74StBbM/7dveFFTrzwm4XEwgTsiEA/HIITBRewjiP28bRRX+vy/wkOXgVcsPGA8DCU5S5v/qGNvF7EuB3OtXWcpFUhlqE8";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

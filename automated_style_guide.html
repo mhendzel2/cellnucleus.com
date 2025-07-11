@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellNucleus.com - Automated Style Guide & Development Standards</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --accent-teal: #0d9488;
+            --dark-gray: #1f2937;
+            --light-gray: #f8fafc;
+            --border-gray: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cellnucleus-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        }
+
+        .cellnucleus-card {
+            background: white;
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cellnucleus-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+
+        .nav-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
+
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .typography-example {
+            border-left: 4px solid var(--accent-teal);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .component-preview {
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem 0;
+            background: #f9fafb;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fbbf24 0%, #fbbf24 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            border-right: 1px solid var(--border-gray);
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 0.25rem 0;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-link:hover, .sidebar-link.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                left: -300px;
+                top: 0;
+                height: 100vh;
+                width: 300px;
+                z-index: 100;
+                transition: left 0.3s ease;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Header -->
+<header class="cellnucleus-primary text-white py-6 nav-sticky">
+    <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between">
+            <div>
+                <h1 class="text-3xl font-bold heading-font">CellNucleus.com</h1>
+                <p class="text-blue-100 mt-1">Automated Style Guide & Development Standards</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-sm bg-white bg-opacity-20 px-3 py-1 rounded-full">v2.0</span>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="flex">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar w-64 min-h-screen p-6">
+        <div class="sticky top-20">
+            <h3 class="font-semibold text-gray-800 mb-4">Navigation</h3>
+            <div class="space-y-1">
+                <a href="#overview" class="sidebar-link active"><i class="fas fa-home mr-2"></i>Overview</a>
+                <a href="#brand-identity" class="sidebar-link"><i class="fas fa-palette mr-2"></i>Brand Identity</a>
+                <a href="#typography" class="sidebar-link"><i class="fas fa-font mr-2"></i>Typography</a>
+                <a href="#color-system" class="sidebar-link"><i class="fas fa-eye-dropper mr-2"></i>Color System</a>
+                <a href="#layout-grid" class="sidebar-link"><i class="fas fa-th mr-2"></i>Layout & Grid</a>
+                <a href="#components" class="sidebar-link"><i class="fas fa-puzzle-piece mr-2"></i>Components</a>
+                <a href="#naming-convention" class="sidebar-link"><i class="fas fa-tags mr-2"></i>Naming Convention</a>
+                <a href="#content-standards" class="sidebar-link"><i class="fas fa-file-alt mr-2"></i>Content Standards</a>
+                <a href="#code-standards" class="sidebar-link"><i class="fas fa-code mr-2"></i>Code Standards</a>
+                <a href="#accessibility" class="sidebar-link"><i class="fas fa-universal-access mr-2"></i>Accessibility</a>
+                <a href="#templates" class="sidebar-link"><i class="fas fa-file-code mr-2"></i>Templates</a>
+                <a href="#implementation" class="sidebar-link"><i class="fas fa-rocket mr-2"></i>Implementation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Overview Section -->
+            <section id="overview" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-home text-blue-600 mr-3"></i>Overview
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Purpose</h3>
+                            <p class="text-gray-600 mb-4">This automated style guide ensures consistent design, development, and content standards across CellNucleus.com, maintaining professional quality and user experience.</p>
+                            
+                            <h3 class="text-xl font-semibold mb-3">Key Principles</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Scientific accuracy and credibility</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Visual consistency across all pages</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Responsive and accessible design</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i>Maintainable and scalable code</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Quick Stats</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">55+</div>
+                                        <div class="text-sm text-gray-600">Review Pages</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">5</div>
+                                        <div class="text-sm text-gray-600">Core Templates</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">3</div>
+                                        <div class="text-sm text-gray-600">Brand Colors</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">100%</div>
+                                        <div class="text-sm text-gray-600">Accessibility</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Identity Section -->
+            <section id="brand-identity" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-palette text-blue-600 mr-3"></i>Brand Identity
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Logo & Branding</h3>
+                            <div class="component-preview text-center">
+                                <div class="cellnucleus-primary text-white p-8 rounded-lg inline-block">
+                                    <h1 class="text-2xl font-bold heading-font">CellNucleus.com</h1>
+                                    <p class="text-blue-100 text-sm mt-1">Nuclear Biology Excellence</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mt-4">The CellNucleus.com logo uses a gradient blue background representing the depth and complexity of nuclear biology research.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Brand Voice</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-blue-50 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800">Scientific Authority</h4>
+                                    <p class="text-blue-700 text-sm">Expert-level content with rigorous research backing</p>
+                                </div>
+                                <div class="p-4 bg-teal-50 rounded-lg">
+                                    <h4 class="font-semibold text-teal-800">Accessibility</h4>
+                                    <p class="text-teal-700 text-sm">Complex topics explained clearly for diverse audiences</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800">Innovation</h4>
+                                    <p class="text-gray-700 text-sm">Cutting-edge research and emerging methodologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography Section -->
+            <section id="typography" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-font text-blue-600 mr-3"></i>Typography System
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Font Families</h3>
+                            <div class="space-y-4">
+                                <div class="typography-example">
+                                    <h4 class="font-bold heading-font text-2xl">Playfair Display</h4>
+                                    <p class="text-gray-600">Primary heading font - elegant serif for authority</p>
+                                    <div class="code-block mt-2">font-family: 'Playfair Display', serif;</div>
+                                </div>
+                                
+                                <div class="typography-example">
+                                    <h4 class="font-bold text-xl">Inter Regular</h4>
+                                    <p class="text-gray-600">Body text font - clean and readable</p>
+                                    <div class="code-block mt-2">font-family: 'Inter', sans-serif;</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Typography Scale</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between border-b pb-2">
+                                    <span class="text-4xl font-bold heading-font">H1 Title</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">36px / 2.25rem</code>
+                                </div>
+                                <div class="flex items-center justify-between border-b pb-2">
+                                    <span class="text-3xl font-semibold heading-font">H2 Section</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">30px / 1.875rem</code>
+                                </div>
+                                <div class="flex items-center justify-between border-b pb-2">
+                                    <span class="text-2xl font-semibold">H3 Subsection</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">24px / 1.5rem</code>
+                                </div>
+                                <div class="flex items-center justify-between border-b pb-2">
+                                    <span class="text-xl font-medium">H4 Heading</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">20px / 1.25rem</code>
+                                </div>
+                                <div class="flex items-center justify-between border-b pb-2">
+                                    <span class="text-base">Body Text</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">16px / 1rem</code>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-600">Small Text</span>
+                                    <code class="text-sm bg-gray-100 px-2 py-1 rounded">14px / 0.875rem</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Color System Section -->
+            <section id="color-system" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-eye-dropper text-blue-600 mr-3"></i>Color System
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Primary Colors</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #1e40af;"></div>
+                                    <div>
+                                        <div class="font-medium">Primary Blue</div>
+                                        <div class="text-sm text-gray-600">#1e40af</div>
+                                        <div class="text-xs text-gray-500">--primary-blue</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #3b82f6;"></div>
+                                    <div>
+                                        <div class="font-medium">Secondary Blue</div>
+                                        <div class="text-sm text-gray-600">#3b82f6</div>
+                                        <div class="text-xs text-gray-500">--secondary-blue</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #0d9488;"></div>
+                                    <div>
+                                        <div class="font-medium">Accent Teal</div>
+                                        <div class="text-sm text-gray-600">#0d9488</div>
+                                        <div class="text-xs text-gray-500">--accent-teal</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Neutral Colors</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #111827;"></div>
+                                    <div>
+                                        <div class="font-medium">Text Primary</div>
+                                        <div class="text-sm text-gray-600">#111827</div>
+                                        <div class="text-xs text-gray-500">--text-primary</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #6b7280;"></div>
+                                    <div>
+                                        <div class="font-medium">Text Secondary</div>
+                                        <div class="text-sm text-gray-600">#6b7280</div>
+                                        <div class="text-xs text-gray-500">--text-secondary</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="color-swatch" style="background: #f8fafc;"></div>
+                                    <div>
+                                        <div class="font-medium">Background Light</div>
+                                        <div class="text-sm text-gray-600">#f8fafc</div>
+                                        <div class="text-xs text-gray-500">--light-gray</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Usage Guidelines</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="p-3 bg-blue-50 rounded">
+                                    <strong class="text-blue-800">Primary Blue:</strong>
+                                    <p class="text-blue-700 mt-1">Headers, primary buttons, key navigation elements</p>
+                                </div>
+                                <div class="p-3 bg-teal-50 rounded">
+                                    <strong class="text-teal-800">Accent Teal:</strong>
+                                    <p class="text-teal-700 mt-1">Highlights, links, scientific emphasis, callouts</p>
+                                </div>
+                                <div class="p-3 bg-gray-50 rounded">
+                                    <strong class="text-gray-800">Neutrals:</strong>
+                                    <p class="text-gray-700 mt-1">Body text, backgrounds, borders, subtle UI elements</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layout & Grid Section -->
+            <section id="layout-grid" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-th text-blue-600 mr-3"></i>Layout & Grid System
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Responsive Breakpoints</h3>
+                            <div class="grid md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">sm</div>
+                                    <div class="text-sm text-gray-600">≥640px</div>
+                                    <div class="text-xs text-gray-500">Mobile</div>
+                                </div>
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">md</div>
+                                    <div class="text-sm text-gray-600">≥768px</div>
+                                    <div class="text-xs text-gray-500">Tablet</div>
+                                </div>
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">lg</div>
+                                    <div class="text-sm text-gray-600">≥1024px</div>
+                                    <div class="text-xs text-gray-500">Desktop</div>
+                                </div>
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">xl</div>
+                                    <div class="text-sm text-gray-600">≥1280px</div>
+                                    <div class="text-xs text-gray-500">Large</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Standard Layout Pattern</h3>
+                            <div class="component-preview">
+                                <div class="bg-blue-600 text-white p-4 rounded mb-2">Header / Navigation</div>
+                                <div class="flex gap-2 mb-2">
+                                    <div class="flex-1 bg-gray-200 p-4 rounded">Main Content Area</div>
+                                    <div class="w-64 bg-gray-300 p-4 rounded hidden md:block">Sidebar (optional)</div>
+                                </div>
+                                <div class="bg-gray-400 text-white p-4 rounded">Footer</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Content Spacing</h3>
+                            <div class="code-block">
+/* Standard spacing scale (Tailwind-based) */
+.space-xs { margin: 0.25rem; }  /* 4px */
+.space-sm { margin: 0.5rem; }   /* 8px */
+.space-md { margin: 1rem; }     /* 16px */
+.space-lg { margin: 1.5rem; }   /* 24px */
+.space-xl { margin: 3rem; }     /* 48px */
+.space-2xl { margin: 4rem; }    /* 64px */</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components Section -->
+            <section id="components" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-puzzle-piece text-blue-600 mr-3"></i>Reusable Components
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Buttons -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Buttons</h3>
+                            <div class="component-preview flex flex-wrap gap-4">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                    Primary Button
+                                </button>
+                                <button class="bg-transparent hover:bg-blue-50 text-blue-600 border-2 border-blue-600 px-6 py-2 rounded-lg font-medium transition-colors">
+                                    Secondary Button
+                                </button>
+                                <button class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                                    Accent Button
+                                </button>
+                            </div>
+                            <div class="code-block">
+&lt;button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"&gt;
+    Primary Button
+&lt;/button&gt;</div>
+                        </div>
+                        
+                        <!-- Cards -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Review Cards</h3>
+                            <div class="component-preview">
+                                <div class="cellnucleus-card p-6 max-w-md">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-dna text-blue-600 text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-lg">Nuclear Speckles Review</h4>
+                                            <p class="text-sm text-gray-600">Comprehensive Analysis</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">Detailed examination of nuclear speckle structure, function, and dynamics in cellular processes.</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-500">Updated: June 2024</span>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Alert/Callout Boxes -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Alert & Callout Boxes</h3>
+                            <div class="component-preview space-y-4">
+                                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+                                        <strong class="text-blue-800">Information</strong>
+                                    </div>
+                                    <p class="text-blue-700 mt-1">This is an informational callout for important details.</p>
+                                </div>
+                                
+                                <div class="bg-teal-50 border-l-4 border-teal-600 p-4 rounded">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-lightbulb text-teal-600 mr-2"></i>
+                                        <strong class="text-teal-800">Key Insight</strong>
+                                    </div>
+                                    <p class="text-teal-700 mt-1">Highlighting crucial scientific insights and findings.</p>
+                                </div>
+                                
+                                <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
+                                        <strong class="text-yellow-800">Important Note</strong>
+                                    </div>
+                                    <p class="text-yellow-700 mt-1">Critical information that requires special attention.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Naming Convention Section -->
+            <section id="naming-convention" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-tags text-blue-600 mr-3"></i>File Naming Convention
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Standard Format</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                                <code class="text-lg font-mono">[topic]_[type]_[status].html</code>
+                            </div>
+                            
+                            <h4 class="font-semibold mb-2">Topic Categories:</h4>
+                            <ul class="text-sm space-y-1 text-gray-700 mb-4">
+                                <li><code>nuclear_speckles</code> - Nuclear speckle research</li>
+                                <li><code>chromatin_dynamics</code> - Chromatin organization</li>
+                                <li><code>dna_repair</code> - DNA repair mechanisms</li>
+                                <li><code>epigenetic_inheritance</code> - Epigenetic studies</li>
+                                <li><code>nuclear_organization</code> - Nuclear architecture</li>
+                            </ul>
+                            
+                            <h4 class="font-semibold mb-2">Review Types:</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li><code>comprehensive_review</code> - Full detailed analysis</li>
+                                <li><code>critical_review</code> - Critical evaluation</li>
+                                <li><code>methods_review</code> - Methodological focus</li>
+                                <li><code>update_review</code> - Recent developments</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Examples</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-green-50 p-3 rounded border-l-4 border-green-500">
+                                    <div class="font-mono font-semibold text-green-800">✓ GOOD</div>
+                                    <div class="font-mono text-green-700">nuclear_speckles_comprehensive_review.html</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded border-l-4 border-green-500">
+                                    <div class="font-mono font-semibold text-green-800">✓ GOOD</div>
+                                    <div class="font-mono text-green-700">dna_repair_pathway_crosstalk_complete.html</div>
+                                </div>
+                                <div class="bg-red-50 p-3 rounded border-l-4 border-red-500">
+                                    <div class="font-mono font-semibold text-red-800">✗ AVOID</div>
+                                    <div class="font-mono text-red-700">NuclearSpecklesReview.html</div>
+                                </div>
+                                <div class="bg-red-50 p-3 rounded border-l-4 border-red-500">
+                                    <div class="font-mono font-semibold text-red-800">✗ AVOID</div>
+                                    <div class="font-mono text-red-700">review_1_final_updated.html</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="font-semibold mt-6 mb-2">File Organization:</h4>
+                            <div class="code-block text-xs">
+/cellnucleus.com/
+├── index.html
+├── nuclear_biology_reviews/
+│   ├── nuclear_speckles_comprehensive_review.html
+│   ├── chromatin_dynamics_critical_review.html
+│   └── dna_repair_pathway_crosstalk_complete.html
+└── assets/
+    ├── css/
+    ├── js/
+    └── images/</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Standards Section -->
+            <section id="content-standards" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-file-alt text-blue-600 mr-3"></i>Content Standards
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Review Page Structure</h3>
+                            <ol class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">1</span>
+                                    <div>
+                                        <strong>Header Section</strong>
+                                        <p class="text-sm text-gray-600">Title, author info, publication date, tags</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">2</span>
+                                    <div>
+                                        <strong>Abstract/Summary</strong>
+                                        <p class="text-sm text-gray-600">200-300 word overview of key findings</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">3</span>
+                                    <div>
+                                        <strong>Table of Contents</strong>
+                                        <p class="text-sm text-gray-600">Navigational aid for long reviews</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">4</span>
+                                    <div>
+                                        <strong>Main Content Sections</strong>
+                                        <p class="text-sm text-gray-600">Logical progression with clear headings</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">5</span>
+                                    <div>
+                                        <strong>Figures & Illustrations</strong>
+                                        <p class="text-sm text-gray-600">Scientific diagrams with proper captions</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-1">6</span>
+                                    <div>
+                                        <strong>References & Citations</strong>
+                                        <p class="text-sm text-gray-600">Complete bibliographic information</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Writing Guidelines</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-blue-50 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">Scientific Accuracy</h4>
+                                    <ul class="text-sm text-blue-700 space-y-1">
+                                        <li>• Cite peer-reviewed sources</li>
+                                        <li>• Use precise scientific terminology</li>
+                                        <li>• Include methodology details</li>
+                                        <li>• Acknowledge limitations and controversies</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="p-4 bg-teal-50 rounded-lg">
+                                    <h4 class="font-semibold text-teal-800 mb-2">Readability</h4>
+                                    <ul class="text-sm text-teal-700 space-y-1">
+                                        <li>• Define technical terms on first use</li>
+                                        <li>• Use active voice when possible</li>
+                                        <li>• Break up long paragraphs</li>
+                                        <li>• Include visual elements to aid comprehension</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Consistency</h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Follow established terminology</li>
+                                        <li>• Maintain consistent formatting</li>
+                                        <li>• Use standardized abbreviations</li>
+                                        <li>• Apply uniform citation style</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Standards Section -->
+            <section id="code-standards" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-code text-blue-600 mr-3"></i>Code Standards
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">HTML Structure</h3>
+                            <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;[Review Title] | CellNucleus.com&lt;/title&gt;
+    &lt;meta name="description" content="[Review description]"&gt;
+    &lt;!-- CSS links --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;...&lt;/header&gt;
+    &lt;main&gt;...&lt;/main&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">CSS Organization</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-medium mb-2">CSS Variables (Custom Properties)</h4>
+                                    <div class="code-block text-xs">
+:root {
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --accent-teal: #0d9488;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --border-radius: 8px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+}</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2">Component-Based Structure</h4>
+                                    <div class="code-block text-xs">
+/* Base styles */
+/* Typography */
+/* Layout */
+/* Components */
+/* Utilities */
+/* Media queries */</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Performance Guidelines</h3>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="p-4 bg-green-50 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">Images</h4>
+                                    <ul class="text-sm text-green-700 space-y-1">
+                                        <li>• Use WebP format when possible</li>
+                                        <li>• Include alt text for accessibility</li>
+                                        <li>• Optimize file sizes</li>
+                                        <li>• Use responsive images</li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-blue-50 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">CSS</h4>
+                                    <ul class="text-sm text-blue-700 space-y-1">
+                                        <li>• Minimize HTTP requests</li>
+                                        <li>• Use CSS Grid/Flexbox</li>
+                                        <li>• Avoid inline styles</li>
+                                        <li>• Compress production CSS</li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-purple-50 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">JavaScript</h4>
+                                    <ul class="text-sm text-purple-700 space-y-1">
+                                        <li>• Load scripts asynchronously</li>
+                                        <li>• Use modern ES6+ features</li>
+                                        <li>• Minimize DOM manipulation</li>
+                                        <li>• Implement lazy loading</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accessibility Section -->
+            <section id="accessibility" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-universal-access text-blue-600 mr-3"></i>Accessibility Standards
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">WCAG 2.1 AA Compliance</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-blue-50 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2"><i class="fas fa-eye mr-2"></i>Visual</h4>
+                                    <ul class="text-sm text-blue-700 space-y-1">
+                                        <li>• Minimum 4.5:1 contrast ratio</li>
+                                        <li>• Text resizable up to 200%</li>
+                                        <li>• No information conveyed by color alone</li>
+                                        <li>• Focus indicators clearly visible</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="p-4 bg-teal-50 rounded-lg">
+                                    <h4 class="font-semibold text-teal-800 mb-2"><i class="fas fa-keyboard mr-2"></i>Keyboard</h4>
+                                    <ul class="text-sm text-teal-700 space-y-1">
+                                        <li>• All functionality keyboard accessible</li>
+                                        <li>• Logical tab order</li>
+                                        <li>• Skip navigation links</li>
+                                        <li>• No keyboard traps</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="p-4 bg-purple-50 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2"><i class="fas fa-volume-up mr-2"></i>Screen Readers</h4>
+                                    <ul class="text-sm text-purple-700 space-y-1">
+                                        <li>• Semantic HTML structure</li>
+                                        <li>• Proper heading hierarchy</li>
+                                        <li>• Alt text for images</li>
+                                        <li>• ARIA labels where needed</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Implementation Checklist</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">All images have descriptive alt text</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Heading structure is logical and hierarchical</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Color contrast meets WCAG standards</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Forms have proper labels and instructions</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Tables have proper headers and captions</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Skip navigation link is present</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Page has descriptive title and meta description</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="mr-3 h-4 w-4 text-blue-600">
+                                    <span class="text-sm">Interactive elements have clear focus states</span>
+                                </label>
+                            </div>
+                            
+                            <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                                <h4 class="font-semibold text-yellow-800 mb-2">Testing Tools</h4>
+                                <ul class="text-sm text-yellow-700 space-y-1">
+                                    <li>• axe DevTools browser extension</li>
+                                    <li>• WAVE Web Accessibility Evaluator</li>
+                                    <li>• Lighthouse accessibility audit</li>
+                                    <li>• Screen reader testing (NVDA, JAWS, VoiceOver)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Templates Section -->
+            <section id="templates" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-file-code text-blue-600 mr-3"></i>Page Templates
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-semibold">Available Templates</h3>
+                            
+                            <div class="cellnucleus-card p-4">
+                                <h4 class="font-semibold mb-2"><i class="fas fa-file-alt text-blue-600 mr-2"></i>Comprehensive Review</h4>
+                                <p class="text-sm text-gray-600 mb-3">Full-length scientific review with all sections, figures, and references.</p>
+                                <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">Download Template →</button>
+                            </div>
+                            
+                            <div class="cellnucleus-card p-4">
+                                <h4 class="font-semibold mb-2"><i class="fas fa-search text-teal-600 mr-2"></i>Critical Review</h4>
+                                <p class="text-sm text-gray-600 mb-3">Focused analysis template for critical evaluation of specific topics.</p>
+                                <button class="text-teal-600 hover:text-teal-800 text-sm font-medium">Download Template →</button>
+                            </div>
+                            
+                            <div class="cellnucleus-card p-4">
+                                <h4 class="font-semibold mb-2"><i class="fas fa-tools text-purple-600 mr-2"></i>Methods Review</h4>
+                                <p class="text-sm text-gray-600 mb-3">Template focused on methodological approaches and techniques.</p>
+                                <button class="text-purple-600 hover:text-purple-800 text-sm font-medium">Download Template →</button>
+                            </div>
+                            
+                            <div class="cellnucleus-card p-4">
+                                <h4 class="font-semibold mb-2"><i class="fas fa-home text-gray-600 mr-2"></i>Homepage Template</h4>
+                                <p class="text-sm text-gray-600 mb-3">Main site homepage with featured reviews and navigation.</p>
+                                <button class="text-gray-600 hover:text-gray-800 text-sm font-medium">Download Template →</button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Template Structure</h3>
+                            <div class="code-block text-xs">
+&lt;!-- Standard CellNucleus.com Review Template --&gt;
+&lt;header class="cellnucleus-primary"&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main class="container mx-auto px-6 py-8"&gt;
+    &lt;article class="cellnucleus-card"&gt;
+        &lt;header class="review-header"&gt;
+            &lt;h1 class="heading-font"&gt;[Review Title]&lt;/h1&gt;
+            &lt;div class="review-meta"&gt;...&lt;/div&gt;
+        &lt;/header&gt;
+        
+        &lt;section class="abstract"&gt;...&lt;/section&gt;
+        &lt;nav class="table-of-contents"&gt;...&lt;/nav&gt;
+        
+        &lt;div class="review-content"&gt;
+            &lt;section id="introduction"&gt;...&lt;/section&gt;
+            &lt;section id="main-content"&gt;...&lt;/section&gt;
+            &lt;section id="conclusions"&gt;...&lt;/section&gt;
+        &lt;/div&gt;
+        
+        &lt;footer class="references"&gt;...&lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;...&lt;/footer&gt;</div>
+                            
+                            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">Template Features</h4>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• Responsive design built-in</li>
+                                    <li>• Accessibility compliant structure</li>
+                                    <li>• SEO optimized meta tags</li>
+                                    <li>• Consistent styling classes</li>
+                                    <li>• Print-friendly layouts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Section -->
+            <section id="implementation" class="section-anchor mb-12">
+                <div class="cellnucleus-card p-8">
+                    <h2 class="text-3xl font-bold heading-font text-gray-800 mb-6">
+                        <i class="fas fa-rocket text-blue-600 mr-3"></i>Implementation Guide
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Development Workflow</h3>
+                            <div class="grid md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 border rounded-lg">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold mb-2">1. Template</h4>
+                                    <p class="text-sm text-gray-600">Start with appropriate template</p>
+                                </div>
+                                <div class="text-center p-4 border rounded-lg">
+                                    <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-edit text-teal-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold mb-2">2. Content</h4>
+                                    <p class="text-sm text-gray-600">Add scientific content following guidelines</p>
+                                </div>
+                                <div class="text-center p-4 border rounded-lg">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-check text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold mb-2">3. Review</h4>
+                                    <p class="text-sm text-gray-600">Check accessibility and standards compliance</p>
+                                </div>
+                                <div class="text-center p-4 border rounded-lg">
+                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <i class="fas fa-upload text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold mb-2">4. Deploy</h4>
+                                    <p class="text-sm text-gray-600">Upload using standard naming convention</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Quality Checklist</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-medium mb-3">Content Quality</h4>
+                                    <div class="space-y-2 text-sm">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>Scientific accuracy verified</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>All citations properly formatted</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>Figures have descriptive captions</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>Abstract accurately summarizes content</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-3">Technical Quality</h4>
+                                    <div class="space-y-2 text-sm">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>HTML validates without errors</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>Responsive design tested</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>Accessibility audit passed</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600">
+                                            <span>File naming convention followed</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Future Maintenance</h3>
+                            <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                <div>
+                                    <strong class="text-blue-800">Regular Updates</strong>
+                                    <p class="text-gray-700 mt-1">Review and update content quarterly to maintain scientific currency</p>
+                                </div>
+                                <div>
+                                    <strong class="text-teal-800">Style Guide Evolution</strong>
+                                    <p class="text-gray-700 mt-1">Update this guide as standards evolve and new best practices emerge</p>
+                                </div>
+                                <div>
+                                    <strong class="text-gray-800">Performance Monitoring</strong>
+                                    <p class="text-gray-700 mt-1">Regular audits for accessibility, performance, and SEO compliance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold heading-font mb-3">CellNucleus.com</h3>
+                <p class="text-gray-300 text-sm">Leading resource for nuclear biology research and reviews</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-3">Style Guide</h4>
+                <p class="text-gray-300 text-sm">This automated style guide ensures consistent, high-quality development across all CellNucleus.com pages.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-3">Last Updated</h4>
+                <p class="text-gray-300 text-sm">June 2024 - Version 2.0</p>
+                <p class="text-teal-400 text-sm mt-2">
+                    <i class="fas fa-check-circle mr-1"></i>
+                    Standards Compliant
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 CellNucleus.com. All rights reserved. | Style Guide v2.0</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('open');
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            
+            // Update active link
+            document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Close mobile menu
+            document.getElementById('sidebar').classList.remove('open');
+        }
+    });
+});
+
+// Update active navigation on scroll
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section-anchor');
+    const navLinks = document.querySelectorAll('.sidebar-link');
+    
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Copy code blocks to clipboard
+document.querySelectorAll('.code-block').forEach(codeBlock => {
+    codeBlock.style.cursor = 'pointer';
+    codeBlock.title = 'Click to copy';
+    
+    codeBlock.addEventListener('click', function() {
+        navigator.clipboard.writeText(this.textContent).then(function() {
+            // Show temporary success message
+            const originalBg = codeBlock.style.backgroundColor;
+            codeBlock.style.backgroundColor = '#065f46';
+            setTimeout(() => {
+                codeBlock.style.backgroundColor = originalBg;
+            }, 200);
+        });
+    });
+});
+
+// Initialize tooltips and other interactive elements
+document.addEventListener('DOMContentLoaded', function() {
+    // Add any additional initialization code here
+    console.log('CellNucleus.com Style Guide loaded successfully');
+});
+</script>
+
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDiEMRRUVMbsS7PwVUUKDbBKgqftE8Bmr63pd%2FzLGDc5fQq3AsOzRozD6ICCcHDhUvlovbc8NpbQcL4MY0USB9ZxevVWy3UnaYflDKcG7bDbuCtunH1pP8CpoZeYrtzBrrIEzAm2EFkFIx9CwlGyYoC74Qn3gE1zMwpXgjxNMSeFzQpRnaXZlZvDsabBDSgtpM5H%2F3xvPkT9qBGERadCt2UgeLeRxbB6ckMMwEPQf9Fz55pEmyn2wM9NDVk9n%2BC07R1NT%2F42LSHumwLR5FqzxguMX8d%2Bt1QG%2B7Kv9H1eAFs%2FpmtvBh3Wy5DqsShIsgLymw7XEjH8Fvmuz%2BUC5LAO2cbEBUP8yVF4gO65rdDT4UO7BSoF%2B83aFcmgkl3%2Ffsmx4DYHiOHMTkAK9g%2BuNRyzgafhu8hhwxupVcL6ZC2Rr9OVNGmLHhsMWLIkYIDTlFOoaO7fU7I2c2jh6B6%2BvCkhBQvhD9TcMSjI7E%2F%2FzdCIyAokqP76p%2FS45I%2F2ZinwHRvNGPQ%3D%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDiEMRRUVMbsS7PwVUUKDbBKgqftE8Bmr63pd/zLGDc5fQq3AsOzRozD6ICCcHDhUvlovbc8NpbQcL4MY0USB9ZxevVWy3UnaYflDKcG7bDbuCtunH1pP8CpoZeYrtzBrrIEzAm2EFkFIx9CwlGyYoC74Qn3gE1zMwpXgjxNMSeFzQpRnaXZlZvDsabBDSgtpM5H/3xvPkT9qBGERadCt2UgeLeRxbB6ckMMwEPQf9Fz55pEmyn2wM9NDVk9n+C07R1NT/42LSHumwLR5FqzxguMX8d+t1QG+7Kv9H1eAFs/pmtvBh3Wy5DqsShIsgLymw7XEjH8Fvmuz+UC5LAO2cbEBUP8yVF4gO65rdDT4UO7BSoF+83aFcmgkl3/fsmx4DYHiOHMTkAK9g+uNRyzgafhu8hhwxupVcL6ZC2Rr9OVNGmLHhsMWLIkYIDTlFOoaO7fU7I2c2jh6B6+vCkhBQvhD9TcMSjI7E//zdCIyAokqP76p/S45I/2ZinwHRvNGPQ==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

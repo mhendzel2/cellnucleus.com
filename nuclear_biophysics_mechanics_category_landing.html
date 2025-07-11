@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Biophysics & Mechanics - CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .heading-font { font-family: 'Merriweather', serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.8)), url('images/nuclear_structures/dapi_nuclear_staining_nature.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .research-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .category-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-blue-900 heading-font">CellNucleus.com</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-900 font-medium">Home</a>
+                    <a href="/reviews" class="text-gray-700 hover:text-blue-900 font-medium">Reviews</a>
+                    <a href="/categories" class="text-blue-900 font-medium">Categories</a>
+                    <a href="/about" class="text-gray-700 hover:text-blue-900 font-medium">About</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="/" class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-home mr-1"></i>Home
+                </a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="/categories" class="text-blue-600 hover:text-blue-800">Research Categories</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-gray-700 font-medium">Nuclear Biophysics & Mechanics</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-bg relative py-20">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 heading-font">
+                Nuclear Biophysics & Mechanics
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+                6 Comprehensive Reviews • Physical Properties • Mechanobiology
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <i class="fas fa-cogs mr-2"></i>Mechanical Properties
+                </span>
+                <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <i class="fas fa-atom mr-2"></i>Biophysical Analysis
+                </span>
+                <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <i class="fas fa-chart-line mr-2"></i>Dynamic Organization
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 heading-font">Category Overview</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Introduction</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Nuclear biophysics and mechanics encompass the physical properties, mechanical behavior, and quantitative analysis of nuclear organization and function. This collection of 6 comprehensive reviews explores the biophysical principles governing nuclear structure, dynamics, and responses to mechanical forces within the cellular environment.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Key Research Areas</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-cog text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Nuclear Mechanics</h4>
+                                <p class="text-gray-600">Mechanical properties and deformation behavior</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-atom text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Biophysical Properties</h4>
+                                <p class="text-gray-600">Physical characteristics of nuclear organization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-cube text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">4D Nucleome</h4>
+                                <p class="text-gray-600">Temporal dynamics of nuclear architecture</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-network-wired text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Molecular Crowding</h4>
+                                <p class="text-gray-600">Effects of macromolecular density on nuclear function</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-wave-square text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Rheological Properties</h4>
+                                <p class="text-gray-600">Viscosity and flow behavior within the nucleus</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-arrows-alt text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Mechanotransduction</h4>
+                                <p class="text-gray-600">Force transmission and cellular responses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Collection -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 heading-font">Reviews Collection</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">6 comprehensive reviews covering the physical principles and mechanical properties of nuclear organization</p>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Mechanical Properties -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-cogs text-blue-600 mr-3"></i>
+                    Mechanical Properties
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Nuclear Biophysical Properties Review</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Physical characteristics and mechanical behavior of the nucleus</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Nuclear stiffness, elasticity, deformation, force transmission</p>
+                        <a href="nuclear_biology_reviews/nuclear_biophysical_properties_review.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-red-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Nuclear Mechanics Disease Review</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Altered nuclear mechanics in disease states</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Pathological changes, mechanical dysfunction, disease mechanisms</p>
+                        <a href="nuclear_biology_reviews/nuclear_mechanics_disease_review.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Molecular Organization -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-atom text-green-600 mr-3"></i>
+                    Molecular Organization
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Nuclear Macromolecular Crowding Review</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Effects of molecular crowding on nuclear processes</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Excluded volume, diffusion, protein interactions, phase behavior</p>
+                        <a href="nuclear_biology_reviews/nuclear_macromolecular_crowding_review.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Nuclear Viscosity Properties Regulation</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Rheological properties and viscosity regulation in the nucleus</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Nuclear viscosity, chromatin mobility, diffusion dynamics</p>
+                        <a href="nuclear_biology_reviews/nuclear_viscosity_properties_regulation.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Organization -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-chart-line text-purple-600 mr-3"></i>
+                    Dynamic Organization
+                </h3>
+                <div class="grid md:grid-cols-1 gap-6">
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">4D Nucleome Critical Review</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Temporal dynamics of three-dimensional nuclear organization</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Time-resolved nuclear architecture, dynamic reorganization</p>
+                        <a href="nuclear_biology_reviews/4d_nucleome_critical_review.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Analysis -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-microscope text-indigo-600 mr-3"></i>
+                    Advanced Analysis
+                </h3>
+                <div class="grid md:grid-cols-1 gap-6">
+                    <div class="research-card bg-white rounded-lg shadow-md p-6 border-l-4 border-indigo-500">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Nuclear Microrheology Detailed Review</h4>
+                        <p class="text-gray-600 mb-4"><strong>Focus:</strong> Microrheological analysis of nuclear interior</p>
+                        <p class="text-gray-600 mb-4"><strong>Key Topics:</strong> Rheological measurements, mechanical characterization, force microscopy</p>
+                        <a href="nuclear_biology_reviews/nuclear_microrheology_detailed_review.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            Read Review <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Themes -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 heading-font">Research Themes</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Physical Properties -->
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                        <i class="fas fa-cog text-blue-600 mr-3"></i>
+                        Physical Properties
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-blue-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Mechanical Stiffness</p>
+                                <p class="text-gray-600 text-sm">Nuclear elastic modulus and deformation resistance</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-blue-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Viscosity</p>
+                                <p class="text-gray-600 text-sm">Flow properties and resistance to deformation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-blue-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Permeability</p>
+                                <p class="text-gray-600 text-sm">Molecular diffusion and transport through nuclear matrix</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-blue-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Surface Tension</p>
+                                <p class="text-gray-600 text-sm">Nuclear envelope tension and membrane properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Behavior -->
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-900 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-green-600 mr-3"></i>
+                        Dynamic Behavior
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-green-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Chromatin Mobility</p>
+                                <p class="text-gray-600 text-sm">Movement and reorganization of chromatin domains</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-green-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Protein Diffusion</p>
+                                <p class="text-gray-600 text-sm">Molecular mobility within nuclear compartments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-green-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Phase Transitions</p>
+                                <p class="text-gray-600 text-sm">Liquid-solid transitions in nuclear organization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-green-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Temporal Dynamics</p>
+                                <p class="text-gray-600 text-sm">Time-dependent changes in nuclear architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Force Transmission -->
+                <div class="bg-purple-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-purple-900 mb-4 flex items-center">
+                        <i class="fas fa-arrows-alt text-purple-600 mr-3"></i>
+                        Force Transmission
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-purple-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Mechanotransduction</p>
+                                <p class="text-gray-600 text-sm">Conversion of mechanical forces to biochemical signals</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-purple-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Nuclear Deformation</p>
+                                <p class="text-gray-600 text-sm">Response to external and internal forces</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-purple-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Stress Responses</p>
+                                <p class="text-gray-600 text-sm">Adaptation to mechanical stress</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-circle text-purple-400 text-xs mt-2"></i>
+                            <div>
+                                <p class="font-medium text-gray-900">Force Propagation</p>
+                                <p class="text-gray-600 text-sm">Transmission of forces through nuclear architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Significance -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 heading-font">Clinical Significance</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-red-900 mb-4 flex items-center">
+                        <i class="fas fa-disease text-red-600 mr-3"></i>
+                        Disease Mechanisms
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-red-500 text-sm mt-1"></i>
+                            <span><strong>Laminopathies:</strong> Mechanical dysfunction in genetic diseases</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-red-500 text-sm mt-1"></i>
+                            <span><strong>Cancer:</strong> Altered nuclear mechanics in malignancy</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-red-500 text-sm mt-1"></i>
+                            <span><strong>Aging:</strong> Age-related changes in nuclear mechanical properties</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-red-500 text-sm mt-1"></i>
+                            <span><strong>Neurodegeneration:</strong> Mechanical aspects of neurological diseases</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-green-900 mb-4 flex items-center">
+                        <i class="fas fa-pills text-green-600 mr-3"></i>
+                        Therapeutic Implications
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-green-500 text-sm mt-1"></i>
+                            <span><strong>Mechanotherapy:</strong> Targeting mechanical properties for treatment</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-green-500 text-sm mt-1"></i>
+                            <span><strong>Drug Delivery:</strong> Mechanical considerations in nuclear targeting</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-green-500 text-sm mt-1"></i>
+                            <span><strong>Biomarkers:</strong> Mechanical properties as disease indicators</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-green-500 text-sm mt-1"></i>
+                            <span><strong>Tissue Engineering:</strong> Nuclear mechanics in regenerative medicine</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                        <i class="fas fa-stethoscope text-blue-600 mr-3"></i>
+                        Diagnostic Applications
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-blue-500 text-sm mt-1"></i>
+                            <span><strong>Mechanical Biomarkers:</strong> Physical properties for disease detection</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-blue-500 text-sm mt-1"></i>
+                            <span><strong>Force Spectroscopy:</strong> Quantitative mechanical analysis</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-blue-500 text-sm mt-1"></i>
+                            <span><strong>Stiffness Mapping:</strong> Spatial analysis of mechanical properties</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-chevron-right text-blue-500 text-sm mt-1"></i>
+                            <span><strong>Rheological Profiling:</strong> Comprehensive mechanical characterization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Categories -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 heading-font">Related Categories</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/categories/nuclear-envelope-lamins" class="research-card block bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200 hover:border-blue-400">
+                    <i class="fas fa-layer-group text-blue-600 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Nuclear Envelope & Lamins</h3>
+                    <p class="text-blue-700">Structural basis of nuclear mechanics</p>
+                </a>
+
+                <a href="/categories/chromatin-architecture" class="research-card block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200 hover:border-green-400">
+                    <i class="fas fa-dna text-green-600 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold text-green-900 mb-3">Chromatin Architecture & Dynamics</h3>
+                    <p class="text-green-700">Physical organization of chromatin</p>
+                </a>
+
+                <a href="/categories/nuclear-transport" class="research-card block bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200 hover:border-purple-400">
+                    <i class="fas fa-exchange-alt text-purple-600 text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold text-purple-900 mb-3">Nuclear Transport & Dynamics</h3>
+                    <p class="text-purple-700">Mechanical aspects of nuclear transport</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Highlights -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 heading-font">Research Highlights</h2>
+                <div class="w-24 h-1 bg-blue-400 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-cell text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Single-cell Mechanics</h3>
+                    <p class="text-blue-100">Heterogeneity in nuclear mechanical properties</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-atom text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Mechanosensitive Processes</h3>
+                    <p class="text-blue-100">Force-dependent nuclear functions</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-project-diagram text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Multi-scale Modeling</h3>
+                    <p class="text-blue-100">Integration of molecular and cellular mechanics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 heading-font">CellNucleus.com</h3>
+                    <p class="text-gray-300 mb-4">
+                        Comprehensive resource for nuclear biology research featuring 71 detailed reviews across multiple research categories.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/" class="hover:text-white">Home</a></li>
+                        <li><a href="/reviews" class="hover:text-white">All Reviews</a></li>
+                        <li><a href="/categories" class="hover:text-white">Categories</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/categories/chromatin" class="hover:text-white">Chromatin Architecture</a></li>
+                        <li><a href="/categories/nuclear-bodies" class="hover:text-white">Nuclear Bodies</a></li>
+                        <li><a href="/categories/dna-repair" class="hover:text-white">DNA Repair</a></li>
+                        <li><a href="/categories/epigenetics" class="hover:text-white">Epigenetics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CellNucleus.com. All rights reserved.</p>
+                <p class="mt-2 text-sm">Scientific images courtesy of Nature Publishing Group, Springer Nature, and other academic publishers. Used under fair use for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDv7MP14HLAI6lmUdc3MhvM8iZcZEcnrn%2BT7fbSoFT%2BQYWk%2B9E%2F7kGGY4dbJviHvwgITU7JgDBIF%2FBrON%2FoKn79WKbCPdVYXlStK9LX4TR9UXBWFryje3ZLUfHMelCJleZJ%2Fhsvhwzq%2B%2FVeEOxT5tLiJ7PGToJWNtkrb8l%2FParbQj2MOASvaW4RvwOXHxuMkpHjLzk9DRABIXELGKHzsTPRIB7JZNsO8wAo5Z86nle%2BnBrQPWb0AfoZY%2B5rE2ZrTKMAHHIlptmOvoPx5gXuetytqoAXIZQI7nW3gliO%2Bww06gPpYCdB42QptKIEcoWCGLGd0O6FGyXp86Y2uQVSpLj4vblmOcTEJ5Zh3mJCSGjPTXZJ4asxmedKJuqII4HirL0ofyIjQtZdAd2ghckGJ0oz8bv1ztDxWnqquh6SpLFQwQg8cLwtNIaNehtitZT49OuvWCo4%2FGP4sPli8KUWAk27cy4GuMA%2BbKyTzvtnkLi%2BNVfzwjwqDSmOb5atx1floM1G1gIBnxmqLzSnvnRLaTyX5jDw1iXyGXZdoLqRBbe3BY";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDv7MP14HLAI6lmUdc3MhvM8iZcZEcnrn+T7fbSoFT+QYWk+9E/7kGGY4dbJviHvwgITU7JgDBIF/BrON/oKn79WKbCPdVYXlStK9LX4TR9UXBWFryje3ZLUfHMelCJleZJ/hsvhwzq+/VeEOxT5tLiJ7PGToJWNtkrb8l/ParbQj2MOASvaW4RvwOXHxuMkpHjLzk9DRABIXELGKHzsTPRIB7JZNsO8wAo5Z86nle+nBrQPWb0AfoZY+5rE2ZrTKMAHHIlptmOvoPx5gXuetytqoAXIZQI7nW3gliO+ww06gPpYCdB42QptKIEcoWCGLGd0O6FGyXp86Y2uQVSpLj4vblmOcTEJ5Zh3mJCSGjPTXZJ4asxmedKJuqII4HirL0ofyIjQtZdAd2ghckGJ0oz8bv1ztDxWnqquh6SpLFQwQg8cLwtNIaNehtitZT49OuvWCo4/GP4sPli8KUWAk27cy4GuMA+bKyTzvtnkLi+NVfzwjwqDSmOb5atx1floM1G1gIBnxmqLzSnvnRLaTyX5jDw1iXyGXZdoLqRBbe3BY";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
