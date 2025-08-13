@@ -1,0 +1,84 @@
+# Nuclear Biology Reviews - Jekyll Configuration for GitHub Pages
+
+title: Nuclear Biology Reviews
+description: Comprehensive collection of 70 nuclear biology research reviews covering cellular structures, molecular mechanisms, and biological processes.
+baseurl: "/reviews" # Change this to your repository name
+url: "https://nuclear-biology.github.io" # Change this to your GitHub username
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+lang: en_US
+author: Nuclear Biology Research Team
+twitter:
+  username: nuclear_biology
+  card: summary_large_image
+
+social:
+  name: Nuclear Biology Reviews
+  links:
+    - https://github.com/nuclear-biology/reviews
+
+# Exclude files from processing
+exclude:
+  - node_modules/
+  - package*.json
+  - .gitignore
+  - README.md
+  - LICENSE
+  - .github/
+  - docs/deployment-guide.md
+  - docs/contributing.md
+
+# Include files
+include:
+  - _pages
+  - assets/
+
+# Collections (if needed for future expansion)
+collections:
+  reviews:
+    output: true
+    permalink: /:collection/:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "reviews"
+      type: "pages"  
+    values:
+      layout: "review"
+
+# Site navigation
+nav_links:
+  - name: Home
+    link: /
+  - name: Reviews  
+    link: /#reviews
+  - name: Search
+    link: /#search
+  - name: About
+    link: /#about
+  - name: GitHub
+    link: https://github.com/nuclear-biology/reviews
+
+# Google Analytics (uncomment and add your tracking ID)
+# google_analytics: G-XXXXXXXXXX
+
+# Disqus comments (uncomment and add your shortname)
+# disqus:
+#   shortname: nuclear-biology-reviews

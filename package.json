@@ -1,0 +1,64 @@
+{
+  "name": "nuclear-biology-reviews",
+  "version": "1.0.0",
+  "description": "Comprehensive collection of 70 nuclear biology research reviews with professional web interface",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build step needed'",
+    "test": "echo 'No tests specified'",
+    "validate": "html5validator --root . --match '*.html'",
+    "deploy-gh-pages": "gh-pages -d .",
+    "deploy-netlify": "netlify deploy --dir=. --prod",
+    "lint-html": "htmlhint '*.html' 'reviews/*.html'",
+    "lint-css": "stylelint 'assets/css/*.css'",
+    "lint-js": "eslint 'assets/js/*.js'",
+    "optimize-images": "imageoptim assets/images/",
+    "check-links": "broken-link-checker http://localhost:8000",
+    "lighthouse": "lighthouse http://localhost:8000 --output=json --output-path=./lighthouse-report.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuclear-biology/reviews.git"
+  },
+  "keywords": [
+    "nuclear-biology",
+    "cell-biology",
+    "molecular-biology",
+    "research",
+    "reviews",
+    "academic",
+    "education",
+    "science",
+    "biology",
+    "cellular-structures"
+  ],
+  "author": "Nuclear Biology Research Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuclear-biology/reviews/issues"
+  },
+  "homepage": "https://nuclear-biology.github.io/reviews",
+  "devDependencies": {
+    "html5validator": "^0.4.2",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "eslint": "^8.48.0",
+    "broken-link-checker": "^0.7.8",
+    "lighthouse": "^10.4.0",
+    "gh-pages": "^6.0.0",
+    "netlify-cli": "^17.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

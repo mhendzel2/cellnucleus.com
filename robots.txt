@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+
+Sitemap: https://nuclear-biology.github.io/reviews/sitemap.xml

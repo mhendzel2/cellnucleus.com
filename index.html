@@ -3,350 +3,1106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CellNucleus.com - Comprehensive Nuclear Biology Resource</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .section-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .section-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        .category-badge { background: linear-gradient(90deg, #4f46e5, #7c3aed); }
-    </style>
+    <title>Nuclear Biology Reviews - Comprehensive Research Database</title>
+    <meta name="description" content="Comprehensive collection of 70 nuclear biology research reviews covering cellular structures, molecular mechanisms, and biological processes.">
+    <meta name="keywords" content="nuclear biology, cell biology, molecular biology, research reviews, cellular structures">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-6">
-                <div class="flex items-center">
-                    <i class="fas fa-dna text-indigo-600 text-3xl mr-3"></i>
-                    <h1 class="text-3xl font-bold text-gray-900">CellNucleus.com</h1>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Nuclear Biology Reviews</h1>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#overview" class="text-gray-700 hover:text-indigo-600 font-medium">Overview</a>
-                    <a href="#reviews" class="text-gray-700 hover:text-indigo-600 font-medium">Reviews</a>
-                    <a href="#microscopy" class="text-gray-700 hover:text-indigo-600 font-medium">Microscopy</a>
-                    <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
-                </nav>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#search" class="nav-link">Search</a>
+                    <a href="https://github.com/nuclear-biology/reviews" class="nav-link">GitHub</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-5xl font-bold mb-6">The Architecture of Life's Control Center</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Explore the fascinating world of the cell nucleus through comprehensive reviews, cutting-edge microscopy, and detailed molecular mechanisms.</p>
-            <div class="flex justify-center">
-                <img src="http://www.cellnucleus.com/Images/3Dseries.jpg" alt="3D Nuclear Architecture" class="rounded-lg shadow-2xl max-w-md">
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Nuclear Biology Research Reviews</h1>
+                <p class="hero-subtitle">A comprehensive collection of 70 research reviews exploring the fascinating world of nuclear biology, cellular structures, and molecular mechanisms.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">70</span>
+                        <span class="stat-label">Research Reviews</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Multiple</span>
+                        <span class="stat-label">Research Areas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Open</span>
+                        <span class="stat-label">Access</span>
+                    </div>
+                </div>
+                <a href="#reviews" class="cta-button">Explore Reviews</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Original Research & Educational Excellence</h3>
-                    <p class="text-lg text-gray-600 mb-6">This site contains original images and movies of the cell nucleus and the genome. Unless otherwise specified, this content was provided by the Michael Hendzel Laboratory. Dr. Michael Hendzel is an associate professor in the Department of Oncology at the University of Alberta.</p>
-                    <p class="text-lg text-gray-600 mb-6">Now enhanced with 25 comprehensive nuclear biology reviews covering all aspects of nuclear organization, from molecular mechanisms to clinical applications.</p>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-indigo-100 p-3 rounded-full">
-                            <i class="fas fa-microscope text-indigo-600 text-xl"></i>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About This Collection</h2>
+                <p>This repository contains a comprehensive collection of nuclear biology research reviews, covering topics from basic cellular structures to advanced molecular mechanisms. Each review provides in-depth analysis and current research findings in the field of nuclear biology.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <h3>🔬 Research-Based</h3>
+                        <p>All reviews are based on current scientific research and peer-reviewed literature.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🏛️ Academic Quality</h3>
+                        <p>Content meets academic standards suitable for researchers and students.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🌐 Open Access</h3>
+                        <p>Freely available for educational and research purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="search" class="search-section">
+            <div class="container">
+                <h2>Search Reviews</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search reviews by title or topic..." class="search-input">
+                    <button onclick="searchReviews()" class="search-button">Search</button>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>All Reviews (70)</h2>
+                <div class="reviews-grid" id="reviewsGrid">
+                    <div class="review-card" data-title="4d genome organization comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/4d-genome-organization-comprehensive-review.html">4D Genome Organization Comprehensive Review</a></h3>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Advanced Microscopy</h4>
-                            <p class="text-gray-600">Transmission electron microscopy and fluorescence imaging</p>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering 4d genome organization and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/4d-genome-organization-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="4d nucleome critical review">
+                        <div class="review-header">
+                            <h3><a href="reviews/4d-nucleome-critical-review.html">4D Nucleome Critical Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering 4d nucleome critical and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/4d-nucleome-critical-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="base excision repair critical review">
+                        <div class="review-header">
+                            <h3><a href="reviews/base-excision-repair-critical-review.html">Base Excision Repair Critical Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering base excision repair and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/base-excision-repair-critical-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="cajal bodies comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/cajal-bodies-comprehensive-review.html">Cajal Bodies Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering cajal bodies comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/cajal-bodies-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatin architecture dynamics review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatin-architecture-dynamics-review.html">Chromatin Architecture Dynamics Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatin architecture dynamics and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatin-architecture-dynamics-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatin biophysics function review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatin-biophysics-function-review.html">Chromatin Biophysics Function Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatin biophysics function and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatin-biophysics-function-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatin condensates critical review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatin-condensates-critical-review.html">Chromatin Condensates Critical Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatin condensates critical and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatin-condensates-critical-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatin modeling critical review enhanced">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatin-modeling-critical-review-enhanced.html">Chromatin Modeling Critical Review Enhanced</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatin modeling critical and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatin-modeling-critical-review-enhanced.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatin remodeling complexes comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatin-remodeling-complexes-comprehensive-review.html">Chromatin Remodeling Complexes Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatin remodeling complexes and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatin-remodeling-complexes-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromatinopathies mechanisms therapies review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromatinopathies-mechanisms-therapies-review.html">Chromatinopathies Mechanisms Therapies Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromatinopathies mechanisms therapies and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromatinopathies-mechanisms-therapies-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="chromosome condensation mechanisms review">
+                        <div class="review-header">
+                            <h3><a href="reviews/chromosome-condensation-mechanisms-review.html">Chromosome Condensation Mechanisms Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering chromosome condensation mechanisms and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/chromosome-condensation-mechanisms-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="comparative nuclear organization complete">
+                        <div class="review-header">
+                            <h3><a href="reviews/comparative-nuclear-organization-complete.html">Comparative Nuclear Organization Complete</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering comparative nuclear organization and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/comparative-nuclear-organization-complete.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="comparative nuclear organization comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/comparative-nuclear-organization-comprehensive-review.html">Comparative Nuclear Organization Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering comparative nuclear organization and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/comparative-nuclear-organization-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="comparative nuclear organization species updated">
+                        <div class="review-header">
+                            <h3><a href="reviews/comparative-nuclear-organization-species-updated.html">Comparative Nuclear Organization Species Updated</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering comparative nuclear organization and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/comparative-nuclear-organization-species-updated.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="computational cell nucleus modeling enhanced review">
+                        <div class="review-header">
+                            <h3><a href="reviews/computational-cell-nucleus-modeling-enhanced-review.html">Computational Cell Nucleus Modeling Enhanced Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering computational cell nucleus and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/computational-cell-nucleus-modeling-enhanced-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="dna repair pathway crosstalk complete">
+                        <div class="review-header">
+                            <h3><a href="reviews/dna-repair-pathway-crosstalk-complete.html">Dna Repair Pathway Crosstalk Complete</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering dna repair pathway and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/dna-repair-pathway-crosstalk-complete.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="dna repair pathway crosstalk review updated">
+                        <div class="review-header">
+                            <h3><a href="reviews/dna-repair-pathway-crosstalk-review-updated.html">Dna Repair Pathway Crosstalk Review Updated</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering dna repair pathway and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/dna-repair-pathway-crosstalk-review-updated.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="dna replication site dynamics review">
+                        <div class="review-header">
+                            <h3><a href="reviews/dna-replication-site-dynamics-review.html">Dna Replication Site Dynamics Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering dna replication site and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/dna-replication-site-dynamics-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="dsb repair foci comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/dsb-repair-foci-comprehensive-review.html">Dsb Repair Foci Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering dsb repair foci and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/dsb-repair-foci-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="epigenetic inheritance complete">
+                        <div class="review-header">
+                            <h3><a href="reviews/epigenetic-inheritance-complete.html">Epigenetic Inheritance Complete</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on epigenetic inheritance complete in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/epigenetic-inheritance-complete.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="epigenetic inheritance comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/epigenetic-inheritance-comprehensive-review.html">Epigenetic Inheritance Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering epigenetic inheritance comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/epigenetic-inheritance-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="epigenetic inheritance mechanisms review updated">
+                        <div class="review-header">
+                            <h3><a href="reviews/epigenetic-inheritance-mechanisms-review-updated.html">Epigenetic Inheritance Mechanisms Review Updated</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering epigenetic inheritance mechanisms and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/epigenetic-inheritance-mechanisms-review-updated.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="esi nuclear analysis microscopy review">
+                        <div class="review-header">
+                            <h3><a href="reviews/esi-nuclear-analysis-microscopy-review.html">Esi Nuclear Analysis Microscopy Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering esi nuclear analysis and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/esi-nuclear-analysis-microscopy-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="euchromatin comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/euchromatin-comprehensive-review.html">Euchromatin Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on euchromatin comprehensive review in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/euchromatin-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="eukaryotic gene expression orchestration review">
+                        <div class="review-header">
+                            <h3><a href="reviews/eukaryotic-gene-expression-orchestration-review.html">Eukaryotic Gene Expression Orchestration Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering eukaryotic gene expression and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/eukaryotic-gene-expression-orchestration-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="h1 pcg h3k27me3 regulation review">
+                        <div class="review-header">
+                            <h3><a href="reviews/h1-pcg-h3k27me3-regulation-review.html">H1 Pcg H3K27Me3 Regulation Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering h1 pcg h3k27me3 and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/h1-pcg-h3k27me3-regulation-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="heterochromatin comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/heterochromatin-comprehensive-review.html">Heterochromatin Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on heterochromatin comprehensive review in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/heterochromatin-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="heterochromatin comprehensive review timeline">
+                        <div class="review-header">
+                            <h3><a href="reviews/heterochromatin-comprehensive-review-timeline.html">Heterochromatin Comprehensive Review Timeline</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering heterochromatin comprehensive review and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/heterochromatin-comprehensive-review-timeline.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="histone h1 family comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/histone-h1-family-comprehensive-review.html">Histone H1 Family Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering histone h1 family and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/histone-h1-family-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="histone h1 family enhanced comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/histone-h1-family-enhanced-comprehensive-review.html">Histone H1 Family Enhanced Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering histone h1 family and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/histone-h1-family-enhanced-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="histone ptms comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/histone-ptms-comprehensive-review.html">Histone Ptms Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering histone ptms comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/histone-ptms-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="histone ptms neurodegeneration review">
+                        <div class="review-header">
+                            <h3><a href="reviews/histone-ptms-neurodegeneration-review.html">Histone Ptms Neurodegeneration Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering histone ptms neurodegeneration and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/histone-ptms-neurodegeneration-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="intranuclear mrna transport review">
+                        <div class="review-header">
+                            <h3><a href="reviews/intranuclear-mrna-transport-review.html">Intranuclear Mrna Transport Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering intranuclear mrna transport and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/intranuclear-mrna-transport-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="intranuclear rna transport imaging review">
+                        <div class="review-header">
+                            <h3><a href="reviews/intranuclear-rna-transport-imaging-review.html">Intranuclear Rna Transport Imaging Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering intranuclear rna transport and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/intranuclear-rna-transport-imaging-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="lamin a mutants aging research review">
+                        <div class="review-header">
+                            <h3><a href="reviews/lamin-a-mutants-aging-research-review.html">Lamin A Mutants Aging Research Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering lamin a mutants and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/lamin-a-mutants-aging-research-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="laminopathies nuclear envelope diseases review">
+                        <div class="review-header">
+                            <h3><a href="reviews/laminopathies-nuclear-envelope-diseases-review.html">Laminopathies Nuclear Envelope Diseases Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering laminopathies nuclear envelope and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/laminopathies-nuclear-envelope-diseases-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="live cell transcription imaging review">
+                        <div class="review-header">
+                            <h3><a href="reviews/live-cell-transcription-imaging-review.html">Live Cell Transcription Imaging Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering live cell transcription and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/live-cell-transcription-imaging-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear biology controversies review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-biology-controversies-review.html">Nuclear Biology Controversies Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear biology controversies and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-biology-controversies-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear biophysical properties review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-biophysical-properties-review.html">Nuclear Biophysical Properties Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear biophysical properties and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-biophysical-properties-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear bodies comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-bodies-comprehensive-review.html">Nuclear Bodies Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear bodies comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-bodies-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear bodies standardized">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-bodies-standardized.html">Nuclear Bodies Standardized</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on nuclear bodies standardized in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-bodies-standardized.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear body ultrastructure review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-body-ultrastructure-review.html">Nuclear Body Ultrastructure Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear body ultrastructure and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-body-ultrastructure-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear compartmentalization critical evaluation corrected">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-compartmentalization-critical-evaluation-corrected.html">Nuclear Compartmentalization Critical Evaluation Corrected</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear compartmentalization critical and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-compartmentalization-critical-evaluation-corrected.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear condensates comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-condensates-comprehensive-review.html">Nuclear Condensates Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear condensates comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-condensates-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear condensates disease pathologies review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-condensates-disease-pathologies-review.html">Nuclear Condensates Disease Pathologies Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear condensates disease and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-condensates-disease-pathologies-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear envelope comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-envelope-comprehensive-review.html">Nuclear Envelope Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear envelope comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-envelope-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear lamina comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-lamina-comprehensive-review.html">Nuclear Lamina Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear lamina comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-lamina-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear macromolecular crowding review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-macromolecular-crowding-review.html">Nuclear Macromolecular Crowding Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear macromolecular crowding and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-macromolecular-crowding-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear mechanics disease review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-mechanics-disease-review.html">Nuclear Mechanics Disease Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear mechanics disease and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-mechanics-disease-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear microrheology detailed review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-microrheology-detailed-review.html">Nuclear Microrheology Detailed Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear microrheology detailed and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-microrheology-detailed-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear microrheology enhanced graphics">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-microrheology-enhanced-graphics.html">Nuclear Microrheology Enhanced Graphics</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear microrheology enhanced and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-microrheology-enhanced-graphics.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear polymer phase separation review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-polymer-phase-separation-review.html">Nuclear Polymer Phase Separation Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear polymer phase and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-polymer-phase-separation-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear pore complex comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-pore-complex-comprehensive-review.html">Nuclear Pore Complex Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear pore complex and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-pore-complex-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear rnp structure function review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-rnp-structure-function-review.html">Nuclear Rnp Structure Function Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear rnp structure and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-rnp-structure-function-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear speckles comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-speckles-comprehensive-review.html">Nuclear Speckles Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear speckles comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-speckles-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear speckles standardized">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-speckles-standardized.html">Nuclear Speckles Standardized</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on nuclear speckles standardized in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-speckles-standardized.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear stress response review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-stress-response-review.html">Nuclear Stress Response Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear stress response and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-stress-response-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear transport compartment dynamics">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-transport-compartment-dynamics.html">Nuclear Transport Compartment Dynamics</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear transport compartment and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-transport-compartment-dynamics.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear virus host interactions review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-virus-host-interactions-review.html">Nuclear Virus Host Interactions Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear virus host and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-virus-host-interactions-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nuclear viscosity properties regulation">
+                        <div class="review-header">
+                            <h3><a href="reviews/nuclear-viscosity-properties-regulation.html">Nuclear Viscosity Properties Regulation</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering nuclear viscosity properties and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nuclear-viscosity-properties-regulation.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="nucleolus comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/nucleolus-comprehensive-review.html">Nucleolus Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on nucleolus comprehensive review in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/nucleolus-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="paraspeckles comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/paraspeckles-comprehensive-review.html">Paraspeckles Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on paraspeckles comprehensive review in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/paraspeckles-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="paraspeckles standardized">
+                        <div class="review-header">
+                            <h3><a href="reviews/paraspeckles-standardized.html">Paraspeckles Standardized</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Comprehensive research review on paraspeckles standardized in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/paraspeckles-standardized.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="parylation dynamics interactions review">
+                        <div class="review-header">
+                            <h3><a href="reviews/parylation-dynamics-interactions-review.html">Parylation Dynamics Interactions Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering parylation dynamics interactions and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/parylation-dynamics-interactions-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="phase separation nucleus review">
+                        <div class="review-header">
+                            <h3><a href="reviews/phase-separation-nucleus-review.html">Phase Separation Nucleus Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering phase separation nucleus and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/phase-separation-nucleus-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="pml nuclear bodies comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/pml-nuclear-bodies-comprehensive-review.html">Pml Nuclear Bodies Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering pml nuclear bodies and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/pml-nuclear-bodies-comprehensive-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="pol ii condensate review">
+                        <div class="review-header">
+                            <h3><a href="reviews/pol-ii-condensate-review.html">Pol Ii Condensate Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering pol ii condensate and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/pol-ii-condensate-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="replication fork cancer review">
+                        <div class="review-header">
+                            <h3><a href="reviews/replication-fork-cancer-review.html">Replication Fork Cancer Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering replication fork cancer and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/replication-fork-cancer-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="replication stress fpc review">
+                        <div class="review-header">
+                            <h3><a href="reviews/replication-stress-fpc-review.html">Replication Stress Fpc Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering replication stress fpc and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/replication-stress-fpc-review.html" class="read-more">Read Review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card" data-title="transcriptional condensates comprehensive review">
+                        <div class="review-header">
+                            <h3><a href="reviews/transcriptional-condensates-comprehensive-review.html">Transcriptional Condensates Comprehensive Review</a></h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-description">Research review covering transcriptional condensates comprehensive and related topics in nuclear biology.</p>
+                            <div class="review-meta">
+                                <span class="review-category">Nuclear Biology</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <a href="reviews/transcriptional-condensates-comprehensive-review.html" class="read-more">Read Review →</a>
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img src="http://www.cellnucleus.com/Images/cajalbodyLabelled.jpg" alt="Cajal Body Electron Micrograph" class="rounded-lg shadow-xl mx-auto">
-                    <p class="text-sm text-gray-500 mt-2">Transmission electron micrograph of a Cajal body</p>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Comprehensive Reviews Section -->
-    <section id="reviews" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">Comprehensive Nuclear Biology Reviews</h3>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">25 detailed reviews covering every aspect of nuclear organization, from molecular mechanisms to clinical applications</p>
-            </div>
-
-            <!-- Nuclear Architecture -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium mr-4">
-                        <i class="fas fa-building mr-2"></i>Nuclear Architecture
-                    </span>
-                    <h4 class="text-2xl font-bold text-gray-900">Structural Organization</h4>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nuclear Biology Reviews</h3>
+                    <p>A comprehensive research database for nuclear biology studies.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <a href="nuclear_biology_reviews/nuclear_envelope_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-circle-nodes text-indigo-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nuclear Envelope</h5>
-                        <p class="text-gray-600 text-sm">Comprehensive review of nuclear envelope structure, assembly, and regulation</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_lamina_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-layer-group text-indigo-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nuclear Lamina</h5>
-                        <p class="text-gray-600 text-sm">Detailed analysis of lamina structure and nuclear mechanics</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_pore_complex_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-exchange-alt text-indigo-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nuclear Pore Complex</h5>
-                        <p class="text-gray-600 text-sm">Molecular architecture of nuclear transport machinery</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_biophysical_properties_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-chart-line text-indigo-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Biophysical Properties</h5>
-                        <p class="text-gray-600 text-sm">Mechanical and physical properties of nuclear structures</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Chromatin Organization -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium mr-4">
-                        <i class="fas fa-dna mr-2"></i>Chromatin Organization
-                    </span>
-                    <h4 class="text-2xl font-bold text-gray-900">DNA Packaging & Structure</h4>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <a href="nuclear_biology_reviews/chromatin_architecture_dynamics_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-sitemap text-purple-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Chromatin Architecture</h5>
-                        <p class="text-gray-600 text-sm">3D organization and dynamic structure of chromatin</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/euchromatin_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-unlock text-purple-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Euchromatin</h5>
-                        <p class="text-gray-600 text-sm">Active chromatin structure and transcriptional regulation</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/heterochromatin_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-lock text-purple-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Heterochromatin</h5>
-                        <p class="text-gray-600 text-sm">Repressive chromatin and gene silencing mechanisms</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/histone_ptms_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-tags text-purple-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Histone Modifications</h5>
-                        <p class="text-gray-600 text-sm">Post-translational modifications and epigenetic regulation</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Nuclear Bodies -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium mr-4">
-                        <i class="fas fa-circle mr-2"></i>Nuclear Bodies
-                    </span>
-                    <h4 class="text-2xl font-bold text-gray-900">Specialized Compartments</h4>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="nuclear_biology_reviews/cajal_bodies_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-cog text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Cajal Bodies</h5>
-                        <p class="text-gray-600 text-sm">RNP biogenesis and snRNA processing centers</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nucleolus_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-circle-dot text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nucleolus</h5>
-                        <p class="text-gray-600 text-sm">Ribosome biogenesis and rRNA processing</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_speckles_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-sparkles text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nuclear Speckles</h5>
-                        <p class="text-gray-600 text-sm">Splicing factor storage and mRNA processing</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/paraspeckles_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-asterisk text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Paraspeckles</h5>
-                        <p class="text-gray-600 text-sm">lncRNA-protein condensates and gene regulation</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/pml_nuclear_bodies_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">PML Bodies</h5>
-                        <p class="text-gray-600 text-sm">Tumor suppression and stress response</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_condensates_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-droplet text-green-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Nuclear Condensates</h5>
-                        <p class="text-gray-600 text-sm">Phase separation and biomolecular organization</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- DNA Processes -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium mr-4">
-                        <i class="fas fa-sync mr-2"></i>DNA Processes
-                    </span>
-                    <h4 class="text-2xl font-bold text-gray-900">Genome Maintenance</h4>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <a href="nuclear_biology_reviews/dna_replication_site_dynamics_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-copy text-red-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Replication Sites</h5>
-                        <p class="text-gray-600 text-sm">DNA replication factories and genome duplication</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/dsb_repair_foci_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-wrench text-red-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">DSB Repair Foci</h5>
-                        <p class="text-gray-600 text-sm">DNA damage response and repair mechanisms</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/transcriptional_condensates_comprehensive_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-play text-red-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Transcription Sites</h5>
-                        <p class="text-gray-600 text-sm">Transcriptional condensates and gene expression</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/nuclear_stress_response_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-exclamation-triangle text-red-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Stress Response</h5>
-                        <p class="text-gray-600 text-sm">Nuclear stress pathways and cellular responses</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- RNA Processing -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <span class="category-badge text-white px-4 py-2 rounded-full text-sm font-medium mr-4">
-                        <i class="fas fa-code mr-2"></i>RNA Processing
-                    </span>
-                    <h4 class="text-2xl font-bold text-gray-900">RNA Metabolism</h4>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="nuclear_biology_reviews/nuclear_rnp_structure_function_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-project-diagram text-blue-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">RNP Complexes</h5>
-                        <p class="text-gray-600 text-sm">Ribonucleoprotein structure and function</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/intranuclear_mrna_transport_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-route text-blue-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">mRNA Transport</h5>
-                        <p class="text-gray-600 text-sm">Intranuclear mRNA trafficking and export</p>
-                    </a>
-                    <a href="nuclear_biology_reviews/live_cell_transcription_imaging_review.html" class="section-card bg-white p-6 rounded-lg shadow-md">
-                        <i class="fas fa-video text-blue-600 text-2xl mb-4"></i>
-                        <h5 class="font-semibold text-gray-900 mb-2">Live Cell Imaging</h5>
-                        <p class="text-gray-600 text-sm">Real-time transcription visualization techniques</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dynamic Visualization Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Dynamic Nuclear Processes</h3>
-                <p class="text-lg text-gray-600">Observe live nuclear dynamics and molecular movements</p>
-            </div>
-            <div class="flex justify-center">
-                <div class="bg-gray-100 p-8 rounded-lg">
-                    <img src="http://www.cellnucleus.com/Images/Rhutp2.gif" alt="Dynamic Nuclear Processes" class="rounded-lg shadow-lg">
-                    <p class="text-center text-gray-600 mt-4">Time-lapse imaging of nuclear dynamics in living cells</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Navigation Guide -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">How to Navigate This Resource</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-map text-indigo-600 text-2xl"></i>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Explore by Category</h4>
-                    <p class="text-gray-600">Browse reviews organized by nuclear structure or cellular process</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-microscope text-purple-600 text-2xl"></i>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">View Microscopy</h4>
-                    <p class="text-gray-600">Access original TEM and fluorescence microscopy images</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Learn & Research</h4>
-                    <p class="text-gray-600">Comprehensive educational content for students and researchers</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">About CellNucleus.com</h4>
-                    <p class="text-gray-300">A comprehensive resource for nuclear biology education and research, featuring original content from the Michael Hendzel Laboratory at the University of Alberta.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#reviews" class="hover:text-white">Review Collection</a></li>
-                        <li><a href="TEM/TEM_Main.html" class="hover:text-white">Electron Microscopy</a></li>
-                        <li><a href="LIVECELLDATABASE.html" class="hover:text-white">Live Cell Database</a></li>
-                        <li><a href="StructureDatabase.html" class="hover:text-white">Structure Database</a></li>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#reviews">All Reviews</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="docs/file-mapping.json">File Mapping</a></li>
+                        <li><a href="https://github.com/nuclear-biology/reviews">GitHub Repository</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact & Attribution</h4>
-                    <p class="text-gray-300 mb-2">Dr. Michael J. Hendzel, Ph.D.</p>
-                    <p class="text-gray-300 mb-2">Department of Oncology</p>
-                    <p class="text-gray-300">University of Alberta</p>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs/deployment-guide.md">Deployment Guide</a></li>
+                        <li><a href="docs/contributing.md">Contributing</a></li>
+                        <li><a href="LICENSE">License</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">Copyright 2007-2025 Michael J. Hendzel, Ph.D., Department of Oncology, University of Alberta</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nuclear Biology Reviews. Released under MIT License for educational and research purposes.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDuQCVBkHHSDb6XT8PUtq4MtHK6mHaRb3%2BtzmRqFR2ytLn0X7IPrXIMCWMeKj3oX%2BUw1nG0x6RCJdXZkkovJs03owmaWNAJmo1oHF57%2FvVmUk8PrWsGk%2BsAEn7767k%2BI2Jl4eD3Gs%2FL2%2BY%2BN0nlSzfosGHmJgX93KH%2BQfqOW8EnPSblmvvgsVhyFFQf7DNqvsdK3VGIXyGzMm5dI%2B6SHyWjWfnMl6t8ksiJWjOLFBCb1a5WRaYr%2FakYq7Nbh2IpRxu4gQuYfd%2FiBhFWiZo%2BI2Xx7J7iJ2e0KPZUMmYJKHRMIZdElyAyV1x0PZs8LKHZgUpy9DjK28l%2FdXBU4n%2B3ugNGcq%2FKNK8lv3eegKfeQGqkGzIn6KxUI7%2FyjVQtwdfA60%2Bdqibfwi3e6FUyfXiA%2FGANrHGfMChvgzjJjXoDEocqyQ0ZOfmJmSlZdVjCnl2Jb776RTi7jeOjtZDC%2FDwssljjiATA%2BzKIRkemn%2B%2BLZ5yuY9E8crcja16c0MbbFXM7zaL8zfdbibfv%2BYxFLd96D5sQA%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDuQCVBkHHSDb6XT8PUtq4MtHK6mHaRb3+tzmRqFR2ytLn0X7IPrXIMCWMeKj3oX+Uw1nG0x6RCJdXZkkovJs03owmaWNAJmo1oHF57/vVmUk8PrWsGk+sAEn7767k+I2Jl4eD3Gs/L2+Y+N0nlSzfosGHmJgX93KH+QfqOW8EnPSblmvvgsVhyFFQf7DNqvsdK3VGIXyGzMm5dI+6SHyWjWfnMl6t8ksiJWjOLFBCb1a5WRaYr/akYq7Nbh2IpRxu4gQuYfd/iBhFWiZo+I2Xx7J7iJ2e0KPZUMmYJKHRMIZdElyAyV1x0PZs8LKHZgUpy9DjK28l/dXBU4n+3ugNGcq/KNK8lv3eegKfeQGqkGzIn6KxUI7/yjVQtwdfA60+dqibfwi3e6FUyfXiA/GANrHGfMChvgzjJjXoDEocqyQ0ZOfmJmSlZdVjCnl2Jb776RTi7jeOjtZDC/DwssljjiATA+zKIRkemn++LZ5yuY9E8crcja16c0MbbFXM7zaL8zfdbibfv+YxFLd96D5sQA=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
