@@ -1,644 +1,1162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intranuclear Transport and Size-Dependent Diffusion - Cell Nucleus Research</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Intranuclear Transport and Size-Dependent Diffusion - Cell Nucleus Research
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <style>
+   .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .nuclear-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 2px, transparent 2px), radial-gradient(circle at 40% 20%, rgba(255,255,255,0.1) 1px, transparent 1px); }
         .equation { font-family: 'Times New Roman', serif; font-style: italic; }
         .highlight-box { border-left: 4px solid #3b82f6; background-color: #eff6ff; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    
-    <!-- Header -->
-    <header class="gradient-bg nuclear-pattern text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold mb-4">
-                    <i class="fas fa-atom mr-3"></i>
-                    Intranuclear Transport and Size-Dependent Diffusion
-                </h1>
-                <p class="text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-                    Comprehensive Analysis of Molecular Transport Mechanisms within the Eukaryotic Nucleus
-                </p>
-                <div class="mt-6 flex justify-center space-x-8 text-sm">
-                    <span><i class="fas fa-microscope mr-2"></i>Advanced Microscopy</span>
-                    <span><i class="fas fa-chart-line mr-2"></i>Quantitative Analysis</span>
-                    <span><i class="fas fa-dna mr-2"></i>Nuclear Biophysics</span>
-                </div>
-            </div>
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Abstract -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">
+      <i class="fas fa-file-alt mr-3">
+      </i>
+      Abstract
+     </h2>
+     <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
+      <p class="text-lg leading-relaxed text-gray-700">
+       The eukaryotic nucleus is far more than a simple repository for the genome; it is a dynamic, highly organized, and physically constrained reaction vessel. The transport of macromolecules within this environment—a process critical for gene regulation, DNA repair, and ribosome biogenesis—is governed by a complex interplay of biophysical principles. This review synthesizes our current understanding of intranuclear transport, focusing on the size-dependent diffusion properties of molecules ranging from soluble proteins to large ribonucleoprotein (RNP) complexes and the chromatin polymer itself.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Key Concepts -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-brain mr-3">
+     </i>
+     Fundamental Biophysical Principles
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="text-center">
+       <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-compress-arrows-alt text-red-600 text-2xl">
+        </i>
+       </div>
+       <h3 class="text-xl font-semibold mb-3 text-red-700">
+        Macromolecular Crowding
+       </h3>
+       <p class="text-gray-600">
+        High concentration of macromolecules creates volume exclusion effects and depletion forces
+       </p>
+      </div>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="text-center">
+       <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-wave-square text-green-600 text-2xl">
+        </i>
+       </div>
+       <h3 class="text-xl font-semibold mb-3 text-green-700">
+        Viscoelasticity
+       </h3>
+       <p class="text-gray-600">
+        Nuclear material exhibits both liquid-like and solid-like properties affecting molecular motion
+       </p>
+      </div>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="text-center">
+       <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-project-diagram text-purple-600 text-2xl">
+        </i>
+       </div>
+       <h3 class="text-xl font-semibold mb-3 text-purple-700">
+        Chromatin Meshwork
+       </h3>
+       <p class="text-gray-600">
+        Fractal obstacle course that constrains molecular diffusion through steric hindrance
+       </p>
+      </div>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="text-center">
+       <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-random text-orange-600 text-2xl">
+        </i>
+       </div>
+       <h3 class="text-xl font-semibold mb-3 text-orange-700">
+        Anomalous Diffusion
+       </h3>
+       <p class="text-gray-600">
+        Non-Brownian motion characterized by subdiffusive behavior (MSD ∝ t
+        <sup>
+         α
+        </sup>
+        , α &lt; 1)
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Quantitative Data Section -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-chart-bar mr-3">
+     </i>
+     Quantitative Measurements of Nuclear Transport
+    </h2>
+    <!-- Size-Dependent Diffusion Chart -->
+    <div class="max-w-5xl mx-auto mb-12">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">
+       Size-Dependent Diffusion of Inert Probes
+      </h3>
+      <div style="height: 500px;">
+       <canvas id="sizeChart">
+       </canvas>
+      </div>
+      <p class="text-sm text-gray-600 mt-4 text-center">
+       Diffusion coefficients decrease dramatically with increasing molecular size, demonstrating strong sieving effects in the nuclear environment.
+      </p>
+     </div>
+    </div>
+    <!-- Comparison of Nuclear vs Cytoplasmic Transport -->
+    <div class="max-w-5xl mx-auto mb-12">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">
+       Nuclear vs. Aqueous Solution Diffusion
+      </h3>
+      <div style="height: 400px;">
+       <canvas id="comparisonChart">
+       </canvas>
+      </div>
+      <p class="text-sm text-gray-600 mt-4 text-center">
+       Nuclear diffusion is consistently 3-4 times slower than in aqueous solution, with larger molecules showing even greater reduction.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Research Methodologies -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-microscope mr-3">
+     </i>
+     Advanced Microscopy Techniques
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+     <!-- FRAP -->
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="text-center mb-6">
+       <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-bolt text-blue-600 text-3xl">
+        </i>
+       </div>
+       <h3 class="text-2xl font-semibold text-blue-700">
+        FRAP
+       </h3>
+       <p class="text-sm text-gray-500">
+        Fluorescence Recovery After Photobleaching
+       </p>
+      </div>
+      <div class="space-y-4">
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Principle
+        </h4>
+        <p class="text-sm text-gray-600">
+         Measures ensemble-averaged mobility by photobleaching a region and monitoring fluorescence recovery
+        </p>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Key Parameters
+        </h4>
+        <ul class="text-sm text-gray-600 space-y-1">
+         <li>
+          • Effective diffusion coefficient (D
+          <sub>
+           eff
+          </sub>
+          )
+         </li>
+         <li>
+          • Mobile fraction (f
+          <sub>
+           mob
+          </sub>
+          )
+         </li>
+         <li>
+          • Binding kinetics
+         </li>
+        </ul>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Advantages
+        </h4>
+        <p class="text-sm text-gray-600">
+         Widely accessible, global view of mobility, suitable for most fluorescent proteins
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- FCS -->
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="text-center mb-6">
+       <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-wave-square text-green-600 text-3xl">
+        </i>
+       </div>
+       <h3 class="text-2xl font-semibold text-green-700">
+        FCS
+       </h3>
+       <p class="text-sm text-gray-500">
+        Fluorescence Correlation Spectroscopy
+       </p>
+      </div>
+      <div class="space-y-4">
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Principle
+        </h4>
+        <p class="text-sm text-gray-600">
+         Single-molecule sensitivity through temporal autocorrelation analysis of fluorescence fluctuations
+        </p>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Key Parameters
+        </h4>
+        <ul class="text-sm text-gray-600 space-y-1">
+         <li>
+          • Multiple diffusing species resolution
+         </li>
+         <li>
+          • Molecular concentration
+         </li>
+         <li>
+          • Binding/unbinding kinetics
+         </li>
+        </ul>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Advantages
+        </h4>
+        <p class="text-sm text-gray-600">
+         High temporal resolution, can resolve multi-component systems, quantitative
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- SPT -->
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="text-center mb-6">
+       <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fas fa-route text-purple-600 text-3xl">
+        </i>
+       </div>
+       <h3 class="text-2xl font-semibold text-purple-700">
+        SPT
+       </h3>
+       <p class="text-sm text-gray-500">
+        Single-Particle Tracking
+       </p>
+      </div>
+      <div class="space-y-4">
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Principle
+        </h4>
+        <p class="text-sm text-gray-600">
+         Direct visualization and tracking of individual molecules over time
+        </p>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Key Parameters
+        </h4>
+        <ul class="text-sm text-gray-600 space-y-1">
+         <li>
+          • Individual trajectory analysis
+         </li>
+         <li>
+          • Motion classification
+         </li>
+         <li>
+          • Spatial heterogeneity
+         </li>
+        </ul>
+       </div>
+       <div class="highlight-box p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Advantages
+        </h4>
+        <p class="text-sm text-gray-600">
+         Spatial context, heterogeneity detection, direct observation of motion modes
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Detailed Quantitative Tables -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-table mr-3">
+     </i>
+     Comprehensive Diffusion Data
+    </h2>
+    <!-- Inert Probes Table -->
+    <div class="max-w-6xl mx-auto mb-12">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+       Diffusion of Inert and Monomeric Probes
+      </h3>
+      <div class="overflow-x-auto">
+       <table class="w-full border-collapse border border-gray-300">
+        <thead>
+         <tr class="bg-blue-50">
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Probe
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           MW (kDa)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           D (µm²/s)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Mobile Fraction (%)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Method
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Cell Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           FITC-Dextran 20
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           20
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           11.0 ± 1.8
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~100
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           HeLa
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           FITC-Dextran 40
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           40
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           10.5 ± 1.7
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~100
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           HeLa
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           FITC-Dextran 70
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           70
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           5.9 ± 0.7
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~100
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           HeLa
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           FITC-Dextran 500
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           500
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           1.7 ± 0.3
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~100
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           HeLa
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           GFP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           27
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           17 ± 5
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~100
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FCS
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           HeLa
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           nucGEMs
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~12,000
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">
+           ~0.1–0.5
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Not reported
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           S. cerevisiae
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+    <!-- Functional Proteins Table -->
+    <div class="max-w-6xl mx-auto mb-12">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+       Functional Nuclear Proteins
+      </h3>
+      <div class="overflow-x-auto">
+       <table class="w-full border-collapse border border-gray-300">
+        <thead>
+         <tr class="bg-green-50">
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Protein
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           MW (kDa)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Effective D (µm²/s)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Free D (µm²/s)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Binding Kinetics
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Method
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           Histone H1-GFP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~50
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">
+           0.01–0.02
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           21.1 ± 1.9
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Multiple binding states (ms to s)
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP, FCS
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           p53-GFP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~80
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">
+           15.4 ± 5.6
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           -
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           k
+           <sub>
+            on
+           </sub>
+           = 0.3 s⁻¹, k
+           <sub>
+            off
+           </sub>
+           = 0.4 s⁻¹
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           RPB1 (Pol II)
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~192
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">
+           ~0.3
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           -
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Confined motion, stationary
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FCS, SPT
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           Ku80–GFP
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~97
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">
+           0.35
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           -
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Long residence time
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           FRAP
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+    <!-- Large Complexes Table -->
+    <div class="max-w-6xl mx-auto">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+       Large RNP Complexes and Chromatin
+      </h3>
+      <div class="overflow-x-auto">
+       <table class="w-full border-collapse border border-gray-300">
+        <thead>
+         <tr class="bg-purple-50">
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Complex
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Size/Description
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           D (µm²/s)
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Motion Type
+          </th>
+          <th class="border border-gray-300 px-4 py-3 text-left">
+           Method
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           mRNP complex
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           &gt;1 MDa
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.033
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Free Diffusion (interchromatin)
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           mRNP complex
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           &gt;1 MDa
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.025–0.12
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Anomalous, Channeled
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT (QD-labeled)
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           60S ribosomal subunit
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           ~2.5 MDa
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.31 ± 0.15
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Anomalous
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Caged-probe tracking
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           Chromatin Locus
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           90 Mbp region
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.0005
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Constrained
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           Heterochromatin
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Dense chromatin
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.002
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Constrained
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT
+          </td>
+         </tr>
+         <tr class="hover:bg-gray-50">
+          <td class="border border-gray-300 px-4 py-3">
+           Euchromatin
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Open chromatin
+          </td>
+          <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">
+           0.001–0.013
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           Constrained, two-component
+          </td>
+          <td class="border border-gray-300 px-4 py-3">
+           SPT
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Nuclear Environments -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-map-marked-alt mr-3">
+     </i>
+     Transport in Specialized Nuclear Environments
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+     <!-- Nucleolus -->
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="flex items-center mb-6">
+       <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-circle text-red-600 text-xl">
+        </i>
+       </div>
+       <div>
+        <h3 class="text-2xl font-semibold text-red-700">
+         Nucleolus
+        </h3>
+        <p class="text-gray-600">
+         Ribosome biogenesis factory
+        </p>
+       </div>
+      </div>
+      <div class="space-y-4">
+       <div class="bg-red-50 p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Transport Properties
+        </h4>
+        <ul class="text-sm text-gray-700 space-y-1">
+         <li>
+          •
+          <strong>
+           GFP diffusion:
+          </strong>
+          8 ± 3 µm²/s (vs 17 ± 5 µm²/s in nucleoplasm)
+         </li>
+         <li>
+          •
+          <strong>
+           Surface tension:
+          </strong>
+          ~10⁻⁶ N/m (very low)
+         </li>
+         <li>
+          •
+          <strong>
+           Viscosity:
+          </strong>
+          ~10³ Pa·s (honey-like)
+         </li>
+         <li>
+          •
+          <strong>
+           Material state:
+          </strong>
+          Liquid-like with phase separation
+         </li>
+        </ul>
+       </div>
+       <div class="bg-red-50 p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Functional Impact
+        </h4>
+        <p class="text-sm text-gray-700">
+         Reduced diffusion enhances ribosomal protein assembly efficiency by increasing local concentrations and residence times.
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- Nuclear Speckles -->
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="flex items-center mb-6">
+       <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-dot-circle text-green-600 text-xl">
+        </i>
+       </div>
+       <div>
+        <h3 class="text-2xl font-semibold text-green-700">
+         Nuclear Speckles
+        </h3>
+        <p class="text-gray-600">
+         Splicing factor hubs
+        </p>
+       </div>
+      </div>
+      <div class="space-y-4">
+       <div class="bg-green-50 p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Transport Properties
+        </h4>
+        <ul class="text-sm text-gray-700 space-y-1">
+         <li>
+          •
+          <strong>
+           Splicing factor D:
+          </strong>
+          0.5–8 µm²/s
+         </li>
+         <li>
+          •
+          <strong>
+           Residence times:
+          </strong>
+          Milliseconds to seconds
+         </li>
+         <li>
+          •
+          <strong>
+           Exchange:
+          </strong>
+          Rapid, dynamic
+         </li>
+         <li>
+          •
+          <strong>
+           Material state:
+          </strong>
+          Liquid droplets
+         </li>
+        </ul>
+       </div>
+       <div class="bg-green-50 p-4 rounded">
+        <h4 class="font-semibold text-gray-800 mb-2">
+         Functional Impact
+        </h4>
+        <p class="text-sm text-gray-700">
+         Fast exchange allows rapid recruitment of splicing machinery to active transcription sites while maintaining local concentrations.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Mathematical Models -->
+    <div class="max-w-4xl mx-auto mt-12">
+     <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">
+       Mathematical Framework
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div class="bg-blue-50 p-6 rounded">
+        <h4 class="font-semibold text-blue-800 mb-4">
+         Anomalous Diffusion
+        </h4>
+        <div class="equation text-lg text-center mb-4">
+         MSD(t) ∝ t
+         <sup>
+          α
+         </sup>
         </div>
-    </header>
-
-    <!-- Abstract -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">
-                    <i class="fas fa-file-alt mr-3"></i>Abstract
-                </h2>
-                <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        The eukaryotic nucleus is far more than a simple repository for the genome; it is a dynamic, highly organized, and physically constrained reaction vessel. The transport of macromolecules within this environment—a process critical for gene regulation, DNA repair, and ribosome biogenesis—is governed by a complex interplay of biophysical principles. This review synthesizes our current understanding of intranuclear transport, focusing on the size-dependent diffusion properties of molecules ranging from soluble proteins to large ribonucleoprotein (RNP) complexes and the chromatin polymer itself.
-                    </p>
-                </div>
-            </div>
+        <p class="text-sm text-gray-700">
+         Where α &lt; 1 for subdiffusion, common in nuclear environments due to obstruction and transient binding.
+        </p>
+       </div>
+       <div class="bg-green-50 p-6 rounded">
+        <h4 class="font-semibold text-green-800 mb-4">
+         Effective Diffusion
+        </h4>
+        <div class="equation text-lg text-center mb-4">
+         D
+         <sub>
+          eff
+         </sub>
+         = f
+         <sub>
+          free
+         </sub>
+         × D
+         <sub>
+          free
+         </sub>
         </div>
-    </section>
-
-    <!-- Key Concepts -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-brain mr-3"></i>Fundamental Biophysical Principles
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center">
-                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-compress-arrows-alt text-red-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-red-700">Macromolecular Crowding</h3>
-                        <p class="text-gray-600">High concentration of macromolecules creates volume exclusion effects and depletion forces</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center">
-                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-wave-square text-green-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-green-700">Viscoelasticity</h3>
-                        <p class="text-gray-600">Nuclear material exhibits both liquid-like and solid-like properties affecting molecular motion</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center">
-                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-project-diagram text-purple-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-purple-700">Chromatin Meshwork</h3>
-                        <p class="text-gray-600">Fractal obstacle course that constrains molecular diffusion through steric hindrance</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center">
-                        <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-random text-orange-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-orange-700">Anomalous Diffusion</h3>
-                        <p class="text-gray-600">Non-Brownian motion characterized by subdiffusive behavior (MSD ∝ t<sup>α</sup>, α < 1)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quantitative Data Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-chart-bar mr-3"></i>Quantitative Measurements of Nuclear Transport
-            </h2>
-            
-            <!-- Size-Dependent Diffusion Chart -->
-            <div class="max-w-5xl mx-auto mb-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">Size-Dependent Diffusion of Inert Probes</h3>
-                    <div style="height: 500px;">
-                        <canvas id="sizeChart"></canvas>
-                    </div>
-                    <p class="text-sm text-gray-600 mt-4 text-center">
-                        Diffusion coefficients decrease dramatically with increasing molecular size, demonstrating strong sieving effects in the nuclear environment.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Comparison of Nuclear vs Cytoplasmic Transport -->
-            <div class="max-w-5xl mx-auto mb-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">Nuclear vs. Aqueous Solution Diffusion</h3>
-                    <div style="height: 400px;">
-                        <canvas id="comparisonChart"></canvas>
-                    </div>
-                    <p class="text-sm text-gray-600 mt-4 text-center">
-                        Nuclear diffusion is consistently 3-4 times slower than in aqueous solution, with larger molecules showing even greater reduction.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Methodologies -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-microscope mr-3"></i>Advanced Microscopy Techniques
-            </h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- FRAP -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-center mb-6">
-                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-bolt text-blue-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-blue-700">FRAP</h3>
-                        <p class="text-sm text-gray-500">Fluorescence Recovery After Photobleaching</p>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Principle</h4>
-                            <p class="text-sm text-gray-600">Measures ensemble-averaged mobility by photobleaching a region and monitoring fluorescence recovery</p>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Key Parameters</h4>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Effective diffusion coefficient (D<sub>eff</sub>)</li>
-                                <li>• Mobile fraction (f<sub>mob</sub>)</li>
-                                <li>• Binding kinetics</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Advantages</h4>
-                            <p class="text-sm text-gray-600">Widely accessible, global view of mobility, suitable for most fluorescent proteins</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- FCS -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-center mb-6">
-                        <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-wave-square text-green-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-green-700">FCS</h3>
-                        <p class="text-sm text-gray-500">Fluorescence Correlation Spectroscopy</p>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Principle</h4>
-                            <p class="text-sm text-gray-600">Single-molecule sensitivity through temporal autocorrelation analysis of fluorescence fluctuations</p>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Key Parameters</h4>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Multiple diffusing species resolution</li>
-                                <li>• Molecular concentration</li>
-                                <li>• Binding/unbinding kinetics</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Advantages</h4>
-                            <p class="text-sm text-gray-600">High temporal resolution, can resolve multi-component systems, quantitative</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SPT -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-center mb-6">
-                        <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-route text-purple-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-purple-700">SPT</h3>
-                        <p class="text-sm text-gray-500">Single-Particle Tracking</p>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Principle</h4>
-                            <p class="text-sm text-gray-600">Direct visualization and tracking of individual molecules over time</p>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Key Parameters</h4>
-                            <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• Individual trajectory analysis</li>
-                                <li>• Motion classification</li>
-                                <li>• Spatial heterogeneity</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="highlight-box p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Advantages</h4>
-                            <p class="text-sm text-gray-600">Spatial context, heterogeneity detection, direct observation of motion modes</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Quantitative Tables -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-table mr-3"></i>Comprehensive Diffusion Data
-            </h2>
-            
-            <!-- Inert Probes Table -->
-            <div class="max-w-6xl mx-auto mb-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Diffusion of Inert and Monomeric Probes</h3>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-gray-300">
-                            <thead>
-                                <tr class="bg-blue-50">
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Probe</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">MW (kDa)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">D (µm²/s)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Mobile Fraction (%)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Method</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Cell Type</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">FITC-Dextran 20</td>
-                                    <td class="border border-gray-300 px-4 py-3">20</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">11.0 ± 1.8</td>
-                                    <td class="border border-gray-300 px-4 py-3">~100</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                    <td class="border border-gray-300 px-4 py-3">HeLa</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">FITC-Dextran 40</td>
-                                    <td class="border border-gray-300 px-4 py-3">40</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">10.5 ± 1.7</td>
-                                    <td class="border border-gray-300 px-4 py-3">~100</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                    <td class="border border-gray-300 px-4 py-3">HeLa</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">FITC-Dextran 70</td>
-                                    <td class="border border-gray-300 px-4 py-3">70</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">5.9 ± 0.7</td>
-                                    <td class="border border-gray-300 px-4 py-3">~100</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                    <td class="border border-gray-300 px-4 py-3">HeLa</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">FITC-Dextran 500</td>
-                                    <td class="border border-gray-300 px-4 py-3">500</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">1.7 ± 0.3</td>
-                                    <td class="border border-gray-300 px-4 py-3">~100</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                    <td class="border border-gray-300 px-4 py-3">HeLa</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">GFP</td>
-                                    <td class="border border-gray-300 px-4 py-3">27</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">17 ± 5</td>
-                                    <td class="border border-gray-300 px-4 py-3">~100</td>
-                                    <td class="border border-gray-300 px-4 py-3">FCS</td>
-                                    <td class="border border-gray-300 px-4 py-3">HeLa</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">nucGEMs</td>
-                                    <td class="border border-gray-300 px-4 py-3">~12,000</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">~0.1–0.5</td>
-                                    <td class="border border-gray-300 px-4 py-3">Not reported</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT</td>
-                                    <td class="border border-gray-300 px-4 py-3">S. cerevisiae</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Functional Proteins Table -->
-            <div class="max-w-6xl mx-auto mb-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Functional Nuclear Proteins</h3>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-gray-300">
-                            <thead>
-                                <tr class="bg-green-50">
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Protein</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">MW (kDa)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Effective D (µm²/s)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Free D (µm²/s)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Binding Kinetics</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Method</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">Histone H1-GFP</td>
-                                    <td class="border border-gray-300 px-4 py-3">~50</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">0.01–0.02</td>
-                                    <td class="border border-gray-300 px-4 py-3">21.1 ± 1.9</td>
-                                    <td class="border border-gray-300 px-4 py-3">Multiple binding states (ms to s)</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP, FCS</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">p53-GFP</td>
-                                    <td class="border border-gray-300 px-4 py-3">~80</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">15.4 ± 5.6</td>
-                                    <td class="border border-gray-300 px-4 py-3">-</td>
-                                    <td class="border border-gray-300 px-4 py-3">k<sub>on</sub> = 0.3 s⁻¹, k<sub>off</sub> = 0.4 s⁻¹</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">RPB1 (Pol II)</td>
-                                    <td class="border border-gray-300 px-4 py-3">~192</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">~0.3</td>
-                                    <td class="border border-gray-300 px-4 py-3">-</td>
-                                    <td class="border border-gray-300 px-4 py-3">Confined motion, stationary</td>
-                                    <td class="border border-gray-300 px-4 py-3">FCS, SPT</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">Ku80–GFP</td>
-                                    <td class="border border-gray-300 px-4 py-3">~97</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">0.35</td>
-                                    <td class="border border-gray-300 px-4 py-3">-</td>
-                                    <td class="border border-gray-300 px-4 py-3">Long residence time</td>
-                                    <td class="border border-gray-300 px-4 py-3">FRAP</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Large Complexes Table -->
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Large RNP Complexes and Chromatin</h3>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-gray-300">
-                            <thead>
-                                <tr class="bg-purple-50">
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Complex</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Size/Description</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">D (µm²/s)</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Motion Type</th>
-                                    <th class="border border-gray-300 px-4 py-3 text-left">Method</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">mRNP complex</td>
-                                    <td class="border border-gray-300 px-4 py-3">>1 MDa</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.033</td>
-                                    <td class="border border-gray-300 px-4 py-3">Free Diffusion (interchromatin)</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">mRNP complex</td>
-                                    <td class="border border-gray-300 px-4 py-3">>1 MDa</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.025–0.12</td>
-                                    <td class="border border-gray-300 px-4 py-3">Anomalous, Channeled</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT (QD-labeled)</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">60S ribosomal subunit</td>
-                                    <td class="border border-gray-300 px-4 py-3">~2.5 MDa</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.31 ± 0.15</td>
-                                    <td class="border border-gray-300 px-4 py-3">Anomalous</td>
-                                    <td class="border border-gray-300 px-4 py-3">Caged-probe tracking</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">Chromatin Locus</td>
-                                    <td class="border border-gray-300 px-4 py-3">90 Mbp region</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.0005</td>
-                                    <td class="border border-gray-300 px-4 py-3">Constrained</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">Heterochromatin</td>
-                                    <td class="border border-gray-300 px-4 py-3">Dense chromatin</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.002</td>
-                                    <td class="border border-gray-300 px-4 py-3">Constrained</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="border border-gray-300 px-4 py-3">Euchromatin</td>
-                                    <td class="border border-gray-300 px-4 py-3">Open chromatin</td>
-                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-purple-600">0.001–0.013</td>
-                                    <td class="border border-gray-300 px-4 py-3">Constrained, two-component</td>
-                                    <td class="border border-gray-300 px-4 py-3">SPT</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nuclear Environments -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-map-marked-alt mr-3"></i>Transport in Specialized Nuclear Environments
-            </h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Nucleolus -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-circle text-red-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-red-700">Nucleolus</h3>
-                            <p class="text-gray-600">Ribosome biogenesis factory</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-red-50 p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Transport Properties</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• <strong>GFP diffusion:</strong> 8 ± 3 µm²/s (vs 17 ± 5 µm²/s in nucleoplasm)</li>
-                                <li>• <strong>Surface tension:</strong> ~10⁻⁶ N/m (very low)</li>
-                                <li>• <strong>Viscosity:</strong> ~10³ Pa·s (honey-like)</li>
-                                <li>• <strong>Material state:</strong> Liquid-like with phase separation</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-red-50 p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Functional Impact</h4>
-                            <p class="text-sm text-gray-700">
-                                Reduced diffusion enhances ribosomal protein assembly efficiency by increasing local concentrations and residence times.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nuclear Speckles -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-dot-circle text-green-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-green-700">Nuclear Speckles</h3>
-                            <p class="text-gray-600">Splicing factor hubs</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-green-50 p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Transport Properties</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• <strong>Splicing factor D:</strong> 0.5–8 µm²/s</li>
-                                <li>• <strong>Residence times:</strong> Milliseconds to seconds</li>
-                                <li>• <strong>Exchange:</strong> Rapid, dynamic</li>
-                                <li>• <strong>Material state:</strong> Liquid droplets</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-green-50 p-4 rounded">
-                            <h4 class="font-semibold text-gray-800 mb-2">Functional Impact</h4>
-                            <p class="text-sm text-gray-700">
-                                Fast exchange allows rapid recruitment of splicing machinery to active transcription sites while maintaining local concentrations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mathematical Models -->
-            <div class="max-w-4xl mx-auto mt-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">Mathematical Framework</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-blue-50 p-6 rounded">
-                            <h4 class="font-semibold text-blue-800 mb-4">Anomalous Diffusion</h4>
-                            <div class="equation text-lg text-center mb-4">
-                                MSD(t) ∝ t<sup>α</sup>
-                            </div>
-                            <p class="text-sm text-gray-700">
-                                Where α < 1 for subdiffusion, common in nuclear environments due to obstruction and transient binding.
-                            </p>
-                        </div>
-                        
-                        <div class="bg-green-50 p-6 rounded">
-                            <h4 class="font-semibold text-green-800 mb-4">Effective Diffusion</h4>
-                            <div class="equation text-lg text-center mb-4">
-                                D<sub>eff</sub> = f<sub>free</sub> × D<sub>free</sub>
-                            </div>
-                            <p class="text-sm text-gray-700">
-                                Effective diffusion depends on the mobile fraction and intrinsic diffusion coefficient of unbound molecules.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conclusions -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
-                <i class="fas fa-lightbulb mr-3"></i>Key Insights and Future Directions
-            </h2>
-            
-            <div class="max-w-5xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-blue-800">
-                            <i class="fas fa-check-circle mr-2"></i>Established Principles
-                        </h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>
-                                Size-dependent diffusion is universal in nuclear environments
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>
-                                Anomalous subdiffusion dominates over simple Brownian motion
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>
-                                Nuclear bodies create distinct transport microenvironments
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>
-                                Transient binding interactions dominate functional protein mobility
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-green-800">
-                            <i class="fas fa-question-circle mr-2"></i>Open Questions
-                        </h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>
-                                Role of active ATP-driven transport mechanisms
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>
-                                Integration of mechanical forces and transport
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>
-                                Real-time dynamics of chromatin reorganization
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>
-                                Multi-scale modeling from molecules to whole nucleus
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="mt-8 bg-yellow-50 p-8 rounded-lg border-l-4 border-yellow-400">
-                    <h3 class="text-xl font-semibold mb-4 text-yellow-800">
-                        <i class="fas fa-telescope mr-2"></i>Future Perspectives
-                    </h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Understanding intranuclear transport requires integrating biophysical principles with high-resolution experimental techniques. 
+        <p class="text-sm text-gray-700">
+         Effective diffusion depends on the mobile fraction and intrinsic diffusion coefficient of unbound molecules.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Conclusions -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+     <i class="fas fa-lightbulb mr-3">
+     </i>
+     Key Insights and Future Directions
+    </h2>
+    <div class="max-w-5xl mx-auto">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
+       <h3 class="text-xl font-semibold mb-4 text-blue-800">
+        <i class="fas fa-check-circle mr-2">
+        </i>
+        Established Principles
+       </h3>
+       <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         Size-dependent diffusion is universal in nuclear environments
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         Anomalous subdiffusion dominates over simple Brownian motion
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         Nuclear bodies create distinct transport microenvironments
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         Transient binding interactions dominate functional protein mobility
+        </li>
+       </ul>
+      </div>
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg">
+       <h3 class="text-xl font-semibold mb-4 text-green-800">
+        <i class="fas fa-question-circle mr-2">
+        </i>
+        Open Questions
+       </h3>
+       <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         Role of active ATP-driven transport mechanisms
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         Integration of mechanical forces and transport
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         Real-time dynamics of chromatin reorganization
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         Multi-scale modeling from molecules to whole nucleus
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="mt-8 bg-yellow-50 p-8 rounded-lg border-l-4 border-yellow-400">
+      <h3 class="text-xl font-semibold mb-4 text-yellow-800">
+       <i class="fas fa-telescope mr-2">
+       </i>
+       Future Perspectives
+      </h3>
+      <p class="text-gray-700 leading-relaxed">
+       Understanding intranuclear transport requires integrating biophysical principles with high-resolution experimental techniques.
                         Future advances in super-resolution microscopy, single-molecule methods, and computational modeling will continue to reveal 
                         the complex interplay between nuclear architecture and molecular dynamics. This knowledge is essential for understanding 
                         fundamental cellular processes and developing therapeutic interventions for diseases involving nuclear dysfunction.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-4">
-                <i class="fas fa-atom text-2xl mb-2"></i>
-                <h3 class="text-xl font-semibold">Cell Nucleus Research</h3>
-            </div>
-            <p class="text-gray-400">
-                Advancing our understanding of nuclear biophysics through quantitative analysis and comprehensive research
-            </p>
-            <div class="mt-4 text-sm text-gray-500">
-                Comprehensive review of intranuclear transport mechanisms and size-dependent diffusion
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Size-dependent diffusion chart
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Size-dependent diffusion chart
         const sizeCtx = document.getElementById('sizeChart').getContext('2d');
         new Chart(sizeCtx, {
             type: 'line',
@@ -767,16 +1285,20 @@
                 }
             }
         });
-    </script>
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-</body>
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsoEqJq5yaiOSmaz%2FyPg9%2BTdhvUOSvlsMucgOl4VvH6EiyxwEQNfPQewMiCshXH6TSzhq%2BH7s5QMCIVFSmEz0xNT1cPpaN14NM25C1u5wB8fWsR5e3q1AsY235prPKRgbWN4QYJ%2FUAz%2Bg5tuFC%2F1wujA6E8P7Qi3pdHArOKqHK2GM1Vj%2FlBbZBu5CZAUXcc3zhl%2FOIaRuZnDAsVAGqarhrZ4cpn%2Bi4oJ96DZW5TCon%2F8fd7oAGOcB5o284nxe6eQ55BY5y0ZfyijZrHpXSkFn8KGNkF7GAxADZqMWpUnZbh0MVT4feZsDEbPSH61DjEPPej7NZBYzmXsTi1p%2F24Q%2FgO3kwthSoI30kI0%2BDosBmkpYcdMGOhyGmWQZQ6K1n5890XYulOIahM8VUBO01JX2p%2BHzIY0MfHH0z94Bzz6fJsFc6hTwhqnmPHE9s2Vrdgg6Eam%2FUVJAfuik36bORb1U4iw6yRAJ%2FhXwalKDwps%2B6kWP8jwbeeS1JAqzGIyflGNfomeyUS688umvC9IdKh2hwpZsK3F%2FJqXm3Q3nuzyjiWA";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsoEqJq5yaiOSmaz/yPg9+TdhvUOSvlsMucgOl4VvH6EiyxwEQNfPQewMiCshXH6TSzhq+H7s5QMCIVFSmEz0xNT1cPpaN14NM25C1u5wB8fWsR5e3q1AsY235prPKRgbWN4QYJ/UAz+g5tuFC/1wujA6E8P7Qi3pdHArOKqHK2GM1Vj/lBbZBu5CZAUXcc3zhl/OIaRuZnDAsVAGqarhrZ4cpn+i4oJ96DZW5TCon/8fd7oAGOcB5o284nxe6eQ55BY5y0ZfyijZrHpXSkFn8KGNkF7GAxADZqMWpUnZbh0MVT4feZsDEbPSH61DjEPPej7NZBYzmXsTi1p/24Q/gO3kwthSoI30kI0+DosBmkpYcdMGOhyGmWQZQ6K1n5890XYulOIahM8VUBO01JX2p+HzIY0MfHH0z94Bzz6fJsFc6hTwhqnmPHE9s2Vrdgg6Eam/UVJAfuik36bORb1U4iw6yRAJ/hXwalKDwps+6kWP8jwbeeS1JAqzGIyflGNfomeyUS688umvC9IdKh2hwpZsK3F/JqXm3Q3nuzyjiWA";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

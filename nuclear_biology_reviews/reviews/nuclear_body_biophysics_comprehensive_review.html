@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Body Biophysics: Phase Separation and Biomolecular Condensates - Cell Nucleus Research</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .gradient-bg {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nuclear Body Biophysics: Phase Separation and Biomolecular Condensates - Cell Nucleus Research
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <style>
+   .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         .text-shadow {
@@ -25,560 +28,1031 @@
             background-size: 20px 20px;
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="gradient-bg text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex items-center justify-center mb-4">
-                <i class="fas fa-atom text-4xl mr-4"></i>
-                <h1 class="text-4xl font-bold text-shadow">Nuclear Body Biophysics</h1>
-            </div>
-            <p class="text-xl opacity-90 max-w-4xl mx-auto">
-                Phase Separation and Biomolecular Condensates: A Comprehensive Analysis of Nucleolus, Nuclear Speckles, Cajal Bodies, and PML Bodies
-            </p>
-            <div class="mt-6 flex justify-center space-x-4 text-sm">
-                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-microscope mr-1"></i> Biophysics</span>
-                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-dna mr-1"></i> Nuclear Biology</span>
-                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-chart-line mr-1"></i> Quantitative Analysis</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Introduction -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">
-                    <i class="fas fa-info-circle mr-2"></i>Beyond Membrane-Bound Organelles
-                </h2>
-                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
-                    <p class="text-lg leading-relaxed">
-                        The eukaryotic nucleus employs a revolutionary organizational principle beyond traditional membrane-bound organelles. 
-                        Nuclear bodies represent <strong>membraneless organelles</strong> formed through liquid-liquid phase separation (LLPS), 
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Introduction -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">
+      <i class="fas fa-info-circle mr-2">
+      </i>
+      Beyond Membrane-Bound Organelles
+     </h2>
+     <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+      <p class="text-lg leading-relaxed">
+       The eukaryotic nucleus employs a revolutionary organizational principle beyond traditional membrane-bound organelles.
+                        Nuclear bodies represent
+       <strong>
+        membraneless organelles
+       </strong>
+       formed through liquid-liquid phase separation (LLPS),
                         creating specialized biochemical compartments with unique biophysical properties.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Key Paradigm Shift</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3"></i>
-                                <span>From static membrane compartments to <strong>dynamic phase-separated condensates</strong></span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3"></i>
-                                <span>Material states ranging from <strong>fluid liquids to gel-like structures</strong></span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3"></i>
-                                <span>Function directly linked to <strong>biophysical properties</strong></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Formation_and_examples_of_nuclear_membraneless_compartments.png" 
-                             alt="Nuclear Membraneless Compartments" 
-                             class="w-full max-w-md mx-auto rounded-lg shadow-lg">
-                        <p class="text-sm text-gray-600 mt-2">Nuclear membraneless compartments and their formation mechanisms</p>
-                    </div>
-                </div>
-            </div>
+      </p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+       <h3 class="text-2xl font-semibold mb-4 text-gray-700">
+        Key Paradigm Shift
+       </h3>
+       <ul class="space-y-3">
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3">
+         </i>
+         <span>
+          From static membrane compartments to
+          <strong>
+           dynamic phase-separated condensates
+          </strong>
+         </span>
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3">
+         </i>
+         <span>
+          Material states ranging from
+          <strong>
+           fluid liquids to gel-like structures
+          </strong>
+         </span>
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mt-1 mr-3">
+         </i>
+         <span>
+          Function directly linked to
+          <strong>
+           biophysical properties
+          </strong>
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="text-center">
+       <img alt="Nuclear Membraneless Compartments" class="w-full max-w-md mx-auto rounded-lg shadow-lg" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Formation_and_examples_of_nuclear_membraneless_compartments.png"/>
+       <p class="text-sm text-gray-600 mt-2">
+        Nuclear membraneless compartments and their formation mechanisms
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Phase Separation Principles -->
+  <section class="py-12 phase-separation-bg">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-water mr-2">
+      </i>
+      Liquid-Liquid Phase Separation (LLPS)
+     </h2>
+     <div class="grid lg:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <h3 class="text-2xl font-semibold mb-4 text-gray-700">
+        <i class="fas fa-flask mr-2 text-blue-500">
+        </i>
+        Thermodynamic Process
+       </h3>
+       <p class="text-gray-600 mb-4">
+        LLPS occurs when a solution of macromolecules spontaneously demixes into two coexisting liquid phases:
+       </p>
+       <div class="space-y-4">
+        <div class="bg-blue-50 p-4 rounded-lg">
+         <h4 class="font-semibold text-blue-800 mb-2">
+          <i class="fas fa-compress-arrows-alt mr-2">
+          </i>
+          Dense Phase
+         </h4>
+         <p class="text-sm">
+          Condensate enriched in interacting components (proteins, RNAs)
+         </p>
         </div>
-    </section>
-
-    <!-- Phase Separation Principles -->
-    <section class="py-12 phase-separation-bg">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-water mr-2"></i>Liquid-Liquid Phase Separation (LLPS)
-                </h2>
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">
-                            <i class="fas fa-flask mr-2 text-blue-500"></i>Thermodynamic Process
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            LLPS occurs when a solution of macromolecules spontaneously demixes into two coexisting liquid phases:
-                        </p>
-                        <div class="space-y-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <h4 class="font-semibold text-blue-800 mb-2"><i class="fas fa-compress-arrows-alt mr-2"></i>Dense Phase</h4>
-                                <p class="text-sm">Condensate enriched in interacting components (proteins, RNAs)</p>
-                            </div>
-                            <div class="bg-green-50 p-4 rounded-lg">
-                                <h4 class="font-semibold text-green-800 mb-2"><i class="fas fa-expand-arrows-alt mr-2"></i>Dilute Phase</h4>
-                                <p class="text-sm">Surrounding nucleoplasm with lower concentration</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">
-                            <i class="fas fa-puzzle-piece mr-2 text-green-500"></i>Driving Forces
-                        </h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-link text-purple-500 mt-1 mr-3"></i>
-                                <div>
-                                    <strong>Multivalent Interactions:</strong> Weak but numerous protein-protein and protein-RNA contacts
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-wave-square text-orange-500 mt-1 mr-3"></i>
-                                <div>
-                                    <strong>Intrinsically Disordered Regions (IDRs):</strong> Flexible protein domains enabling multiple binding partners
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-dna text-red-500 mt-1 mr-3"></i>
-                                <div>
-                                    <strong>RNA Scaffolds:</strong> Repetitive sequences promoting phase separation through RNA-protein networks
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+         <h4 class="font-semibold text-green-800 mb-2">
+          <i class="fas fa-expand-arrows-alt mr-2">
+          </i>
+          Dilute Phase
+         </h4>
+         <p class="text-sm">
+          Surrounding nucleoplasm with lower concentration
+         </p>
         </div>
-    </section>
-
-    <!-- Four Nuclear Bodies Overview -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-layer-group mr-2"></i>The Four Major Nuclear Bodies
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Nucleolus -->
-                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 shadow-lg border-l-4 border-red-500">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-circle text-red-500 text-3xl"></i>
-                            <h3 class="text-xl font-bold text-red-800 mt-2">Nucleolus</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li><strong>Function:</strong> Ribosome biogenesis</li>
-                            <li><strong>State:</strong> Highly fluid liquid</li>
-                            <li><strong>Assembly:</strong> rRNA transcription-driven</li>
-                            <li><strong>Key Feature:</strong> Multilayered organization</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Nuclear Speckles -->
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 shadow-lg border-l-4 border-blue-500">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-star text-blue-500 text-3xl"></i>
-                            <h3 class="text-xl font-bold text-blue-800 mt-2">Nuclear Speckles</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li><strong>Function:</strong> Pre-mRNA processing</li>
-                            <li><strong>State:</strong> Dynamic liquid</li>
-                            <li><strong>Assembly:</strong> Splicing factor clustering</li>
-                            <li><strong>Key Feature:</strong> Rapid component exchange</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Cajal Bodies -->
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 shadow-lg border-l-4 border-green-500">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-cog text-green-500 text-3xl"></i>
-                            <h3 class="text-xl font-bold text-green-800 mt-2">Cajal Bodies</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li><strong>Function:</strong> snRNP maturation</li>
-                            <li><strong>State:</strong> Gel-like</li>
-                            <li><strong>Assembly:</strong> Coilin-mediated</li>
-                            <li><strong>Key Feature:</strong> Variable residence times</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- PML Bodies -->
-                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 shadow-lg border-l-4 border-purple-500">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-shield-alt text-purple-500 text-3xl"></i>
-                            <h3 class="text-xl font-bold text-purple-800 mt-2">PML Bodies</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li><strong>Function:</strong> Protein modification</li>
-                            <li><strong>State:</strong> Stable, solid-like</li>
-                            <li><strong>Assembly:</strong> SUMOylation-driven</li>
-                            <li><strong>Key Feature:</strong> Stress-responsive</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quantitative Measurements -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-ruler-combined mr-2"></i>Quantitative Biophysical Properties
-                </h2>
-                
-                <div class="grid lg:grid-cols-2 gap-8 mb-8">
-                    <!-- Surface Tension Chart -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-700">
-                            <i class="fas fa-water mr-2 text-blue-500"></i>Surface Tension Measurements
-                        </h3>
-                        <div class="chart-container">
-                            <canvas id="surfaceTensionChart"></canvas>
-                        </div>
-                        <p class="text-sm text-gray-600 mt-4">
-                            <strong>Key Finding:</strong> Nucleolus exhibits extremely low surface tension (~10⁻⁶ N/m), 
+       </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <h3 class="text-2xl font-semibold mb-4 text-gray-700">
+        <i class="fas fa-puzzle-piece mr-2 text-green-500">
+        </i>
+        Driving Forces
+       </h3>
+       <ul class="space-y-3">
+        <li class="flex items-start">
+         <i class="fas fa-link text-purple-500 mt-1 mr-3">
+         </i>
+         <div>
+          <strong>
+           Multivalent Interactions:
+          </strong>
+          Weak but numerous protein-protein and protein-RNA contacts
+         </div>
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-wave-square text-orange-500 mt-1 mr-3">
+         </i>
+         <div>
+          <strong>
+           Intrinsically Disordered Regions (IDRs):
+          </strong>
+          Flexible protein domains enabling multiple binding partners
+         </div>
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-dna text-red-500 mt-1 mr-3">
+         </i>
+         <div>
+          <strong>
+           RNA Scaffolds:
+          </strong>
+          Repetitive sequences promoting phase separation through RNA-protein networks
+         </div>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Four Nuclear Bodies Overview -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-layer-group mr-2">
+      </i>
+      The Four Major Nuclear Bodies
+     </h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Nucleolus -->
+      <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 shadow-lg border-l-4 border-red-500">
+       <div class="text-center mb-4">
+        <i class="fas fa-circle text-red-500 text-3xl">
+        </i>
+        <h3 class="text-xl font-bold text-red-800 mt-2">
+         Nucleolus
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         <strong>
+          Function:
+         </strong>
+         Ribosome biogenesis
+        </li>
+        <li>
+         <strong>
+          State:
+         </strong>
+         Highly fluid liquid
+        </li>
+        <li>
+         <strong>
+          Assembly:
+         </strong>
+         rRNA transcription-driven
+        </li>
+        <li>
+         <strong>
+          Key Feature:
+         </strong>
+         Multilayered organization
+        </li>
+       </ul>
+      </div>
+      <!-- Nuclear Speckles -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 shadow-lg border-l-4 border-blue-500">
+       <div class="text-center mb-4">
+        <i class="fas fa-star text-blue-500 text-3xl">
+        </i>
+        <h3 class="text-xl font-bold text-blue-800 mt-2">
+         Nuclear Speckles
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         <strong>
+          Function:
+         </strong>
+         Pre-mRNA processing
+        </li>
+        <li>
+         <strong>
+          State:
+         </strong>
+         Dynamic liquid
+        </li>
+        <li>
+         <strong>
+          Assembly:
+         </strong>
+         Splicing factor clustering
+        </li>
+        <li>
+         <strong>
+          Key Feature:
+         </strong>
+         Rapid component exchange
+        </li>
+       </ul>
+      </div>
+      <!-- Cajal Bodies -->
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 shadow-lg border-l-4 border-green-500">
+       <div class="text-center mb-4">
+        <i class="fas fa-cog text-green-500 text-3xl">
+        </i>
+        <h3 class="text-xl font-bold text-green-800 mt-2">
+         Cajal Bodies
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         <strong>
+          Function:
+         </strong>
+         snRNP maturation
+        </li>
+        <li>
+         <strong>
+          State:
+         </strong>
+         Gel-like
+        </li>
+        <li>
+         <strong>
+          Assembly:
+         </strong>
+         Coilin-mediated
+        </li>
+        <li>
+         <strong>
+          Key Feature:
+         </strong>
+         Variable residence times
+        </li>
+       </ul>
+      </div>
+      <!-- PML Bodies -->
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 shadow-lg border-l-4 border-purple-500">
+       <div class="text-center mb-4">
+        <i class="fas fa-shield-alt text-purple-500 text-3xl">
+        </i>
+        <h3 class="text-xl font-bold text-purple-800 mt-2">
+         PML Bodies
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         <strong>
+          Function:
+         </strong>
+         Protein modification
+        </li>
+        <li>
+         <strong>
+          State:
+         </strong>
+         Stable, solid-like
+        </li>
+        <li>
+         <strong>
+          Assembly:
+         </strong>
+         SUMOylation-driven
+        </li>
+        <li>
+         <strong>
+          Key Feature:
+         </strong>
+         Stress-responsive
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Quantitative Measurements -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-ruler-combined mr-2">
+      </i>
+      Quantitative Biophysical Properties
+     </h2>
+     <div class="grid lg:grid-cols-2 gap-8 mb-8">
+      <!-- Surface Tension Chart -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <h3 class="text-xl font-semibold mb-4 text-gray-700">
+        <i class="fas fa-water mr-2 text-blue-500">
+        </i>
+        Surface Tension Measurements
+       </h3>
+       <div class="chart-container">
+        <canvas id="surfaceTensionChart">
+        </canvas>
+       </div>
+       <p class="text-sm text-gray-600 mt-4">
+        <strong>
+         Key Finding:
+        </strong>
+        Nucleolus exhibits extremely low surface tension (~10⁻⁶ N/m),
                             facilitating rapid fusion and dynamic behavior.
-                        </p>
-                    </div>
-                    
-                    <!-- Viscosity Chart -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-700">
-                            <i class="fas fa-tint mr-2 text-green-500"></i>Viscosity Properties
-                        </h3>
-                        <div class="chart-container">
-                            <canvas id="viscosityChart"></canvas>
-                        </div>
-                        <p class="text-sm text-gray-600 mt-4">
-                            <strong>Key Finding:</strong> Nucleoplasm viscosity (~10³ Pa·s) is thousands of times 
+       </p>
+      </div>
+      <!-- Viscosity Chart -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <h3 class="text-xl font-semibold mb-4 text-gray-700">
+        <i class="fas fa-tint mr-2 text-green-500">
+        </i>
+        Viscosity Properties
+       </h3>
+       <div class="chart-container">
+        <canvas id="viscosityChart">
+        </canvas>
+       </div>
+       <p class="text-sm text-gray-600 mt-4">
+        <strong>
+         Key Finding:
+        </strong>
+        Nucleoplasm viscosity (~10³ Pa·s) is thousands of times
                             more viscous than honey, affecting molecular transport.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Component Dynamics -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
-                        <i class="fas fa-clock mr-2 text-orange-500"></i>Component Exchange Dynamics
-                    </h3>
-                    <div class="chart-container">
-                        <canvas id="dynamicsChart"></canvas>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-6 mt-6">
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-blue-800 mb-2">Fast Exchange (Seconds)</h4>
-                            <ul class="text-sm space-y-1">
-                                <li>• Nuclear speckles: Core splicing factors</li>
-                                <li>• Nucleolus: Most ribosomal proteins</li>
-                                <li>• Cajal bodies: Some coilin populations</li>
-                            </ul>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-green-800 mb-2">Slow Exchange (Minutes)</h4>
-                            <ul class="text-sm space-y-1">
-                                <li>• Cajal bodies: Stable coilin scaffold</li>
-                                <li>• PML bodies: SUMOylated components</li>
-                                <li>• Nucleolus: Core structural proteins</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       </p>
+      </div>
+     </div>
+     <!-- Component Dynamics -->
+     <div class="bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-semibold mb-4 text-gray-700">
+       <i class="fas fa-clock mr-2 text-orange-500">
+       </i>
+       Component Exchange Dynamics
+      </h3>
+      <div class="chart-container">
+       <canvas id="dynamicsChart">
+       </canvas>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+       <div class="bg-blue-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-blue-800 mb-2">
+         Fast Exchange (Seconds)
+        </h4>
+        <ul class="text-sm space-y-1">
+         <li>
+          • Nuclear speckles: Core splicing factors
+         </li>
+         <li>
+          • Nucleolus: Most ribosomal proteins
+         </li>
+         <li>
+          • Cajal bodies: Some coilin populations
+         </li>
+        </ul>
+       </div>
+       <div class="bg-green-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-green-800 mb-2">
+         Slow Exchange (Minutes)
+        </h4>
+        <ul class="text-sm space-y-1">
+         <li>
+          • Cajal bodies: Stable coilin scaffold
+         </li>
+         <li>
+          • PML bodies: SUMOylated components
+         </li>
+         <li>
+          • Nucleolus: Core structural proteins
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Material State Spectrum -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-thermometer-half mr-2">
+      </i>
+      Material State Spectrum
+     </h2>
+     <div class="bg-gradient-to-r from-blue-50 via-green-50 to-purple-50 p-8 rounded-lg shadow-lg">
+      <div class="flex justify-between items-center mb-6">
+       <div class="text-center">
+        <i class="fas fa-tint text-blue-500 text-3xl">
+        </i>
+        <p class="text-sm font-semibold mt-2 text-blue-800">
+         Highly Fluid
+        </p>
+       </div>
+       <div class="text-center">
+        <i class="fas fa-adjust text-green-500 text-3xl">
+        </i>
+        <p class="text-sm font-semibold mt-2 text-green-800">
+         Viscoelastic
+        </p>
+       </div>
+       <div class="text-center">
+        <i class="fas fa-cube text-purple-500 text-3xl">
+        </i>
+        <p class="text-sm font-semibold mt-2 text-purple-800">
+         Solid-like
+        </p>
+       </div>
+      </div>
+      <div class="relative h-4 bg-gradient-to-r from-blue-300 via-green-300 to-purple-300 rounded-full mb-8">
+       <!-- Markers for each nuclear body -->
+       <div class="absolute top-0 left-1/6 transform -translate-x-1/2">
+        <div class="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg">
         </div>
-    </section>
-
-    <!-- Material State Spectrum -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-thermometer-half mr-2"></i>Material State Spectrum
-                </h2>
-                
-                <div class="bg-gradient-to-r from-blue-50 via-green-50 to-purple-50 p-8 rounded-lg shadow-lg">
-                    <div class="flex justify-between items-center mb-6">
-                        <div class="text-center">
-                            <i class="fas fa-tint text-blue-500 text-3xl"></i>
-                            <p class="text-sm font-semibold mt-2 text-blue-800">Highly Fluid</p>
-                        </div>
-                        <div class="text-center">
-                            <i class="fas fa-adjust text-green-500 text-3xl"></i>
-                            <p class="text-sm font-semibold mt-2 text-green-800">Viscoelastic</p>
-                        </div>
-                        <div class="text-center">
-                            <i class="fas fa-cube text-purple-500 text-3xl"></i>
-                            <p class="text-sm font-semibold mt-2 text-purple-800">Solid-like</p>
-                        </div>
-                    </div>
-                    
-                    <div class="relative h-4 bg-gradient-to-r from-blue-300 via-green-300 to-purple-300 rounded-full mb-8">
-                        <!-- Markers for each nuclear body -->
-                        <div class="absolute top-0 left-1/6 transform -translate-x-1/2">
-                            <div class="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg"></div>
-                            <p class="text-xs mt-2 text-center font-semibold">Nucleolus</p>
-                        </div>
-                        <div class="absolute top-0 left-1/3 transform -translate-x-1/2">
-                            <div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>
-                            <p class="text-xs mt-2 text-center font-semibold">Speckles</p>
-                        </div>
-                        <div class="absolute top-0 left-2/3 transform -translate-x-1/2">
-                            <div class="w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-lg"></div>
-                            <p class="text-xs mt-2 text-center font-semibold">Cajal</p>
-                        </div>
-                        <div class="absolute top-0 left-5/6 transform -translate-x-1/2">
-                            <div class="w-4 h-4 bg-purple-500 rounded-full border-2 border-white shadow-lg"></div>
-                            <p class="text-xs mt-2 text-center font-semibold">PML</p>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <p class="text-lg font-semibold text-gray-700 mb-2">Functional Relationship</p>
-                        <p class="text-gray-600">
-                            Material state directly correlates with functional requirements: 
-                            <strong>fluid bodies</strong> enable rapid mixing and exchange, while 
-                            <strong>solid-like bodies</strong> provide stable platforms for sequential processes.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <p class="text-xs mt-2 text-center font-semibold">
+         Nucleolus
+        </p>
+       </div>
+       <div class="absolute top-0 left-1/3 transform -translate-x-1/2">
+        <div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-lg">
         </div>
-    </section>
-
-    <!-- Comparative Analysis Table -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-table mr-2"></i>Comparative Analysis of Nuclear Bodies
-                </h2>
-                
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Feature</th>
-                                    <th class="px-6 py-4 text-center text-sm font-semibold text-red-700">Nucleolus</th>
-                                    <th class="px-6 py-4 text-center text-sm font-semibold text-blue-700">Nuclear Speckles</th>
-                                    <th class="px-6 py-4 text-center text-sm font-semibold text-green-700">Cajal Bodies</th>
-                                    <th class="px-6 py-4 text-center text-sm font-semibold text-purple-700">PML Bodies</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr>
-                                    <td class="px-6 py-4 font-semibold">Primary Function</td>
-                                    <td class="px-6 py-4 text-center text-sm">Ribosome biogenesis & stress sensing</td>
-                                    <td class="px-6 py-4 text-center text-sm">Pre-mRNA processing & splicing</td>
-                                    <td class="px-6 py-4 text-center text-sm">snRNP & snoRNP maturation</td>
-                                    <td class="px-6 py-4 text-center text-sm">Protein modification & sequestration</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="px-6 py-4 font-semibold">Key Scaffolds</td>
-                                    <td class="px-6 py-4 text-center text-sm">rRNA, fibrillarin, nucleolin</td>
-                                    <td class="px-6 py-4 text-center text-sm">Pre-mRNA, SR proteins</td>
-                                    <td class="px-6 py-4 text-center text-sm">Coilin, snRNAs</td>
-                                    <td class="px-6 py-4 text-center text-sm">PML, SUMO, Sp100</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 font-semibold">Assembly Driver</td>
-                                    <td class="px-6 py-4 text-center text-sm">rRNA transcription</td>
-                                    <td class="px-6 py-4 text-center text-sm">RNA Pol II activity</td>
-                                    <td class="px-6 py-4 text-center text-sm">snRNA synthesis</td>
-                                    <td class="px-6 py-4 text-center text-sm">SUMOylation cascade</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="px-6 py-4 font-semibold">Material State</td>
-                                    <td class="px-6 py-4 text-center text-sm">Fluid liquid (multi-phase)</td>
-                                    <td class="px-6 py-4 text-center text-sm">Dynamic liquid</td>
-                                    <td class="px-6 py-4 text-center text-sm">Gel-like</td>
-                                    <td class="px-6 py-4 text-center text-sm">Stable, solid-like shell</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 font-semibold">Component Dynamics</td>
-                                    <td class="px-6 py-4 text-center text-sm">Rapid exchange, high mobility</td>
-                                    <td class="px-6 py-4 text-center text-sm">Seconds to minutes</td>
-                                    <td class="px-6 py-4 text-center text-sm">Multi-state (fast & slow)</td>
-                                    <td class="px-6 py-4 text-center text-sm">Slow, stable assembly</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="px-6 py-4 font-semibold">Key Regulatory PTM</td>
-                                    <td class="px-6 py-4 text-center text-sm">Phosphorylation</td>
-                                    <td class="px-6 py-4 text-center text-sm">Phosphorylation</td>
-                                    <td class="px-6 py-4 text-center text-sm">Methylation</td>
-                                    <td class="px-6 py-4 text-center text-sm">SUMOylation</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 font-semibold">Role of RNA</td>
-                                    <td class="px-6 py-4 text-center text-sm">Central scaffold & client</td>
-                                    <td class="px-6 py-4 text-center text-sm">Substrate & organizer</td>
-                                    <td class="px-6 py-4 text-center text-sm">Substrate for modification</td>
-                                    <td class="px-6 py-4 text-center text-sm">Minimal/none</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        <p class="text-xs mt-2 text-center font-semibold">
+         Speckles
+        </p>
+       </div>
+       <div class="absolute top-0 left-2/3 transform -translate-x-1/2">
+        <div class="w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-lg">
         </div>
-    </section>
-
-    <!-- Disease Implications -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-stethoscope mr-2"></i>Disease Implications and Pathological Phase Transitions
-                </h2>
-                
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- Cancer -->
-                    <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold mb-4 text-red-800">
-                            <i class="fas fa-exclamation-triangle mr-2"></i>Cancer: Hyperactive Liquid Bodies
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="bg-white p-4 rounded border-l-4 border-red-400">
-                                <h4 class="font-semibold mb-2">Nucleolar Dysfunction</h4>
-                                <p class="text-sm text-gray-700">Aberrant ribosome biogenesis, enlarged nucleoli, disrupted phase separation balance</p>
-                            </div>
-                            <div class="bg-white p-4 rounded border-l-4 border-red-400">
-                                <h4 class="font-semibold mb-2">PML Body Disruption</h4>
-                                <p class="text-sm text-gray-700">PML-RARα fusion proteins disrupt normal SUMOylation and tumor suppressor functions</p>
-                            </div>
-                            <div class="bg-white p-4 rounded border-l-4 border-red-400">
-                                <h4 class="font-semibold mb-2">Therapeutic Targets</h4>
-                                <p class="text-sm text-gray-700">ATRA therapy restores PML body assembly in acute promyelocytic leukemia</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Neurodegeneration -->
-                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold mb-4 text-purple-800">
-                            <i class="fas fa-brain mr-2"></i>Neurodegeneration: Liquid-to-Solid Transitions
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="bg-white p-4 rounded border-l-4 border-purple-400">
-                                <h4 class="font-semibold mb-2">Protein Aggregation</h4>
-                                <p class="text-sm text-gray-700">IDR-containing proteins undergo pathological liquid-to-solid phase transitions</p>
-                            </div>
-                            <div class="bg-white p-4 rounded border-l-4 border-purple-400">
-                                <h4 class="font-semibold mb-2">Nuclear Body Dysfunction</h4>
-                                <p class="text-sm text-gray-700">Cajal bodies and nuclear speckles show altered dynamics in neurodegenerative diseases</p>
-                            </div>
-                            <div class="bg-white p-4 rounded border-l-4 border-purple-400">
-                                <h4 class="font-semibold mb-2">Therapeutic Approaches</h4>
-                                <p class="text-sm text-gray-700">Targeting phase separation modulators to restore normal condensate properties</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="text-xs mt-2 text-center font-semibold">
+         Cajal
+        </p>
+       </div>
+       <div class="absolute top-0 left-5/6 transform -translate-x-1/2">
+        <div class="w-4 h-4 bg-purple-500 rounded-full border-2 border-white shadow-lg">
         </div>
-    </section>
-
-    <!-- Research Methods -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
-                    <i class="fas fa-microscope mr-2"></i>Advanced Research Methodologies
-                </h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Super-Resolution Microscopy -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-search-plus text-blue-500 text-3xl"></i>
-                            <h3 class="text-lg font-semibold mt-2">Super-Resolution Microscopy</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li>• STORM/PALM for nanoscale organization</li>
-                            <li>• STED for live-cell dynamics</li>
-                            <li>• Structured illumination microscopy</li>
-                            <li>• Single-molecule tracking</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Biophysical Assays -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-flask text-green-500 text-3xl"></i>
-                            <h3 class="text-lg font-semibold mt-2">Biophysical Assays</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li>• FRAP for component dynamics</li>
-                            <li>• Optogenetics for induced phase separation</li>
-                            <li>• Microrheology measurements</li>
-                            <li>• Surface tension quantification</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Computational Modeling -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-calculator text-purple-500 text-3xl"></i>
-                            <h3 class="text-lg font-semibold mt-2">Computational Modeling</h3>
-                        </div>
-                        <ul class="text-sm space-y-2">
-                            <li>• Molecular dynamics simulations</li>
-                            <li>• Phase diagram predictions</li>
-                            <li>• Polymer physics models</li>
-                            <li>• Machine learning approaches</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <p class="text-xs mt-2 text-center font-semibold">
+         PML
+        </p>
+       </div>
+      </div>
+      <div class="text-center">
+       <p class="text-lg font-semibold text-gray-700 mb-2">
+        Functional Relationship
+       </p>
+       <p class="text-gray-600">
+        Material state directly correlates with functional requirements:
+        <strong>
+         fluid bodies
+        </strong>
+        enable rapid mixing and exchange, while
+        <strong>
+         solid-like bodies
+        </strong>
+        provide stable platforms for sequential processes.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Comparative Analysis Table -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-table mr-2">
+      </i>
+      Comparative Analysis of Nuclear Bodies
+     </h2>
+     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="overflow-x-auto">
+       <table class="w-full">
+        <thead class="bg-gray-50">
+         <tr>
+          <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+           Feature
+          </th>
+          <th class="px-6 py-4 text-center text-sm font-semibold text-red-700">
+           Nucleolus
+          </th>
+          <th class="px-6 py-4 text-center text-sm font-semibold text-blue-700">
+           Nuclear Speckles
+          </th>
+          <th class="px-6 py-4 text-center text-sm font-semibold text-green-700">
+           Cajal Bodies
+          </th>
+          <th class="px-6 py-4 text-center text-sm font-semibold text-purple-700">
+           PML Bodies
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+         <tr>
+          <td class="px-6 py-4 font-semibold">
+           Primary Function
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Ribosome biogenesis &amp; stress sensing
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Pre-mRNA processing &amp; splicing
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           snRNP &amp; snoRNP maturation
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Protein modification &amp; sequestration
+          </td>
+         </tr>
+         <tr class="bg-gray-50">
+          <td class="px-6 py-4 font-semibold">
+           Key Scaffolds
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           rRNA, fibrillarin, nucleolin
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Pre-mRNA, SR proteins
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Coilin, snRNAs
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           PML, SUMO, Sp100
+          </td>
+         </tr>
+         <tr>
+          <td class="px-6 py-4 font-semibold">
+           Assembly Driver
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           rRNA transcription
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           RNA Pol II activity
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           snRNA synthesis
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           SUMOylation cascade
+          </td>
+         </tr>
+         <tr class="bg-gray-50">
+          <td class="px-6 py-4 font-semibold">
+           Material State
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Fluid liquid (multi-phase)
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Dynamic liquid
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Gel-like
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Stable, solid-like shell
+          </td>
+         </tr>
+         <tr>
+          <td class="px-6 py-4 font-semibold">
+           Component Dynamics
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Rapid exchange, high mobility
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Seconds to minutes
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Multi-state (fast &amp; slow)
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Slow, stable assembly
+          </td>
+         </tr>
+         <tr class="bg-gray-50">
+          <td class="px-6 py-4 font-semibold">
+           Key Regulatory PTM
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Phosphorylation
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Phosphorylation
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Methylation
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           SUMOylation
+          </td>
+         </tr>
+         <tr>
+          <td class="px-6 py-4 font-semibold">
+           Role of RNA
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Central scaffold &amp; client
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Substrate &amp; organizer
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Substrate for modification
+          </td>
+          <td class="px-6 py-4 text-center text-sm">
+           Minimal/none
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Disease Implications -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-stethoscope mr-2">
+      </i>
+      Disease Implications and Pathological Phase Transitions
+     </h2>
+     <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Cancer -->
+      <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+       <h3 class="text-2xl font-semibold mb-4 text-red-800">
+        <i class="fas fa-exclamation-triangle mr-2">
+        </i>
+        Cancer: Hyperactive Liquid Bodies
+       </h3>
+       <div class="space-y-4">
+        <div class="bg-white p-4 rounded border-l-4 border-red-400">
+         <h4 class="font-semibold mb-2">
+          Nucleolar Dysfunction
+         </h4>
+         <p class="text-sm text-gray-700">
+          Aberrant ribosome biogenesis, enlarged nucleoli, disrupted phase separation balance
+         </p>
         </div>
-    </section>
-
-    <!-- Future Perspectives -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-6 text-blue-800">
-                    <i class="fas fa-telescope mr-2"></i>Future Perspectives
-                </h2>
-                <div class="bg-blue-50 border-l-4 border-blue-500 p-8 mb-8">
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        The field of nuclear body biophysics stands at the forefront of a paradigm shift in cell biology. 
-                        Understanding how phase separation creates functional compartments without membranes opens new 
+        <div class="bg-white p-4 rounded border-l-4 border-red-400">
+         <h4 class="font-semibold mb-2">
+          PML Body Disruption
+         </h4>
+         <p class="text-sm text-gray-700">
+          PML-RARα fusion proteins disrupt normal SUMOylation and tumor suppressor functions
+         </p>
+        </div>
+        <div class="bg-white p-4 rounded border-l-4 border-red-400">
+         <h4 class="font-semibold mb-2">
+          Therapeutic Targets
+         </h4>
+         <p class="text-sm text-gray-700">
+          ATRA therapy restores PML body assembly in acute promyelocytic leukemia
+         </p>
+        </div>
+       </div>
+      </div>
+      <!-- Neurodegeneration -->
+      <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
+       <h3 class="text-2xl font-semibold mb-4 text-purple-800">
+        <i class="fas fa-brain mr-2">
+        </i>
+        Neurodegeneration: Liquid-to-Solid Transitions
+       </h3>
+       <div class="space-y-4">
+        <div class="bg-white p-4 rounded border-l-4 border-purple-400">
+         <h4 class="font-semibold mb-2">
+          Protein Aggregation
+         </h4>
+         <p class="text-sm text-gray-700">
+          IDR-containing proteins undergo pathological liquid-to-solid phase transitions
+         </p>
+        </div>
+        <div class="bg-white p-4 rounded border-l-4 border-purple-400">
+         <h4 class="font-semibold mb-2">
+          Nuclear Body Dysfunction
+         </h4>
+         <p class="text-sm text-gray-700">
+          Cajal bodies and nuclear speckles show altered dynamics in neurodegenerative diseases
+         </p>
+        </div>
+        <div class="bg-white p-4 rounded border-l-4 border-purple-400">
+         <h4 class="font-semibold mb-2">
+          Therapeutic Approaches
+         </h4>
+         <p class="text-sm text-gray-700">
+          Targeting phase separation modulators to restore normal condensate properties
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Research Methods -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">
+      <i class="fas fa-microscope mr-2">
+      </i>
+      Advanced Research Methodologies
+     </h2>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Super-Resolution Microscopy -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <div class="text-center mb-4">
+        <i class="fas fa-search-plus text-blue-500 text-3xl">
+        </i>
+        <h3 class="text-lg font-semibold mt-2">
+         Super-Resolution Microscopy
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         • STORM/PALM for nanoscale organization
+        </li>
+        <li>
+         • STED for live-cell dynamics
+        </li>
+        <li>
+         • Structured illumination microscopy
+        </li>
+        <li>
+         • Single-molecule tracking
+        </li>
+       </ul>
+      </div>
+      <!-- Biophysical Assays -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <div class="text-center mb-4">
+        <i class="fas fa-flask text-green-500 text-3xl">
+        </i>
+        <h3 class="text-lg font-semibold mt-2">
+         Biophysical Assays
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         • FRAP for component dynamics
+        </li>
+        <li>
+         • Optogenetics for induced phase separation
+        </li>
+        <li>
+         • Microrheology measurements
+        </li>
+        <li>
+         • Surface tension quantification
+        </li>
+       </ul>
+      </div>
+      <!-- Computational Modeling -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+       <div class="text-center mb-4">
+        <i class="fas fa-calculator text-purple-500 text-3xl">
+        </i>
+        <h3 class="text-lg font-semibold mt-2">
+         Computational Modeling
+        </h3>
+       </div>
+       <ul class="text-sm space-y-2">
+        <li>
+         • Molecular dynamics simulations
+        </li>
+        <li>
+         • Phase diagram predictions
+        </li>
+        <li>
+         • Polymer physics models
+        </li>
+        <li>
+         • Machine learning approaches
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Future Perspectives -->
+  <section class="py-12 bg-white">
+   <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+     <h2 class="text-3xl font-bold mb-6 text-blue-800">
+      <i class="fas fa-telescope mr-2">
+      </i>
+      Future Perspectives
+     </h2>
+     <div class="bg-blue-50 border-l-4 border-blue-500 p-8 mb-8">
+      <p class="text-lg leading-relaxed text-gray-700">
+       The field of nuclear body biophysics stands at the forefront of a paradigm shift in cell biology.
+                        Understanding how phase separation creates functional compartments without membranes opens new
                         therapeutic avenues for diseases ranging from cancer to neurodegeneration.
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
-                        <i class="fas fa-cogs text-blue-500 text-2xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Engineering Condensates</h3>
-                        <p class="text-sm text-gray-600">Synthetic biology approaches to design custom nuclear bodies with specific functions</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
-                        <i class="fas fa-pills text-green-500 text-2xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Therapeutic Targeting</h3>
-                        <p class="text-sm text-gray-600">Drugs that modulate phase separation properties for disease treatment</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
-                        <i class="fas fa-dna text-purple-500 text-2xl mb-3"></i>
-                        <h3 class="font-semibold mb-2">Precision Medicine</h3>
-                        <p class="text-sm text-gray-600">Personalized therapies based on individual nuclear body biophysics</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="gradient-bg text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-lg font-semibold mb-2">Nuclear Body Biophysics Research</p>
-            <p class="opacity-80">Advancing our understanding of phase separation in nuclear organization</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <span class="text-sm"><i class="fas fa-atom mr-1"></i> Biophysics</span>
-                <span class="text-sm"><i class="fas fa-flask mr-1"></i> Phase Separation</span>
-                <span class="text-sm"><i class="fas fa-microscope mr-1"></i> Nuclear Biology</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Chart.js Scripts -->
-    <script>
-        // Surface Tension Chart
+      </p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+       <i class="fas fa-cogs text-blue-500 text-2xl mb-3">
+       </i>
+       <h3 class="font-semibold mb-2">
+        Engineering Condensates
+       </h3>
+       <p class="text-sm text-gray-600">
+        Synthetic biology approaches to design custom nuclear bodies with specific functions
+       </p>
+      </div>
+      <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+       <i class="fas fa-pills text-green-500 text-2xl mb-3">
+       </i>
+       <h3 class="font-semibold mb-2">
+        Therapeutic Targeting
+       </h3>
+       <p class="text-sm text-gray-600">
+        Drugs that modulate phase separation properties for disease treatment
+       </p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+       <i class="fas fa-dna text-purple-500 text-2xl mb-3">
+       </i>
+       <h3 class="font-semibold mb-2">
+        Precision Medicine
+       </h3>
+       <p class="text-sm text-gray-600">
+        Personalized therapies based on individual nuclear body biophysics
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Chart.js Scripts -->
+  <script>
+   // Surface Tension Chart
         const surfaceTensionCtx = document.getElementById('surfaceTensionChart').getContext('2d');
         new Chart(surfaceTensionCtx, {
             type: 'bar',
@@ -696,15 +1170,20 @@
                 }
             }
         });
-    </script>
-</body>
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpdqroJQoedXkYxPFKajKotLg1RG3BLlmLJ0o09CWrbBWJ8ZdoTKHE5gLPrmLz0g0Dk1KS%2BKVRYGRnhsLIvGfFGh4L6hS5zRxXduF3bwu4fbjM46TRYGFnt9wnuUkYzbw7JKzhz3Osu0xY59EMhd8ido7xHii0%2FbaaxQrAEQkk4IyAo4SABM8iGPES4ls%2FdmL77e2y%2F0Ko8R3W5v3%2FcR8VPp6JxnRTc1lYPEstdDTsDjpH0CYJK51xQNJXTVBXkMVA2SlkpF52dB1zt9D%2BhSlwTV6pDe6wlDFmbSN8C%2F7vxe290IWY%2BL8uPCvJ95WcMnVMdHQ5%2BeODicpev6JXdnS3FkxnzCarElcThuGawYR55PvzkHuplPAFF3Gw3KueQs86mOfXD3wXsh176dG%2Bvt2puMrQEAFAh5%2BD%2FkDgOq09sbQKs513k61Ispif3JllADJxkM%2FewRKisgx7maORpQF0Oj0TlXhi3UNciR0Mt%2BZl0bdrljl2B9w5TnpvPFZiMeB8k%2BtnYkomkNhcs9vGp3ceBhQv4vBRqlFazMBOPxh4%2FT";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpdqroJQoedXkYxPFKajKotLg1RG3BLlmLJ0o09CWrbBWJ8ZdoTKHE5gLPrmLz0g0Dk1KS+KVRYGRnhsLIvGfFGh4L6hS5zRxXduF3bwu4fbjM46TRYGFnt9wnuUkYzbw7JKzhz3Osu0xY59EMhd8ido7xHii0/baaxQrAEQkk4IyAo4SABM8iGPES4ls/dmL77e2y/0Ko8R3W5v3/cR8VPp6JxnRTc1lYPEstdDTsDjpH0CYJK51xQNJXTVBXkMVA2SlkpF52dB1zt9D+hSlwTV6pDe6wlDFmbSN8C/7vxe290IWY+L8uPCvJ95WcMnVMdHQ5+eODicpev6JXdnS3FkxnzCarElcThuGawYR55PvzkHuplPAFF3Gw3KueQs86mOfXD3wXsh176dG+vt2puMrQEAFAh5+D/kDgOq09sbQKs513k61Ispif3JllADJxkM/ewRKisgx7maORpQF0Oj0TlXhi3UNciR0Mt+Zl0bdrljl2B9w5TnpvPFZiMeB8k+tnYkomkNhcs9vGp3ceBhQv4vBRqlFazMBOPxh4/T";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

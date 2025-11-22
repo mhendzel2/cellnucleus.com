@@ -1,692 +1,1219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The DNA Damage Response Network: Pathway Crosstalk in Genome Maintenance and Therapy</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   The DNA Damage Response Network: Pathway Crosstalk in Genome Maintenance and Therapy
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .section-divider { border-bottom: 3px solid #e2e8f0; margin: 2rem 0; }
         .highlight-box { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
         .pathway-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .pathway-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900 leading-relaxed">
-
-    <!-- Header -->
-    <header class="gradient-bg text-white py-8">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-dna text-3xl"></i>
-                    <span class="text-xl font-semibold">CellNucleus.com</span>
-                </div>
-                <div class="text-sm opacity-90">Nuclear Biology Research Hub</div>
-            </div>
-            <h1 class="text-4xl font-bold mb-3">The DNA Damage Response Network</h1>
-            <p class="text-xl opacity-95 max-w-4xl">A Critical Review of Pathway Crosstalk in Genome Maintenance, Disease, and Therapy</p>
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900 leading-relaxed">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-6 py-8">
+   <!-- Abstract -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+     <i class="fas fa-file-alt text-blue-600 mr-3">
+     </i>
+     Abstract
+    </h2>
+    <div class="prose prose-lg max-w-none text-gray-700">
+     <p class="text-lg leading-relaxed">
+      This review synthesizes the current understanding of the DNA Damage Response (DDR) as an integrated network rather than a collection of discrete pathways. We explore the molecular mechanisms of crosstalk between Base Excision Repair (BER), Nucleotide Excision Repair (NER), Mismatch Repair (MMR), Homologous Recombination (HR), and Non-Homologous End Joining (NHEJ). Central to this network are master signaling kinases ATM and ATR, which orchestrate pathway choice and coordinate repair with cell cycle progression. We critically examine the therapeutic implications of targeting DDR crosstalk in cancer treatment and aging interventions.
+     </p>
+    </div>
+   </section>
+   <!-- Introduction -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-play-circle text-green-600 mr-3">
+     </i>
+     Introduction: The Integrated DDR Network
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+     <div class="prose max-w-none text-gray-700">
+      <p class="text-base leading-relaxed mb-4">
+       The maintenance of genome integrity is fundamental to cellular survival and organism viability. Rather than operating as isolated repair systems, DNA damage response pathways function as an interconnected network with extensive crosstalk, shared components, and coordinated responses to diverse forms of DNA damage.
+      </p>
+      <p class="text-base leading-relaxed mb-4">
+       This integrated perspective has revolutionized our understanding of genome maintenance, revealing how cells optimize repair efficiency through pathway coordination, backup mechanisms, and context-dependent pathway choice. The therapeutic implications of this crosstalk are profound, offering new strategies for cancer treatment and age-related interventions.
+      </p>
+     </div>
+     <div class="highlight-box rounded-lg p-6">
+      <h3 class="font-semibold text-gray-800 mb-3">
+       Key DDR Pathways
+      </h3>
+      <ul class="space-y-2 text-sm text-gray-700">
+       <li class="flex items-center">
+        <i class="fas fa-check-circle text-green-500 mr-2">
+        </i>
+        Base Excision Repair (BER)
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-check-circle text-green-500 mr-2">
+        </i>
+        Nucleotide Excision Repair (NER)
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-check-circle text-green-500 mr-2">
+        </i>
+        Mismatch Repair (MMR)
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-check-circle text-green-500 mr-2">
+        </i>
+        Homologous Recombination (HR)
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-check-circle text-green-500 mr-2">
+        </i>
+        Non-Homologous End Joining (NHEJ)
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <!-- DNA Repair Pathways Overview -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-network-wired text-purple-600 mr-3">
+     </i>
+     DNA Repair Pathway Architecture
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+     <!-- BER Pathway -->
+     <div class="pathway-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-wrench text-blue-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Base Excision Repair
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       Repairs small, non-helix-distorting base lesions through glycosylase recognition, AP endonuclease incision, and polymerase gap filling.
+      </p>
+      <div class="text-xs text-blue-700 font-medium">
+       Key Players: DNA glycosylases, APE1, Pol β, PARP1
+      </div>
+     </div>
+     <!-- NER Pathway -->
+     <div class="pathway-card bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-cut text-green-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Nucleotide Excision Repair
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       Removes bulky DNA adducts and UV-induced lesions through dual incision and patch synthesis mechanisms.
+      </p>
+      <div class="text-xs text-green-700 font-medium">
+       Key Players: XPC, TFIIH, XPA, RPA, ERCC1-XPF
+      </div>
+     </div>
+     <!-- MMR Pathway -->
+     <div class="pathway-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 border border-yellow-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-search text-yellow-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Mismatch Repair
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       Corrects replication errors including base mismatches and insertion/deletion loops through mismatch recognition and strand-specific repair.
+      </p>
+      <div class="text-xs text-yellow-700 font-medium">
+       Key Players: MSH2/6, MLH1, PMS2, PCNA
+      </div>
+     </div>
+     <!-- HR Pathway -->
+     <div class="pathway-card bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 border border-red-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-exchange-alt text-red-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Homologous Recombination
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       High-fidelity repair of double-strand breaks using sister chromatid templates through strand invasion and Holiday junction resolution.
+      </p>
+      <div class="text-xs text-red-700 font-medium">
+       Key Players: BRCA1/2, RAD51, MRN complex, 53BP1
+      </div>
+     </div>
+     <!-- NHEJ Pathway -->
+     <div class="pathway-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-link text-purple-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Non-Homologous End Joining
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       Rapid but error-prone repair of double-strand breaks through direct ligation without homology requirements.
+      </p>
+      <div class="text-xs text-purple-700 font-medium">
+       Key Players: Ku70/80, DNA-PKcs, XRCC4, Ligase IV
+      </div>
+     </div>
+     <!-- Pathway Integration -->
+     <div class="pathway-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 border border-gray-200">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-sitemap text-gray-600 text-xl mr-3">
+       </i>
+       <h3 class="font-semibold text-gray-800">
+        Pathway Integration
+       </h3>
+      </div>
+      <p class="text-sm text-gray-700 mb-3">
+       Coordinated responses through shared factors, signaling cascades, and context-dependent pathway choice mechanisms.
+      </p>
+      <div class="text-xs text-gray-700 font-medium">
+       Integration Points: ATM/ATR, p53, PARP, Chromatin context
+      </div>
+     </div>
+    </div>
+    <!-- Pathway Crosstalk Diagram -->
+    <div class="bg-gray-50 rounded-lg p-6">
+     <h3 class="font-semibold text-gray-800 mb-4 text-center">
+      DNA Repair Pathway Crosstalk Network
+     </h3>
+     <div class="text-center text-sm text-gray-600 mb-4">
+      Interconnected pathways share components and coordinate responses to maintain genome integrity
+     </div>
+     <div class="grid grid-cols-3 md:grid-cols-5 gap-4 items-center justify-center">
+      <div class="text-center">
+       <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">
+        BER
+       </div>
+       <div class="text-xs text-gray-600">
+        Base Lesions
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">
+        NER
+       </div>
+       <div class="text-xs text-gray-600">
+        Bulky Adducts
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">
+        MMR
+       </div>
+       <div class="text-xs text-gray-600">
+        Mismatches
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">
+        HR
+       </div>
+       <div class="text-xs text-gray-600">
+        DSB Repair
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">
+        NHEJ
+       </div>
+       <div class="text-xs text-gray-600">
+        End Joining
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Master Signaling Kinases -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-broadcast-tower text-orange-600 mr-3">
+     </i>
+     Master Signaling Kinases: ATM and ATR
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 mb-6">
+     <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 border border-orange-200">
+      <h3 class="font-semibold text-gray-800 mb-4 flex items-center">
+       <i class="fas fa-satellite text-orange-600 mr-2">
+       </i>
+       ATM Kinase Network
+      </h3>
+      <div class="space-y-3 text-sm text-gray-700">
+       <div>
+        <strong>
+         Activation:
+        </strong>
+        DSB-induced chromatin changes
+       </div>
+       <div>
+        <strong>
+         Key Substrates:
+        </strong>
+        p53, BRCA1, 53BP1, Chk2
+       </div>
+       <div>
+        <strong>
+         Functions:
+        </strong>
+        DSB signaling, checkpoint activation, apoptosis
+       </div>
+       <div>
+        <strong>
+         Pathway Choice:
+        </strong>
+        Promotes NHEJ in G1, HR in S/G2
+       </div>
+      </div>
+     </div>
+     <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 border border-teal-200">
+      <h3 class="font-semibold text-gray-800 mb-4 flex items-center">
+       <i class="fas fa-radar text-teal-600 mr-2">
+       </i>
+       ATR Kinase Network
+      </h3>
+      <div class="space-y-3 text-sm text-gray-700">
+       <div>
+        <strong>
+         Activation:
+        </strong>
+        RPA-coated ssDNA
+       </div>
+       <div>
+        <strong>
+         Key Substrates:
+        </strong>
+        Chk1, p53, BRCA1, RPA
+       </div>
+       <div>
+        <strong>
+         Functions:
+        </strong>
+        Replication stress response, S-phase checkpoint
+       </div>
+       <div>
+        <strong>
+         Pathway Choice:
+        </strong>
+        Coordinates replication restart and fork protection
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-6">
+     <h3 class="font-semibold text-gray-800 mb-4">
+      ATM/ATR Signaling Integration
+     </h3>
+     <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <div class="bg-white rounded p-4 border">
+       <h4 class="font-medium text-gray-800 mb-2">
+        Shared Substrates
+       </h4>
+       <ul class="space-y-1 text-gray-600">
+        <li>
+         • p53 tumor suppressor
+        </li>
+        <li>
+         • BRCA1 repair factor
+        </li>
+        <li>
+         • H2AX histone variant
+        </li>
+        <li>
+         • SMC1 cohesin component
+        </li>
+       </ul>
+      </div>
+      <div class="bg-white rounded p-4 border">
+       <h4 class="font-medium text-gray-800 mb-2">
+        Checkpoint Coordination
+       </h4>
+       <ul class="space-y-1 text-gray-600">
+        <li>
+         • G1/S transition control
+        </li>
+        <li>
+         • Intra-S phase checkpoint
+        </li>
+        <li>
+         • G2/M checkpoint activation
+        </li>
+        <li>
+         • Spindle checkpoint integration
+        </li>
+       </ul>
+      </div>
+      <div class="bg-white rounded p-4 border">
+       <h4 class="font-medium text-gray-800 mb-2">
+        Repair Coordination
+       </h4>
+       <ul class="space-y-1 text-gray-600">
+        <li>
+         • Pathway choice decisions
+        </li>
+        <li>
+         • Chromatin remodeling
+        </li>
+        <li>
+         • Repair factor recruitment
+        </li>
+        <li>
+         • Quality control mechanisms
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Pathway Crosstalk Mechanisms -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-project-diagram text-indigo-600 mr-3">
+     </i>
+     Crosstalk Mechanisms and Shared Components
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 mb-6">
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Shared Protein Factors
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+        <h4 class="font-medium text-blue-800 mb-2">
+         PARP Family
+        </h4>
+        <p class="text-sm text-gray-700">
+         Functions in BER, HR, and NHEJ; coordinates pathway choice through PARylation-dependent recruitment.
+        </p>
+       </div>
+       <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+        <h4 class="font-medium text-green-800 mb-2">
+         RPA Complex
+        </h4>
+        <p class="text-sm text-gray-700">
+         Essential for NER, HR, and replication; mediates ATR activation and coordinates ssDNA metabolism.
+        </p>
+       </div>
+       <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+        <h4 class="font-medium text-purple-800 mb-2">
+         BRCA1/2 Network
+        </h4>
+        <p class="text-sm text-gray-700">
+         Central to HR, but also influences NHEJ choice and coordinates with other repair pathways.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Chromatin Context
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+        <h4 class="font-medium text-red-800 mb-2">
+         Histone Modifications
+        </h4>
+        <p class="text-sm text-gray-700">
+         γH2AX, H3K56ac, and other marks coordinate pathway choice and factor recruitment across repair systems.
+        </p>
+       </div>
+       <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
+        <h4 class="font-medium text-yellow-800 mb-2">
+         Chromatin Remodeling
+        </h4>
+        <p class="text-sm text-gray-700">
+         SWI/SNF and other complexes facilitate access for multiple repair pathways and coordinate repair completion.
+        </p>
+       </div>
+       <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
+        <h4 class="font-medium text-teal-800 mb-2">
+         53BP1/BRCA1 Balance
+        </h4>
+        <p class="text-sm text-gray-700">
+         Competitive recruitment determines HR vs. NHEJ choice at DSBs through chromatin context reading.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Crosstalk Examples -->
+    <div class="bg-gray-50 rounded-lg p-6">
+     <h3 class="font-semibold text-gray-800 mb-4">
+      Key Crosstalk Examples
+     </h3>
+     <div class="grid md:grid-cols-2 gap-6">
+      <div>
+       <h4 class="font-medium text-gray-800 mb-3">
+        BER-HR Interaction
+       </h4>
+       <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         BER intermediates can be converted to DSBs
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         PARP1 bridges BER and HR responses
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-blue-500 mr-2 mt-1">
+         </i>
+         Replication collision with BER sites triggers HR
+        </li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-medium text-gray-800 mb-3">
+        MMR-HR Crosstalk
+       </h4>
+       <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         MMR defects trigger HR-mediated tolerance
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         Shared factors coordinate both pathways
+        </li>
+        <li class="flex items-start">
+         <i class="fas fa-arrow-right text-green-500 mr-2 mt-1">
+         </i>
+         MSH2/6 can promote HR at stalled forks
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Cell Cycle Coordination -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-sync-alt text-pink-600 mr-3">
+     </i>
+     Cell Cycle Coordination and Pathway Choice
+    </h2>
+    <div class="mb-6">
+     <h3 class="font-semibold text-gray-800 mb-4">
+      Cell Cycle-Dependent Repair Preferences
+     </h3>
+     <div class="grid md:grid-cols-4 gap-4">
+      <div class="bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg p-4 text-center border border-blue-300">
+       <h4 class="font-medium text-blue-800 mb-2">
+        G1 Phase
+       </h4>
+       <div class="text-sm text-blue-700">
+        <div class="mb-2">
+         Dominant: NHEJ
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-6 py-8">
-
-        <!-- Abstract -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-file-alt text-blue-600 mr-3"></i>Abstract
-            </h2>
-            <div class="prose prose-lg max-w-none text-gray-700">
-                <p class="text-lg leading-relaxed">
-                    This review synthesizes the current understanding of the DNA Damage Response (DDR) as an integrated network rather than a collection of discrete pathways. We explore the molecular mechanisms of crosstalk between Base Excision Repair (BER), Nucleotide Excision Repair (NER), Mismatch Repair (MMR), Homologous Recombination (HR), and Non-Homologous End Joining (NHEJ). Central to this network are master signaling kinases ATM and ATR, which orchestrate pathway choice and coordinate repair with cell cycle progression. We critically examine the therapeutic implications of targeting DDR crosstalk in cancer treatment and aging interventions.
-                </p>
-            </div>
-        </section>
-
-        <!-- Introduction -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-play-circle text-green-600 mr-3"></i>Introduction: The Integrated DDR Network
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="prose max-w-none text-gray-700">
-                    <p class="text-base leading-relaxed mb-4">
-                        The maintenance of genome integrity is fundamental to cellular survival and organism viability. Rather than operating as isolated repair systems, DNA damage response pathways function as an interconnected network with extensive crosstalk, shared components, and coordinated responses to diverse forms of DNA damage.
-                    </p>
-                    <p class="text-base leading-relaxed mb-4">
-                        This integrated perspective has revolutionized our understanding of genome maintenance, revealing how cells optimize repair efficiency through pathway coordination, backup mechanisms, and context-dependent pathway choice. The therapeutic implications of this crosstalk are profound, offering new strategies for cancer treatment and age-related interventions.
-                    </p>
-                </div>
-                <div class="highlight-box rounded-lg p-6">
-                    <h3 class="font-semibold text-gray-800 mb-3">Key DDR Pathways</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Base Excision Repair (BER)</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Nucleotide Excision Repair (NER)</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Mismatch Repair (MMR)</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Homologous Recombination (HR)</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Non-Homologous End Joining (NHEJ)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- DNA Repair Pathways Overview -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-network-wired text-purple-600 mr-3"></i>DNA Repair Pathway Architecture
-            </h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <!-- BER Pathway -->
-                <div class="pathway-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-wrench text-blue-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Base Excision Repair</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Repairs small, non-helix-distorting base lesions through glycosylase recognition, AP endonuclease incision, and polymerase gap filling.
-                    </p>
-                    <div class="text-xs text-blue-700 font-medium">
-                        Key Players: DNA glycosylases, APE1, Pol β, PARP1
-                    </div>
-                </div>
-
-                <!-- NER Pathway -->
-                <div class="pathway-card bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-cut text-green-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Nucleotide Excision Repair</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Removes bulky DNA adducts and UV-induced lesions through dual incision and patch synthesis mechanisms.
-                    </p>
-                    <div class="text-xs text-green-700 font-medium">
-                        Key Players: XPC, TFIIH, XPA, RPA, ERCC1-XPF
-                    </div>
-                </div>
-
-                <!-- MMR Pathway -->
-                <div class="pathway-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 border border-yellow-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-search text-yellow-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Mismatch Repair</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Corrects replication errors including base mismatches and insertion/deletion loops through mismatch recognition and strand-specific repair.
-                    </p>
-                    <div class="text-xs text-yellow-700 font-medium">
-                        Key Players: MSH2/6, MLH1, PMS2, PCNA
-                    </div>
-                </div>
-
-                <!-- HR Pathway -->
-                <div class="pathway-card bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 border border-red-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-exchange-alt text-red-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Homologous Recombination</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        High-fidelity repair of double-strand breaks using sister chromatid templates through strand invasion and Holiday junction resolution.
-                    </p>
-                    <div class="text-xs text-red-700 font-medium">
-                        Key Players: BRCA1/2, RAD51, MRN complex, 53BP1
-                    </div>
-                </div>
-
-                <!-- NHEJ Pathway -->
-                <div class="pathway-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-link text-purple-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Non-Homologous End Joining</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Rapid but error-prone repair of double-strand breaks through direct ligation without homology requirements.
-                    </p>
-                    <div class="text-xs text-purple-700 font-medium">
-                        Key Players: Ku70/80, DNA-PKcs, XRCC4, Ligase IV
-                    </div>
-                </div>
-
-                <!-- Pathway Integration -->
-                <div class="pathway-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 border border-gray-200">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-sitemap text-gray-600 text-xl mr-3"></i>
-                        <h3 class="font-semibold text-gray-800">Pathway Integration</h3>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Coordinated responses through shared factors, signaling cascades, and context-dependent pathway choice mechanisms.
-                    </p>
-                    <div class="text-xs text-gray-700 font-medium">
-                        Integration Points: ATM/ATR, p53, PARP, Chromatin context
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pathway Crosstalk Diagram -->
-            <div class="bg-gray-50 rounded-lg p-6">
-                <h3 class="font-semibold text-gray-800 mb-4 text-center">DNA Repair Pathway Crosstalk Network</h3>
-                <div class="text-center text-sm text-gray-600 mb-4">
-                    Interconnected pathways share components and coordinate responses to maintain genome integrity
-                </div>
-                <div class="grid grid-cols-3 md:grid-cols-5 gap-4 items-center justify-center">
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">BER</div>
-                        <div class="text-xs text-gray-600">Base Lesions</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">NER</div>
-                        <div class="text-xs text-gray-600">Bulky Adducts</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">MMR</div>
-                        <div class="text-xs text-gray-600">Mismatches</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">HR</div>
-                        <div class="text-xs text-gray-600">DSB Repair</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-2">NHEJ</div>
-                        <div class="text-xs text-gray-600">End Joining</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Master Signaling Kinases -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-broadcast-tower text-orange-600 mr-3"></i>Master Signaling Kinases: ATM and ATR
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-6">
-                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 border border-orange-200">
-                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center">
-                        <i class="fas fa-satellite text-orange-600 mr-2"></i>ATM Kinase Network
-                    </h3>
-                    <div class="space-y-3 text-sm text-gray-700">
-                        <div><strong>Activation:</strong> DSB-induced chromatin changes</div>
-                        <div><strong>Key Substrates:</strong> p53, BRCA1, 53BP1, Chk2</div>
-                        <div><strong>Functions:</strong> DSB signaling, checkpoint activation, apoptosis</div>
-                        <div><strong>Pathway Choice:</strong> Promotes NHEJ in G1, HR in S/G2</div>
-                    </div>
-                </div>
-                
-                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 border border-teal-200">
-                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center">
-                        <i class="fas fa-radar text-teal-600 mr-2"></i>ATR Kinase Network
-                    </h3>
-                    <div class="space-y-3 text-sm text-gray-700">
-                        <div><strong>Activation:</strong> RPA-coated ssDNA</div>
-                        <div><strong>Key Substrates:</strong> Chk1, p53, BRCA1, RPA</div>
-                        <div><strong>Functions:</strong> Replication stress response, S-phase checkpoint</div>
-                        <div><strong>Pathway Choice:</strong> Coordinates replication restart and fork protection</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-50 rounded-lg p-6">
-                <h3 class="font-semibold text-gray-800 mb-4">ATM/ATR Signaling Integration</h3>
-                <div class="grid md:grid-cols-3 gap-4 text-sm">
-                    <div class="bg-white rounded p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-2">Shared Substrates</h4>
-                        <ul class="space-y-1 text-gray-600">
-                            <li>• p53 tumor suppressor</li>
-                            <li>• BRCA1 repair factor</li>
-                            <li>• H2AX histone variant</li>
-                            <li>• SMC1 cohesin component</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-2">Checkpoint Coordination</h4>
-                        <ul class="space-y-1 text-gray-600">
-                            <li>• G1/S transition control</li>
-                            <li>• Intra-S phase checkpoint</li>
-                            <li>• G2/M checkpoint activation</li>
-                            <li>• Spindle checkpoint integration</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-2">Repair Coordination</h4>
-                        <ul class="space-y-1 text-gray-600">
-                            <li>• Pathway choice decisions</li>
-                            <li>• Chromatin remodeling</li>
-                            <li>• Repair factor recruitment</li>
-                            <li>• Quality control mechanisms</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pathway Crosstalk Mechanisms -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-project-diagram text-indigo-600 mr-3"></i>Crosstalk Mechanisms and Shared Components
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-6">
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Shared Protein Factors</h3>
-                    <div class="space-y-4">
-                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                            <h4 class="font-medium text-blue-800 mb-2">PARP Family</h4>
-                            <p class="text-sm text-gray-700">Functions in BER, HR, and NHEJ; coordinates pathway choice through PARylation-dependent recruitment.</p>
-                        </div>
-                        <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                            <h4 class="font-medium text-green-800 mb-2">RPA Complex</h4>
-                            <p class="text-sm text-gray-700">Essential for NER, HR, and replication; mediates ATR activation and coordinates ssDNA metabolism.</p>
-                        </div>
-                        <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                            <h4 class="font-medium text-purple-800 mb-2">BRCA1/2 Network</h4>
-                            <p class="text-sm text-gray-700">Central to HR, but also influences NHEJ choice and coordinates with other repair pathways.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Chromatin Context</h3>
-                    <div class="space-y-4">
-                        <div class="bg-red-50 rounded-lg p-4 border border-red-200">
-                            <h4 class="font-medium text-red-800 mb-2">Histone Modifications</h4>
-                            <p class="text-sm text-gray-700">γH2AX, H3K56ac, and other marks coordinate pathway choice and factor recruitment across repair systems.</p>
-                        </div>
-                        <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
-                            <h4 class="font-medium text-yellow-800 mb-2">Chromatin Remodeling</h4>
-                            <p class="text-sm text-gray-700">SWI/SNF and other complexes facilitate access for multiple repair pathways and coordinate repair completion.</p>
-                        </div>
-                        <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
-                            <h4 class="font-medium text-teal-800 mb-2">53BP1/BRCA1 Balance</h4>
-                            <p class="text-sm text-gray-700">Competitive recruitment determines HR vs. NHEJ choice at DSBs through chromatin context reading.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Crosstalk Examples -->
-            <div class="bg-gray-50 rounded-lg p-6">
-                <h3 class="font-semibold text-gray-800 mb-4">Key Crosstalk Examples</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-medium text-gray-800 mb-3">BER-HR Interaction</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>BER intermediates can be converted to DSBs</li>
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>PARP1 bridges BER and HR responses</li>
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i>Replication collision with BER sites triggers HR</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-gray-800 mb-3">MMR-HR Crosstalk</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>MMR defects trigger HR-mediated tolerance</li>
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>Shared factors coordinate both pathways</li>
-                            <li class="flex items-start"><i class="fas fa-arrow-right text-green-500 mr-2 mt-1"></i>MSH2/6 can promote HR at stalled forks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cell Cycle Coordination -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-sync-alt text-pink-600 mr-3"></i>Cell Cycle Coordination and Pathway Choice
-            </h2>
-            
-            <div class="mb-6">
-                <h3 class="font-semibold text-gray-800 mb-4">Cell Cycle-Dependent Repair Preferences</h3>
-                <div class="grid md:grid-cols-4 gap-4">
-                    <div class="bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg p-4 text-center border border-blue-300">
-                        <h4 class="font-medium text-blue-800 mb-2">G1 Phase</h4>
-                        <div class="text-sm text-blue-700">
-                            <div class="mb-2">Dominant: NHEJ</div>
-                            <div class="text-xs">Limited HR due to lack of sister chromatids</div>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-b from-green-100 to-green-200 rounded-lg p-4 text-center border border-green-300">
-                        <h4 class="font-medium text-green-800 mb-2">S Phase</h4>
-                        <div class="text-sm text-green-700">
-                            <div class="mb-2">Mixed: HR + NHEJ</div>
-                            <div class="text-xs">Replication-associated repair, fork restart</div>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-b from-yellow-100 to-yellow-200 rounded-lg p-4 text-center border border-yellow-300">
-                        <h4 class="font-medium text-yellow-800 mb-2">G2 Phase</h4>
-                        <div class="text-sm text-yellow-700">
-                            <div class="mb-2">Dominant: HR</div>
-                            <div class="text-xs">Sister chromatid availability favors HR</div>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-b from-purple-100 to-purple-200 rounded-lg p-4 text-center border border-purple-300">
-                        <h4 class="font-medium text-purple-800 mb-2">M Phase</h4>
-                        <div class="text-sm text-purple-700">
-                            <div class="mb-2">Limited Repair</div>
-                            <div class="text-xs">Checkpoint-mediated delay or apoptosis</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-50 rounded-lg p-6">
-                <h3 class="font-semibold text-gray-800 mb-4">Checkpoint Integration</h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-lg p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-3">DNA Damage Checkpoints</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• G1/S checkpoint (p53-dependent)</li>
-                            <li>• Intra-S phase checkpoint (ATR-Chk1)</li>
-                            <li>• G2/M checkpoint (ATM-Chk2)</li>
-                            <li>• Spindle assembly checkpoint</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-lg p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-3">Repair-Checkpoint Coupling</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• Repair completion signals</li>
-                            <li>• Pathway choice feedback</li>
-                            <li>• Quality control mechanisms</li>
-                            <li>• Apoptosis vs. survival decisions</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-lg p-4 border">
-                        <h4 class="font-medium text-gray-800 mb-3">Therapeutic Implications</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• Checkpoint inhibitor combinations</li>
-                            <li>• Cell cycle-specific targeting</li>
-                            <li>• Synthetic lethality strategies</li>
-                            <li>• Resistance mechanism understanding</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Therapeutic Implications -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-pills text-red-600 mr-3"></i>Therapeutic Implications and Clinical Applications
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-6">
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Cancer Therapy Strategies</h3>
-                    <div class="space-y-4">
-                        <div class="bg-red-50 rounded-lg p-4 border border-red-200">
-                            <h4 class="font-medium text-red-800 mb-2">PARP Inhibitors</h4>
-                            <p class="text-sm text-gray-700 mb-2">Exploit synthetic lethality in HR-deficient cancers by targeting BER pathway.</p>
-                            <div class="text-xs text-red-700">Examples: Olaparib, Rucaparib, Niraparib</div>
-                        </div>
-                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                            <h4 class="font-medium text-blue-800 mb-2">ATM/ATR Inhibitors</h4>
-                            <p class="text-sm text-gray-700 mb-2">Disrupt checkpoint signaling and pathway coordination.</p>
-                            <div class="text-xs text-blue-700">Examples: AZD0156, VE-821, AZD6738</div>
-                        </div>
-                        <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                            <h4 class="font-medium text-green-800 mb-2">DNA-PK Inhibitors</h4>
-                            <p class="text-sm text-gray-700 mb-2">Target NHEJ pathway in combination therapies.</p>
-                            <div class="text-xs text-green-700">Examples: NU7441, AZD7648</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Combination Strategies</h3>
-                    <div class="space-y-4">
-                        <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                            <h4 class="font-medium text-purple-800 mb-2">Multi-pathway Targeting</h4>
-                            <p class="text-sm text-gray-700">Simultaneous inhibition of multiple repair pathways to overcome resistance mechanisms.</p>
-                        </div>
-                        <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
-                            <h4 class="font-medium text-yellow-800 mb-2">Chemotherapy Sensitization</h4>
-                            <p class="text-sm text-gray-700">DDR inhibitors enhance cytotoxic drug efficacy by preventing damage repair.</p>
-                        </div>
-                        <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
-                            <h4 class="font-medium text-teal-800 mb-2">Radiotherapy Enhancement</h4>
-                            <p class="text-sm text-gray-700">Repair pathway inhibition increases radiation sensitivity in cancer cells.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clinical Trial Examples -->
-            <div class="bg-gray-50 rounded-lg p-6">
-                <h3 class="font-semibold text-gray-800 mb-4">Clinical Development Landscape</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr class="bg-gray-200 text-gray-700">
-                                <th class="px-4 py-2 text-left">Drug Class</th>
-                                <th class="px-4 py-2 text-left">Target</th>
-                                <th class="px-4 py-2 text-left">Cancer Types</th>
-                                <th class="px-4 py-2 text-left">Development Stage</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700">
-                            <tr class="border-b">
-                                <td class="px-4 py-2">PARP inhibitors</td>
-                                <td class="px-4 py-2">PARP1/2</td>
-                                <td class="px-4 py-2">BRCA-mutant ovarian, breast</td>
-                                <td class="px-4 py-2">FDA approved</td>
-                            </tr>
-                            <tr class="border-b bg-gray-50">
-                                <td class="px-4 py-2">ATR inhibitors</td>
-                                <td class="px-4 py-2">ATR kinase</td>
-                                <td class="px-4 py-2">Replication stress-high tumors</td>
-                                <td class="px-4 py-2">Phase I/II</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="px-4 py-2">ATM inhibitors</td>
-                                <td class="px-4 py-2">ATM kinase</td>
-                                <td class="px-4 py-2">p53-deficient cancers</td>
-                                <td class="px-4 py-2">Phase I</td>
-                            </tr>
-                            <tr class="border-b bg-gray-50">
-                                <td class="px-4 py-2">DNA-PK inhibitors</td>
-                                <td class="px-4 py-2">DNA-PKcs</td>
-                                <td class="px-4 py-2">Combination with RT/chemo</td>
-                                <td class="px-4 py-2">Preclinical/Phase I</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Aging and Disease -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-hourglass-half text-amber-600 mr-3"></i>DDR Network in Aging and Age-Related Disease
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-6">
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Age-Related DDR Decline</h3>
-                    <div class="space-y-3 text-sm text-gray-700">
-                        <div class="flex items-start">
-                            <i class="fas fa-arrow-down text-red-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Pathway Efficiency:</strong> Gradual decline in repair capacity across all major pathways
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-arrow-down text-red-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Signaling Fidelity:</strong> Reduced ATM/ATR activation and downstream checkpoint responses
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-arrow-down text-red-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Pathway Coordination:</strong> Impaired crosstalk leading to suboptimal repair choices
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-arrow-down text-red-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Quality Control:</strong> Increased tolerance for imperfect repair outcomes
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Therapeutic Interventions</h3>
-                    <div class="space-y-3 text-sm text-gray-700">
-                        <div class="flex items-start">
-                            <i class="fas fa-plus-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>NAD+ Supplementation:</strong> Support PARP activity and DNA repair capacity
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-plus-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Senolytics:</strong> Remove senescent cells with persistent DDR activation
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-plus-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Antioxidants:</strong> Reduce oxidative damage burden on repair systems
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-plus-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <strong>Exercise/Caloric Restriction:</strong> Enhance DDR through hormetic stress responses
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
-                <h3 class="font-semibold text-amber-800 mb-4">Age-Related Diseases and DDR</h3>
-                <div class="grid md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                        <h4 class="font-medium text-amber-800 mb-2">Neurodegeneration</h4>
-                        <ul class="space-y-1 text-amber-700">
-                            <li>• Accumulating DNA damage in neurons</li>
-                            <li>• Defective DDR in Alzheimer's disease</li>
-                            <li>• ATM mutations in ataxia telangiectasia</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-amber-800 mb-2">Cardiovascular Disease</h4>
-                        <ul class="space-y-1 text-amber-700">
-                            <li>• Endothelial cell DNA damage</li>
-                            <li>• Oxidative stress and repair failure</li>
-                            <li>• Telomere dysfunction</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-amber-800 mb-2">Immune Dysfunction</h4>
-                        <ul class="space-y-1 text-amber-700">
-                            <li>• Immunosenescence</li>
-                            <li>• Chronic inflammation (inflammaging)</li>
-                            <li>• Defective lymphocyte development</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Directions -->
-        <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-rocket text-blue-600 mr-3"></i>Future Directions and Emerging Concepts
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Technological Advances</h3>
-                    <div class="space-y-4">
-                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                            <h4 class="font-medium text-blue-800 mb-2">Single-Cell DDR Analysis</h4>
-                            <p class="text-sm text-gray-700">Understanding pathway choice heterogeneity and crosstalk at single-cell resolution.</p>
-                        </div>
-                        <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                            <h4 class="font-medium text-green-800 mb-2">Real-Time Repair Imaging</h4>
-                            <p class="text-sm text-gray-700">Live visualization of repair pathway dynamics and factor recruitment kinetics.</p>
-                        </div>
-                        <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                            <h4 class="font-medium text-purple-800 mb-2">Computational Modeling</h4>
-                            <p class="text-sm text-gray-700">Systems-level models predicting DDR network behavior and therapeutic responses.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-gray-800 mb-4">Emerging Therapeutic Concepts</h3>
-                    <div class="space-y-4">
-                        <div class="bg-red-50 rounded-lg p-4 border border-red-200">
-                            <h4 class="font-medium text-red-800 mb-2">Pathway Rebalancing</h4>
-                            <p class="text-sm text-gray-700">Therapeutic strategies to restore optimal DDR network function rather than simple inhibition.</p>
-                        </div>
-                        <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
-                            <h4 class="font-medium text-yellow-800 mb-2">Precision DDR Medicine</h4>
-                            <p class="text-sm text-gray-700">Personalized therapy based on individual DDR pathway profiles and crosstalk patterns.</p>
-                        </div>
-                        <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
-                            <h4 class="font-medium text-teal-800 mb-2">Temporal Targeting</h4>
-                            <p class="text-sm text-gray-700">Time-dependent therapeutic interventions matching circadian DDR rhythms.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conclusions -->
-        <section class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-lg p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 flex items-center">
-                <i class="fas fa-lightbulb mr-3"></i>Conclusions and Clinical Outlook
-            </h2>
-            <div class="prose prose-lg max-w-none text-gray-200">
-                <p class="text-lg leading-relaxed mb-4">
-                    The DNA damage response network represents a paradigm shift from viewing repair pathways as independent systems to understanding genome maintenance as an integrated, coordinated response. The extensive crosstalk between BER, NER, MMR, HR, and NHEJ pathways, orchestrated by master kinases ATM and ATR, provides both robustness and flexibility in maintaining genome integrity.
-                </p>
-                <p class="text-base leading-relaxed mb-4">
-                    Therapeutic targeting of DDR crosstalk has already yielded clinical successes, particularly with PARP inhibitors in HR-deficient cancers. The expanding understanding of pathway interactions opens new avenues for combination therapies, precision medicine approaches, and interventions in age-related diseases.
-                </p>
-                <p class="text-base leading-relaxed">
-                    Future research directions emphasizing single-cell analysis, real-time imaging, and computational modeling will further advance our understanding of DDR network dynamics, ultimately leading to more effective therapeutic strategies for cancer, aging, and genetic diseases.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-dna text-2xl"></i>
-                    <div>
-                        <div class="font-semibold">CellNucleus.com</div>
-                        <div class="text-sm text-gray-400">Nuclear Biology Research Hub</div>
-                    </div>
-                </div>
-                <div class="text-sm text-gray-400">
-                    Contact: mhendzel@ualberta.ca | Share: www.cellnucleus.com
-                </div>
-            </div>
+        <div class="text-xs">
+         Limited HR due to lack of sister chromatids
         </div>
-    </footer>
+       </div>
+      </div>
+      <div class="bg-gradient-to-b from-green-100 to-green-200 rounded-lg p-4 text-center border border-green-300">
+       <h4 class="font-medium text-green-800 mb-2">
+        S Phase
+       </h4>
+       <div class="text-sm text-green-700">
+        <div class="mb-2">
+         Mixed: HR + NHEJ
+        </div>
+        <div class="text-xs">
+         Replication-associated repair, fork restart
+        </div>
+       </div>
+      </div>
+      <div class="bg-gradient-to-b from-yellow-100 to-yellow-200 rounded-lg p-4 text-center border border-yellow-300">
+       <h4 class="font-medium text-yellow-800 mb-2">
+        G2 Phase
+       </h4>
+       <div class="text-sm text-yellow-700">
+        <div class="mb-2">
+         Dominant: HR
+        </div>
+        <div class="text-xs">
+         Sister chromatid availability favors HR
+        </div>
+       </div>
+      </div>
+      <div class="bg-gradient-to-b from-purple-100 to-purple-200 rounded-lg p-4 text-center border border-purple-300">
+       <h4 class="font-medium text-purple-800 mb-2">
+        M Phase
+       </h4>
+       <div class="text-sm text-purple-700">
+        <div class="mb-2">
+         Limited Repair
+        </div>
+        <div class="text-xs">
+         Checkpoint-mediated delay or apoptosis
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-6">
+     <h3 class="font-semibold text-gray-800 mb-4">
+      Checkpoint Integration
+     </h3>
+     <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg p-4 border">
+       <h4 class="font-medium text-gray-800 mb-3">
+        DNA Damage Checkpoints
+       </h4>
+       <ul class="space-y-2 text-sm text-gray-700">
+        <li>
+         • G1/S checkpoint (p53-dependent)
+        </li>
+        <li>
+         • Intra-S phase checkpoint (ATR-Chk1)
+        </li>
+        <li>
+         • G2/M checkpoint (ATM-Chk2)
+        </li>
+        <li>
+         • Spindle assembly checkpoint
+        </li>
+       </ul>
+      </div>
+      <div class="bg-white rounded-lg p-4 border">
+       <h4 class="font-medium text-gray-800 mb-3">
+        Repair-Checkpoint Coupling
+       </h4>
+       <ul class="space-y-2 text-sm text-gray-700">
+        <li>
+         • Repair completion signals
+        </li>
+        <li>
+         • Pathway choice feedback
+        </li>
+        <li>
+         • Quality control mechanisms
+        </li>
+        <li>
+         • Apoptosis vs. survival decisions
+        </li>
+       </ul>
+      </div>
+      <div class="bg-white rounded-lg p-4 border">
+       <h4 class="font-medium text-gray-800 mb-3">
+        Therapeutic Implications
+       </h4>
+       <ul class="space-y-2 text-sm text-gray-700">
+        <li>
+         • Checkpoint inhibitor combinations
+        </li>
+        <li>
+         • Cell cycle-specific targeting
+        </li>
+        <li>
+         • Synthetic lethality strategies
+        </li>
+        <li>
+         • Resistance mechanism understanding
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Therapeutic Implications -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-pills text-red-600 mr-3">
+     </i>
+     Therapeutic Implications and Clinical Applications
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 mb-6">
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Cancer Therapy Strategies
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+        <h4 class="font-medium text-red-800 mb-2">
+         PARP Inhibitors
+        </h4>
+        <p class="text-sm text-gray-700 mb-2">
+         Exploit synthetic lethality in HR-deficient cancers by targeting BER pathway.
+        </p>
+        <div class="text-xs text-red-700">
+         Examples: Olaparib, Rucaparib, Niraparib
+        </div>
+       </div>
+       <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+        <h4 class="font-medium text-blue-800 mb-2">
+         ATM/ATR Inhibitors
+        </h4>
+        <p class="text-sm text-gray-700 mb-2">
+         Disrupt checkpoint signaling and pathway coordination.
+        </p>
+        <div class="text-xs text-blue-700">
+         Examples: AZD0156, VE-821, AZD6738
+        </div>
+       </div>
+       <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+        <h4 class="font-medium text-green-800 mb-2">
+         DNA-PK Inhibitors
+        </h4>
+        <p class="text-sm text-gray-700 mb-2">
+         Target NHEJ pathway in combination therapies.
+        </p>
+        <div class="text-xs text-green-700">
+         Examples: NU7441, AZD7648
+        </div>
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Combination Strategies
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+        <h4 class="font-medium text-purple-800 mb-2">
+         Multi-pathway Targeting
+        </h4>
+        <p class="text-sm text-gray-700">
+         Simultaneous inhibition of multiple repair pathways to overcome resistance mechanisms.
+        </p>
+       </div>
+       <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
+        <h4 class="font-medium text-yellow-800 mb-2">
+         Chemotherapy Sensitization
+        </h4>
+        <p class="text-sm text-gray-700">
+         DDR inhibitors enhance cytotoxic drug efficacy by preventing damage repair.
+        </p>
+       </div>
+       <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
+        <h4 class="font-medium text-teal-800 mb-2">
+         Radiotherapy Enhancement
+        </h4>
+        <p class="text-sm text-gray-700">
+         Repair pathway inhibition increases radiation sensitivity in cancer cells.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Clinical Trial Examples -->
+    <div class="bg-gray-50 rounded-lg p-6">
+     <h3 class="font-semibold text-gray-800 mb-4">
+      Clinical Development Landscape
+     </h3>
+     <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+       <thead>
+        <tr class="bg-gray-200 text-gray-700">
+         <th class="px-4 py-2 text-left">
+          Drug Class
+         </th>
+         <th class="px-4 py-2 text-left">
+          Target
+         </th>
+         <th class="px-4 py-2 text-left">
+          Cancer Types
+         </th>
+         <th class="px-4 py-2 text-left">
+          Development Stage
+         </th>
+        </tr>
+       </thead>
+       <tbody class="text-gray-700">
+        <tr class="border-b">
+         <td class="px-4 py-2">
+          PARP inhibitors
+         </td>
+         <td class="px-4 py-2">
+          PARP1/2
+         </td>
+         <td class="px-4 py-2">
+          BRCA-mutant ovarian, breast
+         </td>
+         <td class="px-4 py-2">
+          FDA approved
+         </td>
+        </tr>
+        <tr class="border-b bg-gray-50">
+         <td class="px-4 py-2">
+          ATR inhibitors
+         </td>
+         <td class="px-4 py-2">
+          ATR kinase
+         </td>
+         <td class="px-4 py-2">
+          Replication stress-high tumors
+         </td>
+         <td class="px-4 py-2">
+          Phase I/II
+         </td>
+        </tr>
+        <tr class="border-b">
+         <td class="px-4 py-2">
+          ATM inhibitors
+         </td>
+         <td class="px-4 py-2">
+          ATM kinase
+         </td>
+         <td class="px-4 py-2">
+          p53-deficient cancers
+         </td>
+         <td class="px-4 py-2">
+          Phase I
+         </td>
+        </tr>
+        <tr class="border-b bg-gray-50">
+         <td class="px-4 py-2">
+          DNA-PK inhibitors
+         </td>
+         <td class="px-4 py-2">
+          DNA-PKcs
+         </td>
+         <td class="px-4 py-2">
+          Combination with RT/chemo
+         </td>
+         <td class="px-4 py-2">
+          Preclinical/Phase I
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </section>
+   <!-- Aging and Disease -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-hourglass-half text-amber-600 mr-3">
+     </i>
+     DDR Network in Aging and Age-Related Disease
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 mb-6">
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Age-Related DDR Decline
+      </h3>
+      <div class="space-y-3 text-sm text-gray-700">
+       <div class="flex items-start">
+        <i class="fas fa-arrow-down text-red-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Pathway Efficiency:
+         </strong>
+         Gradual decline in repair capacity across all major pathways
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-arrow-down text-red-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Signaling Fidelity:
+         </strong>
+         Reduced ATM/ATR activation and downstream checkpoint responses
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-arrow-down text-red-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Pathway Coordination:
+         </strong>
+         Impaired crosstalk leading to suboptimal repair choices
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-arrow-down text-red-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Quality Control:
+         </strong>
+         Increased tolerance for imperfect repair outcomes
+        </div>
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Therapeutic Interventions
+      </h3>
+      <div class="space-y-3 text-sm text-gray-700">
+       <div class="flex items-start">
+        <i class="fas fa-plus-circle text-green-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          NAD+ Supplementation:
+         </strong>
+         Support PARP activity and DNA repair capacity
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-plus-circle text-green-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Senolytics:
+         </strong>
+         Remove senescent cells with persistent DDR activation
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-plus-circle text-green-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Antioxidants:
+         </strong>
+         Reduce oxidative damage burden on repair systems
+        </div>
+       </div>
+       <div class="flex items-start">
+        <i class="fas fa-plus-circle text-green-500 mr-2 mt-1">
+        </i>
+        <div>
+         <strong>
+          Exercise/Caloric Restriction:
+         </strong>
+         Enhance DDR through hormetic stress responses
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+     <h3 class="font-semibold text-amber-800 mb-4">
+      Age-Related Diseases and DDR
+     </h3>
+     <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <div>
+       <h4 class="font-medium text-amber-800 mb-2">
+        Neurodegeneration
+       </h4>
+       <ul class="space-y-1 text-amber-700">
+        <li>
+         • Accumulating DNA damage in neurons
+        </li>
+        <li>
+         • Defective DDR in Alzheimer's disease
+        </li>
+        <li>
+         • ATM mutations in ataxia telangiectasia
+        </li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-medium text-amber-800 mb-2">
+        Cardiovascular Disease
+       </h4>
+       <ul class="space-y-1 text-amber-700">
+        <li>
+         • Endothelial cell DNA damage
+        </li>
+        <li>
+         • Oxidative stress and repair failure
+        </li>
+        <li>
+         • Telomere dysfunction
+        </li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-medium text-amber-800 mb-2">
+        Immune Dysfunction
+       </h4>
+       <ul class="space-y-1 text-amber-700">
+        <li>
+         • Immunosenescence
+        </li>
+        <li>
+         • Chronic inflammation (inflammaging)
+        </li>
+        <li>
+         • Defective lymphocyte development
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Future Directions -->
+   <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+     <i class="fas fa-rocket text-blue-600 mr-3">
+     </i>
+     Future Directions and Emerging Concepts
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Technological Advances
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+        <h4 class="font-medium text-blue-800 mb-2">
+         Single-Cell DDR Analysis
+        </h4>
+        <p class="text-sm text-gray-700">
+         Understanding pathway choice heterogeneity and crosstalk at single-cell resolution.
+        </p>
+       </div>
+       <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+        <h4 class="font-medium text-green-800 mb-2">
+         Real-Time Repair Imaging
+        </h4>
+        <p class="text-sm text-gray-700">
+         Live visualization of repair pathway dynamics and factor recruitment kinetics.
+        </p>
+       </div>
+       <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+        <h4 class="font-medium text-purple-800 mb-2">
+         Computational Modeling
+        </h4>
+        <p class="text-sm text-gray-700">
+         Systems-level models predicting DDR network behavior and therapeutic responses.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="font-semibold text-gray-800 mb-4">
+       Emerging Therapeutic Concepts
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+        <h4 class="font-medium text-red-800 mb-2">
+         Pathway Rebalancing
+        </h4>
+        <p class="text-sm text-gray-700">
+         Therapeutic strategies to restore optimal DDR network function rather than simple inhibition.
+        </p>
+       </div>
+       <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
+        <h4 class="font-medium text-yellow-800 mb-2">
+         Precision DDR Medicine
+        </h4>
+        <p class="text-sm text-gray-700">
+         Personalized therapy based on individual DDR pathway profiles and crosstalk patterns.
+        </p>
+       </div>
+       <div class="bg-teal-50 rounded-lg p-4 border border-teal-200">
+        <h4 class="font-medium text-teal-800 mb-2">
+         Temporal Targeting
+        </h4>
+        <p class="text-sm text-gray-700">
+         Time-dependent therapeutic interventions matching circadian DDR rhythms.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Conclusions -->
+   <section class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-bold mb-6 flex items-center">
+     <i class="fas fa-lightbulb mr-3">
+     </i>
+     Conclusions and Clinical Outlook
+    </h2>
+    <div class="prose prose-lg max-w-none text-gray-200">
+     <p class="text-lg leading-relaxed mb-4">
+      The DNA damage response network represents a paradigm shift from viewing repair pathways as independent systems to understanding genome maintenance as an integrated, coordinated response. The extensive crosstalk between BER, NER, MMR, HR, and NHEJ pathways, orchestrated by master kinases ATM and ATR, provides both robustness and flexibility in maintaining genome integrity.
+     </p>
+     <p class="text-base leading-relaxed mb-4">
+      Therapeutic targeting of DDR crosstalk has already yielded clinical successes, particularly with PARP inhibitors in HR-deficient cancers. The expanding understanding of pathway interactions opens new avenues for combination therapies, precision medicine approaches, and interventions in age-related diseases.
+     </p>
+     <p class="text-base leading-relaxed">
+      Future research directions emphasizing single-cell analysis, real-time imaging, and computational modeling will further advance our understanding of DDR network dynamics, ultimately leading to more effective therapeutic strategies for cancer, aging, and genetic diseases.
+     </p>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-</body>
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDrrbFCVvGvL3TCY767Fkeyh5d7gfpX9IrW%2BC5SIRJhriZwk9RoR69%2F8Cq8Q5M790fQK%2Ba%2B0foqMFLtdus5UQ9vKKgMelSWwnGUz2%2FXJShXpkZisnXaXfDQLja4yB75qX5YonUXSNr5B4VRi4yxl1288m5SgzR807tXGizZqJCeFczeIli2mebmDoR8NYIDaqUM0taOQ75%2BLM0fGGTetEMXClwZyXFF0UZgdP5m2HGvNGA18SzgZhmEK2YN5i3Mix2SsFqlEp90jWlnKoNCoigPrk8VbljKH9SKH5ZjwQ7fav7k9U1C1yNnUuZhs7lr3hiVDtYm0VqZRyBhMvGkZEH4YtfPXl%2Fts9ALPINnxfXTCAwTXTam78p8teSLmqcgQaD7qeFIyACFqlJKCIdvsIy1hB6OW1M6FMxvF85AuIyfZ%2BSxmOsqKZwK2l%2BzkZrWG8JMh3c76COx5fCYd11zmViiSGcCTt1WBlBvlmVtBNcLRI9MTtYztaDH23kLD5TSaimCG9I7MMKMNyNi%2BYxw8lpcU1QKImRoVjYOOQ0KMC%2FGeYNzTr0iESffFLZmeqeSq5HuAKD9jjwa7sILhXusAUFCI%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDrrbFCVvGvL3TCY767Fkeyh5d7gfpX9IrW+C5SIRJhriZwk9RoR69/8Cq8Q5M790fQK+a+0foqMFLtdus5UQ9vKKgMelSWwnGUz2/XJShXpkZisnXaXfDQLja4yB75qX5YonUXSNr5B4VRi4yxl1288m5SgzR807tXGizZqJCeFczeIli2mebmDoR8NYIDaqUM0taOQ75+LM0fGGTetEMXClwZyXFF0UZgdP5m2HGvNGA18SzgZhmEK2YN5i3Mix2SsFqlEp90jWlnKoNCoigPrk8VbljKH9SKH5ZjwQ7fav7k9U1C1yNnUuZhs7lr3hiVDtYm0VqZRyBhMvGkZEH4YtfPXl/ts9ALPINnxfXTCAwTXTam78p8teSLmqcgQaD7qeFIyACFqlJKCIdvsIy1hB6OW1M6FMxvF85AuIyfZ+SxmOsqKZwK2l+zkZrWG8JMh3c76COx5fCYd11zmViiSGcCTt1WBlBvlmVtBNcLRI9MTtYztaDH23kLD5TSaimCG9I7MMKMNyNi+Yxw8lpcU1QKImRoVjYOOQ0KMC/GeYNzTr0iESffFLZmeqeSq5HuAKD9jjwa7sILhXusAUFCI=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

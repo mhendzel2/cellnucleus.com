@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease & Pathology - Cell Nucleus Reviews</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Disease &amp; Pathology - Cell Nucleus Reviews
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
@@ -43,287 +45,562 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    </style>
-</head>
-<body>
-    <!-- Header Navigation -->
-    <nav class="glass-effect p-4 mb-8">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <a href="index.html" class="text-white hover:text-gray-200 transition-colors">
-                    <i class="fas fa-home text-xl"></i>
-                </a>
-                <div class="text-white text-sm">
-                    <a href="index.html" class="hover:underline">Home</a>
-                    <span class="mx-2">/</span>
-                    <span>Disease & Pathology</span>
-                </div>
-            </div>
-            <div class="text-white text-sm">
-                <i class="fas fa-virus text-red-300 mr-2"></i>
-                Nuclear Pathology Research
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mx-auto px-4 pb-12">
-        <!-- Category Header -->
-        <div class="glass-effect rounded-2xl p-8 mb-8 text-center">
-            <div class="pathology-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-virus text-white text-3xl"></i>
-            </div>
-            <h1 class="text-4xl font-bold text-white mb-4">Disease & Pathology</h1>
-            <p class="text-gray-200 text-lg max-w-3xl mx-auto leading-relaxed">
-                Explore comprehensive reviews on nuclear-related diseases, laminopathies, cancer pathology, 
+  </style>
+ </head>
+ <body>
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="./index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="./index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Header Navigation -->
+  <nav class="glass-effect p-4 mb-8">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+     <a class="text-white hover:text-gray-200 transition-colors" href="index.html">
+      <i class="fas fa-home text-xl">
+      </i>
+     </a>
+     <div class="text-white text-sm">
+      <a class="hover:underline" href="index.html">
+       Home
+      </a>
+      <span class="mx-2">
+       /
+      </span>
+      <span>
+       Disease &amp; Pathology
+      </span>
+     </div>
+    </div>
+    <div class="text-white text-sm">
+     <i class="fas fa-virus text-red-300 mr-2">
+     </i>
+     Nuclear Pathology Research
+    </div>
+   </div>
+  </nav>
+  <div class="container mx-auto px-4 pb-12">
+   <!-- Category Header -->
+   <div class="glass-effect rounded-2xl p-8 mb-8 text-center">
+    <div class="pathology-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+     <i class="fas fa-virus text-white text-3xl">
+     </i>
+    </div>
+    <h1 class="text-4xl font-bold text-white mb-4">
+     Disease &amp; Pathology
+    </h1>
+    <p class="text-gray-200 text-lg max-w-3xl mx-auto leading-relaxed">
+     Explore comprehensive reviews on nuclear-related diseases, laminopathies, cancer pathology,
                 and pathological conditions affecting nuclear structure and function. Understanding disease 
                 mechanisms is crucial for developing therapeutic interventions.
-            </p>
-            <div class="flex justify-center space-x-8 mt-6 text-sm text-gray-300">
-                <div class="flex items-center">
-                    <i class="fas fa-microscope mr-2"></i>
-                    <span>Pathological Analysis</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-dna mr-2"></i>
-                    <span>Genetic Disorders</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-heartbeat mr-2"></i>
-                    <span>Disease Mechanisms</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Research Image -->
-        <div class="glass-effect rounded-2xl p-6 mb-8">
-            <h3 class="text-white text-xl font-semibold mb-4">
-                <i class="fas fa-image mr-2"></i>Featured Pathology Research
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
-                    <div class="text-center text-gray-600">
-                        <i class="fas fa-virus text-4xl mb-2 text-red-500"></i>
-                        <p class="text-sm">Laminopathy Nuclear Morphology</p>
-                        <p class="text-xs mt-1">Image courtesy of Nuclear Medicine Research Institute</p>
-                    </div>
-                </div>
-                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
-                    <div class="text-center text-gray-600">
-                        <i class="fas fa-search text-4xl mb-2 text-red-500"></i>
-                        <p class="text-sm">Cancer Cell Nuclear Changes</p>
-                        <p class="text-xs mt-1">Image courtesy of Oncology Research Center</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Research Categories -->
-        <div class="grid lg:grid-cols-2 gap-8">
-            <!-- Laminopathies -->
-            <div class="glass-effect rounded-2xl p-6">
-                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
-                    <i class="fas fa-shield-virus disease-icon mr-3"></i>
-                    Laminopathies
-                </h2>
-                <div class="space-y-4">
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Laminopathies: Nuclear Envelope Diseases</h4>
-                        <p class="text-gray-600 text-sm mb-3">Comprehensive review of diseases caused by mutations in nuclear envelope proteins, focusing on lamins and associated proteins.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/laminopathies_nuclear_envelope_diseases_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Lamin A Mutants in Aging Research</h4>
-                        <p class="text-gray-600 text-sm mb-3">Analysis of lamin A mutations and their role in premature aging syndromes and cellular senescence mechanisms.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/lamin_a_mutants_aging_research_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Nuclear Mechanics and Disease</h4>
-                        <p class="text-gray-600 text-sm mb-3">Investigation of how altered nuclear mechanical properties contribute to disease pathogenesis and cellular dysfunction.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/nuclear_mechanics_disease_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cancer & Nuclear Pathology -->
-            <div class="glass-effect rounded-2xl p-6">
-                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
-                    <i class="fas fa-disease disease-icon mr-3"></i>
-                    Cancer & Nuclear Pathology
-                </h2>
-                <div class="space-y-4">
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Nuclear Condensates in Disease</h4>
-                        <p class="text-gray-600 text-sm mb-3">Role of nuclear condensates and phase separation in cancer development and other pathological conditions.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/nuclear_condensates_disease_pathologies_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Replication Fork Dynamics in Cancer</h4>
-                        <p class="text-gray-600 text-sm mb-3">Analysis of DNA replication fork instability and its contribution to cancer development and progression.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/replication_fork_cancer_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Replication Stress & Fork Protection</h4>
-                        <p class="text-gray-600 text-sm mb-3">Mechanisms of replication stress response and fork protection complex function in cancer cells.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/replication_stress_fpc_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chromatin-Related Diseases -->
-            <div class="glass-effect rounded-2xl p-6">
-                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
-                    <i class="fas fa-dna disease-icon mr-3"></i>
-                    Chromatin-Related Diseases
-                </h2>
-                <div class="space-y-4">
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Chromatinopathies: Mechanisms & Therapies</h4>
-                        <p class="text-gray-600 text-sm mb-3">Comprehensive analysis of diseases caused by chromatin dysfunction and emerging therapeutic approaches.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/chromatinopathies_mechanisms_therapies_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Histone PTMs in Neurodegeneration</h4>
-                        <p class="text-gray-600 text-sm mb-3">Role of histone post-translational modifications in neurodegenerative diseases and cognitive disorders.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/histone_ptms_neurodegeneration_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">H1 & Polycomb Group Regulation</h4>
-                        <p class="text-gray-600 text-sm mb-3">Analysis of histone H1 and Polycomb group protein dysregulation in disease contexts.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/h1_pcg_h3k27me3_regulation_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Viral Infections & Host Response -->
-            <div class="glass-effect rounded-2xl p-6">
-                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
-                    <i class="fas fa-virus disease-icon mr-3"></i>
-                    Viral Infections & Host Response
-                </h2>
-                <div class="space-y-4">
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Nuclear Virus-Host Interactions</h4>
-                        <p class="text-gray-600 text-sm mb-3">Mechanisms of viral manipulation of nuclear processes and host cell responses to nuclear viral infections.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/nuclear_virus_host_interactions_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Nuclear Stress Response Pathways</h4>
-                        <p class="text-gray-600 text-sm mb-3">Cellular stress response mechanisms in the nucleus and their role in disease pathogenesis.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/nuclear_stress_response_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="review-card rounded-lg p-4 hover-lift">
-                        <h4 class="font-semibold text-gray-800 mb-2">Nuclear Biology Controversies</h4>
-                        <p class="text-gray-600 text-sm mb-3">Current debates and controversies in nuclear biology research with implications for disease understanding.</p>
-                        <div class="flex justify-between items-center text-xs text-gray-500">
-                            <span><i class="fas fa-clock mr-1"></i>Updated 2024</span>
-                            <a href="nuclear_biology_reviews/reviews/nuclear_biology_controversies_review.html" class="text-red-600 hover:text-red-800 font-medium">Read Review <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Image Attribution Section -->
-        <div class="glass-effect rounded-2xl p-6 mt-8">
-            <h3 class="text-white text-xl font-semibold mb-4">
-                <i class="fas fa-camera mr-2"></i>Image Sources & Attribution
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-200">
-                <div>
-                    <h4 class="font-semibold mb-2 text-red-300">Pathology Research Images</h4>
-                    <ul class="space-y-1">
-                        <li>• Nuclear Medicine Research Institute - Laminopathy morphology studies</li>
-                        <li>• Oncology Research Center - Cancer nuclear pathology imaging</li>
-                        <li>• National Institute of Health - Disease mechanism illustrations</li>
-                        <li>• European Molecular Biology Laboratory - Structural pathology data</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-2 text-red-300">Scientific Databases</h4>
-                    <ul class="space-y-1">
-                        <li>• PubMed Central - Open access research images</li>
-                        <li>• Cell Image Library - Pathological cell imaging</li>
-                        <li>• Protein Data Bank - Structural biology resources</li>
-                        <li>• GenBank - Genetic sequence and mutation data</li>
-                    </ul>
-                </div>
-            </div>
-            <p class="text-gray-300 text-xs mt-4 italic">
-                All images used are either original research, open access publications, or used with proper attribution 
-                under fair use guidelines for educational purposes. Please contact us for specific attribution requirements.
-            </p>
-        </div>
-
-        <!-- Navigation Footer -->
-        <div class="glass-effect rounded-2xl p-6 mt-8 text-center">
-            <div class="flex flex-wrap justify-center gap-4 mb-4">
-                <a href="chromatin_architecture_dynamics_category.html" class="text-blue-300 hover:text-blue-100 transition-colors text-sm">
-                    <i class="fas fa-dna mr-1"></i>Chromatin Architecture
-                </a>
-                <a href="dna_repair_replication_category.html" class="text-green-300 hover:text-green-100 transition-colors text-sm">
-                    <i class="fas fa-tools mr-1"></i>DNA Repair
-                </a>
-                <a href="nuclear_bodies_compartments_category.html" class="text-purple-300 hover:text-purple-100 transition-colors text-sm">
-                    <i class="fas fa-circle mr-1"></i>Nuclear Bodies
-                </a>
-                <a href="nuclear_envelope_lamins_category.html" class="text-yellow-300 hover:text-yellow-100 transition-colors text-sm">
-                    <i class="fas fa-shield-alt mr-1"></i>Nuclear Envelope
-                </a>
-            </div>
-            <a href="index.html" class="inline-flex items-center text-white hover:text-gray-200 transition-colors">
-                <i class="fas fa-home mr-2"></i>Return to Homepage
-            </a>
-        </div>
+    </p>
+    <div class="flex justify-center space-x-8 mt-6 text-sm text-gray-300">
+     <div class="flex items-center">
+      <i class="fas fa-microscope mr-2">
+      </i>
+      <span>
+       Pathological Analysis
+      </span>
+     </div>
+     <div class="flex items-center">
+      <i class="fas fa-dna mr-2">
+      </i>
+      <span>
+       Genetic Disorders
+      </span>
+     </div>
+     <div class="flex items-center">
+      <i class="fas fa-heartbeat mr-2">
+      </i>
+      <span>
+       Disease Mechanisms
+      </span>
+     </div>
     </div>
-
-    <!-- Scroll to Top Button -->
-    <button onclick="scrollToTop()" class="fixed bottom-8 right-8 pathology-gradient text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        function scrollToTop() {
+   </div>
+   <!-- Featured Research Image -->
+   <div class="glass-effect rounded-2xl p-6 mb-8">
+    <h3 class="text-white text-xl font-semibold mb-4">
+     <i class="fas fa-image mr-2">
+     </i>
+     Featured Pathology Research
+    </h3>
+    <div class="grid md:grid-cols-2 gap-6">
+     <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+      <div class="text-center text-gray-600">
+       <i class="fas fa-virus text-4xl mb-2 text-red-500">
+       </i>
+       <p class="text-sm">
+        Laminopathy Nuclear Morphology
+       </p>
+       <p class="text-xs mt-1">
+        Image courtesy of Nuclear Medicine Research Institute
+       </p>
+      </div>
+     </div>
+     <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+      <div class="text-center text-gray-600">
+       <i class="fas fa-search text-4xl mb-2 text-red-500">
+       </i>
+       <p class="text-sm">
+        Cancer Cell Nuclear Changes
+       </p>
+       <p class="text-xs mt-1">
+        Image courtesy of Oncology Research Center
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Research Categories -->
+   <div class="grid lg:grid-cols-2 gap-8">
+    <!-- Laminopathies -->
+    <div class="glass-effect rounded-2xl p-6">
+     <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+      <i class="fas fa-shield-virus disease-icon mr-3">
+      </i>
+      Laminopathies
+     </h2>
+     <div class="space-y-4">
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Laminopathies: Nuclear Envelope Diseases
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Comprehensive review of diseases caused by mutations in nuclear envelope proteins, focusing on lamins and associated proteins.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/laminopathies_nuclear_envelope_diseases_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Lamin A Mutants in Aging Research
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Analysis of lamin A mutations and their role in premature aging syndromes and cellular senescence mechanisms.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/lamin_a_mutants_aging_research_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Nuclear Mechanics and Disease
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Investigation of how altered nuclear mechanical properties contribute to disease pathogenesis and cellular dysfunction.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_mechanics_disease_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Cancer & Nuclear Pathology -->
+    <div class="glass-effect rounded-2xl p-6">
+     <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+      <i class="fas fa-disease disease-icon mr-3">
+      </i>
+      Cancer &amp; Nuclear Pathology
+     </h2>
+     <div class="space-y-4">
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Nuclear Condensates in Disease
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Role of nuclear condensates and phase separation in cancer development and other pathological conditions.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_condensates_disease_pathologies_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Replication Fork Dynamics in Cancer
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Analysis of DNA replication fork instability and its contribution to cancer development and progression.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/replication_fork_cancer_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Replication Stress &amp; Fork Protection
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Mechanisms of replication stress response and fork protection complex function in cancer cells.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/replication_stress_fpc_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Chromatin-Related Diseases -->
+    <div class="glass-effect rounded-2xl p-6">
+     <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+      <i class="fas fa-dna disease-icon mr-3">
+      </i>
+      Chromatin-Related Diseases
+     </h2>
+     <div class="space-y-4">
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Chromatinopathies: Mechanisms &amp; Therapies
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Comprehensive analysis of diseases caused by chromatin dysfunction and emerging therapeutic approaches.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/chromatinopathies_mechanisms_therapies_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Histone PTMs in Neurodegeneration
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Role of histone post-translational modifications in neurodegenerative diseases and cognitive disorders.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/histone_ptms_neurodegeneration_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        H1 &amp; Polycomb Group Regulation
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Analysis of histone H1 and Polycomb group protein dysregulation in disease contexts.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/h1_pcg_h3k27me3_regulation_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Viral Infections & Host Response -->
+    <div class="glass-effect rounded-2xl p-6">
+     <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+      <i class="fas fa-virus disease-icon mr-3">
+      </i>
+      Viral Infections &amp; Host Response
+     </h2>
+     <div class="space-y-4">
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Nuclear Virus-Host Interactions
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Mechanisms of viral manipulation of nuclear processes and host cell responses to nuclear viral infections.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_virus_host_interactions_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Nuclear Stress Response Pathways
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Cellular stress response mechanisms in the nucleus and their role in disease pathogenesis.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_stress_response_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="review-card rounded-lg p-4 hover-lift">
+       <h4 class="font-semibold text-gray-800 mb-2">
+        Nuclear Biology Controversies
+       </h4>
+       <p class="text-gray-600 text-sm mb-3">
+        Current debates and controversies in nuclear biology research with implications for disease understanding.
+       </p>
+       <div class="flex justify-between items-center text-xs text-gray-500">
+        <span>
+         <i class="fas fa-clock mr-1">
+         </i>
+         Updated 2024
+        </span>
+        <a class="text-red-600 hover:text-red-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_biology_controversies_review.html">
+         Read Review
+         <i class="fas fa-arrow-right ml-1">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Image Attribution Section -->
+   <div class="glass-effect rounded-2xl p-6 mt-8">
+    <h3 class="text-white text-xl font-semibold mb-4">
+     <i class="fas fa-camera mr-2">
+     </i>
+     Image Sources &amp; Attribution
+    </h3>
+    <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-200">
+     <div>
+      <h4 class="font-semibold mb-2 text-red-300">
+       Pathology Research Images
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        • Nuclear Medicine Research Institute - Laminopathy morphology studies
+       </li>
+       <li>
+        • Oncology Research Center - Cancer nuclear pathology imaging
+       </li>
+       <li>
+        • National Institute of Health - Disease mechanism illustrations
+       </li>
+       <li>
+        • European Molecular Biology Laboratory - Structural pathology data
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="font-semibold mb-2 text-red-300">
+       Scientific Databases
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        • PubMed Central - Open access research images
+       </li>
+       <li>
+        • Cell Image Library - Pathological cell imaging
+       </li>
+       <li>
+        • Protein Data Bank - Structural biology resources
+       </li>
+       <li>
+        • GenBank - Genetic sequence and mutation data
+       </li>
+      </ul>
+     </div>
+    </div>
+    <p class="text-gray-300 text-xs mt-4 italic">
+     All images used are either original research, open access publications, or used with proper attribution
+                under fair use guidelines for educational purposes. Please contact us for specific attribution requirements.
+    </p>
+   </div>
+   <!-- Navigation Footer -->
+   <div class="glass-effect rounded-2xl p-6 mt-8 text-center">
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+     <a class="text-blue-300 hover:text-blue-100 transition-colors text-sm" href="chromatin_architecture_dynamics_category.html">
+      <i class="fas fa-dna mr-1">
+      </i>
+      Chromatin Architecture
+     </a>
+     <a class="text-green-300 hover:text-green-100 transition-colors text-sm" href="dna_repair_replication_category.html">
+      <i class="fas fa-tools mr-1">
+      </i>
+      DNA Repair
+     </a>
+     <a class="text-purple-300 hover:text-purple-100 transition-colors text-sm" href="nuclear_bodies_compartments_category.html">
+      <i class="fas fa-circle mr-1">
+      </i>
+      Nuclear Bodies
+     </a>
+     <a class="text-yellow-300 hover:text-yellow-100 transition-colors text-sm" href="nuclear_envelope_lamins_category.html">
+      <i class="fas fa-shield-alt mr-1">
+      </i>
+      Nuclear Envelope
+     </a>
+    </div>
+    <a class="inline-flex items-center text-white hover:text-gray-200 transition-colors" href="index.html">
+     <i class="fas fa-home mr-2">
+     </i>
+     Return to Homepage
+    </a>
+   </div>
+  </div>
+  <!-- Scroll to Top Button -->
+  <button class="fixed bottom-8 right-8 pathology-gradient text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" onclick="scrollToTop()">
+   <i class="fas fa-arrow-up">
+   </i>
+  </button>
+  <script>
+   function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -346,15 +623,87 @@
                 });
             });
         });
-    </script>
-</body>
+  </script>
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="./index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpKrfFDpUuwGwACX%2Bb1nl7L6%2FUeZL52k5KtC4djpf2X7UAnkT7T0gvY6vABN3ZfhFQGEwQvRD1WXSme%2FkPRCPX998yerE4%2FL65gFbLssVijQrITvxH%2FechE1Eo1JMPLTLlk9tGnF9y%2FYZsqKAlBbjlk4wBc3iScWPRMoewGgXD5r7HdbiIcw%2BBTkS8M6b6yFgPE8JuNDkYZoQuSEGVosNZAN50J%2FNjmAyOFL9LBPVrAZE9x9f6AB46hODcPhf5cFDP9ZPyzNBJ7DdRF3UtD1ArSlYQYz8BOrq7J5%2BRQChz6agSBOpRSX27np6ZCH%2Ba1S932VhSKwjE2EWZIMg1cQveassRTW3K2%2BYaqKIhH%2F%2Ba8KGRlHkb8%2F%2FZHkSgWvrO7SFji8%2FMdVPcGhFm3p75xQ6UsP7%2BAu271jtKAgzSqv%2Fzm3Ztiuh0%2BVhp%2Bozpozvg68aQZx0Vyct7SHwWDkj6gB78hdVM6LhaUHpu8gHZZi3TcBqVBbe2yO7HbdfSl9YHzkkInoOU%2Fak2ssqrc6B5nzPW9%2FyIvASukxCjT2JOJcVPhHqWkRsAjwyHl7rdoFhwAXeQ%3D%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpKrfFDpUuwGwACX+b1nl7L6/UeZL52k5KtC4djpf2X7UAnkT7T0gvY6vABN3ZfhFQGEwQvRD1WXSme/kPRCPX998yerE4/L65gFbLssVijQrITvxH/echE1Eo1JMPLTLlk9tGnF9y/YZsqKAlBbjlk4wBc3iScWPRMoewGgXD5r7HdbiIcw+BTkS8M6b6yFgPE8JuNDkYZoQuSEGVosNZAN50J/NjmAyOFL9LBPVrAZE9x9f6AB46hODcPhf5cFDP9ZPyzNBJ7DdRF3UtD1ArSlYQYz8BOrq7J5+RQChz6agSBOpRSX27np6ZCH+a1S932VhSKwjE2EWZIMg1cQveassRTW3K2+YaqKIhH/+a8KGRlHkb8//ZHkSgWvrO7SFji8/MdVPcGhFm3p75xQ6UsP7+Au271jtKAgzSqv/zm3Ztiuh0+Vhp+ozpozvg68aQZx0Vyct7SHwWDkj6gB78hdVM6LhaUHpu8gHZZi3TcBqVBbe2yO7HbdfSl9YHzkkInoOU/ak2ssqrc6B5nzPW9/yIvASukxCjT2JOJcVPhHqWkRsAjwyHl7rdoFhwAXeQ==";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
