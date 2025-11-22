@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies & Compartments - Cell Nucleus Reviews</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nuclear Bodies &amp; Compartments - Cell Nucleus Reviews
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .nucleus-animation {
             animation: pulse 3s ease-in-out infinite;
@@ -30,364 +32,674 @@
             margin: 0 0.5rem;
             color: #9CA3AF;
         }
-    </style>
-</head>
-<body class="bg-gray-50">
-    
-    <!-- Navigation Header -->
-    <nav class="gradient-bg shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <div class="w-8 h-8 nucleus-animation rounded-full mr-3"></div>
-                        <span class="text-white text-xl font-bold">CellNucleus.com</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="chromatin_architecture_dynamics_category.html" class="text-white hover:text-gray-200 transition">Chromatin</a>
-                    <a href="dna_repair_replication_category.html" class="text-white hover:text-gray-200 transition">DNA Repair</a>
-                    <a href="nuclear_bodies_compartments_category.html" class="text-white hover:text-gray-200 transition font-semibold">Nuclear Bodies</a>
-                    <a href="nuclear_envelope_lamins_category.html" class="text-white hover:text-gray-200 transition">Nuclear Envelope</a>
-                    <a href="epigenetics_gene_regulation_category.html" class="text-white hover:text-gray-200 transition">Epigenetics</a>
-                    <a href="nuclear_transport_dynamics_category.html" class="text-white hover:text-gray-200 transition">Transport</a>
-                    <a href="nuclear_biophysics_mechanics_category.html" class="text-white hover:text-gray-200 transition">Biophysics</a>
-                    <a href="disease_pathology_category.html" class="text-white hover:text-gray-200 transition">Disease</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button class="text-white">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+  </style>
+ </head>
+ <body class="bg-gray-50">
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="./index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="./index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="./index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="./index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Navigation Header -->
+  <nav class="gradient-bg shadow-lg">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+     <div class="flex items-center">
+      <a class="flex items-center" href="index.html">
+       <div class="w-8 h-8 nucleus-animation rounded-full mr-3">
+       </div>
+       <span class="text-white text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </a>
+     </div>
+     <div class="hidden md:flex items-center space-x-8">
+      <a class="text-white hover:text-gray-200 transition" href="chromatin_architecture_dynamics_category.html">
+       Chromatin
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="dna_repair_replication_category.html">
+       DNA Repair
+      </a>
+      <a class="text-white hover:text-gray-200 transition font-semibold" href="nuclear_bodies_compartments_category.html">
+       Nuclear Bodies
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="nuclear_envelope_lamins_category.html">
+       Nuclear Envelope
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="epigenetics_gene_regulation_category.html">
+       Epigenetics
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="nuclear_transport_dynamics_category.html">
+       Transport
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="nuclear_biophysics_mechanics_category.html">
+       Biophysics
+      </a>
+      <a class="text-white hover:text-gray-200 transition" href="disease_pathology_category.html">
+       Disease
+      </a>
+     </div>
+     <div class="md:hidden flex items-center">
+      <button class="text-white">
+       <i class="fas fa-bars text-xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <nav class="flex text-sm">
+     <a class="text-blue-600 hover:text-blue-800" href="index.html">
+      Home
+     </a>
+     <span class="breadcrumb-separator">
+     </span>
+     <span class="text-gray-500">
+      Nuclear Bodies &amp; Compartments
+     </span>
     </nav>
-
-    <!-- Breadcrumb -->
-    <div class="bg-white border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav class="flex text-sm">
-                <a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a>
-                <span class="breadcrumb-separator"></span>
-                <span class="text-gray-500">Nuclear Bodies & Compartments</span>
-            </nav>
-        </div>
+   </div>
+  </div>
+  <!-- Hero Section -->
+  <div class="bg-white">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center">
+     <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Nuclear Bodies &amp; Compartments
+     </h1>
+     <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+      Comprehensive reviews on membraneless nuclear organelles, including nuclear speckles, Cajal bodies, PML bodies, paraspeckles, and other nuclear compartments that organize cellular functions through phase separation and biomolecular condensates.
+     </p>
+     <div class="flex justify-center items-center space-x-6 text-sm text-gray-500">
+      <span>
+       <i class="fas fa-file-alt mr-2">
+       </i>
+       15 Reviews
+      </span>
+      <span>
+       <i class="fas fa-clock mr-2">
+       </i>
+       Last Updated: 2024
+      </span>
+      <span>
+       <i class="fas fa-microscope mr-2">
+       </i>
+       Advanced Microscopy
+      </span>
+     </div>
     </div>
-
-    <!-- Hero Section -->
-    <div class="bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                    Nuclear Bodies & Compartments
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                    Comprehensive reviews on membraneless nuclear organelles, including nuclear speckles, Cajal bodies, PML bodies, paraspeckles, and other nuclear compartments that organize cellular functions through phase separation and biomolecular condensates.
-                </p>
-                <div class="flex justify-center items-center space-x-6 text-sm text-gray-500">
-                    <span><i class="fas fa-file-alt mr-2"></i>15 Reviews</span>
-                    <span><i class="fas fa-clock mr-2"></i>Last Updated: 2024</span>
-                    <span><i class="fas fa-microscope mr-2"></i>Advanced Microscopy</span>
-                </div>
-            </div>
-        </div>
+   </div>
+  </div>
+  <!-- Featured Image Section -->
+  <div class="bg-gray-100 py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+     <h2 class="text-2xl font-bold text-gray-900 mb-6">
+      Featured Nuclear Bodies Imagery
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="text-center">
+       <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 flex items-center justify-center">
+        <i class="fas fa-circle text-6xl text-blue-500 opacity-50">
+        </i>
+       </div>
+       <h3 class="font-semibold text-gray-800">
+        Nuclear Speckles
+       </h3>
+       <p class="text-sm text-gray-600">
+        Splicing factor domains
+       </p>
+      </div>
+      <div class="text-center">
+       <div class="w-full h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
+        <i class="fas fa-dot-circle text-6xl text-green-500 opacity-50">
+        </i>
+       </div>
+       <h3 class="font-semibold text-gray-800">
+        Cajal Bodies
+       </h3>
+       <p class="text-sm text-gray-600">
+        RNP assembly sites
+       </p>
+      </div>
+      <div class="text-center">
+       <div class="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 flex items-center justify-center">
+        <i class="fas fa-circle-notch text-6xl text-purple-500 opacity-50">
+        </i>
+       </div>
+       <h3 class="font-semibold text-gray-800">
+        PML Bodies
+       </h3>
+       <p class="text-sm text-gray-600">
+        Nuclear domains
+       </p>
+      </div>
+     </div>
     </div>
-
-    <!-- Featured Image Section -->
-    <div class="bg-gray-100 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Nuclear Bodies Imagery</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 flex items-center justify-center">
-                            <i class="fas fa-circle text-6xl text-blue-500 opacity-50"></i>
-                        </div>
-                        <h3 class="font-semibold text-gray-800">Nuclear Speckles</h3>
-                        <p class="text-sm text-gray-600">Splicing factor domains</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                            <i class="fas fa-dot-circle text-6xl text-green-500 opacity-50"></i>
-                        </div>
-                        <h3 class="font-semibold text-gray-800">Cajal Bodies</h3>
-                        <p class="text-sm text-gray-600">RNP assembly sites</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4 flex items-center justify-center">
-                            <i class="fas fa-circle-notch text-6xl text-purple-500 opacity-50"></i>
-                        </div>
-                        <h3 class="font-semibold text-gray-800">PML Bodies</h3>
-                        <p class="text-sm text-gray-600">Nuclear domains</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+   </div>
+  </div>
+  <!-- Reviews Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+   <h2 class="text-3xl font-bold text-gray-900 mb-8">
+    Research Reviews
+   </h2>
+   <!-- Core Nuclear Bodies -->
+   <div class="mb-12">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-blue-200 pb-2">
+     <i class="fas fa-circle mr-3 text-blue-500">
+     </i>
+     Core Nuclear Bodies
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-blue-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear Speckles
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Comprehensive analysis of nuclear speckles as splicing factor storage and organization sites.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_speckles_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        78 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-green-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Cajal Bodies
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       In-depth review of Cajal bodies and their role in RNP biogenesis and nuclear organization.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/cajal_bodies_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        36 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-purple-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        PML Nuclear Bodies
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Detailed analysis of PML nuclear bodies and their functions in cellular stress responses.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/pml_nuclear_bodies_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        75 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-pink-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Paraspeckles
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Comprehensive review of paraspeckles and their role in gene expression regulation.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/paraspeckles_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        87 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-indigo-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nucleolus Structure
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Detailed examination of nucleolar organization and ribosome biogenesis mechanisms.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nucleolus_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        48 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-red-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear Bodies Overview
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Comprehensive overview of all nuclear bodies and their functional relationships.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_bodies_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        73 KB
+       </span>
+      </div>
+     </div>
     </div>
-
-    <!-- Reviews Grid -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">Research Reviews</h2>
-        
-        <!-- Core Nuclear Bodies -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-blue-200 pb-2">
-                <i class="fas fa-circle mr-3 text-blue-500"></i>Core Nuclear Bodies
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear Speckles</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Comprehensive analysis of nuclear speckles as splicing factor storage and organization sites.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_speckles_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">78 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Cajal Bodies</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">In-depth review of Cajal bodies and their role in RNP biogenesis and nuclear organization.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/cajal_bodies_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">36 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">PML Nuclear Bodies</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Detailed analysis of PML nuclear bodies and their functions in cellular stress responses.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/pml_nuclear_bodies_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">75 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Paraspeckles</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Comprehensive review of paraspeckles and their role in gene expression regulation.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/paraspeckles_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">87 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-indigo-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nucleolus Structure</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Detailed examination of nucleolar organization and ribosome biogenesis mechanisms.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nucleolus_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">48 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear Bodies Overview</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Comprehensive overview of all nuclear bodies and their functional relationships.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_bodies_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">73 KB</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Condensates & Phase Separation -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-green-200 pb-2">
-                <i class="fas fa-water mr-3 text-green-500"></i>Condensates & Phase Separation
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-teal-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear Condensates</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Analysis of biomolecular condensates in nuclear organization and function.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_condensates_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">56 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Phase Separation in Nucleus</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Review of liquid-liquid phase separation mechanisms in nuclear organization.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/phase_separation_nucleus_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">26 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Transcriptional Condensates</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Detailed analysis of transcriptional condensates and gene expression regulation.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/transcriptional_condensates_comprehensive_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">48 KB</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Specialized Functions -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-purple-200 pb-2">
-                <i class="fas fa-cogs mr-3 text-purple-500"></i>Specialized Functions & Interactions
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-amber-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear Body Ultrastructure</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">High-resolution structural analysis of nuclear body architecture and components.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_body_ultrastructure_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">54 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-lime-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear RNP Structure</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Comprehensive analysis of nuclear ribonucleoprotein complexes and their organization.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_rnp_structure_function_review.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">51 KB</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-3 h-3 bg-rose-500 rounded-full mr-3"></div>
-                        <h4 class="text-lg font-semibold">Nuclear Compartmentalization</h4>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">Critical evaluation of nuclear compartmentalization principles and mechanisms.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="nuclear_biology_reviews/reviews/nuclear_compartmentalization_critical_evaluation_corrected.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Review</a>
-                        <span class="text-xs text-gray-500">23 KB</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+   </div>
+   <!-- Condensates & Phase Separation -->
+   <div class="mb-12">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-green-200 pb-2">
+     <i class="fas fa-water mr-3 text-green-500">
+     </i>
+     Condensates &amp; Phase Separation
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-teal-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear Condensates
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Analysis of biomolecular condensates in nuclear organization and function.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_condensates_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        56 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-cyan-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Phase Separation in Nucleus
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Review of liquid-liquid phase separation mechanisms in nuclear organization.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/phase_separation_nucleus_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        26 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-orange-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Transcriptional Condensates
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Detailed analysis of transcriptional condensates and gene expression regulation.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/transcriptional_condensates_comprehensive_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        48 KB
+       </span>
+      </div>
+     </div>
     </div>
-
-    <!-- Image Attribution Section -->
-    <div class="bg-gray-100 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">
-                    <i class="fas fa-camera mr-3 text-blue-500"></i>Image Sources & Attribution
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Scientific Image Sources</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li><i class="fas fa-external-link-alt mr-2 text-blue-400"></i><a href="https://www.cell.com" class="text-blue-600 hover:underline">Cell Press Journals</a> - High-resolution microscopy images</li>
-                            <li><i class="fas fa-external-link-alt mr-2 text-blue-400"></i><a href="https://www.nature.com" class="text-blue-600 hover:underline">Nature Publishing Group</a> - Structural biology illustrations</li>
-                            <li><i class="fas fa-external-link-alt mr-2 text-blue-400"></i><a href="https://journals.plos.org" class="text-blue-600 hover:underline">PLOS Journals</a> - Open access nuclear imaging</li>
-                            <li><i class="fas fa-external-link-alt mr-2 text-blue-400"></i><a href="https://elifesciences.org" class="text-blue-600 hover:underline">eLife Sciences</a> - Live cell imaging data</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Imaging Techniques</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li><i class="fas fa-microscope mr-2 text-green-400"></i>Super-resolution microscopy (STORM, PALM)</li>
-                            <li><i class="fas fa-microscope mr-2 text-green-400"></i>Confocal and two-photon microscopy</li>
-                            <li><i class="fas fa-microscope mr-2 text-green-400"></i>Electron microscopy and tomography</li>
-                            <li><i class="fas fa-microscope mr-2 text-green-400"></i>Live cell fluorescence imaging</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-6 p-4 bg-blue-50 rounded-lg">
-                    <p class="text-sm text-gray-700">
-                        <i class="fas fa-info-circle mr-2 text-blue-500"></i>
-                        All images used in this educational resource are properly attributed to their original sources and used in accordance with academic fair use guidelines. For specific image usage rights, please refer to the original publications.
-                    </p>
-                </div>
-            </div>
-        </div>
+   </div>
+   <!-- Specialized Functions -->
+   <div class="mb-12">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b-2 border-purple-200 pb-2">
+     <i class="fas fa-cogs mr-3 text-purple-500">
+     </i>
+     Specialized Functions &amp; Interactions
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-amber-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear Body Ultrastructure
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       High-resolution structural analysis of nuclear body architecture and components.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_body_ultrastructure_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        54 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-lime-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear RNP Structure
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Comprehensive analysis of nuclear ribonucleoprotein complexes and their organization.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_rnp_structure_function_review.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        51 KB
+       </span>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+      <div class="flex items-center mb-4">
+       <div class="w-3 h-3 bg-rose-500 rounded-full mr-3">
+       </div>
+       <h4 class="text-lg font-semibold">
+        Nuclear Compartmentalization
+       </h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">
+       Critical evaluation of nuclear compartmentalization principles and mechanisms.
+      </p>
+      <div class="flex justify-between items-center">
+       <a class="text-blue-600 hover:text-blue-800 font-medium" href="nuclear_biology_reviews/reviews/nuclear_compartmentalization_critical_evaluation_corrected.html">
+        Read Review
+       </a>
+       <span class="text-xs text-gray-500">
+        23 KB
+       </span>
+      </div>
+     </div>
     </div>
+   </div>
+  </div>
+  <!-- Image Attribution Section -->
+  <div class="bg-gray-100 py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+     <h2 class="text-2xl font-bold text-gray-900 mb-6">
+      <i class="fas fa-camera mr-3 text-blue-500">
+      </i>
+      Image Sources &amp; Attribution
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+       <h3 class="text-lg font-semibold text-gray-800 mb-4">
+        Scientific Image Sources
+       </h3>
+       <ul class="space-y-2 text-sm text-gray-600">
+        <li>
+         <i class="fas fa-external-link-alt mr-2 text-blue-400">
+         </i>
+         <a class="text-blue-600 hover:underline" href="https://www.cell.com">
+          Cell Press Journals
+         </a>
+         - High-resolution microscopy images
+        </li>
+        <li>
+         <i class="fas fa-external-link-alt mr-2 text-blue-400">
+         </i>
+         <a class="text-blue-600 hover:underline" href="https://www.nature.com">
+          Nature Publishing Group
+         </a>
+         - Structural biology illustrations
+        </li>
+        <li>
+         <i class="fas fa-external-link-alt mr-2 text-blue-400">
+         </i>
+         <a class="text-blue-600 hover:underline" href="https://journals.plos.org">
+          PLOS Journals
+         </a>
+         - Open access nuclear imaging
+        </li>
+        <li>
+         <i class="fas fa-external-link-alt mr-2 text-blue-400">
+         </i>
+         <a class="text-blue-600 hover:underline" href="https://elifesciences.org">
+          eLife Sciences
+         </a>
+         - Live cell imaging data
+        </li>
+       </ul>
+      </div>
+      <div>
+       <h3 class="text-lg font-semibold text-gray-800 mb-4">
+        Imaging Techniques
+       </h3>
+       <ul class="space-y-2 text-sm text-gray-600">
+        <li>
+         <i class="fas fa-microscope mr-2 text-green-400">
+         </i>
+         Super-resolution microscopy (STORM, PALM)
+        </li>
+        <li>
+         <i class="fas fa-microscope mr-2 text-green-400">
+         </i>
+         Confocal and two-photon microscopy
+        </li>
+        <li>
+         <i class="fas fa-microscope mr-2 text-green-400">
+         </i>
+         Electron microscopy and tomography
+        </li>
+        <li>
+         <i class="fas fa-microscope mr-2 text-green-400">
+         </i>
+         Live cell fluorescence imaging
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+      <p class="text-sm text-gray-700">
+       <i class="fas fa-info-circle mr-2 text-blue-500">
+       </i>
+       All images used in this educational resource are properly attributed to their original sources and used in accordance with academic fair use guidelines. For specific image usage rights, please refer to the original publications.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="./index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="./index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- Footer -->
-    <footer class="gradient-bg text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <div class="w-8 h-8 nucleus-animation rounded-full mr-3"></div>
-                        <span class="text-xl font-bold">CellNucleus.com</span>
-                    </div>
-                    <p class="text-gray-300 text-sm">Comprehensive reviews in nuclear biology research and cellular mechanisms.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="chromatin_architecture_dynamics_category.html" class="hover:text-white transition">Chromatin Architecture</a></li>
-                        <li><a href="dna_repair_replication_category.html" class="hover:text-white transition">DNA Repair</a></li>
-                        <li><a href="nuclear_bodies_compartments_category.html" class="hover:text-white transition">Nuclear Bodies</a></li>
-                        <li><a href="nuclear_envelope_lamins_category.html" class="hover:text-white transition">Nuclear Envelope</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Research Areas</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="epigenetics_gene_regulation_category.html" class="hover:text-white transition">Epigenetics</a></li>
-                        <li><a href="nuclear_transport_dynamics_category.html" class="hover:text-white transition">Nuclear Transport</a></li>
-                        <li><a href="nuclear_biophysics_mechanics_category.html" class="hover:text-white transition">Nuclear Biophysics</a></li>
-                        <li><a href="disease_pathology_category.html" class="hover:text-white transition">Disease & Pathology</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="index.html" class="hover:text-white transition">Homepage</a></li>
-                        <li><a href="#" class="hover:text-white transition">About</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition">Updates</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-sm text-gray-300">
-                <p>&copy; 2024 CellNucleus.com - Educational Resource for Nuclear Biology Research</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpns8EqXoPo5OxcfjckDg7prLn6QVEaSabhfrEBg6nI%2BXckqmipGy7Qz5t6%2FXgsb%2Bi48GRIJ16eMkMKgDnS7kZdGrL2lzVJU3d12zZGXBwHK3JPyWsg4J3VKlVGBy25IxqCbFO%2BdlkrWSgTKf6lk6H4b%2FaG0SIc8xL4Ysb%2BEdNWW8teiy50uK848xsVl5PNbJ3RrWGzTexCQaPvUWfFYWwT325%2F3Uw67%2FeDtf%2FuEzPgfRq%2B5yS5kPBFf%2Br51Q4DUNmh6W13tOTiU0sai3Kj7w%2Fz%2FsXuoMkkS0Bv70drK3Gzxso0Jh1FhZ8AtuyUENy9F8G4hxe3TaqkaQDmKjK0NRpWyI1lEmEk0zaamOGNf71dUwYZkRx67MRVBEMXGg8BiOVYk4m%2F%2BQyih%2Bmo8zmk%2B0Ze%2BaLR7sgmcdxX9qQfi3bG2sGFjKu3dZdjI7XWRj%2BqkH97IyoLB%2FQa4L%2FaJQmZIpBPp5ilUJ9tXTmj6zswF0JmhJSYXYYLLoAGhbsXMIUGoYIYYJBCd%2F%2BJZ8%2BpDs0qXmcCMuCLO632NLvDgllKnN1Fy3Y4%2BdrVRmU%2F3da8%2FwP57w4odZFYeHpqVjXyIvkIunw4%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpns8EqXoPo5OxcfjckDg7prLn6QVEaSabhfrEBg6nI+XckqmipGy7Qz5t6/Xgsb+i48GRIJ16eMkMKgDnS7kZdGrL2lzVJU3d12zZGXBwHK3JPyWsg4J3VKlVGBy25IxqCbFO+dlkrWSgTKf6lk6H4b/aG0SIc8xL4Ysb+EdNWW8teiy50uK848xsVl5PNbJ3RrWGzTexCQaPvUWfFYWwT325/3Uw67/eDtf/uEzPgfRq+5yS5kPBFf+r51Q4DUNmh6W13tOTiU0sai3Kj7w/z/sXuoMkkS0Bv70drK3Gzxso0Jh1FhZ8AtuyUENy9F8G4hxe3TaqkaQDmKjK0NRpWyI1lEmEk0zaamOGNf71dUwYZkRx67MRVBEMXGg8BiOVYk4m/+Qyih+mo8zmk+0Ze+aLR7sgmcdxX9qQfi3bG2sGFjKu3dZdjI7XWRj+qkH97IyoLB/Qa4L/aJQmZIpBPp5ilUJ9tXTmj6zswF0JmhJSYXYYLLoAGhbsXMIUGoYIYYJBCd/+JZ8+pDs0qXmcCMuCLO632NLvDgllKnN1Fy3Y4+drVRmU/3da8/wP57w4odZFYeHpqVjXyIvkIunw4=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

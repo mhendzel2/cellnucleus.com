@@ -1,372 +1,785 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chromatin Architecture Dynamics Review - CellNucleus.com</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Chromatin Architecture Dynamics Review - CellNucleus.com
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body { font-family: 'Inter', sans-serif; }
         .category-badge { background-color: #2ECC71; }
         .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .toc-item:hover { background-color: #f8f9fa; }
         .sidebar-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
         .content-section { scroll-margin-top: 100px; }
         .research-timeline { border-left: 3px solid #2ECC71; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-2 text-sm text-gray-600">
-                    <a href="../../index.html" class="hover:text-blue-600">Home</a>
-                    <i class="fas fa-chevron-right text-xs"></i>
-                    <a href="../../chromatin_architecture_dynamics_category.html" class="hover:text-blue-600">Chromatin Architecture & Dynamics</a>
-                    <i class="fas fa-chevron-right text-xs"></i>
-                    <span class="text-gray-900">Chromatin Architecture Dynamics Review</span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <span class="category-badge text-white px-3 py-1 rounded-full text-xs font-medium">
-                        Chromatin Architecture & Dynamics
-                    </span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-gradient py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                    Chromatin Architecture Dynamics: Higher-Order Organization and Functional Regulation
-                </h1>
-                <div class="flex flex-wrap justify-center items-center gap-6 text-sm opacity-90 mb-8">
-                    <span><i class="fas fa-calendar mr-2"></i>Published: June 2024</span>
-                    <span><i class="fas fa-sync mr-2"></i>Last Updated: June 27, 2025</span>
-                    <span><i class="fas fa-clock mr-2"></i>Reading Time: 32 minutes</span>
-                    <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel, University of Alberta</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Image -->
-    <section class="bg-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <img src="images/chromatin/chromatin_super_resolution_nature.png" alt="Super-resolution chromatin imaging" class="mx-auto rounded-lg shadow-lg max-w-full h-auto">
-                <p class="mt-4 text-sm text-gray-600 italic">
-                    Super-resolution imaging revealing the evolution of higher-order chromatin structure during transcriptional activation. 
-                    Image courtesy of Nature Communications, doi:10.1038/s41467-020-15718-7
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
-            <!-- Main Content -->
-            <main class="lg:col-span-3">
-                <!-- Abstract -->
-                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-                    <h2 class="text-xl font-semibold text-blue-900 mb-3">Abstract</h2>
-                    <p class="text-blue-800 leading-relaxed">
-                        Chromatin architecture dynamics encompass the temporal and spatial reorganization of higher-order chromatin structure that regulates gene expression, DNA repair, and nuclear organization. This comprehensive review examines the molecular mechanisms, regulatory networks, and functional consequences of chromatin architectural changes.
-                    </p>
-                </div>
-
-                <!-- Key Points -->
-                <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-                    <h2 class="text-xl font-semibold text-green-900 mb-4">Key Points</h2>
-                    <ul class="space-y-2 text-green-800">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0"></i>
-                            Chromatin architecture is dynamically organized into hierarchical structures from nucleosomes to chromosome territories
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0"></i>
-                            Topologically associating domains (TADs) provide stable frameworks for gene regulation while allowing dynamic loop formation
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0"></i>
-                            Architectural proteins including cohesins, condensins, and CTCF orchestrate chromatin organization and reorganization
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0"></i>
-                            Chromatin dynamics are essential for transcriptional regulation, DNA repair, replication, and cellular differentiation
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0"></i>
-                            Disruption of chromatin architecture contributes to cancer, developmental disorders, and aging-related diseases
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Table of Contents -->
-                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Table of Contents</h2>
-                    <ol class="space-y-2 text-sm">
-                        <li><a href="#section1" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">1. Introduction to Chromatin Architecture</a></li>
-                        <li><a href="#section2" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">2. Hierarchical Organization of Chromatin Structure</a></li>
-                        <li><a href="#section3" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">3. Topologically Associating Domains (TADs)</a></li>
-                        <li><a href="#section4" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">4. Chromatin Loop Formation and Dynamics</a></li>
-                        <li><a href="#section5" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">5. Architectural Proteins and Regulatory Factors</a></li>
-                        <li><a href="#section6" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">6. Transcriptional Regulation and Enhancer-Promoter Interactions</a></li>
-                        <li><a href="#section7" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">7. Cell Cycle-Dependent Chromatin Reorganization</a></li>
-                        <li><a href="#section8" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">8. Chromatin Architecture in Development and Differentiation</a></li>
-                        <li><a href="#section9" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">9. Disease Implications and Therapeutic Targeting</a></li>
-                        <li><a href="#section10" class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800">10. Experimental Approaches and Technological Advances</a></li>
-                    </ol>
-                </div>
-
-                <!-- Main Content Sections -->
-                <div class="prose prose-lg max-w-none space-y-8">
-                    <section id="section1" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction to Chromatin Architecture</h2>
-                        <p class="mb-4">Chromatin architecture represents the three-dimensional organization of genetic material within the cell nucleus, encompassing multiple scales of organization from individual nucleosomes to entire chromosome territories. This dynamic organization is fundamental to virtually all nuclear processes.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Historical Perspective</h3>
-                        <p class="mb-4">The concept of chromatin architecture has evolved from early cytological observations of chromosome territories to modern molecular understanding of DNA-protein interactions and three-dimensional genome organization revealed by chromosome conformation capture techniques.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Functional Significance</h3>
-                        <p class="mb-2">Chromatin architecture serves multiple critical functions:</p>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li>Spatial organization of gene regulatory elements</li>
-                            <li>Coordination of transcriptional programs</li>
-                            <li>DNA damage response and repair</li>
-                            <li>Replication timing and efficiency</li>
-                            <li>Nuclear compartmentalization</li>
-                        </ul>
-                    </section>
-
-                    <section id="section2" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Hierarchical Organization of Chromatin Structure</h2>
-                        <p class="mb-4">Chromatin exhibits hierarchical organization across multiple length scales, from the 11-nm nucleosome fiber to megabase-scale chromosome territories.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Primary Structure: Nucleosome Organization</h3>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li><strong>Nucleosome Positioning</strong>: DNA wrapping around histone octamers</li>
-                            <li><strong>Nucleosome Spacing</strong>: Variable linker lengths and positioning</li>
-                            <li><strong>Histone Variants</strong>: Specialized nucleosome composition</li>
-                            <li><strong>Chromatin Accessibility</strong>: Nucleosome-free regions and regulatory sites</li>
-                        </ul>
-
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Secondary Structure: Chromatin Fiber</h3>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li><strong>30-nm Fiber</strong>: Higher-order nucleosome packaging (debated structure)</li>
-                            <li><strong>Chromatin Compaction</strong>: Variable condensation states</li>
-                            <li><strong>Fiber Dynamics</strong>: Breathing and accessibility changes</li>
-                            <li><strong>Regulatory Modulation</strong>: Histone modifications and chromatin remodeling</li>
-                        </ul>
-                    </section>
-
-                    <section id="section3" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Topologically Associating Domains (TADs)</h2>
-                        <p class="mb-4">TADs represent fundamental units of chromatin organization, providing stable frameworks for gene regulation while maintaining flexibility for dynamic interactions.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">TAD Structure and Properties</h3>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li><strong>Domain Size</strong>: Typically 200 kb to 2 Mb in mammals</li>
-                            <li><strong>Boundary Elements</strong>: CTCF binding sites and insulator sequences</li>
-                            <li><strong>Internal Organization</strong>: Sub-domains and regulatory clusters</li>
-                            <li><strong>Conservation</strong>: Evolutionary conservation across species</li>
-                        </ul>
-                    </section>
-
-                    <section id="section4" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Chromatin Loop Formation and Dynamics</h2>
-                        <p class="mb-4">Chromatin loops represent dynamic structures that bring distant DNA elements into spatial proximity, enabling long-range gene regulation and coordination.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Loop Formation Mechanisms</h3>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li><strong>Cohesin Complex</strong>: Ring-shaped SMC protein complex</li>
-                            <li><strong>Loop Extrusion Process</strong>: Progressive DNA threading through cohesin rings</li>
-                            <li><strong>CTCF-Mediated Anchoring</strong>: Boundary element recognition and stabilization</li>
-                            <li><strong>ATP-Dependent Dynamics</strong>: Energy-dependent loop formation and maintenance</li>
-                        </ul>
-                    </section>
-
-                    <section id="section5" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Architectural Proteins and Regulatory Factors</h2>
-                        <p class="mb-4">Multiple protein families coordinate chromatin architecture through diverse mechanisms including loop extrusion, boundary formation, and chromatin remodeling.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Structural Maintenance of Chromosomes (SMC) Complexes</h3>
-                        <ul class="list-disc list-inside space-y-1 mb-4">
-                            <li><strong>Cohesin Complex</strong>: SMC1/SMC3 with RAD21 and stromalin subunits</li>
-                            <li><strong>Condensin Complexes</strong>: SMC2/SMC4 with condensin I and II variants</li>
-                            <li><strong>SMC5/6 Complex</strong>: DNA repair and chromosome structure roles</li>
-                            <li><strong>Regulatory Mechanisms</strong>: Post-translational modifications and cofactors</li>
-                        </ul>
-                    </section>
-
-                    <section id="section6" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Transcriptional Regulation and Enhancer-Promoter Interactions</h2>
-                        <p class="mb-4">Chromatin architecture provides the spatial framework for transcriptional regulation through dynamic enhancer-promoter interactions and transcriptional hub formation.</p>
-                    </section>
-
-                    <section id="section7" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Cell Cycle-Dependent Chromatin Reorganization</h2>
-                        <p class="mb-4">Chromatin architecture undergoes dramatic reorganization throughout the cell cycle to accommodate DNA replication, chromosome segregation, and nuclear reformation.</p>
-                    </section>
-
-                    <section id="section8" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Chromatin Architecture in Development and Differentiation</h2>
-                        <p class="mb-4">Chromatin architectural changes are fundamental to developmental gene expression programs and cellular differentiation processes.</p>
-                    </section>
-
-                    <section id="section9" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Disease Implications and Therapeutic Targeting</h2>
-                        <p class="mb-4">Chromatin architectural disruption contributes to numerous human diseases, offering opportunities for therapeutic intervention.</p>
-                    </section>
-
-                    <section id="section10" class="content-section">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Experimental Approaches and Technological Advances</h2>
-                        <p class="mb-4">Understanding chromatin architecture requires sophisticated experimental approaches spanning molecular biology, microscopy, and computational analysis.</p>
-                    </section>
-                </div>
-
-                <!-- Clinical Applications -->
-                <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mt-8">
-                    <h2 class="text-xl font-semibold text-purple-900 mb-4">Clinical Applications</h2>
-                    
-                    <h3 class="text-lg font-medium text-purple-800 mb-2">Diagnostic Applications</h3>
-                    <ul class="list-disc list-inside text-purple-700 mb-4 space-y-1">
-                        <li>Architectural biomarkers: Chromatin organization as disease markers</li>
-                        <li>3D genome profiling: Patient stratification and prognosis</li>
-                        <li>Developmental assessment: Architectural maturation markers</li>
-                        <li>Therapeutic monitoring: Response assessment through architectural changes</li>
-                    </ul>
-                    
-                    <h3 class="text-lg font-medium text-purple-800 mb-2">Therapeutic Strategies</h3>
-                    <ul class="list-disc list-inside text-purple-700 space-y-1">
-                        <li>Architectural restoration: Targeted chromatin reorganization</li>
-                        <li>Epigenetic therapies: Chromatin-modifying drug development</li>
-                        <li>Synthetic biology: Engineered architectural systems</li>
-                        <li>Combination approaches: Multi-target architectural interventions</li>
-                    </ul>
-                </div>
-            </main>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1 mt-8 lg:mt-0">
-                <!-- Related Reviews -->
-                <div class="sidebar-card rounded-lg p-6 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Related Reviews</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="4d_genome_organization_comprehensive_review.html" class="text-blue-600 hover:text-blue-800">4D Genome Organization Comprehensive Review</a></li>
-                        <li><a href="chromatin_condensates_critical_review.html" class="text-blue-600 hover:text-blue-800">Chromatin Condensates Critical Review</a></li>
-                        <li><a href="computational_cell_nucleus_modeling_enhanced_review.html" class="text-blue-600 hover:text-blue-800">Computational Cell Nucleus Modeling Review</a></li>
-                        <li><a href="chromosome_condensation_mechanisms_review.html" class="text-blue-600 hover:text-blue-800">Chromosome Condensation Mechanisms Review</a></li>
-                    </ul>
-                </div>
-
-                <!-- Key Terms -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Key Terms</h3>
-                    <dl class="space-y-3 text-sm">
-                        <dt class="font-medium text-gray-900">TADs</dt>
-                        <dd class="text-gray-600">Topologically associating domains providing chromatin organization frameworks</dd>
-                        <dt class="font-medium text-gray-900">Loop Extrusion</dt>
-                        <dd class="text-gray-600">Process by which cohesin complexes form chromatin loops</dd>
-                        <dt class="font-medium text-gray-900">CTCF</dt>
-                        <dd class="text-gray-600">Key architectural transcription factor organizing chromatin structure</dd>
-                        <dt class="font-medium text-gray-900">Hi-C</dt>
-                        <dd class="text-gray-600">Genome-wide chromosome conformation capture technique</dd>
-                    </dl>
-                </div>
-
-                <!-- Quick Facts -->
-                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-                    <h3 class="text-lg font-semibold text-yellow-900 mb-4">Quick Facts</h3>
-                    <ul class="space-y-2 text-sm text-yellow-800">
-                        <li><strong>TAD number:</strong> ~3,000 TADs in human genome</li>
-                        <li><strong>Loop formation time:</strong> 2-10 minutes for cohesin-mediated loops</li>
-                        <li><strong>Chromosome territories:</strong> Each chromosome occupies distinct nuclear space</li>
-                        <li><strong>Architectural proteins:</strong> >100 factors involved in chromatin organization</li>
-                        <li><strong>Disease associations:</strong> >500 diseases linked to architectural disruption</li>
-                    </ul>
-                </div>
-
-                <!-- Research Timeline -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Research Timeline</h3>
-                    <div class="research-timeline pl-4 space-y-3 text-sm">
-                        <div class="relative">
-                            <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="text-gray-600"><strong>1970s:</strong> First chromosome territory observations</div>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="text-gray-600"><strong>2002:</strong> 3C technology development (Dekker lab)</div>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="text-gray-600"><strong>2009:</strong> Hi-C method introduction (Lieberman-Aiden et al.)</div>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="text-gray-600"><strong>2012:</strong> TAD discovery (Dixon et al.)</div>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full"></div>
-                            <div class="text-gray-600"><strong>2016:</strong> Loop extrusion model validation</div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </div>
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- References -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">References (Selection)</h3>
-                    <ol class="text-sm space-y-2 text-gray-300">
-                        <li>1. Bonev & Cavalli (2016). Organization and function of the 3D genome. Nat Rev Genet.</li>
-                        <li>2. Rao et al. (2017). Cohesin loss eliminates all loop domains. Cell.</li>
-                        <li>3. Fudenberg et al. (2016). Formation of chromosomal domains by loop extrusion. Cell Rep.</li>
-                        <li>4. Dekker & Mirny (2016). The 3D genome as moderator of chromosomal communication. Cell.</li>
-                    </ol>
-                </div>
-
-                <!-- Image Attribution -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Image Attribution</h3>
-                    <p class="text-sm text-gray-300">
-                        Header image: Super-resolution chromatin imaging, Nature Communications, doi:10.1038/s41467-020-15718-7. 
-                        Used under fair use for educational purposes.
-                    </p>
-                </div>
-
-                <!-- Navigation -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
-                    <div class="text-sm space-y-2">
-                        <div><strong>Previous Review:</strong> <a href="4d_genome_organization_comprehensive_review.html" class="text-blue-400 hover:text-blue-300">4D Genome Organization Review</a></div>
-                        <div><strong>Next Review:</strong> <a href="chromatin_condensates_critical_review.html" class="text-blue-400 hover:text-blue-300">Chromatin Condensates Critical Review</a></div>
-                        <div><strong>Category:</strong> <a href="../../chromatin_architecture_dynamics_category.html" class="text-blue-400 hover:text-blue-300">Chromatin Architecture & Dynamics</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2025 CellNucleus.com - Comprehensive Nuclear Biology Resource</p>
-            </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-gradient py-16">
+   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center text-white">
+     <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Chromatin Architecture Dynamics: Higher-Order Organization and Functional Regulation
+     </h1>
+     <div class="flex flex-wrap justify-center items-center gap-6 text-sm opacity-90 mb-8">
+      <span>
+       <i class="fas fa-calendar mr-2">
+       </i>
+       Published: June 2024
+      </span>
+      <span>
+       <i class="fas fa-sync mr-2">
+       </i>
+       Last Updated: June 27, 2025
+      </span>
+      <span>
+       <i class="fas fa-clock mr-2">
+       </i>
+       Reading Time: 32 minutes
+      </span>
+      <span>
+       <i class="fas fa-user mr-2">
+       </i>
+       Dr. Michael Hendzel, University of Alberta
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Hero Image -->
+  <section class="bg-white py-8">
+   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+     <img alt="Super-resolution chromatin imaging" class="mx-auto rounded-lg shadow-lg max-w-full h-auto" src="images/chromatin/chromatin_super_resolution_nature.png"/>
+     <p class="mt-4 text-sm text-gray-600 italic">
+      Super-resolution imaging revealing the evolution of higher-order chromatin structure during transcriptional activation.
+                    Image courtesy of Nature Communications, doi:10.1038/s41467-020-15718-7
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Main Content Container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+    <!-- Main Content -->
+    <main class="lg:col-span-3">
+     <!-- Abstract -->
+     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-semibold text-blue-900 mb-3">
+       Abstract
+      </h2>
+      <p class="text-blue-800 leading-relaxed">
+       Chromatin architecture dynamics encompass the temporal and spatial reorganization of higher-order chromatin structure that regulates gene expression, DNA repair, and nuclear organization. This comprehensive review examines the molecular mechanisms, regulatory networks, and functional consequences of chromatin architectural changes.
+      </p>
+     </div>
+     <!-- Key Points -->
+     <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-semibold text-green-900 mb-4">
+       Key Points
+      </h2>
+      <ul class="space-y-2 text-green-800">
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0">
+        </i>
+        Chromatin architecture is dynamically organized into hierarchical structures from nucleosomes to chromosome territories
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0">
+        </i>
+        Topologically associating domains (TADs) provide stable frameworks for gene regulation while allowing dynamic loop formation
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0">
+        </i>
+        Architectural proteins including cohesins, condensins, and CTCF orchestrate chromatin organization and reorganization
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0">
+        </i>
+        Chromatin dynamics are essential for transcriptional regulation, DNA repair, replication, and cellular differentiation
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 flex-shrink-0">
+        </i>
+        Disruption of chromatin architecture contributes to cancer, developmental disorders, and aging-related diseases
+       </li>
+      </ul>
+     </div>
+     <!-- Table of Contents -->
+     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">
+       Table of Contents
+      </h2>
+      <ol class="space-y-2 text-sm">
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section1">
+         1. Introduction to Chromatin Architecture
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section2">
+         2. Hierarchical Organization of Chromatin Structure
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section3">
+         3. Topologically Associating Domains (TADs)
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section4">
+         4. Chromatin Loop Formation and Dynamics
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section5">
+         5. Architectural Proteins and Regulatory Factors
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section6">
+         6. Transcriptional Regulation and Enhancer-Promoter Interactions
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section7">
+         7. Cell Cycle-Dependent Chromatin Reorganization
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section8">
+         8. Chromatin Architecture in Development and Differentiation
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section9">
+         9. Disease Implications and Therapeutic Targeting
+        </a>
+       </li>
+       <li>
+        <a class="toc-item block py-2 px-3 rounded hover:bg-gray-100 text-blue-600 hover:text-blue-800" href="#section10">
+         10. Experimental Approaches and Technological Advances
+        </a>
+       </li>
+      </ol>
+     </div>
+     <!-- Main Content Sections -->
+     <div class="prose prose-lg max-w-none space-y-8">
+      <section class="content-section" id="section1">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        1. Introduction to Chromatin Architecture
+       </h2>
+       <p class="mb-4">
+        Chromatin architecture represents the three-dimensional organization of genetic material within the cell nucleus, encompassing multiple scales of organization from individual nucleosomes to entire chromosome territories. This dynamic organization is fundamental to virtually all nuclear processes.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Historical Perspective
+       </h3>
+       <p class="mb-4">
+        The concept of chromatin architecture has evolved from early cytological observations of chromosome territories to modern molecular understanding of DNA-protein interactions and three-dimensional genome organization revealed by chromosome conformation capture techniques.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Functional Significance
+       </h3>
+       <p class="mb-2">
+        Chromatin architecture serves multiple critical functions:
+       </p>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         Spatial organization of gene regulatory elements
+        </li>
+        <li>
+         Coordination of transcriptional programs
+        </li>
+        <li>
+         DNA damage response and repair
+        </li>
+        <li>
+         Replication timing and efficiency
+        </li>
+        <li>
+         Nuclear compartmentalization
+        </li>
+       </ul>
+      </section>
+      <section class="content-section" id="section2">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        2. Hierarchical Organization of Chromatin Structure
+       </h2>
+       <p class="mb-4">
+        Chromatin exhibits hierarchical organization across multiple length scales, from the 11-nm nucleosome fiber to megabase-scale chromosome territories.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Primary Structure: Nucleosome Organization
+       </h3>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         <strong>
+          Nucleosome Positioning
+         </strong>
+         : DNA wrapping around histone octamers
+        </li>
+        <li>
+         <strong>
+          Nucleosome Spacing
+         </strong>
+         : Variable linker lengths and positioning
+        </li>
+        <li>
+         <strong>
+          Histone Variants
+         </strong>
+         : Specialized nucleosome composition
+        </li>
+        <li>
+         <strong>
+          Chromatin Accessibility
+         </strong>
+         : Nucleosome-free regions and regulatory sites
+        </li>
+       </ul>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Secondary Structure: Chromatin Fiber
+       </h3>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         <strong>
+          30-nm Fiber
+         </strong>
+         : Higher-order nucleosome packaging (debated structure)
+        </li>
+        <li>
+         <strong>
+          Chromatin Compaction
+         </strong>
+         : Variable condensation states
+        </li>
+        <li>
+         <strong>
+          Fiber Dynamics
+         </strong>
+         : Breathing and accessibility changes
+        </li>
+        <li>
+         <strong>
+          Regulatory Modulation
+         </strong>
+         : Histone modifications and chromatin remodeling
+        </li>
+       </ul>
+      </section>
+      <section class="content-section" id="section3">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        3. Topologically Associating Domains (TADs)
+       </h2>
+       <p class="mb-4">
+        TADs represent fundamental units of chromatin organization, providing stable frameworks for gene regulation while maintaining flexibility for dynamic interactions.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        TAD Structure and Properties
+       </h3>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         <strong>
+          Domain Size
+         </strong>
+         : Typically 200 kb to 2 Mb in mammals
+        </li>
+        <li>
+         <strong>
+          Boundary Elements
+         </strong>
+         : CTCF binding sites and insulator sequences
+        </li>
+        <li>
+         <strong>
+          Internal Organization
+         </strong>
+         : Sub-domains and regulatory clusters
+        </li>
+        <li>
+         <strong>
+          Conservation
+         </strong>
+         : Evolutionary conservation across species
+        </li>
+       </ul>
+      </section>
+      <section class="content-section" id="section4">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        4. Chromatin Loop Formation and Dynamics
+       </h2>
+       <p class="mb-4">
+        Chromatin loops represent dynamic structures that bring distant DNA elements into spatial proximity, enabling long-range gene regulation and coordination.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Loop Formation Mechanisms
+       </h3>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         <strong>
+          Cohesin Complex
+         </strong>
+         : Ring-shaped SMC protein complex
+        </li>
+        <li>
+         <strong>
+          Loop Extrusion Process
+         </strong>
+         : Progressive DNA threading through cohesin rings
+        </li>
+        <li>
+         <strong>
+          CTCF-Mediated Anchoring
+         </strong>
+         : Boundary element recognition and stabilization
+        </li>
+        <li>
+         <strong>
+          ATP-Dependent Dynamics
+         </strong>
+         : Energy-dependent loop formation and maintenance
+        </li>
+       </ul>
+      </section>
+      <section class="content-section" id="section5">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        5. Architectural Proteins and Regulatory Factors
+       </h2>
+       <p class="mb-4">
+        Multiple protein families coordinate chromatin architecture through diverse mechanisms including loop extrusion, boundary formation, and chromatin remodeling.
+       </p>
+       <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+        Structural Maintenance of Chromosomes (SMC) Complexes
+       </h3>
+       <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>
+         <strong>
+          Cohesin Complex
+         </strong>
+         : SMC1/SMC3 with RAD21 and stromalin subunits
+        </li>
+        <li>
+         <strong>
+          Condensin Complexes
+         </strong>
+         : SMC2/SMC4 with condensin I and II variants
+        </li>
+        <li>
+         <strong>
+          SMC5/6 Complex
+         </strong>
+         : DNA repair and chromosome structure roles
+        </li>
+        <li>
+         <strong>
+          Regulatory Mechanisms
+         </strong>
+         : Post-translational modifications and cofactors
+        </li>
+       </ul>
+      </section>
+      <section class="content-section" id="section6">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        6. Transcriptional Regulation and Enhancer-Promoter Interactions
+       </h2>
+       <p class="mb-4">
+        Chromatin architecture provides the spatial framework for transcriptional regulation through dynamic enhancer-promoter interactions and transcriptional hub formation.
+       </p>
+      </section>
+      <section class="content-section" id="section7">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        7. Cell Cycle-Dependent Chromatin Reorganization
+       </h2>
+       <p class="mb-4">
+        Chromatin architecture undergoes dramatic reorganization throughout the cell cycle to accommodate DNA replication, chromosome segregation, and nuclear reformation.
+       </p>
+      </section>
+      <section class="content-section" id="section8">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        8. Chromatin Architecture in Development and Differentiation
+       </h2>
+       <p class="mb-4">
+        Chromatin architectural changes are fundamental to developmental gene expression programs and cellular differentiation processes.
+       </p>
+      </section>
+      <section class="content-section" id="section9">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        9. Disease Implications and Therapeutic Targeting
+       </h2>
+       <p class="mb-4">
+        Chromatin architectural disruption contributes to numerous human diseases, offering opportunities for therapeutic intervention.
+       </p>
+      </section>
+      <section class="content-section" id="section10">
+       <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        10. Experimental Approaches and Technological Advances
+       </h2>
+       <p class="mb-4">
+        Understanding chromatin architecture requires sophisticated experimental approaches spanning molecular biology, microscopy, and computational analysis.
+       </p>
+      </section>
+     </div>
+     <!-- Clinical Applications -->
+     <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mt-8">
+      <h2 class="text-xl font-semibold text-purple-900 mb-4">
+       Clinical Applications
+      </h2>
+      <h3 class="text-lg font-medium text-purple-800 mb-2">
+       Diagnostic Applications
+      </h3>
+      <ul class="list-disc list-inside text-purple-700 mb-4 space-y-1">
+       <li>
+        Architectural biomarkers: Chromatin organization as disease markers
+       </li>
+       <li>
+        3D genome profiling: Patient stratification and prognosis
+       </li>
+       <li>
+        Developmental assessment: Architectural maturation markers
+       </li>
+       <li>
+        Therapeutic monitoring: Response assessment through architectural changes
+       </li>
+      </ul>
+      <h3 class="text-lg font-medium text-purple-800 mb-2">
+       Therapeutic Strategies
+      </h3>
+      <ul class="list-disc list-inside text-purple-700 space-y-1">
+       <li>
+        Architectural restoration: Targeted chromatin reorganization
+       </li>
+       <li>
+        Epigenetic therapies: Chromatin-modifying drug development
+       </li>
+       <li>
+        Synthetic biology: Engineered architectural systems
+       </li>
+       <li>
+        Combination approaches: Multi-target architectural interventions
+       </li>
+      </ul>
+     </div>
+    </main>
+    <!-- Sidebar -->
+    <aside class="lg:col-span-1 mt-8 lg:mt-0">
+     <!-- Related Reviews -->
+     <div class="sidebar-card rounded-lg p-6 mb-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+       Related Reviews
+      </h3>
+      <ul class="space-y-2 text-sm">
+       <li>
+        <a class="text-blue-600 hover:text-blue-800" href="4d_genome_organization_comprehensive_review.html">
+         4D Genome Organization Comprehensive Review
+        </a>
+       </li>
+       <li>
+        <a class="text-blue-600 hover:text-blue-800" href="chromatin_condensates_critical_review.html">
+         Chromatin Condensates Critical Review
+        </a>
+       </li>
+       <li>
+        <a class="text-blue-600 hover:text-blue-800" href="computational_cell_nucleus_modeling_enhanced_review.html">
+         Computational Cell Nucleus Modeling Review
+        </a>
+       </li>
+       <li>
+        <a class="text-blue-600 hover:text-blue-800" href="chromosome_condensation_mechanisms_review.html">
+         Chromosome Condensation Mechanisms Review
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!-- Key Terms -->
+     <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+       Key Terms
+      </h3>
+      <dl class="space-y-3 text-sm">
+       <dt class="font-medium text-gray-900">
+        TADs
+       </dt>
+       <dd class="text-gray-600">
+        Topologically associating domains providing chromatin organization frameworks
+       </dd>
+       <dt class="font-medium text-gray-900">
+        Loop Extrusion
+       </dt>
+       <dd class="text-gray-600">
+        Process by which cohesin complexes form chromatin loops
+       </dd>
+       <dt class="font-medium text-gray-900">
+        CTCF
+       </dt>
+       <dd class="text-gray-600">
+        Key architectural transcription factor organizing chromatin structure
+       </dd>
+       <dt class="font-medium text-gray-900">
+        Hi-C
+       </dt>
+       <dd class="text-gray-600">
+        Genome-wide chromosome conformation capture technique
+       </dd>
+      </dl>
+     </div>
+     <!-- Quick Facts -->
+     <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+      <h3 class="text-lg font-semibold text-yellow-900 mb-4">
+       Quick Facts
+      </h3>
+      <ul class="space-y-2 text-sm text-yellow-800">
+       <li>
+        <strong>
+         TAD number:
+        </strong>
+        ~3,000 TADs in human genome
+       </li>
+       <li>
+        <strong>
+         Loop formation time:
+        </strong>
+        2-10 minutes for cohesin-mediated loops
+       </li>
+       <li>
+        <strong>
+         Chromosome territories:
+        </strong>
+        Each chromosome occupies distinct nuclear space
+       </li>
+       <li>
+        <strong>
+         Architectural proteins:
+        </strong>
+        &gt;100 factors involved in chromatin organization
+       </li>
+       <li>
+        <strong>
+         Disease associations:
+        </strong>
+        &gt;500 diseases linked to architectural disruption
+       </li>
+      </ul>
+     </div>
+     <!-- Research Timeline -->
+     <div class="bg-white border border-gray-200 rounded-lg p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+       Research Timeline
+      </h3>
+      <div class="research-timeline pl-4 space-y-3 text-sm">
+       <div class="relative">
+        <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full">
         </div>
-    </footer>
-
-    <!-- Smooth Scrolling Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        <div class="text-gray-600">
+         <strong>
+          1970s:
+         </strong>
+         First chromosome territory observations
+        </div>
+       </div>
+       <div class="relative">
+        <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full">
+        </div>
+        <div class="text-gray-600">
+         <strong>
+          2002:
+         </strong>
+         3C technology development (Dekker lab)
+        </div>
+       </div>
+       <div class="relative">
+        <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full">
+        </div>
+        <div class="text-gray-600">
+         <strong>
+          2009:
+         </strong>
+         Hi-C method introduction (Lieberman-Aiden et al.)
+        </div>
+       </div>
+       <div class="relative">
+        <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full">
+        </div>
+        <div class="text-gray-600">
+         <strong>
+          2012:
+         </strong>
+         TAD discovery (Dixon et al.)
+        </div>
+       </div>
+       <div class="relative">
+        <div class="absolute -left-2 w-3 h-3 bg-green-500 rounded-full">
+        </div>
+        <div class="text-gray-600">
+         <strong>
+          2016:
+         </strong>
+         Loop extrusion model validation
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Smooth Scrolling Script -->
+  <script>
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -378,15 +791,20 @@
                 }
             });
         });
-    </script>
-</body>
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDhBWBWKqxD1nAYElDAfqc0BYeqDnswmDHgknSZuiHK4UY9rE4FuZ5I5%2FDwOLAsFYjuo8De0uwuy5BKZTcisnQbpZGObpwko1TKR2rYJyOeSdvZ59Ho%2Bm%2F1bUsO3U0fEduMmh7PMCctJx%2Bf9N3O%2BE8zfEVJAurtq5VzGjnNeZFgkgl1zCj55yl6bRyRC%2Fp7laRCJdHH%2Bbs%2FdIWlTLdk3%2F8xh5q05pxr7ubuJi4Iz2YzXC%2Fh6nkkAyZRfXXqPr%2FBY7%2B3zwG0P3Y19vIMQLsi4jBNsMhgMa52pSCV27BfNZBP%2FWQsD4UFuhb5lxOgUaB2xZ3VKR22x%2B%2BkmowKjVzb3yOXbAUruy1DPVKRLuwum97NETTRTW3McMXK3t%2FPRHSherJZ%2BZE1E3R5VBjj76q6PQ8bdA06wznHV1vpkOhkQR4sQ2zs1ULWkOCvvomAUD3IGedVs0VOhhIiCiceHN0FlpA3UbvjAl1GrSIJGsL6nQGwrwrZTGk8e44zKgKz%2FDHPF3g9QKyviBKfMxwoy%2FZdwF6ICKYRNn6u9eF81cVE1Jl68p";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDhBWBWKqxD1nAYElDAfqc0BYeqDnswmDHgknSZuiHK4UY9rE4FuZ5I5/DwOLAsFYjuo8De0uwuy5BKZTcisnQbpZGObpwko1TKR2rYJyOeSdvZ59Ho+m/1bUsO3U0fEduMmh7PMCctJx+f9N3O+E8zfEVJAurtq5VzGjnNeZFgkgl1zCj55yl6bRyRC/p7laRCJdHH+bs/dIWlTLdk3/8xh5q05pxr7ubuJi4Iz2YzXC/h6nkkAyZRfXXqPr/BY7+3zwG0P3Y19vIMQLsi4jBNsMhgMa52pSCV27BfNZBP/WQsD4UFuhb5lxOgUaB2xZ3VKR22x++kmowKjVzb3yOXbAUruy1DPVKRLuwum97NETTRTW3McMXK3t/PRHSherJZ+ZE1E3R5VBjj76q6PQ8bdA06wznHV1vpkOhkQR4sQ2zs1ULWkOCvvomAUD3IGedVs0VOhhIiCiceHN0FlpA3UbvjAl1GrSIJGsL6nQGwrwrZTGk8e44zKgKz/DHPF3g9QKyviBKfMxwoy/ZdwF6ICKYRNn6u9eF81cVE1Jl68p";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

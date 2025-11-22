@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nucleolus Comprehensive Review - CellNucleus.com</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nucleolus Comprehensive Review - CellNucleus.com
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body { font-family: 'Inter', sans-serif; }
         .category-badge { background-color: #4A90E2; }
         .hero-image { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/nuclear_bodies/nucleolus_cryo_electron_tomography_nature.png'); background-size: cover; background-position: center; }
         .sidebar-gradient { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
@@ -17,385 +19,955 @@
         .section-header { border-left: 4px solid #4A90E2; }
         .toc-item { transition: all 0.2s ease; }
         .toc-item:hover { background-color: #f1f5f9; padding-left: 1rem; }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-gray-900">CellNucleus.com</h1>
-                </div>
-                <nav class="hidden md:block">
-                    <div class="flex items-center space-x-4">
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Reviews</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">Categories</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Breadcrumbs -->
-    <div class="bg-gray-100 py-3">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex" aria-label="Breadcrumb">
-                <ol class="flex items-center space-x-2">
-                    <li><a href="#" class="text-gray-500 hover:text-gray-700"><i class="fas fa-home mr-1"></i>Home</a></li>
-                    <li><i class="fas fa-chevron-right text-gray-400 mx-2"></i></li>
-                    <li><a href="../../nuclear_bodies_compartments_category.html" class="text-gray-500 hover:text-gray-700">Nuclear Bodies & Compartments</a></li>
-                    <li><i class="fas fa-chevron-right text-gray-400 mx-2"></i></li>
-                    <li class="text-gray-900 font-medium">Nucleolus Comprehensive Review</li>
-                </ol>
-            </nav>
-        </div>
+  </style>
+ </head>
+ <body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
     </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
-            <!-- Main Content -->
-            <div class="lg:col-span-3">
-                <!-- Category Badge & Title -->
-                <div class="mb-6">
-                    <span class="category-badge inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white mb-4">
-                        <i class="fas fa-circle mr-2"></i>Nuclear Bodies & Compartments
-                    </span>
-                    <h1 class="text-4xl font-bold text-gray-900 mb-2">Nucleolus Comprehensive Review</h1>
-                    <h2 class="text-2xl text-gray-600 mb-4">Ribosome Biogenesis and Nuclear Organization</h2>
-                    <div class="flex items-center text-sm text-gray-500 space-x-4">
-                        <span><i class="fas fa-calendar mr-1"></i>Published: June 2024</span>
-                        <span><i class="fas fa-edit mr-1"></i>Last Updated: June 27, 2025</span>
-                        <span><i class="fas fa-clock mr-1"></i>Reading Time: 28 minutes</span>
-                        <span><i class="fas fa-user mr-1"></i>Dr. Michael Hendzel, University of Alberta</span>
-                    </div>
-                </div>
-
-                <!-- Hero Image -->
-                <div class="hero-image rounded-lg h-64 flex items-end p-6 mb-8">
-                    <div class="text-white">
-                        <p class="text-sm bg-black bg-opacity-50 rounded px-2 py-1">
-                            Cryo-electron tomography revealing the tripartite structure of the nucleolus with fibrillar centers, dense fibrillar components, and granular components. Image courtesy of Nature Communications, doi:10.1038/s41467-021-25413-w
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Abstract Box -->
-                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Abstract</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site of ribosome biogenesis and rRNA processing. This comprehensive review examines the molecular organization, functional compartmentalization, and regulatory mechanisms governing nucleolar structure and dynamics.
-                    </p>
-                </div>
-
-                <!-- Key Points -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-key mr-2 text-yellow-500"></i>Key Points</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>The nucleolus organizes around ribosomal RNA genes with tripartite ultrastructural organization</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Ribosome biogenesis involves coordinated rRNA transcription, modification, processing, and assembly</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Nucleolar organization is dynamically regulated by cell cycle, stress responses, and metabolic demands</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Nucleolar dysfunction is implicated in ribosomopathies, cancer, and aging-related diseases</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>The nucleolus serves additional functions including cell cycle control, stress sensing, and viral replication</span></li>
-                    </ul>
-                </div>
-
-                <!-- Table of Contents -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-list mr-2 text-blue-500"></i>Table of Contents</h3>
-                    <ol class="space-y-2">
-                        <li class="toc-item"><a href="#section1" class="text-blue-600 hover:text-blue-800">1. Introduction to Nucleolar Organization</a></li>
-                        <li class="toc-item"><a href="#section2" class="text-blue-600 hover:text-blue-800">2. Tripartite Structural Architecture</a></li>
-                        <li class="toc-item"><a href="#section3" class="text-blue-600 hover:text-blue-800">3. Ribosome Biogenesis Machinery and Pathways</a></li>
-                        <li class="toc-item"><a href="#section4" class="text-blue-600 hover:text-blue-800">4. rRNA Gene Transcription and Regulation</a></li>
-                        <li class="toc-item"><a href="#section5" class="text-blue-600 hover:text-blue-800">5. rRNA Processing and Modification</a></li>
-                        <li class="toc-item"><a href="#section6" class="text-blue-600 hover:text-blue-800">6. Ribosomal Subunit Assembly and Export</a></li>
-                        <li class="toc-item"><a href="#section7" class="text-blue-600 hover:text-blue-800">7. Cell Cycle and Stress-Dependent Regulation</a></li>
-                        <li class="toc-item"><a href="#section8" class="text-blue-600 hover:text-blue-800">8. Non-Ribosomal Functions of the Nucleolus</a></li>
-                        <li class="toc-item"><a href="#section9" class="text-blue-600 hover:text-blue-800">9. Disease Implications and Therapeutic Targets</a></li>
-                        <li class="toc-item"><a href="#section10" class="text-blue-600 hover:text-blue-800">10. Advanced Imaging and Analysis Methods</a></li>
-                    </ol>
-                </div>
-
-                <!-- Main Content Sections -->
-                <div class="space-y-8">
-                    <section id="section1" class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">1. Introduction to Nucleolar Organization</h3>
-                        <div class="prose max-w-none">
-                            <p class="mb-4">The nucleolus stands as the most prominent and well-characterized nuclear body, historically recognized for over a century yet continuing to reveal new complexities in its organization and function. As the primary site of ribosome biogenesis, the nucleolus represents a paradigmatic example of nuclear compartmentalization without surrounding membranes.</p>
-                            
-                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Historical Perspective</h4>
-                            <p class="mb-4">First described by Fontana in 1781 and extensively characterized by electron microscopy in the 1960s, our understanding of nucleolar organization has evolved from static structural descriptions to dynamic functional compartmentalization.</p>
-                            
-                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Functional Significance</h4>
-                            <p class="mb-2">The nucleolus coordinates multiple critical cellular processes:</p>
-                            <ul class="list-disc pl-6 space-y-1">
-                                <li>Ribosomal RNA transcription and processing</li>
-                                <li>Ribosomal subunit assembly</li>
-                                <li>Cell cycle checkpoint control</li>
-                                <li>Stress response coordination</li>
-                                <li>Cellular growth regulation</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="section2" class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">2. Tripartite Structural Architecture</h3>
-                        <div class="prose max-w-none">
-                            <p class="mb-4">The nucleolus exhibits a characteristic tripartite organization visible by electron microscopy, with each compartment specialized for specific aspects of ribosome biogenesis.</p>
-                            
-                            <div class="grid md:grid-cols-3 gap-4 mb-6">
-                                <div class="bg-blue-50 p-4 rounded-lg">
-                                    <h4 class="font-semibold text-blue-900 mb-2">Fibrillar Centers (FCs)</h4>
-                                    <ul class="text-sm space-y-1">
-                                        <li><strong>Composition:</strong> RNA polymerase I, transcription factors, rDNA</li>
-                                        <li><strong>Function:</strong> Sites of rRNA gene transcription initiation</li>
-                                        <li><strong>Organization:</strong> 2-10 spherical structures per nucleolus</li>
-                                        <li><strong>Regulation:</strong> Number correlates with transcriptional activity</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
-                                    <h4 class="font-semibold text-green-900 mb-2">Dense Fibrillar Component (DFC)</h4>
-                                    <ul class="text-sm space-y-1">
-                                        <li><strong>Composition:</strong> Early rRNA processing factors, snoRNPs</li>
-                                        <li><strong>Function:</strong> Early rRNA processing and modification</li>
-                                        <li><strong>Organization:</strong> Surrounds fibrillar centers</li>
-                                        <li><strong>Key Proteins:</strong> Fibrillarin, Nop58, Nop56</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-yellow-50 p-4 rounded-lg">
-                                    <h4 class="font-semibold text-yellow-900 mb-2">Granular Component (GC)</h4>
-                                    <ul class="text-sm space-y-1">
-                                        <li><strong>Composition:</strong> Late-processing factors, ribosomal proteins</li>
-                                        <li><strong>Function:</strong> Late rRNA processing and ribosomal subunit assembly</li>
-                                        <li><strong>Organization:</strong> Outer nucleolar region</li>
-                                        <li><strong>Key Proteins:</strong> Nucleolin, B23/NPM1, ribosomal proteins</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="section3" class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">3. Ribosome Biogenesis Machinery and Pathways</h3>
-                        <div class="prose max-w-none">
-                            <p class="mb-4">Ribosome biogenesis represents one of the most complex cellular processes, requiring coordinated expression and assembly of over 200 proteins and 4 RNA species.</p>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">rRNA Transcription Complex</h4>
-                                    <ul class="list-disc pl-6 space-y-1">
-                                        <li><strong>RNA Polymerase I:</strong> Specialized for rRNA gene transcription</li>
-                                        <li><strong>Transcription Factors:</strong> UBF, SL1, RNAP I-specific factors</li>
-                                        <li><strong>Chromatin Remodeling:</strong> SWI/SNF, NoRC complexes</li>
-                                        <li><strong>Epigenetic Regulation:</strong> Histone modifications, DNA methylation</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Processing Machinery</h4>
-                                    <ul class="list-disc pl-6 space-y-1">
-                                        <li><strong>Small Nucleolar RNPs (snoRNPs):</strong> Guide rRNA modifications</li>
-                                        <li><strong>Exosome Complex:</strong> 3' to 5' RNA processing</li>
-                                        <li><strong>Endonucleases:</strong> Specific cleavage events</li>
-                                        <li><strong>RNA Helicases:</strong> RNA folding and remodeling</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Assembly Factors</h4>
-                                    <ul class="list-disc pl-6 space-y-1">
-                                        <li><strong>Ribosomal Proteins:</strong> 79 different proteins (33 large, 46 small subunit)</li>
-                                        <li><strong>Assembly Factors:</strong> >200 trans-acting factors</li>
-                                        <li><strong>Chaperones:</strong> Protein folding and assembly assistance</li>
-                                        <li><strong>Export Machinery:</strong> Nuclear export of pre-ribosomal particles</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Continue with remaining sections... -->
-                    <section id="section4" class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">4. rRNA Gene Transcription and Regulation</h3>
-                        <div class="prose max-w-none">
-                            <p class="mb-4">Ribosomal RNA gene transcription accounts for approximately 60% of total cellular transcription, making it the most transcriptionally active region of the genome.</p>
-                            
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800 mb-3">rDNA Organization</h4>
-                                    <ul class="list-disc pl-6 space-y-1">
-                                        <li><strong>Gene Clusters:</strong> 200-400 copies on acrocentric chromosomes</li>
-                                        <li><strong>Intergenic Spacers:</strong> Regulatory sequences and chromatin organization</li>
-                                        <li><strong>Nucleolar Organizing Regions (NORs):</strong> Chromosomal rDNA loci</li>
-                                        <li><strong>Chromatin States:</strong> Active vs. silent rDNA copies</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Transcriptional Control</h4>
-                                    <ul class="list-disc pl-6 space-y-1">
-                                        <li><strong>Growth Factor Signaling:</strong> mTOR, PI3K/AKT pathways</li>
-                                        <li><strong>Nutrient Sensing:</strong> AMPK, amino acid availability</li>
-                                        <li><strong>Cell Cycle Regulation:</strong> Cyclin-dependent kinases</li>
-                                        <li><strong>Stress Responses:</strong> p53, DNA damage checkpoints</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Clinical Applications -->
-                    <section class="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><i class="fas fa-hospital mr-2 text-purple-600"></i>Clinical Applications</h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Diagnostic Biomarkers</h4>
-                                <ul class="space-y-2">
-                                    <li class="flex items-start"><i class="fas fa-microscope text-purple-500 mr-2 mt-1"></i><span><strong>Nucleolar Morphology:</strong> Cancer diagnosis and prognosis</span></li>
-                                    <li class="flex items-start"><i class="fas fa-chart-line text-purple-500 mr-2 mt-1"></i><span><strong>Protein Levels:</strong> Fibrillarin, nucleolin as disease markers</span></li>
-                                    <li class="flex items-start"><i class="fas fa-dna text-purple-500 mr-2 mt-1"></i><span><strong>rRNA Processing:</strong> Biomarkers for ribosomopathies</span></li>
-                                    <li class="flex items-start"><i class="fas fa-eye text-purple-500 mr-2 mt-1"></i><span><strong>Imaging:</strong> Nucleolar visualization in pathology</span></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Therapeutic Development</h4>
-                                <ul class="space-y-2">
-                                    <li class="flex items-start"><i class="fas fa-flask text-blue-500 mr-2 mt-1"></i><span><strong>Drug Screening:</strong> Nucleolar stress assays</span></li>
-                                    <li class="flex items-start"><i class="fas fa-target text-blue-500 mr-2 mt-1"></i><span><strong>Biomarker Development:</strong> Treatment response monitoring</span></li>
-                                    <li class="flex items-start"><i class="fas fa-pills text-blue-500 mr-2 mt-1"></i><span><strong>Combination Therapy:</strong> Multi-pathway targeting</span></li>
-                                    <li class="flex items-start"><i class="fas fa-user-md text-blue-500 mr-2 mt-1"></i><span><strong>Personalized Medicine:</strong> Nucleolar-based stratification</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="lg:col-span-1 mt-8 lg:mt-0">
-                <div class="space-y-6">
-                    <!-- Related Reviews -->
-                    <div class="sidebar-gradient rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-link mr-2 text-blue-500"></i>Related Reviews</h3>
-                        <ul class="space-y-2">
-                            <li><a href="reviews/nuclear_bodies_standardized_review.html" class="content-link text-blue-600 hover:text-blue-800 block">Nuclear Bodies Comprehensive Review</a></li>
-                            <li><a href="nuclear_speckles_comprehensive_review.html" class="content-link text-blue-600 hover:text-blue-800 block">Nuclear Speckles Comprehensive Review</a></li>
-                            <li><a href="cajal_bodies_comprehensive_review.html" class="content-link text-blue-600 hover:text-blue-800 block">Cajal Bodies Comprehensive Review</a></li>
-                            <li><a href="nuclear_rnp_structure_function_review.html" class="content-link text-blue-600 hover:text-blue-800 block">Nuclear RNP Structure Function Review</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Key Terms -->
-                    <div class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-book mr-2 text-green-500"></i>Key Terms</h3>
-                        <dl class="space-y-3">
-                            <div>
-                                <dt class="font-medium text-gray-900">Nucleolus</dt>
-                                <dd class="text-sm text-gray-600">Membrane-less nuclear organelle specialized for ribosome biogenesis</dd>
-                            </div>
-                            <div>
-                                <dt class="font-medium text-gray-900">rDNA</dt>
-                                <dd class="text-sm text-gray-600">Ribosomal DNA genes encoding rRNA</dd>
-                            </div>
-                            <div>
-                                <dt class="font-medium text-gray-900">snoRNPs</dt>
-                                <dd class="text-sm text-gray-600">Small nucleolar ribonucleoproteins guiding rRNA modifications</dd>
-                            </div>
-                            <div>
-                                <dt class="font-medium text-gray-900">Ribosomopathies</dt>
-                                <dd class="text-sm text-gray-600">Diseases caused by defects in ribosome biogenesis</dd>
-                            </div>
-                        </dl>
-                    </div>
-
-                    <!-- Quick Facts -->
-                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-info-circle mr-2 text-yellow-500"></i>Quick Facts</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><strong>rDNA copies:</strong> 200-400 per diploid genome</li>
-                            <li><strong>Nucleolar proteins:</strong> >4,500 identified</li>
-                            <li><strong>rRNA modifications:</strong> >200 per ribosome</li>
-                            <li><strong>Assembly time:</strong> ~30 minutes for ribosomal subunit</li>
-                            <li><strong>Daily production:</strong> ~10 million ribosomes per cell</li>
-                        </ul>
-                    </div>
-
-                    <!-- Research Timeline -->
-                    <div class="bg-white border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4"><i class="fas fa-history mr-2 text-indigo-500"></i>Research Timeline</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-start">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">1781</span>
-                                <span class="text-sm">First nucleolar description (Fontana)</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">1960s</span>
-                                <span class="text-sm">Electron microscopy reveals tripartite structure</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">1990s</span>
-                                <span class="text-sm">Molecular characterization of processing machinery</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">2000s</span>
-                                <span class="text-sm">Proteomics reveals nucleolar complexity</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">2010s</span>
-                                <span class="text-sm">Single-cell and live-cell imaging advances</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- References -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">References (Selection)</h3>
-                    <ol class="text-sm space-y-2 text-gray-600">
-                        <li>1. Boisvert et al. (2007). The nucleolus under stress. Mol Cell.</li>
-                        <li>2. Németh & Längst (2011). Genome organization in and around the nucleolus. Trends Genet.</li>
-                        <li>3. Tsai & Pederson (2014). Connecting the nucleolus to the cell cycle and human disease. FASEB J.</li>
-                        <li>4. Pelletier et al. (2018). Ribosome biogenesis in cancer: new players and therapeutic avenues. Nat Rev Cancer.</li>
-                    </ol>
-                </div>
-
-                <!-- Image Attribution -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Image Attribution</h3>
-                    <p class="text-sm text-gray-600">
-                        Header image: Nucleolus cryo-electron tomography, Nature Communications, doi:10.1038/s41467-021-25413-w. Used under fair use for educational purposes.
-                    </p>
-                </div>
-
-                <!-- Navigation -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3>
-                    <div class="space-y-2 text-sm">
-                        <div><strong>Previous Review:</strong> <a href="reviews/nuclear_bodies_standardized_review.html" class="text-blue-600 hover:text-blue-800">Nuclear Bodies Comprehensive Review</a></div>
-                        <div><strong>Next Review:</strong> <a href="nuclear_speckles_comprehensive_review.html" class="text-blue-600 hover:text-blue-800">Nuclear Speckles Comprehensive Review</a></div>
-                        <div><strong>Category:</strong> <a href="../../nuclear_bodies_compartments_category.html" class="text-blue-600 hover:text-blue-800">Nuclear Bodies & Compartments</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-500">
-                <p>&copy; 2025 CellNucleus.com. All rights reserved. Educational content for academic and research purposes.</p>
-            </div>
+   </nav>
+  </header>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" class="flex">
+     <ol class="flex items-center space-x-2">
+      <li>
+       <a class="text-gray-500 hover:text-gray-700" href="#">
+        <i class="fas fa-home mr-1">
+        </i>
+        Home
+       </a>
+      </li>
+      <li>
+       <i class="fas fa-chevron-right text-gray-400 mx-2">
+       </i>
+      </li>
+      <li>
+       <a class="text-gray-500 hover:text-gray-700" href="../../nuclear_bodies_compartments_category.html">
+        Nuclear Bodies &amp; Compartments
+       </a>
+      </li>
+      <li>
+       <i class="fas fa-chevron-right text-gray-400 mx-2">
+       </i>
+      </li>
+      <li class="text-gray-900 font-medium">
+       Nucleolus Comprehensive Review
+      </li>
+     </ol>
+    </nav>
+   </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+    <!-- Main Content -->
+    <div class="lg:col-span-3">
+     <!-- Category Badge & Title -->
+     <div class="mb-6">
+      <span class="category-badge inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white mb-4">
+       <i class="fas fa-circle mr-2">
+       </i>
+       Nuclear Bodies &amp; Compartments
+      </span>
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">
+       Nucleolus Comprehensive Review
+      </h1>
+      <h2 class="text-2xl text-gray-600 mb-4">
+       Ribosome Biogenesis and Nuclear Organization
+      </h2>
+      <div class="flex items-center text-sm text-gray-500 space-x-4">
+       <span>
+        <i class="fas fa-calendar mr-1">
+        </i>
+        Published: June 2024
+       </span>
+       <span>
+        <i class="fas fa-edit mr-1">
+        </i>
+        Last Updated: June 27, 2025
+       </span>
+       <span>
+        <i class="fas fa-clock mr-1">
+        </i>
+        Reading Time: 28 minutes
+       </span>
+       <span>
+        <i class="fas fa-user mr-1">
+        </i>
+        Dr. Michael Hendzel, University of Alberta
+       </span>
+      </div>
+     </div>
+     <!-- Hero Image -->
+     <div class="hero-image rounded-lg h-64 flex items-end p-6 mb-8">
+      <div class="text-white">
+       <p class="text-sm bg-black bg-opacity-50 rounded px-2 py-1">
+        Cryo-electron tomography revealing the tripartite structure of the nucleolus with fibrillar centers, dense fibrillar components, and granular components. Image courtesy of Nature Communications, doi:10.1038/s41467-021-25413-w
+       </p>
+      </div>
+     </div>
+     <!-- Abstract Box -->
+     <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-3">
+       Abstract
+      </h3>
+      <p class="text-gray-700 leading-relaxed">
+       The nucleolus represents the most prominent nuclear body, serving as the primary site of ribosome biogenesis and rRNA processing. This comprehensive review examines the molecular organization, functional compartmentalization, and regulatory mechanisms governing nucleolar structure and dynamics.
+      </p>
+     </div>
+     <!-- Key Points -->
+     <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+       <i class="fas fa-key mr-2 text-yellow-500">
+       </i>
+       Key Points
+      </h3>
+      <ul class="space-y-2">
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mr-3 mt-1">
+        </i>
+        <span>
+         The nucleolus organizes around ribosomal RNA genes with tripartite ultrastructural organization
+        </span>
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mr-3 mt-1">
+        </i>
+        <span>
+         Ribosome biogenesis involves coordinated rRNA transcription, modification, processing, and assembly
+        </span>
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mr-3 mt-1">
+        </i>
+        <span>
+         Nucleolar organization is dynamically regulated by cell cycle, stress responses, and metabolic demands
+        </span>
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mr-3 mt-1">
+        </i>
+        <span>
+         Nucleolar dysfunction is implicated in ribosomopathies, cancer, and aging-related diseases
+        </span>
+       </li>
+       <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mr-3 mt-1">
+        </i>
+        <span>
+         The nucleolus serves additional functions including cell cycle control, stress sensing, and viral replication
+        </span>
+       </li>
+      </ul>
+     </div>
+     <!-- Table of Contents -->
+     <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+       <i class="fas fa-list mr-2 text-blue-500">
+       </i>
+       Table of Contents
+      </h3>
+      <ol class="space-y-2">
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section1">
+         1. Introduction to Nucleolar Organization
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section2">
+         2. Tripartite Structural Architecture
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section3">
+         3. Ribosome Biogenesis Machinery and Pathways
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section4">
+         4. rRNA Gene Transcription and Regulation
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section5">
+         5. rRNA Processing and Modification
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section6">
+         6. Ribosomal Subunit Assembly and Export
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section7">
+         7. Cell Cycle and Stress-Dependent Regulation
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section8">
+         8. Non-Ribosomal Functions of the Nucleolus
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section9">
+         9. Disease Implications and Therapeutic Targets
+        </a>
+       </li>
+       <li class="toc-item">
+        <a class="text-blue-600 hover:text-blue-800" href="#section10">
+         10. Advanced Imaging and Analysis Methods
+        </a>
+       </li>
+      </ol>
+     </div>
+     <!-- Main Content Sections -->
+     <div class="space-y-8">
+      <section class="bg-white border border-gray-200 rounded-lg p-6" id="section1">
+       <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">
+        1. Introduction to Nucleolar Organization
+       </h3>
+       <div class="prose max-w-none">
+        <p class="mb-4">
+         The nucleolus stands as the most prominent and well-characterized nuclear body, historically recognized for over a century yet continuing to reveal new complexities in its organization and function. As the primary site of ribosome biogenesis, the nucleolus represents a paradigmatic example of nuclear compartmentalization without surrounding membranes.
+        </p>
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">
+         Historical Perspective
+        </h4>
+        <p class="mb-4">
+         First described by Fontana in 1781 and extensively characterized by electron microscopy in the 1960s, our understanding of nucleolar organization has evolved from static structural descriptions to dynamic functional compartmentalization.
+        </p>
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">
+         Functional Significance
+        </h4>
+        <p class="mb-2">
+         The nucleolus coordinates multiple critical cellular processes:
+        </p>
+        <ul class="list-disc pl-6 space-y-1">
+         <li>
+          Ribosomal RNA transcription and processing
+         </li>
+         <li>
+          Ribosomal subunit assembly
+         </li>
+         <li>
+          Cell cycle checkpoint control
+         </li>
+         <li>
+          Stress response coordination
+         </li>
+         <li>
+          Cellular growth regulation
+         </li>
+        </ul>
+       </div>
+      </section>
+      <section class="bg-white border border-gray-200 rounded-lg p-6" id="section2">
+       <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">
+        2. Tripartite Structural Architecture
+       </h3>
+       <div class="prose max-w-none">
+        <p class="mb-4">
+         The nucleolus exhibits a characteristic tripartite organization visible by electron microscopy, with each compartment specialized for specific aspects of ribosome biogenesis.
+        </p>
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-blue-900 mb-2">
+           Fibrillar Centers (FCs)
+          </h4>
+          <ul class="text-sm space-y-1">
+           <li>
+            <strong>
+             Composition:
+            </strong>
+            RNA polymerase I, transcription factors, rDNA
+           </li>
+           <li>
+            <strong>
+             Function:
+            </strong>
+            Sites of rRNA gene transcription initiation
+           </li>
+           <li>
+            <strong>
+             Organization:
+            </strong>
+            2-10 spherical structures per nucleolus
+           </li>
+           <li>
+            <strong>
+             Regulation:
+            </strong>
+            Number correlates with transcriptional activity
+           </li>
+          </ul>
+         </div>
+         <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-green-900 mb-2">
+           Dense Fibrillar Component (DFC)
+          </h4>
+          <ul class="text-sm space-y-1">
+           <li>
+            <strong>
+             Composition:
+            </strong>
+            Early rRNA processing factors, snoRNPs
+           </li>
+           <li>
+            <strong>
+             Function:
+            </strong>
+            Early rRNA processing and modification
+           </li>
+           <li>
+            <strong>
+             Organization:
+            </strong>
+            Surrounds fibrillar centers
+           </li>
+           <li>
+            <strong>
+             Key Proteins:
+            </strong>
+            Fibrillarin, Nop58, Nop56
+           </li>
+          </ul>
+         </div>
+         <div class="bg-yellow-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-yellow-900 mb-2">
+           Granular Component (GC)
+          </h4>
+          <ul class="text-sm space-y-1">
+           <li>
+            <strong>
+             Composition:
+            </strong>
+            Late-processing factors, ribosomal proteins
+           </li>
+           <li>
+            <strong>
+             Function:
+            </strong>
+            Late rRNA processing and ribosomal subunit assembly
+           </li>
+           <li>
+            <strong>
+             Organization:
+            </strong>
+            Outer nucleolar region
+           </li>
+           <li>
+            <strong>
+             Key Proteins:
+            </strong>
+            Nucleolin, B23/NPM1, ribosomal proteins
+           </li>
+          </ul>
+         </div>
         </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for table of contents
+       </div>
+      </section>
+      <section class="bg-white border border-gray-200 rounded-lg p-6" id="section3">
+       <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">
+        3. Ribosome Biogenesis Machinery and Pathways
+       </h3>
+       <div class="prose max-w-none">
+        <p class="mb-4">
+         Ribosome biogenesis represents one of the most complex cellular processes, requiring coordinated expression and assembly of over 200 proteins and 4 RNA species.
+        </p>
+        <div class="space-y-4">
+         <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">
+           rRNA Transcription Complex
+          </h4>
+          <ul class="list-disc pl-6 space-y-1">
+           <li>
+            <strong>
+             RNA Polymerase I:
+            </strong>
+            Specialized for rRNA gene transcription
+           </li>
+           <li>
+            <strong>
+             Transcription Factors:
+            </strong>
+            UBF, SL1, RNAP I-specific factors
+           </li>
+           <li>
+            <strong>
+             Chromatin Remodeling:
+            </strong>
+            SWI/SNF, NoRC complexes
+           </li>
+           <li>
+            <strong>
+             Epigenetic Regulation:
+            </strong>
+            Histone modifications, DNA methylation
+           </li>
+          </ul>
+         </div>
+         <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">
+           Processing Machinery
+          </h4>
+          <ul class="list-disc pl-6 space-y-1">
+           <li>
+            <strong>
+             Small Nucleolar RNPs (snoRNPs):
+            </strong>
+            Guide rRNA modifications
+           </li>
+           <li>
+            <strong>
+             Exosome Complex:
+            </strong>
+            3' to 5' RNA processing
+           </li>
+           <li>
+            <strong>
+             Endonucleases:
+            </strong>
+            Specific cleavage events
+           </li>
+           <li>
+            <strong>
+             RNA Helicases:
+            </strong>
+            RNA folding and remodeling
+           </li>
+          </ul>
+         </div>
+         <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-2">
+           Assembly Factors
+          </h4>
+          <ul class="list-disc pl-6 space-y-1">
+           <li>
+            <strong>
+             Ribosomal Proteins:
+            </strong>
+            79 different proteins (33 large, 46 small subunit)
+           </li>
+           <li>
+            <strong>
+             Assembly Factors:
+            </strong>
+            &gt;200 trans-acting factors
+           </li>
+           <li>
+            <strong>
+             Chaperones:
+            </strong>
+            Protein folding and assembly assistance
+           </li>
+           <li>
+            <strong>
+             Export Machinery:
+            </strong>
+            Nuclear export of pre-ribosomal particles
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </section>
+      <!-- Continue with remaining sections... -->
+      <section class="bg-white border border-gray-200 rounded-lg p-6" id="section4">
+       <h3 class="section-header text-xl font-semibold text-gray-900 mb-4 pl-4">
+        4. rRNA Gene Transcription and Regulation
+       </h3>
+       <div class="prose max-w-none">
+        <p class="mb-4">
+         Ribosomal RNA gene transcription accounts for approximately 60% of total cellular transcription, making it the most transcriptionally active region of the genome.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+         <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-3">
+           rDNA Organization
+          </h4>
+          <ul class="list-disc pl-6 space-y-1">
+           <li>
+            <strong>
+             Gene Clusters:
+            </strong>
+            200-400 copies on acrocentric chromosomes
+           </li>
+           <li>
+            <strong>
+             Intergenic Spacers:
+            </strong>
+            Regulatory sequences and chromatin organization
+           </li>
+           <li>
+            <strong>
+             Nucleolar Organizing Regions (NORs):
+            </strong>
+            Chromosomal rDNA loci
+           </li>
+           <li>
+            <strong>
+             Chromatin States:
+            </strong>
+            Active vs. silent rDNA copies
+           </li>
+          </ul>
+         </div>
+         <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-3">
+           Transcriptional Control
+          </h4>
+          <ul class="list-disc pl-6 space-y-1">
+           <li>
+            <strong>
+             Growth Factor Signaling:
+            </strong>
+            mTOR, PI3K/AKT pathways
+           </li>
+           <li>
+            <strong>
+             Nutrient Sensing:
+            </strong>
+            AMPK, amino acid availability
+           </li>
+           <li>
+            <strong>
+             Cell Cycle Regulation:
+            </strong>
+            Cyclin-dependent kinases
+           </li>
+           <li>
+            <strong>
+             Stress Responses:
+            </strong>
+            p53, DNA damage checkpoints
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </section>
+      <!-- Clinical Applications -->
+      <section class="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6">
+       <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        <i class="fas fa-hospital mr-2 text-purple-600">
+        </i>
+        Clinical Applications
+       </h3>
+       <div class="grid md:grid-cols-2 gap-6">
+        <div>
+         <h4 class="text-lg font-semibold text-gray-800 mb-3">
+          Diagnostic Biomarkers
+         </h4>
+         <ul class="space-y-2">
+          <li class="flex items-start">
+           <i class="fas fa-microscope text-purple-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Nucleolar Morphology:
+            </strong>
+            Cancer diagnosis and prognosis
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-chart-line text-purple-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Protein Levels:
+            </strong>
+            Fibrillarin, nucleolin as disease markers
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-dna text-purple-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             rRNA Processing:
+            </strong>
+            Biomarkers for ribosomopathies
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-eye text-purple-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Imaging:
+            </strong>
+            Nucleolar visualization in pathology
+           </span>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4 class="text-lg font-semibold text-gray-800 mb-3">
+          Therapeutic Development
+         </h4>
+         <ul class="space-y-2">
+          <li class="flex items-start">
+           <i class="fas fa-flask text-blue-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Drug Screening:
+            </strong>
+            Nucleolar stress assays
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-target text-blue-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Biomarker Development:
+            </strong>
+            Treatment response monitoring
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-pills text-blue-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Combination Therapy:
+            </strong>
+            Multi-pathway targeting
+           </span>
+          </li>
+          <li class="flex items-start">
+           <i class="fas fa-user-md text-blue-500 mr-2 mt-1">
+           </i>
+           <span>
+            <strong>
+             Personalized Medicine:
+            </strong>
+            Nucleolar-based stratification
+           </span>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </section>
+     </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="lg:col-span-1 mt-8 lg:mt-0">
+     <div class="space-y-6">
+      <!-- Related Reviews -->
+      <div class="sidebar-gradient rounded-lg p-6">
+       <h3 class="text-lg font-semibold text-gray-900 mb-4">
+        <i class="fas fa-link mr-2 text-blue-500">
+        </i>
+        Related Reviews
+       </h3>
+       <ul class="space-y-2">
+        <li>
+         <a class="content-link text-blue-600 hover:text-blue-800 block" href="reviews/nuclear_bodies_standardized_review.html">
+          Nuclear Bodies Comprehensive Review
+         </a>
+        </li>
+        <li>
+         <a class="content-link text-blue-600 hover:text-blue-800 block" href="nuclear_speckles_comprehensive_review.html">
+          Nuclear Speckles Comprehensive Review
+         </a>
+        </li>
+        <li>
+         <a class="content-link text-blue-600 hover:text-blue-800 block" href="cajal_bodies_comprehensive_review.html">
+          Cajal Bodies Comprehensive Review
+         </a>
+        </li>
+        <li>
+         <a class="content-link text-blue-600 hover:text-blue-800 block" href="nuclear_rnp_structure_function_review.html">
+          Nuclear RNP Structure Function Review
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- Key Terms -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+       <h3 class="text-lg font-semibold text-gray-900 mb-4">
+        <i class="fas fa-book mr-2 text-green-500">
+        </i>
+        Key Terms
+       </h3>
+       <dl class="space-y-3">
+        <div>
+         <dt class="font-medium text-gray-900">
+          Nucleolus
+         </dt>
+         <dd class="text-sm text-gray-600">
+          Membrane-less nuclear organelle specialized for ribosome biogenesis
+         </dd>
+        </div>
+        <div>
+         <dt class="font-medium text-gray-900">
+          rDNA
+         </dt>
+         <dd class="text-sm text-gray-600">
+          Ribosomal DNA genes encoding rRNA
+         </dd>
+        </div>
+        <div>
+         <dt class="font-medium text-gray-900">
+          snoRNPs
+         </dt>
+         <dd class="text-sm text-gray-600">
+          Small nucleolar ribonucleoproteins guiding rRNA modifications
+         </dd>
+        </div>
+        <div>
+         <dt class="font-medium text-gray-900">
+          Ribosomopathies
+         </dt>
+         <dd class="text-sm text-gray-600">
+          Diseases caused by defects in ribosome biogenesis
+         </dd>
+        </div>
+       </dl>
+      </div>
+      <!-- Quick Facts -->
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+       <h3 class="text-lg font-semibold text-gray-900 mb-4">
+        <i class="fas fa-info-circle mr-2 text-yellow-500">
+        </i>
+        Quick Facts
+       </h3>
+       <ul class="space-y-2 text-sm">
+        <li>
+         <strong>
+          rDNA copies:
+         </strong>
+         200-400 per diploid genome
+        </li>
+        <li>
+         <strong>
+          Nucleolar proteins:
+         </strong>
+         &gt;4,500 identified
+        </li>
+        <li>
+         <strong>
+          rRNA modifications:
+         </strong>
+         &gt;200 per ribosome
+        </li>
+        <li>
+         <strong>
+          Assembly time:
+         </strong>
+         ~30 minutes for ribosomal subunit
+        </li>
+        <li>
+         <strong>
+          Daily production:
+         </strong>
+         ~10 million ribosomes per cell
+        </li>
+       </ul>
+      </div>
+      <!-- Research Timeline -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+       <h3 class="text-lg font-semibold text-gray-900 mb-4">
+        <i class="fas fa-history mr-2 text-indigo-500">
+        </i>
+        Research Timeline
+       </h3>
+       <div class="space-y-3">
+        <div class="flex items-start">
+         <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">
+          1781
+         </span>
+         <span class="text-sm">
+          First nucleolar description (Fontana)
+         </span>
+        </div>
+        <div class="flex items-start">
+         <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">
+          1960s
+         </span>
+         <span class="text-sm">
+          Electron microscopy reveals tripartite structure
+         </span>
+        </div>
+        <div class="flex items-start">
+         <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">
+          1990s
+         </span>
+         <span class="text-sm">
+          Molecular characterization of processing machinery
+         </span>
+        </div>
+        <div class="flex items-start">
+         <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">
+          2000s
+         </span>
+         <span class="text-sm">
+          Proteomics reveals nucleolar complexity
+         </span>
+        </div>
+        <div class="flex items-start">
+         <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full mr-3 mt-0.5">
+          2010s
+         </span>
+         <span class="text-sm">
+          Single-cell and live-cell imaging advances
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Smooth scrolling for table of contents
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -404,15 +976,20 @@
                 });
             });
         });
-    </script>
-</body>
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDrBvRtC6ZTQpqwnWhWyBPz1VxaD0QbTmHyysPXyiQsotBbsmBwJwwRwKRK8uzuyP1x9a4U0ChvT4l6AxjtXZa8SPbZGeeIYgsUy7yZLfAOkG25A4BhBoXu9HMKC%2FljP0DbmH5avcwdWsu2fZLiQtPxJyPb142PlUmLmJMlASIDRTQJqYE1tlsce8yrvCJ%2BdezVREzqRP90GQQJBaAnbHUeCSaBqzHx5dCv2eGB%2BNy%2B7KBYk9r5CSAYflKyrnLhNuUAFk9HBXVzIfMdqj2p%2BJbqeJ9zLkdJ9%2FOefa9t1PjVUd7fofbECx%2FYyULiH%2FDW0QEWKKWpNuCqfxZ1xohbnEgghkUTLS8qBW4gbThNQJGHuBcw3lajiQLOG3XY1M3kCgEyOLMMRJtWGRhq3fI%2BhdqqMmrnGIUs9q6Qa6DgHClMovqzVP6u%2FLf%2FXz1Y%2Bd3dfbMeV%2BUaQDftQW51vpcvH%2BzKrMtpqmpEhj71StyTc3uWUD0aTzd2zWixoY%2Bh%2FNGeMb9kKWtovwSkNxPZmrCpu9H8w%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDrBvRtC6ZTQpqwnWhWyBPz1VxaD0QbTmHyysPXyiQsotBbsmBwJwwRwKRK8uzuyP1x9a4U0ChvT4l6AxjtXZa8SPbZGeeIYgsUy7yZLfAOkG25A4BhBoXu9HMKC/ljP0DbmH5avcwdWsu2fZLiQtPxJyPb142PlUmLmJMlASIDRTQJqYE1tlsce8yrvCJ+dezVREzqRP90GQQJBaAnbHUeCSaBqzHx5dCv2eGB+Ny+7KBYk9r5CSAYflKyrnLhNuUAFk9HBXVzIfMdqj2p+JbqeJ9zLkdJ9/Oefa9t1PjVUd7fofbECx/YyULiH/DW0QEWKKWpNuCqfxZ1xohbnEgghkUTLS8qBW4gbThNQJGHuBcw3lajiQLOG3XY1M3kCgEyOLMMRJtWGRhq3fI+hdqqMmrnGIUs9q6Qa6DgHClMovqzVP6u/Lf/Xz1Y+d3dfbMeV+UaQDftQW51vpcvH+zKrMtpqmpEhj71StyTc3uWUD0aTzd2zWixoY+h/NGeMb9kKWtovwSkNxPZmrCpu9H8w=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Nuclear Biophysics: Mechanosensing and Force Transmission - Cell Nucleus Research</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Enhanced Nuclear Biophysics: Mechanosensing and Force Transmission - Cell Nucleus Research
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
@@ -18,452 +21,889 @@
         .mechanism-card { transition: transform 0.3s ease; }
         .mechanism-card:hover { transform: translateY(-2px); }
         .section-divider { border-top: 3px solid #3b82f6; margin: 2rem 0; }
-    </style>
-</head>
-<body class="bg-gray-50">
-
-<!-- Header Section -->
-<div class="gradient-bg text-white py-12">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold mb-4">Enhanced Nuclear Biophysics</h1>
-            <h2 class="text-2xl font-light mb-6">Mechanosensing and Force Transmission in the Cell Nucleus</h2>
-            <div class="bg-white bg-opacity-20 rounded-lg p-6 max-w-4xl mx-auto">
-                <p class="text-lg leading-relaxed">
-                    The cell nucleus operates as a sophisticated mechanosensory organelle, integrating mechanical signals from the extracellular matrix through the cytoskeleton to regulate genome function. This comprehensive review synthesizes cutting-edge research on nuclear biophysics, mechanotransduction pathways, and their implications for health and disease.
-                </p>
-            </div>
-        </div>
+  </style>
+ </head>
+ <body class="bg-gray-50">
+  <header class="bg-white shadow-sm border-b">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <!-- Logo/Branding -->
+     <div class="flex items-center">
+      <div class="flex-shrink-0 flex items-center">
+       <a class="flex items-center" href="../../index.html">
+        <i class="fas fa-atom text-blue-600 text-2xl mr-3">
+        </i>
+        <span class="text-xl font-bold text-gray-900">
+         CellNucleus.com
+        </span>
+       </a>
+      </div>
+     </div>
+     <!-- Navigation Menu -->
+     <div class="hidden md:block">
+      <div class="ml-10 flex items-baseline space-x-8">
+       <a class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html">
+        Home
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../reviews_index.html">
+        All Reviews
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#reviews">
+        Categories
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#microscopy">
+        Microscopy
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#structure">
+        Structure
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../downloads.html">
+        Downloads
+       </a>
+       <a class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" href="../../index.html#about">
+        About
+       </a>
+      </div>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="-mr-2 flex md:hidden">
+      <button aria-controls="mobile-menu" aria-expanded="false" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="mobile-menu-btn" type="button">
+       <span class="sr-only">
+        Open main menu
+       </span>
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
     </div>
-</div>
-
-<!-- Key Concepts Overview -->
-<div class="max-w-7xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Fundamental Concepts</h2>
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
-            <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-atom"></i></div>
-            <h3 class="text-xl font-semibold mb-3">Nuclear Mechanobiology</h3>
-            <p class="text-gray-600">The nucleus functions as a dynamic mechanosensor, converting physical forces into biochemical signals that regulate gene expression and cellular behavior.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
-            <div class="text-green-600 text-3xl mb-4"><i class="fas fa-link"></i></div>
-            <h3 class="text-xl font-semibold mb-3">Force Transmission</h3>
-            <p class="text-gray-600">Mechanical forces travel from the extracellular matrix through the cytoskeleton via the LINC complex to directly influence chromatin organization and nuclear function.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
-            <div class="text-purple-600 text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
-            <h3 class="text-xl font-semibold mb-3">Quantitative Analysis</h3>
-            <p class="text-gray-600">Advanced biophysical techniques enable precise measurement of nuclear mechanical properties, from piconewton forces to elastic moduli.</p>
-        </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html">
+       Home
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../reviews_index.html">
+       All Reviews
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#reviews">
+       Categories
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#microscopy">
+       Microscopy
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#structure">
+       Structure
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../downloads.html">
+       Downloads
+      </a>
+      <a class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" href="../../index.html#about">
+       About
+      </a>
+     </div>
     </div>
-</div>
-
-<!-- Nuclear Architecture Section -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Nuclear Architecture and Mechanical Components</h2>
-    
-    <div class="grid lg:grid-cols-2 gap-8 mb-12">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4 text-blue-700">Nuclear Envelope and Lamina</h3>
-            <div class="mb-4">
-                <img src="https://study.com/cimages/multimages/16/nuclear_envelope.PNG" alt="Nuclear Envelope Structure" class="w-full rounded-lg mb-4">
-            </div>
-            <div class="space-y-3">
-                <div class="highlight-box p-3 rounded">
-                    <strong>Perinuclear Space:</strong> 30-50 nm wide double membrane system
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Bending Modulus (κ):</strong> ~20 k<sub>B</sub>T
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Area Stretch Modulus:</strong> 230-290 mN/m
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Lamina Thickness:</strong> 10-30 nm filamentous meshwork
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4 text-green-700">LINC Complex Architecture</h3>
-            <div class="mb-4">
-                <img src="https://febs.onlinelibrary.wiley.com/cms/asset/8449fa3f-e4ca-40bc-a004-d1270389499e/feb214757-fig-0001-m.jpg" alt="LINC Complex Structure" class="w-full rounded-lg mb-4">
-            </div>
-            <div class="space-y-3">
-                <div class="highlight-box p-3 rounded">
-                    <strong>Function:</strong> Linker of Nucleoskeleton and Cytoskeleton
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Span:</strong> ~50 nm perinuclear space
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Force Measurement:</strong> Piconewton-scale via FRET biosensors
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Components:</strong> SUN and KASH domain proteins
-                </div>
-            </div>
-        </div>
+   </nav>
+  </header>
+  <!-- Header Section -->
+  <div class="gradient-bg text-white py-12">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center">
+     <h1 class="text-4xl font-bold mb-4">
+      Enhanced Nuclear Biophysics
+     </h1>
+     <h2 class="text-2xl font-light mb-6">
+      Mechanosensing and Force Transmission in the Cell Nucleus
+     </h2>
+     <div class="bg-white bg-opacity-20 rounded-lg p-6 max-w-4xl mx-auto">
+      <p class="text-lg leading-relaxed">
+       The cell nucleus operates as a sophisticated mechanosensory organelle, integrating mechanical signals from the extracellular matrix through the cytoskeleton to regulate genome function. This comprehensive review synthesizes cutting-edge research on nuclear biophysics, mechanotransduction pathways, and their implications for health and disease.
+      </p>
+     </div>
     </div>
-</div>
-
-<!-- Quantitative Data Section -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Quantitative Measurements and Mechanical Properties</h2>
-    
-    <!-- Nuclear Stiffness Data Chart -->
-    <div class="bg-white p-6 rounded-lg card-shadow mb-8">
-        <h3 class="text-2xl font-semibold mb-4">Nuclear Young's Modulus Across Cell Types</h3>
-        <div style="height: 400px;">
-            <canvas id="stiffnessChart"></canvas>
-        </div>
+   </div>
+  </div>
+  <!-- Key Concepts Overview -->
+  <div class="max-w-7xl mx-auto px-6 py-12">
+   <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+    Fundamental Concepts
+   </h2>
+   <div class="grid md:grid-cols-3 gap-6 mb-12">
+    <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
+     <div class="text-blue-600 text-3xl mb-4">
+      <i class="fas fa-atom">
+      </i>
+     </div>
+     <h3 class="text-xl font-semibold mb-3">
+      Nuclear Mechanobiology
+     </h3>
+     <p class="text-gray-600">
+      The nucleus functions as a dynamic mechanosensor, converting physical forces into biochemical signals that regulate gene expression and cellular behavior.
+     </p>
     </div>
-
-    <!-- Comprehensive Data Tables -->
-    <div class="grid lg:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-4">Nuclear Elastic Properties</h3>
-            <table class="w-full data-table">
-                <thead>
-                    <tr>
-                        <th class="p-3 text-left">Cell Type</th>
-                        <th class="p-3 text-left">Young's Modulus (kPa)</th>
-                        <th class="p-3 text-left">Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="p-3">hESC (undifferentiated)</td><td class="p-3">1-2</td><td class="p-3">Micropipette</td></tr>
-                    <tr><td class="p-3">hESC (differentiated)</td><td class="p-3">6-12</td><td class="p-3">Micropipette</td></tr>
-                    <tr><td class="p-3">MEF (wild type)</td><td class="p-3">~10</td><td class="p-3">AFM</td></tr>
-                    <tr><td class="p-3">MEF (Lmna -/-)</td><td class="p-3">~2.5</td><td class="p-3">AFM</td></tr>
-                    <tr><td class="p-3">MCF-10A (normal)</td><td class="p-3">0.2-0.9</td><td class="p-3">AFM</td></tr>
-                    <tr><td class="p-3">MCF-7 (cancer)</td><td class="p-3">0.1-0.4</td><td class="p-3">AFM</td></tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-4">Viscoelastic Parameters</h3>
-            <table class="w-full data-table">
-                <thead>
-                    <tr>
-                        <th class="p-3 text-left">Parameter</th>
-                        <th class="p-3 text-left">Value</th>
-                        <th class="p-3 text-left">Cell Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="p-3">Apparent Viscosity</td><td class="p-3">100-200 Pa·s</td><td class="p-3">Neutrophil</td></tr>
-                    <tr><td class="p-3">Instantaneous Modulus</td><td class="p-3">1.8 kPa</td><td class="p-3">Chondrocyte</td></tr>
-                    <tr><td class="p-3">Equilibrium Modulus</td><td class="p-3">0.5 kPa</td><td class="p-3">Chondrocyte</td></tr>
-                    <tr><td class="p-3">Fast Relaxation</td><td class="p-3">~0.1 s</td><td class="p-3">MCF-7</td></tr>
-                    <tr><td class="p-3">Slow Relaxation</td><td class="p-3">~1.0 s</td><td class="p-3">MCF-7</td></tr>
-                    <tr><td class="p-3">Creep Exponent (α)</td><td class="p-3">0.2-0.6</td><td class="p-3">Various</td></tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
+     <div class="text-green-600 text-3xl mb-4">
+      <i class="fas fa-link">
+      </i>
+     </div>
+     <h3 class="text-xl font-semibold mb-3">
+      Force Transmission
+     </h3>
+     <p class="text-gray-600">
+      Mechanical forces travel from the extracellular matrix through the cytoskeleton via the LINC complex to directly influence chromatin organization and nuclear function.
+     </p>
     </div>
-</div>
-
-<!-- Force Transmission Pathway -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Mechanotransduction Pathway</h2>
-    
-    <div class="bg-white p-6 rounded-lg card-shadow mb-8">
-        <h3 class="text-2xl font-semibold mb-6 text-center">ECM → Cytoskeleton → LINC → Nucleus → Chromatin</h3>
-        
-        <div class="grid md:grid-cols-5 gap-4">
-            <div class="text-center">
-                <div class="bg-blue-100 p-4 rounded-lg mb-3">
-                    <i class="fas fa-th text-2xl text-blue-600"></i>
-                </div>
-                <h4 class="font-semibold">Extracellular Matrix</h4>
-                <p class="text-sm text-gray-600">Force generation and transmission</p>
-            </div>
-            
-            <div class="text-center">
-                <div class="bg-green-100 p-4 rounded-lg mb-3">
-                    <i class="fas fa-arrow-right text-2xl text-green-600"></i>
-                </div>
-                <h4 class="font-semibold">Integrins & Focal Adhesions</h4>
-                <p class="text-sm text-gray-600">Force sensing and conversion</p>
-            </div>
-            
-            <div class="text-center">
-                <div class="bg-yellow-100 p-4 rounded-lg mb-3">
-                    <i class="fas fa-project-diagram text-2xl text-yellow-600"></i>
-                </div>
-                <h4 class="font-semibold">Cytoskeleton</h4>
-                <p class="text-sm text-gray-600">Force propagation network</p>
-            </div>
-            
-            <div class="text-center">
-                <div class="bg-purple-100 p-4 rounded-lg mb-3">
-                    <i class="fas fa-link text-2xl text-purple-600"></i>
-                </div>
-                <h4 class="font-semibold">LINC Complex</h4>
-                <p class="text-sm text-gray-600">Nuclear envelope coupling</p>
-            </div>
-            
-            <div class="text-center">
-                <div class="bg-red-100 p-4 rounded-lg mb-3">
-                    <i class="fas fa-dna text-2xl text-red-600"></i>
-                </div>
-                <h4 class="font-semibold">Chromatin</h4>
-                <p class="text-sm text-gray-600">Gene regulation response</p>
-            </div>
-        </div>
+    <div class="bg-white p-6 rounded-lg card-shadow mechanism-card">
+     <div class="text-purple-600 text-3xl mb-4">
+      <i class="fas fa-chart-line">
+      </i>
+     </div>
+     <h3 class="text-xl font-semibold mb-3">
+      Quantitative Analysis
+     </h3>
+     <p class="text-gray-600">
+      Advanced biophysical techniques enable precise measurement of nuclear mechanical properties, from piconewton forces to elastic moduli.
+     </p>
     </div>
-</div>
-
-<!-- Nuclear Bodies and Phase Separation -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Nuclear Bodies and Phase Separation</h2>
-    
-    <div class="grid lg:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4">Phase-Separated Nuclear Bodies</h3>
-            <div class="mb-4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Formation_and_examples_of_nuclear_membraneless_compartments.png" alt="Nuclear Membraneless Compartments" class="w-full rounded-lg mb-4">
-            </div>
-            <div class="space-y-2">
-                <div class="highlight-box p-3 rounded">
-                    <strong>Nucleolus:</strong> Surface tension ~10⁻⁶ N/m, viscosity ~10³ Pa·s
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Nuclear Speckles:</strong> Residence time seconds to <1 min
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>Cajal Bodies:</strong> Coilin residence 10-30 minutes
-                </div>
-                <div class="highlight-box p-3 rounded">
-                    <strong>PML Bodies:</strong> SUMO-regulated, stress-responsive
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4">Material State Spectrum</h3>
-            <div style="height: 300px;">
-                <canvas id="materialStateChart"></canvas>
-            </div>
-            <p class="text-sm text-gray-600 mt-4">Nuclear bodies exist on a spectrum from highly fluid (nucleolus) to solid-like (PML bodies), with material properties directly linked to their specific functions.</p>
-        </div>
+   </div>
+  </div>
+  <!-- Nuclear Architecture Section -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Nuclear Architecture and Mechanical Components
+   </h2>
+   <div class="grid lg:grid-cols-2 gap-8 mb-12">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4 text-blue-700">
+      Nuclear Envelope and Lamina
+     </h3>
+     <div class="mb-4">
+      <img alt="Nuclear Envelope Structure" class="w-full rounded-lg mb-4" src="https://study.com/cimages/multimages/16/nuclear_envelope.PNG"/>
+     </div>
+     <div class="space-y-3">
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Perinuclear Space:
+       </strong>
+       30-50 nm wide double membrane system
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Bending Modulus (κ):
+       </strong>
+       ~20 k
+       <sub>
+        B
+       </sub>
+       T
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Area Stretch Modulus:
+       </strong>
+       230-290 mN/m
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Lamina Thickness:
+       </strong>
+       10-30 nm filamentous meshwork
+      </div>
+     </div>
     </div>
-</div>
-
-<!-- Experimental Techniques -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Advanced Experimental Techniques</h2>
-    
-    <div class="grid md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <div class="mb-4">
-                <img src="https://www.researchgate.net/publication/260562587/figure/fig3/AS:667095037648917@1536059259898/Measurement-of-nuclear-stiffness-by-atomic-force-microscopy-AFM-A-Schematic-view-of.png" alt="AFM Nuclear Measurement" class="w-full rounded-lg mb-4">
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Atomic Force Microscopy</h3>
-            <ul class="text-sm space-y-2">
-                <li>• Local nuclear indentation</li>
-                <li>• Force-displacement curves</li>
-                <li>• Young's modulus calculation</li>
-                <li>• High spatial resolution</li>
-            </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-3">Micropipette Aspiration</h3>
-            <ul class="text-sm space-y-2">
-                <li>• Whole nuclear deformation</li>
-                <li>• Viscoelastic measurements</li>
-                <li>• Creep compliance analysis</li>
-                <li>• Time-dependent behavior</li>
-            </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-3">FRET Biosensors</h3>
-            <ul class="text-sm space-y-2">
-                <li>• Piconewton force measurement</li>
-                <li>• Molecular-scale tension</li>
-                <li>• Real-time dynamics</li>
-                <li>• In vivo applications</li>
-            </ul>
-        </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4 text-green-700">
+      LINC Complex Architecture
+     </h3>
+     <div class="mb-4">
+      <img alt="LINC Complex Structure" class="w-full rounded-lg mb-4" src="https://febs.onlinelibrary.wiley.com/cms/asset/8449fa3f-e4ca-40bc-a004-d1270389499e/feb214757-fig-0001-m.jpg"/>
+     </div>
+     <div class="space-y-3">
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Function:
+       </strong>
+       Linker of Nucleoskeleton and Cytoskeleton
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Span:
+       </strong>
+       ~50 nm perinuclear space
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Force Measurement:
+       </strong>
+       Piconewton-scale via FRET biosensors
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Components:
+       </strong>
+       SUN and KASH domain proteins
+      </div>
+     </div>
     </div>
-</div>
-
-<!-- Disease Mechanisms -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Nuclear Mechanopathology</h2>
-    
-    <div class="grid lg:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4 text-red-700">Laminopathies</h3>
-            <div class="space-y-4">
-                <div class="border-l-4 border-red-500 pl-4">
-                    <h4 class="font-semibold">Emery-Dreifuss Muscular Dystrophy</h4>
-                    <p class="text-sm text-gray-600">Nuclear fragility, decreased stiffness, mechanical weakness</p>
-                </div>
-                <div class="border-l-4 border-orange-500 pl-4">
-                    <h4 class="font-semibold">Hutchinson-Gilford Progeria</h4>
-                    <p class="text-sm text-gray-600">Increased nuclear rigidity, abnormal nuclear shape</p>
-                </div>
-                <div class="border-l-4 border-yellow-500 pl-4">
-                    <h4 class="font-semibold">Dilated Cardiomyopathy</h4>
-                    <p class="text-sm text-gray-600">Altered mechanosensitivity, force transmission defects</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4 text-blue-700">Cancer Metastasis</h3>
-            <div class="space-y-4">
-                <div class="highlight-box p-4 rounded">
-                    <h4 class="font-semibold mb-2">"Softer" Nuclear Phenotype</h4>
-                    <p class="text-sm">Metastatic cancer cells exhibit significantly reduced nuclear stiffness, facilitating migration through confined spaces.</p>
-                </div>
-                <div class="bg-blue-50 p-4 rounded">
-                    <h4 class="font-semibold mb-2">Quantitative Changes</h4>
-                    <ul class="text-sm space-y-1">
-                        <li>• Bladder cancer: ~2.1 kPa (vs 10-16 kPa normal)</li>
-                        <li>• Breast cancer: 0.1-0.4 kPa (vs 0.2-0.9 kPa normal)</li>
-                        <li>• Melanoma: 0.3-0.7 kPa (highly metastatic)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+   </div>
+  </div>
+  <!-- Quantitative Data Section -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Quantitative Measurements and Mechanical Properties
+   </h2>
+   <!-- Nuclear Stiffness Data Chart -->
+   <div class="bg-white p-6 rounded-lg card-shadow mb-8">
+    <h3 class="text-2xl font-semibold mb-4">
+     Nuclear Young's Modulus Across Cell Types
+    </h3>
+    <div style="height: 400px;">
+     <canvas id="stiffnessChart">
+     </canvas>
     </div>
-</div>
-
-<!-- Nuclear Actin and Transport -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Nuclear Actin and Intranuclear Transport</h2>
-    
-    <div class="grid lg:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4">Nuclear Actin Functions</h3>
-            <div class="space-y-3">
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span>Chromatin remodeling complex component</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span>RNA polymerase regulation (all three types)</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <span>DNA damage repair scaffold</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span>Nuclear architecture maintenance</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <span>Long-range chromatin movement</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-2xl font-semibold mb-4">Size-Dependent Transport</h3>
-            <div style="height: 300px;">
-                <canvas id="transportChart"></canvas>
-            </div>
-        </div>
+   </div>
+   <!-- Comprehensive Data Tables -->
+   <div class="grid lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-4">
+      Nuclear Elastic Properties
+     </h3>
+     <table class="w-full data-table">
+      <thead>
+       <tr>
+        <th class="p-3 text-left">
+         Cell Type
+        </th>
+        <th class="p-3 text-left">
+         Young's Modulus (kPa)
+        </th>
+        <th class="p-3 text-left">
+         Method
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="p-3">
+         hESC (undifferentiated)
+        </td>
+        <td class="p-3">
+         1-2
+        </td>
+        <td class="p-3">
+         Micropipette
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         hESC (differentiated)
+        </td>
+        <td class="p-3">
+         6-12
+        </td>
+        <td class="p-3">
+         Micropipette
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         MEF (wild type)
+        </td>
+        <td class="p-3">
+         ~10
+        </td>
+        <td class="p-3">
+         AFM
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         MEF (Lmna -/-)
+        </td>
+        <td class="p-3">
+         ~2.5
+        </td>
+        <td class="p-3">
+         AFM
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         MCF-10A (normal)
+        </td>
+        <td class="p-3">
+         0.2-0.9
+        </td>
+        <td class="p-3">
+         AFM
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         MCF-7 (cancer)
+        </td>
+        <td class="p-3">
+         0.1-0.4
+        </td>
+        <td class="p-3">
+         AFM
+        </td>
+       </tr>
+      </tbody>
+     </table>
     </div>
-</div>
-
-<!-- Future Perspectives -->
-<div class="max-w-7xl mx-auto px-6 py-8">
-    <div class="section-divider"></div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Future Perspectives and Therapeutic Implications</h2>
-    
-    <div class="grid md:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-4 text-blue-700">Emerging Research Directions</h3>
-            <ul class="space-y-3">
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-microscope text-blue-600 mt-1"></i>
-                    <span>Multi-scale computational modeling of nuclear mechanics</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-dna text-green-600 mt-1"></i>
-                    <span>Decoding the "lamin code" - combinatorial logic of lamin isoforms</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-atom text-purple-600 mt-1"></i>
-                    <span>Single-molecule mechanobiology techniques</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-chart-area text-red-600 mt-1"></i>
-                    <span>AI-driven analysis of nuclear architecture dynamics</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="text-xl font-semibold mb-4 text-green-700">Therapeutic Strategies</h3>
-            <ul class="space-y-3">
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-pills text-blue-600 mt-1"></i>
-                    <span>Mechanotherapy targeting nuclear stiffness</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-heartbeat text-green-600 mt-1"></i>
-                    <span>Laminopathy treatments via mechanical modulation</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-shield-alt text-purple-600 mt-1"></i>
-                    <span>Cancer metastasis prevention through nuclear mechanics</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-cogs text-red-600 mt-1"></i>
-                    <span>Bioengineering approaches to nuclear function</span>
-                </li>
-            </ul>
-        </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-4">
+      Viscoelastic Parameters
+     </h3>
+     <table class="w-full data-table">
+      <thead>
+       <tr>
+        <th class="p-3 text-left">
+         Parameter
+        </th>
+        <th class="p-3 text-left">
+         Value
+        </th>
+        <th class="p-3 text-left">
+         Cell Type
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="p-3">
+         Apparent Viscosity
+        </td>
+        <td class="p-3">
+         100-200 Pa·s
+        </td>
+        <td class="p-3">
+         Neutrophil
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         Instantaneous Modulus
+        </td>
+        <td class="p-3">
+         1.8 kPa
+        </td>
+        <td class="p-3">
+         Chondrocyte
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         Equilibrium Modulus
+        </td>
+        <td class="p-3">
+         0.5 kPa
+        </td>
+        <td class="p-3">
+         Chondrocyte
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         Fast Relaxation
+        </td>
+        <td class="p-3">
+         ~0.1 s
+        </td>
+        <td class="p-3">
+         MCF-7
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         Slow Relaxation
+        </td>
+        <td class="p-3">
+         ~1.0 s
+        </td>
+        <td class="p-3">
+         MCF-7
+        </td>
+       </tr>
+       <tr>
+        <td class="p-3">
+         Creep Exponent (α)
+        </td>
+        <td class="p-3">
+         0.2-0.6
+        </td>
+        <td class="p-3">
+         Various
+        </td>
+       </tr>
+      </tbody>
+     </table>
     </div>
-</div>
-
-<!-- Conclusion -->
-<div class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Integrating Nuclear Biophysics and Function</h2>
-        <p class="text-lg leading-relaxed max-w-4xl mx-auto">
-            The nucleus operates as a sophisticated mechanostat, actively sensing, integrating, and responding to mechanical forces. Understanding these biophysical principles provides new therapeutic targets for diseases ranging from cancer to premature aging, while opening frontiers in nuclear engineering and regenerative medicine.
-        </p>
-        <div class="mt-8 flex justify-center space-x-8 text-sm">
-            <div class="text-center">
-                <div class="text-2xl font-bold text-blue-400">4</div>
-                <div>Key Structural Components</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-green-400">15+</div>
-                <div>Quantitative Parameters</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-yellow-400">10+</div>
-                <div>Disease Mechanisms</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-red-400">8</div>
-                <div>Experimental Techniques</div>
-            </div>
-        </div>
+   </div>
+  </div>
+  <!-- Force Transmission Pathway -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Mechanotransduction Pathway
+   </h2>
+   <div class="bg-white p-6 rounded-lg card-shadow mb-8">
+    <h3 class="text-2xl font-semibold mb-6 text-center">
+     ECM → Cytoskeleton → LINC → Nucleus → Chromatin
+    </h3>
+    <div class="grid md:grid-cols-5 gap-4">
+     <div class="text-center">
+      <div class="bg-blue-100 p-4 rounded-lg mb-3">
+       <i class="fas fa-th text-2xl text-blue-600">
+       </i>
+      </div>
+      <h4 class="font-semibold">
+       Extracellular Matrix
+      </h4>
+      <p class="text-sm text-gray-600">
+       Force generation and transmission
+      </p>
+     </div>
+     <div class="text-center">
+      <div class="bg-green-100 p-4 rounded-lg mb-3">
+       <i class="fas fa-arrow-right text-2xl text-green-600">
+       </i>
+      </div>
+      <h4 class="font-semibold">
+       Integrins &amp; Focal Adhesions
+      </h4>
+      <p class="text-sm text-gray-600">
+       Force sensing and conversion
+      </p>
+     </div>
+     <div class="text-center">
+      <div class="bg-yellow-100 p-4 rounded-lg mb-3">
+       <i class="fas fa-project-diagram text-2xl text-yellow-600">
+       </i>
+      </div>
+      <h4 class="font-semibold">
+       Cytoskeleton
+      </h4>
+      <p class="text-sm text-gray-600">
+       Force propagation network
+      </p>
+     </div>
+     <div class="text-center">
+      <div class="bg-purple-100 p-4 rounded-lg mb-3">
+       <i class="fas fa-link text-2xl text-purple-600">
+       </i>
+      </div>
+      <h4 class="font-semibold">
+       LINC Complex
+      </h4>
+      <p class="text-sm text-gray-600">
+       Nuclear envelope coupling
+      </p>
+     </div>
+     <div class="text-center">
+      <div class="bg-red-100 p-4 rounded-lg mb-3">
+       <i class="fas fa-dna text-2xl text-red-600">
+       </i>
+      </div>
+      <h4 class="font-semibold">
+       Chromatin
+      </h4>
+      <p class="text-sm text-gray-600">
+       Gene regulation response
+      </p>
+     </div>
     </div>
-</div>
-
-<script>
-// Nuclear Stiffness Chart
+   </div>
+  </div>
+  <!-- Nuclear Bodies and Phase Separation -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Nuclear Bodies and Phase Separation
+   </h2>
+   <div class="grid lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4">
+      Phase-Separated Nuclear Bodies
+     </h3>
+     <div class="mb-4">
+      <img alt="Nuclear Membraneless Compartments" class="w-full rounded-lg mb-4" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Formation_and_examples_of_nuclear_membraneless_compartments.png"/>
+     </div>
+     <div class="space-y-2">
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Nucleolus:
+       </strong>
+       Surface tension ~10⁻⁶ N/m, viscosity ~10³ Pa·s
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Nuclear Speckles:
+       </strong>
+       Residence time seconds to &lt;1 min
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        Cajal Bodies:
+       </strong>
+       Coilin residence 10-30 minutes
+      </div>
+      <div class="highlight-box p-3 rounded">
+       <strong>
+        PML Bodies:
+       </strong>
+       SUMO-regulated, stress-responsive
+      </div>
+     </div>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4">
+      Material State Spectrum
+     </h3>
+     <div style="height: 300px;">
+      <canvas id="materialStateChart">
+      </canvas>
+     </div>
+     <p class="text-sm text-gray-600 mt-4">
+      Nuclear bodies exist on a spectrum from highly fluid (nucleolus) to solid-like (PML bodies), with material properties directly linked to their specific functions.
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- Experimental Techniques -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Advanced Experimental Techniques
+   </h2>
+   <div class="grid md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <div class="mb-4">
+      <img alt="AFM Nuclear Measurement" class="w-full rounded-lg mb-4" src="https://www.researchgate.net/publication/260562587/figure/fig3/AS:667095037648917@1536059259898/Measurement-of-nuclear-stiffness-by-atomic-force-microscopy-AFM-A-Schematic-view-of.png"/>
+     </div>
+     <h3 class="text-xl font-semibold mb-3">
+      Atomic Force Microscopy
+     </h3>
+     <ul class="text-sm space-y-2">
+      <li>
+       • Local nuclear indentation
+      </li>
+      <li>
+       • Force-displacement curves
+      </li>
+      <li>
+       • Young's modulus calculation
+      </li>
+      <li>
+       • High spatial resolution
+      </li>
+     </ul>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-3">
+      Micropipette Aspiration
+     </h3>
+     <ul class="text-sm space-y-2">
+      <li>
+       • Whole nuclear deformation
+      </li>
+      <li>
+       • Viscoelastic measurements
+      </li>
+      <li>
+       • Creep compliance analysis
+      </li>
+      <li>
+       • Time-dependent behavior
+      </li>
+     </ul>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-3">
+      FRET Biosensors
+     </h3>
+     <ul class="text-sm space-y-2">
+      <li>
+       • Piconewton force measurement
+      </li>
+      <li>
+       • Molecular-scale tension
+      </li>
+      <li>
+       • Real-time dynamics
+      </li>
+      <li>
+       • In vivo applications
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <!-- Disease Mechanisms -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Nuclear Mechanopathology
+   </h2>
+   <div class="grid lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4 text-red-700">
+      Laminopathies
+     </h3>
+     <div class="space-y-4">
+      <div class="border-l-4 border-red-500 pl-4">
+       <h4 class="font-semibold">
+        Emery-Dreifuss Muscular Dystrophy
+       </h4>
+       <p class="text-sm text-gray-600">
+        Nuclear fragility, decreased stiffness, mechanical weakness
+       </p>
+      </div>
+      <div class="border-l-4 border-orange-500 pl-4">
+       <h4 class="font-semibold">
+        Hutchinson-Gilford Progeria
+       </h4>
+       <p class="text-sm text-gray-600">
+        Increased nuclear rigidity, abnormal nuclear shape
+       </p>
+      </div>
+      <div class="border-l-4 border-yellow-500 pl-4">
+       <h4 class="font-semibold">
+        Dilated Cardiomyopathy
+       </h4>
+       <p class="text-sm text-gray-600">
+        Altered mechanosensitivity, force transmission defects
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4 text-blue-700">
+      Cancer Metastasis
+     </h3>
+     <div class="space-y-4">
+      <div class="highlight-box p-4 rounded">
+       <h4 class="font-semibold mb-2">
+        "Softer" Nuclear Phenotype
+       </h4>
+       <p class="text-sm">
+        Metastatic cancer cells exhibit significantly reduced nuclear stiffness, facilitating migration through confined spaces.
+       </p>
+      </div>
+      <div class="bg-blue-50 p-4 rounded">
+       <h4 class="font-semibold mb-2">
+        Quantitative Changes
+       </h4>
+       <ul class="text-sm space-y-1">
+        <li>
+         • Bladder cancer: ~2.1 kPa (vs 10-16 kPa normal)
+        </li>
+        <li>
+         • Breast cancer: 0.1-0.4 kPa (vs 0.2-0.9 kPa normal)
+        </li>
+        <li>
+         • Melanoma: 0.3-0.7 kPa (highly metastatic)
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Nuclear Actin and Transport -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8">
+    Nuclear Actin and Intranuclear Transport
+   </h2>
+   <div class="grid lg:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4">
+      Nuclear Actin Functions
+     </h3>
+     <div class="space-y-3">
+      <div class="flex items-center space-x-3">
+       <div class="w-3 h-3 bg-blue-500 rounded-full">
+       </div>
+       <span>
+        Chromatin remodeling complex component
+       </span>
+      </div>
+      <div class="flex items-center space-x-3">
+       <div class="w-3 h-3 bg-green-500 rounded-full">
+       </div>
+       <span>
+        RNA polymerase regulation (all three types)
+       </span>
+      </div>
+      <div class="flex items-center space-x-3">
+       <div class="w-3 h-3 bg-purple-500 rounded-full">
+       </div>
+       <span>
+        DNA damage repair scaffold
+       </span>
+      </div>
+      <div class="flex items-center space-x-3">
+       <div class="w-3 h-3 bg-red-500 rounded-full">
+       </div>
+       <span>
+        Nuclear architecture maintenance
+       </span>
+      </div>
+      <div class="flex items-center space-x-3">
+       <div class="w-3 h-3 bg-yellow-500 rounded-full">
+       </div>
+       <span>
+        Long-range chromatin movement
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-2xl font-semibold mb-4">
+      Size-Dependent Transport
+     </h3>
+     <div style="height: 300px;">
+      <canvas id="transportChart">
+      </canvas>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Future Perspectives -->
+  <div class="max-w-7xl mx-auto px-6 py-8">
+   <div class="section-divider">
+   </div>
+   <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+    Future Perspectives and Therapeutic Implications
+   </h2>
+   <div class="grid md:grid-cols-2 gap-8 mb-8">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-4 text-blue-700">
+      Emerging Research Directions
+     </h3>
+     <ul class="space-y-3">
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-microscope text-blue-600 mt-1">
+       </i>
+       <span>
+        Multi-scale computational modeling of nuclear mechanics
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-dna text-green-600 mt-1">
+       </i>
+       <span>
+        Decoding the "lamin code" - combinatorial logic of lamin isoforms
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-atom text-purple-600 mt-1">
+       </i>
+       <span>
+        Single-molecule mechanobiology techniques
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-chart-area text-red-600 mt-1">
+       </i>
+       <span>
+        AI-driven analysis of nuclear architecture dynamics
+       </span>
+      </li>
+     </ul>
+    </div>
+    <div class="bg-white p-6 rounded-lg card-shadow">
+     <h3 class="text-xl font-semibold mb-4 text-green-700">
+      Therapeutic Strategies
+     </h3>
+     <ul class="space-y-3">
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-pills text-blue-600 mt-1">
+       </i>
+       <span>
+        Mechanotherapy targeting nuclear stiffness
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-heartbeat text-green-600 mt-1">
+       </i>
+       <span>
+        Laminopathy treatments via mechanical modulation
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-shield-alt text-purple-600 mt-1">
+       </i>
+       <span>
+        Cancer metastasis prevention through nuclear mechanics
+       </span>
+      </li>
+      <li class="flex items-start space-x-3">
+       <i class="fas fa-cogs text-red-600 mt-1">
+       </i>
+       <span>
+        Bioengineering approaches to nuclear function
+       </span>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <!-- Conclusion -->
+  <div class="bg-gray-800 text-white py-12">
+   <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">
+     Integrating Nuclear Biophysics and Function
+    </h2>
+    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+     The nucleus operates as a sophisticated mechanostat, actively sensing, integrating, and responding to mechanical forces. Understanding these biophysical principles provides new therapeutic targets for diseases ranging from cancer to premature aging, while opening frontiers in nuclear engineering and regenerative medicine.
+    </p>
+    <div class="mt-8 flex justify-center space-x-8 text-sm">
+     <div class="text-center">
+      <div class="text-2xl font-bold text-blue-400">
+       4
+      </div>
+      <div>
+       Key Structural Components
+      </div>
+     </div>
+     <div class="text-center">
+      <div class="text-2xl font-bold text-green-400">
+       15+
+      </div>
+      <div>
+       Quantitative Parameters
+      </div>
+     </div>
+     <div class="text-center">
+      <div class="text-2xl font-bold text-yellow-400">
+       10+
+      </div>
+      <div>
+       Disease Mechanisms
+      </div>
+     </div>
+     <div class="text-center">
+      <div class="text-2xl font-bold text-red-400">
+       8
+      </div>
+      <div>
+       Experimental Techniques
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   // Nuclear Stiffness Chart
 const ctx1 = document.getElementById('stiffnessChart').getContext('2d');
 new Chart(ctx1, {
     type: 'bar',
@@ -589,16 +1029,87 @@ new Chart(ctx3, {
         }
     }
 });
-</script>
+  </script>
+  <footer class="bg-gray-900 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <i class="fas fa-atom text-blue-400 text-2xl mr-3">
+       </i>
+       <span class="text-xl font-bold">
+        CellNucleus.com
+       </span>
+      </div>
+      <p class="text-gray-300">
+       Comprehensive nuclear biology research platform providing access to cutting-edge reviews and educational resources.
+      </p>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Quick Links
+      </h4>
+      <ul class="space-y-2 text-gray-300">
+       <li>
+        <a class="hover:text-white" href="../../index.html#reviews">
+         Research Reviews
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#microscopy">
+         Microscopy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../downloads.html">
+         Downloads
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="../../index.html#about">
+         About
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold mb-4">
+       Contact &amp; Share
+      </h4>
+      <div class="space-y-2 text-gray-300">
+       <div>
+        <i class="fas fa-envelope mr-2">
+        </i>
+        mhendzel@ualberta.ca
+       </div>
+       <div>
+        <i class="fas fa-globe mr-2">
+        </i>
+        www.cellnucleus.com
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+     <p>
+      © 2025 CellNucleus.com - Nuclear Biology Research Hub.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-</body>
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+                });
+            }
+        });
+  </script>
+ </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDhCdwQZEl0RD%2BhTAkX2LnlKGw9hhsxtRYeVvOORn6MZKrhCh0iE8byQF3Ij5YCgzlt7KnfdxnQr6WLHk7HH4H6UNF6CE1W5yjSpmyGhm5v6hA%2Fkg4AKT7OmEvItMMiGUIeZb7Js6qfzppb7LAYJAriU8xEVVzwD7Htpf3ygzdpijEHbgDOySuDKQQT8Qq%2BdrsjYiM4DpkOX50ehTOMkVzu8eAauQ7jopnEbzze%2FjZ6gOFSquNqjvV0N%2BkdY3%2B47cNp46ZeG0f5s6%2Bet6G6C4YrQO5LdCMvLcHAHkaW96pHAJxZvEsy0jdUT2GmBGNhci7uPCX14MVvomI1%2FZpUP%2BRJ9Mu%2FPijPbz4yYdgNX1m%2B8x5OuxdKhCj28SnntQeYSTrxW6QdqQA%2FpjJHWGKdz0UZmRDiUEJpiXKK9SbJgFSkkIQk8xf%2BKEpldXvVfLZkQQobjLyE4ygxOXIUrGl%2FBU3OLg5YnRXhIIzXC%2FSlEM551VjJvlL8rSqoBLK6KMBn7DnUtStstsNQ2E%2F7pet7wyrxAgFvNn7rGuKzQ6Q6nYsng5";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDhCdwQZEl0RD+hTAkX2LnlKGw9hhsxtRYeVvOORn6MZKrhCh0iE8byQF3Ij5YCgzlt7KnfdxnQr6WLHk7HH4H6UNF6CE1W5yjSpmyGhm5v6hA/kg4AKT7OmEvItMMiGUIeZb7Js6qfzppb7LAYJAriU8xEVVzwD7Htpf3ygzdpijEHbgDOySuDKQQT8Qq+drsjYiM4DpkOX50ehTOMkVzu8eAauQ7jopnEbzze/jZ6gOFSquNqjvV0N+kdY3+47cNp46ZeG0f5s6+et6G6C4YrQO5LdCMvLcHAHkaW96pHAJxZvEsy0jdUT2GmBGNhci7uPCX14MVvomI1/ZpUP+RJ9Mu/PijPbz4yYdgNX1m+8x5OuxdKhCj28SnntQeYSTrxW6QdqQA/pjJHWGKdz0UZmRDiUEJpiXKK9SbJgFSkkIQk8xf+KEpldXvVfLZkQQobjLyE4ygxOXIUrGl/BU3OLg5YnRXhIIzXC/SlEM551VjJvlL8rSqoBLK6KMBn7DnUtStstsNQ2E/7pet7wyrxAgFvNn7rGuKzQ6Q6nYsng5";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
