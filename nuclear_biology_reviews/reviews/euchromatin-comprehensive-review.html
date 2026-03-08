@@ -3,205 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Dynamic Architecture of Euchromatin | Nuclear Biology Reviews</title>
+    <meta name="description" content="The eukaryotic genome, a vast repository of genetic information, must be meticulously packaged within the confines of the nucleus while remaining...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Dynamic Architecture of Euchromatin</h1>
+                <p class="mt-4 text-lg text-slate-100">From Multi-Scale Structure to Regulation and Function</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Euchromatin_ Structure, Function, Regulation_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>7 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 35 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Euchromatin_ Structure, Function, Regulation_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FEuchromatin_+Structure%2C+Function%2C+Regulation_.docx&page=nuclear_biology_reviews%2Freviews%2Feuchromatin-comprehensive-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FEuchromatin_+Structure%2C+Function%2C+Regulation_.docx&page=nuclear_biology_reviews%2Freviews%2Feuchromatin-comprehensive-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Euchromatin_%20Structure%2C%20Function%2C%20Regulation_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The eukaryotic genome, a vast repository of genetic information, must be meticulously packaged within the confines of the nucleus while remaining accessible for essential processes like transcription, replication, and repair. This is achieved through its organization into chromatin, a dynamic complex of DNA and proteins. Since its first description by Walther Flemming in the late 19th century, chromatin has been understood to exist in at least two fundamentally different states, a distinction first made by Emil Heitz in 1928 based on cytological observations.1 These two states, euchromatin and heterochromatin, represent a foundational dichotomy in genome organization that reflects a...</p>
+                        <p class="text-slate-700 leading-7">Historically, the distinction between euchromatin and heterochromatin was based on their appearance under a microscope following staining. Euchromatin comprises the regions of chromosomes that are lightly stained and appear diffuse or decondensed during interphase, while heterochromatin consists of the segments that remain highly condensed and darkly stained.1 This simple visual difference, however, belies a suite of deep-seated structural and functional distinctions that define the operational state of the genome.</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#i-introduction-defining-the-active-genome" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">I. Introduction: Defining the Active Genome</a>
+                            <a href="#ii-the-hierarchical-architecture-of-euchromatin" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">II. The Hierarchical Architecture of Euchromatin</a>
+                            <a href="#iii-the-biochemical-landscape-of-euchromatin" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">III. The Biochemical Landscape of Euchromatin</a>
+                            <a href="#iv-the-biophysics-of-an-active-genome" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">IV. The Biophysics of an Active Genome</a>
+                            <a href="#v-regulation-of-euchromatin-state-and-function" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">V. Regulation of Euchromatin State and Function</a>
+                            <a href="#vi-functional-consequences-of-euchromatin-organization" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VI. Functional Consequences of Euchromatin Organization</a>
+                            <a href="#vii-euchromatin-in-disease-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VII. Euchromatin in Disease and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="i-introduction-defining-the-active-genome" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">I. Introduction: Defining the Active Genome</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The eukaryotic genome, a vast repository of genetic information, must be meticulously packaged within the confines of the nucleus while remaining accessible for essential processes like transcription, replication, and repair. This is achieved through its organization into chromatin, a dynamic complex of DNA and proteins. Since its first description by Walther Flemming in the late 19th century, chromatin has been understood to exist in at least two fundamentally different states, a distinction first made by Emil Heitz in 1928 based on cytological observations.1 These two states, euchromatin and heterochromatin, represent a foundational dichotomy in genome organization that reflects a profound functional specialization. This review provides a comprehensive analysis of euchromatin, exploring its hierarchical structure, biochemical composition, biophysical properties, and intricate...</p>
+                            <p class="text-slate-700 leading-7">Historically, the distinction between euchromatin and heterochromatin was based on their appearance under a microscope following staining. Euchromatin comprises the regions of chromosomes that are lightly stained and appear diffuse or decondensed during interphase, while heterochromatin consists of the segments that remain highly condensed and darkly stained.1 This simple visual difference, however, belies a suite of deep-seated structural and functional distinctions that define the operational state of the genome.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.1 The Classical Dichotomy: Euchromatin vs. Heterochromatin</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.2 A Paradigm Shift: From Static &quot;Openness&quot; to Dynamic Condensates</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="ii-the-hierarchical-architecture-of-euchromatin" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">II. The Hierarchical Architecture of Euchromatin</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The organization of euchromatin is not monolithic but is structured across multiple, nested scales of complexity. This hierarchical architecture, spanning from the fundamental 10-nanometer fiber to megabase-scale nuclear compartments, provides a framework for the efficient packaging and intricate regulation of the active genome. Understanding each level and the transitions between them is crucial for comprehending how local molecular events translate into global nuclear function.</p>
+                            <p class="text-slate-700 leading-7">The most fundamental level of chromatin organization is the nucleosome. This repeating subunit consists of approximately 147 base pairs of DNA wrapped in about 1.65 left-handed superhelical turns around a core histone octamer.2 The octamer is composed of two copies each of the four canonical core histones: H2A, H2B, H3, and H4. These nucleosome core particles are connected by stretches of linker DNA, which can vary in length from approximately 0 to 80 base pairs and are often associated with the linker histone H1.5 This arrangement gives rise to the primary chromatin structure, a fiber with a diameter of about 10 to 11 nm, classically visualized as &quot;beads on a string&quot; in electron micrographs.5</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1 The Nucleosome and the 10-nm &quot;Beads-on-a-String&quot; Fiber</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2 Beyond the 10-nm Fiber: The 30-nm Fiber Controversy and the Rise of Disordered Models</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3 Topologically Associating Domains (TADs): Functional Neighborhoods of the Genome</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.4 Nuclear Compartmentalization: The &#x27;A&#x27; and &#x27;B&#x27; World</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iii-the-biochemical-landscape-of-euchromatin" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">III. The Biochemical Landscape of Euchromatin</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The functional identity of euchromatin is encoded in its unique biochemical composition. This landscape is defined not only by its DNA sequence but, more critically, by the specific histone proteins that package it and the constellation of post-translational modifications (PTMs) that adorn them. This dynamic interplay of histone variants and chemical marks creates a rich signaling platform—the so-called &quot;histone code&quot;—that is interpreted by a host of cellular machines to regulate all DNA-templated processes.</p>
+                            <p class="text-slate-700 leading-7">The nucleosome, the fundamental unit of chromatin, is built upon a scaffold of histone proteins. While the majority of nucleosomes are assembled from canonical histones, the strategic incorporation of histone variants into euchromatin imparts specialized structural and functional properties.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1 Histone Composition: Canonical and Variant Histones</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2 The &quot;Histone Code&quot; of Active Chromatin</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3 The Epigenetic Machinery: Writers, Readers, and Erasers</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iv-the-biophysics-of-an-active-genome" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">IV. The Biophysics of an Active Genome</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While a biochemical description of euchromatin provides a catalogue of its components, a biophysical perspective is essential to understand how these components collectively give rise to the material properties and dynamic behaviors that underpin genome function. Recent advances have shifted the focus from static structural models to principles of polymer physics, liquid-phase separation, and active matter, revealing that euchromatin is a dynamic, living material whose physical state is as important as its chemical composition.</p>
+                            <p class="text-slate-700 leading-7">The classical notion of euchromatin as a structurally &quot;open&quot; and decondensed fiber is being replaced by a more dynamic and nuanced view. Live-cell, single-nucleosome tracking studies have revealed that chromatin is in a state of constant motion.21 Critically, this motion is not uniform across the genome. Nucleosomes within euchromatic regions exhibit significantly greater and faster local motion compared to the highly constrained nucleosomes within heterochromatin.19 This difference in dynamics is a defining physical property of the two chromatin states.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1 Chromatin Dynamics and Accessibility: A Viscoelastic Fluid</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2 Liquid-Liquid Phase Separation (LLPS) as an Organizing Principle</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3 Physical Forces in Chromatin Folding</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="v-regulation-of-euchromatin-state-and-function" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">V. Regulation of Euchromatin State and Function</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The dynamic, accessible, and biochemically distinct state of euchromatin is not a default condition but is the result of continuous and highly regulated activity. This regulation is orchestrated by a sophisticated network of molecular machines, including ATP-dependent chromatin remodelers, histone-modifying enzymes, and transcription factors. The precise interplay between these components ensures that euchromatic domains are established at the correct genomic locations and maintained in a state that is permissive for their specific functions.</p>
+                            <p class="text-slate-700 leading-7">At the heart of chromatin regulation are the ATP-dependent chromatin remodeling complexes. These large, multi-protein machines are the &quot;heavy lifters&quot; of the epigenome, using the energy derived from ATP hydrolysis to physically alter the chromatin landscape. They can slide nucleosomes along the DNA, evict them entirely, or exchange canonical histones for histone variants, thereby acting as master regulators of DNA accessibility.74 Eukaryotes possess several families of remodelers, each with distinct subunit compositions and functional specializations.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1 ATP-Dependent Chromatin Remodelers: The Architects of Accessibility</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2 The Regulatory Crosstalk: Remodelers and Histone Modifiers</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.3 The Role of Transcription Factors (TFs): Initiating Euchromatinization</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vi-functional-consequences-of-euchromatin-organization" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VI. Functional Consequences of Euchromatin Organization</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The intricate, multi-scale architecture of euchromatin is not merely a packaging solution; it is a functional framework that directly enables and orchestrates the most fundamental processes of the genome. The dynamic, accessible, and biochemically specialized nature of euchromatin serves as the essential platform for active gene transcription, dictates the temporal program of DNA replication, and ensures the efficient repair of DNA damage. These functions are not independent but are deeply integrated, with the structure of euchromatin being both a cause and a consequence of the activities it supports.</p>
+                            <p class="text-slate-700 leading-7">The canonical function of euchromatin is to serve as the template for gene expression.5 Every aspect of its organization is tailored to facilitate this process. The structurally permissive nature of the euchromatic fiber, characterized by its irregular folding and dynamic nucleosomes, allows the large multi-protein complexes of the transcription machinery—including transcription factors and RNA polymerase—to physically access their target DNA sequences at promoters and enhancers.5</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.1 A Platform for Active Gene Transcription</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.2 Orchestrating the Replication Timing Program</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.3 Facilitating the DNA Damage Response (DDR)</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vii-euchromatin-in-disease-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VII. Euchromatin in Disease and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The intricate regulatory networks that establish and maintain the euchromatic state are fundamental to normal cellular function and development. Consequently, the dysregulation of euchromatin architecture and its associated machinery is a common pathogenic mechanism underlying a wide spectrum of human diseases, ranging from cancer to neurodevelopmental disorders. Bridging our basic understanding of euchromatin biology with its clinical relevance is a major frontier in biomedical research, opening new avenues for diagnosis and therapy while simultaneously revealing the most pressing unresolved questions in the field.</p>
+                            <p class="text-slate-700 leading-7">Because euchromatin governs the expression of the majority of the genome&#x27;s genes, its misregulation can have catastrophic consequences, leading to the aberrant gene expression programs that drive disease.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.1 Dysregulation in Human Disease</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.2 A Critique of Current Models and Unresolved Questions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.3 Future Directions in Euchromatin Research</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

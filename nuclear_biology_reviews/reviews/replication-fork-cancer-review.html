@@ -3,205 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Eukaryotic Replication Fork | Nuclear Biology Reviews</title>
+    <meta name="description" content="The duplication of the eukaryotic genome is a feat of extraordinary molecular precision, orchestrated by a complex and dynamic protein machine known as...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Eukaryotic Replication Fork</h1>
+                <p class="mt-4 text-lg text-slate-100">A Nexus of Genomic Integrity and a Fulcrum of Cancer Pathogenesis and Therapy</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Replication Fork in Cancer.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>5 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 37 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Replication Fork in Cancer.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FReplication+Fork+in+Cancer.docx&page=nuclear_biology_reviews%2Freviews%2Freplication-fork-cancer-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FReplication+Fork+in+Cancer.docx&page=nuclear_biology_reviews%2Freviews%2Freplication-fork-cancer-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Replication%20Fork%20in%20Cancer.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The duplication of the eukaryotic genome is a feat of extraordinary molecular precision, orchestrated by a complex and dynamic protein machine known as the replisome. The faithful and complete replication of DNA during the S phase of the cell cycle is fundamental to cellular proliferation and the maintenance of genomic stability. The process is executed at thousands of Y-shaped structures called replication forks, where the parental DNA double helix is unwound and each strand serves as a template for the synthesis of a new, complementary daughter strand in a semiconservative manner. In normal cells, this process is governed by a series of tightly regulated steps—initiation, elongation, and...</p>
+                        <p class="text-slate-700 leading-7">To manage the immense size of eukaryotic genomes, DNA replication initiates at hundreds to thousands of specific genomic loci known as origins of replication. The regulation of these origins is paramount, ensuring that each segment of DNA is replicated once and only once per cell cycle. This is achieved through a temporally segregated two-step model governed by the oscillating activities of cyclin-dependent kinases (CDKs).</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#the-architecture-and-dynamics-of-the-eukaryotic-replication-fork" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Architecture and Dynamics of the Eukaryotic Replication Fork</a>
+                            <a href="#replication-stress-as-a-central-driver-of-oncogenesis" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Replication Stress as a Central Driver of Oncogenesis</a>
+                            <a href="#guardians-of-the-fork-tumor-suppressor-pathways-in-the-replication-stress-response" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Guardians of the Fork: Tumor Suppressor Pathways in the Replication Stress Response</a>
+                            <a href="#exploiting-replication-stress-a-therapeutic-paradigm-in-oncology" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Exploiting Replication Stress: A Therapeutic Paradigm in Oncology</a>
+                            <a href="#concluding-remarks-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Concluding Remarks and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="the-architecture-and-dynamics-of-the-eukaryotic-replication-fork" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Architecture and Dynamics of the Eukaryotic Replication Fork</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The duplication of the eukaryotic genome is a feat of extraordinary molecular precision, orchestrated by a complex and dynamic protein machine known as the replisome. The faithful and complete replication of DNA during the S phase of the cell cycle is fundamental to cellular proliferation and the maintenance of genomic stability. The process is executed at thousands of Y-shaped structures called replication forks, where the parental DNA double helix is unwound and each strand serves as a template for the synthesis of a new, complementary daughter strand in a semiconservative manner. In normal cells, this process is governed by a series of tightly regulated steps—initiation, elongation, and termination—that ensure the entire genome is copied exactly once per cell division.</p>
+                            <p class="text-slate-700 leading-7">To manage the immense size of eukaryotic genomes, DNA replication initiates at hundreds to thousands of specific genomic loci known as origins of replication. The regulation of these origins is paramount, ensuring that each segment of DNA is replicated once and only once per cell cycle. This is achieved through a temporally segregated two-step model governed by the oscillating activities of cyclin-dependent kinases (CDKs).</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Initiation: Licensing and Firing of Replication Origins</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Core Elongation Machinery: The Replisome in Motion</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Asymmetric Fork: Coordinating Two Distinct Synthesis Modes</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Okazaki Fragment Maturation: A Symphony of Nucleases and Ligases</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Navigating the Chromatin Landscape</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="replication-stress-as-a-central-driver-of-oncogenesis" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Replication Stress as a Central Driver of Oncogenesis</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">In stark contrast to the orderly progression in normal cells, the replication process in cancer cells is fraught with peril. The very molecular alterations that define cancer—sustained proliferative signaling and the inactivation of growth suppressors—impose an enormous burden on the replication machinery. This leads to a state of chronic replication stress (RS), broadly defined as the slowing or stalling of replication fork progression, which is now recognized as a fundamental hallmark of cancer. RS is not merely a passive byproduct of malignancy; it is a mechanistic lynchpin that actively drives tumor evolution.</p>
+                            <p class="text-slate-700 leading-7">Replication stress arises whenever the replisome encounters an obstacle that impedes its progress. Such impediments can be exogenous, like DNA-damaging chemotherapeutics, or endogenous, stemming from the cell&#x27;s own biology. The immediate consequence of a stalled fork is often the uncoupling of helicase and polymerase activities, where the CMG complex continues to unwind DNA even though synthesis has stopped. This generates long stretches of single-stranded DNA (ssDNA), a key molecular signature of RS that triggers a cellular alarm system.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Defining Replication Stress and its Emergence as a Cancer Hallmark</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Oncogene-Induced Replication Stress: The Price of Unchecked Proliferation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Structural and Topological Impediments to Fork Progression</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The ATR-CHK1 Checkpoint: The Cell&#x27;s First Responder to Replication Stress</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="guardians-of-the-fork-tumor-suppressor-pathways-in-the-replication-stress-response" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Guardians of the Fork: Tumor Suppressor Pathways in the Replication Stress Response</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While the ATR-CHK1 pathway acts as the primary alarm system for replication stress, a distinct set of tumor suppressor proteins functions directly at the stalled fork to manage the crisis, preserve the integrity of the DNA, and promote high-fidelity repair. These &quot;guardians of the fork&quot; are critical for preventing stalled forks from degenerating into the chromosome breaks and rearrangements that drive cancer. Their inactivation is not merely a passive loss of a safeguard; it represents a fundamental shift in the fate of a stalled fork, ceding control from pathways of careful repair to those of rampant mutagenesis. This transition is a pivotal event in tumorigenesis, explaining the explosive genomic instability observed in cancers with defects in these pathways.</p>
+                            <p class="text-slate-700 leading-7">When a replication fork encounters a blocking lesion and stalls, the cell&#x27;s immediate priority is to prevent the fork structure from collapsing. A key strategy for this is replication fork reversal, a dynamic remodeling process where the fork&#x27;s forward motion ceases and it regresses, extruding the two newly synthesized daughter strands which then anneal to each other. This forms a four-way junction structure, often called a &quot;chicken foot,&quot; which resembles a Holliday junction. This maneuver is highly protective for several reasons: it moves the DNA lesion away from the single-stranded fork junction and back into a duplex context where it can be accessed by some repair pathways, and it provides time for the cell to resolve the source of the stress without the fork breaking.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Replication Fork Remodeling and Protection: A High-Stakes Balancing Act</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Critical Roles of BRCA1 and BRCA2 in Fork Protection</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">p53: A Transcription-Independent Guardian of Fork Homeostasis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Fork Restart Pathways: A Crossroads of Fidelity and Mutagenesis</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="exploiting-replication-stress-a-therapeutic-paradigm-in-oncology" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Exploiting Replication Stress: A Therapeutic Paradigm in Oncology</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The chronic replication stress inherent to cancer cells, coupled with their frequent defects in DNA damage response (DDR) pathways, creates a state of profound dependency. To survive the constant onslaught of self-inflicted genomic damage, tumors become addicted to the remaining functional pathways that manage RS. This addiction is not a sign of strength but a critical vulnerability, forming the basis of a powerful therapeutic paradigm known as synthetic lethality. By inhibiting a key RS response protein, clinicians can push already-stressed cancer cells past a tipping point into catastrophic failure and cell death, while largely sparing normal cells that have intact backup systems and lower baseline stress.</p>
+                            <p class="text-slate-700 leading-7">Synthetic lethality describes a relationship between two genes where the loss of either one alone is compatible with cell viability, but the simultaneous loss of both is lethal. In oncology, this principle is applied by using a drug to inhibit the function of one gene (e.g., PARP) in a cancer cell that already harbors a loss-of-function mutation in a second gene (e.g., BRCA1).</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Principle of Synthetic Lethality: Targeting the Addicted Cancer Cell</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Current Therapeutic Strategies: Mechanisms of Key Inhibitor Classes</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Evolving Landscape of Therapeutic Resistance</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Next-Generation Therapies and Emerging Targets</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="concluding-remarks-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Concluding Remarks and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of the eukaryotic replication fork has traversed a remarkable path from fundamental biochemistry to the forefront of clinical oncology. We now appreciate that this elegant molecular machine, designed for the perfect fidelity required by normal cells, is also the Achilles&#x27; heel of cancer. The intrinsic replication stress generated by oncogenic transformation creates a landscape of dependencies and vulnerabilities that are being successfully exploited by a new generation of targeted therapies. However, as with any complex biological system, deeper investigation reveals further layers of complexity, unresolved questions, and exciting new frontiers.</p>
+                            <p class="text-slate-700 leading-7">Despite enormous progress, several fundamental questions and controversies remain at the heart of replication stress research, representing major opportunities for future discovery.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Key Controversies and Unresolved Questions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Quest for Biomarkers: Towards Personalized Replication Stress-Targeted Therapies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Future of Replication Stress Research: Integration and Precision</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

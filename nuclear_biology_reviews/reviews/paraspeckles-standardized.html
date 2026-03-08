@@ -3,205 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>Paraspeckles | Nuclear Biology Reviews</title>
+    <meta name="description" content="Abstract: Paraspeckles are mammalian-specific, non-membranous nuclear bodies that exemplify the intricate compartmentalization of the cell nucleus....">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">Paraspeckles</h1>
+                <p class="mt-4 text-lg text-slate-100">Architectural RNA, Phase Separation, and the Dynamic Regulation of Nuclear Function</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Paraspeckle Biology, Function, Regulation.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>7 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 41 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Paraspeckle Biology, Function, Regulation.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FParaspeckle+Biology%2C+Function%2C+Regulation.docx&page=nuclear_biology_reviews%2Freviews%2Fparaspeckles-standardized.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FParaspeckle+Biology%2C+Function%2C+Regulation.docx&page=nuclear_biology_reviews%2Freviews%2Fparaspeckles-standardized.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Paraspeckle%20Biology%2C%20Function%2C%20Regulation.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">Abstract: Paraspeckles are mammalian-specific, non-membranous nuclear bodies that exemplify the intricate compartmentalization of the cell nucleus. Assembled upon the architectural long non-coding RNA (lncRNA) NEAT1, paraspeckles are complex ribonucleoprotein (RNP) condensates composed of a core set of proteins, including the DBHS family, and a vast, dynamic array of associated factors. Their formation is governed by a sophisticated interplay of biophysical principles, including liquid-liquid phase separation driven by prion-like domains and a more ordered micellization process dictated by the structure of NEAT1 itself, resulting in a unique core-shell architecture. Paraspeckles are highly...</p>
+                        <p class="text-slate-700 leading-7">The mammalian cell nucleus is not a homogenous mixture of chromatin and proteins but a highly organized organelle partitioned into numerous functional, non-membranous compartments known as nuclear bodies. These structures, which include the nucleolus, Cajal bodies, and nuclear speckles, concentrate specific proteins and nucleic acids to facilitate and regulate key nuclear processes such as ribosome biogenesis, RNP maturation, and pre-mRNA splicing. Within this complex landscape, the paraspeckle has emerged as a paradigm for understanding how long non-coding RNAs (lncRNAs) can architect higher-order structures to orchestrate gene expression in response to cellular needs.</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#1-introduction-discovery-and-characterization-of-a-novel-nuclear-body" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">1. Introduction: Discovery and Characterization of a Novel Nuclear Body</a>
+                            <a href="#2-the-molecular-architecture-of-paraspeckles" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">2. The Molecular Architecture of Paraspeckles</a>
+                            <a href="#3-biophysics-and-dynamics-of-paraspeckle-assembly-and-disassembly" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">3. Biophysics and Dynamics of Paraspeckle Assembly and Disassembly</a>
+                            <a href="#4-regulation-of-paraspeckle-biogenesis" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">4. Regulation of Paraspeckle Biogenesis</a>
+                            <a href="#5-the-multifaceted-functions-of-paraspeckles-in-gene-regulation" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">5. The Multifaceted Functions of Paraspeckles in Gene Regulation</a>
+                            <a href="#6-paraspeckles-in-physiology-and-disease" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">6. Paraspeckles in Physiology and Disease</a>
+                            <a href="#7-conclusion-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">7. Conclusion and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="1-introduction-discovery-and-characterization-of-a-novel-nuclear-body" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">1. Introduction: Discovery and Characterization of a Novel Nuclear Body</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The mammalian cell nucleus is not a homogenous mixture of chromatin and proteins but a highly organized organelle partitioned into numerous functional, non-membranous compartments known as nuclear bodies. These structures, which include the nucleolus, Cajal bodies, and nuclear speckles, concentrate specific proteins and nucleic acids to facilitate and regulate key nuclear processes such as ribosome biogenesis, RNP maturation, and pre-mRNA splicing. Within this complex landscape, the paraspeckle has emerged as a paradigm for understanding how long non-coding RNAs (lncRNAs) can architect higher-order structures to orchestrate gene expression in response to cellular needs.</p>
+                            <p class="text-slate-700 leading-7">The discovery of paraspeckles was not the result of a targeted search but a serendipitous finding that underscores the power of unbiased, systems-level approaches in cell biology. In 2002, a proteomic study aimed at characterizing the protein composition of purified human nucleoli identified 271 proteins, approximately 30% of which were novel or uncharacterized. Among these was a protein subsequently named Paraspeckle Protein 1 (PSP1), now officially known as Paraspeckle Component 1 (PSPC1). Immunofluorescence analysis revealed that PSPC1 did not localize to the nucleolus as expected but instead accumulated in distinct, punctate foci within the nucleoplasm.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.1. Serendipitous Discovery and Naming: From Proteomics to a New Nuclear Domain</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.2. Morphological and Ultrastructural Features: Size, Shape, and Number</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.3. Localization and Cellular Context: Interchromatin Space and Cell-Type Specificity</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="2-the-molecular-architecture-of-paraspeckles" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">2. The Molecular Architecture of Paraspeckles</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The paraspeckle is a quintessential ribonucleoprotein (RNP) body, a complex assembly of RNA and protein molecules. Its structural integrity and function are dictated by the precise interplay between a single architectural lncRNA scaffold and a large, diverse cohort of protein components. This intricate molecular architecture, featuring a highly organized core-shell structure, provides the foundation for the paraspeckle&#x27;s multifaceted roles in nuclear gene regulation.</p>
+                            <p class="text-slate-700 leading-7">The discovery that paraspeckles are built upon an RNA scaffold was a watershed moment in the field, establishing a new principle for the formation of nuclear bodies and highlighting the structural capabilities of lncRNAs. This architectural role is fulfilled by the Nuclear Paraspeckle Assembly Transcript 1 (NEAT1).</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1. The Architectural Scaffold: The Long Non-coding RNA NEAT1</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2. The Paraspeckle Proteome: Core Components and Functional Associates</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3. The Exquisite Core-Shell Organization</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="3-biophysics-and-dynamics-of-paraspeckle-assembly-and-disassembly" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">3. Biophysics and Dynamics of Paraspeckle Assembly and Disassembly</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The formation of paraspeckles is a remarkable example of biological self-assembly, governed by fundamental biophysical principles. The process involves a sophisticated interplay between the stochastic interactions characteristic of liquid-liquid phase separation and the more deterministic, ordered assembly templated by the architectural NEAT1 RNA. This combination of mechanisms allows for the rapid, switch-like formation of these bodies while also ensuring their highly organized and functional final structure.</p>
+                            <p class="text-slate-700 leading-7">A growing body of evidence indicates that paraspeckles are a type of biomolecular condensate, formed through the process of liquid-liquid phase separation (LLPS). LLPS is a thermodynamic process in which multivalent, weak interactions among macromolecules (proteins and/or nucleic acids) drive their de-mixing from the surrounding solution to form a distinct, concentrated liquid phase. In the context of paraspeckles, this process is driven by key RNA-binding proteins that contain intrinsically disordered regions (IDRs) or low-complexity domains (LCDs), which provide the multivalency required for condensation.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1. Paraspeckles as Biomolecular Condensates: The Role of LLPS</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2. Beyond LLPS: The Triblock Copolymer Micelle Model</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3. Kinetics of Assembly and Component Exchange</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.4. Regulation of Paraspeckle Disassembly</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="4-regulation-of-paraspeckle-biogenesis" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">4. Regulation of Paraspeckle Biogenesis</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The existence, abundance, and functional state of paraspeckles are not constitutive but are exquisitely controlled by a multi-tiered regulatory network. This network integrates diverse intracellular and extracellular signals, allowing the cell to modulate paraspeckle biogenesis with precision. Regulation occurs at the transcriptional level, controlling the synthesis of the NEAT1 scaffold; at the post-transcriptional level, governing the choice between NEAT1 isoforms; and at the post-translational level, modifying the activity and interactions of the protein components. This sophisticated system positions paraspeckles as cellular rheostats, capable of producing a finely tuned response to a wide array of stimuli.</p>
+                            <p class="text-slate-700 leading-7">The transcription of the NEAT1 gene is the most fundamental and rate-limiting step in paraspeckle formation, as the availability of the NEAT1_2 isoform is an absolute prerequisite for their assembly. Consequently, a host of stress-responsive signaling pathways converge upon the NEAT1 promoter to control its expression.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1. Transcriptional Control of NEAT1</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2. Post-Transcriptional Control: The NEAT1_1/NEAT1_2 Isoform Switch</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3. Post-Translational Modification of Paraspeckle Proteins</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="5-the-multifaceted-functions-of-paraspeckles-in-gene-regulation" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">5. The Multifaceted Functions of Paraspeckles in Gene Regulation</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Paraspeckles have emerged from being cellular curiosities to being recognized as pivotal hubs of nuclear gene regulation. Their functions are diverse and extend far beyond their initially characterized role in RNA retention. By acting as dynamic platforms for RNP assembly and remodeling, they influence gene expression at multiple post-transcriptional checkpoints, including RNA sequestration, alternative splicing, miRNA biogenesis, and translation. The sequestration model, which posits that paraspeckles act as simple molecular sponges, has evolved into a more nuanced view of these bodies as active processing factories that dynamically regulate the flow of genetic information.</p>
+                            <p class="text-slate-700 leading-7">The first and most well-established function of paraspeckles is their role in a &quot;nuclear retention&quot; pathway that controls gene expression by sequestering specific mature mRNAs within the nucleus, thereby preventing their export to the cytoplasm for translation. The primary targets for this sequestration are mRNAs that contain long, intramolecular double-stranded RNA (dsRNA) structures in their 3&#x27; untranslated regions (3&#x27; UTRs). These dsRNA regions are often formed by the presence of inverted repeat sequences, such as primate-specific Alu elements, and are typically subject to extensive adenosine-to-inosine (A-to-I) editing by the ADAR family of enzymes.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1. Nuclear Retention of A-to-I Hyperedited mRNAs</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2. Sequestration of Transcription Factors and RNA-Binding Proteins</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.3. A Hub for Post-Transcriptional Processing: Alternative Splicing and pri-miRNA Biogenesis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.4. Regulation of IRES-Dependent Translation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.5. Emerging Roles in Chromatin Organization</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="6-paraspeckles-in-physiology-and-disease" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">6. Paraspeckles in Physiology and Disease</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The dynamic and regulatory nature of paraspeckles places them at the crossroads of cellular homeostasis and pathology. As highly sensitive responders to a wide range of stimuli, their proper function is critical for maintaining cellular health. Conversely, the dysregulation of the &quot;paraspeckle system&quot;—whether through over- or under-production, or the assembly of functionally compromised bodies—is increasingly implicated as a key contributor to a variety of human diseases, including cancer, neurodegenerative disorders, and viral infections.</p>
+                            <p class="text-slate-700 leading-7">A unifying principle of paraspeckle biology is their role as global sensors and effectors of the cellular stress response. The number, size, and activity of paraspeckles are dramatically and rapidly modulated by a diverse array of cellular insults. This includes chemical stresses like proteasome inhibition, metabolic stresses such as mitochondrial dysfunction and hypoxia, physical stresses like heat shock, and genotoxic stress from DNA damage. In most of these cases, the response involves an upregulation of NEAT1_2 and an increase in paraspeckle abundance, a process that is generally considered to be a pro-survival or cytoprotective adaptation.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.1. Global Sensors of Cellular Stress</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.2. Paraspeckle Dysregulation in Cancer</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.3. The Role of Paraspeckles in Neurodegenerative Diseases</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.4. A Battleground for Viral Infections</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="7-conclusion-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">7. Conclusion and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Over the two decades since their discovery, paraspeckles have transitioned from being enigmatic nuclear foci to being recognized as sophisticated and fundamental regulators of gene expression in mammals. They stand as a premier example of how lncRNAs can function as architectural molecules, scaffolding the assembly of complex RNP machinery. The research landscape has revealed their intricate core-shell structure, the diverse and expanding proteome they harbor, and the complex biophysical principles that govern their dynamic assembly. Functionally, they have emerged as critical hubs that integrate cellular stress signals to modulate a wide array of post-transcriptional processes, with profound implications for cellular physiology and a growing list of human diseases.</p>
+                            <p class="text-slate-700 leading-7">A cohesive understanding of paraspeckle biogenesis requires integrating two complementary biophysical models. The principle of liquid-liquid phase separation (LLPS), driven by the multivalent interactions of prion-like domains in proteins like FUS and RBM14, provides a compelling explanation for the initial condensation of components into a distinct, liquid-like phase. This accounts for the rapid, switch-like formation of paraspeckles in response to cellular cues. However, LLPS alone does not explain the highly ordered, often cylindrical, core-shell architecture of mature paraspeckles.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.1. Synthesizing the Models: From Disordered Droplets to Ordered Micelles</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.2. Unanswered Questions and Future Research Directions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.3. Therapeutic Potential of Targeting Paraspeckles</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

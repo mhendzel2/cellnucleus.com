@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Research Source Viewer | CellNucleus.com</title>
+    <meta name="description" content="Read matched Deep Research source reviews online and submit structured correction suggestions.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js"></script>
+    <style>
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 24%),
+                #f8fafc;
+        }
+        /* File:// browsing can miss Tailwind v3-style utilities used here. */
+        .bg-white\/90 { background-color: rgba(255, 255, 255, 0.94); }
+        .text-slate-950 { color: #020617; }
+        .text-slate-900 { color: #0f172a; }
+        .text-slate-800 { color: #1e293b; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-500 { color: #64748b; }
+        .bg-slate-100 { background-color: #f1f5f9; }
+        .bg-slate-50 { background-color: #f8fafc; }
+        .bg-slate-900 { background-color: #0f172a; }
+        .border-slate-300 { border-color: #cbd5e1; }
+        .border-slate-200 { border-color: #e2e8f0; }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .tracking-\[0\.2em\] { letter-spacing: 0.2em; }
+        .backdrop-filter,
+        .backdrop-blur {
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+        }
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-\[minmax\(0\,1fr\)_360px\] {
+                grid-template-columns: minmax(0, 1fr) 360px;
+            }
+        }
+        .docx-content {
+            line-height: 1.7;
+        }
+        .docx-content h1, .docx-content h2, .docx-content h3, .docx-content h4 {
+            margin-top: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #0f172a;
+        }
+        .docx-content p {
+            margin-bottom: 0.9rem;
+            color: #1e293b;
+        }
+        .docx-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .docx-content th, .docx-content td {
+            border: 1px solid #cbd5e1;
+            padding: 0.5rem 0.75rem;
+            vertical-align: top;
+        }
+        .docx-content ul, .docx-content ol {
+            margin: 0.75rem 0 0.75rem 1.25rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-900">
+    <header class="border-b border-slate-200 bg-white/90 backdrop-filter backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="inline-flex items-center gap-3">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                    <i class="fas fa-atom"></i>
+                </span>
+                <span class="text-lg font-semibold">CellNucleus.com</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm font-medium text-slate-700">
+                <a href="index.html" class="hover:text-slate-950">Home</a>
+                <a href="reviews_index.html" class="hover:text-slate-950">All Reviews</a>
+                <a href="downloads.html" class="hover:text-slate-950">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Deep Research Source</p>
+                    <h1 id="reviewTitle" class="mt-2 text-3xl font-bold text-slate-950">Loading source review...</h1>
+                    <p class="mt-2 text-sm text-slate-700">
+                        Source document:
+                        <span id="sourceDocName" class="font-semibold text-slate-900">-</span>
+                    </p>
+                    <p class="mt-1 text-sm text-slate-700">
+                        Match confidence:
+                        <span id="confidenceBadge" class="inline-flex rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-700">unknown</span>
+                    </p>
+                    <p class="mt-1 text-sm text-slate-700">
+                        Matched review page:
+                        <a id="matchedPageLink" href="reviews_index.html" class="font-semibold text-blue-700 hover:text-blue-900">Open page</a>
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <a id="readSuggestLink" href="#suggestion-form" class="inline-flex items-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a id="downloadDocxLink" href="downloads.html" download class="inline-flex items-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download .docx
+                    </a>
+                    <a id="googleViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                        <i class="fab fa-google mr-2"></i>Google Viewer
+                    </a>
+                    <a id="officeViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                        <i class="fas fa-file-word mr-2"></i>Office Viewer
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
+            <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div id="statusBox" class="mb-4 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+                    Fetching source document...
+                </div>
+                <div id="renderedContent" class="docx-content prose max-w-none text-slate-800"></div>
+            </article>
+
+            <aside id="suggestion-form" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-950">
+                    <i class="fas fa-comments mr-2 text-emerald-700"></i>Suggest A Correction
+                </h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    Submit evidence-backed edits using a structured payload. This keeps review updates traceable and moderation-ready.
+                </p>
+
+                <form id="correctionForm" class="mt-5 space-y-4">
+                    <div>
+                        <label for="pagePath" class="block text-sm font-semibold text-slate-800">Page</label>
+                        <input id="pagePath" name="page_path" type="text" readonly class="mt-1 w-full rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-sm text-slate-700">
+                    </div>
+
+                    <div>
+                        <label for="docPath" class="block text-sm font-semibold text-slate-800">Source document</label>
+                        <input id="docPath" name="doc_path" type="text" readonly class="mt-1 w-full rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-sm text-slate-700">
+                    </div>
+
+                    <div>
+                        <label for="section" class="block text-sm font-semibold text-slate-800">Section</label>
+                        <input id="section" name="section" type="text" placeholder="Section title or paragraph anchor" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                    </div>
+
+                    <div>
+                        <label for="claim" class="block text-sm font-semibold text-slate-800">Claim to correct</label>
+                        <textarea id="claim" name="claim" rows="3" placeholder="Paste the exact claim that appears incorrect." class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="proposedCorrection" class="block text-sm font-semibold text-slate-800">Proposed correction</label>
+                        <textarea id="proposedCorrection" name="proposed_correction" rows="4" placeholder="Provide the corrected wording." class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="evidenceUrl" class="block text-sm font-semibold text-slate-800">Evidence URL</label>
+                        <input id="evidenceUrl" name="evidence_url" type="url" placeholder="https://doi.org/... or https://pubmed.ncbi.nlm.nih.gov/..." class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <button type="submit" class="inline-flex items-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Suggestion
+                        </button>
+                        <button type="button" id="copyPayloadBtn" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                            <i class="fas fa-copy mr-2"></i>Copy JSON
+                        </button>
+                        <button type="button" id="downloadPayloadBtn" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                            <i class="fas fa-file-download mr-2"></i>Download JSON
+                        </button>
+                    </div>
+                </form>
+
+                <pre id="payloadPreview" class="mt-4 max-h-64 overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs text-slate-700"></pre>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        function safeTitleFromDocName(docName) {
+            return docName.replace(/_/g, " ").replace(/\.docx$/i, "").trim();
+        }
+
+        function setStatus(message, tone) {
+            const box = document.getElementById("statusBox");
+            box.textContent = message;
+            box.className = "mb-4 rounded-xl px-4 py-3 text-sm";
+            if (tone === "error") {
+                box.classList.add("border", "border-red-200", "bg-red-50", "text-red-800");
+            } else if (tone === "warn") {
+                box.classList.add("border", "border-amber-200", "bg-amber-50", "text-amber-800");
+            } else {
+                box.classList.add("border", "border-blue-200", "bg-blue-50", "text-blue-800");
+            }
+        }
+
+        function normalizeDocParam(rawDoc) {
+            if (!rawDoc) return "";
+            let doc = rawDoc.trim().replace(/^\/+/, "");
+            if (!doc.toLowerCase().startsWith("reviews_useredit/")) {
+                doc = "Reviews_useredit/" + doc.split("/").pop();
+            }
+            if (doc.includes("..")) return "";
+            return doc;
+        }
+
+        function buildPayload() {
+            const payload = {
+                type: "reader_correction_suggestion",
+                page_path: document.getElementById("pagePath").value.trim(),
+                doc_path: document.getElementById("docPath").value.trim(),
+                section: document.getElementById("section").value.trim(),
+                claim: document.getElementById("claim").value.trim(),
+                proposed_correction: document.getElementById("proposedCorrection").value.trim(),
+                evidence_url: document.getElementById("evidenceUrl").value.trim(),
+                submitted_at: new Date().toISOString(),
+                moderation_state: "new"
+            };
+            document.getElementById("payloadPreview").textContent = JSON.stringify(payload, null, 2);
+            return payload;
+        }
+
+        async function loadDocx(docPath) {
+            const content = document.getElementById("renderedContent");
+            try {
+                const response = await fetch(encodeURI(docPath));
+                if (!response.ok) {
+                    throw new Error("Source file could not be fetched from this environment.");
+                }
+                const arrayBuffer = await response.arrayBuffer();
+                const result = await window.mammoth.convertToHtml({ arrayBuffer: arrayBuffer });
+                content.innerHTML = result.value || "<p>No readable content was extracted from this document.</p>";
+
+                if (result.messages && result.messages.length > 0) {
+                    setStatus("Source loaded. Some formatting was simplified during web rendering.", "warn");
+                } else {
+                    setStatus("Source loaded successfully. You can now review and suggest corrections.", "ok");
+                }
+            } catch (error) {
+                content.innerHTML = `
+                    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                        <p class="font-semibold">Online rendering fallback</p>
+                        <p class="mt-2">This environment could not render the DOCX directly. Use download/open options above, then submit suggestions with the form.</p>
+                    </div>
+                `;
+                setStatus("Unable to render DOCX inline in this environment. Use download/open actions.", "warn");
+            }
+        }
+
+        function bootstrap() {
+            const params = new URLSearchParams(window.location.search);
+            const rawDoc = params.get("doc") || "";
+            const pagePath = params.get("page") || "reviews_index.html";
+            const confidence = (params.get("confidence") || "unknown").toLowerCase();
+            const docPath = normalizeDocParam(rawDoc);
+
+            if (!docPath) {
+                setStatus("Missing or invalid source document reference.", "error");
+                return;
+            }
+
+            const docName = docPath.split("/").pop();
+            const title = safeTitleFromDocName(docName);
+            const absoluteDocUrl = new URL(encodeURI(docPath), window.location.origin + "/").toString();
+
+            document.getElementById("reviewTitle").textContent = title;
+            document.getElementById("sourceDocName").textContent = docName;
+            document.getElementById("confidenceBadge").textContent = confidence;
+
+            const pageLink = document.getElementById("matchedPageLink");
+            pageLink.href = pagePath;
+            pageLink.textContent = pagePath.split("/").pop();
+
+            document.getElementById("readSuggestLink").href = "#suggestion-form";
+            document.getElementById("downloadDocxLink").href = encodeURI(docPath);
+            document.getElementById("googleViewerLink").href =
+                "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(absoluteDocUrl);
+            document.getElementById("officeViewerLink").href =
+                "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(absoluteDocUrl);
+
+            document.getElementById("pagePath").value = pagePath;
+            document.getElementById("docPath").value = docPath;
+            buildPayload();
+
+            const form = document.getElementById("correctionForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const payload = buildPayload();
+                const subject = encodeURIComponent("[CellNucleus] Correction suggestion: " + (pagePath.split("/").pop() || "review"));
+                const body = encodeURIComponent(JSON.stringify(payload, null, 2));
+                window.location.href = "mailto:reviews@cellnucleus.com?subject=" + subject + "&body=" + body;
+            });
+
+            document.getElementById("copyPayloadBtn").addEventListener("click", async function () {
+                const payload = JSON.stringify(buildPayload(), null, 2);
+                try {
+                    await navigator.clipboard.writeText(payload);
+                    setStatus("Suggestion payload copied to clipboard.", "ok");
+                } catch (error) {
+                    setStatus("Clipboard copy failed. Select and copy from the JSON box manually.", "warn");
+                }
+            });
+
+            document.getElementById("downloadPayloadBtn").addEventListener("click", function () {
+                const payload = JSON.stringify(buildPayload(), null, 2);
+                const blob = new Blob([payload], { type: "application/json" });
+                const href = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = href;
+                a.download = (pagePath.split("/").pop() || "suggestion").replace(/\.html$/i, "") + "_suggestion.json";
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(href);
+            });
+
+            loadDocx(docPath);
+        }
+
+        window.addEventListener("DOMContentLoaded", bootstrap);
+    </script>
+</body>
+</html>

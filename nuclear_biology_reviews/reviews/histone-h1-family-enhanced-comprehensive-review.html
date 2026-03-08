@@ -3,205 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Linker Histone H1 Family | Nuclear Biology Reviews</title>
+    <meta name="description" content="Within the eukaryotic nucleus, the vast genome is meticulously packaged into chromatin, a dynamic structure orchestrated primarily by histone proteins....">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Linker Histone H1 Family</h1>
+                <p class="mt-4 text-lg text-slate-100">From Chromatin Architect to Master Regulator of the Genome</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Histone H1 Family Review_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 31 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Histone H1 Family Review_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FHistone+H1+Family+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fhistone-h1-family-enhanced-comprehensive-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FHistone+H1+Family+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fhistone-h1-family-enhanced-comprehensive-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Histone%20H1%20Family%20Review_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">Within the eukaryotic nucleus, the vast genome is meticulously packaged into chromatin, a dynamic structure orchestrated primarily by histone proteins. The canonical model of chromatin organization centers on the nucleosome core particle, an octamer of highly conserved core histones (H2A, H2B, H3, and H4) around which approximately 147 base pairs of DNA are wrapped.1 Standing apart from this core ensemble is the fifth histone class, the H1 or &quot;linker&quot; histone family. For decades, the prevailing paradigm cast histone H1 in a relatively simple, architectural role: a molecular clamp that binds to the DNA as it enters and exits the nucleosome, sealing the structure and facilitating the folding...</p>
+                        <p class="text-slate-700 leading-7">in vitro reconstitution experiments, positioned H1 as a general transcriptional repressor, a static structural component whose primary function was to compact the genome.7</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#i-introduction-the-enduring-enigma-of-the-fifth-histone" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">I. Introduction: The Enduring Enigma of the Fifth Histone</a>
+                            <a href="#ii-the-h1-protein-a-tripartite-structure-dictating-function" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">II. The H1 Protein: A Tripartite Structure Dictating Function</a>
+                            <a href="#iii-h1-as-the-architect-of-higher-order-chromatin-structure" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">III. H1 as the Architect of Higher-Order Chromatin Structure</a>
+                            <a href="#iv-the-mammalian-h1-subtype-repertoire-a-symphony-of-specificity-and-redundancy" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">IV. The Mammalian H1 Subtype Repertoire: A Symphony of Specificity and Redundancy</a>
+                            <a href="#v-the-h1-regulatory-network-a-hub-for-nuclear-processes" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">V. The H1 Regulatory Network: A Hub for Nuclear Processes</a>
+                            <a href="#vi-the-h1-code-a-complex-grammar-of-post-translational-modifications-ptms" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VI. The &quot;H1 Code&quot;: A Complex Grammar of Post-Translational Modifications (PTMs)</a>
+                            <a href="#vii-an-evolutionary-perspective-the-h1-family-across-eukaryotic-kingdoms" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VII. An Evolutionary Perspective: The H1 Family Across Eukaryotic Kingdoms</a>
+                            <a href="#viii-histone-h1-in-human-disease-when-the-linker-becomes-unlinked" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VIII. Histone H1 in Human Disease: When the Linker Becomes Unlinked</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="i-introduction-the-enduring-enigma-of-the-fifth-histone" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">I. Introduction: The Enduring Enigma of the Fifth Histone</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Within the eukaryotic nucleus, the vast genome is meticulously packaged into chromatin, a dynamic structure orchestrated primarily by histone proteins. The canonical model of chromatin organization centers on the nucleosome core particle, an octamer of highly conserved core histones (H2A, H2B, H3, and H4) around which approximately 147 base pairs of DNA are wrapped.1 Standing apart from this core ensemble is the fifth histone class, the H1 or &quot;linker&quot; histone family. For decades, the prevailing paradigm cast histone H1 in a relatively simple, architectural role: a molecular clamp that binds to the DNA as it enters and exits the nucleosome, sealing the structure and facilitating the folding of the &quot;beads-on-a-string&quot; nucleofilament into more compact, higher-order structures like the 30 nm fiber.3 This model, largely derived from</p>
+                            <p class="text-slate-700 leading-7">in vitro reconstitution experiments, positioned H1 as a general transcriptional repressor, a static structural component whose primary function was to compact the genome.7</p>
+                    </div>
+                </section>
+
+                <section id="ii-the-h1-protein-a-tripartite-structure-dictating-function" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">II. The H1 Protein: A Tripartite Structure Dictating Function</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The functional versatility of the histone H1 family is encoded within a conserved tripartite domain organization: a central, structured globular domain (GD) flanked by intrinsically disordered N-terminal (NTD) and C-terminal (CTD) tails.7 This molecular architecture represents a classic example of structure-function modularity, where a conserved &quot;anchor&quot; domain positions highly versatile and regulatory &quot;effector&quot; domains onto the chromatin fiber.</p>
+                            <p class="text-slate-700 leading-7">The central globular domain is the most evolutionarily conserved feature of metazoan H1 proteins, particularly among paralogous subtypes within a given species.3 This domain, approximately 80 amino acids in length, adopts a &quot;winged-helix&quot; fold, a motif common to many DNA-binding proteins, consisting of three alpha-helices and a C-terminal beta-hairpin structure.12 The primary and essential function of the GD is to mediate the specific binding of H1 to the nucleosome. High-resolution structural and footprinting studies have established that the GD binds asymmetrically to the nucleosome, situated at or near the dyad axis where the two DNA gyres cross.5 In this position, it simultaneously contacts the DNA strands entering and exiting the core particle.18 This interaction protects an additional ~20 base pairs of linker DNA from micrococcal nuclease digestion, stabilizing the DNA on the...</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Conserved Globular Domain (GD): A &quot;Winged Helix&quot; for Nucleosome Docking</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Intrinsically Disordered Tails (NTD and CTD): Platforms for Dynamic Interactions and Regulation</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iii-h1-as-the-architect-of-higher-order-chromatin-structure" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">III. H1 as the Architect of Higher-Order Chromatin Structure</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Histone H1 has long been recognized as a fundamental architect of chromatin. Its influence extends from the local stabilization of individual nucleosomes to the global organization of chromosomes within the nucleus. However, the understanding of this architectural role has evolved from a static view of rigid structures to a dynamic model of tunable, fluid compaction that is intimately linked with epigenetic regulation.</p>
+                            <p class="text-slate-700 leading-7">The first and most fundamental architectural role of H1 is to bind the nucleosome and form the chromatosome. By engaging with the linker DNA at its entry and exit points, H1 stabilizes the DNA wrapped around the core octamer, effectively &quot;sealing&quot; the particle and defining the angle at which the linker DNA projects from it.3 This action is critical for the next level of compaction.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">From Nucleosome to Chromatosome and the 30 nm Fiber</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Control of Genome-Scale Organization</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">H1 as a Liquid-like &quot;Glue&quot; and Driver of Phase Separation</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iv-the-mammalian-h1-subtype-repertoire-a-symphony-of-specificity-and-redundancy" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">IV. The Mammalian H1 Subtype Repertoire: A Symphony of Specificity and Redundancy</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Higher eukaryotes, particularly mammals, express the most complex and divergent repertoire of histone proteins, the H1 family, comprising 11 non-allelic variants.3 These subtypes, which arose from gene duplication events, are classified based on their expression patterns and sequence characteristics, fueling a long-standing and central debate in the field regarding their functional redundancy versus specificity.3</p>
+                            <p class="text-slate-700 leading-7">Five H1 variants, H1.1 through H1.5 (encoded by genes HIST1H1A-E), are known as the canonical somatic subtypes. Their genes are located within the major histone gene clusters, and their expression is tightly coupled to DNA replication, peaking during the S-phase of the cell cycle.3 Consequently, they are the most abundant H1 variants in actively proliferating cells. Structurally, these five subtypes share nearly identical globular domains but possess distinct NTDs and CTDs that vary in length and amino acid sequence.3 These tail differences are functionally significant, as they dictate the biophysical properties of each subtype. Fluorescence recovery after photobleaching (FRAP) experiments have shown that subtypes with shorter, less charged CTDs, such as H1.1 and H1.2, exhibit faster exchange rates and shorter residence times on chromatin.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Somatic, Replication-Dependent Subtypes (H1.1–H1.5)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Replication-Independent Subtypes</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Germline-Specific Subtypes</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Critical Analysis of the Redundancy vs. Specificity Debate</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="v-the-h1-regulatory-network-a-hub-for-nuclear-processes" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">V. The H1 Regulatory Network: A Hub for Nuclear Processes</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Once viewed as a simple structural protein, histone H1 is now understood to be a central regulatory hub that actively participates in and coordinates a wide array of fundamental nuclear processes, including transcription, DNA replication, and the DNA damage response. It achieves this by physically modulating chromatin accessibility and by biochemically recruiting a host of effector proteins and complexes. H1&#x27;s function is thus a two-sided coin: it acts as a gatekeeper or &quot;lock&quot; that restricts access to the DNA template, and simultaneously as a &quot;scaffold&quot; that brings in enzymes to write and maintain epigenetic states.</p>
+                            <p class="text-slate-700 leading-7">The classical model of H1 as a general transcriptional repressor, born from in vitro experiments, has given way to a more sophisticated understanding of its role as a specific and context-dependent regulator.7 H1 can indeed repress gene expression by stabilizing nucleosomes over critical regulatory elements like promoters and enhancers, thereby sterically hindering the binding of transcription factors and the transcriptional machinery.7 However, H1 is also directly implicated in gene activation. This can occur through architectural mechanisms, such as mediating long-range interactions between enhancers and promoters, or through the direct recruitment of transcriptional co-activators.7 A key mechanism for switching H1 from a repressive to an activating role is post-translational modification, with interphase phosphorylation being strongly linked to active transcription.40 Subtype...</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Transcriptional Regulation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">DNA Replication</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">DNA Damage and Repair (DDR)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Protein-Protein Interactions and Epigenetic Crosstalk</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vi-the-h1-code-a-complex-grammar-of-post-translational-modifications-ptms" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VI. The &quot;H1 Code&quot;: A Complex Grammar of Post-Translational Modifications (PTMs)</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Similar to the core histones, the H1 family is subject to a vast and complex array of PTMs. These modifications, which occur on all three domains of the protein, constitute a sophisticated &quot;H1 code&quot; that dynamically regulates H1 function, stability, and interactions.5 PTMs function as a dynamic switching mechanism, toggling H1 between its default architectural and repressive state and its various context-specific regulatory roles. This control system allows the cell to fine-tune genome structure and activity in response to both internal cues, like the cell cycle, and external signals, such as DNA damage.</p>
+                            <p class="text-slate-700 leading-7">Phosphorylation is the most extensively studied H1 PTM and exhibits a remarkable, context-dependent duality.17</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Phosphorylation: A Dual-Role Modification</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Methylation and Acetylation: Regulating Heterochromatin and the DDR</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Ubiquitylation and PARylation: Key Signals in DNA Repair</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Other Modifications and Crosstalk</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vii-an-evolutionary-perspective-the-h1-family-across-eukaryotic-kingdoms" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VII. An Evolutionary Perspective: The H1 Family Across Eukaryotic Kingdoms</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Histone H1 is the most evolutionarily variable of the histone families, and its journey across the eukaryotic tree of life reflects a story of functional expansion and adaptation.3 From simple DNA-packaging proteins in early eukaryotes, H1 has evolved into a complex, multi-component regulatory system in vertebrates, with different lineages co-opting and modifying the H1 toolkit for their specific biological needs. Analysis suggests that primitive H1-like DNA-condensing proteins may have arisen in eubacteria, while the signature winged-helix globular domain appeared much later in protists, on an evolutionary trajectory separate from the archeal-derived core histones.3</p>
+                            <p class="text-slate-700 leading-7">The fruit fly Drosophila melanogaster provides a model of intermediate complexity. It possesses one major somatic H1 variant (dH1), which is encoded by a cluster of approximately 100 tandemly repeated genes, and a more recently identified, single-copy germline-specific variant called dBigH1.16 Unlike in yeast, dH1 is absolutely essential for viability.2 Its primary roles are in the structural organization of the genome; it is fundamental for the formation and integrity of heterochromatin, the organization of pericentromeric regions into a unified chromocenter, and the proper alignment of sister chromatids in polytene chromosomes.2 A major evolutionary pressure driving H1 function in organisms with complex genomes appears to be the need to silence the vast number of transposable elements (TEs). In</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Invertebrates: Drosophila melanogaster</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Plants: Arabidopsis thaliana</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Lower Eukaryotes: Atypical H1s and Functional Analogues</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="viii-histone-h1-in-human-disease-when-the-linker-becomes-unlinked" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VIII. Histone H1 in Human Disease: When the Linker Becomes Unlinked</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Given its central role in organizing the genome and regulating its function, it is not surprising that the dysregulation of histone H1 is increasingly implicated in a wide range of human diseases. Pathologies linked to H1 arise from two principal mechanisms: first, quantitative disruptions in the stoichiometry or balance of H1 subtypes, which alter global chromatin architecture and create a permissive state for disease; and second, qualitative disruptions caused by specific, often heterozygous, mutations that confer a toxic gain-of-function, hijacking specific regulatory pathways.</p>
+                            <p class="text-slate-700 leading-7">The landscape of H1 alterations in cancer is extensive and multifaceted.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">H1 in Cancer</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">H1 in Neurodevelopmental Disorders</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">H1 in Other Pathologies</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

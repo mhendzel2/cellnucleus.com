@@ -3,401 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Envelope & Lamins - Cell Nucleus Reviews</title>
+    <title>Nuclear Envelope &amp; Lamins | CellNucleus.com</title>
+    <meta name="description" content="Boundary systems, pore architecture, and lamina-linked organization">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        :root {
+            --page-ink: #0f172a;
+            --page-muted: #475569;
+            --page-border: #cbd5e1;
         }
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(125, 211, 252, 0.16), transparent 26%),
+                radial-gradient(circle at top right, rgba(244, 114, 182, 0.12), transparent 22%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+            color: var(--page-ink);
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        /* Local file browsing often hits pages without Tailwind v3 utilities.
+           Provide the few missing classes used by these generated catalog pages. */
+        .glass {
+            background: rgba(255, 255, 255, 0.94);
+            border-color: rgba(255, 255, 255, 0.72);
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
         }
-        .image-placeholder {
-            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
-            border: 2px dashed #9ca3af;
+        .catalog-card {
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+        .catalog-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
+            border-color: #94a3b8;
+        }
+        .bg-gradient-to-br {
+            background-color: var(--gradient-from, #0f172a);
+            background-image: linear-gradient(
+                135deg,
+                var(--gradient-from, #0f172a) 0%,
+                var(--gradient-via, var(--gradient-from, #0f172a)) 52%,
+                var(--gradient-to, #312e81) 100%
+            );
+        }
+        .bg-white\/85 { background-color: rgba(255, 255, 255, 0.92); }
+        .bg-white\/70 { background-color: rgba(255, 255, 255, 0.78); }
+        .bg-white\/15 { background-color: rgba(255, 255, 255, 0.18); }
+        .text-white\/85 { color: rgba(255, 255, 255, 0.92); }
+        .text-white\/90 { color: rgba(255, 255, 255, 0.95); }
+        .border-white\/60 { border-color: rgba(255, 255, 255, 0.6); }
+        .border-white\/30 { border-color: rgba(255, 255, 255, 0.3); }
+        .hover\:bg-white\/10:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .backdrop-filter,
+        .backdrop-blur {
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+        }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .scroll-mt-24 { scroll-margin-top: 6rem; }
+        .tracking-\[0\.2em\] { letter-spacing: 0.2em; }
+        .tracking-\[0\.18em\] { letter-spacing: 0.18em; }
+        .text-slate-950 { color: #020617; }
+        .text-slate-900 { color: #0f172a; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-600 { color: #475569; }
+        .text-slate-500 { color: #64748b; }
+        .bg-slate-900 { background-color: #0f172a; }
+        .bg-slate-200 { background-color: #e2e8f0; }
+        .bg-slate-50 { background-color: #f8fafc; }
+        .border-slate-200 { border-color: #e2e8f0; }
+        .border-slate-300 { border-color: #cbd5e1; }
+        .border-slate-400 { border-color: #94a3b8; }
+        .text-cyan-700 { color: #0e7490; }
+        .text-emerald-700 { color: #047857; }
+        .text-fuchsia-700 { color: #a21caf; }
+        .text-rose-700 { color: #be123c; }
+        .text-amber-700 { color: #b45309; }
+        .text-indigo-700 { color: #4338ca; }
+        .text-violet-700 { color: #6d28d9; }
+        .bg-cyan-50 { background-color: #ecfeff; }
+        .bg-emerald-50 { background-color: #ecfdf5; }
+        .bg-fuchsia-50 { background-color: #fdf4ff; }
+        .bg-rose-50 { background-color: #fff1f2; }
+        .bg-amber-50 { background-color: #fffbeb; }
+        .bg-indigo-50 { background-color: #eef2ff; }
+        .bg-violet-50 { background-color: #f5f3ff; }
+        .border-cyan-200 { border-color: #a5f3fc; }
+        .border-emerald-200 { border-color: #a7f3d0; }
+        .border-fuchsia-200 { border-color: #f5d0fe; }
+        .border-rose-200 { border-color: #fecdd3; }
+        .border-amber-200 { border-color: #fde68a; }
+        .border-indigo-200 { border-color: #c7d2fe; }
+        .border-violet-200 { border-color: #ddd6fe; }
+        .from-cyan-600 { --gradient-from: #0891b2; }
+        .via-sky-600 { --gradient-via: #0284c7; }
+        .to-blue-700 { --gradient-to: #1d4ed8; }
+        .from-emerald-600 { --gradient-from: #059669; }
+        .via-green-600 { --gradient-via: #16a34a; }
+        .to-lime-600 { --gradient-to: #65a30d; }
+        .from-fuchsia-600 { --gradient-from: #c026d3; }
+        .via-purple-600 { --gradient-via: #9333ea; }
+        .to-indigo-700 { --gradient-to: #4338ca; }
+        .from-rose-600 { --gradient-from: #e11d48; }
+        .via-red-600 { --gradient-via: #dc2626; }
+        .to-orange-600 { --gradient-to: #ea580c; }
+        .from-amber-500 { --gradient-from: #f59e0b; }
+        .via-orange-500 { --gradient-via: #f97316; }
+        .to-red-600 { --gradient-to: #dc2626; }
+        .from-indigo-600 { --gradient-from: #4f46e5; }
+        .via-blue-600 { --gradient-via: #2563eb; }
+        .to-cyan-600 { --gradient-to: #0891b2; }
+        .from-violet-600 { --gradient-from: #7c3aed; }
+        .to-pink-600 { --gradient-to: #db2777; }
+        .from-slate-700 { --gradient-from: #334155; }
+        .via-gray-800 { --gradient-via: #1f2937; }
+        .to-zinc-900 { --gradient-to: #18181b; }
+        .from-slate-900 { --gradient-from: #0f172a; }
+        .via-blue-900 { --gradient-via: #1e3a8a; }
+        .to-indigo-900 { --gradient-to: #312e81; }
+        .from-sky-700 { --gradient-from: #0369a1; }
+        .via-blue-700 { --gradient-via: #1d4ed8; }
+        .to-indigo-800 { --gradient-to: #3730a3; }
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-\[minmax\(0\,1fr\)_320px\] {
+                grid-template-columns: minmax(0, 1fr) 320px;
+            }
+            .lg\:grid-cols-\[minmax\(0\,1fr\)_260px\] {
+                grid-template-columns: minmax(0, 1fr) 260px;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation Header -->
-    <nav class="gradient-bg text-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-atom text-2xl"></i>
-                        <span class="font-bold text-xl">Cell Nucleus Reviews</span>
-                    </a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="index.html" class="hover:text-blue-200 transition-colors">
-                        <i class="fas fa-home mr-1"></i>Home
-                    </a>
-                    <a href="#reviews" class="hover:text-blue-200 transition-colors">
-                        <i class="fas fa-list mr-1"></i>Reviews
-                    </a>
-                </div>
-            </div>
+<body class="min-h-screen">
+    <header class="border-b border-slate-200 bg-white/85 backdrop-filter backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-3 text-slate-950">
+                <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                    <i class="fas fa-atom"></i>
+                </span>
+                <span class="text-lg font-semibold">CellNucleus.com</span>
+            </a>
+            <nav class="hidden items-center gap-6 md:flex">
+                <a href="index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Home</a><a href="reviews_index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">All Reviews</a><a href="research_reviews_directory.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Research Directory</a><a href="downloads.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Downloads</a>
+            </nav>
         </div>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <nav class="flex" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                <li class="inline-flex items-center">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-home mr-2"></i>Home
-                    </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
-                        <span class="text-gray-500">Nuclear Envelope & Lamins</span>
+    </header>
+    <main>
+        <section class="bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 text-white">
+            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="max-w-4xl">
+                    <div class="mb-5 inline-flex items-center gap-3 rounded-full bg-white/15 px-4 py-2 text-sm font-medium">
+                        <i class="fas fa-layer-group"></i>
+                        <span>4 linked review pages</span>
                     </div>
-                </li>
-            </ol>
-        </nav>
-    </div>
-
-    <!-- Header Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                <i class="fas fa-shield-alt text-blue-600 mr-3"></i>
-                Nuclear Envelope & Lamins
-            </h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive reviews covering nuclear envelope structure, nuclear lamina organization, 
-                laminopathies, and nuclear-cytoplasmic interactions in health and disease.
-            </p>
-        </div>
-    </div>
-
-    <!-- Featured Image Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="image-placeholder h-64 flex items-center justify-center">
-                <div class="text-center">
-                    <i class="fas fa-microscope text-gray-400 text-4xl mb-2"></i>
-                    <p class="text-gray-500 font-medium">Nuclear Envelope Structure</p>
-                    <p class="text-sm text-gray-400">Electron microscopy visualization</p>
+                    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Nuclear Envelope &amp; Lamins</h1>
+                    <p class="mt-4 max-w-3xl text-lg text-white/85">Boundary systems, pore architecture, and lamina-linked organization</p>
                 </div>
             </div>
-            <div class="p-4 bg-gray-50">
-                <p class="text-sm text-gray-600">
-                    <strong>Image Attribution:</strong> Scientific illustration of nuclear envelope structure. 
-                    Source: Original research publications and educational resources on nuclear biology.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Reviews Section -->
-    <div id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Research Reviews in Nuclear Envelope & Lamins
-        </h2>
+        </section>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Review 1: Nuclear Envelope Comprehensive Review -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-dna text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Nuclear Envelope Structure</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Envelope Comprehensive Review</h3>
-                <p class="text-gray-600 mb-4">
-                    In-depth analysis of nuclear envelope structure, function, and its role in cellular processes. 
-                    Covers nuclear pore complexes, inner and outer nuclear membranes, and envelope dynamics.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_envelope_comprehensive_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+        <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+                <div class="space-y-6">
+                    <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Category overview</p>
+                        <p class="mt-4 max-w-3xl text-base leading-7 text-slate-700">Envelope-centered reviews explore the mechanics and signaling roles of the nuclear boundary, lamins, and pore assemblies that shape nuclear identity.</p>
+                    </section>
+                    <section>
+                        <div class="mb-6 flex items-center justify-between gap-4">
+                            <h2 class="text-2xl font-bold text-slate-950">Review Pages in This Category</h2>
+                            <p class="text-sm text-slate-500">4 linked review pages</p>
+                        </div>
+                        <div class="grid gap-5 md:grid-cols-2">
+                            
+        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
+                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Envelope Comprehensive Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear envelope.</p>
+            <div class="mt-5 flex items-center justify-between gap-4">
+                <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
+                <a href="nuclear_biology_reviews/reviews/nuclear-envelope-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                    Open review
+                    <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
+        </article>
+    
 
-            <!-- Review 2: Nuclear Lamina Comprehensive Review -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-network-wired text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Lamina Network</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Lamina Comprehensive Review</h3>
-                <p class="text-gray-600 mb-4">
-                    Detailed examination of nuclear lamina composition, organization, and function. 
-                    Reviews A-type and B-type lamins, their interactions, and structural roles.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_lamina_comprehensive_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
+                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Lamina Comprehensive Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear lamina.</p>
+            <div class="mt-5 flex items-center justify-between gap-4">
+                <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
+                <a href="nuclear_biology_reviews/reviews/nuclear-lamina-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                    Open review
+                    <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
+        </article>
+    
 
-            <!-- Review 3: Laminopathies Review -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-exclamation-triangle text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Disease Mechanisms</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Laminopathies: Nuclear Envelope Diseases</h3>
-                <p class="text-gray-600 mb-4">
-                    Comprehensive review of laminopathies, genetic diseases caused by mutations in lamin genes. 
-                    Covers molecular mechanisms, disease progression, and therapeutic approaches.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/laminopathies_nuclear_envelope_diseases_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
+                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Pore Complex Comprehensive Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear pore complex.</p>
+            <div class="mt-5 flex items-center justify-between gap-4">
+                <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
+                <a href="nuclear_biology_reviews/reviews/nuclear-pore-complex-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                    Open review
+                    <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
+        </article>
+    
 
-            <!-- Review 4: Lamin A Mutants Aging Research -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-clock text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Aging Research</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Lamin A Mutants in Aging Research</h3>
-                <p class="text-gray-600 mb-4">
-                    Research review on lamin A mutations and their role in premature aging syndromes. 
-                    Explores connections between nuclear envelope dysfunction and cellular senescence.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/lamin_a_mutants_aging_research_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
+        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
+                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Pore Complex Standardized Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear pore complex.</p>
+            <div class="mt-5 flex items-center justify-between gap-4">
+                <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
+                <a href="nuclear_biology_reviews/reviews/nuclear_pore_complex_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                    Open review
+                    <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-
-            <!-- Review 5: Nuclear Pore Complex Review -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-circle-notch text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Nuclear Pore Complex</p>
-                    </div>
+        </article>
+    
+                        </div>
+                    </section>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Pore Complex Comprehensive Review</h3>
-                <p class="text-gray-600 mb-4">
-                    Detailed analysis of nuclear pore complex structure, assembly, and function. 
-                    Reviews nucleoporins, transport mechanisms, and regulation of nuclear transport.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_pore_complex_comprehensive_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+                <aside class="space-y-6">
+                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
+                        <h2 class="text-lg font-semibold text-slate-950">Quick Links</h2>
+                        <div class="mt-4 space-y-3 text-sm">
+                            <a href="reviews_index.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
+                                <span>Browse full review index</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="research_reviews_directory.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
+                                <span>Open research directory</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="downloads.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
+                                <span>Source downloads</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
+                        <h2 class="text-lg font-semibold text-slate-950">Inventory</h2>
+                        <dl class="mt-4 space-y-3 text-sm text-slate-600">
+                            <div class="flex items-center justify-between">
+                                <dt>Category pages</dt>
+                                <dd class="font-semibold text-slate-950">8</dd>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <dt>All linked review pages</dt>
+                                <dd class="font-semibold text-slate-950">84</dd>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <dt>This category</dt>
+                                <dd class="font-semibold text-slate-950">4</dd>
+                            </div>
+                        </dl>
+                    </section>
+                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
+                        <h2 class="text-lg font-semibold text-slate-950">Related Categories</h2>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <a href="chromatin_architecture_dynamics_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Chromatin Architecture &amp; Dynamics</a><a href="epigenetics_gene_regulation_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Epigenetics &amp; Gene Regulation</a><a href="nuclear_bodies_compartments_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Nuclear Bodies &amp; Compartments</a><a href="dna_repair_replication_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">DNA Repair &amp; Replication</a><a href="nuclear_transport_dynamics_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Nuclear Transport &amp; Dynamics</a><a href="nuclear_biophysics_mechanics_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Nuclear Biophysics &amp; Mechanics</a><a href="disease_pathology_category.html" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950">Disease &amp; Pathology</a>
+                        </div>
+                    </section>
+                </aside>
             </div>
-
-            <!-- Review 6: Nuclear Transport Dynamics -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-exchange-alt text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Transport Dynamics</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Transport & Compartment Dynamics</h3>
-                <p class="text-gray-600 mb-4">
-                    Review of nuclear transport mechanisms and compartment dynamics. 
-                    Covers importins, exportins, and the regulation of nuclear-cytoplasmic trafficking.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_transport_compartment_dynamics.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Review 7: Nuclear Mechanics Disease -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-cogs text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Nuclear Mechanics</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Mechanics & Disease</h3>
-                <p class="text-gray-600 mb-4">
-                    Analysis of nuclear mechanical properties and their role in disease pathogenesis. 
-                    Examines how nuclear envelope defects affect cellular mechanics and tissue function.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_mechanics_disease_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Review 8: Nuclear Virus Host Interactions -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-virus text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Virus-Host Interactions</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Virus-Host Interactions</h3>
-                <p class="text-gray-600 mb-4">
-                    Review of how viruses interact with the nuclear envelope and lamina during infection. 
-                    Covers viral strategies for nuclear entry and envelope reorganization.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_virus_host_interactions_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Review 9: Nuclear Biophysical Properties -->
-            <div class="bg-white rounded-lg shadow-md card-hover p-6">
-                <div class="image-placeholder h-48 mb-4 rounded flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-atom text-gray-400 text-3xl mb-2"></i>
-                        <p class="text-gray-500 text-sm">Biophysical Properties</p>
-                    </div>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Nuclear Biophysical Properties</h3>
-                <p class="text-gray-600 mb-4">
-                    Comprehensive analysis of nuclear biophysical properties including mechanical characteristics, 
-                    viscoelasticity, and material properties of the nuclear envelope.
-                </p>
-                <a href="nuclear_biology_reviews/reviews/nuclear_biophysical_properties_review.html" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    Read Review <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Category Statistics -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg text-white p-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="text-3xl font-bold mb-2">9</div>
-                    <div class="text-blue-100">Research Reviews</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold mb-2">5+</div>
-                    <div class="text-blue-100">Research Areas</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold mb-2">100+</div>
-                    <div class="text-blue-100">Citations</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Related Categories -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Related Categories</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="chromatin_architecture_dynamics_category.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <i class="fas fa-dna text-blue-600 text-2xl mb-3"></i>
-                <h3 class="font-semibold text-gray-900 mb-2">Chromatin Architecture</h3>
-                <p class="text-gray-600 text-sm">Chromatin organization and dynamics</p>
-            </a>
-            <a href="nuclear_bodies_compartments_category.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <i class="fas fa-circle text-purple-600 text-2xl mb-3"></i>
-                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Bodies</h3>
-                <p class="text-gray-600 text-sm">Nuclear compartments and bodies</p>
-            </a>
-            <a href="dna_repair_replication_category.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <i class="fas fa-tools text-green-600 text-2xl mb-3"></i>
-                <h3 class="font-semibold text-gray-900 mb-2">DNA Repair</h3>
-                <p class="text-gray-600 text-sm">DNA repair and replication</p>
-            </a>
-            <a href="nuclear_biophysics_mechanics_category.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <i class="fas fa-cogs text-red-600 text-2xl mb-3"></i>
-                <h3 class="font-semibold text-gray-900 mb-2">Nuclear Biophysics</h3>
-                <p class="text-gray-600 text-sm">Nuclear mechanics and biophysics</p>
-            </a>
-        </div>
-    </div>
-
-    <!-- Image Attribution Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-gray-100 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">
-                <i class="fas fa-camera mr-2"></i>Image Attribution & Sources
-            </h3>
-            <div class="text-sm text-gray-600 space-y-2">
-                <p><strong>Scientific Illustrations:</strong> Original diagrams and schematics created for educational purposes based on published research.</p>
-                <p><strong>Microscopy Images:</strong> Electron microscopy and fluorescence microscopy images from peer-reviewed publications with proper attribution.</p>
-                <p><strong>Structural Models:</strong> Protein and nuclear structure models derived from crystallography and cryo-EM studies.</p>
-                <p><strong>Usage Rights:</strong> All images used under fair use for educational and research purposes. Original sources cited in individual review pages.</p>
-                <p><strong>Placeholder Images:</strong> Scientific diagram placeholders indicate typical image content and sourcing requirements.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="flex justify-center items-center mb-4">
-                    <i class="fas fa-atom text-2xl mr-2"></i>
-                    <span class="text-xl font-bold">Cell Nucleus Reviews</span>
-                </div>
-                <p class="text-gray-400 mb-4">Comprehensive reviews in nuclear biology and cellular research</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-home mr-1"></i>Home
-                    </a>
-                    <a href="#reviews" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-list mr-1"></i>Reviews
-                    </a>
-                    <a href="index.html#categories" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-th-large mr-1"></i>Categories
-                    </a>
-                </div>
-            </div>
+        </section>
+    
+    </main>
+    <footer class="border-t border-slate-200 bg-white/85">
+        <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
+            <p>CellNucleus.com review catalog. Static HTML index generated from the local review inventory.</p>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add loading animation for review cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card-hover');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
-    </script>
 </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpns8EqXoPo5OxcfjckDg7prLn6QVEaSabhfrEBg6nI%2BXckqmipGy7Qz5t6%2FXgsb%2Bi48GRIJ16eMkMKgDnS7kZdGrL2lzVJU3d12zZGXBwHK3JPyWsg4J3VKlVGBy25IxqCbFO%2BdlkrWSgTKf6lk6H4b%2FaG0SIc8xL4Ysb%2BEdNWW8teiy50uK848xsVl5PNbJ3RrWGzTexCQaPvUWfFYWwR6DKNaTd7bka16swgqvlIBh6rn4OH5rGAuVhC8Or8ZDd9%2BSyfAurXco1lGsVaWT7U4lfMUy%2BUlxGFv7sOPHThyVDjwuTqTUWeKEoUJ4n7qR9AXJtYHiWYt8f38zKbW1o2dE34vP%2FVSPcu5Ss1iwiF4RyGUmTgc%2BGKd5xFEVJhN87hLx%2Fl91oXIfFi%2BoorbEf4Sl9vK1PuJnuSc2qJGIZaqm5iEAnyU8LxJgtYikytcoE%2BfD8lX3kh2pu7iKN0Sz0eg8Pk3GT5aM4p3VwbnLJXirZBDuK5HymUv%2Ft%2FuqSSXiPtq6J%2Btp0184tvMfhmfhqIWz5szeTTOqMtijDhZmMHOkGpxCWksAhNbViiETV6DCg%3D%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpns8EqXoPo5OxcfjckDg7prLn6QVEaSabhfrEBg6nI+XckqmipGy7Qz5t6/Xgsb+i48GRIJ16eMkMKgDnS7kZdGrL2lzVJU3d12zZGXBwHK3JPyWsg4J3VKlVGBy25IxqCbFO+dlkrWSgTKf6lk6H4b/aG0SIc8xL4Ysb+EdNWW8teiy50uK848xsVl5PNbJ3RrWGzTexCQaPvUWfFYWwR6DKNaTd7bka16swgqvlIBh6rn4OH5rGAuVhC8Or8ZDd9+SyfAurXco1lGsVaWT7U4lfMUy+UlxGFv7sOPHThyVDjwuTqTUWeKEoUJ4n7qR9AXJtYHiWYt8f38zKbW1o2dE34vP/VSPcu5Ss1iwiF4RyGUmTgc+GKd5xFEVJhN87hLx/l91oXIfFi+oorbEf4Sl9vK1PuJnuSc2qJGIZaqm5iEAnyU8LxJgtYikytcoE+fD8lX3kh2pu7iKN0Sz0eg8Pk3GT5aM4p3VwbnLJXirZBDuK5HymUv/t/uqSSXiPtq6J+tp0184tvMfhmfhqIWz5szeTTOqMtijDhZmMHOkGpxCWksAhNbViiETV6DCg==";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    

@@ -3,205 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Nuclear Stress Response | Nuclear Biology Reviews</title>
+    <meta name="description" content="For decades, the cell biology of the nucleus was dominated by a view of the nucleolus as a dedicated, almost monolithic, &quot;factory&quot; for ribosome...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Nuclear Stress Response</h1>
+                <p class="mt-4 text-lg text-slate-100">An Academic Review of its Molecular Architecture, Cellular Integration, and Pathophysiological Significance</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Nuclear Stress Response Review.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>6 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 34 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Nuclear Stress Response Review.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Stress+Response+Review.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-stress-response-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Stress+Response+Review.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-stress-response-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Nuclear%20Stress%20Response%20Review.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">For decades, the cell biology of the nucleus was dominated by a view of the nucleolus as a dedicated, almost monolithic, &quot;factory&quot; for ribosome production. This prominent, membrane-less subnuclear compartment was understood primarily as the site where genes for ribosomal RNA (rDNA) are transcribed, the resulting transcripts are processed, and ribosomal proteins (RPs) are assembled with ribosomal RNAs (rRNAs) to form the precursors of the cell&#x27;s protein synthesis machinery. While this function is undeniably central to cell growth and proliferation, this perspective has undergone a profound transformation. The contemporary understanding of the nucleolus is that of a highly dynamic...</p>
+                        <p class="text-slate-700 leading-7">The nucleolus is now implicated in a remarkable diversity of cellular processes that extend far beyond ribosome biogenesis (RiBi). These include critical functions in cell cycle regulation, the coordination of the DNA damage response (DDR), the modulation of telomerase activity, and even the assembly of the signal recognition particle. The integrity of the nucleolus, therefore, serves as a vital checkpoint for the overall health of the cell. This conceptual evolution from a static production site to a dynamic information-processing node reflects a broader shift in cell biology, which increasingly views cellular compartments not as isolated entities but as deeply integrated components of a...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#introduction-the-nucleolus-as-a-sentinel-of-cellular-homeostasis" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Introduction: The Nucleolus as a Sentinel of Cellular Homeostasis</a>
+                            <a href="#the-biochemical-and-cellular-foundations-of-the-nuclear-stress-response" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Biochemical and Cellular Foundations of the Nuclear Stress Response</a>
+                            <a href="#core-signaling-cascades-of-the-nuclear-stress-response" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Core Signaling Cascades of the Nuclear Stress Response</a>
+                            <a href="#the-nsr-as-an-integrated-node-in-the-cellular-stress-network" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The NSR as an Integrated Node in the Cellular Stress Network</a>
+                            <a href="#the-nuclear-stress-response-in-human-disease" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Nuclear Stress Response in Human Disease</a>
+                            <a href="#conclusion-unanswered-questions-and-future-therapeutic-frontiers" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Conclusion: Unanswered Questions and Future Therapeutic Frontiers</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="introduction-the-nucleolus-as-a-sentinel-of-cellular-homeostasis" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Introduction: The Nucleolus as a Sentinel of Cellular Homeostasis</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">For decades, the cell biology of the nucleus was dominated by a view of the nucleolus as a dedicated, almost monolithic, &quot;factory&quot; for ribosome production. This prominent, membrane-less subnuclear compartment was understood primarily as the site where genes for ribosomal RNA (rDNA) are transcribed, the resulting transcripts are processed, and ribosomal proteins (RPs) are assembled with ribosomal RNAs (rRNAs) to form the precursors of the cell&#x27;s protein synthesis machinery. While this function is undeniably central to cell growth and proliferation, this perspective has undergone a profound transformation. The contemporary understanding of the nucleolus is that of a highly dynamic, multifunctional command center—a stress-sensing hub that monitors and integrates a vast array of intracellular and extracellular signals to maintain cellular homeostasis.</p>
+                            <p class="text-slate-700 leading-7">The nucleolus is now implicated in a remarkable diversity of cellular processes that extend far beyond ribosome biogenesis (RiBi). These include critical functions in cell cycle regulation, the coordination of the DNA damage response (DDR), the modulation of telomerase activity, and even the assembly of the signal recognition particle. The integrity of the nucleolus, therefore, serves as a vital checkpoint for the overall health of the cell. This conceptual evolution from a static production site to a dynamic information-processing node reflects a broader shift in cell biology, which increasingly views cellular compartments not as isolated entities but as deeply integrated components of a complex network.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">From Ribosome Factory to Stress-Sensing Hub: An Evolving Paradigm</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Defining the Nuclear Stress Response: A Synthesis of Ribosomal, Nucleolar, and Ribotoxic Stress</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-biochemical-and-cellular-foundations-of-the-nuclear-stress-response" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Biochemical and Cellular Foundations of the Nuclear Stress Response</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">At the heart of the nuclear stress response lies the process of ribosome biogenesis, one of the most complex and energetically demanding activities undertaken by a eukaryotic cell. The sheer scale of this operation underscores its central importance and its vulnerability to cellular perturbations. In rapidly growing cells, the production of new ribosomes can consume up to 80% of the cell&#x27;s total energy budget, making the rate of RiBi an exquisitely sensitive barometer of the cell&#x27;s metabolic health and growth potential. The tight coupling between RiBi and the cell cycle ensures that cells only commit to division when they have sufficient biosynthetic capacity.</p>
+                            <p class="text-slate-700 leading-7">The synthesis of a functional ribosome is a masterpiece of cellular coordination, involving all three major RNA polymerases and hundreds of accessory factors. The process begins in the nucleolus, where Pol I transcribes the large 47S precursor rRNA from tandemly repeated rDNA genes. This transcription is a critical rate-limiting step, requiring a suite of initiation factors, including the Upstream Binding Factor (UBF) and TIF-IA, which are themselves subject to tight regulation by growth and nutrient-sensing pathways. Concurrently, RNA Polymerase III transcribes the 5S rRNA, typically outside the nucleolus, while RNA Polymerase II is responsible for generating the messenger RNAs (mRNAs) that encode the approximately 80 different ribosomal proteins.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Centrality of Ribosome Biogenesis: An Energetically Demanding and Tightly Regulated Process</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A Catalogue of Stressors: Diverse Insults Converging on the Nucleolus</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Morphological Hallmarks of the Stressed Nucleus: Disintegration, Protein Relocalization, and the Formation of Stress-Associated Bodies</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="core-signaling-cascades-of-the-nuclear-stress-response" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Core Signaling Cascades of the Nuclear Stress Response</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The best-characterized and arguably most critical signaling pathway emanating from the stressed nucleolus is the p53-dependent pathway. This cascade provides a direct link between the status of the cell&#x27;s ribosome factory and the activity of the &quot;guardian of the genome,&quot; the tumor suppressor protein p53. Under normal, unstressed conditions, p53 is maintained at a very low concentration. This is achieved through its continuous degradation, a process orchestrated by the E3 ubiquitin ligase Murine Double Minute 2 (MDM2).</p>
+                            <p class="text-slate-700 leading-7">The nuclear stress response fundamentally disrupts this regulatory circuit. The central mechanism involves an imbalance in the production of ribosomal components, leading to a pool of &quot;free&quot; or unassembled ribosomal proteins that are not incorporated into pre-ribosomal particles. These free RPs, which accumulate when rRNA synthesis is inhibited or when RP production exceeds the capacity for assembly, become the key signaling molecules. Several RPs, with Ribosomal Protein of the Large subunit 11 (RPL11) and RPL5 being the most extensively studied, are released from the nucleolus and translocate to the nucleoplasm.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Canonical p53-Dependent Pathway: The Ribosomal Protein-MDM2-p53 Axis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Molecular Choreography: The Role of the 5S rRNP Complex, NPM1, and ARF in MDM2 Sequestration</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Beyond the Guardian: The Landscape of p53-Independent Stress Signaling</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Orchestrating Cell Fate: Downstream Consequences of NSR Activation</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-nsr-as-an-integrated-node-in-the-cellular-stress-network" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The NSR as an Integrated Node in the Cellular Stress Network</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Cells possess a sophisticated network of interconnected stress response pathways to monitor and maintain the integrity of their most vital components, primarily the genome (via the DNA Damage Response) and the proteome (via the Unfolded Protein Response). The nuclear stress response does not operate in isolation but is deeply integrated with these other surveillance systems, forming a coordinated network that allows the cell to mount a holistic response to diverse challenges.</p>
+                            <p class="text-slate-700 leading-7">The relationship between the NSR and the DDR is intimate and bidirectional. On one hand, DNA damage is one of the most potent inducers of the NSR. The rDNA genes, which exist in hundreds of tandemly repeated copies, represent a large and transcriptionally active region of the genome, making them a frequent target for DNA damaging agents. When DNA double-strand breaks (DSBs) occur within the rDNA, the cell mounts a specialized repair response that is tightly coupled to the NSR.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Crosstalk with the DNA Damage Response (DDR)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Interplay with the Unfolded Protein Response (UPR) and the Integrated Stress Response (ISR)</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-nuclear-stress-response-in-human-disease" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Nuclear Stress Response in Human Disease</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The central role of the nucleolus in monitoring cellular health means that dysregulation of the nuclear stress response is not merely a cellular curiosity but is deeply implicated in the pathogenesis of a wide range of human diseases, including cancer, congenital disorders, and neurodegeneration. The biological outcome of NSR activation is profoundly context-dependent, acting as a &quot;double-edged sword&quot; that can be either protective or pathological depending on the genetic background, the cell type, and the chronicity of the stress.</p>
+                            <p class="text-slate-700 leading-7">The relationship between the NSR and cancer is complex and paradoxical. On one hand, the NSR acts as a potent intrinsic barrier to tumorigenesis. Cancer is characterized by uncontrolled proliferation, which requires a massive upregulation of protein synthesis and, consequently, ribosome biogenesis. The hyperactivation of oncogenes like MYC places the RiBi machinery under immense strain, creating a state of chronic oncogenic stress.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Duality of the NSR in Cancer: Tumor Suppressor and Therapeutic Vulnerability</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Ribosomopathies: Pathologies of a Defective Ribosome Factory and the &quot;Dameshek&#x27;s Riddle&quot;</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Nucleolar Dysfunction in Neurodegeneration: A Link to Alzheimer&#x27;s, Parkinson&#x27;s, and Related Disorders</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="conclusion-unanswered-questions-and-future-therapeutic-frontiers" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Conclusion: Unanswered Questions and Future Therapeutic Frontiers</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of the nuclear stress response has unveiled a fundamental surveillance system that lies at the crossroads of cell metabolism, growth control, and homeostasis. From its origins as a response to &quot;ribotoxic stress,&quot; the NSR is now understood as a sophisticated, multi-layered network that integrates a vast array of signals to orchestrate cell fate decisions. Despite remarkable progress, however, the field is still rife with critical unanswered questions, and its full therapeutic potential is only beginning to be realized.</p>
+                            <p class="text-slate-700 leading-7">Several fundamental questions remain at the forefront of NSR research, the answers to which will be critical for advancing the field.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Major Gaps in Current Understanding and Key Unanswered Questions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Therapeutic Potential of Modulating the Nuclear Stress Response</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Future Research Directions: From Systems-Level Understanding to Precision Medicine</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

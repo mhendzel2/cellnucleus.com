@@ -3,205 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Intranuclear Journey of RNA | Nuclear Biology Reviews</title>
+    <meta name="description" content="The central dogma of molecular biology, describing the flow of genetic information from DNA to RNA to protein, presents a fundamental logistical...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Intranuclear Journey of RNA</h1>
+                <p class="mt-4 text-lg text-slate-100">A Biophysical Perspective from Live-Cell and High-Resolution Microscopy</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Intranuclear RNA Transport Imaging Review_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>6 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 30 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Intranuclear RNA Transport Imaging Review_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FIntranuclear+RNA+Transport+Imaging+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fintranuclear-rna-transport-imaging-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FIntranuclear+RNA+Transport+Imaging+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fintranuclear-rna-transport-imaging-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Intranuclear%20RNA%20Transport%20Imaging%20Review_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The central dogma of molecular biology, describing the flow of genetic information from DNA to RNA to protein, presents a fundamental logistical challenge in eukaryotic cells. The spatial segregation of transcription within the nucleus and translation in the cytoplasm necessitates a complex, multi-step process of RNA transport across the nuclear envelope.1 For decades, our understanding of this intranuclear journey was based on static snapshots provided by powerful but temporally limited techniques. Electron microscopy, for instance, offered the first breathtaking glimpses of the process at an ultrastructural level. Seminal studies of the exceptionally large (~40 kb) Balbiani ring...</p>
+                        <p class="text-slate-700 leading-7">Chironomus tentans visualized the ribonucleoprotein (RNP) particle as a distinct ribbon-like structure, following its path from the chromatin fiber through the nucleoplasm to the nuclear pore complex (NPC).3 Similarly, fluorescence</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#i-introduction-from-static-snapshots-to-dynamic-realities" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">I. Introduction: From Static Snapshots to Dynamic Realities</a>
+                            <a href="#ii-the-live-cell-imaging-toolbox-for-intranuclear-rna" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">II. The Live-Cell Imaging Toolbox for Intranuclear RNA</a>
+                            <a href="#iii-the-biophysics-of-mrnp-translocation-a-tale-of-constrained-diffusion" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">III. The Biophysics of mRNP Translocation: A Tale of Constrained Diffusion</a>
+                            <a href="#iv-the-nuclear-landscape-a-dynamic-obstacle-course-and-functional-hub" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">IV. The Nuclear Landscape: A Dynamic Obstacle Course and Functional Hub</a>
+                            <a href="#v-advanced-and-correlative-microscopy-bridging-scales-and-modalities" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">V. Advanced and Correlative Microscopy: Bridging Scales and Modalities</a>
+                            <a href="#vi-synthesis-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VI. Synthesis and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="i-introduction-from-static-snapshots-to-dynamic-realities" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">I. Introduction: From Static Snapshots to Dynamic Realities</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The central dogma of molecular biology, describing the flow of genetic information from DNA to RNA to protein, presents a fundamental logistical challenge in eukaryotic cells. The spatial segregation of transcription within the nucleus and translation in the cytoplasm necessitates a complex, multi-step process of RNA transport across the nuclear envelope.1 For decades, our understanding of this intranuclear journey was based on static snapshots provided by powerful but temporally limited techniques. Electron microscopy, for instance, offered the first breathtaking glimpses of the process at an ultrastructural level. Seminal studies of the exceptionally large (~40 kb) Balbiani ring transcripts in the salivary glands of</p>
+                            <p class="text-slate-700 leading-7">Chironomus tentans visualized the ribonucleoprotein (RNP) particle as a distinct ribbon-like structure, following its path from the chromatin fiber through the nucleoplasm to the nuclear pore complex (NPC).3 Similarly, fluorescence</p>
+                    </div>
+                </section>
+
+                <section id="ii-the-live-cell-imaging-toolbox-for-intranuclear-rna" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">II. The Live-Cell Imaging Toolbox for Intranuclear RNA</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The ability to track RNA molecules in living cells hinges on the capacity to render them fluorescent without significantly perturbing their natural behavior. The history of the field can be viewed as a continuous effort to resolve a fundamental trade-off: maximizing the signal-to-noise ratio (SNR) required for detection, particularly at the single-molecule level, while minimizing the potential for artifacts introduced by the labeling strategy itself. The choice of technique reflects a deliberate decision about which potential perturbations are most acceptable for a given biological question, and a critical understanding of these methods is essential for interpreting the biophysical data they produce.</p>
+                            <p class="text-slate-700 leading-7">The most widely used and currently accepted &quot;gold standard&quot; for live-cell RNA imaging is the MS2 system.4 This genetically encoded method is based on the high-affinity interaction between a specific RNA hairpin structure from the bacteriophage MS2 and its cognate MS2 coat protein (MCP).4 In practice, a target gene is engineered to include a tandem array of these MS2 stem-loops, typically in the 3&#x27; untranslated region (UTR). When this tagged RNA is expressed in a cell that also expresses MCP fused to a fluorescent protein (MCP-FP), the MCP-FP binds to the stem-loops, effectively decorating the RNA molecule with fluorophores and rendering it visible.8</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. The MS2 Paradigm and its Progeny: Genetically Encoded Reporters</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Probing Endogenous RNA: Molecular Beacons and In Vivo FISH</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. Protein-Free and Engineering-Free Labeling: Innovations in Aptamer-Dye and CRISPR-based Systems</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iii-the-biophysics-of-mrnp-translocation-a-tale-of-constrained-diffusion" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">III. The Biophysics of mRNP Translocation: A Tale of Constrained Diffusion</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The application of the live-cell imaging toolbox described above has fundamentally reshaped our understanding of how messenger ribonucleoprotein (mRNP) complexes navigate the nucleoplasm. The collective evidence has dismantled earlier deterministic models in favor of a stochastic framework where mRNP movement is governed by the laws of diffusion, albeit constrained and modulated by the complex biophysical landscape of the nucleus.</p>
+                            <p class="text-slate-700 leading-7">Early models of intranuclear transport, born from static electron microscopy and FISH images, logically proposed mechanisms of directed movement. The observation of some transcripts seemingly distributed along tracks led to the hypothesis of transport along a solid-state nuclear matrix, while the discovery of some active genes near the nuclear periphery gave rise to the &quot;gene-gating&quot; hypothesis, suggesting direct channeling of transcripts to the nearest nuclear pore.6</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Revisiting the Model: From Directed Transport to Random Walks</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Quantitative Insights from Single-Particle Tracking (SPT) and Ensemble Methods (FRAP/FCS)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. Anomalous Subdiffusion: The Signature of a Crowded, Heterogeneous Milieu</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">D. The Role of ATP: Fueling Escape, Not Propulsion</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iv-the-nuclear-landscape-a-dynamic-obstacle-course-and-functional-hub" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">IV. The Nuclear Landscape: A Dynamic Obstacle Course and Functional Hub</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The biophysical behavior of a diffusing RNA molecule is dictated entirely by the environment through which it moves. The nucleus is far from a simple, homogenous solution; it is a complex, self-organizing system whose physical properties and functional subdomains create a dynamic landscape of obstacles, traps, and processing centers that collectively shape the path of every transcript. Understanding this landscape is paramount to understanding RNA transport.</p>
+                            <p class="text-slate-700 leading-7">The most significant structural feature governing intranuclear transport is the genome itself. Chromatin is not uniformly distributed but is organized into domains of varying compaction. Live-cell imaging and electron microscopy converge on a clear picture: mRNP diffusion is largely restricted to the &quot;interchromatin domain,&quot; the space that exists between the dense territories of chromatin.6 Direct tracking shows mRNPs moving freely within these channels but being excluded from the core of condensed chromatin regions.13</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Chromatin Architecture as the Primary Barrier to Diffusion</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Biophysical Properties of the Nucleoplasm: Viscosity and Macromolecular Crowding</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. Nuclear Bodies as Waypoints: The Role of Nuclear Speckles</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="v-advanced-and-correlative-microscopy-bridging-scales-and-modalities" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">V. Advanced and Correlative Microscopy: Bridging Scales and Modalities</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While conventional live-cell imaging established the diffusive nature of intranuclear RNA transport, recent advances in microscopy are providing a far more detailed picture, bridging the gap between molecular dynamics and ultrastructural context. Super-resolution techniques are resolving the organization of RNA and the transcription machinery at the nanoscale, while correlative methods are linking these dynamic events to the underlying physical structure of the nucleus.</p>
+                            <p class="text-slate-700 leading-7">The diffraction limit of light has historically constrained our view of nuclear processes to a resolution of ~200-250 nm, blurring fine details. The advent of super-resolution microscopy (SRM) techniques—such as Stochastic Optical Reconstruction Microscopy (STORM), Photoactivated Localization Microscopy (PALM), and Stimulated Emission Depletion (STED) microscopy—has shattered this barrier, enabling visualization of cellular structures at the nanoscale (~20-50 nm).48</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Super-Resolution Insights: Resolving RNA Nanodomains and their Transcriptional Context</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Correlative Light and Electron Microscopy (CLEM): Linking Dynamics to Ultrastructure</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vi-synthesis-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VI. Synthesis and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The convergence of advanced imaging, biophysical analysis, and molecular biology has painted a remarkably detailed picture of the intranuclear life of an RNA molecule. The journey from gene to nuclear pore is not a simple translocation but a complex biophysical process shaped by diffusion, transient interactions, and passage through functional hubs, all within a crowded and dynamic nuclear landscape. Synthesizing these findings and looking toward the future reveals both a coherent model and a set of exciting, unanswered questions.</p>
+                            <p class="text-slate-700 leading-7">While messenger RNAs (mRNAs) and long non-coding RNAs (lncRNAs) share many aspects of their biogenesis—most are transcribed by RNA Polymerase II, 5&#x27;-capped, and often polyadenylated—their ultimate fates and intranuclear transport dynamics are often starkly different.55 The primary destination for the vast majority of mature mRNAs is the cytoplasm, where they are translated into protein. In contrast, most lncRNAs are retained within the nucleus, where they perform a wide array of regulatory functions, from modulating chromatin structure to acting as scaffolds for nuclear bodies.2</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Divergent Fates: Contrasting the Intranuclear Transport of mRNA and lncRNA</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Integrating Imaging and Computation: Toward Predictive Models of RNA Transport</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. Concluding Remarks: Unanswered Questions and the Path Forward</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

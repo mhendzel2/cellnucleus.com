@@ -3,205 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>Biophysical Properties of Multicellular Animal Cell Nuclei | Nuclear Biology Reviews</title>
+    <meta name="description" content="The cell nucleus, the defining organelle of eukaryotic cells, has long been recognized as the primary repository and processing center for the genetic...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">Biophysical Properties of Multicellular Animal Cell Nuclei</h1>
+                <p class="mt-4 text-lg text-slate-100">A Decade in Review (c. 2015-2025)</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Nuclear Biophysics_ Recent Decade Review_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 49 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Nuclear Biophysics_ Recent Decade Review_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Biophysics_+Recent+Decade+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-biophysical-properties-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Biophysics_+Recent+Decade+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-biophysical-properties-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Nuclear%20Biophysics_%20Recent%20Decade%20Review_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The cell nucleus, the defining organelle of eukaryotic cells, has long been recognized as the primary repository and processing center for the genetic material, housing the genome and orchestrating fundamental processes like DNA replication, transcription, and RNA processing.1 However, research over the past decade has increasingly illuminated the nucleus as far more than a passive container. It is now understood to be a complex mechanical entity, tightly integrated into the cell&#x27;s structural network and possessing distinct biophysical properties that are crucial for its function and the overall physiology of the cell.2 The nucleus is not merely subject to cellular forces but actively...</p>
+                        <p class="text-slate-700 leading-7">The evolution of multicellularity, occurring independently multiple times across the tree of life, presented unique challenges and opportunities, fostering the development of complex tissues and organs composed of specialized cell types cooperating to produce emergent functions.5 This transition involved the evolution of sophisticated mechanisms for cell adhesion, communication, and gene regulation, enabling coordinated behavior within a multicellular entity.7 Within this context, the biophysical properties of the nucleus likely co-evolved to support the diverse functional requirements of specialized cells within tissues. Nuclear mechanics—its stiffness, deformability, and internal...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#1-introduction" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">1. Introduction</a>
+                            <a href="#2-mechanical-properties-of-the-nucleus" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">2. Mechanical Properties of the Nucleus</a>
+                            <a href="#3-the-nuclear-envelope-a-mechanically-integrated-barrier" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">3. The Nuclear Envelope: A Mechanically Integrated Barrier</a>
+                            <a href="#4-chromatin-biophysics-dynamics-organization-and-material-properties" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">4. Chromatin Biophysics: Dynamics, Organization, and Material Properties</a>
+                            <a href="#5-intranuclear-transport-biophysical-constraints-and-mechanisms" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">5. Intranuclear Transport: Biophysical Constraints and Mechanisms</a>
+                            <a href="#6-nuclear-mechanotransduction-sensing-and-responding-to-force" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">6. Nuclear Mechanotransduction: Sensing and Responding to Force</a>
+                            <a href="#7-role-of-nuclear-biophysics-in-cellular-processes-and-disease" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">7. Role of Nuclear Biophysics in Cellular Processes and Disease</a>
+                            <a href="#8-measurement-techniques-and-quantitative-insights" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">8. Measurement Techniques and Quantitative Insights</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="1-introduction" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">1. Introduction</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The cell nucleus, the defining organelle of eukaryotic cells, has long been recognized as the primary repository and processing center for the genetic material, housing the genome and orchestrating fundamental processes like DNA replication, transcription, and RNA processing.1 However, research over the past decade has increasingly illuminated the nucleus as far more than a passive container. It is now understood to be a complex mechanical entity, tightly integrated into the cell&#x27;s structural network and possessing distinct biophysical properties that are crucial for its function and the overall physiology of the cell.2 The nucleus is not merely subject to cellular forces but actively participates in sensing, transducing, and responding to mechanical cues from its environment, positioning it as a central player in cellular mechanobiology.2</p>
+                            <p class="text-slate-700 leading-7">The evolution of multicellularity, occurring independently multiple times across the tree of life, presented unique challenges and opportunities, fostering the development of complex tissues and organs composed of specialized cell types cooperating to produce emergent functions.5 This transition involved the evolution of sophisticated mechanisms for cell adhesion, communication, and gene regulation, enabling coordinated behavior within a multicellular entity.7 Within this context, the biophysical properties of the nucleus likely co-evolved to support the diverse functional requirements of specialized cells within tissues. Nuclear mechanics—its stiffness, deformability, and internal dynamics—influence processes ranging from cell division and differentiation to migration and tissue organization.2 Consequently, the physical characteristics of the nucleus are deeply intertwined with normal...</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleus: More Than Just a Genome Container</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Importance of Nuclear Biophysics in Multicellularity</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Scope and Focus</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="2-mechanical-properties-of-the-nucleus" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">2. Mechanical Properties of the Nucleus</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nucleus stands out within the cell not only for its size but also for its distinct mechanical characteristics. It is generally considered the largest and stiffest organelle, properties conferred primarily by its structural components, particularly the nuclear lamina.2 These mechanical properties are not static but are dynamically regulated and play critical roles in diverse cellular functions.</p>
+                            <p class="text-slate-700 leading-7">Concept: Elasticity describes a material&#x27;s ability to resist deformation under an applied stress and return to its original shape upon removal of the stress. For solid materials under tensile or compressive stress, this resistance is quantified by the Young&#x27;s modulus (E), a measure of stiffness. A higher Young&#x27;s modulus indicates a stiffer material. The nucleus exhibits elastic behavior, particularly in response to small or rapid deformations.12</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1 Nuclear Stiffness and Elasticity (Young&#x27;s Modulus)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2 Viscoelastic Behavior</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3 Nuclear Deformability</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="3-the-nuclear-envelope-a-mechanically-integrated-barrier" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">3. The Nuclear Envelope: A Mechanically Integrated Barrier</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear envelope (NE) is a complex double-membrane structure that separates the nuclear contents from the cytoplasm. It comprises the inner nuclear membrane (INM), the outer nuclear membrane (ONM), nuclear pore complexes (NPCs) that regulate transport, and the underlying nuclear lamina.1 Far from being a simple static barrier, the NE is a dynamic and mechanically active structure, playing critical roles in maintaining nuclear shape, transmitting forces, and participating in mechanosensing.</p>
+                            <p class="text-slate-700 leading-7">Structure: The nuclear lamina is a proteinaceous meshwork, typically 10-40 nm thick, lining the nucleoplasmic face of the INM.1 Its major components are nuclear lamins, which belong to the type V intermediate filament protein family. In mammals, these include A-type lamins (Lamin A and Lamin C, splice variants of the LMNA gene) and B-type lamins (Lamin B1 and Lamin B2, encoded by LMNB1 and LMNB2, respectively).36 Lamins polymerize to form the filamentous network that constitutes the lamina.36</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1 Contribution of the Nuclear Lamina</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2 The LINC Complex: Bridging Cytoskeleton and Nucleoskeleton</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3 Nuclear Pore Complex (NPC) Mechanics and Transport Gating</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.4 Nuclear Envelope Tension and Bending Rigidity</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="4-chromatin-biophysics-dynamics-organization-and-material-properties" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">4. Chromatin Biophysics: Dynamics, Organization, and Material Properties</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Inside the nucleus, the genome is not simply a linear DNA sequence but is packaged with histone proteins and other factors into chromatin. This nucleoprotein complex is organized across multiple length scales and exhibits complex dynamic behavior and material properties that are fundamental to its function in gene regulation, DNA repair, and replication.</p>
+                            <p class="text-slate-700 leading-7">Overview: Far from being a static structure, chromatin is highly dynamic within the interphase nucleus.45 These dynamics span a wide range of length scales, from the transient unwrapping of DNA from individual nucleosomes (nanometers) to the coordinated movement of large chromatin domains (micrometers), and occur over timescales from picoseconds to minutes or even longer.48</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1 Chromatin Dynamics: From Local Fluctuations to Large-Scale Movements</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2 Chromatin as a Material: Viscoelasticity, Phase Separation (LLPS), and Crowding</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3 Role of Nuclear Actin and Myosins</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.4 Chromatin Mesh Size and Accessibility</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="5-intranuclear-transport-biophysical-constraints-and-mechanisms" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">5. Intranuclear Transport: Biophysical Constraints and Mechanisms</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Efficient and selective transport of molecules between the nucleus and cytoplasm is essential for eukaryotic cell function. This transport occurs exclusively through NPCs, which impose significant biophysical constraints, particularly for large molecules.</p>
+                            <p class="text-slate-700 leading-7">Mechanism: The selectivity of the NPC arises primarily from the behavior of the FG-Nups lining its central channel.41 These intrinsically disordered proteins form a dense, dynamic meshwork that acts as a size-selective and interaction-selective barrier. Small molecules can diffuse relatively freely through the gaps in this mesh, but larger molecules face significant hindrance.41 Facilitated transport relies on transport receptors (Karyopherins/Importins) that bind specific cargo signals (NLS/NES) and also possess multiple interaction sites for the FG-repeats.40 These interactions allow the transport receptor-cargo complex to effectively partition into and rapidly transit through the FG-Nup meshwork.41 Various biophysical models attempt to explain this mechanism, including &quot;selective phase&quot; models where the FG-repeats form a distinct hydrophobic phase that receptors can dissolve into...</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1 The NPC as a Selective Barrier</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2 Biophysics of Large Cargo Transport</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="6-nuclear-mechanotransduction-sensing-and-responding-to-force" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">6. Nuclear Mechanotransduction: Sensing and Responding to Force</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Mechanotransduction is the process by which cells convert mechanical stimuli into biochemical signals, enabling them to sense and adapt to their physical environment.2 The nucleus is increasingly recognized as a central player in this process, not just passively receiving signals but actively participating in sensing forces and orchestrating downstream responses.3</p>
+                            <p class="text-slate-700 leading-7">Overview: Mechanical forces originating from the extracellular matrix (ECM), adjacent cells, or internally generated cytoskeletal tension can be transmitted to the nucleus.2 These forces can propagate through the cytoplasm and impinge upon the nuclear surface.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.1 Pathways of Force Transmission</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.2 Nuclear Deformation and Functional Consequences</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.3 The Nucleus as a Mechanosensor and Mechanical Memory</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="7-role-of-nuclear-biophysics-in-cellular-processes-and-disease" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">7. Role of Nuclear Biophysics in Cellular Processes and Disease</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The biophysical properties of the nucleus are not merely intrinsic characteristics but are deeply involved in regulating fundamental cellular processes and are often altered in disease states.</p>
+                            <p class="text-slate-700 leading-7">Nuclear Shape Changes: Studies have revealed dynamic changes in nuclear morphology correlated with cell cycle progression. Specifically, in adherent mammalian cells, the nucleus undergoes a flattening process during late G1 phase, just before the transition into S phase.37 Cells in early G1 or G2 tend to have rounder nuclei.37</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.1 Regulation of Cell Cycle Progression</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.2 Influence on Cell Differentiation and Development</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.3 Role in Cell Migration and Cancer Metastasis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.4 Alterations in Nuclear Biophysics in Laminopathies and Aging</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="8-measurement-techniques-and-quantitative-insights" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">8. Measurement Techniques and Quantitative Insights</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The advancement of our understanding of nuclear biophysics over the past decade has been intrinsically linked to the development and application of sophisticated measurement techniques capable of probing mechanical properties, structure, and dynamics at the subcellular and molecular levels.</p>
+                            <p class="text-slate-700 leading-7">A diverse toolkit of biophysical methods is employed to study the nucleus:</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">8.1 Overview of Key Techniques</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">8.2 Table: Summary of Measured Biophysical Properties</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">8.3 Challenges and Advances in Measurement</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

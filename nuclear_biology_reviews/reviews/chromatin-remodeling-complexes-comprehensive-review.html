@@ -3,205 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Dynamic Architecture of the Genome | Nuclear Biology Reviews</title>
+    <meta name="description" content="In the eukaryotic nucleus, the genome exists not as naked DNA but as a highly organized and dynamic nucleoprotein polymer known as chromatin. This...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Dynamic Architecture of the Genome</h1>
+                <p class="mt-4 text-lg text-slate-100">A Critical Review of Chromatin Remodeling Complexes in Eukaryotic Gene Regulation and Disease</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Chromatin Remodeling Complexes Review_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 44 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Chromatin Remodeling Complexes Review_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FChromatin+Remodeling+Complexes+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fchromatin-remodeling-complexes-comprehensive-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FChromatin+Remodeling+Complexes+Review_.docx&page=nuclear_biology_reviews%2Freviews%2Fchromatin-remodeling-complexes-comprehensive-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Chromatin%20Remodeling%20Complexes%20Review_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">In the eukaryotic nucleus, the genome exists not as naked DNA but as a highly organized and dynamic nucleoprotein polymer known as chromatin. This complex serves the dual purpose of compacting the vast length of the genomic polymer—nearly two meters in humans—into the micron-scale confines of the nucleus and providing a sophisticated substrate for the regulation of all DNA-templated processes.1 The fundamental repeating unit of chromatin is the nucleosome, which consists of approximately 147 base pairs (bp) of DNA wrapped in 1.65 left-handed superhelical turns around a core histone octamer.1 This octamer is composed of two copies each of the four core histones: H2A, H2B, H3, and H4. These...</p>
+                        <p class="text-slate-700 leading-7">This &quot;beads-on-a-string&quot; fiber represents the first level of a hierarchical compaction pathway, which continues through coiling into a 30-nm fiber and further organization into higher-order structures, including chromatin loops and topologically associating domains (TADs).1 While essential for packaging, this organization imposes a significant physical barrier to the cellular machinery that must access the underlying DNA sequence. Consequently, the nucleosome is not merely a structural scaffold but acts as a potent and general repressor of gene expression.5 Early studies in yeast demonstrated that the experimental depletion of histones led to the widespread activation of otherwise...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#introduction-the-dynamic-chromatin-landscape" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Introduction: The Dynamic Chromatin Landscape</a>
+                            <a href="#the-four-major-families-of-chromatin-remodelers-architecture-and-specialization" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Four Major Families of Chromatin Remodelers: Architecture and Specialization</a>
+                            <a href="#the-unifying-engine-molecular-mechanisms-of-nucleosome-remodeling" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Unifying Engine: Molecular Mechanisms of Nucleosome Remodeling</a>
+                            <a href="#genomic-targeting-how-remodelers-find-their-place" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Genomic Targeting: How Remodelers Find Their Place</a>
+                            <a href="#functional-roles-in-genome-maintenance-and-expression" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Functional Roles in Genome Maintenance and Expression</a>
+                            <a href="#chromatin-remodelers-in-human-disease-when-the-machinery-breaks-down" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Chromatin Remodelers in Human Disease: When the Machinery Breaks Down</a>
+                            <a href="#therapeutic-frontiers-targeting-chromatin-remodeling-complexes" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Therapeutic Frontiers: Targeting Chromatin Remodeling Complexes</a>
+                            <a href="#conclusion-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Conclusion and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="introduction-the-dynamic-chromatin-landscape" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Introduction: The Dynamic Chromatin Landscape</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">In the eukaryotic nucleus, the genome exists not as naked DNA but as a highly organized and dynamic nucleoprotein polymer known as chromatin. This complex serves the dual purpose of compacting the vast length of the genomic polymer—nearly two meters in humans—into the micron-scale confines of the nucleus and providing a sophisticated substrate for the regulation of all DNA-templated processes.1 The fundamental repeating unit of chromatin is the nucleosome, which consists of approximately 147 base pairs (bp) of DNA wrapped in 1.65 left-handed superhelical turns around a core histone octamer.1 This octamer is composed of two copies each of the four core histones: H2A, H2B, H3, and H4. These histone proteins are highly conserved and feature a structured histone-fold domain and flexible N-terminal tails that protrude from the nucleosome core, serving as critical platforms for...</p>
+                            <p class="text-slate-700 leading-7">This &quot;beads-on-a-string&quot; fiber represents the first level of a hierarchical compaction pathway, which continues through coiling into a 30-nm fiber and further organization into higher-order structures, including chromatin loops and topologically associating domains (TADs).1 While essential for packaging, this organization imposes a significant physical barrier to the cellular machinery that must access the underlying DNA sequence. Consequently, the nucleosome is not merely a structural scaffold but acts as a potent and general repressor of gene expression.5 Early studies in yeast demonstrated that the experimental depletion of histones led to the widespread activation of otherwise repressed genes, firmly establishing the repressive nature of the nucleosome</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleosome: A Fundamental Barrier to DNA Access</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Epigenetic Regulation: Beyond the Genetic Sequence</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">An Overview of ATP-Dependent Chromatin Remodeling Machines</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-four-major-families-of-chromatin-remodelers-architecture-and-specialization" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Four Major Families of Chromatin Remodelers: Architecture and Specialization</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The remarkable functional diversity of ATP-dependent chromatin remodelers is rooted in their modular architecture. While all share a conserved ATPase motor, they are classified into four major families based on sequence homologies within and outside this motor domain. These families—SWI/SNF, ISWI, CHD, and INO80/SWR1—are distinguished by their unique subunit compositions, signature protein domains, and, consequently, their specialized biochemical activities and biological roles.14 The specific combination of a core ATPase with a distinct set of accessory subunits creates a molecular machine tailored for a particular type of chromatin transaction.</p>
+                            <p class="text-slate-700 leading-7">The SWI/SNF (Switch/Sucrose Non-Fermentable) family, first identified in yeast, comprises the most powerful and arguably most studied chromatin remodelers. These are exceptionally large complexes, often containing 15 or more subunits, built around a core ATPase, which in mammals is either SMARCA4 (also known as BRG1) or its paralog SMARCA2 (also known as BRM).20 Mammalian SWI/SNF complexes, collectively referred to as BAF (BRG1/BRM-Associated Factors) complexes, exhibit significant combinatorial diversity, assembling into at least three major subtypes: canonical BAF (cBAF), Polybromo-associated BAF (PBAF), and non-canonical or GBAF (ncBAF).23 These subtypes are defined by the mutually exclusive incorporation of specific signature subunits; for example, cBAF contains either ARID1A or ARID1B, while PBAF incorporates PBRM1.22</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The SWI/SNF (BAF/PBAF) Family: Powerhouse Remodelers of the Genome</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The ISWI Family: Architects of Nucleosome Spacing and Chromatin Order</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The CHD Family: Readers of the Histone Code</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The INO80/SWR1 Family: Specialists in Histone Exchange and DNA Repair</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-unifying-engine-molecular-mechanisms-of-nucleosome-remodeling" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Unifying Engine: Molecular Mechanisms of Nucleosome Remodeling</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Despite the vast diversity in their composition and biological outputs, all chromatin remodeling complexes are powered by a fundamentally conserved molecular engine. The central question in the field has long been how these enzymes convert the chemical energy of ATP into the physical work of altering stable histone-DNA contacts. Recent breakthroughs in structural biology and single-molecule biophysics have provided unprecedented views into this process, revealing a unifying mechanism of regulated DNA translocation that is tailored by each complex to achieve specific outcomes.</p>
+                            <p class="text-slate-700 leading-7">At the heart of every chromatin remodeler lies a catalytic subunit belonging to the SNF2 superfamily of ATPases.13 This motor domain is structurally related to DNA helicases and is composed of two RecA-like lobes, often referred to as ATPase domain 1 (DExx box-containing) and ATPase domain 2 (HELICc domain).15 These two lobes form a cleft that binds both ATP and DNA. Through cycles of ATP binding, hydrolysis, and product release, the motor undergoes significant conformational changes, causing a power-stroke motion between the two lobes.15</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The ATPase Motor: A Conserved DNA Translocase</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Nucleosome Sliding: Models of Motion</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Histone Eviction and Disassembly: Creating Open Chromatin</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Histone Variant Exchange: Editing the Nucleosome Core</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Insights from Structural Biology: Cryo-EM Snapshots of Remodeler-Nucleosome Interactions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Insights from Biophysics: Single-Molecule Views of Remodeling Dynamics</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="genomic-targeting-how-remodelers-find-their-place" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Genomic Targeting: How Remodelers Find Their Place</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">A central challenge for a chromatin remodeling complex is to locate its specific targets within the vast and complex landscape of the eukaryotic genome. In a human nucleus containing over 3 billion base pairs and millions of nucleosomes, random action would be both inefficient and catastrophic. Instead, cells employ a sophisticated and multi-layered system of targeting mechanisms to ensure that the right remodeler is recruited to the right place at the right time. This targeting is not governed by a single master key but by a combinatorial code of signals, including interactions with sequence-specific transcription factors, recognition of the epigenetic landscape, guidance by non-coding RNAs, and intrinsic preferences for DNA structure.</p>
+                            <p class="text-slate-700 leading-7">One of the primary mechanisms for recruiting remodelers to specific genomic loci is through direct or indirect interactions with DNA-binding proteins, particularly transcription factors (TFs).26 A classic example is the recruitment of the SWI/SNF complex by a gene-specific activator. Seminal</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Recruitment by Sequence-Specific DNA-Binding Factors</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Reading the Epigenetic Landscape: Interactions with Histone Modifications and Variants</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Role of Non-Coding RNAs in Guiding Remodeler Complexes</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Intrinsic DNA Shape and Sequence Preferences</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="functional-roles-in-genome-maintenance-and-expression" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Functional Roles in Genome Maintenance and Expression</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The precise targeting of chromatin remodeling complexes to specific genomic locations enables them to perform a vast and diverse array of functions that are essential for the life of the cell. Their activities are woven into the fabric of virtually every DNA-dependent process, from the moment-to-moment regulation of gene expression to the faithful duplication and repair of the entire genome. By dynamically sculpting the chromatin landscape, these molecular machines orchestrate the complex choreography of the nucleus, ensuring that different processes can proceed in a coordinated and non-conflicting manner.</p>
+                            <p class="text-slate-700 leading-7">The regulation of transcription is the most extensively studied function of chromatin remodelers, and they are now known to be involved in every stage of the transcription cycle.36</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Orchestrating Transcription: From Promoter Access to Elongation and Termination</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Guardians of the Genome: Roles in DNA Replication and Repair</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Sculpting the Nucleus: Contributions to 3D Genome Organization</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Programming Cell Fate: Essential Functions in Development and Differentiation</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="chromatin-remodelers-in-human-disease-when-the-machinery-breaks-down" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Chromatin Remodelers in Human Disease: When the Machinery Breaks Down</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Given their central role in orchestrating the genome, it is no surprise that the malfunction of chromatin remodeling complexes is a major driver of human disease. The precise control of DNA accessibility is critical for maintaining cellular homeostasis, and when this control is lost, the consequences can be catastrophic. Over the past two decades, large-scale genomic sequencing of human tumors and patients with developmental disorders has revealed a startlingly high frequency of mutations in the genes encoding the subunits of these complexes. This has placed chromatin remodelers at the forefront of research into the molecular basis of cancer and neurodevelopmental disorders, revealing them to be not just passive players but central protagonists in the etiology of these devastating conditions.</p>
+                            <p class="text-slate-700 leading-7">The link between chromatin remodeling and cancer is now firmly established, with mutations in remodeler genes being among the most common alterations found across all human malignancies.67 These mutations are not random; they are concentrated in specific families and subunits, pointing to distinct mechanisms of tumorigenesis.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Remodeler Mutational Landscape in Cancer</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Neurodevelopmental Disorders and Congenital Disease</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="therapeutic-frontiers-targeting-chromatin-remodeling-complexes" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Therapeutic Frontiers: Targeting Chromatin Remodeling Complexes</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The discovery that chromatin remodeling complexes are so frequently and centrally involved in human disease, particularly cancer, has catalyzed an intense effort to develop therapeutic strategies to target them. This has rapidly become one of the most exciting frontiers in epigenetic medicine. The approaches being pursued are diverse, ranging from traditional small-molecule inhibitors to revolutionary new modalities like targeted protein degradation. Critically, many of these strategies are not aimed at correcting the primary genetic defect but at exploiting the unique vulnerabilities and dependencies that this defect creates within the cancer cell.</p>
+                            <p class="text-slate-700 leading-7">Table 2: Chromatin Remodeler Alterations in Disease and Emerging Therapeutic Strategies. This table summarizes the links between key remodeler subunits, their associated pathologies, and the principal therapeutic strategies being developed to target these vulnerabilities. Data compiled from.12</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Inhibiting the Engine: ATPase and Bromodomain Inhibitors</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A New Paradigm: Targeted Protein Degradation with PROTACs and Molecular Glues</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Exploiting Genetic Vulnerabilities: Synthetic Lethality in Cancer Therapy</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Clinical Landscape and Future Challenges</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="conclusion-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Conclusion and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of ATP-dependent chromatin remodeling complexes has evolved from the initial discovery of individual factors to a deep, mechanistic understanding of a fundamental cellular system. The evidence synthesized in this review converges on a sophisticated and elegant model of remodeler function. This can be conceptualized as an &quot;hourglass&quot; model, where a vast diversity of inputs is integrated to control a conserved central mechanism, which in turn generates a wide array of functional outputs.26 At the top of the hourglass, a combinatorial code of targeting signals—including transcription factors, histone modifications, histone variants, and non-coding RNAs—provides the specificity to direct remodelers to precise genomic locations. This diversity of inputs funnels down to the narrow neck of the hourglass: the conserved, histone-anchored ATPase motor that conducts directional DNA...</p>
+                            <p class="text-slate-700 leading-7">Despite the remarkable progress, many fundamental questions remain, representing critical gaps in our knowledge and exciting avenues for future research.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Synthesizing a Unified Model of Remodeler Function</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Unanswered Questions and Critical Gaps in Knowledge</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Future of Chromatin Biology and Epigenetic Medicine</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

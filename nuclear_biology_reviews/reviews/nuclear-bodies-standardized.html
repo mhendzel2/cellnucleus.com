@@ -3,205 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>Nuclear Bodies in the Mammalian Nucleus | Nuclear Biology Reviews</title>
+    <meta name="description" content="The eukaryotic nucleus, far from being a simple repository for genetic material, is a highly organized and dynamic organelle. This intricate organization...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">Nuclear Bodies in the Mammalian Nucleus</h1>
+                <p class="mt-4 text-lg text-slate-100">A Comprehensive Review of History, Modern Insights, Mechanisms, and Disease Relevance</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Nuclear Bodies_ Review and Update_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 80 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Nuclear Bodies_ Review and Update_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Bodies_+Review+and+Update_.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-bodies-standardized.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Bodies_+Review+and+Update_.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-bodies-standardized.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Nuclear%20Bodies_%20Review%20and%20Update_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The eukaryotic nucleus, far from being a simple repository for genetic material, is a highly organized and dynamic organelle. This intricate organization is fundamental for the precise regulation of essential genomic processes, including gene expression, DNA replication, and the maintenance of genome integrity. A remarkable feature of nuclear architecture is that, unlike many cytoplasmic organelles which are delineated by lipid membranes, numerous nuclear compartments maintain their distinct biochemical identities and specialized functions without such boundaries. This non-membrane-bound compartmentalization allows for rapid exchange and responsiveness, crucial for the cell&#x27;s ability to...</p>
+                        <p class="text-slate-700 leading-7">Nuclear bodies (NBs) are prominent examples of these membraneless nuclear compartments. These structures serve to concentrate specific sets of proteins and nucleic acids, thereby creating specialized microenvironments that facilitate, modulate, or regulate a diverse array of nuclear processes. A paradigm shift in understanding NBs has occurred with the increasing recognition that many of these structures form through a process known as liquid-liquid phase separation (LLPS). This conceptual reframing has led to NBs often being described as &quot;biomolecular condensates&quot;.1 This perspective emphasizes their inherently dynamic nature, their capacity to assemble and disassemble in response to...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#1-introduction-the-dynamic-landscape-of-the-mammalian-nucleus" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">1. Introduction: The Dynamic Landscape of the Mammalian Nucleus</a>
+                            <a href="#2-historical-perspectives-on-nuclear-bodies-1900-2000-foundations-of-discovery" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">2. Historical Perspectives on Nuclear Bodies (1900–2000): Foundations of Discovery</a>
+                            <a href="#3-the-modern-era-unveiling-complexity-with-advanced-technologies" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">3. The Modern Era: Unveiling Complexity with Advanced Technologies</a>
+                            <a href="#4-mechanisms-of-nuclear-body-formation-and-maintenance-a-critical-assessment" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">4. Mechanisms of Nuclear Body Formation and Maintenance: A Critical Assessment</a>
+                            <a href="#5-major-nuclear-compartments-in-mammals-ultrastructure-composition-and-function" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">5. Major Nuclear Compartments in Mammals: Ultrastructure, Composition, and Function</a>
+                            <a href="#6-nuclear-bodies-in-cellular-homeostasis-stress-and-disease" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">6. Nuclear Bodies in Cellular Homeostasis, Stress, and Disease</a>
+                            <a href="#7-emerging-concepts-and-future-directions" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">7. Emerging Concepts and Future Directions</a>
+                            <a href="#8-conclusion-the-ever-evolving-functionally-rich-nuclear-interior" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">8. Conclusion: The Ever-Evolving, Functionally Rich Nuclear Interior</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="1-introduction-the-dynamic-landscape-of-the-mammalian-nucleus" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">1. Introduction: The Dynamic Landscape of the Mammalian Nucleus</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The eukaryotic nucleus, far from being a simple repository for genetic material, is a highly organized and dynamic organelle. This intricate organization is fundamental for the precise regulation of essential genomic processes, including gene expression, DNA replication, and the maintenance of genome integrity. A remarkable feature of nuclear architecture is that, unlike many cytoplasmic organelles which are delineated by lipid membranes, numerous nuclear compartments maintain their distinct biochemical identities and specialized functions without such boundaries. This non-membrane-bound compartmentalization allows for rapid exchange and responsiveness, crucial for the cell&#x27;s ability to adapt to changing conditions and execute complex genetic programs.</p>
+                            <p class="text-slate-700 leading-7">Nuclear bodies (NBs) are prominent examples of these membraneless nuclear compartments. These structures serve to concentrate specific sets of proteins and nucleic acids, thereby creating specialized microenvironments that facilitate, modulate, or regulate a diverse array of nuclear processes. A paradigm shift in understanding NBs has occurred with the increasing recognition that many of these structures form through a process known as liquid-liquid phase separation (LLPS). This conceptual reframing has led to NBs often being described as &quot;biomolecular condensates&quot;.1 This perspective emphasizes their inherently dynamic nature, their capacity to assemble and disassemble in response to specific cellular signals and environmental cues, and their roles as reaction crucibles or sequestration hubs that orchestrate complex biochemical events within the nucleus.3</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Overview of Nuclear Compartmentalization</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Introduction to Nuclear Bodies as Dynamic Biomolecular Condensates</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="2-historical-perspectives-on-nuclear-bodies-1900-2000-foundations-of-discovery" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">2. Historical Perspectives on Nuclear Bodies (1900–2000): Foundations of Discovery</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The period from 1900 to 2000 laid the critical groundwork for our current understanding of nuclear compartmentalization. Early cytologists, armed with light microscopes, first glimpsed the non-homogenous nature of the nucleus. Subsequent advancements, particularly the advent of electron microscopy (EM) and later, molecular biology techniques, transformed these initial observations into a more defined map of subnuclear structures.</p>
+                            <p class="text-slate-700 leading-7">The nucleolus was one of the first subnuclear structures to be recognized, with descriptions dating back to the 1830s by Wagner and Valentin, and extensively cataloged by Montgomery in 1898. Its functional significance began to emerge in the 1930s when Heitz and McClintock independently demonstrated that nucleoli form at specific chromosomal loci – the nucleolar organizer regions (NORs). This pivotal discovery established the nucleolus as a genetically determined entity rather than a random aggregation. The mid-20th century witnessed breakthroughs in understanding its function: in the 1960s, work by Brown, Gurdon, Ritossa, Birnstiel, and others revealed the nucleolus as the primary site of ribosomal RNA (rRNA) transcription and ribosome assembly.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleolus: An Early Paradigm</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Cajal (Coiled) Bodies: From Accessory Bodies to RNP Hubs</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Nuclear Speckles (Interchromatin Granule Clusters): Splicing Factor Territories</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">PML Bodies (ND10): Enigmatic Dots with Emerging Roles</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Other Early-Described Nuclear Structures</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Summary: The Nucleus at the Dawn of the Molecular Era</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="3-the-modern-era-unveiling-complexity-with-advanced-technologies" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">3. The Modern Era: Unveiling Complexity with Advanced Technologies</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The turn of the 21st century ushered in a new era for the study of nuclear bodies, largely driven by transformative technological advancements. Fluorescence imaging, particularly live-cell microscopy, coupled with biophysical measurements, high-throughput proteomics, and precise molecular manipulations, has provided unprecedented insights into the composition, dynamics, assembly, and function of these nuclear compartments. These approaches have collectively revealed that nuclear bodies are not static entities but are highly dynamic, exquisitely regulated assemblies that play pivotal roles in nuclear function.</p>
+                            <p class="text-slate-700 leading-7">The development and widespread adoption of fluorescent protein tags, such as Green Fluorescent Protein (GFP) and its spectral variants, along with significant improvements in microscope sensitivity and resolution, revolutionized the study of nuclear bodies. For the first time, researchers could observe these structures in living cells, moving beyond the static snapshots provided by fixed-cell electron microscopy. Early time-lapse studies revealed that NBs like Cajal bodies and PML bodies are not fixed in place but undergo constrained diffusion within the nucleoplasm, occasionally docking at specific chromatin sites or interacting with other nuclear structures. For instance, Cajal bodies were observed to roam through the nucleoplasm, pausing near snRNA gene loci or the nucleolus, suggesting roles in component delivery or exchange.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Live-Cell Fluorescence Microscopy: Visualizing Dynamics and Interactions</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Biophysical Interrogations: Probing Material Properties and Forces</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Proteomic and Transcriptomic Cartography: Defining Molecular Constituencies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Molecular and Genetic Dissection: Elucidating Function and Assembly</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="4-mechanisms-of-nuclear-body-formation-and-maintenance-a-critical-assessment" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">4. Mechanisms of Nuclear Body Formation and Maintenance: A Critical Assessment</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The formation and maintenance of membraneless nuclear bodies, which concentrate specific biomolecules without an encapsulating membrane, represent a fundamental aspect of cellular organization. Several models, often overlapping rather than mutually exclusive, have been proposed to explain how these compartments assemble and persist as distinct entities within the crowded nucleoplasm. The most prominent among these is the liquid-liquid phase separation (LLPS) model, but scaffold-mediated assembly and stochastic self-organization also offer valuable frameworks for understanding these phenomena.</p>
+                            <p class="text-slate-700 leading-7">The LLPS model posits that nuclear bodies form through the demixing of certain proteins and/or nucleic acids from the bulk nucleoplasm, analogous to the spontaneous separation of oil and water. This process results in the formation of a dense, condensate phase (the nuclear body) coexisting with a dilute phase (the surrounding nucleoplasm). The driving forces for LLPS are typically weak, multivalent interactions among the components of the nuclear body.2</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Liquid-Liquid Phase Separation (LLPS) Model: A Dominant Paradigm</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Scaffold-Mediated and Nucleation-Driven Assembly: The Role of Templates</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Stochastic Self-Organization Model</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Integrating the Models: Towards a Unified View of &quot;Directed Stochasticity&quot;</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Material States of Condensates: From Liquids to Gels and Solids</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Regulatory Mechanisms: ATP-dependence, Chaperones, and Post-Translational Modifications</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="5-major-nuclear-compartments-in-mammals-ultrastructure-composition-and-function" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">5. Major Nuclear Compartments in Mammals: Ultrastructure, Composition, and Function</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The mammalian nucleus harbors several well-defined, non-membrane-bound compartments, each characterized by a distinct ultrastructure, molecular composition, and primary set of functions. Electron microscopy provided the initial morphological descriptions, while modern molecular and cell biology techniques have unveiled their complex protein and RNA constituents and their dynamic roles in nuclear processes.</p>
+                            <p class="text-slate-700 leading-7">Table 3: Molecular Composition and Key Functions of Major Mammalian Nuclear Bodies</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleolus: Ribosome Factory and Stress Sensor</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Nuclear Speckles (Interchromatin Granule Clusters): Splicing Factor Hubs and Gene Regulation Centers</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Cajal Bodies (Coiled Bodies): Biogenesis and Modification of RNPs</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">PML Nuclear Bodies (ND10): Stress Responders and Regulatory Platforms</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Histone Locus Bodies (Cleavage Bodies): Orchestrating Histone mRNA Metabolism</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Paraspeckles: lncRNA-Driven Compartments in Gene Expression Control</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="6-nuclear-bodies-in-cellular-homeostasis-stress-and-disease" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">6. Nuclear Bodies in Cellular Homeostasis, Stress, and Disease</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Nuclear bodies are not mere bystanders in cellular life; they are active participants in maintaining cellular homeostasis, responding to stress, and, when dysregulated, contributing to disease. Their roles span the orchestration of gene expression, the safeguarding of genome integrity, and the coordination of cellular responses to both internal and external challenges.</p>
+                            <p class="text-slate-700 leading-7">Nuclear bodies are intimately involved in multiple stages of gene expression:</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Orchestrating Gene Expression Programs</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Roles in DNA Damage Response and Genome Integrity</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Dysregulation in Cancer</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Connections to Neurodegenerative Disorders</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="7-emerging-concepts-and-future-directions" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">7. Emerging Concepts and Future Directions</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of nuclear bodies is a vibrant and rapidly evolving field. As our understanding deepens, several emerging concepts are shaping future research directions, driven by technological innovations and a growing appreciation for the complexity of nuclear organization.</p>
+                            <p class="text-slate-700 leading-7">The evolutionary history of nuclear bodies is an area of growing interest. Comparative genomic analyses, while initially focused on more structurally defined entities like the nuclear envelope (NE) and nuclear pore complex (NPC), have revealed principles that likely extend to the components of membraneless nuclear bodies.43 These studies suggest that nuclear structures were often &quot;tinkered&quot; together from diverse protein domains that evolved from prokaryotic precursors at various points in eukaryotic evolution, through the divergence of pre-existing eukaryotic paralogs that performed other functions, or even de novo.43 This evolutionary bricolage has likely contributed to the diversity of nuclear body components and functions observed across different eukaryotic lineages.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Evolutionary Origins and Diversification of Nuclear Bodies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Cutting-Edge Technologies for Probing Nuclear Architecture In Vivo</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Unanswered Questions and Therapeutic Potential</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="8-conclusion-the-ever-evolving-functionally-rich-nuclear-interior" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">8. Conclusion: The Ever-Evolving, Functionally Rich Nuclear Interior</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The journey of understanding nuclear bodies has been one of remarkable transformation, from early microscopic observations of seemingly static nuclear inclusions to the current appreciation of these structures as dynamic, functionally versatile biomolecular condensates. Electron microscopy laid the crucial foundation by delineating their morphology, while the molecular era, powered by genetics, biochemistry, and advanced imaging, has unveiled their complex composition and intricate roles in the life of the cell.</p>
+                            <p class="text-slate-700 leading-7">The realization that many nuclear bodies form via liquid-liquid phase separation, often guided by specific scaffold molecules and subject to active cellular regulation, has provided a powerful biophysical framework for understanding their assembly and dynamic behavior. These membraneless compartments are no longer seen as passive bystanders but as active organizers of the nuclear landscape, creating specialized microenvironments that concentrate specific molecules, facilitate complex biochemical reactions, sequester components, and integrate diverse cellular signals. From the ribosome biogenesis powerhouse of the nucleolus to the splicing hubs of nuclear speckles, the RNP maturation centers of Cajal bodies, and the stress-responsive platforms of PML bodies and paraspeckles, each nuclear body contributes uniquely to the overarching regulation of genome expression, maintenance, and...</p>
+                    </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

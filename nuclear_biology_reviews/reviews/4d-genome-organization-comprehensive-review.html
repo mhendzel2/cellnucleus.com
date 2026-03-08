@@ -3,204 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The 4D Nucleome | Nuclear Biology Reviews</title>
+    <meta name="description" content="The completion of the human genome sequence marked a watershed moment in biology, providing a linear blueprint of life. For years, the central paradigm...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The 4D Nucleome</h1>
+                <p class="mt-4 text-lg text-slate-100">A Multi-Scale Review of Genome Architecture in Space and Time</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>3D_4D Genome Organization Review_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>7 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 42 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="https://docs.google.com/document/d/1T54BZ6_2MwwSvJkPLRGp5dXZ0wAoIRd5Th0J3jmYGWQ/edit?usp=drive_link" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: 3D_4D Genome Organization Review_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2F3D_4D+Genome+Organization+Review_.docx&page=nuclear_biology_reviews%2Freviews%2F4d-genome-organization-comprehensive-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2F3D_4D+Genome+Organization+Review_.docx&page=nuclear_biology_reviews%2Freviews%2F4d-genome-organization-comprehensive-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/3D_4D%20Genome%20Organization%20Review_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing T                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The completion of the human genome sequence marked a watershed moment in biology, providing a linear blueprint of life. For years, the central paradigm focused on understanding this one-dimensional (1D) code—the sequence of nucleotides—and the epigenetic marks layered upon it.1 However, it has become profoundly clear that this linear perspective is insufficient. Within the confines of the eukaryotic cell nucleus, a structure with a diameter of less than 10 µm, over two meters of DNA must be packaged in a manner that is not only compact but also exquisitely functional.3 The genome is not a random tangle of thread but a highly organized, non-random, and profoundly dynamic three-dimensional...</p>
+                        <p class="text-slate-700 leading-7">The recognition of this spatial dimension has given rise to the concept of the 4D Nucleome, which extends the static 3D model to incorporate the fourth dimension: time.6 The 4D Nucleome framework seeks to understand the principles governing the structure and dynamics of the genome in space and time, and to decipher how this spatio-temporal organization influences nuclear function.6 This ambitious goal is the focus of major international consortia, such as the 4D Nucleome (4DN) Project, which aims to develop and benchmark experimental and computational approaches to map these dynamics and their functional consequences in human and mouse cells.6 The genome&#x27;s architecture is in constant flux...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#i-introduction-from-a-linear-code-to-a-dynamic-living-architecture" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">I. Introduction: From a Linear Code to a Dynamic, Living Architecture</a>
+                            <a href="#ii-the-structural-hierarchy-of-the-genome-from-nucleosomes-to-territories" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">II. The Structural Hierarchy of the Genome: From Nucleosomes to Territories</a>
+                            <a href="#iii-molecular-mechanisms-sculpting-the-3d-genome" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">III. Molecular Mechanisms Sculpting the 3D Genome</a>
+                            <a href="#iv-the-fourth-dimension-a-genome-in-motion" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">IV. The Fourth Dimension: A Genome in Motion</a>
+                            <a href="#v-functional-and-pathological-consequences-of-the-4d-nucleome" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">V. Functional and Pathological Consequences of the 4D Nucleome</a>
+                            <a href="#vi-methodologies-for-probing-the-4d-nucleome" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VI. Methodologies for Probing the 4D Nucleome</a>
+                            <a href="#vii-conclusion-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">VII. Conclusion and Future Perspectives</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="i-introduction-from-a-linear-code-to-a-dynamic-living-architecture" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">I. Introduction: From a Linear Code to a Dynamic, Living Architecture</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The completion of the human genome sequence marked a watershed moment in biology, providing a linear blueprint of life. For years, the central paradigm focused on understanding this one-dimensional (1D) code—the sequence of nucleotides—and the epigenetic marks layered upon it.1 However, it has become profoundly clear that this linear perspective is insufficient. Within the confines of the eukaryotic cell nucleus, a structure with a diameter of less than 10 µm, over two meters of DNA must be packaged in a manner that is not only compact but also exquisitely functional.3 The genome is not a random tangle of thread but a highly organized, non-random, and profoundly dynamic three-dimensional (3D) structure.2 This 3D architecture represents a critical and distinct layer of biological information, operating in concert with the genetic sequence and the epigenome to orchestrate cellular life.1</p>
+                            <p class="text-slate-700 leading-7">The recognition of this spatial dimension has given rise to the concept of the 4D Nucleome, which extends the static 3D model to incorporate the fourth dimension: time.6 The 4D Nucleome framework seeks to understand the principles governing the structure and dynamics of the genome in space and time, and to decipher how this spatio-temporal organization influences nuclear function.6 This ambitious goal is the focus of major international consortia, such as the 4D Nucleome (4DN) Project, which aims to develop and benchmark experimental and computational approaches to map these dynamics and their functional consequences in human and mouse cells.6 The genome&#x27;s architecture is in constant flux, reconfiguring in response to developmental programs, progression through the cell cycle, and external stimuli, making its temporal dynamics a key area of investigation.1</p>
+                    </div>
+                </section>
+
+                <section id="ii-the-structural-hierarchy-of-the-genome-from-nucleosomes-to-territories" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">II. The Structural Hierarchy of the Genome: From Nucleosomes to Territories</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The spatial organization of the eukaryotic genome is best understood as a multi-level hierarchy, a series of nested folding patterns that package the vast length of DNA while ensuring access for essential nuclear processes. This hierarchy spans from the nanometer scale of the nucleosome to the micron scale of entire chromosomes, with each level contributing uniquely to genome function.2 Understanding this structural paradigm, which has filled the conceptual void between the nucleosome and the chromosome territory, is fundamental to deciphering the principles of the 4D nucleome.14</p>
+                            <p class="text-slate-700 leading-7">The most basic repeating subunit of chromatin is the nucleosome.3 The canonical nucleosome core particle consists of approximately 147 base pairs of DNA wrapped in about 1.75 left-handed superhelical turns around a protein core.24 This core is an octamer composed of two copies each of the four core histone proteins: H2A, H2B, H3, and H4.24 The resulting structure is a disc-like particle approximately 11 nm in diameter and 5.5 nm in height, which provides an initial linear compaction of the DNA by a factor of about seven.24 The nucleosome is completed by a stretch of &quot;linker DNA&quot; connecting it to the next nucleosome, and in many cases, a linker histone (e.g., H1) binds where the DNA enters and exits the core, further stabilizing the structure and contributing to higher-order folding.3</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. The Nucleosome: The Fundamental Unit of Compaction and Regulation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Chromosome Territories (CTs): The Historical Foundation of Nuclear Order</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. A/B Compartments: Large-Scale Segregation of Genome Activity</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">D. Topologically Associating Domains (TADs): The Building Blocks of Regulation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">E. Chromatin Loops: Fine-Scale Architectural and Regulatory Interactions</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iii-molecular-mechanisms-sculpting-the-3d-genome" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">III. Molecular Mechanisms Sculpting the 3D Genome</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The hierarchical architecture of the genome is not a static state but the result of continuous, dynamic processes driven by a suite of molecular machines and biophysical principles. Understanding these mechanisms is key to deciphering how genome structure is established, maintained, and altered in response to cellular needs. The field has converged on two primary, and potentially competing, forces: the active, ATP-dependent process of loop extrusion, which organizes local domains, and the passive, thermodynamically driven process of phase separation, which governs large-scale compartmentalization. These processes are orchestrated by a growing cast of architectural proteins that act as the sculptors of the 3D genome.</p>
+                            <p class="text-slate-700 leading-7">The loop extrusion model has emerged as the leading hypothesis to explain the formation of TADs and many chromatin loops.47 First formalized through polymer simulations that remarkably recapitulated Hi-C data 47, the model has since gained substantial experimental support.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. The Loop Extrusion Model: An Engine of Genome Folding</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. An Expanded Cast of Architectural Proteins: Beyond CTCF and Cohesin</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. The Interplay of Transcription, Phase Separation, and Architecture</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="iv-the-fourth-dimension-a-genome-in-motion" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">IV. The Fourth Dimension: A Genome in Motion</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The genome&#x27;s 3D architecture is not a fixed, static entity. It is a dynamic structure that is constantly remodeled over multiple timescales, from the dramatic reorganization that occurs during cell division to the subtle, rapid fluctuations in response to external signals. This temporal aspect—the fourth dimension—is a central focus of the 4D Nucleome project and is essential for understanding how the genome adapts to perform its diverse functions throughout a cell&#x27;s life.6</p>
+                            <p class="text-slate-700 leading-7">The cell cycle imposes the most dramatic and cyclical changes on genome organization.87 To ensure the faithful segregation of genetic material, cells must transition between a decondensed, highly organized interphase state that permits transcription and replication, and a highly condensed, compact mitotic state.89</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Reorganization Through the Cell Cycle</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Remodeling During Cellular Differentiation</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. Dynamic Responses to External Cues</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="v-functional-and-pathological-consequences-of-the-4d-nucleome" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">V. Functional and Pathological Consequences of the 4D Nucleome</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The intricate architecture of the 4D nucleome is not merely a feat of biological engineering; it is fundamentally intertwined with the function and integrity of the genome. The spatial and temporal organization of chromatin directly impacts core cellular processes, from the precise regulation of gene expression and the timing of DNA replication to the efficient repair of DNA damage. Consequently, when this architecture is disrupted, the consequences can be severe, leading to a spectrum of human diseases, including congenital developmental disorders and cancer.</p>
+                            <p class="text-slate-700 leading-7">Two of the most fundamental processes governed by 3D genome architecture are transcription and replication.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Orchestrating Gene Expression and DNA Replication</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Maintaining Genome Integrity: The DNA Damage Response (DDR)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. TADopathies: Diseases of Genome Architecture</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">D. The 3D Genome in Cancer</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vi-methodologies-for-probing-the-4d-nucleome" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VI. Methodologies for Probing the 4D Nucleome</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Our understanding of the 4D nucleome has been driven by a technological revolution over the past two decades. A powerful and complementary suite of experimental and computational methods has been developed to map, visualize, and model the genome&#x27;s architecture in space and time. These approaches can be broadly categorized into genome-wide contact mapping, microscopy-based imaging, and in silico modeling, each providing unique and essential insights.119 A truly robust understanding of genome organization requires the integration of these multidisciplinary methods, as each has distinct strengths and limitations.34</p>
+                            <p class="text-slate-700 leading-7">The development of Chromosome Conformation Capture (3C) technology and its high-throughput derivatives has been the primary engine of discovery in the field. These methods are all based on the principle of proximity ligation: chromatin is first cross-linked in vivo with formaldehyde to fix spatial interactions, then digested with a restriction enzyme. The resulting sticky ends of DNA fragments that are held in close 3D proximity are then ligated together, creating novel chimeric DNA molecules. The frequency of these ligation products, quantified by sequencing, serves as a proxy for the interaction frequency between the two loci in the original cell population.29</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A. Genome-wide Contact Mapping: The &#x27;C&#x27; Technologies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">B. Visualizing the Genome: Microscopy and Imaging</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C. In Silico Genomics: Modeling and Prediction</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="vii-conclusion-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">VII. Conclusion and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of the 3D and 4D organization of the genome has transformed our understanding of nuclear biology, revealing a breathtakingly complex and dynamic architecture that is integral to genome function. We have moved from a static, linear view of DNA to a dynamic, four-dimensional perspective where the genome actively folds, reorganizes, and responds to its environment. This review has synthesized the current understanding of this architecture, from the hierarchical layers of organization—nucleosomes, loops, TADs, compartments, and territories—to the molecular mechanisms that sculpt them, most notably the competing forces of loop extrusion and phase separation. We have explored the profound functional consequences of this organization for gene regulation, replication, and DNA repair, and have seen how its disruption leads directly to human diseases, including developmental disorders...</p>
+                            <p class="text-slate-700 leading-7">This rapid progress has been propelled by a synergistic convergence of methodologies. High-throughput sequencing techniques like Hi-C and Micro-C provide population-averaged interaction maps; advanced imaging methods like super-resolution FISH offer direct visualization of structure in single cells; and sophisticated computational models based on polymer physics and artificial intelligence allow for mechanistic testing and prediction. The integration of these approaches is no longer just a best practice but a necessity for driving the field forward.34</p>
+                    </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

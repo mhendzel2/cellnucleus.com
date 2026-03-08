@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Nuclear bodies review placeholder image</title>
+  <desc id="desc">Gradient illustration used as a local placeholder for the nuclear bodies overview image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g>
+    <circle cx="360" cy="260" r="110" fill="#ffffff" fill-opacity="0.18"/>
+    <circle cx="640" cy="220" r="72" fill="#ffffff" fill-opacity="0.28"/>
+    <circle cx="790" cy="360" r="96" fill="#ffffff" fill-opacity="0.22"/>
+    <circle cx="530" cy="400" r="145" fill="#ffffff" fill-opacity="0.14"/>
+  </g>
+  <g fill="#ffffff">
+    <text x="90" y="560" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Nuclear Bodies Overview</text>
+    <text x="92" y="610" font-family="Inter, Arial, sans-serif" font-size="24" opacity="0.82">Local placeholder image added during link repair</text>
+  </g>
+</svg>

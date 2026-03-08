@@ -3,205 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The DNA Damage Response Network | Nuclear Biology Reviews</title>
+    <meta name="description" content="This review synthesizes the current understanding of the DNA Damage Response (DDR) as an integrated network rather than a collection of discrete...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The DNA Damage Response Network</h1>
+                <p class="mt-4 text-lg text-slate-100">A Critical Review of Pathway Crosstalk in Genome Maintenance, Disease, and Therapy</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>DNA Repair Pathway Crosstalk Review.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>6 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 52 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: DNA Repair Pathway Crosstalk Review.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FDNA+Repair+Pathway+Crosstalk+Review.docx&page=nuclear_biology_reviews%2Freviews%2Fdna-repair-pathway-crosstalk-complete.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FDNA+Repair+Pathway+Crosstalk+Review.docx&page=nuclear_biology_reviews%2Freviews%2Fdna-repair-pathway-crosstalk-complete.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/DNA%20Repair%20Pathway%20Crosstalk%20Review.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">This review synthesizes the current understanding of the DNA Damage Response (DDR) as an integrated network rather than a collection of discrete pathways. We explore the molecular mechanisms of crosstalk between Base Excision Repair (BER), Nucleotide Excision Repair (NER), Mismatch Repair (MMR), Homologous Recombination (HR), and Non-Homologous End Joining (NHEJ). Central to this network are master signaling kinases ATM and ATR, which orchestrate pathway choice and coordinate repair with cell cycle progression. We critically analyze the antagonistic relationship between 53BP1 and BRCA1 in dictating the fate of double-strand break repair.</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#introduction-beyond-linear-pathways-to-an-integrated-dna-repair-network" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Introduction: Beyond Linear Pathways to an Integrated DNA Repair Network</a>
+                            <a href="#section-1-the-canonical-dna-repair-pathways-a-modular-overview" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 1: The Canonical DNA Repair Pathways: A Modular Overview</a>
+                            <a href="#section-2-orchestrating-the-response-mechanisms-of-dna-repair-pathway-crosstalk" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 2: Orchestrating the Response: Mechanisms of DNA Repair Pathway Crosstalk</a>
+                            <a href="#section-3-when-the-network-fails-pathological-consequences-of-dysregulated-crosstalk" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 3: When the Network Fails: Pathological Consequences of Dysregulated Crosstalk</a>
+                            <a href="#section-4-exploiting-network-dependencies-therapeutic-strategies-and-future-perspectives" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 4: Exploiting Network Dependencies: Therapeutic Strategies and Future Perspectives</a>
+                            <a href="#section-5-conclusion-and-unresolved-questions" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 5: Conclusion and Unresolved Questions</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="introduction-beyond-linear-pathways-to-an-integrated-dna-repair-network" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Introduction: Beyond Linear Pathways to an Integrated DNA Repair Network</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The faithful transmission of genetic information is fundamental to life. Yet, the DNA molecule is under constant assault from a barrage of endogenous and exogenous agents, resulting in tens of thousands of lesions per cell per day. To counteract this threat, cells have evolved a sophisticated and robust set of mechanisms collectively known as the DNA Damage Response (DDR). Historically, the DDR has been presented as a series of distinct, linear pathways, each specialized for a particular type of DNA lesion.</p>
+                            <p class="text-slate-700 leading-7">The contemporary understanding of the DDR is that of a highly integrated and dynamic signaling network. The coordination and interaction between these canonical pathways, a concept termed &quot;pathway crosstalk,&quot; is essential for a coherent and effective cellular response to genomic stress. This crosstalk is not merely an occasional overlap but a fundamental design principle of the DDR. It ensures that the choice of repair strategy is appropriate for the type of damage, the cellular context (such as cell cycle phase), and the physiological demands of the specific tissue.</p>
+                    </div>
+                </section>
+
+                <section id="section-1-the-canonical-dna-repair-pathways-a-modular-overview" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 1: The Canonical DNA Repair Pathways: A Modular Overview</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">To comprehend the complexity of the DDR network, it is first necessary to understand its constituent parts. Each canonical repair pathway is a specialized module evolved to recognize and resolve a specific class of DNA lesions. This section provides a concise overview of these fundamental pathways, their core mechanisms, and their key protein components.</p>
+                            <p class="text-slate-700 leading-7">BER is the primary defense against the most common forms of DNA damage: small, non-helix-distorting base lesions that arise from endogenous processes like oxidation, alkylation, deamination, and hydrolysis. Given the high frequency of such damage, BER is indispensable for preventing mutations and maintaining genomic stability.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.1 Repair of Base Lesions and Single-Strand Breaks: Base Excision Repair (BER)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.2 Repair of Helix-Distorting Lesions: Nucleotide Excision Repair (NER)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.3 Correction of Replication Errors: Mismatch Repair (MMR)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.4 Mending Double-Strand Breaks (DSBs): Non-Homologous End Joining (NHEJ) and Homologous Recombination (HR)</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-2-orchestrating-the-response-mechanisms-of-dna-repair-pathway-crosstalk" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 2: Orchestrating the Response: Mechanisms of DNA Repair Pathway Crosstalk</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While the canonical pathways provide the essential machinery for repair, their operation is not independent. The DDR functions as a cohesive network, orchestrated by master signaling molecules and regulated by complex interactions that ensure the correct pathway is deployed at the correct time and place. This section explores the molecular mechanisms of this crosstalk, focusing on the key decision points that define the cellular response to DNA damage.</p>
+                            <p class="text-slate-700 leading-7">At the apex of the DDR signaling network are two large serine/threonine kinases of the phosphoinositide 3-kinase-like kinase (PIKK) family: ATM (Ataxia-Telangiectasia Mutated) and ATR (ATM and Rad3-related). These kinases function as master transducers, sensing distinct forms of DNA damage and phosphorylating hundreds of downstream substrates to orchestrate a global response that includes pathway choice, cell cycle checkpoint activation, and apoptosis.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1 Master Regulators of the DDR: The Central Role of ATM and ATR Kinases</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2 The Critical Decision Point: Crosstalk in DSB Repair Pathway Choice</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3 Interplay Between Excision and Mismatch Repair Pathways</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.4 Coordination with the Cell Cycle: The Checkpoint-Repair Interface</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-3-when-the-network-fails-pathological-consequences-of-dysregulated-crosstalk" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 3: When the Network Fails: Pathological Consequences of Dysregulated Crosstalk</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The exquisite coordination of the DDR network is essential for maintaining cellular and organismal health. When this network is compromised through genetic defects or environmental stress, the consequences are severe, manifesting as some of the most challenging human diseases. This section explores how failures in DNA repair crosstalk contribute to carcinogenesis, neurodegeneration, and premature aging.</p>
+                            <p class="text-slate-700 leading-7">Genomic instability is a fundamental hallmark of cancer, and defects in the DDR are a primary cause. The dysregulation of crosstalk between repair pathways, particularly in the management of DSBs, creates a permissive environment for the accumulation of mutations and chromosomal aberrations that drive tumorigenesis.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1 Genomic Instability and Carcinogenesis: The Price of Imbalance</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2 Neurodegeneration: A Consequence of Unresolved DNA Damage in Post-Mitotic Cells</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3 Premature Aging Syndromes: Insights from Monogenic DNA Repair Disorders</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-4-exploiting-network-dependencies-therapeutic-strategies-and-future-perspectives" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 4: Exploiting Network Dependencies: Therapeutic Strategies and Future Perspectives</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The realization that cancer cells often harbor defects in the DDR network, creating specific vulnerabilities, has revolutionized oncology. By targeting the remaining functional repair pathways upon which these tumors become addicted, it is possible to selectively kill cancer cells while sparing normal tissues. This section reviews the therapeutic strategies that exploit DNA repair crosstalk, from the established success of PARP inhibitors to the exciting frontier of emerging targeted agents.</p>
+                            <p class="text-slate-700 leading-7">The principle of synthetic lethality describes a genetic interaction where the loss of function of two genes individually is viable, but their combined loss is lethal. This concept provides a powerful framework for targeted cancer therapy.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1 The Synthetic Lethality Paradigm: From PARP Inhibitors to the Concept of BRCAness</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2 Emerging Therapeutic Targets in the Crosstalk Network: POLQ, ATR, and WEE1 Inhibitors</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3 Combination Therapies: Enhancing Efficacy and Overcoming Resistance</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-5-conclusion-and-unresolved-questions" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 5: Conclusion and Unresolved Questions</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of DNA repair has matured from the characterization of linear, independent pathways into the exploration of a complex, interconnected, and dynamic network. This shift in perspective has profound implications for our understanding of fundamental biology, human disease, and medicine.</p>
+                            <p class="text-slate-700 leading-7">This review has underscored that the DNA Damage Response is not a collection of isolated mechanisms but a highly integrated system governed by the principle of crosstalk. This crosstalk operates at multiple levels: through master signaling kinases like ATM and ATR that coordinate a global response; through direct competition between antagonistic factors like 53BP1 and BRCA1 at critical decision points; through the generation of repair intermediates by one pathway that become substrates or signals for another; and through the intimate connection with the cell cycle machinery that ensures repair is completed before damaged genetic material is propagated.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1 Synthesis of Key Insights: The DDR as a Dynamic, Integrated System</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2 Major Unanswered Questions and Future Directions in Understanding DDR Network Dynamics</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">References</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

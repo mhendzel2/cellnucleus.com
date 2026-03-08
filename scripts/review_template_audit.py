@@ -20,7 +20,7 @@ from typing import Iterable, List
 
 ROOT = Path(__file__).resolve().parents[1]
 MAPPING_PATH = ROOT / "docs" / "file-mapping.json"
-REVIEWS_DIR = ROOT / "reviews"
+REVIEWS_DIR = ROOT / "nuclear_biology_reviews" / "reviews"
 REPORT_PATH = ROOT / "reports" / "review_template_audit.md"
 
 PLACEHOLDER_TITLE = "Nuclear Bodies: Architecture and Function"

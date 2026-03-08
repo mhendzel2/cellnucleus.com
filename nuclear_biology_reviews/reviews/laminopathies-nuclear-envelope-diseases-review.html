@@ -3,205 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Nuclear Lamina in Health and Disease | Nuclear Biology Reviews</title>
+    <meta name="description" content="The nuclear envelope (NE) is a dynamic organelle critical for eukaryotic cell function, providing structural integrity, regulating nucleocytoplasmic...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Nuclear Lamina in Health and Disease</h1>
+                <p class="mt-4 text-lg text-slate-100">A Critical Review of Laminopathies and Other Nuclear Envelopathies</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Laminopathies_ Nuclear Envelope Diseases Review.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 43 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Laminopathies_ Nuclear Envelope Diseases Review.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FLaminopathies_+Nuclear+Envelope+Diseases+Review.docx&page=nuclear_biology_reviews%2Freviews%2Flaminopathies-nuclear-envelope-diseases-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FLaminopathies_+Nuclear+Envelope+Diseases+Review.docx&page=nuclear_biology_reviews%2Freviews%2Flaminopathies-nuclear-envelope-diseases-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Laminopathies_%20Nuclear%20Envelope%20Diseases%20Review.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The nuclear envelope (NE) is a dynamic organelle critical for eukaryotic cell function, providing structural integrity, regulating nucleocytoplasmic transport, and organizing the genome. At the core of its structural framework is the nuclear lamina, a meshwork of intermediate filament proteins known as lamins. Initially perceived as a static scaffold, the lamina is now recognized as a vital hub for mechanotransduction and gene regulation. The discovery that mutations in the genes encoding lamins and associated proteins cause a broad spectrum of human diseases, collectively termed nuclear envelopathies, has revolutionized the field.</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#abstract" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Abstract</a>
+                            <a href="#1-introduction-the-emergence-of-the-nuclear-envelopathies" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">1. Introduction: The Emergence of the Nuclear Envelopathies</a>
+                            <a href="#2-the-nuclear-envelope-a-dynamic-regulatory-hub" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">2. The Nuclear Envelope: A Dynamic Regulatory Hub</a>
+                            <a href="#3-molecular-biology-of-the-nuclear-lamins" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">3. Molecular Biology of the Nuclear Lamins</a>
+                            <a href="#4-the-clinical-spectrum-of-laminopathies-and-related-disorders" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">4. The Clinical Spectrum of Laminopathies and Related Disorders</a>
+                            <a href="#5-pathophysiological-mechanisms-competing-and-converging-hypotheses" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">5. Pathophysiological Mechanisms: Competing and Converging Hypotheses</a>
+                            <a href="#6-a-comparative-pathology-laminopathies-in-the-context-of-other-nuclear-envelopathies" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">6. A Comparative Pathology: Laminopathies in the Context of Other Nuclear Envelopathies</a>
+                            <a href="#7-therapeutic-horizons-from-symptomatic-management-to-targeted-intervention" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">7. Therapeutic Horizons: From Symptomatic Management to Targeted Intervention</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="abstract" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Abstract</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear envelope (NE) is a dynamic organelle critical for eukaryotic cell function, providing structural integrity, regulating nucleocytoplasmic transport, and organizing the genome. At the core of its structural framework is the nuclear lamina, a meshwork of intermediate filament proteins known as lamins. Initially perceived as a static scaffold, the lamina is now recognized as a vital hub for mechanotransduction and gene regulation. The discovery that mutations in the genes encoding lamins and associated proteins cause a broad spectrum of human diseases, collectively termed nuclear envelopathies, has revolutionized the field.</p>
+                    </div>
+                </section>
+
+                <section id="1-introduction-the-emergence-of-the-nuclear-envelopathies" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">1. Introduction: The Emergence of the Nuclear Envelopathies</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The scientific narrative of the nuclear lamina is one of profound transformation, evolving from the observation of a simple structural element to the identification of a critical locus for human disease. For decades following its initial description, the nuclear envelope (NE) was primarily understood as a passive barrier separating the nucleus from the cytoplasm, with the underlying nuclear lamina, a meshwork of proteins first characterized in the 1970s, providing static architectural support. This perspective began to shift dramatically in the 1990s, marking the convergence of basic cell biology with clinical genetics and giving rise to the field of nuclear envelopathies.</p>
+                            <p class="text-slate-700 leading-7">The first critical breakthrough came in 1994, when positional cloning linked X-linked Emery-Dreifuss muscular dystrophy (EDMD)—a disease characterized by early contractures, progressive muscle weakness, and cardiomyopathy—to mutations in a gene on chromosome Xq28. This gene, named EMD, was found to encode a novel protein of the inner nuclear membrane (INM), which was subsequently named emerin. This discovery was groundbreaking, as it was the first to implicate a component of the nuclear envelope in a specific human genetic disease, establishing the NE as a site of pathology.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.1. From Structural Component to Disease Locus: A Historical Perspective</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.2. The Laminopathy Paradox: A Ubiquitous Gene, Tissue-Specific Diseases</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.3. Overview of the Scope: Integrating Molecular Biology, Pathophysiology, and Clinical Medicine</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="2-the-nuclear-envelope-a-dynamic-regulatory-hub" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">2. The Nuclear Envelope: A Dynamic Regulatory Hub</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear envelope (NE) is far more than a simple static container for the genome. It is a complex and dynamic macromolecular assembly that serves as the primary interface between the nucleoplasm and the cytoplasm, playing a central role in a multitude of cellular processes. Its sophisticated architecture not only provides structural support and compartmentalization but also actively participates in signal transduction, gene regulation, and the cell&#x27;s response to mechanical stress. A thorough understanding of its components—the nuclear membranes, the nuclear pore complexes, the LINC complex, and the nuclear lamina—is essential for contextualizing the diseases that arise from their dysfunction.</p>
+                            <p class="text-slate-700 leading-7">The NE is composed of two distinct lipid bilayers, the inner nuclear membrane (INM) and the outer nuclear membrane (ONM), which are separated by the perinuclear space. The ONM is physically continuous with the membrane system of the endoplasmic reticulum (ER), making the perinuclear space contiguous with the ER lumen. This continuity functionally links the NE to the cell&#x27;s broader endomembrane system and secretory pathway. Like the rough ER, the cytoplasmic face of the ONM is often studded with ribosomes, reflecting its role in the synthesis of proteins destined for the NE and ER.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1. Architecture of the Nuclear Periphery</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2. The Nuclear Pore Complex (NPC): Gatekeeper of Nucleocytoplasmic Transport</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3. The LINC Complex: Bridging the Nucleus and the Cytoskeleton</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.4. The Nuclear Lamina: A Filamentous Scaffold for Nuclear Integrity and Genome Organization</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="3-molecular-biology-of-the-nuclear-lamins" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">3. Molecular Biology of the Nuclear Lamins</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear lamins are the principal protein components of the nuclear lamina and are central to its structure and function. As type V intermediate filaments, they are the evolutionary ancestors of all cytoplasmic intermediate filaments, but possess unique structural features and expression patterns that underpin their specialized roles within the nucleus. The molecular diversity among lamins, arising from multiple genes, alternative splicing, and complex post-translational modifications, is key to understanding their distinct functions and the varied diseases that result from their mutation.</p>
+                            <p class="text-slate-700 leading-7">In mammals, the lamin protein family is encoded by three distinct genes. The LMNA gene, located on chromosome 1q21.2-q21.3, is responsible for producing the A-type lamins. The B-type lamins are encoded by two separate genes: LMNB1 on chromosome 5, which encodes lamin B1, and LMNB2 on chromosome 19, which encodes lamin B2.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1. The Lamin Gene Family and Protein Structure</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2. A-Type Lamins: Regulated Expression and Complex Splicing</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3. B-Type Lamins: Constitutive Cornerstones of the Lamina</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.4. Distinct and Overlapping Functions: The Two-Lamina Network</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.5. Post-Translational Maturation of Prelamin A: A Critical Pathway for Disease</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="4-the-clinical-spectrum-of-laminopathies-and-related-disorders" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">4. The Clinical Spectrum of Laminopathies and Related Disorders</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Mutations in genes encoding proteins of the nuclear envelope give rise to a remarkably broad and clinically heterogeneous group of disorders. The term &quot;nuclear envelopathies&quot; encompasses all such diseases, while &quot;laminopathies&quot; specifically refers to those caused by mutations in the lamin genes. The vast majority of these are linked to the LMNA gene, whose mutations are responsible for more than 15 distinct clinical syndromes. These diseases are typically categorized by the primary organ system affected, yet this classification is often an oversimplification due to the significant clinical overlap observed between syndromes, where different phenotypes can coexist even within the same family carrying the identical mutation.</p>
+                            <p class="text-slate-700 leading-7">The spectrum of laminopathies can be broadly divided into four major categories: diseases of striated muscle (skeletal and cardiac), metabolic disorders (lipodystrophies), segmental progeroid syndromes (premature aging), and peripheral neuropathies. While some mutations lead to phenotypes strictly confined to one system, others cause overlapping syndromes that affect multiple tissues. This clinical diversity, stemming from a single gene, remains a central enigma in the field.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1. An Overview of Phenotypic Diversity</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2. Diseases of Striated Muscle</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3. Metabolic Disorders: Lipodystrophies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.4. Segmental Progeroid Syndromes (Premature Aging)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.5. Peripheral Neuropathies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.6. Genotype-Phenotype Correlations: An Unresolved Puzzle</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="5-pathophysiological-mechanisms-competing-and-converging-hypotheses" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">5. Pathophysiological Mechanisms: Competing and Converging Hypotheses</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The central question of how mutations in the nearly ubiquitous A-type lamins produce such a diverse array of tissue-specific diseases has driven the formulation of several key pathophysiological hypotheses. For years, the &#x27;mechanical stress&#x27; and &#x27;gene expression&#x27; models were often presented as competing explanations. However, recent advances, particularly in the field of mechanobiology, have led to a more integrated perspective, where these once-separate ideas are now seen as deeply interconnected. A third model, the &#x27;toxic protein&#x27; hypothesis, remains crucial for explaining the severe progeroid syndromes.</p>
+                            <p class="text-slate-700 leading-7">The &#x27;mechanical stress&#x27; or &#x27;structural&#x27; hypothesis was the first and most intuitive model proposed to explain the prevalence of myopathies and cardiomyopathies in laminopathies. It posits that the primary function of the nuclear lamina is to provide mechanical stability to the nucleus, and that disease arises when this structural integrity is compromised. Tissues that are subjected to constant and high levels of mechanical strain, such as contracting skeletal and cardiac muscle, are therefore uniquely vulnerable to defects in this structural scaffold.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1. The &#x27;Mechanical Stress&#x27; Hypothesis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2. The &#x27;Gene Expression&#x27; Hypothesis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.3. The &#x27;Toxic Protein&#x27; Hypothesis</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.4. A Unified Model: Mechanotransduction as the Integrator</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="6-a-comparative-pathology-laminopathies-in-the-context-of-other-nuclear-envelopathies" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">6. A Comparative Pathology: Laminopathies in the Context of Other Nuclear Envelopathies</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">Laminopathies represent the largest and most studied subgroup of a broader class of human genetic disorders known as &quot;nuclear envelopathies.&quot; This term encompasses all diseases caused by mutations in genes that encode proteins of the nuclear envelope, including not only the lamins but also proteins of the inner and outer nuclear membranes (INM, ONM) and the nuclear pore complexes (NPCs). Comparing laminopathies to these other disorders provides critical insights into the function of the NE as an integrated system, where the disruption of different components can lead to convergent pathological outcomes.</p>
+                            <p class="text-slate-700 leading-7">The proteins of the nuclear envelope do not function in isolation; they form a dense network of physical and functional interactions. The lamina is anchored to the INM via interactions with proteins like emerin and LAP2. The INM, in turn, is connected to the ONM and the cytoskeleton via the LINC complex, which includes SUN proteins and nesprins. The entire structure is perforated by NPCs, which are also anchored to the lamina.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.1. A Broader Perspective: The Nuclear Envelopathies</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.2. Emerinopathies and Nesprinopathies: Diseases of the LINC Complex</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">6.3. Nucleoporopathies: When the Gates Fail</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="7-therapeutic-horizons-from-symptomatic-management-to-targeted-intervention" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">7. Therapeutic Horizons: From Symptomatic Management to Targeted Intervention</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The journey from identifying the genetic causes of laminopathies to developing treatments has been remarkably rapid, reflecting the broader evolution of modern therapeutics. The field has progressed from purely symptomatic management to the rational design of targeted molecular therapies and is now on the cusp of utilizing precision genetic medicines. This therapeutic landscape is a testament to how a deep understanding of molecular pathophysiology can pave the way for novel interventions.</p>
+                            <p class="text-slate-700 leading-7">The diagnosis of a laminopathy begins with clinical suspicion based on the characteristic phenotypes, such as the triad of EDMD or the specific fat redistribution of FPLD2, often supported by a family history. Confirmation relies on genetic testing. Given the extensive phenotypic overlap and the growing number of implicated genes, panel-based next-generation sequencing that includes LMNA, EMD, and other NE-related genes is now the standard diagnostic approach.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.1. Diagnosis, Management, and Current Standards of Care</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.2. Targeting Prelamin A Processing: The HGPS Story</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.3. Modulating Downstream Signaling and Cellular Stress</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">7.4. Genetic and RNA-Based Approaches: The Next Frontier</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

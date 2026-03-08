@@ -3,205 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>Nanoscale Architecture and Live-Cell Dynamics of RNA Polymerase II Condensates | Nuclear Biology Reviews</title>
+    <meta name="description" content="The regulation of gene expression in eukaryotes is a process of extraordinary complexity, requiring the precise coordination of thousands of protein and...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">Nanoscale Architecture and Live-Cell Dynamics of RNA Polymerase II Condensates</h1>
+                <p class="mt-4 text-lg text-slate-100">Concise summary of the matched long-form review document</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Pol II Condensate Review Outline_.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>6 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 36 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Pol II Condensate Review Outline_.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FPol+II+Condensate+Review+Outline_.docx&page=nuclear_biology_reviews%2Freviews%2Fpol-ii-condensate-review.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FPol+II+Condensate+Review+Outline_.docx&page=nuclear_biology_reviews%2Freviews%2Fpol-ii-condensate-review.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Pol%20II%20Condensate%20Review%20Outline_.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The regulation of gene expression in eukaryotes is a process of extraordinary complexity, requiring the precise coordination of thousands of protein and nucleic acid components in the crowded, three-dimensional space of the nucleus. For decades, research has sought to understand the organizational principles that govern this orchestration. A paradigm shift is currently underway, moving from classical models of stoichiometric, high-affinity molecular complexes to a framework centered on the formation of dynamic, non-stoichiometric, and often liquid-like assemblies known as biomolecular condensates. These structures, formed through liquid-liquid phase separation (LLPS), are proposed to act...</p>
+                        <p class="text-slate-700 leading-7">The idea that transcription is spatially organized within the nucleus is not new. Seminal studies using immunofluorescence and electron microscopy revealed that active Pol II is not diffusely distributed but is concentrated in discrete nuclear foci.1 These observations gave rise to the &quot;transcription factory&quot; model, which posited that transcription occurs at a limited number of pre-assembled, relatively stable structures. In this model, genes were thought to be recruited to these factories to be transcribed, rather than the machinery assembling de novo on each gene.2 These factories were estimated to contain multiple polymerase molecules and other essential factors, providing a potential...</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#section-1-the-conceptual-framework-of-transcriptional-condensates" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 1: The Conceptual Framework of Transcriptional Condensates</a>
+                            <a href="#section-2-visualizing-condensate-architecture-with-super-resolution-microscopy" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 2: Visualizing Condensate Architecture with Super-Resolution Microscopy</a>
+                            <a href="#section-3-probing-condensate-function-through-live-cell-dynamics" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 3: Probing Condensate Function through Live-Cell Dynamics</a>
+                            <a href="#section-4-the-condensate-debate-correlation-causality-and-competing-models" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 4: The Condensate Debate: Correlation, Causality, and Competing Models</a>
+                            <a href="#section-5-methodological-challenges-and-the-path-forward" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Section 5: Methodological Challenges and the Path Forward</a>
+                            <a href="#conclusion" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Conclusion</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="section-1-the-conceptual-framework-of-transcriptional-condensates" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 1: The Conceptual Framework of Transcriptional Condensates</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The regulation of gene expression in eukaryotes is a process of extraordinary complexity, requiring the precise coordination of thousands of protein and nucleic acid components in the crowded, three-dimensional space of the nucleus. For decades, research has sought to understand the organizational principles that govern this orchestration. A paradigm shift is currently underway, moving from classical models of stoichiometric, high-affinity molecular complexes to a framework centered on the formation of dynamic, non-stoichiometric, and often liquid-like assemblies known as biomolecular condensates. These structures, formed through liquid-liquid phase separation (LLPS), are proposed to act as hubs that concentrate the transcriptional machinery, thereby enhancing regulatory efficiency and specificity.</p>
+                            <p class="text-slate-700 leading-7">The idea that transcription is spatially organized within the nucleus is not new. Seminal studies using immunofluorescence and electron microscopy revealed that active Pol II is not diffusely distributed but is concentrated in discrete nuclear foci.1 These observations gave rise to the &quot;transcription factory&quot; model, which posited that transcription occurs at a limited number of pre-assembled, relatively stable structures. In this model, genes were thought to be recruited to these factories to be transcribed, rather than the machinery assembling de novo on each gene.2 These factories were estimated to contain multiple polymerase molecules and other essential factors, providing a potential mechanism for coordinating the expression of co-regulated genes.3</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.1 From Transcription Factories to Phase-Separated Condensates</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.2 The Biophysical Basis of Formation: LLPS and Multivalency</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">1.3 The Core Machinery: Key Protein and RNA Components</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-2-visualizing-condensate-architecture-with-super-resolution-microscopy" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 2: Visualizing Condensate Architecture with Super-Resolution Microscopy</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The diffraction limit of light long obscured the true nanoscale organization of the nucleus. The advent of super-resolution microscopy (SRM) has provided an unprecedented window into the architecture of Pol II assemblies, revealing a world of structural complexity and heterogeneity that challenges simple models and provides crucial clues to function. These techniques, which achieve resolutions down to tens of nanometers, have been instrumental in moving the field beyond the concept of amorphous &quot;factories&quot; toward a more nuanced understanding of the structure of transcriptional condensates.</p>
+                            <p class="text-slate-700 leading-7">Early models envisioned a few hundred large, stable transcription factories per nucleus. SRM has largely replaced this picture with a more complex and dynamic view. Rather than uniform structures, Pol II exists in a heterogeneous population of clusters varying in size, shape, and stability.26</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.1 Nanoscale Morphology and Organization</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.2 Surface Condensation: An Alternative to Bulk LLPS?</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">2.3 Internal Structure and Heterogeneity</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-3-probing-condensate-function-through-live-cell-dynamics" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 3: Probing Condensate Function through Live-Cell Dynamics</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While super-resolution microscopy provides invaluable static snapshots of condensate architecture, understanding their function requires observing them in action. A suite of live-cell imaging techniques has been deployed to measure the kinetics of molecular exchange, diffusion, and binding, linking the dynamic behavior of Pol II and its associated factors to the regulation of transcriptional output. These studies have revealed a system characterized by remarkable dynamism, kinetic heterogeneity, and a direct, quantitative link between the physical properties of condensates and their functional consequences.</p>
+                            <p class="text-slate-700 leading-7">Fluorescence Recovery After Photobleaching (FRAP) has been a workhorse technique for measuring the ensemble-level dynamics of proteins in living cells. In a typical FRAP experiment, a population of fluorescently tagged molecules in a specific region (e.g., a gene locus) is irreversibly photobleached with a high-intensity laser pulse, and the rate at which fluorescence recovers due to the influx of unbleached molecules from the surrounding area is measured. This recovery rate provides information about the mobility and binding kinetics of the molecular population.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.1 Ensemble Kinetics: Turnover and Residence Times via FRAP</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.2 Single-Molecule Dynamics: Tracking Individual Factors in a Crowded Milieu</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">3.3 Linking Dynamics to Function: Transcriptional Bursting and Output</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-4-the-condensate-debate-correlation-causality-and-competing-models" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 4: The Condensate Debate: Correlation, Causality, and Competing Models</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The emergence of the LLPS model for transcription has ignited a vibrant and often contentious debate within the field. While the model is conceptually elegant and supported by a growing body of correlative evidence, establishing a definitive causal link between phase separation and transcriptional regulation in vivo has proven to be exceptionally challenging. This section critically evaluates the central controversies, examines the limitations of common experimental approaches, and explores alternative and unified models that seek to reconcile conflicting observations.</p>
+                            <p class="text-slate-700 leading-7">Much of the evidence supporting a functional role for LLPS in transcription is correlative. Key observations include: (i) the colocalization of Pol II, TFs, and coactivators in nuclear puncta or foci; (ii) the prevalence of IDRs, known drivers of LLPS, in these same proteins; and (iii) the ability of purified versions of these proteins to form liquid-like droplets in vitro.10 While suggestive, these correlations do not prove that phase separation is the mechanism of cluster formation in vivo or that it is required for their function.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.1 Assessing the Evidence: Is LLPS Necessary for Transcriptional Regulation?</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.2 Reconciling Opposing Views: A Unified Model of Soluble Complexes and Condensates</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">4.3 The Role of Chromatin as an Active Scaffold</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="section-5-methodological-challenges-and-the-path-forward" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Section 5: Methodological Challenges and the Path Forward</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The study of Pol II condensates pushes the boundaries of modern cell biology, relying on a sophisticated and rapidly evolving toolkit of imaging, biochemical, and computational methods. However, these advanced techniques are not without their own significant challenges and potential for artifacts. A critical understanding of these limitations is essential for accurately interpreting experimental data and for designing the next generation of experiments that can definitively resolve the outstanding questions in the field. This section outlines the major methodological hurdles, highlights the emerging technologies that promise to overcome them, and proposes a path forward for future research.</p>
+                            <p class="text-slate-700 leading-7">A fundamental challenge in all live-cell imaging, which is particularly acute for the high-intensity illumination regimes required by many SRM techniques, is the &quot;observer effect&quot;: the act of observation can perturb or damage the very system being studied.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.1 The Observer Effect: Phototoxicity and Labeling Artifacts in High-Resolution Imaging</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.2 Emerging Technologies for Probing and Perturbing Condensates</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">5.3 Recommendations for Future Research</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="conclusion" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Conclusion</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The conceptualization of transcriptional hubs as biomolecular condensates formed via liquid-liquid phase separation has provided a powerful new framework for understanding gene regulation. This paradigm, rooted in the principles of polymer physics and driven by the multivalent interactions of intrinsically disordered protein regions, offers elegant explanations for the concentration of transcriptional machinery, the dynamic nature of regulatory complexes, and the coordination of the transcription cycle. The C-terminal domain of RNA Polymerase II has emerged as a central player, an evolved information-processing device whose phosphorylation-dependent phase behavior orchestrates the progression from initiation to elongation and RNA processing.</p>
+                            <p class="text-slate-700 leading-7">Super-resolution microscopy has been instrumental in shaping this view, revealing a rich and heterogeneous world of Pol II clusters with complex, non-spherical morphologies and intricate internal organization. These structural data have challenged simple models of bulk LLPS, leading to more nuanced concepts like surface condensation on chromatin templates. Live-cell imaging has complemented these structural snapshots with dynamic functional data, demonstrating that the kinetic behavior of molecules within these assemblies is directly and quantitatively linked to transcriptional output. The discovery that TF binding kinetics follow a power-law distribution and that condensate lifetime acts as a rheostat for transcriptional bursting are landmark findings that connect the biophysical properties of these assemblies to their biological function.</p>
+                    </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>

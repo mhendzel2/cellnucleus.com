@@ -3,205 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuclear Bodies: Architecture and Function | Nuclear Biology Reviews</title>
-    <meta name="description" content="Comprehensive review of nuclear bodies, their structural organization, functional roles in gene regulation, and significance in cellular processes.">
+    <title>The Viscoelastic Landscape of the Cell Nucleus | Nuclear Biology Reviews</title>
+    <meta name="description" content="The eukaryotic cell nucleus has long been recognized as the principal repository of the cell&#x27;s genetic information, a highly organized organelle...">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .scientific-content {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-        }
-        .figure-caption {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .data-table {
-            border-collapse: collapse;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-        }
-        .citation-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .citation-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }
+        .section-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- TITLE BANNER - FIRST ON PAGE -->
-    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-3">Nuclear Bodies: Architecture and Function</h1>
-                    <p class="text-xl text-blue-100 mb-4">Comprehensive Analysis of Nuclear Compartmentalization</p>
-                    <div class="flex flex-wrap items-center gap-4 text-sm text-blue-200">
-                        <span><i class="fas fa-calendar mr-2"></i>Updated: August 2025</span>
-                        <span><i class="fas fa-user mr-2"></i>Dr. Michael Hendzel Lab</span>
-                        <span><i class="fas fa-tag mr-2"></i>Nuclear Structure</span>
-                    </div>
-                </div>
-                <div class="hidden md:block ml-8">
-                    <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microscope text-4xl text-blue-200"></i>
-                    </div>
+<body class="bg-slate-50 text-slate-900">
+    <header class="hero-gradient text-white">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+            <nav class="flex flex-wrap items-center gap-4 text-sm text-teal-100">
+                <a href="../../index.html" class="hover:text-white">Home</a>
+                <a href="../../reviews_index.html" class="hover:text-white">Reviews</a>
+                <a href="../../research_reviews_directory.html" class="hover:text-white">Categories</a>
+            </nav>
+            <div class="mt-8 max-w-4xl">
+                <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-teal-50">
+                    <i class="fas fa-file-lines mr-2"></i>Source-Based Review Summary
+                </p>
+                <h1 class="mt-5 text-4xl font-bold leading-tight md:text-5xl">The Viscoelastic Landscape of the Cell Nucleus</h1>
+                <p class="mt-4 text-lg text-slate-100">A Multiscale Synthesis of Material Properties, Measurement, and Function</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-sm text-teal-100">
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-book-open mr-2"></i>Nuclear Viscosity_ Properties and Regulation.docx</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-list mr-2"></i>8 major sections</span>
+                    <span class="rounded-full bg-white/10 px-3 py-1"><i class="fas fa-clock mr-2"></i>Source review approx. 40 min</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- COMMUNITY RESEARCH & AI INTEGRATION SECTIONS - MOVED BELOW TITLE -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <!-- Community Research Section -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">
-                    <i class="fas fa-users mr-2"></i>Community Research & Collaboration
-                </h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Edit This Review</h4>
-                        <p class="text-sm text-green-600 mb-3">Help improve this review through collaborative editing:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                <i class="fab fa-google-drive mr-2"></i>Edit in Google Docs
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-green-700 mb-2">Contribute Research</h4>
-                        <p class="text-sm text-green-600 mb-3">Share your findings and citations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-plus mr-2"></i>Submit Research
-                            </a>
-                            <a href="#" class="inline-flex items-center px-3 py-2 border border-green-600 text-green-600 rounded-md hover:bg-green-50 transition-colors">
-                                <i class="fas fa-comment mr-2"></i>Discussion Forum
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Integration Section -->
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <h3 class="text-lg font-semibold text-purple-800 mb-3">
-                    <i class="fas fa-robot mr-2"></i>AI-Generated Content & Attribution
-                </h3>
-                <div class="text-sm text-purple-700">
-                    <p class="mb-2">
-                        <strong>Content Generation:</strong> This review incorporates AI-assisted research synthesis 
-                        to provide comprehensive coverage of nuclear body literature. All scientific claims are 
-                        backed by peer-reviewed sources.
-                    </p>
-                    <p class="mb-2">
-                        <strong>Human Oversight:</strong> Content reviewed and validated by Dr. Michael Hendzel's 
-                        research team at the University of Alberta.
-                    </p>
-                    <p class="text-purple-600">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        AI tools used for literature synthesis, figure caption generation, and formatting. 
-                        All scientific interpretations remain under expert human supervision.
-                    </p>
+    <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-5">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <p class="mt-2 text-sm text-slate-700">
+                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                </p>
+                <p class="mt-2 text-xs text-slate-600">
+                    Source file: Nuclear Viscosity_ Properties and Regulation.docx | Match confidence: high
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Viscosity_+Properties+and+Regulation.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-viscosity-properties-regulation.html&confidence=high&source=deep_research" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    </a>
+                    <a href="../../review_source_viewer.html?doc=Reviews_useredit%2FNuclear+Viscosity_+Properties+and+Regulation.docx&page=nuclear_biology_reviews%2Freviews%2Fnuclear-viscosity-properties-regulation.html&confidence=high&source=deep_research#suggestion-form" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    </a>
+                    <a href="../../Reviews_useredit/Nuclear%20Viscosity_%20Properties%20and%20Regulation.docx" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
-
-            <!-- Main Article Content -->
-            <article class="lg:col-span-3 bg-white rounded-lg shadow-sm p-6">
-
-                <!-- Article Introduction -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear bodies represent discrete, membrane-free compartments within the eukaryotic nucleus 
-                        that concentrate specific proteins and nucleic acids to facilitate specialized cellular functions. 
-                        These dynamic structures play crucial roles in gene regulation, RNA processing, and 
-                        nuclear organization.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Recent advances in super-resolution microscopy and proteomics have revolutionized our 
-                        understanding of nuclear body composition, dynamics, and functional significance in 
-                        normal physiology and disease states.
-                    </p>
+    <main class="mx-auto max-w-6xl px-4 py-10">
+        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
+                    <i class="fas fa-circle-info"></i>
+                    <span>Overview</span>
                 </div>
-
-                <!-- Featured Scientific Image -->
-                <figure class="mb-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/600px-Diagram_human_cell_nucleus.svg.png" 
-                         alt="Diagram of human cell nucleus showing major nuclear bodies and compartments" 
-                         class="w-full rounded-lg shadow-md">
-                    <figcaption class="figure-caption mt-3 px-2">
-                        <strong>Figure 1:</strong> Schematic representation of the eukaryotic nucleus showing major 
-                        nuclear bodies and compartments. Nuclear bodies include the nucleolus, Cajal bodies, 
-                        nuclear speckles, and PML bodies, each with distinct molecular compositions and functions.
-                        <br><span class="text-xs text-gray-500 mt-2 block">
-                            <strong>Source:</strong> 
-                            <a href="https://commons.wikimedia.org/wiki/File:Diagram_human_cell_nucleus.svg" 
-                               class="citation-link" target="_blank">Wikimedia Commons</a> | 
-                            <strong>License:</strong> Public Domain | 
-                            <strong>Attribution:</strong> Modified from original diagram
-                        </span>
-                    </figcaption>
-                </figure>
-
-                <!-- Additional content would go here -->
-                <div class="scientific-content mb-8">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Major Nuclear Body Types</h2>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nucleolus</h3>
-                    <p class="text-gray-700 mb-4">
-                        The nucleolus represents the most prominent nuclear body, serving as the primary site 
-                        of ribosomal RNA synthesis and ribosome assembly. This tri-partite structure consists 
-                        of fibrillar centers, dense fibrillar components, and granular components.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nuclear Speckles</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nuclear speckles, also known as SC35 domains, are enriched in pre-mRNA splicing 
-                        factors and play essential roles in RNA processing and gene expression regulation.
-                    </p>
+                <div class="mt-4 space-y-4">
+                        <p class="text-slate-700 leading-7">The eukaryotic cell nucleus has long been recognized as the principal repository of the cell&#x27;s genetic information, a highly organized organelle responsible for DNA replication, transcription, and the regulation of gene expression. However, a growing body of evidence has recast the nucleus in a new light: not merely as a passive container for the genome, but as a dynamic and mechanically responsive structure that plays a central role in cellular mechanobiology. The nucleus is the largest and stiffest organelle in most eukaryotic cells, and its mechanical properties are critical for a host of cellular functions, from maintaining cellular architecture to orchestrating responses to external...</p>
+                        <p class="text-slate-700 leading-7">A key aspect of nuclear mechanics is its physical integration within the cell. The nucleus is not an isolated island but is directly tethered to the cytoskeleton via the Linker of Nucleoskeleton and Cytoskeleton (LINC) complex. This connection, in turn, links the nucleus to transmembrane integrin receptors and the extracellular matrix (ECM), forming a continuous mechanical pathway from the outside of the cell directly to the nuclear interior. This &quot;hard-wired&quot; architecture allows for mechanotransduction, a process by which mechanical forces are transmitted across the cell and converted into biochemical signals.</p>
                 </div>
-
             </article>
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Contents</h3>
-                    <nav class="space-y-2 text-sm">
-                        <a href="#introduction" class="block text-blue-600 hover:text-blue-800">Introduction</a>
-                        <a href="#types" class="block text-blue-600 hover:text-blue-800">Nuclear Body Types</a>
-                        <a href="#clinical" class="block text-blue-600 hover:text-blue-800">Clinical Significance</a>
-                    </nav>
+            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
+                <div class="mt-4 grid gap-3 section-grid">
+                            <a href="#introduction-the-nucleus-as-a-viscoelastic-multiscale-medium" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Introduction: The Nucleus as a Viscoelastic, Multiscale Medium</a>
+                            <a href="#methodological-frameworks-for-probing-nuclear-rheology" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Methodological Frameworks for Probing Nuclear Rheology</a>
+                            <a href="#the-nucleoplasm-a-low-viscosity-fluid-in-a-labyrinth" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Nucleoplasm: A Low-Viscosity Fluid in a Labyrinth</a>
+                            <a href="#the-rheology-of-chromatin-the-dominant-viscoelastic-network" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Rheology of Chromatin: The Dominant Viscoelastic Network</a>
+                            <a href="#viscoelasticity-of-nuclear-bodies-the-physics-of-phase-separated-condensates" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Viscoelasticity of Nuclear Bodies: The Physics of Phase-Separated Condensates</a>
+                            <a href="#the-nuclear-lamina-a-stiff-and-elastic-boundary" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">The Nuclear Lamina: A Stiff and Elastic Boundary</a>
+                            <a href="#synthesis-and-reconciliation-a-unified-scale-dependent-view-of-nuclear-viscosity" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Synthesis and Reconciliation: A Unified, Scale-Dependent View of Nuclear Viscosity</a>
+                            <a href="#functional-implications-and-future-directions" class="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700">Functional Implications and Future Directions</a>
                 </div>
             </aside>
+        </section>
+
+        <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p class="text-sm text-amber-900">
+                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+            </p>
+        </section>
+
+        <div class="mt-10 space-y-6">
+
+                <section id="introduction-the-nucleus-as-a-viscoelastic-multiscale-medium" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 1</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Introduction: The Nucleus as a Viscoelastic, Multiscale Medium</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The eukaryotic cell nucleus has long been recognized as the principal repository of the cell&#x27;s genetic information, a highly organized organelle responsible for DNA replication, transcription, and the regulation of gene expression. However, a growing body of evidence has recast the nucleus in a new light: not merely as a passive container for the genome, but as a dynamic and mechanically responsive structure that plays a central role in cellular mechanobiology. The nucleus is the largest and stiffest organelle in most eukaryotic cells, and its mechanical properties are critical for a host of cellular functions, from maintaining cellular architecture to orchestrating responses to external physical cues. It must be sufficiently robust to protect the genome from mechanical stresses yet deformable enough to permit essential processes such as cell migration through confined spaces, a...</p>
+                            <p class="text-slate-700 leading-7">A key aspect of nuclear mechanics is its physical integration within the cell. The nucleus is not an isolated island but is directly tethered to the cytoskeleton via the Linker of Nucleoskeleton and Cytoskeleton (LINC) complex. This connection, in turn, links the nucleus to transmembrane integrin receptors and the extracellular matrix (ECM), forming a continuous mechanical pathway from the outside of the cell directly to the nuclear interior. This &quot;hard-wired&quot; architecture allows for mechanotransduction, a process by which mechanical forces are transmitted across the cell and converted into biochemical signals.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Beyond the Genome: The Mechanical Identity of the Nucleus</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Fundamental Concepts: Viscosity and Viscoelasticity in a Crowded Cellular Environment</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A Tripartite Model of Nuclear Mechanics: Lamina, Chromatin, and Nucleoplasm</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="methodological-frameworks-for-probing-nuclear-rheology" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 2</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Methodological Frameworks for Probing Nuclear Rheology</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The measured viscoelastic properties of the cell nucleus are inextricably linked to the experimental modality used for their characterization. Each technique probes the nucleus at a specific length and time scale, interacting with different structural components and thereby yielding distinct, yet complementary, information. A critical understanding of these methodologies is paramount to interpreting the wide spectrum of reported rheological data.</p>
+                            <p class="text-slate-700 leading-7">These techniques involve applying a controlled, direct mechanical force to the nucleus and measuring the resulting deformation.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Direct Mechanical Perturbation: Micropipette Aspiration and Atomic Force Microrheology (AFMMR)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Passive Microrheology: Particle-Tracking Microrheology (PTM)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Active Microrheology: Optical and Magnetic Tweezers</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Molecular-Scale Dynamics: Fluorescence Correlation Spectroscopy (FCS)</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Leveraging Endogenous Structures: Rheology from Nucleolar Dynamics</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A Critical Comparison: Linking Technique to Scale and Interpretation</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-nucleoplasm-a-low-viscosity-fluid-in-a-labyrinth" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 3</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Nucleoplasm: A Low-Viscosity Fluid in a Labyrinth</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nucleoplasm, also known as the karyolymph, constitutes the fluid medium that fills the interchromatin space, bathing the chromosomes and various nuclear bodies. While the nucleus as a whole is a highly viscous and elastic object, the nucleoplasm itself, when probed at the appropriate scale, behaves as a remarkably fluid environment. This low viscosity is critical for the myriad of diffusion-dependent processes that underpin nuclear function.</p>
+                            <p class="text-slate-700 leading-7">The most direct measurements of nucleoplasmic viscosity have been achieved using Fluorescence Correlation Spectroscopy (FCS), a technique uniquely suited to probing the dynamics of small molecules in their native environment with minimal perturbation. By tracking the diffusion of an inert, monomeric fluorescent protein like EGFP (hydrodynamic radius ~2.5-3 nm), FCS effectively measures the properties of the fluid within the pores of the chromatin network, avoiding the dominant mechanical contributions of the chromatin fibers themselves.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Probing the Interchromatin Space: Evidence from FCS and Small-Molecule Diffusion</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleoplasm as a Porous Medium: Reconciling Mobility with Crowding</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Comparison with the Cytoplasm: Relative Viscosities of Intracellular Fluids</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-rheology-of-chromatin-the-dominant-viscoelastic-network" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 4</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Rheology of Chromatin: The Dominant Viscoelastic Network</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">While the nucleoplasm provides a low-viscosity medium for rapid molecular transport, the chromatin network itself constitutes the dominant structural and rheological component of the nuclear interior. It is this complex, dynamic polymer network that endows the nucleus with its characteristic viscoelasticity, allowing it to both dissipate mechanical stress and maintain structural integrity. The material properties of chromatin are not static; they are actively regulated and intimately linked to its level of compaction and its biological function.</p>
+                            <p class="text-slate-700 leading-7">From a physical perspective, chromatin can be described as a viscoelastic polymer gel or a concentrated &quot;polymer melt&quot; that fills the nuclear volume. Its structure is hierarchical, starting with the &quot;beads-on-a-string&quot; 10-nm fiber of nucleosomes, which is further folded into more complex, dynamic structures. This polymeric nature is the source of its dual viscous and elastic properties.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Chromatin as a Polymer Gel: Elasticity, Viscosity, and Scale-Dependence</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Role of Compaction: Heterochromatin, Euchromatin, and Mechanical State</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Active Regulation: The Impact of ATP-Dependent Chromatin Remodelers</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="viscoelasticity-of-nuclear-bodies-the-physics-of-phase-separated-condensates" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 5</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Viscoelasticity of Nuclear Bodies: The Physics of Phase-Separated Condensates</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear interior is not a homogenous gel but is further compartmentalized into a variety of membraneless organelles, or nuclear bodies, such as the nucleolus, Cajal bodies, nuclear speckles, and PML bodies. These structures are dynamic condensates that form through liquid-liquid phase separation (LLPS), a process where macromolecules (proteins and nucleic acids) demix from the surrounding nucleoplasm to form a distinct, concentrated phase. This process is fundamental to nuclear organization, as it creates localized microenvironments with unique biochemical compositions and distinct material properties, most notably, extremely high viscosity.</p>
+                            <p class="text-slate-700 leading-7">The nucleolus is the largest and most well-studied nuclear body, serving as the primary site of ribosome biogenesis. It is a quintessential example of an organelle formed by LLPS and has become a model system for understanding the biophysical properties of phase-separated condensates. Structurally, the nucleolus in higher eukaryotes comprises three nested sub-compartments—the fibrillar center (FC), the dense fibrillar component (DFC), and the granular component (GC)—each associated with different stages of rRNA transcription and processing.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Nucleolus: A Highly Viscous, Liquid-Like Droplet</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Role of Liquid-Liquid Phase Separation (LLPS) in Defining Material Properties</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Material Properties of Other Nuclear Bodies (PML Bodies, Speckles)</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="the-nuclear-lamina-a-stiff-and-elastic-boundary" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 6</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">The Nuclear Lamina: A Stiff and Elastic Boundary</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The nuclear lamina is a proteinaceous scaffold that lines the inner nuclear membrane, providing critical structural support to the nucleus. While its primary role is to confer mechanical stiffness and maintain nuclear shape, it also functions as a key viscoelastic element, a signaling platform, and an anchor for chromatin, making it a central player in nuclear mechanics and mechanotransduction.</p>
+                            <p class="text-slate-700 leading-7">The lamina is a meshwork of type V intermediate filaments composed of A-type (lamin A and lamin C) and B-type (lamin B1 and lamin B2) lamin proteins. This network is the principal determinant of nuclear stiffness, particularly in response to large-scale deformations that require stretching of the nuclear envelope. Experiments that directly probe nuclear mechanics, such as micropipette aspiration or AFM indentation, have consistently identified the lamina, and specifically lamin A/C, as a major contributor to the measured elastic modulus.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Lamina&#x27;s Contribution to Nuclear Stiffness and Viscoelasticity</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Distinct Mechanical Roles of A-type and B-type Lamins</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Mechanical Consequences of Laminopathies</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="synthesis-and-reconciliation-a-unified-scale-dependent-view-of-nuclear-viscosity" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 7</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Synthesis and Reconciliation: A Unified, Scale-Dependent View of Nuclear Viscosity</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The field of nuclear rheology is characterized by a wide array of experimentally determined viscosity values that span more than six orders of magnitude. This vast range, from values near that of water to those exceeding thick honey, has historically been a source of confusion. However, this apparent discrepancy is not a result of experimental error but is a direct and predictable consequence of the nucleus&#x27;s nature as a heterogeneous, multiscale, and multicomponent viscoelastic medium. By synthesizing the data from different experimental modalities and linking them to the specific nuclear structures they probe, a coherent and unified picture of nuclear viscosity emerges.</p>
+                            <p class="text-slate-700 leading-7">The core of the challenge in understanding nuclear viscosity lies in reconciling measurements that differ by factors of a million or more. Table 2 starkly illustrates this range by compiling representative viscosity values from the literature, categorized by the compartment probed and the technique used.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Addressing the Six-Order-of-Magnitude Discrepancy in Reported Values</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">A Unified Model: Integrating Measurements from the Nanometer to the Micron Scale</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Interplay of Determinants: Chromatin, Crowding, LLPS, and Active Forces</li>
+                            </ul>
+                        </div>
+                </section>
+
+                <section id="functional-implications-and-future-directions" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Section 8</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-slate-900">Functional Implications and Future Directions</h2>
+                        </div>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                            <p class="text-slate-700 leading-7">The viscoelastic properties of the nucleus are not mere biophysical curiosities; they are fundamental to its biological function and are deeply implicated in cellular health and disease. The intricate mechanical landscape of the nucleus directly influences core processes such as gene regulation and DNA repair, and its dysregulation is a key feature of pathologies ranging from cancer to premature aging. As the field advances, a deeper integration of mechanics, molecular biology, and advanced modeling will be required to fully unravel these connections.</p>
+                            <p class="text-slate-700 leading-7">The physical environment of the nucleoplasm has a profound impact on diffusion-limited processes, which are central to gene regulation. The search for a specific target sequence on DNA by a transcription factor, for example, is governed by the speed at which the factor can navigate the crowded and tortuous nuclear interior. The low viscosity of the fluid phase within the interchromatin channels facilitates rapid diffusion over short distances, while the viscoelastic nature of the chromatin network constrains larger-scale movements. Theoretical models have even proposed that the local viscosity around RNA polymerase is a critical parameter, with the frictional drag being essential for the proper mechanics of transcription.</p>
+                    </div>
+                        <div class="mt-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Key subtopics</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">The Role of Nuclear Rheology in Gene Regulation and DNA Repair</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Nuclear Mechanics in Disease: Cancer, Aging, and Developmental Disorders</li>
+                                <li class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Unanswered Questions and the Next Generation of Nuclear Mechanobiology</li>
+                            </ul>
+                        </div>
+                </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Nuclear Biology Reviews. Educational content for research purposes.</p>
-            </div>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
         </div>
     </footer>
-
 </body>
 </html>
