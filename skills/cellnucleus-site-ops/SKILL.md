@@ -1,6 +1,6 @@
 ---
 name: cellnucleus-site-ops
-description: Use this skill when working on cellnucleus.com static-site operations: rescanning links after local edits, fixing navigation or contrast regressions, correcting page-specific template issues, regenerating catalog pages, and deploying the site to Aplus while preserving the separate graduate-studies-in-cancer-research.org directory.
+description: "Use this skill when working on cellnucleus.com static-site operations: rescanning links after local edits, fixing navigation or contrast regressions, correcting page-specific template issues, regenerating catalog pages, and deploying the site to Aplus while preserving the separate graduate-studies-in-cancer-research.org directory."
 ---
 
 # CellNucleus Site Ops
