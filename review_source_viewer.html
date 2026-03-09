@@ -78,6 +78,7 @@
             <nav class="flex items-center gap-6 text-sm font-medium text-slate-700">
                 <a href="index.html" class="hover:text-slate-950">Home</a>
                 <a href="reviews_index.html" class="hover:text-slate-950">All Reviews</a>
+                <a href="agent_taskforce.html" class="hover:text-slate-950">Agent Taskforce</a>
                 <a href="downloads.html" class="hover:text-slate-950">Downloads</a>
             </nav>
         </div>
@@ -132,10 +133,16 @@
                     <i class="fas fa-comments mr-2 text-emerald-700"></i>Suggest A Correction
                 </h2>
                 <p class="mt-2 text-sm text-slate-700">
-                    Submit evidence-backed edits using a structured payload. This keeps review updates traceable and moderation-ready.
+                    Submit evidence-backed edits to the agent taskforce using a structured payload. Agents will review what they can confirm before escalating anything unresolved.
                 </p>
 
-                <form id="correctionForm" class="mt-5 space-y-4">
+                <form id="correctionForm" action="taskforce_submit.php" method="post" class="mt-5 space-y-4">
+                    <input type="hidden" name="queue" value="review_correction">
+                    <input type="hidden" id="requestTitle" name="request_title">
+                    <input type="hidden" id="requestDetails" name="request_details">
+                    <input type="hidden" id="escalationPolicy" name="escalation_policy" value="agent_only_unless_unverified">
+                    <input type="hidden" id="payloadJson" name="payload_json">
+                    <input type="hidden" id="sourcePage" name="source_page">
                     <div>
                         <label for="pagePath" class="block text-sm font-semibold text-slate-800">Page</label>
                         <input id="pagePath" name="page_path" type="text" readonly class="mt-1 w-full rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-sm text-slate-700">
@@ -168,7 +175,7 @@
 
                     <div class="flex flex-wrap gap-2">
                         <button type="submit" class="inline-flex items-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
-                            <i class="fas fa-paper-plane mr-2"></i>Send Suggestion
+                            <i class="fas fa-paper-plane mr-2"></i>Send To Taskforce
                         </button>
                         <button type="button" id="copyPayloadBtn" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
                             <i class="fas fa-copy mr-2"></i>Copy JSON
@@ -294,9 +301,21 @@
             form.addEventListener("submit", function (event) {
                 event.preventDefault();
                 const payload = buildPayload();
-                const subject = encodeURIComponent("[CellNucleus] Correction suggestion: " + (pagePath.split("/").pop() || "review"));
-                const body = encodeURIComponent(JSON.stringify(payload, null, 2));
-                window.location.href = "mailto:reviews@cellnucleus.com?subject=" + subject + "&body=" + body;
+                const section = payload.section ? " | " + payload.section : "";
+                document.getElementById("requestTitle").value =
+                    "Correction request: " + (pagePath.split("/").pop() || "review") + section;
+                document.getElementById("requestDetails").value =
+                    "Claim to correct:\n" + (payload.claim || "(not provided)") +
+                    "\n\nProposed correction:\n" + (payload.proposed_correction || "(not provided)") +
+                    "\n\nEvidence URL:\n" + (payload.evidence_url || "(not provided)");
+                document.getElementById("payloadJson").value = JSON.stringify(payload, null, 2);
+                document.getElementById("sourcePage").value = window.location.href;
+
+                if (window.location.protocol === "file:") {
+                    setStatus("Local file preview cannot submit to the taskforce endpoint. Use Copy JSON or open the hosted page.", "warn");
+                    return;
+                }
+                form.submit();
             });
 
             document.getElementById("copyPayloadBtn").addEventListener("click", async function () {

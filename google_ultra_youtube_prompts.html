@@ -22,7 +22,7 @@
             backdrop-filter: blur(6px);
         }
         .copy-btn:hover { transform: translateY(-1px); }
-         {
+        @media print {
             body { print-color-adjust: exact; }
             .no-print { display: none !important; }
         }
@@ -34,6 +34,7 @@
             <a href="index.html" class="hover:text-blue-700"><i class="fas fa-home mr-2"></i>Home</a>
             <a href="reviews_index.html" class="hover:text-blue-700">All Reviews</a>
             <a href="research_reviews_directory.html" class="hover:text-blue-700">Categories</a>
+            <a href="agent_taskforce.html?queue=youtube_video_brief" class="hover:text-blue-700">Agent Taskforce</a>
         </div>
     </nav>
     
@@ -52,18 +53,56 @@
                     <i class="fas fa-lightbulb mr-2 text-yellow-300"></i>
                     This comprehensive collection of prompts is specifically designed to leverage Google Ultra's AI ecosystem (Gemini, NotebookLM, etc.) for creating engaging nuclear biology YouTube content. Each prompt is optimized for maximum output quality and viewer engagement.
                 </p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="agent_taskforce.html?queue=youtube_video_brief" class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-50">
+                        <i class="fas fa-clapperboard mr-2"></i>Send Topic To Marketing Workforce
+                    </a>
+                    <a href="agent_taskforce.html?queue=site_issue" class="inline-flex items-center rounded-lg border border-white px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-indigo-700">
+                        <i class="fas fa-window-maximize mr-2"></i>Request Companion Web Page
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Table of Contents -->
     <div class="max-w-6xl mx-auto py-8 px-8">
+        <section id="workforce-pipeline" class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">
+                <i class="fas fa-users-cog mr-2 text-indigo-600"></i>Marketing Workforce Pipeline
+            </h3>
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <div class="rounded-lg border border-blue-100 bg-blue-50 p-4">
+                    <h4 class="font-semibold text-blue-900">1. Topic Scout</h4>
+                    <p class="mt-2 text-sm text-blue-800">Choose a review or controversy with a strong hook, clear audience, and enough source depth for a credible video.</p>
+                </div>
+                <div class="rounded-lg border border-emerald-100 bg-emerald-50 p-4">
+                    <h4 class="font-semibold text-emerald-900">2. Gemini + NotebookLM</h4>
+                    <p class="mt-2 text-sm text-emerald-800">Run deep research in Gemini, then upload the review and source files to NotebookLM to keep the draft evidence-backed.</p>
+                </div>
+                <div class="rounded-lg border border-rose-100 bg-rose-50 p-4">
+                    <h4 class="font-semibold text-rose-900">3. Cinematic Build</h4>
+                    <p class="mt-2 text-sm text-rose-800">Turn the verified script into a shot list, animation prompt set, thumbnail brief, and chapter structure for a polished science video.</p>
+                </div>
+                <div class="rounded-lg border border-amber-100 bg-amber-50 p-4">
+                    <h4 class="font-semibold text-amber-900">4. Web Publish</h4>
+                    <p class="mt-2 text-sm text-amber-800">Publish a companion page on CellNucleus.com with the video angle, source links, and next-step calls to action.</p>
+                </div>
+            </div>
+            <div class="mt-5 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+                Default rule: new ideas go to the agent taskforce first. Agents package the brief, verify the science, and only pass unresolved or strategic decisions upward.
+            </div>
+        </section>
+
         <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
             <h3 class="text-2xl font-bold mb-4 text-gray-800">
                 <i class="fas fa-list mr-2 text-blue-600"></i>Table of Contents
             </h3>
             <div class="grid md:grid-cols-2 gap-4">
                 <div class="space-y-2">
+                    <a href="#workforce-pipeline" class="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-users-cog mr-2"></i>Marketing Workforce Pipeline
+                    </a>
                     <a href="#script-prompts" class="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                         <i class="fas fa-scroll mr-2"></i>Video Script Generation
                     </a>

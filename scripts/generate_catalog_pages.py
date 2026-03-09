@@ -570,7 +570,7 @@ def page_shell(
     </main>
     <footer class="border-t border-slate-200 bg-white/85">
         <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
-            <p>CellNucleus.com review catalog. Static HTML index generated from the local review inventory.</p>
+            <p>CellNucleus.com review catalog covering chromatin, transport, repair, nuclear bodies, and related topics.</p>
         </div>
     </footer>
 </body>
@@ -630,8 +630,8 @@ def render_category_page(category: Category, reviews: list[dict[str, object]], t
                     </section>
                     <section>
                         <div class="mb-6 flex items-center justify-between gap-4">
-                            <h2 class="text-2xl font-bold text-slate-950">Review Pages in This Category</h2>
-                            <p class="text-sm text-slate-500">{len(reviews)} linked review pages</p>
+                            <h2 class="text-2xl font-bold text-slate-950">Reviews in This Category</h2>
+                            <p class="text-sm text-slate-500">{len(reviews)} review pages</p>
                         </div>
                         <div class="grid gap-5 md:grid-cols-2">
                             {cards}
@@ -657,14 +657,14 @@ def render_category_page(category: Category, reviews: list[dict[str, object]], t
                         </div>
                     </section>
                     <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Inventory</h2>
+                        <h2 class="text-lg font-semibold text-slate-950">At a Glance</h2>
                         <dl class="mt-4 space-y-3 text-sm text-slate-600">
                             <div class="flex items-center justify-between">
                                 <dt>Category pages</dt>
                                 <dd class="font-semibold text-slate-950">{len(CATEGORIES)}</dd>
                             </div>
                             <div class="flex items-center justify-between">
-                                <dt>All linked review pages</dt>
+                                <dt>All review pages</dt>
                                 <dd class="font-semibold text-slate-950">{total_reviews}</dd>
                             </div>
                             <div class="flex items-center justify-between">
@@ -683,7 +683,7 @@ def render_category_page(category: Category, reviews: list[dict[str, object]], t
             </div>
         </section>
     """
-    stat_line = f"{len(reviews)} linked review pages"
+    stat_line = f"{len(reviews)} review pages"
     return page_shell(
         title=category.title,
         subtitle=category.subtitle,
@@ -733,11 +733,11 @@ def render_reviews_index(groups: dict[str, list[dict[str, object]]], reviews: li
                                 <dd class="font-semibold text-slate-950">{len(reviews)}</dd>
                             </div>
                             <div class="flex items-center justify-between">
-                                <dt>Primary mapped reviews</dt>
+                                <dt>Core reviews</dt>
                                 <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if review["primary"])}</dd>
                             </div>
                             <div class="flex items-center justify-between">
-                                <dt>Specialized variants</dt>
+                                <dt>Additional editions</dt>
                                 <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if not review["primary"])}</dd>
                             </div>
                             <div class="flex items-center justify-between">
@@ -766,7 +766,7 @@ def render_reviews_index(groups: dict[str, list[dict[str, object]]], reviews: li
     """
     return page_shell(
         title="Complete Nuclear Biology Review Index",
-        subtitle="A complete local index of every review page currently present in the repository, grouped by category.",
+        subtitle="Browse every CellNucleus review page by category.",
         body=body,
         accent="from-slate-900 via-blue-900 to-indigo-900",
         icon="fa-book-open",
@@ -789,7 +789,7 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">{html.escape(category.title)}</h2>
-                        <p class="text-sm text-slate-600">{len(groups[category.key])} linked review pages</p>
+                        <p class="text-sm text-slate-600">{len(groups[category.key])} review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">{html.escape(category.intro)}</p>
@@ -818,9 +818,9 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
             <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
                 <div class="space-y-8">
                     <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
-                        <h2 class="text-2xl font-bold text-slate-950">Repository Review Inventory</h2>
+                        <h2 class="text-2xl font-bold text-slate-950">Explore the Review Collection</h2>
                         <p class="mt-4 max-w-3xl text-base leading-7 text-slate-700">
-                            This directory now reflects the review pages actually present in the repository instead of the older 36-review subset. It links every discovered review page and keeps the category landing pages aligned with the same catalog.
+                            Use this directory to browse the full CellNucleus review collection by topic and move quickly between category pages and the complete review index.
                         </p>
                     </section>
                     <section>
@@ -835,7 +835,7 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
                     <section>
                         <div class="mb-6">
                             <h2 class="text-2xl font-bold text-slate-950">Featured Review Pages</h2>
-                            <p class="mt-2 text-sm text-slate-600">Highlighted pages from the local inventory, prioritizing primary, enhanced, and updated entries.</p>
+                            <p class="mt-2 text-sm text-slate-600">A selection of prominent, expanded, and recently updated reviews.</p>
                         </div>
                         <div class="grid gap-5 md:grid-cols-2">
                             {"".join(featured_cards)}
@@ -847,15 +847,15 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
                         <h2 class="text-lg font-semibold text-slate-950">Summary</h2>
                         <dl class="mt-4 space-y-3 text-sm text-slate-600">
                             <div class="flex items-center justify-between">
-                                <dt>Review pages linked</dt>
+                                <dt>Review pages</dt>
                                 <dd class="font-semibold text-slate-950">{len(reviews)}</dd>
                             </div>
                             <div class="flex items-center justify-between">
-                                <dt>Primary mapped pages</dt>
+                                <dt>Core reviews</dt>
                                 <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if review["primary"])}</dd>
                             </div>
                             <div class="flex items-center justify-between">
-                                <dt>Additional variants</dt>
+                                <dt>Additional editions</dt>
                                 <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if not review["primary"])}</dd>
                             </div>
                             <div class="flex items-center justify-between">
@@ -887,11 +887,11 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
     """
     return page_shell(
         title="Research Reviews Directory",
-        subtitle="A consistent directory view of the local nuclear biology review catalog.",
+        subtitle="Browse the CellNucleus review collection by topic and category.",
         body=body,
         accent="from-sky-700 via-blue-700 to-indigo-800",
         icon="fa-compass",
-        stat_line=f"{len(reviews)} linked review pages in the local repository",
+        stat_line=f"{len(reviews)} review pages across {len(CATEGORIES)} categories",
     )
 
 
