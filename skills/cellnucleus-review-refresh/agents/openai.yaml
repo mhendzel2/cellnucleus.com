@@ -1,0 +1,7 @@
+interface:
+  display_name: "CellNucleus Review Refresh"
+  short_description: "Rebuild review pages from source Word docs"
+  default_prompt: "Use $cellnucleus-review-refresh to audit review-page quality, remap weak pages to the right `.docx`, and regenerate stronger summaries."
+
+policy:
+  allow_implicit_invocation: true
