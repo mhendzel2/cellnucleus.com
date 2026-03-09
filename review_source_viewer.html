@@ -78,7 +78,6 @@
             <nav class="flex items-center gap-6 text-sm font-medium text-slate-700">
                 <a href="index.html" class="hover:text-slate-950">Home</a>
                 <a href="reviews_index.html" class="hover:text-slate-950">All Reviews</a>
-                <a href="agent_taskforce.html" class="hover:text-slate-950">Agent Taskforce</a>
                 <a href="downloads.html" class="hover:text-slate-950">Downloads</a>
             </nav>
         </div>
@@ -133,7 +132,7 @@
                     <i class="fas fa-comments mr-2 text-emerald-700"></i>Suggest A Correction
                 </h2>
                 <p class="mt-2 text-sm text-slate-700">
-                    Submit evidence-backed edits to the agent taskforce using a structured payload. Agents will review what they can confirm before escalating anything unresolved.
+                    Submit evidence-backed edits using a structured payload. Confirmed issues can be reviewed and resolved through the site administration workflow.
                 </p>
 
                 <form id="correctionForm" action="taskforce_submit.php" method="post" class="mt-5 space-y-4">
@@ -175,7 +174,7 @@
 
                     <div class="flex flex-wrap gap-2">
                         <button type="submit" class="inline-flex items-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
-                            <i class="fas fa-paper-plane mr-2"></i>Send To Taskforce
+                            <i class="fas fa-paper-plane mr-2"></i>Submit correction
                         </button>
                         <button type="button" id="copyPayloadBtn" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
                             <i class="fas fa-copy mr-2"></i>Copy JSON
@@ -312,7 +311,7 @@
                 document.getElementById("sourcePage").value = window.location.href;
 
                 if (window.location.protocol === "file:") {
-                    setStatus("Local file preview cannot submit to the taskforce endpoint. Use Copy JSON or open the hosted page.", "warn");
+                    setStatus("Local file preview cannot submit to the review queue endpoint. Use Copy JSON or open the hosted page.", "warn");
                     return;
                 }
                 form.submit();

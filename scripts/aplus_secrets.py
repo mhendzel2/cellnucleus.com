@@ -23,6 +23,11 @@ LABEL_MAP = {
     "ftp port": "APLUS_FTP_PORT",
     "ftp secure": "APLUS_FTP_SECURE",
     "remote dir": "APLUS_REMOTE_DIR",
+    "admin user": "CELLNUCLEUS_ADMIN_USER",
+    "admin username": "CELLNUCLEUS_ADMIN_USER",
+    "admin password": "CELLNUCLEUS_ADMIN_PASSWORD",
+    "taskforce admin user": "TASKFORCE_ADMIN_USER",
+    "taskforce admin password": "TASKFORCE_ADMIN_PASSWORD",
 }
 
 DEFAULTS = {

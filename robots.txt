@@ -3,5 +3,8 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /.github/
+Disallow: /agent_taskforce.html
+Disallow: /admin/
+Disallow: /taskforce_submit.php
 
 Sitemap: https://nuclear-biology.github.io/reviews/sitemap.xml

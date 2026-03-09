@@ -33,8 +33,8 @@ This skill covers the marketing workflow that turns CellNucleus review content i
 4. Keep claims sourceable.
    NotebookLM or source-review verification should happen before a script is treated as publishable.
 
-5. Route new ideas and production requests through the taskforce intake.
-   Use `agent_taskforce.html` and `taskforce_submit.php` for queueing new video briefs and cross-channel marketing requests.
+5. Route new ideas and production requests through the administrative intake.
+   Use `admin/taskforce.php` and `taskforce_submit.php` for queueing new video briefs and cross-channel marketing requests.
 
 ## Repo-Specific Notes
 

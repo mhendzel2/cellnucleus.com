@@ -11,9 +11,9 @@ This skill governs how edits enter the queue and how agents decide whether to fi
 
 ## Workflow
 
-1. Intake requests through the taskforce queue, not personal email.
+1. Intake requests through the admin queue, not personal email.
    The site intake points are:
-   - `agent_taskforce.html`
+   - `admin/taskforce.php`
    - `taskforce_submit.php`
    - `review_source_viewer.html`
 

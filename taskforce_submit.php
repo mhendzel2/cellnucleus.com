@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+header('X-Robots-Tag: noindex, nofollow, noarchive', true);
+
 function clean_text(string $value, int $max = 500): string
 {
     $value = trim(strip_tags($value));
@@ -33,6 +35,38 @@ function clean_url(string $value): string
 function escape_html(string $value): string
 {
     return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function safe_return_path(string $value): string
+{
+    $value = trim($value);
+    if ($value === '') {
+        return 'index.html';
+    }
+
+    $parts = parse_url($value);
+    if ($parts === false) {
+        return 'index.html';
+    }
+
+    $path = isset($parts['path']) ? ltrim((string) $parts['path'], '/') : '';
+    if ($path === '') {
+        return 'index.html';
+    }
+    if (strpos($path, '..') !== false) {
+        return 'index.html';
+    }
+
+    $allowed = preg_match('#^[A-Za-z0-9._/\-]+$#', $path) === 1;
+    if (!$allowed) {
+        return 'index.html';
+    }
+
+    if (!isset($parts['query']) || $parts['query'] === '') {
+        return $path;
+    }
+
+    return $path . '?' . $parts['query'];
 }
 
 function fallback_workforce_map(): array
@@ -114,7 +148,7 @@ function normalize_queue(string $value, array $allowed_queues): string
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: agent_taskforce.html');
+    header('Location: index.html');
     exit;
 }
 
@@ -143,17 +177,20 @@ $payload = [
     'raw_payload_json' => clean_multiline((string) ($_POST['payload_json'] ?? ''), 30000),
     'user_agent' => clean_text((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 400),
 ];
+$return_path = safe_return_path($payload['source_page']);
+$admin_return_path = 'admin/taskforce.php';
+$show_admin_return = strpos($return_path, 'admin/') === 0;
 
 $storage_dir = __DIR__ . DIRECTORY_SEPARATOR . 'taskforce_submissions';
 $write_error = '';
 
 if (!is_dir($storage_dir) && !mkdir($storage_dir, 0755, true) && !is_dir($storage_dir)) {
-    $write_error = 'Unable to create the taskforce storage directory.';
+    $write_error = 'Unable to create the request storage directory.';
 } else {
     $target = $storage_dir . DIRECTORY_SEPARATOR . $request_id . '.json';
     $encoded = json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     if ($encoded === false || file_put_contents($target, $encoded) === false) {
-        $write_error = 'Unable to write the request to the taskforce queue.';
+        $write_error = 'Unable to write the request to the review queue.';
     }
 }
 ?>
@@ -162,7 +199,8 @@ if (!is_dir($storage_dir) && !mkdir($storage_dir, 0755, true) && !is_dir($storag
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskforce Submission | CellNucleus.com</title>
+    <title>Submission Received | CellNucleus.com</title>
+    <meta name="robots" content="noindex,nofollow,noarchive">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .bg-slate-50 { background-color: #f8fafc; }
@@ -182,17 +220,21 @@ if (!is_dir($storage_dir) && !mkdir($storage_dir, 0755, true) && !is_dir($storag
         <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
             <?php if ($write_error === ''): ?>
                 <p class="text-sm font-semibold uppercase tracking-widest text-emerald-700">Queued</p>
-                <h1 class="mt-3 text-3xl font-bold text-slate-950">Request sent to the agent taskforce</h1>
+                <h1 class="mt-3 text-3xl font-bold text-slate-950">Request received</h1>
                 <p class="mt-4 text-base text-slate-700">
-                    The taskforce received this request as <strong><?php echo escape_html($request_id); ?></strong>.
-                    Agents will verify what they can directly and only escalate unresolved issues to the site owner.
+                    This request was recorded as <strong><?php echo escape_html($request_id); ?></strong>.
+                    Confirmed issues can now be reviewed and resolved through the administrative workflow.
                 </p>
                 <div class="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
                     <p><strong>Queue:</strong> <?php echo escape_html($queue_label); ?></p>
                     <p><strong>Title:</strong> <?php echo escape_html($payload['request_title'] ?: '(untitled request)'); ?></p>
                 </div>
                 <div class="mt-8 flex flex-wrap gap-3">
-                    <a href="agent_taskforce.html" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Back to taskforce</a>
+                    <?php if ($show_admin_return): ?>
+                        <a href="<?php echo escape_html($admin_return_path); ?>" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Back to admin intake</a>
+                    <?php else: ?>
+                        <a href="<?php echo escape_html($return_path); ?>" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Return to previous page</a>
+                    <?php endif; ?>
                     <a href="index.html" class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Home</a>
                 </div>
             <?php else: ?>
@@ -203,8 +245,13 @@ if (!is_dir($storage_dir) && !mkdir($storage_dir, 0755, true) && !is_dir($storag
                     The payload is shown below so it can be recovered manually if needed.
                 </p>
                 <pre class="mt-6 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700"><?php echo escape_html((string) json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)); ?></pre>
-                <div class="mt-8">
-                    <a href="agent_taskforce.html" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Return to taskforce form</a>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <?php if ($show_admin_return): ?>
+                        <a href="<?php echo escape_html($admin_return_path); ?>" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Back to admin intake</a>
+                    <?php else: ?>
+                        <a href="<?php echo escape_html($return_path); ?>" class="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Return to previous page</a>
+                    <?php endif; ?>
+                    <a href="index.html" class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Home</a>
                 </div>
             <?php endif; ?>
         </div>
