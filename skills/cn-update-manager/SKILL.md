@@ -1,9 +1,9 @@
 ---
-name: cellnucleus-update-manager
+name: cn-update-manager
 description: "Use this skill when pages, source documents, templates, or routing files have changed and the website needs to stay synchronized. It covers detecting changed files, deciding which generators and audits must run, refreshing dependent pages, and preparing the site for deployment after edits."
 ---
 
-# CellNucleus Update Manager
+# Update Manager
 
 ## Overview
 

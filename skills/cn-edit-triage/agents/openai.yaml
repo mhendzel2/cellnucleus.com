@@ -1,0 +1,7 @@
+interface:
+  display_name: "Edit Triage"
+  short_description: "Verify edits, route escalations"
+  default_prompt: "Use $cn-edit-triage to process edit requests, fix what agents can confirm, and escalate only unresolved cases."
+
+policy:
+  allow_implicit_invocation: true

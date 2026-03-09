@@ -1,7 +1,0 @@
-interface:
-  display_name: "CellNucleus SEO Audit"
-  short_description: "Audit and repair site SEO metadata"
-  default_prompt: "Use $cellnucleus-seo-audit to inspect the current static site for SEO gaps, fix metadata and sitemap issues, and keep the results compatible with existing navigation."
-
-policy:
-  allow_implicit_invocation: true

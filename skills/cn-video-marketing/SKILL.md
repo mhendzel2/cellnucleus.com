@@ -1,9 +1,9 @@
 ---
-name: cellnucleus-video-marketing
+name: cn-video-marketing
 description: "Use this skill when planning website and YouTube marketing for CellNucleus.com, especially when generating YouTube video ideas, converting review content into Gemini deep-research prompts, preparing NotebookLM input packets, drafting cinematic scripts and shot lists, creating companion web pages, and aligning video metadata with site content."
 ---
 
-# CellNucleus Video Marketing
+# Video Marketing
 
 ## Overview
 

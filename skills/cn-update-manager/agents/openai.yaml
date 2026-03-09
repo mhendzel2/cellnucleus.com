@@ -1,0 +1,7 @@
+interface:
+  display_name: "Update Manager"
+  short_description: "Propagate edits sitewide"
+  default_prompt: "Use $cn-update-manager to inspect changed files, run the required follow-up generators and audits, and prepare the site for deployment."
+
+policy:
+  allow_implicit_invocation: true

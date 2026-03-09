@@ -1,7 +1,0 @@
-interface:
-  display_name: "CellNucleus Edit Triage"
-  short_description: "Queue, verify, and escalate site edits"
-  default_prompt: "Use $cellnucleus-edit-triage to process incoming CellNucleus edit requests, fix what the agents can confirm, and escalate only unresolved cases."
-
-policy:
-  allow_implicit_invocation: true

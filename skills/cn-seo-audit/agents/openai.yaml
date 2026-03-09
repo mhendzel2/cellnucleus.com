@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO Audit"
+  short_description: "Fix metadata and sitemaps"
+  default_prompt: "Use $cn-seo-audit to inspect the static site for SEO gaps, repair metadata and sitemap issues, and keep navigation intact."
+
+policy:
+  allow_implicit_invocation: true

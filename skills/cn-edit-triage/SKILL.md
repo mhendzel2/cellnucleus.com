@@ -1,9 +1,9 @@
 ---
-name: cellnucleus-edit-triage
+name: cn-edit-triage
 description: "Use this skill when CellNucleus receives edit requests, correction suggestions, or page-quality reports that should be verified by the agent taskforce first. It covers structured intake, evidence review against site pages and source documents, direct fixes for confirmed issues, and escalation to the site owner only when agents cannot confirm the right change."
 ---
 
-# CellNucleus Edit Triage
+# Edit Triage
 
 ## Overview
 
@@ -44,5 +44,5 @@ This skill governs how edits enter the queue and how agents decide whether to fi
 ## Repo-Specific Notes
 
 - `review_source_viewer.html` should submit to the taskforce queue instead of opening a mail client.
-- Pair this skill with `cellnucleus-review-refresh` when an edit implies a wrong review-to-source mapping.
-- Pair this skill with `cellnucleus-site-ops` when the request is structural rather than scientific.
+- Pair this skill with `cn-review-refresh` when an edit implies a wrong review-to-source mapping.
+- Pair this skill with `cn-site-ops` when the request is structural rather than scientific.

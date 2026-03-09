@@ -1,0 +1,7 @@
+interface:
+  display_name: "Video Marketing"
+  short_description: "Plan YouTube and web pages"
+  default_prompt: "Use $cn-video-marketing to turn a review or topic into a verified YouTube concept, NotebookLM packet, and companion page."
+
+policy:
+  allow_implicit_invocation: true

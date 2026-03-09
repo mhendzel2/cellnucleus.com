@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Taskforce | CellNucleus.com</title>
-    <meta name="description" content="Submit review corrections, YouTube production briefs, and site issues to the CellNucleus agent taskforce for evidence-based triage.">
+    <meta name="description" content="Submit review edits, video briefs, site updates, site issues, and SEO work to the CellNucleus agent taskforce for evidence-based triage.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
@@ -61,7 +61,7 @@
                     <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Structured Intake</p>
                     <h1 class="mt-3 text-4xl font-bold text-slate-950">Agent Taskforce</h1>
                     <p class="mt-4 text-lg text-slate-700">
-                        Route scientific corrections, site issues, SEO requests, and YouTube production briefs to the agent workforce first.
+                        Route review edits, site issues, SEO work, and video briefs to the agent workforce first.
                         Agents verify what they can, fix confirmed issues directly, and escalate only the items they cannot confirm.
                     </p>
                 </div>
@@ -77,16 +77,16 @@
                 <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white">
                     <i class="fas fa-file-medical"></i>
                 </div>
-                <h2 class="mt-4 text-xl font-bold text-slate-950">Review Edit Triage</h2>
+                <h2 class="mt-4 text-xl font-bold text-slate-950">Edit Triage</h2>
                 <p class="mt-3 text-sm text-slate-700">
-                    Validate claims against the matched review page and source `.docx`, then fix confirmed content or template errors directly.
+                    Validate claims against the matched review page and source `.docx`, then hand confirmed issues to Review Refresh or direct page repair.
                 </p>
             </article>
             <article class="card rounded-3xl border border-slate-200 p-6 shadow-sm">
                 <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-600 text-white">
                     <i class="fab fa-youtube"></i>
                 </div>
-                <h2 class="mt-4 text-xl font-bold text-slate-950">YouTube Production</h2>
+                <h2 class="mt-4 text-xl font-bold text-slate-950">Video Marketing</h2>
                 <p class="mt-3 text-sm text-slate-700">
                     Turn review topics into Gemini deep-research briefs, NotebookLM evidence packs, cinematic scripts, storyboards, and companion web pages.
                 </p>
@@ -95,9 +95,9 @@
                 <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-600 text-white">
                     <i class="fas fa-sitemap"></i>
                 </div>
-                <h2 class="mt-4 text-xl font-bold text-slate-950">Site Ops & SEO</h2>
+                <h2 class="mt-4 text-xl font-bold text-slate-950">Site Ops</h2>
                 <p class="mt-3 text-sm text-slate-700">
-                    Handle navigation defects, page-specific rendering issues, SEO cleanup, and static-site publishing work without routing through personal email.
+                    Handle navigation defects, page-specific rendering issues, SEO Audit work, Update Manager follow-through, and static-site publishing without routing through personal email.
                 </p>
             </article>
         </section>
@@ -106,7 +106,7 @@
             <div class="card rounded-3xl border border-slate-200 p-6 shadow-sm">
                 <h2 class="text-2xl font-bold text-slate-950">Submit A Task</h2>
                 <p class="mt-2 text-sm text-slate-700">
-                    Use this form for scientific corrections, new YouTube requests, site issues, and SEO work. The taskforce will review the request before escalating anything unresolved.
+                    Use this form for review edits, video briefs, site updates, site issues, and SEO work. The taskforce will review the request before escalating anything unresolved.
                 </p>
 
                 <form id="taskforceForm" action="taskforce_submit.php" method="post" class="mt-6 space-y-5">
@@ -114,12 +114,12 @@
                         <div>
                             <label for="queue" class="block text-sm font-semibold text-slate-800">Queue</label>
                             <select id="queue" name="queue" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
-                                <option value="review_correction">Review correction</option>
-                                <option value="youtube_video_brief">YouTube video brief</option>
-                                <option value="site_update_sync">Website update sync</option>
+                                <option value="review_edit">Review edit</option>
+                                <option value="video_brief">Video brief</option>
+                                <option value="site_update">Site update</option>
                                 <option value="site_issue">Site issue</option>
-                                <option value="seo_request">SEO request</option>
-                                <option value="general_request">General task</option>
+                                <option value="seo">SEO</option>
+                                <option value="general">General</option>
                             </select>
                         </div>
                         <div>
@@ -195,7 +195,7 @@
                     </ul>
                 </div>
                 <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
-                    <p class="font-semibold">Website update sync</p>
+                    <p class="font-semibold">Site update</p>
                     <p class="mt-2">Use this queue when page edits should trigger follow-up updates to indexes, category pages, review refreshes, audits, or deployment checks.</p>
                 </div>
             </aside>
@@ -203,9 +203,35 @@
     </main>
 
     <script>
+        const canonicalQueues = new Set([
+            "review_edit",
+            "video_brief",
+            "site_update",
+            "site_issue",
+            "seo",
+            "general",
+        ]);
+
+        function normalizeQueue(rawQueue) {
+            const value = (rawQueue || "").trim().toLowerCase();
+            if (!value) return "";
+            if (canonicalQueues.has(value)) return value;
+
+            if (value.endsWith("_request")) {
+                const requestCandidate = value.replace(/_request$/, "");
+                if (canonicalQueues.has(requestCandidate)) return requestCandidate;
+            }
+
+            if (value.startsWith("review_")) return "review_edit";
+            if (value.endsWith("video_brief")) return "video_brief";
+            if (value.startsWith("site_update")) return "site_update";
+
+            return "";
+        }
+
         function applyPrefill() {
             const params = new URLSearchParams(window.location.search);
-            const queue = params.get("queue");
+            const queue = normalizeQueue(params.get("queue"));
             const page = params.get("page");
             const doc = params.get("doc");
             const title = params.get("title");

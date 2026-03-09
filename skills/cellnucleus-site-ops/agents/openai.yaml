@@ -1,7 +1,0 @@
-interface:
-  display_name: "CellNucleus Site Ops"
-  short_description: "Audit, repair, and deploy the static site"
-  default_prompt: "Use $cellnucleus-site-ops to rescan the current site tree, fix static-site regressions, and prepare or perform an Aplus deployment."
-
-policy:
-  allow_implicit_invocation: true

@@ -35,24 +35,94 @@ function escape_html(string $value): string
     return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
+function fallback_workforce_map(): array
+{
+    return [
+        'queues' => [
+            'canonical' => [
+                'review_edit' => 'Review edit',
+                'video_brief' => 'Video brief',
+                'site_update' => 'Site update',
+                'site_issue' => 'Site issue',
+                'seo' => 'SEO',
+                'general' => 'General',
+            ],
+        ],
+    ];
+}
+
+function load_workforce_map(): array
+{
+    $fallback = fallback_workforce_map();
+    $config_path = __DIR__ . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'workforce_naming.json';
+    if (!is_file($config_path)) {
+        return $fallback;
+    }
+
+    $raw = file_get_contents($config_path);
+    if ($raw === false) {
+        return $fallback;
+    }
+
+    $decoded = json_decode($raw, true);
+    if (!is_array($decoded)) {
+        return $fallback;
+    }
+
+    if (
+        !isset($decoded['queues']['canonical']) ||
+        !is_array($decoded['queues']['canonical']) ||
+        $decoded['queues']['canonical'] === []
+    ) {
+        return $fallback;
+    }
+
+    return $decoded;
+}
+
+function normalize_queue(string $value, array $allowed_queues): string
+{
+    $value = clean_text($value, 64);
+    if ($value === '') {
+        return in_array('general', $allowed_queues, true) ? 'general' : $allowed_queues[0];
+    }
+
+    if (in_array($value, $allowed_queues, true)) {
+        return $value;
+    }
+
+    if (substr($value, -8) === '_request') {
+        $candidate = substr($value, 0, -8);
+        if (in_array($candidate, $allowed_queues, true)) {
+            return $candidate;
+        }
+    }
+
+    if (strpos($value, 'review_') === 0 && in_array('review_edit', $allowed_queues, true)) {
+        return 'review_edit';
+    }
+
+    if (substr($value, -11) === 'video_brief' && in_array('video_brief', $allowed_queues, true)) {
+        return 'video_brief';
+    }
+
+    if (strpos($value, 'site_update') === 0 && in_array('site_update', $allowed_queues, true)) {
+        return 'site_update';
+    }
+
+    return in_array('general', $allowed_queues, true) ? 'general' : $allowed_queues[0];
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: agent_taskforce.html');
     exit;
 }
 
-$allowed_queues = [
-    'review_correction',
-    'youtube_video_brief',
-    'site_update_sync',
-    'site_issue',
-    'seo_request',
-    'general_request',
-];
-
-$queue = clean_text((string) ($_POST['queue'] ?? 'general_request'), 64);
-if (!in_array($queue, $allowed_queues, true)) {
-    $queue = 'general_request';
-}
+$workforce_map = load_workforce_map();
+$queue_labels = $workforce_map['queues']['canonical'];
+$allowed_queues = array_keys($queue_labels);
+$queue = normalize_queue((string) ($_POST['queue'] ?? $_GET['queue'] ?? 'general'), $allowed_queues);
+$queue_label = $queue_labels[$queue] ?? $queue;
 
 $request_id = gmdate('Ymd_His') . '-' . bin2hex(random_bytes(4));
 $payload = [
@@ -118,7 +188,7 @@ if (!is_dir($storage_dir) && !mkdir($storage_dir, 0755, true) && !is_dir($storag
                     Agents will verify what they can directly and only escalate unresolved issues to the site owner.
                 </p>
                 <div class="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
-                    <p><strong>Queue:</strong> <?php echo escape_html($payload['queue']); ?></p>
+                    <p><strong>Queue:</strong> <?php echo escape_html($queue_label); ?></p>
                     <p><strong>Title:</strong> <?php echo escape_html($payload['request_title'] ?: '(untitled request)'); ?></p>
                 </div>
                 <div class="mt-8 flex flex-wrap gap-3">

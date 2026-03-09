@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review Refresh"
+  short_description: "Rebuild reviews from docs"
+  default_prompt: "Use $cn-review-refresh to audit weak review pages, remap them to the right `.docx`, and regenerate stronger summaries."
+
+policy:
+  allow_implicit_invocation: true

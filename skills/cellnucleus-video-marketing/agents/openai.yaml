@@ -1,7 +1,0 @@
-interface:
-  display_name: "CellNucleus Video Marketing"
-  short_description: "Plan YouTube and web content from reviews"
-  default_prompt: "Use $cellnucleus-video-marketing to turn a CellNucleus review into a verified YouTube concept, NotebookLM packet, and companion website deliverable."
-
-policy:
-  allow_implicit_invocation: true

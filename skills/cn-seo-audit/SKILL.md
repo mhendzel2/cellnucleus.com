@@ -1,9 +1,9 @@
 ---
-name: cellnucleus-seo-audit
+name: cn-seo-audit
 description: Use this skill when auditing or improving SEO for cellnucleus.com pages, including metadata coverage, canonical links, robots and sitemap correctness, review-directory discoverability, and page-level revisions needed to make the static site more search-friendly without breaking navigation or content accuracy.
 ---
 
-# CellNucleus SEO Audit
+# SEO Audit
 
 ## Overview
 

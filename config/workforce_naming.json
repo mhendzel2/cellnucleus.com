@@ -1,0 +1,79 @@
+{
+  "public_brand": "Agent Taskforce",
+  "public_video_entry": "YouTube Studio",
+  "skills": {
+    "cn-site-ops": {
+      "legacy_ids": [
+        "cellnucleus-site-ops"
+      ],
+      "display_name": "Site Ops",
+      "short_description": "Rescan, repair, deploy",
+      "default_prompt": "Use $cn-site-ops to rescan the site, repair static regressions, and prepare or perform Aplus deployment."
+    },
+    "cn-review-refresh": {
+      "legacy_ids": [
+        "cellnucleus-review-refresh"
+      ],
+      "display_name": "Review Refresh",
+      "short_description": "Rebuild reviews from docs",
+      "default_prompt": "Use $cn-review-refresh to audit weak review pages, remap them to the right `.docx`, and regenerate stronger summaries."
+    },
+    "cn-seo-audit": {
+      "legacy_ids": [
+        "cellnucleus-seo-audit"
+      ],
+      "display_name": "SEO Audit",
+      "short_description": "Fix metadata and sitemaps",
+      "default_prompt": "Use $cn-seo-audit to inspect the static site for SEO gaps, repair metadata and sitemap issues, and keep navigation intact."
+    },
+    "cn-video-marketing": {
+      "legacy_ids": [
+        "cellnucleus-video-marketing"
+      ],
+      "display_name": "Video Marketing",
+      "short_description": "Plan YouTube and web pages",
+      "default_prompt": "Use $cn-video-marketing to turn a review or topic into a verified YouTube concept, NotebookLM packet, and companion page."
+    },
+    "cn-edit-triage": {
+      "legacy_ids": [
+        "cellnucleus-edit-triage"
+      ],
+      "display_name": "Edit Triage",
+      "short_description": "Verify edits, route escalations",
+      "default_prompt": "Use $cn-edit-triage to process edit requests, fix what agents can confirm, and escalate only unresolved cases."
+    },
+    "cn-update-manager": {
+      "legacy_ids": [
+        "cellnucleus-update-manager"
+      ],
+      "display_name": "Update Manager",
+      "short_description": "Propagate edits sitewide",
+      "default_prompt": "Use $cn-update-manager to inspect changed files, run the required follow-up generators and audits, and prepare the site for deployment."
+    }
+  },
+  "queues": {
+    "canonical": {
+      "review_edit": "Review edit",
+      "video_brief": "Video brief",
+      "site_update": "Site update",
+      "site_issue": "Site issue",
+      "seo": "SEO",
+      "general": "General"
+    },
+    "legacy_aliases": {
+      "review_correction": "review_edit",
+      "youtube_video_brief": "video_brief",
+      "site_update_sync": "site_update",
+      "seo_request": "seo",
+      "general_request": "general"
+    }
+  },
+  "banned_public_labels": [
+    "CellNucleus Site Ops",
+    "CellNucleus Review Refresh",
+    "CellNucleus SEO Audit",
+    "CellNucleus Video Marketing",
+    "CellNucleus Edit Triage",
+    "CellNucleus Update Manager"
+  ]
+}

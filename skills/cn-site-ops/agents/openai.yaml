@@ -1,0 +1,7 @@
+interface:
+  display_name: "Site Ops"
+  short_description: "Rescan, repair, deploy"
+  default_prompt: "Use $cn-site-ops to rescan the site, repair static regressions, and prepare or perform Aplus deployment."
+
+policy:
+  allow_implicit_invocation: true

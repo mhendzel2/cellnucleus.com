@@ -1,7 +1,0 @@
-interface:
-  display_name: "CellNucleus Update Manager"
-  short_description: "Propagate page edits through the site"
-  default_prompt: "Use $cellnucleus-update-manager to inspect changed files, run the required follow-up generators and audits, and prepare the site for deployment."
-
-policy:
-  allow_implicit_invocation: true

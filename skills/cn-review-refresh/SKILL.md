@@ -1,9 +1,9 @@
 ---
-name: cellnucleus-review-refresh
+name: cn-review-refresh
 description: Use this skill when nuclear review pages are thin, inaccurate, mismatched to the wrong Word document, or still read like placeholders. It covers mapping HTML review pages to the correct source `.docx`, regenerating summary pages from source documents, and fixing page-specific review templates that need richer summaries.
 ---
 
-# CellNucleus Review Refresh
+# Review Refresh
 
 ## Overview
 
