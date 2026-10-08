@@ -28,6 +28,20 @@
             -webkit-backdrop-filter: blur(18px);
             backdrop-filter: blur(18px);
         }
+        .site-nav {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            padding: 0.25rem;
+        }
+        @media (min-width: 768px) {
+            .site-nav {
+                display: inline-flex;
+            }
+        }
         .catalog-card {
             transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
         }
@@ -132,18 +146,23 @@
             }
         }
     </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
 </head>
 <body class="min-h-screen">
     <header class="border-b border-slate-200 bg-white/85 backdrop-filter backdrop-blur">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
             <a href="index.html" class="flex items-center gap-3 text-slate-950">
-                <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                    <i class="fas fa-atom"></i>
-                </span>
+                <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
                 <span class="text-lg font-semibold">CellNucleus.com</span>
             </a>
-            <nav class="hidden items-center gap-6 md:flex">
-                <a href="index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Home</a><a href="reviews_index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">All Reviews</a><a href="research_reviews_directory.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Research Directory</a><a href="downloads.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Downloads</a>
+            <nav class="site-nav hidden md:flex">
+                <a href="index.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Home</a>
+                <a href="reviews_index.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Reviews</a>
+                <a href="hypothesis_reviews_index.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Hypothesis</a>
+                <a href="research_reviews_directory.html" class="rounded-full bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm">Research</a>
+                <a href="structures_enhanced.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Nuclear Structure</a>
+                <a href="downloads.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Downloads</a>
             </nav>
         </div>
     </header>
@@ -153,7 +172,7 @@
                 <div class="max-w-4xl">
                     <div class="mb-5 inline-flex items-center gap-3 rounded-full bg-white/15 px-4 py-2 text-sm font-medium">
                         <i class="fas fa-compass"></i>
-                        <span>84 review pages across 8 categories</span>
+                        <span>62 review pages across 8 categories</span>
                     </div>
                     <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Research Reviews Directory</h1>
                     <p class="mt-4 max-w-3xl text-lg text-white/85">Browse the CellNucleus review collection by topic and category.</p>
@@ -162,29 +181,48 @@
         </section>
         
         <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
-                <div class="space-y-8">
-                    <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+            <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
                         <h2 class="text-2xl font-bold text-slate-950">Explore the Review Collection</h2>
                         <p class="mt-4 max-w-3xl text-base leading-7 text-slate-700">
                             Use this directory to browse the full CellNucleus review collection by topic and move quickly between category pages and the complete review index.
                         </p>
-                    </section>
-                    <section>
-                        <div class="mb-6 flex items-center justify-between gap-4">
-                            <h2 class="text-2xl font-bold text-slate-950">Category Directory</h2>
-                            <a href="reviews_index.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open complete review index</a>
+                    </div>
+                    <dl class="grid min-w-full grid-cols-2 gap-3 text-sm text-slate-600 sm:min-w-0 sm:grid-cols-4">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Reviews</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">62</dd>
                         </div>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            
-            <article class="catalog-card rounded-3xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Core</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">59</dd>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Editions</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">3</dd>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Categories</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">8</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+            <section class="mt-10">
+                <div class="mb-6 flex items-center justify-between gap-4">
+                    <h2 class="text-2xl font-bold text-slate-950">Category Directory</h2>
+                    <a href="reviews_index.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open complete review index</a>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="catalog-card rounded-3xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-dna"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#0e7490">
+                        <img src="assets/images/category-icons/chromatin-architecture.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Chromatin Architecture &amp; Dynamics</h2>
-                        <p class="text-sm text-slate-600">17 review pages</p>
+                        <p class="text-sm text-slate-600">11 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">Reviews in this section focus on how chromatin is folded, remodeled, and interpreted across scales, from nucleosomes to whole-genome architecture.</p>
@@ -192,16 +230,14 @@
                     <a href="chromatin_architecture_dynamics_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#chromatin" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-emerald-200 bg-emerald-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-emerald-200 bg-emerald-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-pen-nib"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#047857">
+                        <img src="assets/images/category-icons/epigenetics-gene-regulation.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Epigenetics &amp; Gene Regulation</h2>
-                        <p class="text-sm text-slate-600">12 review pages</p>
+                        <p class="text-sm text-slate-600">9 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">This group collects reviews on histone modification systems, epigenetic memory, transcriptional regulation, and gene expression control in the nucleus.</p>
@@ -209,16 +245,14 @@
                     <a href="epigenetics_gene_regulation_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#epigenetics" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-fuchsia-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-fuchsia-200 bg-fuchsia-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-circle-nodes"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#7c3aed">
+                        <img src="assets/images/category-icons/nuclear-bodies.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Nuclear Bodies &amp; Compartments</h2>
-                        <p class="text-sm text-slate-600">17 review pages</p>
+                        <p class="text-sm text-slate-600">12 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">These reviews cover classical nuclear bodies, phase-separated compartments, and the structural logic of membraneless organization inside the nucleus.</p>
@@ -226,16 +260,14 @@
                     <a href="nuclear_bodies_compartments_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#bodies" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-rose-200 bg-rose-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-rose-200 bg-rose-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-shield-halved"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#dc2626">
+                        <img src="assets/images/category-icons/dna-repair-replication.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">DNA Repair &amp; Replication</h2>
-                        <p class="text-sm text-slate-600">9 review pages</p>
+                        <p class="text-sm text-slate-600">7 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">This category brings together repair, replication, checkpoint, and genome stability reviews spanning basal pathways through disease-relevant stress states.</p>
@@ -243,16 +275,14 @@
                     <a href="dna_repair_replication_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#dna" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-layer-group"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#ea580c">
+                        <img src="assets/images/category-icons/envelope-lamins.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Nuclear Envelope &amp; Lamins</h2>
-                        <p class="text-sm text-slate-600">4 review pages</p>
+                        <p class="text-sm text-slate-600">3 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">Envelope-centered reviews explore the mechanics and signaling roles of the nuclear boundary, lamins, and pore assemblies that shape nuclear identity.</p>
@@ -260,16 +290,14 @@
                     <a href="nuclear_envelope_lamins_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#envelope" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-indigo-200 bg-indigo-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-indigo-200 bg-indigo-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-arrow-right-arrow-left"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#2563eb">
+                        <img src="assets/images/category-icons/transport-dynamics.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Nuclear Transport &amp; Dynamics</h2>
-                        <p class="text-sm text-slate-600">6 review pages</p>
+                        <p class="text-sm text-slate-600">4 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">Reviews here focus on molecular traffic through and within the nucleus, including RNA transport, live-cell dynamics, and transport-linked organization.</p>
@@ -277,16 +305,14 @@
                     <a href="nuclear_transport_dynamics_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#transport" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-violet-200 bg-violet-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-violet-200 bg-violet-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-atom"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#9333ea">
+                        <img src="assets/images/category-icons/biophysics-mechanics.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Nuclear Biophysics &amp; Mechanics</h2>
-                        <p class="text-sm text-slate-600">9 review pages</p>
+                        <p class="text-sm text-slate-600">6 review pages</p>
                     </div>
                 </div>
                 <p class="mt-4 text-sm leading-6 text-slate-700">These reviews emphasize physical models, rheology, mechanics, crowding, and other quantitative frameworks for nuclear structure and function.</p>
@@ -294,12 +320,10 @@
                     <a href="nuclear_biophysics_mechanics_category.html" class="text-sm font-semibold text-slate-950 transition hover:text-slate-700">Open category page</a>
                     <a href="reviews_index.html#biophysics" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
-            </article>
-            
-            <article class="catalog-card rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+            </article><article class="catalog-card rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas fa-stethoscope"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:#334155">
+                        <img src="assets/images/category-icons/disease-pathology.svg" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">Disease &amp; Pathology</h2>
@@ -312,17 +336,15 @@
                     <a href="reviews_index.html#disease" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
             </article>
-            
-                        </div>
-                    </section>
-                    <section>
-                        <div class="mb-6">
-                            <h2 class="text-2xl font-bold text-slate-950">Featured Review Pages</h2>
-                            <p class="mt-2 text-sm text-slate-600">A selection of prominent, expanded, and recently updated reviews.</p>
-                        </div>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+                </div>
+            </section>
+            <section class="mt-10">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-950">Featured Review Pages</h2>
+                    <p class="mt-2 text-sm text-slate-600">A selection of prominent, expanded, and recently updated reviews.</p>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
@@ -336,9 +358,7 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
@@ -352,9 +372,7 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
@@ -368,9 +386,7 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
@@ -384,9 +400,7 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
@@ -400,25 +414,7 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Repair Pathway Crosstalk Review (Updated)</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dna repair pathway crosstalk ().</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
-                <a href="nuclear_biology_reviews/reviews/dna-repair-pathway-crosstalk-review-updated.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
@@ -432,68 +428,37 @@
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
-        </article>
-    
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+        </article><article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
+                
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">4D Genome Organization Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for 4d genome organization.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">4D Nucleome Critical Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for 4d nucleome.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/4d-genome-organization-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                <a href="nuclear_biology_reviews/reviews/4d-nucleome-critical-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
+                    Open review
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </article><article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
+                
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Base Excision Repair Critical Review</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for base excision repair.</p>
+            <div class="mt-5 flex items-center justify-between gap-4">
+                <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
+                <a href="nuclear_biology_reviews/reviews/base-excision-repair-critical-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
                     Open review
                     <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </article>
-    
-                        </div>
-                    </section>
                 </div>
-                <aside class="space-y-6">
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Summary</h2>
-                        <dl class="mt-4 space-y-3 text-sm text-slate-600">
-                            <div class="flex items-center justify-between">
-                                <dt>Review pages</dt>
-                                <dd class="font-semibold text-slate-950">84</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Core reviews</dt>
-                                <dd class="font-semibold text-slate-950">70</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Additional editions</dt>
-                                <dd class="font-semibold text-slate-950">14</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Category pages</dt>
-                                <dd class="font-semibold text-slate-950">8</dd>
-                            </div>
-                        </dl>
-                    </section>
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Next Steps</h2>
-                        <div class="mt-4 space-y-3 text-sm">
-                            <a href="downloads.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Open downloads</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="working_navigation_hub.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Legacy navigation hub</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="structures_enhanced.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Structures resource</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
-                    </section>
-                </aside>
-            </div>
+            </section>
         </section>
     
     </main>
@@ -501,6 +466,8 @@
         <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
             <p>CellNucleus.com review catalog covering chromatin, transport, repair, nuclear bodies, and related topics.</p>
         </div>
-    </footer>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
 </body>
 </html>

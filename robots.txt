@@ -7,4 +7,4 @@ Disallow: /agent_taskforce.html
 Disallow: /admin/
 Disallow: /taskforce_submit.php
 
-Sitemap: https://nuclear-biology.github.io/reviews/sitemap.xml
+Sitemap: https://cellnucleus.com/sitemap.xml

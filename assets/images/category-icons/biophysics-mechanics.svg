@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Nuclear biophysics and mechanics icon</title>
+  <desc id="desc">A transparent deformable nucleus under force with an internal polymer mesh.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M152 252c0-72 62-118 136-106 66 11 98 72 76 136-20 58-82 88-146 72-44-12-66-50-66-102Z" stroke="#f5d0fe" stroke-width="20"/>
+    <path d="M72 254h82M118 216l-46 38 46 38" stroke="#ffffff" stroke-width="17"/>
+    <path d="M440 254h-82M394 216l46 38-46 38" stroke="#ffffff" stroke-width="17"/>
+    <path d="M206 216l94 72M224 310l86-108M190 270l150-18" stroke="#fef3c7" stroke-width="9"/>
+  </g>
+  <g fill="#bae6fd">
+    <circle cx="214" cy="212" r="11"/>
+    <circle cx="304" cy="206" r="10"/>
+    <circle cx="338" cy="274" r="11"/>
+    <circle cx="232" cy="324" r="10"/>
+  </g>
+</svg>

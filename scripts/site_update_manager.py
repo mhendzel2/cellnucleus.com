@@ -12,6 +12,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_DIR = Path("nuclear_biology_reviews/reviews")
+HYPOTHESIS_REVIEW_DIR = Path("hypothesis_reviews")
+HYPOTHESIS_UPDATE_FILES = {
+    "hypothesis_reviews_index.html",
+    "hypothesis_reviews_updates.html",
+    "hypothesis_reviews/data/literature-updates.json",
+    "hypothesis_reviews/data/literature-topic-queries.json",
+}
 IGNORE_PREFIXES = (
     ".git/",
     ".secrets/",
@@ -105,6 +112,8 @@ def is_relevant_change(path: str) -> bool:
         return True
     if path.startswith("nuclear_biology_reviews/reviews/"):
         return True
+    if path.startswith("hypothesis_reviews/") or path in HYPOTHESIS_UPDATE_FILES:
+        return True
     if path == "robots.txt":
         return True
     if "/" not in path and Path(path).suffix.lower() in PAGE_EXTENSIONS:
@@ -144,6 +153,10 @@ def build_plan(changed_files: list[str], deploy_requested: bool) -> list[Planned
 
     page_change = any_suffix(changed_files, PAGE_EXTENSIONS)
     review_page_change = has_prefix(changed_files, str(REVIEW_DIR))
+    hypothesis_review_change = (
+        has_prefix(changed_files, str(HYPOTHESIS_REVIEW_DIR))
+        or any(path in HYPOTHESIS_UPDATE_FILES for path in changed_files)
+    )
     source_doc_change = has_prefix(changed_files, "Reviews_useredit")
     mapping_change = "docs/file-mapping.json" in changed_files
     catalog_generator_change = "scripts/generate_catalog_pages.py" in changed_files
@@ -173,6 +186,19 @@ def build_plan(changed_files: list[str], deploy_requested: bool) -> list[Planned
                 title="Audit review template/topic consistency",
                 reason="Source-linked review pages may need a post-refresh template check.",
                 command=(sys.executable, "scripts/review_template_audit.py"),
+            ),
+        )
+
+    if hypothesis_review_change:
+        add_action(
+            actions,
+            seen,
+            PlannedAction(
+                key="hypothesis-update-render",
+                title="Refresh hypothesis-review evidence-update pages",
+                reason="A hypothesis review, its public update ledger, or its query registry changed.",
+                command=(sys.executable, "scripts/hypothesis_review_update_system.py", "--render", "--root", "."),
+                writes_files=True,
             ),
         )
 

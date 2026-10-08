@@ -1,22 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-  <title id="title">Nuclear bodies review placeholder image</title>
-  <desc id="desc">Gradient illustration used as a local placeholder for the nuclear bodies overview image.</desc>
+  <title id="title">Nuclear bodies and compartments illustration</title>
+  <desc id="desc">A nucleus with visually distinct nucleolus, nuclear speckles, paraspeckle-like bodies, Cajal bodies, and PML-like foci.</desc>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4c1d95"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#db2777"/>
+    <linearGradient id="bg" x1="82" y1="42" x2="1120" y2="636" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4c1d95"/>
+      <stop offset="0.52" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#db2777"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="675" fill="url(#bg)"/>
-  <g>
-    <circle cx="360" cy="260" r="110" fill="#ffffff" fill-opacity="0.18"/>
-    <circle cx="640" cy="220" r="72" fill="#ffffff" fill-opacity="0.28"/>
-    <circle cx="790" cy="360" r="96" fill="#ffffff" fill-opacity="0.22"/>
-    <circle cx="530" cy="400" r="145" fill="#ffffff" fill-opacity="0.14"/>
+  <ellipse cx="600" cy="338" rx="430" ry="246" fill="#ffffff" opacity="0.10"/>
+  <ellipse cx="600" cy="338" rx="378" ry="210" fill="none" stroke="#f5d0fe" stroke-width="18" opacity="0.78"/>
+  <circle cx="462" cy="320" r="94" fill="#fef3c7" opacity="0.92"/>
+  <circle cx="700" cy="230" r="56" fill="#bae6fd" opacity="0.95"/>
+  <circle cx="776" cy="414" r="78" fill="#fbcfe8" opacity="0.92"/>
+  <circle cx="360" cy="440" r="42" fill="#c4b5fd" opacity="0.96"/>
+  <circle cx="862" cy="318" r="36" fill="#ddd6fe" opacity="0.93"/>
+  <g fill="#ffffff" opacity="0.84">
+    <circle cx="570" cy="450" r="13"/>
+    <circle cx="604" cy="478" r="10"/>
+    <circle cx="632" cy="420" r="9"/>
+    <circle cx="354" cy="250" r="11"/>
+    <circle cx="392" cy="228" r="8"/>
+    <circle cx="864" cy="244" r="10"/>
+    <circle cx="902" cy="270" r="8"/>
   </g>
-  <g fill="#ffffff">
-    <text x="90" y="560" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Nuclear Bodies Overview</text>
-    <text x="92" y="610" font-family="Inter, Arial, sans-serif" font-size="24" opacity="0.82">Local placeholder image added during link repair</text>
-  </g>
+  <path d="M290 534c160 82 420 90 618 0" fill="none" stroke="#f5d0fe" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
 </svg>

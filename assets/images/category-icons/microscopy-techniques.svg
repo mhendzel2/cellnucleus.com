@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Advanced microscopy and techniques icon</title>
+  <desc id="desc">A transparent microscope objective resolving nuclear fluorescence foci.</desc>
+  <path d="M178 106h82v142h-82z" fill="#ecfeff"/>
+  <path d="M160 244h116l24 62H136z" fill="#cffafe"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M284 160l46 34-48 66" stroke="#ecfeff" stroke-width="22"/>
+    <path d="M126 374h260" stroke="#ecfeff" stroke-width="24"/>
+    <path d="M212 306c42-48 108-48 150 0" stroke="#fef3c7" stroke-width="12"/>
+    <ellipse cx="316" cy="306" rx="72" ry="48" stroke="#a7f3d0" stroke-width="12"/>
+  </g>
+  <g fill="#f0fdf4">
+    <circle cx="284" cy="294" r="11"/>
+    <circle cx="332" cy="282" r="10"/>
+    <circle cx="354" cy="318" r="9"/>
+    <circle cx="304" cy="330" r="8"/>
+  </g>
+</svg>

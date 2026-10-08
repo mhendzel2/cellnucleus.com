@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Research Source Viewer | CellNucleus.com</title>
-    <meta name="description" content="Read matched Deep Research source reviews online and submit structured correction suggestions.">
+    <title>Archived Word Draft Viewer | CellNucleus.com</title>
+    <meta name="description" content="Read preserved archived Word drafts that are not reconciled with revised HTML and remain scientifically unvalidated.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js"></script>
@@ -65,6 +65,9 @@
             margin: 0.75rem 0 0.75rem 1.25rem;
         }
     </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
+<style id="cn-viewer-nav-layout">@media(max-width:767px){body.cn-sidebar-mounted>header>div{flex-direction:column;align-items:flex-start;gap:.75rem;padding-top:4rem}body.cn-sidebar-mounted>header>div>nav:has(>a){padding-left:0!important;flex-wrap:wrap}}</style>
 </head>
 <body class="min-h-screen text-slate-900">
     <header class="border-b border-slate-200 bg-white/90 backdrop-filter backdrop-blur">
@@ -83,18 +86,18 @@
         </div>
     </header>
 
-    <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><aside id="cn-word-archive-status" class="cn-word-archive-warning" role="note" aria-label="Archived Word draft status"><strong>Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</strong><p>Source mapping confidence describes document-to-page correspondence. It is separate from scientific status. Read the revised HTML and <a href="review_audit.html">per-review audit</a> for the appraised scope.</p></aside>
         <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <div>
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Deep Research Source</p>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Archived Word draft</p>
                     <h1 id="reviewTitle" class="mt-2 text-3xl font-bold text-slate-950">Loading source review...</h1>
                     <p class="mt-2 text-sm text-slate-700">
                         Source document:
                         <span id="sourceDocName" class="font-semibold text-slate-900">-</span>
                     </p>
                     <p class="mt-1 text-sm text-slate-700">
-                        Match confidence:
+                        Source mapping confidence:
                         <span id="confidenceBadge" class="inline-flex rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-700">unknown</span>
                     </p>
                     <p class="mt-1 text-sm text-slate-700">
@@ -106,15 +109,9 @@
                     <a id="readSuggestLink" href="#suggestion-form" class="inline-flex items-center rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
                         <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
                     </a>
-                    <a id="downloadDocxLink" href="downloads.html" download class="inline-flex items-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-                        <i class="fas fa-download mr-2"></i>Download .docx
-                    </a>
-                    <a id="googleViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
-                        <i class="fab fa-google mr-2"></i>Google Viewer
-                    </a>
-                    <a id="officeViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">
-                        <i class="fas fa-file-word mr-2"></i>Office Viewer
-                    </a>
+                    <a id="downloadDocxLink" href="downloads.html" download class="inline-flex items-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
+                    <a id="googleViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" data-cn-word-archive="open" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Open Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Open Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
+                    <a id="officeViewerLink" href="downloads.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" data-cn-word-archive="open" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Open Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Open Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                 </div>
             </div>
         </section>
@@ -269,7 +266,18 @@
             const docPath = normalizeDocParam(rawDoc);
 
             if (!docPath) {
-                setStatus("Missing or invalid source document reference.", "error");
+                document.getElementById("reviewTitle").textContent = "Choose a source document";
+                setStatus("Choose a valid source document. Draft downloads and correction controls are unavailable until one is selected.", "warn");
+                document.querySelectorAll("#correctionForm input, #correctionForm textarea, #correctionForm button").forEach(function (control) {
+                    control.disabled = true;
+                });
+                ["downloadDocxLink", "googleViewerLink", "officeViewerLink", "readSuggestLink"].forEach(function (id) {
+                    const link = document.getElementById(id);
+                    link.removeAttribute("href");
+                    link.removeAttribute("download");
+                    link.setAttribute("aria-disabled", "true");
+                    link.setAttribute("tabindex", "-1");
+                });
                 return;
             }
 
@@ -310,8 +318,8 @@
                 document.getElementById("payloadJson").value = JSON.stringify(payload, null, 2);
                 document.getElementById("sourcePage").value = window.location.href;
 
-                if (window.location.protocol === "file:") {
-                    setStatus("Local file preview cannot submit to the review queue endpoint. Use Copy JSON or open the hosted page.", "warn");
+                if (window.location.protocol === "file:" || ["localhost", "127.0.0.1", "::1", "[::1]"].includes(window.location.hostname)) {
+                    setStatus("Submission is unavailable in this local preview. Use Copy JSON to retain your correction, or email cellnucleus@gnometrix.com.", "warn");
                     return;
                 }
                 form.submit();
@@ -345,5 +353,8 @@
 
         window.addEventListener("DOMContentLoaded", bootstrap);
     </script>
+<footer aria-label="Site ownership">
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
 </body>
 </html>

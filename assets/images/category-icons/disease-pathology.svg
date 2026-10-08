@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Disease and pathology icon</title>
+  <desc id="desc">A transparent distorted nucleus with damaged lamina, stress signal, and instability markers.</desc>
+  <path d="M150 258c0-78 68-136 148-120 58 12 94 52 94 108 0 80-66 132-146 132-60 0-96-46-96-120Z" fill="none" stroke="#e2e8f0" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190 192l48 44-30 44 48 24-12 52" fill="none" stroke="#f87171" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fde68a">
+    <circle cx="320" cy="202" r="15"/>
+    <circle cx="352" cy="292" r="13"/>
+    <circle cx="230" cy="308" r="11"/>
+  </g>
+  <path d="M346 124l20 48 52 4-40 34 13 50-45-28-45 28 13-50-40-34 52-4 20-48Z" fill="#facc15"/>
+</svg>

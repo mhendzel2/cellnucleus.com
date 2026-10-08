@@ -11,6 +11,33 @@ ROOT = Path(__file__).resolve().parents[1]
 REVIEW_DIR = ROOT / "nuclear_biology_reviews" / "reviews"
 MAPPING = json.loads((ROOT / "docs" / "file-mapping.json").read_text(encoding="utf-8"))
 
+DELETIONS_MAPPING = {
+    "4d-genome-organization-comprehensive-review.html": "4d-nucleome-critical-review.html",
+    "chromatin-architecture-dynamics-review.html": "chromatin_architecture_standardized_review.html",
+    "chromatin-biophysics-function-review.html": "chromatin_biophysics_comprehensive_review.html",
+    "nuclear-biophysical-properties-review.html": "nuclear_biophysics_comprehensive_review.html",
+    "enhanced_nuclear_biophysics_comprehensive_review.html": "nuclear_biophysics_comprehensive_review.html",
+    "heterochromatin-comprehensive-review-timeline.html": "heterochromatin-comprehensive-review.html",
+    "comparative-nuclear-organization-complete.html": "comparative-nuclear-organization-species-updated.html",
+    "comparative-nuclear-organization-comprehensive-review.html": "comparative-nuclear-organization-species-updated.html",
+    "dna-repair-pathway-crosstalk-complete.html": "dna_repair_crosstalk_standardized_review.html",
+    "dna-repair-pathway-crosstalk-review-updated.html": "dna_repair_crosstalk_standardized_review.html",
+    "epigenetic-inheritance-complete.html": "epigenetic-inheritance-mechanisms-review-updated.html",
+    "epigenetic-inheritance-comprehensive-review.html": "epigenetic-inheritance-mechanisms-review-updated.html",
+    "histone-h1-family-comprehensive-review.html": "histone-h1-family-enhanced-comprehensive-review.html",
+    "intranuclear-mrna-transport-review.html": "intranuclear_transport_comprehensive_review.html",
+    "intranuclear-rna-transport-imaging-review.html": "intranuclear_transport_comprehensive_review.html",
+    "nuclear-bodies-standardized.html": "nuclear-bodies-comprehensive-review.html",
+    "nuclear_bodies_standardized_review.html": "nuclear-bodies-comprehensive-review.html",
+    "nuclear-speckles-standardized.html": "nuclear-speckles-comprehensive-review.html",
+    "paraspeckles-standardized.html": "paraspeckles-comprehensive-review.html",
+    "nucleolus-comprehensive-review.html": "nucleolus_standardized_review.html",
+    "nuclear-microrheology-detailed-review.html": "nuclear-microrheology-enhanced-graphics.html",
+    "nuclear-pore-complex-comprehensive-review.html": "nuclear_pore_complex_standardized_review.html"
+}
+
+MAPPING.update(DELETIONS_MAPPING)
+
 ROOT_HTML_FILES = [
     path
     for path in ROOT.rglob("*.html")

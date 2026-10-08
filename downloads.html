@@ -3,79 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads - Source Documents | CellNucleus.com</title>
+    <meta name="description" content="Download archived Word drafts with incomplete scientific validation, alongside linked revised HTML review pages.">
+    <link rel="canonical" href="https://cellnucleus.com/downloads.html">
+    <title>Downloads - Archived Word Drafts | CellNucleus.com</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .sidebar-link:hover { background-color: #3b82f6; color: white; }
+        .site-nav {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.86);
+            padding: 0.25rem;
+        }
+        @media (min-width: 768px) {
+            .site-nav { display: inline-flex; }
+        }
+        .nav-link {
+            border-radius: 999px;
+            padding: 0.5rem 0.75rem;
+            color: #4b5563;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background 160ms ease, color 160ms ease;
+        }
+        .nav-link:hover { background: #f3f4f6; color: #111827; }
+        .nav-link-active { background: #eff6ff; color: #1d4ed8; }
         .download-item:hover { background-color: #f8fafc; border-color: #3b82f6; }
         .category-header { border-left: 4px solid #3b82f6; }
     </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
 </head>
 <body class="bg-gray-50 font-sans">
-    <div class="flex min-h-screen">
-        <!-- Sidebar -->
-        <div class="w-72 bg-white shadow-lg flex flex-col">
-            <!-- Logo Section -->
-            <div class="p-6 border-b border-gray-200">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-dna text-white text-lg"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-gray-900">Cellnucleus</h1>
-                        <p class="text-sm text-gray-600">Nuclear Biology Hub</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <nav class="flex-1 p-4 space-y-1">
-                <a href="index.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                    <i class="fas fa-home w-5"></i>
-                    <span>Home</span>
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
+                    <span class="text-lg font-semibold text-gray-900">CellNucleus.com</span>
                 </a>
-                <a href="structures_enhanced.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                    <i class="fas fa-atom w-5"></i>
-                    <span>Nuclear Structure</span>
-                </a>
-                <a href="video_gallery.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                    <i class="fas fa-microscope w-5"></i>
-                    <span>Microscopy</span>
-                </a>
-                <div class="space-y-1">
-                    <a href="research_reviews_directory.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                        <i class="fas fa-book w-5"></i>
-                        <span>Research Reviews</span>
-                        <i class="fas fa-chevron-right ml-auto text-sm"></i>
-                    </a>
-                </div>
-                <a href="downloads.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg bg-blue-500 text-white transition-colors">
-                    <i class="fas fa-download w-5"></i>
-                    <span>Downloads</span>
-                </a>
-                <a href="live_cell_enhanced.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                    <i class="fas fa-graduation-cap w-5"></i>
-                    <span>Educational Resources</span>
-                </a>
-                <a href="index.html" class="sidebar-link flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 transition-colors">
-                    <i class="fas fa-info-circle w-5"></i>
-                    <span>About</span>
-                </a>
-            </nav>
-
-            <!-- Footer -->
-            <div class="p-4 border-t border-gray-200">
-                <button class="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-600 transition-colors">
-                    <i class="fas fa-share-alt mr-2"></i>
-                    Share with Colleagues
-                </button>
-                <p class="text-xs text-gray-500 mt-2 text-center">Spread Nuclear Biology Knowledge</p>
+                <nav class="site-nav hidden md:flex">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="reviews_index.html" class="nav-link">Reviews</a>
+                    <a href="hypothesis_reviews_index.html" class="nav-link">Hypothesis</a>
+                    <a href="research_reviews_directory.html" class="nav-link">Research</a>
+                    <a href="structures_enhanced.html" class="nav-link">Nuclear Structure</a>
+                    <a href="downloads.html" class="nav-link nav-link-active">Downloads</a>
+                </nav>
             </div>
         </div>
+    </header>
 
-        <!-- Main Content -->
-        <div class="flex-1 p-8">
+    <main class="px-4 py-8 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <!-- Header -->
                 <div class="mb-8">
@@ -83,9 +65,9 @@
                         <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                         Cellnucleus.com
                     </div>
-                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Source Documents & Downloads</h1>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Archived Word Drafts & HTML Reviews</h1><aside id="cn-word-archive-status" class="cn-word-archive-warning" role="note" aria-label="Archived Word draft status"><strong>Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</strong><p>These original files are preserved for historical reference. Use the linked HTML reviews and <a href="review_audit.html">per-review audit</a> for the appraised text and stated source-access limits.</p></aside>
                     <p class="text-lg text-gray-600 max-w-3xl">
-                        Access original source documents for all nuclear biology reviews. Download Word documents and PDFs for offline reading, citation, and reference purposes.
+                        Browse 20 archived Word drafts and 4 linked HTML review pages. Original Word files remain unreconciled with the revised HTML and their scientific validation is incomplete.
                     </p>
                 </div>
 
@@ -103,92 +85,74 @@
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Chromosome Condensation: Mechanisms and Choreography</h3>
-                                    <p class="text-sm text-gray-600">PDF • 360 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 34.7 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Chromosome%20Condensation%3A%20Mechanisms%20and%20Choreograp....pdf" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Chromosome%20Condensation_%20Mechanisms%20and%20Choreograp.._.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Chromatin Biophysics and Function Review</h3>
-                                    <p class="text-sm text-gray-600">PDF • 700 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Chromatin%20Biophysics%20and%20Function%20Review_.pdf" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Chromatin%20Biophysics%20and%20Function%20Review_.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Chromatin Condensates: Existence and Function</h3>
-                                    <p class="text-sm text-gray-600">PDF • 329 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 31.4 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Chromatin%20Condensates%3A%20Existence%20and%20Function.pdf" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Chromatin%20Condensates_%20Existence%20and%20Function.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Euchromatin: Structure, Function, Regulation</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 5.9 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 5.9 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Euchromatin_%20Structure,%20Function,%20Regulation_.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Euchromatin_%20Structure,%20Function,%20Regulation_.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Heterochromatin Review: Depth and Citations</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 47 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 47.2 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Heterochromatin%20Review_%20Depth%20and%20Citations.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Heterochromatin%20Review_%20Depth%20and%20Citations.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Histone PTMs: Cell Biology Review</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 40 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 39.6 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Histone%20PTMs_%20Cell%20Biology%20Review.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Histone%20PTMs_%20Cell%20Biology%20Review.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Histone PTMs in Neurodegeneration</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 6.0 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Histone%20PTMs%20in%20Neurodegeneration_.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Histone%20PTMs%20in%20Neurodegeneration_.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Transcriptional Condensates: Models and Functions</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 31 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 31.4 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Transcriptional%20Condensates_%20Models%20and%20Functions.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Transcriptional%20Condensates_%20Models%20and%20Functions.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">The Orchestration of Eukaryotic Gene Expression</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 19 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 18.5 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/The%20Orchestration%20of%20Eukaryotic%20Gene%20Expression_%20R.._.docx" 
-                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/The%20Orchestration%20of%20Eukaryotic%20Gene%20Expression_%20R.._.docx"
+                                   class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                         </div>
                     </div>
@@ -205,72 +169,58 @@
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Bodies: Review and Update</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 6.0 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Bodies_%20Review%20and%20Update_.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nuclear%20Bodies_%20Review%20and%20Update_.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Speckles: Biology and Function</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 47 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 46.7 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Speckles_%20Biology%20and%20Function.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nuclear%20Speckles_%20Biology%20and%20Function.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Cajal Bodies: Biology and Function</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 36 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 36.0 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Cajal%20bodies_%20biology%20and%20function.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Cajal%20bodies_%20biology%20and%20function.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Cajal Bodies: Comprehensive Academic Review</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 6.0 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Cajal%20Bodies_%20Comprehensive%20Academic%20Review_.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Cajal%20Bodies_%20Comprehensive%20Academic%20Review_.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Paraspeckle Biology, Function, Regulation</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 42 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 41.9 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Paraspeckle%20Biology,%20Function,%20Regulation.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Paraspeckle%20Biology,%20Function,%20Regulation.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">PML Bodies: Biology and Function</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 41 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 41.2 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/PML%20Bodies_%20Biology%20and%20Function.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/PML%20Bodies_%20Biology%20and%20Function.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nucleolus: Cell Biology and Biochemistry</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 28 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 28.4 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nucleolus_%20Cell%20Biology%20and%20Biochemistry.docx" 
-                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nucleolus_%20Cell%20Biology%20and%20Biochemistry.docx"
+                                   class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                         </div>
                     </div>
@@ -287,42 +237,40 @@
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Microrheology: A Detailed Review</h3>
-                                    <p class="text-sm text-gray-600">PDF • 331 KB</p>
+                                    <p class="text-sm text-gray-600">HTML page &bull; 17.5 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Microrheology%3A%20A%20Detailed%20Review.pdf" 
+                                <a href="nuclear_biology_reviews/reviews/nuclear-microrheology-enhanced-graphics.html"
                                    class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
+                                    <i class="fas fa-download mr-2"></i>Open Review
                                 </a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Viscosity: Properties and Regulation</h3>
-                                    <p class="text-sm text-gray-600">PDF • 434 KB</p>
+                                    <p class="text-sm text-gray-600">HTML page &bull; 32.8 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Viscosity%3A%20Properties%20and%20Regulation.pdf" 
+                                <a href="nuclear_biology_reviews/reviews/nuclear-viscosity-properties-regulation.html"
                                    class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
+                                    <i class="fas fa-download mr-2"></i>Open Review
                                 </a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Macromolecular Crowding Review</h3>
-                                    <p class="text-sm text-gray-600">PDF • 453 KB</p>
+                                    <p class="text-sm text-gray-600">HTML page &bull; 33.9 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Macromolecular%20Crowding%20Review.pdf" 
+                                <a href="nuclear_biology_reviews/reviews/nuclear-macromolecular-crowding-review.html"
                                    class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
+                                    <i class="fas fa-download mr-2"></i>Open Review
                                 </a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Biophysics: Recent Decade Review</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 6.0 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Biophysics_%20Recent%20Decade%20Review_.docx" 
-                                   class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nuclear%20Biophysics_%20Recent%20Decade%20Review_.docx"
+                                   class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                         </div>
                     </div>
@@ -339,41 +287,35 @@
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Envelope: Structure and Dynamics</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 43 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 43.4 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Envelope_%20Structure%20and%20Dynamics.docx" 
-                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nuclear%20Envelope_%20Structure%20and%20Dynamics.docx"
+                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Lamina: Structure, Function, and Disease</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 6.0 MB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 6.0 MiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Lamina_%20Structure,%20Function,%20and%20Disease_.docx" 
-                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Lamina_%20Structure,%20Function,%20and%20Disease_.docx"
+                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Pore Complex Comprehensive Review</h3>
-                                    <p class="text-sm text-gray-600">DOCX • 45 KB</p>
+                                    <p class="text-sm text-gray-600">DOCX &bull; 44.5 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Pore%20Complex%20Comprehensive%20Review.docx" 
-                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
-                                </a>
+                                <a href="Reviews_useredit/Nuclear%20Pore%20Complex%20Comprehensive%20Review.docx"
+                                   class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors" data-cn-word-archive="download" title="Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete." aria-label="Download Word draft: Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete."><span class="cn-word-action-label">Download Word draft</span><span class="cn-word-link-status">Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</span></a>
                             </div>
                             <div class="download-item flex items-center justify-between p-4 border border-gray-200 rounded-lg transition-all">
                                 <div class="flex-1">
                                     <h3 class="font-medium text-gray-900">Nuclear Transport and Compartment Dynamics</h3>
-                                    <p class="text-sm text-gray-600">PDF • 477 KB</p>
+                                    <p class="text-sm text-gray-600">HTML page &bull; 32.4 KiB</p>
                                 </div>
-                                <a href="https://www.genspark.ai/aidrive/files/CellnucleusReviews/Nuclear%20Transport%20and%20Compartment%20Dynamics.pdf" 
+                                <a href="nuclear_biology_reviews/reviews/nuclear-transport-compartment-dynamics.html"
                                    class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
-                                    <i class="fas fa-download mr-2"></i>Download
+                                    <i class="fas fa-download mr-2"></i>Open Review
                                 </a>
                             </div>
                         </div>
@@ -387,15 +329,17 @@
                         <div>
                             <h3 class="font-medium text-blue-900 mb-2">Download Information</h3>
                             <p class="text-blue-800 text-sm">
-                                These are the original source documents used to create the HTML review pages on this website. 
-                                Download these files for offline reading, detailed citations, or academic reference purposes. 
-                                All documents are provided in their original format with complete bibliographies and figures.
+                                These are preserved original Word drafts. They have not been reconciled with the revised HTML review pages.
+                                Use these files as historical drafts; consult revised HTML and the audit before relying on their scientific claims or citations.
+                                Original bibliographies and figures are preserved; their accuracy, currency and reuse rights remain unvalidated.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+    </main>
+<footer aria-label="Site ownership">
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
 </body>
 </html>

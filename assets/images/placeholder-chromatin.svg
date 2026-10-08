@@ -1,22 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-  <title id="title">Chromatin architecture review placeholder image</title>
-  <desc id="desc">Gradient illustration used as a local placeholder for the chromatin architecture review image.</desc>
+  <title id="title">Chromatin architecture illustration</title>
+  <desc id="desc">Nucleus-scale chromatin organization showing nucleosomes, loop domains, compartment colors, and a chromosome-territory boundary.</desc>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f766e"/>
-      <stop offset="50%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+    <linearGradient id="bg" x1="72" y1="32" x2="1120" y2="642" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset="0.54" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="fiber" x1="178" y1="232" x2="1018" y2="404" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ccfbf1"/>
+      <stop offset="0.45" stop-color="#bfdbfe"/>
+      <stop offset="1" stop-color="#ddd6fe"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="675" fill="url(#bg)"/>
-  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.42">
-    <path d="M140 190c120-120 280-120 400 0s280 120 400 0" stroke-width="20"/>
-    <path d="M140 280c120-120 280-120 400 0s280 120 400 0" stroke-width="14"/>
-    <path d="M140 365c120-120 280-120 400 0s280 120 400 0" stroke-width="10"/>
-    <path d="M140 445c120-120 280-120 400 0s280 120 400 0" stroke-width="7"/>
+  <ellipse cx="600" cy="338" rx="430" ry="250" fill="#ffffff" opacity="0.10"/>
+  <ellipse cx="600" cy="338" rx="382" ry="214" fill="none" stroke="#e0f2fe" stroke-width="18" opacity="0.72"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M178 310c94-135 232-135 326 0s232 135 326 0 160-96 218-18" stroke="url(#fiber)" stroke-width="30"/>
+    <path d="M178 418c94-106 232-106 326 0s232 106 326 0 160-76 218-14" stroke="#bae6fd" stroke-width="14" opacity="0.68"/>
+    <path d="M250 202c178-82 410-82 588 0" stroke="#cffafe" stroke-width="13" opacity="0.72"/>
+    <path d="M276 516c180 82 408 82 588 0" stroke="#ddd6fe" stroke-width="13" opacity="0.58"/>
   </g>
-  <g fill="#ffffff">
-    <text x="90" y="560" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Chromatin Architecture Review</text>
-    <text x="92" y="610" font-family="Inter, Arial, sans-serif" font-size="24" opacity="0.82">Local placeholder image added during link repair</text>
+  <g fill="#fef3c7" stroke="#0f172a" stroke-opacity="0.18" stroke-width="4">
+    <circle cx="224" cy="288" r="23"/>
+    <circle cx="286" cy="238" r="23"/>
+    <circle cx="352" cy="244" r="23"/>
+    <circle cx="420" cy="298" r="23"/>
+    <circle cx="492" cy="370" r="23"/>
+    <circle cx="566" cy="402" r="23"/>
+    <circle cx="642" cy="370" r="23"/>
+    <circle cx="718" cy="300" r="23"/>
+    <circle cx="790" cy="250" r="23"/>
+    <circle cx="860" cy="254" r="23"/>
+    <circle cx="932" cy="318" r="23"/>
+  </g>
+  <g fill="#ffffff" opacity="0.78">
+    <circle cx="374" cy="158" r="11"/>
+    <circle cx="430" cy="146" r="8"/>
+    <circle cx="766" cy="518" r="10"/>
+    <circle cx="826" cy="504" r="8"/>
   </g>
 </svg>

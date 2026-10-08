@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch CellNucleus video explainers on chromatin, nuclear mechanics, DNA repair, nuclear bodies, and microscopy resources.">
+    <link rel="canonical" href="https://cellnucleus.com/video_gallery.html">
     <title>Video Gallery - Advanced Nuclear Microscopy | CellNucleus.com</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
@@ -38,7 +40,10 @@
             height: 1px;
             margin: 3rem 0;
         }
+            .archive-clip video{aspect-ratio:auto;max-height:340px;object-fit:contain}
     </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Horizontal Banner Navigation -->
@@ -46,33 +51,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo and Site Name -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-atom text-white text-lg"></i>
-                    </div>
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
                     <div>
-                        <h1 class="text-xl font-bold text-gray-900">CellNucleus</h1>
+                        <span class="text-xl font-bold text-gray-900">CellNucleus</span>
                         <p class="text-sm text-gray-500">Nuclear Biology Hub</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Navigation Menu -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
-                    <a href="research_reviews_directory.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Research Reviews</a>
-                    <a href="live_cell_enhanced.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Microscopy</a>
-                    <a href="video_gallery.html" class="nav-link text-blue-600 font-semibold">Video Gallery</a>
-                    <a href="downloads.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Downloads</a>
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">About</a>
+                <nav class="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white p-1 text-sm font-semibold">
+                    <a href="index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                    <a href="reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Reviews</a>
+                    <a href="hypothesis_reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Hypothesis</a>
+                    <a href="research_reviews_directory.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Research</a>
+                    <a href="structures_enhanced.html" class="rounded-full bg-blue-50 px-3 py-2 text-blue-700">Nuclear Structure</a>
+                    <a href="downloads.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Downloads</a>
                 </nav>
-
-                <!-- Quick Links -->
-                <div class="hidden lg:flex items-center space-x-4 text-sm">
-                    <div class="text-gray-600">
-                        <i class="fab fa-youtube mr-1"></i>
-                        <a href="google_ultra_youtube_prompts.html" class="hover:text-blue-600">YouTube Studio</a>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
@@ -86,16 +80,115 @@
             <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Explore cutting-edge visualization of nuclear architecture through FIB-SEM and live-cell imaging
             </p>
-            <div class="flex items-center justify-center space-x-4 text-blue-100">
-                <i class="fas fa-microscope text-2xl"></i>
-                <span class="text-lg">Original data obtained from Janelia Farms</span>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-3 text-blue-100">
+                <span class="inline-flex items-center gap-2 text-lg">
+                    <i class="fas fa-microscope text-2xl"></i>
+                    Original data obtained from Janelia Farms
+                </span>
+                <span class="hidden md:block text-blue-200">•</span>
+                <span class="inline-flex items-center gap-2 text-lg">
+                    More details and references at
+                    <a href="https://cellnucleus.com" class="font-semibold underline text-white">CellNucleus.com</a>
+                </span>
             </div>
         </div>
     </section>
 
+    <!-- Latest Research & Explainers -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">
+                <i class="fas fa-play-circle text-indigo-500 mr-2"></i>
+                Latest Research Videos
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                New long-form explainers and Shorts-ready cuts; visit CellNucleus.com for figures, references, and downloadable review summaries.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <article class="video-container bg-white">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Reverse-Engineering the Spliceosome</h3>
+                    <p class="text-sm text-gray-600 mb-3">Biophysics of Cajal bodies and snRNP assembly pathways.</p>
+                    <video preload="none" controls playsinline class="w-full rounded-lg mb-4" poster="assets/images/inbox_2026-03-10/unnamed (11).jpg">
+                        <source src="assets/videos/final/inbox_2026-03-10/Reverse-Engineering_the_Spliceosome__The_Biophysics_of_the_Caja.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 font-medium"><i class="fas fa-microscope mr-1"></i> RNA Splicing</span>
+                        <a href="nuclear_biology_reviews/reviews/cajal-bodies-comprehensive-review.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">Related review</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="video-container bg-white">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Inside the 4D Nucleome</h3>
+                    <p class="text-sm text-gray-600 mb-3">Space–time genome folding, TAD/loop dynamics, and transcription control.</p>
+                    <video preload="none" controls playsinline class="w-full rounded-lg mb-4" poster="assets/images/inbox_2026-03-10/unnamed (12).jpg">
+                        <source src="assets/videos/final/inbox_2026-03-10/The_4D_Nucleome.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-medium"><i class="fas fa-dna mr-1"></i> 3D Genome</span>
+                        <a href="nuclear_biology_reviews/reviews/4d-nucleome-critical-review.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">Related review</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="video-container bg-white">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">The Crowding Paradox</h3>
+                    <p class="text-sm text-gray-600 mb-3">Why nuclei stay fluid under macromolecular crowding; condensates vs diffusion.</p>
+                    <video preload="none" controls playsinline class="w-full rounded-lg mb-4" poster="assets/images/inbox_2026-03-10/unnamed (13).jpg">
+                        <source src="assets/videos/final/inbox_2026-03-10/The_Crowding_Paradox__Beyond_Volume_Exclusion_in_the_Nucleus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-800 font-medium"><i class="fas fa-atom mr-1"></i> Biophysics</span>
+                        <a href="nuclear_biology_reviews/reviews/nuclear_biophysics_comprehensive_review.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">Related review</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="video-container bg-white">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">The Genome’s Hidden Language</h3>
+                    <p class="text-sm text-gray-600 mb-3">Enhancer–promoter grammar, regulatory hubs, and chromatin state logic.</p>
+                    <video preload="none" controls playsinline class="w-full rounded-lg mb-4" poster="assets/images/inbox_2026-03-10/unnamed (14).jpg">
+                        <source src="assets/videos/final/inbox_2026-03-10/The_Genome_s_Hidden_Language.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-800 font-medium"><i class="fas fa-language mr-1"></i> Regulation</span>
+                        <a href="nuclear_biology_reviews/reviews/histone-ptms-comprehensive-review.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">Related review</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="video-container bg-white">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">The Nucleus as a Lipid Hub</h3>
+                    <p class="text-sm text-gray-600 mb-3">Envelope biogenesis, lamina–lipid crosstalk, and mechanotransduction.</p>
+                    <video preload="none" controls playsinline class="w-full rounded-lg mb-4" poster="assets/images/inbox_2026-03-10/unnamed (15).jpg">
+                        <source src="assets/videos/final/inbox_2026-03-10/The_Nucleus_as_a_Lipid_Hub__Biogenesis_and_Mechanics.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 font-medium"><i class="fas fa-water mr-1"></i> Nuclear Envelope</span>
+                        <a href="nuclear_biology_reviews/reviews/nuclear-envelope-comprehensive-review.html" class="text-indigo-600 hover:text-indigo-800 font-semibold">Related review</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="mt-6 text-center text-sm text-gray-600">
+            Shorts versions will be added once rendered; YouTube channel link will appear here once live.
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"><div class="cn-review-status" style="margin:1rem 0;padding:1rem;border:1px solid #b45309;background:#fffbeb;color:#422006">Scientific status: unreviewed. Clip annotations, source identity and reuse permissions have not been authenticated. Four expired external embeds were withdrawn; other gallery clips were not all playback-tested. <a href="review_audit.html">Review audit</a>.</div>
+
         <!-- FIB-SEM Studies Section -->
         <section class="mb-16">
             <div class="text-center mb-12">
@@ -104,7 +197,7 @@
                     FIB-SEM Studies
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    High-resolution focused ion beam scanning electron microscopy revealing nuclear ultrastructure 
+                    High-resolution focused ion beam scanning electron microscopy revealing nuclear ultrastructure
                     and chromatin organization in unprecedented detail.
                 </p>
                 <div class="mt-4 flex items-center justify-center text-sm text-gray-500">
@@ -121,10 +214,7 @@
                             <i class="fas fa-dna text-purple-500 mr-2"></i>
                             Macrophage Nucleus - PcG Subregions
                         </h3>
-                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4" poster="">
-                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/48c7d8e7-7f20-42de-a35b-925b2a2d01c7?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregion_1.mp4%22&sig=Fc%2B1dJSdM99CR/Kr6hcaQ%2BXnaB5PErGCCrOUvEeRl04%3D" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="rounded-lg border border-gray-300 p-4 mb-4" style="overflow-wrap:anywhere"><p>Archived external clip unavailable: macrophagenucleusPcGsubregion_1.mp4.</p><p>The expired embed has been withdrawn. Its source identity, molecular interpretation and reuse rights remain unverified.</p></div>
                         <div class="space-y-2 text-sm text-gray-600">
                             <p><strong>Technique:</strong> FIB-SEM multiview reconstruction</p>
                             <p><strong>Sample:</strong> Macrophage nucleus showing Polycomb group (PcG) protein subregions</p>
@@ -150,10 +240,7 @@
                             <i class="fas fa-layer-group text-green-500 mr-2"></i>
                             PcG Subregion Analysis - View 3
                         </h3>
-                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
-                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/134c1d3f-4189-4284-8bd7-6b92098ae3a6?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregion3.mp4%22&sig=9wTWjjeeXaI/m9/iF5Q34QOT3QJ9AoRv0qnRItxKNGk%3D" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="rounded-lg border border-gray-300 p-4 mb-4" style="overflow-wrap:anywhere"><p>Archived external clip unavailable: macrophagenucleusPcGsubregion3.mp4.</p><p>The expired embed has been withdrawn. Its source identity, molecular interpretation and reuse rights remain unverified.</p></div>
                         <div class="space-y-2 text-sm text-gray-600">
                             <p><strong>Technique:</strong> FIB-SEM serial sectioning</p>
                             <p><strong>Focus:</strong> Alternative view of PcG subregion organization</p>
@@ -179,10 +266,7 @@
                             <i class="fas fa-eye text-indigo-500 mr-2"></i>
                             Shadow Volume Reconstruction
                         </h3>
-                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
-                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/3cbb31dd-2806-40c6-87ec-11aeaa6ca5ad?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22macrophagenucleusPcGsubregionshadow.mp4%22&sig=t4SI5W7A32O6KdrR1c1bRe3aBTc/LNy6LV9kpcPPI6U%3D" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="rounded-lg border border-gray-300 p-4 mb-4" style="overflow-wrap:anywhere"><p>Archived external clip unavailable: macrophagenucleusPcGsubregionshadow.mp4.</p><p>The expired embed has been withdrawn. Its source identity, molecular interpretation and reuse rights remain unverified.</p></div>
                         <div class="space-y-2 text-sm text-gray-600">
                             <p><strong>Technique:</strong> Shadow volume visualization</p>
                             <p><strong>Enhancement:</strong> 3D depth perception through shadow mapping</p>
@@ -208,10 +292,7 @@
                             <i class="fas fa-chart-line text-red-500 mr-2"></i>
                             HeLa Cell Analysis - Figure 1
                         </h3>
-                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-4">
-                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/c457a473-fe40-4984-a294-d99f09eba5b8?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22HeLaFigure1.mp4%22&sig=E5A9qwDYttHHUiFFT2d/2W0vfx0bY/5qasvaETlxdh8%3D" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="rounded-lg border border-gray-300 p-4 mb-4" style="overflow-wrap:anywhere"><p>Archived external clip unavailable: HeLaFigure1.mp4.</p><p>The expired embed has been withdrawn. Its source identity, molecular interpretation and reuse rights remain unverified.</p></div>
                         <div class="space-y-2 text-sm text-gray-600">
                             <p><strong>Cell Type:</strong> HeLa cervical cancer cell line</p>
                             <p><strong>Application:</strong> Publication-quality figure generation</p>
@@ -242,7 +323,7 @@
                     Live-Cell Imaging
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Dynamic visualization of nuclear processes in living cells, capturing real-time molecular 
+                    Dynamic visualization of nuclear processes in living cells, capturing real-time molecular
                     movements and structural changes within the nuclear environment.
                 </p>
             </div>
@@ -255,11 +336,11 @@
                             <i class="fas fa-dot-circle text-green-500 mr-2"></i>
                             Nuclear Speckles Dynamics
                         </h3>
-                        <video controls playsinline webkit-playsinline class="w-full rounded-lg mb-6">
-                            <source src="https://gensparkstorageprodwest.blob.core.windows.net/web-drive/ef557efa-1a6f-48c5-93cc-c743bd30f1e0/0b5bc60e-fee0-4244-8a2b-75ec713d0a13?se=2025-06-25T05%3A35%3A00Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22gfphela16_cell1.mp4%22&sig=G401f8Qh0YeFYae9a2OGDiNOticBIFnln5yDL8W%2B9Fw%3D" type="video/mp4">
+                        <video preload="none" controls playsinline webkit-playsinline class="w-full rounded-lg mb-6">
+                            <source src="assets/videos/archive/live-gfphela16.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-3">Technical Details</h4>
@@ -268,7 +349,7 @@
                                     <p><strong>Marker:</strong> GFP-labeled nuclear speckle proteins</p>
                                     <p><strong>Cell Line:</strong> HeLa cervical cancer cells</p>
                                     <p><strong>Duration:</strong> Time-lapse sequence</p>
-                                    <p><strong>File Size:</strong> 15.6 MB</p>
+                                    
                                 </div>
                             </div>
                             <div>
@@ -301,6 +382,161 @@
             </div>
         </section>
 
+        <!-- Live-Cell Archive Section (2005-2009 imaging archive) -->
+        <div class="section-divider"></div>
+        <section id="live-cell-archive" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-film text-amber-500 mr-3"></i>
+                    Live-Cell Archive
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Original time-lapse and 3D imaging from the Hendzel lab, 2005&ndash;2009: chromatin, PML bodies,
+                    splicing factor compartments, and nuclear mobility in living mammalian cells.
+                    Short clips are re-encoded for the web from the original acquisitions.
+                </p>
+                <p class="mt-3 text-sm text-gray-500">
+                    For the lecture these movies come from, see
+                    <a href="nanostructure_of_the_genome.html" class="text-blue-600 hover:text-blue-800 font-medium">Nanostructure of the Genome</a>.
+                </p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-10"><i class="fas fa-dna text-indigo-500 mr-2"></i>Chromatin dynamics in living cells</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-gfphela16.jpg">
+    <source src="assets/videos/archive/live-gfphela16.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">GFP-tagged nucleus, 3D time-lapse (HeLa)</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Time-lapse of a HeLa nucleus with bright nuclear foci; the box marks the imaged volume. Replaces the previous speckle clip.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-h1dsred-restored.jpg">
+    <source src="assets/videos/archive/live-h1dsred-restored.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">DsRed-H1 nucleus, orthogonal views</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Deconvolved time-lapse of a DsRed-H1-labelled nucleus shown with XY, XZ and YZ projections (identified from the file name).</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-h1-dsred.jpg">
+    <source src="assets/videos/archive/key-h1-dsred.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">DsRed-H1 nucleus, orthogonal views (second cell)</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">A second DsRed-H1 time-lapse in the same display format, showing the nucleus in three planes.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-mouse-hoe-dic.jpg">
+    <source src="assets/videos/archive/live-mouse-hoe-dic.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Mouse cells: DIC and Hoechst</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Mouse cells imaged by DIC (left) and Hoechst-stained chromatin (right).</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-hoe2.jpg">
+    <source src="assets/videos/archive/live-hoe2.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Hoechst-stained nuclei with DIC context</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Hoechst-stained nuclei (top) alongside the DIC view of the same field (bottom).</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-jcells.jpg">
+    <source src="assets/videos/archive/key-jcells.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">MO59J cell nucleus, live</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Wide-field time-lapse of an MO59J cell nucleus with a 10 &micro;m scale bar.</p>
+  </figcaption>
+</figure>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-10"><i class="fas fa-circle-notch text-green-600 mr-2"></i>Nuclear bodies &amp; splicing factor compartments</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-mcf7-pml.jpg">
+    <source src="assets/videos/archive/live-mcf7-pml.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">MCF7 cells: PML bodies</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Two-colour time-lapse of MCF7 cell nuclei with PML-body labelling (from the file name; PML/DsRed).</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-pml-sc35.jpg">
+    <source src="assets/videos/archive/live-pml-sc35.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">PML bodies and SC35 speckles</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Three-panel time-lapse comparing PML bodies, a nuclear overview, and SC35-labelled splicing factor compartments.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-3colour.jpg">
+    <source src="assets/videos/archive/live-3colour.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Three-colour nucleus (20 min series)</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Merged and single-channel views of one nucleus with multiple nuclear-body markers, 10 &micro;m scale bar.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-sfc-3dscd.jpg">
+    <source src="assets/videos/archive/live-sfc-3dscd.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">3D view of SC35 compartments</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Rotating 3D reconstruction of an elongated nucleus: DNA in blue, SC35-defined splicing factor compartments in green.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-tmk4-sc35.jpg">
+    <source src="assets/videos/archive/live-tmk4-sc35.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Splicing compartments in an Indian muntjac nucleus (3D)</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">3D rendering of an Indian muntjac nucleus with chromatin and SC35 compartments.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-mouse-3dtime.jpg">
+    <source src="assets/videos/archive/live-mouse-3dtime.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Mouse nucleus: 3D time series</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Side-by-side 3D renderings of one mouse nucleus (DNA blue; nuclear bodies green) over time.</p>
+  </figcaption>
+</figure>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-10"><i class="fas fa-cube text-purple-600 mr-2"></i>3D nuclear organization</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-dapi-decon.jpg">
+    <source src="assets/videos/archive/live-dapi-decon.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Deconvolved DAPI nucleus: surface rendering</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Surface-rendered 3D reconstruction of a DAPI-stained nucleus after deconvolution; segmented compartments coloured separately.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-tubulin-hoe.jpg">
+    <source src="assets/videos/archive/live-tubulin-hoe.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h4 class="font-semibold text-gray-900 text-sm mb-1">Tubulin and Hoechst</h4>
+    <p class="text-xs text-gray-600 leading-relaxed">Cells with a cytoplasmic tubulin label (green) and Hoechst-stained nuclei (red), showing the nucleus in its cytoskeletal context.</p>
+  </figcaption>
+</figure>
+            </div>
+        </section>
+
         <!-- Attribution Section -->
         <section class="bg-gray-100 rounded-lg p-8 text-center">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">
@@ -308,9 +544,10 @@
                 Data Attribution
             </h3>
             <p class="text-gray-700 mb-4">
-                All FIB-SEM datasets presented in this gallery were generously provided by 
-                <strong>Janelia Farms Research Campus</strong>, a world-leading institution in 
-                biological imaging and neuroscience research.
+                All FIB-SEM datasets presented in this gallery were generously provided by
+                <strong>Janelia Farms Research Campus</strong>, a world-leading institution in
+                biological imaging and neuroscience research. The Live-Cell Archive movies are original
+                Hendzel lab acquisitions (2005&ndash;2009).
             </p>
             <div class="flex items-center justify-center space-x-6 text-sm text-gray-600">
                 <div class="flex items-center">
@@ -343,12 +580,30 @@
                         <h4 class="font-semibold text-gray-900 mb-2">4D Nucleome Project</h4>
                         <p class="text-sm text-gray-600">Dynamic genome architecture and spatial organization</p>
                     </a>
-                    <a href="nuclear_biology_reviews/reviews/chromatin-architecture-dynamics-review.html" class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+                    <a href="nuclear_biology_reviews/reviews/chromatin_architecture_standardized_review.html" class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200">
                         <i class="fas fa-dna text-2xl text-purple-500 mb-3"></i>
                         <h4 class="font-semibold text-gray-900 mb-2">Chromatin Organization</h4>
                         <p class="text-sm text-gray-600">Structure and function of chromatin domains</p>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- YouTube Channel CTA -->
+        <section class="mb-12">
+            <div class="bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900">Watch on YouTube (channel coming soon)</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        We publish every CellNucleus explainer and Short on our channel. Bookmark this page; the channel link will appear here once live.
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">
+                        For references, slides, and full reviews, visit <a class="text-indigo-600 font-semibold" href="https://cellnucleus.com">CellNucleus.com</a>.
+                    </p>
+                </div>
+                <span class="inline-flex items-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-semibold opacity-60 cursor-not-allowed" aria-disabled="true">
+                    <i class="fab fa-youtube mr-2"></i> YouTube Channel
+                </span>
             </div>
         </section>
     </main>
@@ -367,6 +622,8 @@
                 </span>
             </div>
         </div>
-    </footer>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
 </body>
 </html>

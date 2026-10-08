@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Epigenetics and gene regulation icon</title>
+  <desc id="desc">A transparent illustration of histone marks, regulatory switching, and transcript output.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M84 238c54-78 126-78 180 0s126 78 180 0" stroke="#ffffff" stroke-width="25"/>
+    <path d="M142 156v-42h62" stroke="#d9f99d" stroke-width="15"/>
+    <path d="M370 338v48h-70" stroke="#d9f99d" stroke-width="15"/>
+    <path d="M216 356h132" stroke="#bbf7d0" stroke-width="16"/>
+    <path d="M244 394h104" stroke="#bbf7d0" stroke-width="16"/>
+    <path d="M260 132h66c36 0 66 30 66 66" stroke="#a7f3d0" stroke-width="12" opacity="0.82"/>
+  </g>
+  <g fill="#fef08a" stroke="#14532d" stroke-opacity="0.2" stroke-width="4">
+    <circle cx="120" cy="224" r="18"/>
+    <circle cx="182" cy="196" r="18"/>
+    <circle cx="244" cy="230" r="18"/>
+    <circle cx="308" cy="272" r="18"/>
+    <circle cx="370" cy="252" r="18"/>
+  </g>
+</svg>

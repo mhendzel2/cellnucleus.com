@@ -30,7 +30,7 @@ HEADER_TEMPLATE = """
                         <a href="{root_path}/index.html#microscopy" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Microscopy</a>
                         <a href="{root_path}/index.html#structure" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Structure</a>
                         <a href="{root_path}/downloads.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Downloads</a>
-                        <a href="{root_path}/index.html#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="{root_path}/about.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@ HEADER_TEMPLATE = """
                     <a href="{root_path}/index.html#microscopy" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Microscopy</a>
                     <a href="{root_path}/index.html#structure" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Structure</a>
                     <a href="{root_path}/downloads.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Downloads</a>
-                    <a href="{root_path}/index.html#about" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                    <a href="{root_path}/about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
                 </div>
             </div>
         </nav>
@@ -75,19 +75,20 @@ FOOTER_TEMPLATE = """
                         <li><a href="{root_path}/index.html#reviews" class="hover:text-white">Research Reviews</a></li>
                         <li><a href="{root_path}/index.html#microscopy" class="hover:text-white">Microscopy</a></li>
                         <li><a href="{root_path}/downloads.html" class="hover:text-white">Downloads</a></li>
-                        <li><a href="{root_path}/index.html#about" class="hover:text-white">About</a></li>
+                        <li><a href="{root_path}/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="{root_path}/review_audit.html" class="hover:text-white">Review audit</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact & Share</h4>
                     <div class="space-y-2 text-gray-300">
-                        <div><i class="fas fa-envelope mr-2"></i> mhendzel@ualberta.ca</div>
+                        <div><i class="fas fa-envelope mr-2" aria-hidden="true"></i> <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></div>
                         <div><i class="fas fa-globe mr-2"></i> www.cellnucleus.com</div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 CellNucleus.com - Nuclear Biology Research Hub.</p>
+                <p>CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>.</p>
             </div>
         </div>
     </footer>

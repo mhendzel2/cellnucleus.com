@@ -1,9 +1,9 @@
-# Nuclear Biology Reviews - Jekyll Configuration for GitHub Pages
+# CellNucleus - legacy optional Jekyll configuration (the candidate is served as static HTML)
 
-title: Nuclear Biology Reviews
-description: Comprehensive collection of 70 nuclear biology research reviews covering cellular structures, molecular mechanisms, and biological processes.
-baseurl: "/reviews" # Change this to your repository name
-url: "https://nuclear-biology.github.io" # Change this to your GitHub username
+title: CellNucleus.com
+description: Nuclear biology education owned and operated by Gnometrix Labs, with 62 indexed research pages and 17 hypothesis reviews.
+baseurl: ""
+url: "https://cellnucleus.com"
 
 # Build settings
 markdown: kramdown
@@ -18,15 +18,13 @@ plugins:
 
 # SEO settings
 lang: en_US
-author: Nuclear Biology Research Team
-twitter:
-  username: nuclear_biology
-  card: summary_large_image
+author: Gnometrix Labs
+email: cellnucleus@gnometrix.com
 
 social:
-  name: Nuclear Biology Reviews
+  name: CellNucleus.com
   links:
-    - https://github.com/nuclear-biology/reviews
+    - https://www.gnometrix.com/
 
 # Exclude files from processing
 exclude:
@@ -68,13 +66,13 @@ nav_links:
   - name: Home
     link: /
   - name: Reviews  
-    link: /#reviews
+    link: /reviews_index.html
   - name: Search
-    link: /#search
+    link: /index.html#site-search
   - name: About
-    link: /#about
-  - name: GitHub
-    link: https://github.com/nuclear-biology/reviews
+    link: /about.html
+  - name: Contact
+    link: mailto:cellnucleus@gnometrix.com
 
 # Google Analytics (uncomment and add your tracking ID)
 # google_analytics: G-XXXXXXXXXX
