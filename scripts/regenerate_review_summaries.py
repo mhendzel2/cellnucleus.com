@@ -504,6 +504,8 @@ def render_summary_page(page_name: str, doc: DocMeta, confidence: str) -> str:
     <meta name="description" content="{html.escape(description)}">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/cellnucleus-theme.css">
+    <script defer src="../../assets/js/site-navigation.js"></script>
     <style>
         body {{ font-family: 'Inter', sans-serif; }}
         .hero-gradient {{ background: linear-gradient(135deg, #0f766e 0%, #164e63 55%, #1e293b 100%); }}
@@ -536,22 +538,22 @@ def render_summary_page(page_name: str, doc: DocMeta, confidence: str) -> str:
     <section class="border-b border-slate-200 bg-white">
         <div class="mx-auto max-w-6xl px-4 py-5">
             <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <h2 class="text-lg font-semibold text-slate-900">Deep Research Source Review</h2>
+                <h2 class="text-lg font-semibold text-slate-900">Archived Word draft</h2>
                 <p class="mt-2 text-sm text-slate-700">
-                    This page is a concise summary of the full source review. Read online for the long-form version, submit corrections, or download the original document.
+                    Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.
                 </p>
                 <p class="mt-2 text-xs text-slate-600">
-                    Source file: {html.escape(doc.filename)} | Match confidence: {html.escape(confidence)}
+                    Source file: {html.escape(doc.filename)} | Document match confidence (mapping only): {html.escape(confidence)}
                 </p>
                 <div class="mt-4 flex flex-wrap gap-3">
-                    <a href="{viewer_href}" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
-                        <i class="fas fa-book-open mr-2"></i>Read Full Review Online
+                    <a href="{viewer_href}" data-cn-word-archive="open" class="inline-flex items-center rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                        <i class="fas fa-book-open mr-2"></i>Open archived Word draft
                     </a>
-                    <a href="{suggest_href}" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
-                        <i class="fas fa-pen-to-square mr-2"></i>Suggest Correction
+                    <a href="{suggest_href}" data-cn-word-archive="correction" class="inline-flex items-center rounded-md border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        <i class="fas fa-pen-to-square mr-2"></i>Suggest correction to archived Word draft
                     </a>
-                    <a href="{download_href}" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-                        <i class="fas fa-download mr-2"></i>Download Full Review (.docx)
+                    <a href="{download_href}" download data-cn-word-archive="download" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                        <i class="fas fa-download mr-2"></i>Download archived Word draft (.docx)
                     </a>
                 </div>
             </div>
@@ -559,7 +561,7 @@ def render_summary_page(page_name: str, doc: DocMeta, confidence: str) -> str:
     </section>
 
     <main class="mx-auto max-w-6xl px-4 py-10">
-        <section class="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
+        <section class="space-y-6">
             <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-teal-700">
                     <i class="fas fa-circle-info"></i>
@@ -569,17 +571,17 @@ def render_summary_page(page_name: str, doc: DocMeta, confidence: str) -> str:
 {abstract_markup}
                 </div>
             </article>
-            <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                 <h2 class="text-lg font-semibold text-slate-900">What This Summary Covers</h2>
                 <div class="mt-4 grid gap-3 section-grid">
 {section_links}
                 </div>
-            </aside>
+            </section>
         </section>
 
         <section class="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-5">
             <p class="text-sm text-amber-900">
-                This page now summarizes the matched Word review rather than relying on the generic placeholder template. The detailed evidence base, full argumentation, and reference trail remain in the source document.
+                Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.
             </p>
         </section>
 
@@ -590,7 +592,9 @@ def render_summary_page(page_name: str, doc: DocMeta, confidence: str) -> str:
 
     <footer class="border-t border-slate-200 bg-white">
         <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
-            <p>&copy; 2026 Nuclear Biology Reviews. Source-linked educational summaries for research use.</p>
+            <p>CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. Source-linked educational summaries for research use.</p>
+            <p>Archived Word draft — not reconciled with the revised HTML; scientific validation incomplete.</p>
+            <p><a href="../../about.html">About</a> &middot; <a href="../../review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
         </div>
     </footer>
 </body>

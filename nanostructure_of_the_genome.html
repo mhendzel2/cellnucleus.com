@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nanostructure of the Genome: EFTEM, particle tracking and live-cell imaging of splicing factor compartments, PML bodies and chromatin from the Hendzel lab.">
+    <link rel="canonical" href="https://cellnucleus.com/nanostructure_of_the_genome.html">
+    <title>Nanostructure of the Genome | CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        figure video { max-height: 380px; object-fit: contain; }
+        html { scroll-behavior: smooth; }
+        section[id] { scroll-margin-top: 4.5rem; }
+    </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
+                    <div>
+                        <span class="text-xl font-bold text-gray-900">CellNucleus</span>
+                        <p class="text-sm text-gray-500">Nuclear Biology Hub</p>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white p-1 text-sm font-semibold">
+                    <a href="index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                    <a href="reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Reviews</a>
+                    <a href="hypothesis_reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Hypothesis</a>
+                    <a href="research_reviews_directory.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Research</a>
+                    <a href="structures_enhanced.html" class="rounded-full bg-blue-50 px-3 py-2 text-blue-700">Nuclear Structure</a>
+                    <a href="downloads.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Downloads</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-gradient py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-blue-100 text-sm font-semibold tracking-wider uppercase mb-3">Hendzel lab &middot; imaging archive 2005&ndash;2009</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Nanostructure of the Genome</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Can the cell transmit mechanical information into the nuclear interior? Electron spectroscopic imaging,
+                bead tracking and live-cell movies of splicing factor compartments, PML bodies and chromatin.
+            </p>
+        </div>
+    </section>
+
+    <nav class="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 flex gap-1 overflow-x-auto py-2">
+<a href="#force" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">Force &amp; the nucleus</a>
+<a href="#eftem" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">EFTEM</a>
+<a href="#sfcs" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">Splicing factor compartments</a>
+<a href="#beads" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">Bead tracking</a>
+<a href="#pml" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">PML bodies</a>
+<a href="#actin" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">Actin FRAP</a>
+<a href="#genome" class="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900">Genome at the nanoscale</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section id="force" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 1</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Can force reach the nuclear interior?</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">The lecture opens with a question: can the cell transmit mechanical information into the nuclear interior? At the time, a prevailing view treated the nucleoplasm as a compartment that force could not cross. The experiments below test that by watching what moves inside living nuclei when the cell is placed under tension.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-mouse-montage.jpg">
+    <source src="assets/videos/archive/key-mouse-montage.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Mouse cell nuclei under tension</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Montage of nuclei in mouse cells alongside a phase-contrast field. The question driving the experiments: do nuclear structures move when the cell is stretched?</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-movie4.jpg">
+    <source src="assets/videos/archive/key-movie4.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Splicing factor compartments in a live nucleus</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">A GFP-labelled nucleus whose speckle-like compartments are followed over a timed sequence.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-sfc-tension.jpg">
+    <source src="assets/videos/archive/key-sfc-tension.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Tracking SFC movement</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Tracks of individual splicing factor compartments (SFCs) in a nucleus under tension; coloured paths trace the motion of selected compartments.</p>
+  </figcaption>
+</figure>
+  </div>
+</section>
+<section id="eftem" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 2</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Seeing the nucleus with energy-filtered TEM</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">Energy-filtered transmission electron microscopy (EFTEM) produces quantitative maps of the spatial distribution of DNA and protein in situ by imaging phosphorus and nitrogen separately. These maps give both a structural picture and a quantitative basis for modelling what moves where.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image3.jpg"><img src="assets/images/nanostructure/image3.jpg" alt="EFTEM of an interphase nucleus imaged at several electron energy losses, with phosphorus and nitrogen net maps (right)." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">EFTEM of an interphase nucleus imaged at several electron energy losses, with phosphorus and nitrogen net maps (right).</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image32.jpg"><img src="assets/images/nanostructure/image32.jpg" alt="Phosphorus (red/yellow) and nitrogen maps combined, showing chromatin, nuclear pore and interchromatin space." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Phosphorus (red/yellow) and nitrogen maps combined, showing chromatin, nuclear pore and interchromatin space.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image17.jpg"><img src="assets/images/nanostructure/image17.jpg" alt="Higher-magnification EFTEM series of nuclear material at different energy losses with net phosphorus map." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Higher-magnification EFTEM series of nuclear material at different energy losses with net phosphorus map.</figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-temseries.jpg">
+    <source src="assets/videos/archive/key-temseries.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Series of EFTEM sections</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">A short series of EFTEM images of nuclear material, stepping through successive images.</p>
+  </figcaption>
+</figure>
+  </div>
+</section>
+<section id="sfcs" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 3</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Splicing factor compartments move as a unit</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">Splicing factor compartments (SFCs) are the nuclear speckles that concentrate pre-mRNA splicing factors. Tracking them in living cells shows how they behave over minutes and how they relate to the surrounding chromatin and other nuclear bodies.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image5.jpg"><img src="assets/images/nanostructure/image5.jpg" alt="Triple-labelled nucleus showing splicing factor compartments (green) against chromatin and other nuclear structures." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Triple-labelled nucleus showing splicing factor compartments (green) against chromatin and other nuclear structures.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image16.jpg"><img src="assets/images/nanostructure/image16.jpg" alt="Example of directed SFC movement: a nucleus (left) and a mean-square-displacement plot of particle transport over successive frames (right)." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Example of directed SFC movement: a nucleus (left) and a mean-square-displacement plot of particle transport over successive frames (right).</figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-gfphela16.jpg">
+    <source src="assets/videos/archive/live-gfphela16.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">GFP-tagged HeLa nucleus</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Three-dimensional time-lapse of a HeLa nucleus; box shows the imaged volume.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/live-tmk4-sc35.jpg">
+    <source src="assets/videos/archive/live-tmk4-sc35.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">SC35 compartments in 3D</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">3D rendering of an Indian muntjac nucleus with chromatin and SC35-labelled compartments.</p>
+  </figcaption>
+</figure>
+  </div>
+</section>
+<section id="beads" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 4</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Particle tracking with 40 nm beads</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">Injected 40 nm fluorescent beads act as probes of the nuclear interior: how freely they move reports on the accessible space between chromatin structures. Computer simulations of diffusion through the measured phosphorus and nitrogen maps then test whether the observed structure explains that movement.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image18.jpg"><img src="assets/images/nanostructure/image18.jpg" alt="40 nm beads in a living nucleus: bead channel, merged image, DNA (Hoechst) and SC35 channels." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">40 nm beads in a living nucleus: bead channel, merged image, DNA (Hoechst) and SC35 channels.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image29.jpg"><img src="assets/images/nanostructure/image29.jpg" alt="Mean-squared displacement versus time for individual beads in two conditions (A, B)." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Mean-squared displacement versus time for individual beads in two conditions (A, B).</figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-beads-sc35.jpg">
+    <source src="assets/videos/archive/key-beads-sc35.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Beads, DNA and SC35 together</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Four-panel time-lapse (beads, DNA, SC35 and merge) from the bead-tracking experiments.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-beads-himag.jpg">
+    <source src="assets/videos/archive/key-beads-himag.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Bead movement at high magnification</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">High-magnification view of beads within a nucleus, with an enlarged inset (right).</p>
+  </figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image30.jpg"><img src="assets/images/nanostructure/image30.jpg" alt="Simulated diffusion through phosphorus maps: simulated apparent diffusion as a function of time." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Simulated diffusion through phosphorus maps: simulated apparent diffusion as a function of time.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image31.jpg"><img src="assets/images/nanostructure/image31.jpg" alt="The same simulation using nitrogen maps, for comparison." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">The same simulation using nitrogen maps, for comparison.</figcaption>
+</figure>
+  </div>
+</section>
+<section id="pml" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 5</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">PML bodies are confined to small nuclear volumes</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">PML bodies are tracked in living cells and their trajectories plotted in XY over time. Their movement is restricted to small regions of the nucleus, consistent with confinement by the surrounding nuclear architecture.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image22.jpg"><img src="assets/images/nanostructure/image22.jpg" alt="PML bodies (red) in living cell nuclei, with GFP (green) and DNA (blue); scale bar 10 &amp;micro;m." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">PML bodies (red) in living cell nuclei, with GFP (green) and DNA (blue); scale bar 10 &micro;m.</figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-fig4-pml.jpg">
+    <source src="assets/videos/archive/key-fig4-pml.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">PML body movement</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Time-lapse of PML bodies (red) within a nucleus; timestamps in minutes.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-page5.jpg">
+    <source src="assets/videos/archive/key-page5.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">Two-colour nucleus, 36-minute series</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">Single-channel and merged views of one nucleus followed across a 36-minute time course.</p>
+  </figcaption>
+</figure>
+<figure class="archive-clip bg-white rounded-xl shadow-md overflow-hidden">
+  <video class="w-full bg-black" controls muted loop playsinline preload="none" poster="assets/images/archive-posters/key-page3.jpg">
+    <source src="assets/videos/archive/key-page3.mp4" type="video/mp4">
+  </video>
+  <figcaption class="p-4">
+    <h3 class="font-semibold text-gray-900 text-sm mb-1">DIC and fluorescence of the same cell</h3>
+    <p class="text-xs text-gray-600 leading-relaxed">DIC view (left) and fluorescence of the nucleus (right) over a 24-minute series.</p>
+  </figcaption>
+</figure>
+  </div>
+</section>
+<section id="actin" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 6</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Nuclear actin dynamics by FRAP</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">Fluorescence recovery after photobleaching of GFP-actin compares wild-type and mutant actin and the effect of latrunculin, reporting on the mobility of nuclear and cytoplasmic pools.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image24.jpg"><img src="assets/images/nanostructure/image24.jpg" alt="FRAP time series of GFP-actin: wild type (WT) and the R62D mutant, shown in pseudocolour." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">FRAP time series of GFP-actin: wild type (WT) and the R62D mutant, shown in pseudocolour.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image25.jpg"><img src="assets/images/nanostructure/image25.jpg" alt="Recovery curves for GFP-actin, R62D actin and GFP-actin with latrunculin." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Recovery curves for GFP-actin, R62D actin and GFP-actin with latrunculin.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image26.jpg"><img src="assets/images/nanostructure/image26.jpg" alt="Normalized recovery of fluorescence in the nucleus and cytoplasm, with and without latrunculin A." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Normalized recovery of fluorescence in the nucleus and cytoplasm, with and without latrunculin A.</figcaption>
+</figure>
+  </div>
+</section>
+<section id="genome" class="mb-16">
+  <div class="mb-6">
+    <span class="text-xs font-semibold tracking-wider text-indigo-600 uppercase">Part 7</span>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-3">Organization of the genome at the nanoscale</h2>
+    <p class="text-gray-700 max-w-3xl leading-relaxed">Returning to EFTEM, the final part looks at how DNA is packed in situ. Quantitative phosphorus and nitrogen maps reveal chromatin fibre-scale organization, the interchromatin space, and how nuclear bodies sit within it. Together they argue that most chromatin is organized into higher-order structures in vivo.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image34.jpg"><img src="assets/images/nanostructure/image34.jpg" alt="Organization of the genome at the nanoscale: EFTEM maps and corresponding images" loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Organization of the genome at the nanoscale: colour EFTEM maps (A, B) with the corresponding grayscale images (C, D); arrows mark chromatin structures of interest.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden md:col-span-2">
+  <a href="assets/images/nanostructure/image39.jpg"><img src="assets/images/nanostructure/image39.jpg" alt="Nanostructure of the in situ genome: nuclei with splicing factor compartments (top) and EFTEM maps resolving chromatin and the interchromatin space (below)." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Nanostructure of the in situ genome: nuclei with splicing factor compartments (top) and EFTEM maps resolving chromatin and the interchromatin space (below).</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image40.jpg"><img src="assets/images/nanostructure/image40.jpg" alt="Imaging DNA molecules in situ: a PML body and surrounding chromatin in electron-spectroscopic images, with quantitative nitrogen and phosphorus maps." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Imaging DNA molecules in situ: a PML body and surrounding chromatin in electron-spectroscopic images, with quantitative nitrogen and phosphorus maps.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image41.jpg"><img src="assets/images/nanostructure/image41.jpg" alt="Chromatin in TSA-treated and untreated nuclei, with the interchromatin granule cluster labelled." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Chromatin in TSA-treated and untreated nuclei, with the interchromatin granule cluster labelled.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image42.jpg"><img src="assets/images/nanostructure/image42.jpg" alt="Chromatin fibre organization in a phosphorus/nitrogen map of a nuclear region." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Chromatin fibre organization in a phosphorus/nitrogen map of a nuclear region.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image43.jpg"><img src="assets/images/nanostructure/image43.jpg" alt="A second region at the same scale, showing the fibre-scale texture of interphase chromatin." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">A second region at the same scale, showing the fibre-scale texture of interphase chromatin.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image37.jpg"><img src="assets/images/nanostructure/image37.jpg" alt="Interchromatin space and chromatin domains in a combined phosphorus (red) and nitrogen (green) map." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Interchromatin space and chromatin domains in a combined phosphorus (red) and nitrogen (green) map.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden">
+  <a href="assets/images/nanostructure/image46.jpg"><img src="assets/images/nanostructure/image46.jpg" alt="Whole-nucleus EFTEM phosphorus/nitrogen map at lower magnification." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Whole-nucleus EFTEM phosphorus/nitrogen map at lower magnification.</figcaption>
+</figure>
+<figure class="bg-white rounded-xl shadow-md overflow-hidden md:col-span-2">
+  <a href="assets/images/nanostructure/image47.jpg"><img src="assets/images/nanostructure/image47.jpg" alt="Time series of a nucleus in phase contrast (top) and fluorescence (bottom), 287&amp;ndash;590 minutes." loading="lazy" class="w-full bg-gray-50"></a>
+  <figcaption class="p-4 text-sm text-gray-600 leading-relaxed">Time series of a nucleus in phase contrast (top) and fluorescence (bottom), 287&ndash;590 minutes.</figcaption>
+</figure>
+  </div>
+</section>
+
+        <section class="bg-gray-100 rounded-lg p-8 text-center mb-12">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3"><i class="fas fa-users text-blue-500 mr-2"></i>Acknowledgements</h3>
+            <p class="text-gray-700 max-w-3xl mx-auto">
+                Hendzel lab members Darin McDonald, Christi Andrin, Kirk McManus, Ellen Crawford, Carmen Tomkinson, Ming Ye,
+                Rohyun Sung and Jianxun Han, with John Th&rsquo;ng (Northwestern Ontario Regional Cancer Centre)
+                and Joan Turner (Cross Cancer Institute).
+            </p>
+        </section>
+
+        <div class="text-center">
+            <a href="video_gallery.html#live-cell-archive" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fas fa-film mr-2"></i> More movies in the Live-Cell Archive <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-lg font-semibold mb-2">CellNucleus.com</h3>
+            <p class="text-gray-400">Advancing nuclear biology through visualization and research</p>
+        </div>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
+</body>
+</html>

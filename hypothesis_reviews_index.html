@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse CellNucleus hypothesis reviews: evidence-based evaluations of chromatin structure, 3D genome organization, phase separation, nuclear bodies, and epigenetic memory hypotheses.">
+    <link rel="canonical" href="https://cellnucleus.com/hypothesis_reviews_index.html">
+    <title>Hypothesis Review Index | CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --page-ink: #0f172a;
+            --page-muted: #475569;
+        }
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 25%),
+                radial-gradient(circle at top right, rgba(99, 102, 241, 0.14), transparent 22%),
+                linear-gradient(180deg, #f8fafc 0%, #fff7ed 100%);
+            color: var(--page-ink);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.94);
+            border-color: rgba(255, 255, 255, 0.72);
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+        }
+        .site-nav {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            padding: 0.25rem;
+        }
+        @media (min-width: 768px) {
+            .site-nav { display: inline-flex; }
+        }
+        .nav-link {
+            border-radius: 999px;
+            padding: 0.5rem 0.75rem;
+            color: #475569;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background 160ms ease, color 160ms ease;
+        }
+        .nav-link:hover { background: #f1f5f9; color: #020617; }
+        .nav-link-active { background: #fff7ed; color: #b45309; }
+        .catalog-card {
+            cursor: pointer;
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+        .catalog-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
+            border-color: #f59e0b;
+        }
+        .bg-gradient-to-br {
+            background-color: var(--gradient-from, #0f172a);
+            background-image: linear-gradient(135deg, var(--gradient-from, #0f172a) 0%, var(--gradient-via, #1e293b) 52%, var(--gradient-to, #92400e) 100%);
+        }
+        .from-slate-900 { --gradient-from: #0f172a; }
+        .via-amber-900 { --gradient-via: #78350f; }
+        .to-slate-900 { --gradient-to: #0f172a; }
+        .bg-white\/15 { background-color: rgba(255, 255, 255, 0.18); }
+        .text-white\/85 { color: rgba(255, 255, 255, 0.92); }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .scroll-mt-24 { scroll-margin-top: 6rem; }
+        .tracking-\[0\.2em\] { letter-spacing: 0.2em; }
+        .tracking-\[0\.18em\] { letter-spacing: 0.18em; }
+        .text-slate-950 { color: #020617; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-600 { color: #475569; }
+        .text-slate-500 { color: #64748b; }
+        .border-slate-200 { border-color: #e2e8f0; }
+        .border-slate-300 { border-color: #cbd5e1; }
+        .border-amber-200 { border-color: #fde68a; }
+        .border-indigo-200 { border-color: #c7d2fe; }
+        .border-rose-200 { border-color: #fecdd3; }
+        .text-amber-700 { color: #b45309; }
+        .text-indigo-700 { color: #4338ca; }
+        .text-rose-700 { color: #be123c; }
+        .tag { border-radius: 999px; padding: 0.25rem 0.625rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+        .tag-written { background: #fffbeb; color: #92400e; }
+        .tag-video { background: #eef2ff; color: #4338ca; }
+        .tag-strong { background: #ecfdf5; color: #065f46; }
+        .tag-moderate { background: #fef3c7; color: #92400e; }
+        .tag-contested { background: #fff1f2; color: #991b1b; }
+        .tag-refuted { background: #f1f5f9; color: #334155; }
+    </style>
+<!-- HYPOTHESIS_REVIEW_META:START -->
+<link rel="stylesheet" href="assets/css/hypothesis-review-updates.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://cellnucleus.com/hypothesis_reviews_index.html",
+  "url": "https://cellnucleus.com/hypothesis_reviews_index.html",
+  "name": "CellNucleus Hypothesis Review Index",
+  "description": "Evidence-focused hypothesis reviews of chromatin structure, genome organization, and nuclear condensate models.",
+  "inLanguage": "en",
+  "dateModified": "2026-09-19",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CellNucleus.com",
+    "url": "https://cellnucleus.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gnometrix Labs",
+    "url": "https://cellnucleus.com"
+  },
+  "hasPart": {
+    "@type": "CollectionPage",
+    "name": "Curated research updates",
+    "url": "https://cellnucleus.com/hypothesis_reviews_updates.html"
+  },
+  "numberOfItems": 17,
+  "subjectOf": [
+    {
+      "@type": "Article",
+      "headline": "Cohesin reshapes replication fork contacts to aid fork slowing and reversal",
+      "url": "https://www.nature.com/articles/s41586-026-11034-0",
+      "datePublished": "2026-09-16"
+    },
+    {
+      "@type": "Article",
+      "headline": "Loss of SUMOylation drives aberrant PRC1 clustering and 3D genome rewiring independent of H3K27me3",
+      "url": "https://academic.oup.com/nar/article/54/17/gkag851/8787812",
+      "datePublished": "2026-09-07"
+    },
+    {
+      "@type": "Article",
+      "headline": "Chromatin accessibility classification of TAD boundaries discloses new architectural proteins",
+      "url": "https://academic.oup.com/nar/article/54/16/gkag796/8769954",
+      "datePublished": "2026-08-24"
+    },
+    {
+      "@type": "Article",
+      "headline": "RNA decay rate as a control point for long non-coding RNA function: a BRIC-based causal analysis of NEAT1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42628853/",
+      "datePublished": "2026-08-21"
+    }
+  ]
+}
+</script>
+<!-- HYPOTHESIS_REVIEW_META:END -->
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
+</head>
+<body class="min-h-screen">
+    <header class="border-b border-slate-200 bg-white bg-opacity-90 backdrop-filter backdrop-blur sticky top-0 z-40">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-3 text-slate-950">
+                <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
+                <span class="text-lg font-semibold">CellNucleus.com</span>
+            </a>
+            <nav class="site-nav hidden md:flex">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="reviews_index.html" class="nav-link">Reviews</a>
+                <a href="hypothesis_reviews_index.html" class="nav-link nav-link-active">Hypothesis</a>
+                <a href="research_reviews_directory.html" class="nav-link">Research</a>
+                <a href="structures_enhanced.html" class="nav-link">Nuclear Structure</a>
+                <a href="downloads.html" class="nav-link">Downloads</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900 text-white">
+            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="max-w-4xl">
+                    <div class="mb-5 inline-flex items-center gap-3 rounded-full bg-white/15 px-4 py-2 text-sm font-medium">
+                        <i class="fas fa-scale-balanced"></i>
+                        <span>17 hypothesis reviews across 3 evidence clusters</span>
+                    </div>
+                    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Hypothesis Review Index</h1>
+                    <p class="mt-4 max-w-3xl text-lg text-white/85">Browse evidence-based critiques of major nuclear biology hypotheses, organized by chromatin structure, 3D genome organization, and nuclear phase-separation models.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div class="glass rounded-3xl border border-white p-8 shadow-sm">
+                <div class="grid gap-8 lg:grid-cols-2">
+                    <div>
+                        <label for="hypothesis-search" class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Search hypothesis reviews</label>
+                        <input id="hypothesis-search" type="search" placeholder="Search by hypothesis, method, or nuclear structure" class="mt-3 w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-amber-500">
+                    </div>
+                    <dl class="grid grid-cols-3 gap-3 text-sm text-slate-600">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Reviews</dt>
+                            <dd class="mt-1 text-2xl font-bold text-slate-950">17</dd>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Clusters</dt>
+                            <dd class="mt-1 text-2xl font-bold text-slate-950">3</dd>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Videos</dt>
+                            <dd class="mt-1 text-2xl font-bold text-slate-950">3</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="mt-6 border-t border-slate-200 pt-6">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex-1">
+                            <label for="verdict-filter-slider" class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 block mb-1">Scientific review coverage</label>
+                            <span class="text-xs text-slate-500">Filter by completed audit scope; partial reviews still have unresolved claims.</span>
+                        </div>
+                        <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                            <div class="relative flex items-center">
+                                <input id="verdict-filter-slider" type="range" min="0" max="3" value="0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-600 focus:outline-none">
+                            </div>
+                            <div class="flex justify-between text-[11px] md:text-xs font-semibold text-slate-600 px-1 select-none">
+                                <button type="button" class="cursor-pointer hover:text-amber-700 transition" onclick="setSliderValue(0)">All Hypotheses (17)</button>
+                                <button type="button" class="cursor-pointer hover:text-amber-700 transition" onclick="setSliderValue(1)">Unreviewed (0)</button>
+                                <button type="button" class="cursor-pointer hover:text-amber-700 transition" onclick="setSliderValue(2)">Partial (1)</button>
+                                <button type="button" class="cursor-pointer hover:text-amber-700 transition" onclick="setSliderValue(3)">Text/reference complete (16)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HYPOTHESIS_INDEX_UPDATES:START -->
+<section class="mt-10" id="research-updates"><p class="cn-watch-status">Scan execution, weekly cadence, digest operation and public-feed curation are unverified. This panel describes proposed editorial policy.</p>
+  <div class="updates-index-card">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Research updates</p>
+      <h2 class="mt-2 text-2xl font-bold text-slate-950">Proposed weekly evidence watch</h2>
+      <p class="mt-3 text-sm leading-6 text-slate-600">
+        A scan is proposed for each hypothesis for potentially material advances. The proposed workflow
+        prioritizes primary research and separately labels preprints. Curator
+        review is required before an item becomes a public update or changes
+        the interpretation of a review.
+      </p>
+      <p class="mt-3 text-sm leading-6 text-slate-600">The most recent visible entry (curation unverified) is <strong>Cohesin reshapes replication fork contacts to aid fork slowing and reversal</strong> (2026-09-16).</p>
+      <a href="hypothesis_reviews_updates.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-amber-700">Open research updates <i class="fas fa-arrow-right text-xs"></i></a>
+    </div>
+    <figure>
+      <img src="assets/images/review-figures/weekly-evidence-flow.png" width="1600" height="900" loading="lazy" decoding="async" alt="Abstract workflow from literature search through source review to a curated public update." class="w-full h-auto">
+      <figcaption>Conceptual workflow. The readable criteria and source links remain in HTML.</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- HYPOTHESIS_INDEX_UPDATES:END -->
+<section class="mt-10">
+                <div class="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Visual evidence guide</p>
+                        <h2 class="mt-2 text-2xl font-bold text-slate-950">How the hypothesis reviews are organized</h2>
+                    </div>
+                    <a href="structures_enhanced.html" class="text-sm font-semibold text-slate-700 hover:text-slate-950">Open Nuclear Structure hub</a>
+                </div>
+                <div class="grid gap-5 lg:grid-cols-3">
+                    <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                        <img src="assets/images/hypothesis-infographics/evidence-map.png" alt="Infographic mapping chromatin, genome organization, and phase separation hypotheses to strong, mixed, or contested evidence states." class="w-full h-auto">
+                    </figure>
+                    <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                        <img src="assets/images/hypothesis-infographics/review-workflow.png" alt="Infographic showing the review workflow from hypothesis claim to methods, failure modes, and evidence verdict." class="w-full h-auto">
+                    </figure>
+                    <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                        <img src="assets/images/hypothesis-infographics/nuclear-structure-hub.png" alt="Infographic showing microscopy, ultrastructure, videos, and lab impact grouped under the Nuclear Structure hub." class="w-full h-auto">
+                    </figure>
+                </div>
+            </section>
+
+            <div class="mt-10 space-y-14">
+                <section id="chromatin-structure" class="scroll-mt-24">
+                    <div class="mb-6 flex items-end justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Chromatin Structure</p>
+                            <h2 class="mt-2 text-2xl font-bold text-slate-950">How chromatin folds, compacts, and moves in living nuclei</h2>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500">4 reviews</span>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">30 nm Chromatin Fiber In Vivo Debate</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/30nm-chromatin-fiber.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-amber-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Condensation: Physical Capacity and Cellular Context</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/chromatin-condensation.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-amber-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nucleosome Dynamics</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/nucleosome-dynamics.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-amber-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Architecture &amp; Dynamics — Integrative Review</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/chromatin-architecture-dynamics.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-amber-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="genome-organization" class="scroll-mt-24">
+                    <div class="mb-6 flex items-end justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Genome Organization</p>
+                            <h2 class="mt-2 text-2xl font-bold text-slate-950">Whether 3D genome structure drives nuclear function</h2>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500">6 reviews</span>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Loop Extrusion Model: Evidence Review</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/loop-extrusion-model.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">TADs: Functional Units or Overstatement?</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/tads-functional-units.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">3D Genome Causality: Structure vs. Function</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/3d-genome-causality.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromosome Territory Architecture Mechanisms</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/chromosome-territories.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">A/B Compartments: Polymer Segregation and Liquid-Phase Claims</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/llps-ab-compartments.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">The 4D Nucleome</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/4d-nucleome.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-indigo-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="phase-separation" class="scroll-mt-24">
+                    <div class="mb-6 flex items-end justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-700">Phase Separation and Nuclear Bodies</p>
+                            <h2 class="mt-2 text-2xl font-bold text-slate-950">Where LLPS helps, and where alternative mechanisms fit better</h2>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500">7 reviews</span>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Body Formation: LLPS Hypothesis</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/nuclear-body-llps.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Molecular Sink vs. LLPS Models for Nuclear Compartments</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/molecular-sink-vs-llps.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Liquid-Like Assembly in the DNA Damage Response</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/llps-dna-damage-response.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="partial" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Partial appraisal</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Condensates: Quality Control or Function?</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Asks whether transcription condensates are required for expression or are byproducts of dense regulatory assemblies.</p>
+                            <a href="hypothesis_reviews/nuclear-condensates-quality.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Epigenetic Memory: LLPS vs. Enzymatic Propagation</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/epigenetic-memory-llps.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Paraspeckle Model: Evidence &amp; Gaps</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/paraspeckle-model.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                        <article data-audit-status="text_reference_completed" class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                            <div class="flex flex-wrap gap-2"><span class="tag tag-written">Written</span><span class="tag tag-audit">Text and references appraised</span></div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950">Beyond Liquid Droplets: Phases, Networks, and Bridging</h3>
+                            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
+                            <a href="hypothesis_reviews/beyond-liquid-droplets.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-950 hover:text-rose-700">Open review <i class="fas fa-arrow-right text-xs"></i></a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white bg-opacity-90">
+        <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
+            <p>CellNucleus.com hypothesis review catalog covering chromatin structure, 3D genome organization, phase separation, nuclear bodies, and epigenetic memory.</p>
+        </div>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
+
+    <script>
+        const searchInput = document.getElementById("hypothesis-search");
+        const sliderInput = document.getElementById("verdict-filter-slider");
+        const cards = Array.from(document.querySelectorAll(".catalog-card"));
+
+        function updateFilters() {
+            const term = searchInput.value.trim().toLowerCase();
+            const sliderVal = parseInt(sliderInput.value);
+
+            cards.forEach((card) => {
+                let verdictVal = card.dataset.auditStatus === "text_reference_completed" ? 3 : card.dataset.auditStatus === "partial" ? 2 : 1;
+
+                // Check text match
+                const matchesSearch = !term || card.textContent.toLowerCase().includes(term);
+                
+                // Check slider match
+                let matchesSlider = true;
+                if (sliderVal === 1) {
+                    matchesSlider = (verdictVal === 1);
+                } else if (sliderVal === 2) {
+                    matchesSlider = (verdictVal === 2);
+                } else if (sliderVal === 3) {
+                    matchesSlider = (verdictVal === 3);
+                }
+
+                if (matchesSearch && matchesSlider) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Dynamically show/hide categories if all their cards are hidden
+            const sections = ["chromatin-structure", "genome-organization", "phase-separation"];
+            sections.forEach((id) => {
+                const sec = document.getElementById(id);
+                if (!sec) return;
+                const secCards = sec.querySelectorAll(".catalog-card");
+                const anyVisible = Array.from(secCards).some(c => c.style.display !== "none");
+                sec.style.display = anyVisible ? "" : "none";
+            });
+        }
+
+        searchInput.addEventListener("input", updateFilters);
+        sliderInput.addEventListener("input", updateFilters);
+
+        window.setSliderValue = function(val) {
+            sliderInput.value = val;
+            updateFilters();
+        };
+
+        cards.forEach((card) => {
+            const link = card.querySelector("a[href]");
+            if (!link) return;
+            card.setAttribute("role", "link");
+            card.setAttribute("tabindex", "0");
+            card.addEventListener("click", (event) => {
+                if (event.target.closest("a, button, input, textarea, select")) return;
+                window.location.href = link.href;
+            });
+            card.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    window.location.href = link.href;
+                }
+            });
+        });
+
+        // Run on initial load
+        updateFilters();
+    </script>
+</body>
+</html>

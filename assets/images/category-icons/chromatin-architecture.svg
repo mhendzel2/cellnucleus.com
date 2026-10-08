@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Chromatin architecture icon</title>
+  <desc id="desc">A transparent line illustration of chromatin loops, nucleosome beads, and a chromosome territory outline.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="256" cy="256" rx="178" ry="132" stroke="#dbeafe" stroke-width="20" opacity="0.9"/>
+    <path d="M88 284c54-100 135-100 189 0s135 100 189 0" stroke="#ffffff" stroke-width="26"/>
+    <path d="M92 344c54-74 135-74 189 0s135 74 189 0" stroke="#bfdbfe" stroke-width="14" opacity="0.85"/>
+    <path d="M154 174c72-42 144-50 220-18" stroke="#cffafe" stroke-width="13" opacity="0.82"/>
+    <path d="M142 390c86 46 190 50 282 8" stroke="#c4b5fd" stroke-width="13" opacity="0.72"/>
+  </g>
+  <g fill="#fde68a" stroke="#1e3a8a" stroke-opacity="0.24" stroke-width="4">
+    <circle cx="126" cy="270" r="18"/>
+    <circle cx="176" cy="232" r="18"/>
+    <circle cx="226" cy="248" r="18"/>
+    <circle cx="278" cy="298" r="18"/>
+    <circle cx="334" cy="326" r="18"/>
+    <circle cx="386" cy="304" r="18"/>
+  </g>
+</svg>

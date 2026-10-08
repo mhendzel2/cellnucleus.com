@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">DNA repair and replication icon</title>
+  <desc id="desc">A transparent broken DNA helix, repair focus signal, and replication fork.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 92c96 82 96 246 0 328" stroke="#fee2e2" stroke-width="22"/>
+    <path d="M352 92c-96 82-96 246 0 328" stroke="#fee2e2" stroke-width="22"/>
+    <path d="M190 158h112M206 214h76M230 318h98M196 374h116" stroke="#fecaca" stroke-width="15"/>
+    <circle cx="306" cy="248" r="68" stroke="#fde68a" stroke-width="14"/>
+    <path d="M276 218l60 60M336 218l-60 60" stroke="#fef3c7" stroke-width="16"/>
+    <path d="M112 286h94l48 38 50-38h96" stroke="#ffffff" stroke-width="16"/>
+  </g>
+</svg>

@@ -1,26 +1,22 @@
 {
   "name": "nuclear-biology-reviews",
   "version": "1.0.0",
-  "description": "Comprehensive collection of 70 nuclear biology research reviews with professional web interface",
+  "description": "CellNucleus education by Gnometrix Labs: 62 indexed research pages, 17 hypothesis reviews, and 6 reading-level variants",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "serve": "python3 -m http.server 8000",
-    "build": "echo 'Static site - no build step needed'",
-    "test": "echo 'No tests specified'",
-    "validate": "html5validator --root . --match '*.html'",
+    "start": "python scripts/preview_candidate.py --root . --port 8000",
+    "serve": "python scripts/preview_candidate.py --root . --port 8000",
+    "build": "python scripts/validate_candidate.py --strict --check-js --output reports/build-validation.json",
+    "test": "python scripts/validate_candidate.py --strict --check-js --output reports/technical-validation.json",
+    "validate": "python scripts/validate_candidate.py --strict --check-js --output reports/technical-validation.json",
     "deploy-gh-pages": "gh-pages -d .",
     "deploy-netlify": "netlify deploy --dir=. --prod",
-    "lint-html": "htmlhint '*.html' 'reviews/*.html'",
+    "lint-html": "htmlhint '*.html' 'nuclear_biology_reviews/reviews/*.html' 'hypothesis_reviews/*.html'",
     "lint-css": "stylelint 'assets/css/*.css'",
     "lint-js": "eslint 'assets/js/*.js'",
     "optimize-images": "imageoptim assets/images/",
     "check-links": "broken-link-checker http://localhost:8000",
     "lighthouse": "lighthouse http://localhost:8000 --output=json --output-path=./lighthouse-report.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nuclear-biology/reviews.git"
   },
   "keywords": [
     "nuclear-biology",
@@ -34,12 +30,9 @@
     "biology",
     "cellular-structures"
   ],
-  "author": "Nuclear Biology Research Team",
+  "author": "Gnometrix Labs",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nuclear-biology/reviews/issues"
-  },
-  "homepage": "https://nuclear-biology.github.io/reviews",
+  "homepage": "https://cellnucleus.com/",
   "devDependencies": {
     "html5validator": "^0.4.2",
     "htmlhint": "^1.1.4",

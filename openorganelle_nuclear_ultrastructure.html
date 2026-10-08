@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A CellNucleus.com guided atlas of nuclear ultrastructure using curated FIB-SEM example figures collected from the OpenOrganelle public resource.">
+    <link rel="canonical" href="https://cellnucleus.com/openorganelle_nuclear_ultrastructure.html">
+    <title>OpenOrganelle Nuclear Ultrastructure Atlas | CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", Arial, sans-serif;
+        }
+        .hero-image {
+            background-image:
+                linear-gradient(90deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.35)),
+                url("assets/images/openorganelle-ultrastructure/interphase-hela-overview.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .specimen-image {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background: #111827;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .micrograph-frame {
+            background: #0f172a;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        .micrograph-frame::after {
+            content: "Nanoscale Zoom Active";
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(15, 23, 42, 0.85);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 20;
+        }
+        .micrograph-frame:hover .specimen-image {
+            transform: scale(1.18);
+        }
+        .micrograph-frame:hover::after {
+            opacity: 1;
+        }
+        .quiet-link {
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+        .feature-badge {
+            letter-spacing: 0.08em;
+        }
+        .video-tab-btn.active {
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.4) !important;
+            color: #60a5fa !important;
+        }
+    </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
+                    <div>
+                        <div class="font-bold text-gray-900 leading-tight">CellNucleus.com</div>
+                        <div class="text-xs text-gray-500">Nuclear Biology Hub</div>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white p-1 text-sm font-semibold">
+                    <a href="index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                    <a href="reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Reviews</a>
+                    <a href="hypothesis_reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Hypothesis</a>
+                    <a href="research_reviews_directory.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Research</a>
+                    <a href="structures_enhanced.html" class="rounded-full bg-blue-50 px-3 py-2 text-blue-700">Nuclear Structure</a>
+                    <a href="downloads.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Downloads</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+<aside style="padding:1rem;background:#fffbeb;border:1px solid #b45309;color:#422006;margin:1rem auto;max-width:72rem"><strong>Evidence status, 3 October 2026:</strong> Caption overstatements were corrected in a bounded audit. Individual asset provenance, molecular identity, segmentation accuracy and reuse permissions remain unverified. <a href="https://www.nature.com/articles/s41586-021-03977-3" style="text-decoration:underline">Heinrich et al. 2021</a> describes validated segmentation in its own annotated datasets; it does not validate these local exports.</aside>
+        <section class="hero-image min-h-screen md:min-h-[88vh] flex items-end">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-14 md:pb-20 pt-28">
+                <div class="max-w-3xl text-white">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-100 mb-4">FIB-SEM intake prototype</p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">Nuclear Ultrastructure Atlas</h1>
+                    <p class="text-lg md:text-xl text-gray-100 leading-relaxed mb-8">
+                        A guided visual page using OpenOrganelle-derived FIB-SEM example figures to explain nuclear envelope context, chromatin texture, nucleoli, nuclear bodies, and cell-type variation.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#guided-readouts" class="inline-flex items-center px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md">
+                            <i class="fas fa-microscope mr-2"></i> Explore readouts
+                        </a>
+                        <a href="#source-credit" class="inline-flex items-center px-5 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold rounded-md border border-white border-opacity-30">
+                            <i class="fas fa-database mr-2"></i> Source credit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900">408</div>
+                        <div class="text-sm text-gray-600">JPEG figures in the intake folder</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900">61</div>
+                        <div class="text-sm text-gray-600">filename-derived visual groups</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900">23</div>
+                        <div class="text-sm text-gray-600">curated page assets</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-gray-900">2</div>
+                        <div class="text-sm text-gray-600">MP4 3D reconstructions integrated</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <div class="max-w-3xl">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Intake analysis</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What the figure batch can support</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The collection is strongest as an interpretive teaching set. It repeatedly shows segmented or panel-based FIB-SEM views of nuclei from HeLa, Jurkat, macrophage, COS-7, kidney, liver, and immune-contact examples. These exports use darkfield-style contrast: bright structures sit on black backgrounds. The page below uses visible patterns and filename context, but formal figure legends should be checked against the original OpenOrganelle dataset metadata before publication.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="guided-readouts" class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="mb-10">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Guided readouts</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Different aspects of nuclear ultrastructure</h2>
+                </div>
+
+                <div class="space-y-12">
+                    <article class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="micrograph-frame rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/interphase-hela-overview.jpg" alt="FIB-SEM panels of an interphase HeLa nucleus" class="specimen-image w-full">
+                        </div>
+                        <div>
+                            <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Envelope and periphery</p>
+                            <h3 class="text-2xl font-bold mb-3">The nucleus as a compartment, not a flat outline</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                FIB-SEM sections place the nuclear boundary inside the surrounding cytoplasm, making the envelope, adjacent organelles, and peripheral chromatin context easier to discuss together. This is useful for explaining why nuclear architecture is both a genome-organization problem and a cell-geometry problem.
+                            </p>
+                            <a href="nuclear_biology_reviews/reviews/nuclear-envelope-comprehensive-review.html" class="quiet-link text-blue-700 font-semibold underline">Related nuclear envelope review</a>
+                        </div>
+                    </article>
+
+                    <article class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="lg:order-2 micrograph-frame rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/interphase-hela-200nm.jpg" alt="High-magnification FIB-SEM panels showing chromatin texture in an interphase HeLa nucleus" class="specimen-image w-full">
+                        </div>
+                        <div class="lg:order-1">
+                            <p class="feature-badge text-xs font-bold uppercase text-yellow-700 mb-3">Chromatin texture</p>
+                            <h3 class="text-2xl font-bold mb-3">Dense and open nuclear material at nanometer scale</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                The high-magnification panels show heterogeneous electron density inside the nucleus. Used carefully, these views help introduce the visual difference between compacted material, less-dense regions, and the problem of mapping EM contrast onto molecular chromatin states.
+                            </p>
+                            <a href="nuclear_biology_reviews/reviews/heterochromatin-comprehensive-review.html" class="quiet-link text-blue-700 font-semibold underline">Related heterochromatin review</a>
+                        </div>
+                    </article>
+
+                    <article class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="micrograph-frame rounded-lg overflow-hidden">
+                                <img src="assets/images/openorganelle-ultrastructure/hela-nucleolus-panels.jpg" alt="HeLa FIB-SEM panels labeled as nucleolus examples" class="specimen-image w-full">
+                            </div>
+                            <div class="micrograph-frame rounded-lg overflow-hidden">
+                                <img src="assets/images/openorganelle-ultrastructure/jurkat-nucleolus-panels.jpg" alt="Jurkat FIB-SEM panels labeled as nucleolus examples" class="specimen-image w-full">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="feature-badge text-xs font-bold uppercase text-pink-700 mb-3">Nucleolus</p>
+                            <h3 class="text-2xl font-bold mb-3">A nuclear body visible without fluorescence labels</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Nucleolus-labeled examples from different cell contexts give the page a direct route into ribosome-biogenesis compartments, nuclear body organization, and the limits of identifying compartments from morphology alone.
+                            </p>
+                            <a href="nuclear_biology_reviews/reviews/nucleolus_standardized_review.html" class="quiet-link text-blue-700 font-semibold underline">Related nucleolus review</a>
+                        </div>
+                    </article>
+
+                    <article class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="lg:order-2 grid sm:grid-cols-2 gap-4">
+                            <div class="micrograph-frame rounded-lg overflow-hidden">
+                                <img src="assets/images/openorganelle-ultrastructure/macrophage-nuclear-body-slices.jpg" alt="Macrophage nucleus panels showing nuclear body slices" class="specimen-image w-full">
+                            </div>
+                            <div class="micrograph-frame rounded-lg overflow-hidden">
+                                <img src="assets/images/openorganelle-ultrastructure/macrophage-nuclear-body-nosurfaces.jpg" alt="Macrophage nucleus panels showing nuclear body slices without rendered surfaces" class="specimen-image w-full">
+                            </div>
+                        </div>
+                        <div class="lg:order-1">
+                            <p class="feature-badge text-xs font-bold uppercase text-green-700 mb-3">Nuclear bodies</p>
+                            <h3 class="text-2xl font-bold mb-3">Compartment boundaries can be inferred, segmented, and debated</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                The macrophage examples are useful for showing how the same region can be presented as raw slices or as a more segmented visual. That contrast supports a stronger teaching point: nuclear body interpretation depends on imaging, annotation, and biological context.
+                            </p>
+                            <a href="nuclear_bodies_compartments_category.html" class="quiet-link text-blue-700 font-semibold underline">Explore nuclear body reviews</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 border-t border-b border-slate-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="mb-10 text-center md:text-left">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-400 mb-3">Nanoscale Visualization</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">3D Volume EM Video Explorer</h2>
+                    <p class="mt-3 text-slate-400 max-w-3xl text-base">
+                        Explore rotation and slice movies of fixed-cell volume EM exports labeled as pancreatic islet and T-cell examples. Rotation and Z-slice traversal are display motions; they do not measure biological dynamics. Dataset identities and annotations still need to be matched to the original records.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Video Display Frame -->
+                    <div class="lg:col-span-7 bg-slate-950 rounded-2xl border border-slate-800 p-4 flex flex-col justify-between">
+                        <div class="relative w-full rounded-lg overflow-hidden bg-black" style="aspect-ratio: 16/9;">
+                            <video id="explorerVideo" class="w-full h-full object-cover" loop muted playsinline>
+                                <source id="videoSource" src="assets/videos/pancreas-islet-chromatin.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="absolute bottom-4 left-4 bg-slate-900/90 border border-slate-800 text-xs px-3 py-1.5 rounded-full flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                                <span id="videoStatus" class="font-medium text-slate-200">Active: Pancreas Islet Chromatin</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <button id="playPauseBtn" onclick="togglePlay()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 rounded-lg text-sm font-semibold transition">
+                                    <i class="fas fa-play mr-2" id="playIcon"></i>Play
+                                </button>
+                                <button id="muteToggleBtn" onclick="toggleMute()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 rounded-lg text-sm font-semibold transition">
+                                    <i class="fas fa-volume-mute mr-2" id="muteIcon"></i>Unmute
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-400">
+                                <span>Speed:</span>
+                                <select aria-label="Playback speed" id="speedSelect" onchange="changeSpeed(this.value)" class="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-white text-xs font-semibold focus:outline-none focus:border-blue-500">
+                                    <option value="0.5">0.5x</option>
+                                    <option value="1.0" selected>1.0x (Normal)</option>
+                                    <option value="1.5">1.5x</option>
+                                    <option value="2.0">2.0x</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dataset Tabs & Explanatory Panel -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Select Dataset</h3>
+                            
+                            <div class="grid gap-4">
+                                <!-- Tab 1 Button -->
+                                <button onclick="switchDataset('pancreas', this)" class="video-tab-btn active w-full text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 transition flex items-start gap-4">
+                                    <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400 mt-1">
+                                        <i class="fas fa-rotate text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-100">Pancreas Islet Chromatin Rotation</h4>
+                                        <p class="text-xs text-slate-400 mt-1">Surface rendering of dense and less-dense nuclear regions; molecular chromatin states remain unverified.</p>
+                                    </div>
+                                </button>
+
+                                <!-- Tab 2 Button -->
+                                <button onclick="switchDataset('tcell', this)" class="video-tab-btn w-full text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 transition flex items-start gap-4">
+                                    <div class="p-3 bg-pink-500/10 rounded-lg text-pink-400 mt-1">
+                                        <i class="fas fa-layer-group text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-100">T-Cell Chromatin Z-Slice Flythrough</h4>
+                                        <p class="text-xs text-slate-400 mt-1">Nanoscale Z-stack flythrough revealing consecutive slices of chromatin architecture.</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Descriptive Legend Card -->
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 space-y-3">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Dataset Insight</h4>
+                            <div id="datasetDesc" class="text-sm text-slate-300 leading-relaxed">
+                                <p class="mb-2"><strong>Pancreas Islet Chromatin (FIB-SEM 3D):</strong> This rotation movie shows a rendered peripheral dense region and less-dense channels in a nuclear volume. EM morphology alone does not establish heterochromatin identity, transcriptional activity, or correspondence to nuclear pores; those interpretations require source annotations or correlative markers.</p>
+                                <ul class="list-disc list-inside text-xs text-slate-400 space-y-1 mt-2">
+                                    <li>Rendered contrast depends on image processing and segmentation.</li>
+                                    <li>Apparent continuity must be checked against source slices and segmentation.</li>
+                                    <li>Illustrative morphology; quantitative model calibration has not been verified.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inline vanilla Javascript for switching datasets -->
+            <script>
+                const videoData = {
+                    pancreas: {
+                        src: 'assets/videos/pancreas-islet-chromatin.mp4',
+                        status: 'Active: Pancreas Islet Chromatin',
+                        desc: `<p class="mb-2"><strong>Pancreas Islet Chromatin (FIB-SEM 3D):</strong> This rotation movie shows a rendered peripheral dense region and less-dense channels in a nuclear volume. EM morphology alone does not establish heterochromatin identity, transcriptional activity, or correspondence to nuclear pores; those interpretations require source annotations or correlative markers.</p>
+                               <ul class="list-disc list-inside text-xs text-slate-400 space-y-1 mt-2">
+                                   <li>Rendered contrast depends on image processing and segmentation.</li>
+                                   <li>Apparent continuity must be checked against source slices and segmentation.</li>
+                                   <li>Illustrative morphology; quantitative model calibration has not been verified.</li>
+                               </ul>`
+                    },
+                    tcell: {
+                        src: 'assets/videos/tcell-highres-chromatin-slices.mp4',
+                        status: 'Active: T-Cell Chromatin Z-Slices',
+                        desc: `<p class="mb-2"><strong>T-Cell Z-Stack Flythrough (FIB-SEM):</strong> Sequential sections show heterogeneous nuclear contrast. Dense regions and a nucleolus-like region are morphological candidates until source annotations and preparation details are verified.</p>
+                               <ul class="list-disc list-inside text-xs text-slate-400 space-y-1 mt-2">
+                                   <li>High-resolution nanoscale slicing highlights density changes.</li>
+                                   <li>Shows candidate boundaries that depend on contrast and segmentation.</li>
+                                   <li>Fixed-cell EM does not measure live-cell transport pathways or rates.</li>
+                               </ul>`
+                    }
+                };
+
+                function switchDataset(type, btn) {
+                    const video = document.getElementById('explorerVideo');
+                    const source = document.getElementById('videoSource');
+                    const statusText = document.getElementById('videoStatus');
+                    const descContainer = document.getElementById('datasetDesc');
+                    const speedSelect = document.getElementById('speedSelect');
+
+                    // Reset speed selector to 1.0x on load
+                    speedSelect.value = "1.0";
+
+                    // Update active button state
+                    document.querySelectorAll('.video-tab-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update video source and reload
+                    video.pause();
+                    source.src = videoData[type].src;
+                    video.load();
+                    
+                    // Keep speed at 1.0x after load
+                    video.playbackRate = 1.0;
+                    
+                    // Try to play immediately
+                    video.play().then(() => {
+                        document.getElementById('playIcon').className = 'fas fa-pause mr-2';
+                        document.getElementById('playPauseBtn').innerHTML = '<i class="fas fa-pause mr-2" id="playIcon"></i>Pause';
+                    }).catch(err => {
+                        console.log("Autoplay blocked, user interaction required");
+                    });
+
+                    // Update info text
+                    statusText.innerText = videoData[type].status;
+                    descContainer.innerHTML = videoData[type].desc;
+                }
+
+                function togglePlay() {
+                    const video = document.getElementById('explorerVideo');
+                    const btn = document.getElementById('playPauseBtn');
+                    if (video.paused) {
+                        video.play();
+                        btn.innerHTML = '<i class="fas fa-pause mr-2" id="playIcon"></i>Pause';
+                    } else {
+                        video.pause();
+                        btn.innerHTML = '<i class="fas fa-play mr-2" id="playIcon"></i>Play';
+                    }
+                }
+
+                function toggleMute() {
+                    const video = document.getElementById('explorerVideo');
+                    const btn = document.getElementById('muteToggleBtn');
+                    video.muted = !video.muted;
+                    if (video.muted) {
+                        btn.innerHTML = '<i class="fas fa-volume-mute mr-2" id="muteIcon"></i>Unmute';
+                    } else {
+                        btn.innerHTML = '<i class="fas fa-volume-up mr-2" id="muteIcon"></i>Mute';
+                    }
+                }
+
+                function changeSpeed(rate) {
+                    const video = document.getElementById('explorerVideo');
+                    video.playbackRate = parseFloat(rate);
+                }
+            </script>
+        </section>
+
+        <section class="bg-gray-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="max-w-4xl mb-10">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Gemini Flash triage</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Model-assisted structure candidates</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Model-generated labels and filenames are hypotheses for expert review, not validated annotations. None of the molecular identities below is confirmed by this page. Match each crop to its original dataset and annotation, and use correlative markers where identity is not resolved by ultrastructure.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mb-10">
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/hela-igc-gamma.jpg" alt="HeLa interchromatin granule cluster candidate from Gemini Flash triage" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-2">Unverified candidate</p>
+                            <h3 class="font-bold text-lg mb-2">IGC / speckle candidate</h3>
+                            <p class="text-sm text-gray-600">The crop shows granule-like contrast. A filename or model label does not confirm an IGC or nuclear-speckle identity.</p>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/hela-cajal-body-candidate.jpg" alt="HeLa candidate Cajal body and nuclear speckle region from Gemini Flash triage" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <p class="feature-badge text-xs font-bold uppercase text-yellow-700 mb-2">Unverified candidate</p>
+                            <h3 class="font-bold text-lg mb-2">Candidate Cajal body</h3>
+                            <p class="text-sm text-gray-600">Gemini flagged a discrete textured body near an IGC-like region, but the call depends on the <span class="font-mono text-xs">SUBZCB</span> label.</p>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/tcell-nucleolus-subcompartments.jpg" alt="Nucleolus subcompartment candidate from Gemini Flash triage" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <p class="feature-badge text-xs font-bold uppercase text-pink-700 mb-2">Unverified candidate</p>
+                            <h3 class="font-bold text-lg mb-2">Nucleolus substructure candidate</h3>
+                            <p class="text-sm text-gray-600">A nucleolus-like crop with internal contrast variation; fibrillar-center, dense-fibrillar and granular-component assignments require source or expert confirmation.</p>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/macrophage-nuclear-body-nosurfaces.jpg" alt="Macrophage nuclear envelope and heterochromatin candidate from Gemini Flash triage" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <p class="feature-badge text-xs font-bold uppercase text-green-700 mb-2">Unverified candidate</p>
+                            <h3 class="font-bold text-lg mb-2">Envelope / dense chromatin candidates</h3>
+                            <p class="text-sm text-gray-600">A clear nuclear boundary with coarse dense material at the periphery and throughout the nucleoplasm.</p>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/macrophage-pcg-subregion.jpg" alt="Dense nuclear subregion in a macrophage-labeled export; Polycomb identity unverified" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <p class="feature-badge text-xs font-bold uppercase text-purple-700 mb-2">Unverified candidate</p>
+                            <h3 class="font-bold text-lg mb-2">Dense-region candidate</h3>
+                            <p class="text-sm text-gray-600">A dense subregion in an export whose filename includes PcG. Polycomb proteins, histone modifications and silencing activity cannot be identified from this morphology alone; the original annotation and molecular evidence remain unverified.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Candidate map from Gemini Flash</h3>
+                    <div class="grid lg:grid-cols-2 gap-6 text-sm text-gray-700">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Candidates requiring verification</h4>
+                            <ul class="space-y-2">
+                                <li><span class="font-semibold">IGC / nuclear speckles:</span> <span class="font-mono text-xs">hela-igc-gamma.jpg</span>, <span class="font-mono text-xs">hela-igc-interphase.jpg</span>, <span class="font-mono text-xs">grivet-igc-sars-context.jpg</span>, <span class="font-mono text-xs">mouse-liver-igc-render.jpg</span>.</li>
+                                <li><span class="font-semibold">Nucleolus with DFC/FC/GC candidates:</span> <span class="font-mono text-xs">tcell-nucleolus-subcompartments.jpg</span>, <span class="font-mono text-xs">hela-nucleolus-subcompartments.jpg</span>, <span class="font-mono text-xs">jurkat-nucleolus-subcompartments.jpg</span>.</li>
+                                <li><span class="font-semibold">Nuclear envelope / heterochromatin:</span> macrophage and interphase HeLa views were the strongest page-ready examples.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Use with caution</h4>
+                            <ul class="space-y-2">
+                                <li><span class="font-semibold">Cajal body:</span> Gemini returned medium-confidence calls for <span class="font-mono text-xs">hela-cajal-body-candidate.jpg</span> and <span class="font-mono text-xs">hela-cajal-body-candidate-render.jpg</span>. These should be labeled as candidates only until checked against the original OpenOrganelle annotation or a human EM review.</li>
+                                <li><span class="font-semibold">Nucleolus subcompartments:</span> the DFC, FC, and granular component are most plausible in the nucleolus-labeled crops, but the model cannot confirm molecular identity from contrast alone.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-1">
+                        <p class="feature-badge text-xs font-bold uppercase text-blue-300 mb-3">Cell-type variation</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuclear ultrastructure changes with cellular context</h2>
+                        <p class="text-gray-300 leading-relaxed">
+                            The selected batch includes immune cells, epithelial-like cells, tissue sections, and infection or contact contexts. The safest public framing is comparative: the images show that nuclear shape, surrounding cytoplasm, and internal density patterns vary across preparations.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-2 grid md:grid-cols-2 gap-5">
+                        <article class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/cos7-nuclear-periphery.jpg" alt="COS-7 FIB-SEM panels showing nuclear periphery context" class="specimen-image w-full">
+                            <div class="p-5">
+                                <h3 class="font-bold text-lg mb-2">COS-7 nuclear periphery</h3>
+                                <p class="text-sm text-gray-300">A compact example for discussing nuclear boundary, adjacent membranes, and local chromatin density.</p>
+                            </div>
+                        </article>
+                        <article class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/jurkat-nucleus-comparison.jpg" alt="Jurkat nucleus FIB-SEM panels" class="specimen-image w-full">
+                            <div class="p-5">
+                                <h3 class="font-bold text-lg mb-2">Jurkat nuclear morphology</h3>
+                                <p class="text-sm text-gray-300">A useful contrast against larger adherent-cell examples, especially for immune-cell nuclear shape.</p>
+                            </div>
+                        </article>
+                        <article class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/tcell-cancer-contact.jpg" alt="FIB-SEM panels of a T cell and cancer-cell contact example" class="specimen-image w-full">
+                            <div class="p-5">
+                                <h3 class="font-bold text-lg mb-2">Immune contact context</h3>
+                                <p class="text-sm text-gray-300">A scene-level example for placing nuclear ultrastructure inside a larger cell-cell interaction.</p>
+                            </div>
+                        </article>
+                        <article class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/mouse-kidney-tissue-context.jpg" alt="Mouse kidney FIB-SEM panels showing tissue context" class="specimen-image w-full">
+                            <div class="p-5">
+                                <h3 class="font-bold text-lg mb-2">Mouse kidney tissue context</h3>
+                                <p class="text-sm text-gray-300">A tissue-scale counterpoint for showing how nuclei sit among dense organelle-rich cytoplasm.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="mb-10">
+                    <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Reusable page modules</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Assets selected for future pages</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                    <article class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/mouse-liver-igc-render.jpg" alt="Mouse liver FIB-SEM rendering labeled IGC" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">Interchromatin granule cluster cue</h3>
+                            <p class="text-sm text-gray-600 mb-3">Best used when discussing nuclear speckles or IGC-like domains with clear source confirmation.</p>
+                            <span class="text-xs font-mono text-gray-500">mouse-liver-igc-render.jpg</span>
+                        </div>
+                    </article>
+                    <article class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/hela-cargo-particles.jpg" alt="HeLa cargo particle FIB-SEM panels" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">Particle-rich nuclear regions</h3>
+                            <p class="text-sm text-gray-600 mb-3">A practical supporting image for transport, cargo, or punctate nuclear structure explainers.</p>
+                            <span class="text-xs font-mono text-gray-500">hela-cargo-particles.jpg</span>
+                        </div>
+                    </article>
+                    <article class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/macrophage-nuclear-body-slices.jpg" alt="Macrophage nuclear body slice panels" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">Nuclear body slice stack</h3>
+                            <p class="text-sm text-gray-600 mb-3">Strongest reusable candidate for explaining raw slices versus annotated nuclear compartments.</p>
+                            <span class="text-xs font-mono text-gray-500">macrophage-nuclear-body-slices.jpg</span>
+                        </div>
+                    </article>
+                    <article class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/hela-cell3-chromatin-3d.jpg" alt="HeLa cell 3 chromatin 3D surface render" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">3D Surface Chromatin Map</h3>
+                            <p class="text-sm text-gray-600 mb-3">Model-assisted surface rendering of nuclear contrast; genomic domain boundaries and molecular identity have not been verified.</p>
+                            <span class="text-xs font-mono text-gray-500">hela-cell3-chromatin-3d.jpg</span>
+                        </div>
+                    </article>
+                    <article class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <div class="micrograph-frame rounded-t-lg overflow-hidden">
+                            <img src="assets/images/openorganelle-ultrastructure/pancreas-islet-chromatin-overview.jpg" alt="Pancreas islet chromatin ultrastructure overview" class="specimen-image w-full">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">Pancreatic Chromatin Overview</h3>
+                            <p class="text-sm text-gray-600 mb-3">A pancreatic-islet-labeled export showing dense nuclear regions; heterochromatin identity requires source confirmation.</p>
+                            <span class="text-xs font-mono text-gray-500">pancreas-islet-chromatin-overview.jpg</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="source-credit" class="bg-gray-100 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div>
+                        <p class="feature-badge text-xs font-bold uppercase text-blue-700 mb-3">Credit and evidence</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Source notes</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            This page is an intake prototype using local example images collected from the OpenOrganelle public resource. Individual image-to-dataset provenance, molecular annotations, and reuse licenses remain unresolved. The linked atlas and segmentation studies describe methods; they do not authenticate every local crop or model-generated label.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                                <h3 class="font-bold mb-2">OpenOrganelle portal</h3>
+                                <p class="text-sm text-gray-600 mb-3">OpenOrganelle provides public visualization access to cloud-hosted FIB-SEM datasets through the CellMap data portal.</p>
+                                <a href="https://www.openorganelle.org/" class="quiet-link text-blue-700 font-semibold underline">openorganelle.org</a>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                                <h3 class="font-bold mb-2">Volume EM atlas</h3>
+                                <p class="text-sm text-gray-600 mb-3">Xu and colleagues described an open-access FIB-SEM atlas of whole cells and tissues, with datasets deposited to OpenOrganelle.</p>
+                                <a href="https://doi.org/10.1038/s41586-021-03992-4" class="quiet-link text-blue-700 font-semibold underline">Nature 2021 atlas DOI</a>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                                <h3 class="font-bold mb-2">Organelle segmentation</h3>
+                                <p class="text-sm text-gray-600 mb-3">Heinrich and colleagues reported segmentation of many organelle classes in 4 nm and 8 nm voxel FIB-SEM volumes.</p>
+                                <a href="https://doi.org/10.1038/s41586-021-03977-3" class="quiet-link text-blue-700 font-semibold underline">Nature 2021 segmentation DOI</a>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-5">
+                                <h3 class="font-bold mb-2">Portal implementation</h3>
+                                <p class="text-sm text-gray-600 mb-3">The public OpenOrganelle code repository describes the app as a gateway for visualizing large cloud-hosted FIB-SEM datasets.</p>
+                                <a href="https://github.com/janelia-cellmap/openorganelle" class="quiet-link text-blue-700 font-semibold underline">Janelia CellMap GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+                <div class="font-semibold text-white">CellNucleus.com</div>
+                <div class="text-sm">Nuclear biology reviews, microscopy resources, and visual explainers.</div>
+            </div>
+            <div class="flex flex-wrap gap-4 text-sm">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="structures_enhanced.html" class="hover:text-white">Nuclear Structure</a>
+                <a href="video_gallery.html" class="hover:text-white">Structure Videos</a>
+                <a href="reviews_index.html" class="hover:text-white">Reviews</a>
+            </div>
+        </div>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
+</body>
+</html>

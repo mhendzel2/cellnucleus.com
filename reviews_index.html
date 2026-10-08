@@ -28,6 +28,20 @@
             -webkit-backdrop-filter: blur(18px);
             backdrop-filter: blur(18px);
         }
+        .site-nav {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            padding: 0.25rem;
+        }
+        @media (min-width: 768px) {
+            .site-nav {
+                display: inline-flex;
+            }
+        }
         .catalog-card {
             transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
         }
@@ -132,18 +146,23 @@
             }
         }
     </style>
+<link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+<script defer src="assets/js/site-navigation.js"></script>
 </head>
 <body class="min-h-screen">
     <header class="border-b border-slate-200 bg-white/85 backdrop-filter backdrop-blur">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
             <a href="index.html" class="flex items-center gap-3 text-slate-950">
-                <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                    <i class="fas fa-atom"></i>
-                </span>
+                <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
                 <span class="text-lg font-semibold">CellNucleus.com</span>
             </a>
-            <nav class="hidden items-center gap-6 md:flex">
-                <a href="index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Home</a><a href="reviews_index.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">All Reviews</a><a href="research_reviews_directory.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Research Directory</a><a href="downloads.html" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">Downloads</a>
+            <nav class="site-nav hidden md:flex">
+                <a href="index.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Home</a>
+                <a href="reviews_index.html" class="rounded-full bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm">Reviews</a>
+                <a href="hypothesis_reviews_index.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Hypothesis</a>
+                <a href="research_reviews_directory.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Research</a>
+                <a href="structures_enhanced.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Nuclear Structure</a>
+                <a href="downloads.html" class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950">Downloads</a>
             </nav>
         </div>
     </header>
@@ -153,7 +172,7 @@
                 <div class="max-w-4xl">
                     <div class="mb-5 inline-flex items-center gap-3 rounded-full bg-white/15 px-4 py-2 text-sm font-medium">
                         <i class="fas fa-book-open"></i>
-                        <span>84 review pages across 8 categories</span>
+                        <span>62 review pages across 8 categories</span>
                     </div>
                     <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Complete Nuclear Biology Review Index</h1>
                     <p class="mt-4 max-w-3xl text-lg text-white/85">Browse every CellNucleus review page by category.</p>
@@ -172,15 +191,15 @@
                         <dl class="space-y-3 text-sm text-slate-600">
                             <div class="flex items-center justify-between">
                                 <dt>Total review pages</dt>
-                                <dd class="font-semibold text-slate-950">84</dd>
+                                <dd class="font-semibold text-slate-950">62</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt>Core reviews</dt>
-                                <dd class="font-semibold text-slate-950">70</dd>
+                                <dd class="font-semibold text-slate-950">59</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt>Additional editions</dt>
-                                <dd class="font-semibold text-slate-950">14</dd>
+                                <dd class="font-semibold text-slate-950">3</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt>Categories</dt>
@@ -201,31 +220,13 @@
                     <a href="chromatin_architecture_dynamics_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">4D Genome Organization Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for 4d genome organization.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/4d-genome-organization-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">4D Nucleome Critical Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for 4d nucleome.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The 4D Nucleome</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/4d-nucleome-critical-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -234,32 +235,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Architecture Dynamics Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin architecture dynamics.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/chromatin-architecture-dynamics-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Architecture Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin architecture.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Architecture: Local Structure, Contact Domains and Loop Dynamics</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromatin_architecture_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -268,15 +250,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Biophysics Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin biophysics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Biophysics: Compaction, Condensation and Loop Dynamics</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromatin_biophysics_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -285,32 +265,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Biophysics Function Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin biophysics function.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/chromatin-biophysics-function-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Condensates Critical Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin condensates.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Condensates: Reconstitution and Cellular Context</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromatin-condensates-critical-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -319,15 +280,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Modeling Critical Review Enhanced</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin modeling.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Modeling: Contact Fits, Single Cells and Dynamics</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromatin-modeling-critical-review-enhanced.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -336,15 +295,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Remodeling Complexes Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatin remodeling complexes.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin Remodelers: Genomic Context and Accessibility Dynamics</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromatin-remodeling-complexes-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -353,15 +310,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromosome Condensation Mechanisms Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromosome condensation mechanisms.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Mitotic Chromosome Condensation: Observations and Architectural Models</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/chromosome-condensation-mechanisms-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -370,49 +325,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Complete</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Comparative Nuclear Organization Complete</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for comparative nuclear organization.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/comparative-nuclear-organization-complete.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Comparative Nuclear Organization Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for comparative nuclear organization.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/comparative-nuclear-organization-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Comparative Nuclear Organization Species Updated</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for comparative nuclear organization species.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Unity and Diversity of the Eukaryotic Nucleus</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/comparative-nuclear-organization-species-updated.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -421,15 +340,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Computational Cell Nucleus Modeling Enhanced Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for computational cell nucleus modeling.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Computational Nuclear Architecture: Spatial Constraints and Model Scope</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/computational-cell-nucleus-modeling-enhanced-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -438,15 +355,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Euchromatin Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for euchromatin.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Euchromatin: Accessibility and Chromatin Organization</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/euchromatin-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -455,15 +370,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Heterochromatin Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for heterochromatin.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Heterochromatin: Compaction and Regional Organization</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/heterochromatin-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -472,24 +385,6 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-cyan-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Timeline</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Heterochromatin Comprehensive Review Timeline</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for heterochromatin timeline.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">Chromatin Architecture &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/heterochromatin-comprehensive-review-timeline.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
                 </div>
             </section>
             
@@ -502,48 +397,13 @@
                     <a href="epigenetics_gene_regulation_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Complete</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Epigenetic Inheritance Complete</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for epigenetic inheritance.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
-                <a href="nuclear_biology_reviews/reviews/epigenetic-inheritance-complete.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Epigenetic Inheritance Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for epigenetic inheritance.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
-                <a href="nuclear_biology_reviews/reviews/epigenetic-inheritance-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Epigenetic Inheritance Mechanisms Review (Updated)</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for epigenetic inheritance mechanisms ().</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Mechanisms of Epigenetic Inheritance</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/epigenetic-inheritance-mechanisms-review-updated.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -552,15 +412,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Eukaryotic Gene Expression Orchestration Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for eukaryotic gene expression orchestration.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Orchestration of Eukaryotic Gene Expression</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/eukaryotic-gene-expression-orchestration-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -569,15 +427,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">H1 PcG H3K27me3 Regulation Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for h1 pcg h3k27me3 regulation.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">H1 and Polycomb-Associated H3K27me3: Restoration after Replication</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/h1-pcg-h3k27me3-regulation-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -586,15 +442,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">HDAC Superfamily Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for hdac superfamily.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone Deacetylases: HDAC3, Corepressors and Cellular Context</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/hdac_superfamily_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -603,32 +457,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone H1 Family Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for histone h1 family.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
-                <a href="nuclear_biology_reviews/reviews/histone-h1-family-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone H1 Family Enhanced Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for histone h1 family.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Linker Histone H1: Chromatin Context and Histone-Mark Restoration</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/histone-h1-family-enhanced-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -637,15 +472,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone PTMs Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for histone ptms.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone Modifications: Replication, Restoration and Context</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/histone-ptms-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -654,15 +487,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Metabolism Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear metabolism.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Metabolism: Acetyl-CoA and Local ATP Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear_metabolism_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -671,15 +502,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Pol II Condensate Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for pol ii condensate.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nanoscale Architecture and Live-Cell Dynamics of RNA Polymerase II Condensates</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/pol-ii-condensate-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -688,15 +517,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Transcriptional Condensates Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for transcriptional condensates.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Transcriptional Condensates</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">Epigenetics &amp; Gene Regulation</span>
                 <a href="nuclear_biology_reviews/reviews/transcriptional-condensates-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -705,7 +532,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -718,14 +544,13 @@
                     <a href="nuclear_bodies_compartments_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Cajal Bodies Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for cajal bodies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Cajal Bodies</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/cajal-bodies-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -734,15 +559,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Bodies Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear bodies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Bodies: Assembly and Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-bodies-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -751,49 +574,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Bodies Standardized</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear bodies.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear-bodies-standardized.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Bodies Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear bodies.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear_bodies_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Body Biophysics Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear body biophysics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Body Biophysics: Coexistence, Networks and Recovery</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear_body_biophysics_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -802,15 +589,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Body Ultrastructure Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear body ultrastructure.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Body Architecture: Molecular Identification and Model Limits</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-body-ultrastructure-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -819,9 +604,7 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Corrected</span>
@@ -836,15 +619,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Condensates Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear condensates.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Condensates: Assembly, Composition and Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-condensates-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -853,15 +634,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Polymer Phase Separation Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear polymer phase separation.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Polymer Organization: Demixing, Bridging and RNA Architecture</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-polymer-phase-separation-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -870,15 +649,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Speckles Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear speckles.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Speckles: Assembly, Gene Association and RNA Processing</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-speckles-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -887,49 +664,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Speckles Standardized</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear speckles.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear-speckles-standardized.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nucleolus Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nucleolus.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
-                <a href="nuclear_biology_reviews/reviews/nucleolus-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nucleolus Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nucleolus.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nucleolus: Structure and RNA Organization</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/nucleolus_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -938,15 +679,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Paraspeckles Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for paraspeckles.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Paraspeckles</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/paraspeckles-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -955,32 +694,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Paraspeckles Standardized</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for paraspeckles.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
-                <a href="nuclear_biology_reviews/reviews/paraspeckles-standardized.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Phase Separation Nucleus Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for phase separation nucleus.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Phase Separation in the Nucleus: Model Principles and Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/phase-separation-nucleus-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -989,15 +709,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-fuchsia-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">PML Nuclear Bodies Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for pml nuclear bodies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The PML Nuclear Body</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-fuchsia-700">Nuclear Bodies &amp; Compartments</span>
                 <a href="nuclear_biology_reviews/reviews/pml-nuclear-bodies-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1006,7 +724,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1019,14 +736,13 @@
                     <a href="dna_repair_replication_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Base Excision Repair Critical Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for base excision repair.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Base Excision Repair: Intermediates and Coordination</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/base-excision-repair-critical-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1035,15 +751,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Current DNA Repair Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for current dna repair.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Damage Response: Repair, Replication and Signaling</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/current_dna_repair_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1052,15 +766,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
+                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Repair Crosstalk Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dna repair crosstalk.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Repair Crosstalk: Shared Intermediates and Competing Routes</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/dna_repair_crosstalk_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1069,49 +781,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Complete</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Repair Pathway Crosstalk Complete</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dna repair pathway crosstalk.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
-                <a href="nuclear_biology_reviews/reviews/dna-repair-pathway-crosstalk-complete.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Updated</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Repair Pathway Crosstalk Review (Updated)</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dna repair pathway crosstalk ().</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
-                <a href="nuclear_biology_reviews/reviews/dna-repair-pathway-crosstalk-review-updated.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Replication Site Dynamics Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dna replication site dynamics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Replication Sites: Dynamics and Imaging Resolution</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/dna-replication-site-dynamics-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1120,15 +796,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">DSB Repair Foci Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for dsb repair foci.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">DNA Double-Strand-Break Foci: Chromatin Signals and Compartments</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/dsb-repair-foci-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1137,15 +811,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Parylation Dynamics Interactions Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for parylation dynamics interactions.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">PARylation: Catalytic Specificity, Recruitment and Signal Duration</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/parylation-dynamics-interactions-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1154,15 +826,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-rose-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Replication Stress FPC Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for replication stress fpc.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Timeless-Tipin: Replication Stress and Fork Coordination</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-rose-700">DNA Repair &amp; Replication</span>
                 <a href="nuclear_biology_reviews/reviews/replication-stress-fpc-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1171,7 +841,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1184,14 +853,13 @@
                     <a href="nuclear_envelope_lamins_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Envelope Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear envelope.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Nuclear Envelope: Structure, Exchange and Remodeling</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-envelope-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1200,15 +868,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Lamina Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear lamina.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Nuclear Lamina: Structure, Associations and Phenotypes</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-lamina-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1217,32 +883,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Pore Complex Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear pore complex.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear-pore-complex-comprehensive-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-amber-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Standardized</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Pore Complex Standardized Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear pore complex.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Pore Complex: Structure, Function, and Regulation of Nuclear Transport</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Nuclear Envelope &amp; Lamins</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear_pore_complex_standardized_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1251,7 +898,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1264,48 +910,13 @@
                     <a href="nuclear_transport_dynamics_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Intranuclear mRNA Transport Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for intranuclear mrna transport.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/intranuclear-mrna-transport-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Intranuclear RNA Transport Imaging Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for intranuclear rna transport imaging.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
-                <a href="nuclear_biology_reviews/reviews/intranuclear-rna-transport-imaging-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Intranuclear Transport Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for intranuclear transport.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Intranuclear Transport and Size-Dependent Diffusion</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/intranuclear_transport_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1314,15 +925,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Live Cell Transcription Imaging Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for live cell transcription imaging.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Dynamic Choreography of Transcription</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/live-cell-transcription-imaging-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1331,15 +940,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear RNP Structure Function Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear rnp structure function.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Architecture of Gene Expression</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-rnp-structure-function-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1348,15 +955,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Transport Compartment Dynamics</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear transport compartment dynamics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Nucleus in Motion</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-indigo-700">Nuclear Transport &amp; Dynamics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-transport-compartment-dynamics.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1365,7 +970,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1378,31 +982,13 @@
                     <a href="nuclear_biophysics_mechanics_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
-                <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Enhanced Nuclear Biophysics Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear biophysics.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
-                <a href="nuclear_biology_reviews/reviews/enhanced_nuclear_biophysics_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">ESI Nuclear Analysis Microscopy Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for esi nuclear analysis microscopy.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">The Architecture of Life</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/esi-nuclear-analysis-microscopy-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1411,15 +997,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Actin Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear actin.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Actin: Transcription and Damage-Associated Filaments</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear_actin_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1428,32 +1012,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Biophysical Properties Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear biophysical properties.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear-biophysical-properties-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-200 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Variant</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Comprehensive</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Biophysics Comprehensive Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear biophysics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Biophysics: Measurements and Interpretation</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear_biophysics_comprehensive_review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1462,15 +1027,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Macromolecular Crowding Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear macromolecular crowding.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Macromolecular Crowding: Access, Diffusion and Binding</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-macromolecular-crowding-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1479,32 +1042,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
-                
-            </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Microrheology Detailed Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear microrheology.</p>
-            <div class="mt-5 flex items-center justify-between gap-4">
-                <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
-                <a href="nuclear_biology_reviews/reviews/nuclear-microrheology-detailed-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
-                    Open review
-                    <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-        </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 <span class="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">Enhanced</span>
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Microrheology Enhanced Graphics</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear microrheology graphics.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Microrheology: Probes, Models and Interpretation</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-microrheology-enhanced-graphics.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1513,15 +1057,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-violet-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Viscosity Properties Regulation</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear viscosity properties regulation.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Viscosity: Quantities, Compartments and Limits</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-violet-700">Nuclear Biophysics &amp; Mechanics</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-viscosity-properties-regulation.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1530,7 +1072,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1543,14 +1084,13 @@
                     <a href="disease_pathology_category.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open category page</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatinopathies Mechanisms Therapies Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for chromatinopathies mechanisms therapies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Chromatin-Related Disorders: Gene Attribution and Episignature Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/chromatinopathies-mechanisms-therapies-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1559,15 +1099,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone PTMs Neurodegeneration Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for histone ptms neurodegeneration.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Histone Acetylation in Alzheimer-Associated Brain Changes</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/histone-ptms-neurodegeneration-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1576,15 +1114,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Lamin A Mutants Aging Research Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for lamin a mutants aging research.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Lamin A Variants: Case Evidence, Null Models and Aging Limits</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/lamin-a-mutants-aging-research-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1593,15 +1129,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Laminopathies Nuclear Envelope Diseases Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for laminopathies nuclear envelope diseases.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Laminopathies: Genetic Findings and Defined Nuclear Phenotypes</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/laminopathies-nuclear-envelope-diseases-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1610,15 +1144,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Biology Controversies Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear biology controversies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Frontiers of the Nucleus</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-biology-controversies-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1627,15 +1159,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Condensates Disease Pathologies Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear condensates disease pathologies.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Disease-Associated Condensate Changes: FUS and RNA Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-condensates-disease-pathologies-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1644,15 +1174,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Mechanics Disease Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear mechanics disease.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Mechanics and Disease: Separate Lines of Evidence</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-mechanics-disease-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1661,15 +1189,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Stress Response Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear stress response.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nucleolar Stress: Ribosome Biogenesis and p53</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-stress-response-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1678,15 +1204,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Nuclear Virus Host Interactions Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for nuclear virus host interactions.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Virus-Host Nuclear Cell Biology: A Defined Compartment Example</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/nuclear-virus-host-interactions-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1695,15 +1219,13 @@
                 </a>
             </div>
         </article>
-    
-
-        <article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+<article class="catalog-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div class="flex flex-wrap gap-2">
                 <span class="rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">Primary</span>
                 
             </div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-950">Replication Fork Cancer Review</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Open the full review page for replication fork cancer.</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">Replication Fork Integrity in Cancer-Related Cell Models</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Read the revised scientific text, primary study context and stated inference limits.</p>
             <div class="mt-5 flex items-center justify-between gap-4">
                 <span class="text-xs font-medium uppercase tracking-[0.18em] text-slate-700">Disease &amp; Pathology</span>
                 <a href="nuclear_biology_reviews/reviews/replication-fork-cancer-review.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition hover:text-slate-700">
@@ -1712,7 +1234,6 @@
                 </a>
             </div>
         </article>
-    
                 </div>
             </section>
             
@@ -1735,6 +1256,8 @@
         <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
             <p>CellNucleus.com review catalog covering chromatin, transport, repair, nuclear bodies, and related topics.</p>
         </div>
-    </footer>
+    
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
 </body>
 </html>

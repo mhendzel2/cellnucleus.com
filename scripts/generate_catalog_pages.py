@@ -244,17 +244,33 @@ CATEGORIES: tuple[Category, ...] = (
 )
 
 CATEGORY_BY_KEY = {category.key: category for category in CATEGORIES}
+CATEGORY_ICON_ASSETS = {
+    "chromatin": "assets/images/category-icons/chromatin-architecture.svg",
+    "epigenetics": "assets/images/category-icons/epigenetics-gene-regulation.svg",
+    "bodies": "assets/images/category-icons/nuclear-bodies.svg",
+    "dna": "assets/images/category-icons/dna-repair-replication.svg",
+    "envelope": "assets/images/category-icons/envelope-lamins.svg",
+    "transport": "assets/images/category-icons/transport-dynamics.svg",
+    "biophysics": "assets/images/category-icons/biophysics-mechanics.svg",
+    "disease": "assets/images/category-icons/disease-pathology.svg",
+}
+CATEGORY_ICON_BACKGROUNDS = {
+    "chromatin": "#0e7490",
+    "epigenetics": "#047857",
+    "bodies": "#7c3aed",
+    "dna": "#dc2626",
+    "envelope": "#ea580c",
+    "transport": "#2563eb",
+    "biophysics": "#9333ea",
+    "disease": "#334155",
+}
 
 MANUAL_OVERRIDES = {
-    "4d-genome-organization-comprehensive-review.html": "chromatin",
     "4d-nucleome-critical-review.html": "chromatin",
-    "comparative-nuclear-organization-complete.html": "chromatin",
-    "comparative-nuclear-organization-comprehensive-review.html": "chromatin",
     "comparative-nuclear-organization-species-updated.html": "chromatin",
     "computational-cell-nucleus-modeling-enhanced-review.html": "chromatin",
     "current_dna_repair_review.html": "dna",
     "dna_repair_crosstalk_standardized_review.html": "dna",
-    "enhanced_nuclear_biophysics_comprehensive_review.html": "biophysics",
     "hdac_superfamily_standardized_review.html": "epigenetics",
     "intranuclear_transport_comprehensive_review.html": "transport",
     "lamin-a-mutants-aging-research-review.html": "disease",
@@ -278,8 +294,10 @@ MANUAL_OVERRIDES = {
 
 NAV_LINKS = (
     ("Home", "index.html"),
-    ("All Reviews", "reviews_index.html"),
-    ("Research Directory", "research_reviews_directory.html"),
+    ("Reviews", "reviews_index.html"),
+    ("Hypothesis", "hypothesis_reviews_index.html"),
+    ("Research", "research_reviews_directory.html"),
+    ("Nuclear Structure", "structures_enhanced.html"),
     ("Downloads", "downloads.html"),
 )
 
@@ -399,11 +417,16 @@ def page_shell(
     accent: str,
     icon: str,
     stat_line: str,
+    active: str | None = None,
 ) -> str:
-    nav_html = "".join(
-        f'<a href="{href}" class="text-sm font-medium text-slate-700 transition hover:text-slate-950">{label}</a>'
-        for label, href in NAV_LINKS
-    )
+    nav_items = []
+    for label, href in NAV_LINKS:
+        if label == active:
+            classes = "rounded-full bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm"
+        else:
+            classes = "rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-950"
+        nav_items.append(f'<a href="{href}" class="{classes}">{label}</a>')
+    nav_html = "\n                ".join(nav_items)
     return rf"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -433,6 +456,20 @@ def page_shell(
             border-color: rgba(255, 255, 255, 0.72);
             -webkit-backdrop-filter: blur(18px);
             backdrop-filter: blur(18px);
+        }}
+        .site-nav {{
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            padding: 0.25rem;
+        }}
+        @media (min-width: 768px) {{
+            .site-nav {{
+                display: inline-flex;
+            }}
         }}
         .catalog-card {{
             transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -543,12 +580,10 @@ def page_shell(
     <header class="border-b border-slate-200 bg-white/85 backdrop-filter backdrop-blur">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
             <a href="index.html" class="flex items-center gap-3 text-slate-950">
-                <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                    <i class="fas fa-atom"></i>
-                </span>
+                <img src="assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto rounded-md">
                 <span class="text-lg font-semibold">CellNucleus.com</span>
             </a>
-            <nav class="hidden items-center gap-6 md:flex">
+            <nav class="site-nav hidden md:flex">
                 {nav_html}
             </nav>
         </div>
@@ -571,6 +606,7 @@ def page_shell(
     <footer class="border-t border-slate-200 bg-white/85">
         <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600 sm:px-6 lg:px-8">
             <p>CellNucleus.com review catalog covering chromatin, transport, repair, nuclear bodies, and related topics.</p>
+            <p>Owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
         </div>
     </footer>
 </body>
@@ -615,72 +651,50 @@ def render_review_card(review: dict[str, object], category: Category) -> str:
                 </a>
             </div>
         </article>
-    """
+    """.strip()
 
 
 def render_category_page(category: Category, reviews: list[dict[str, object]], total_reviews: int) -> str:
     cards = "\n".join(render_review_card(review, category) for review in reviews)
     body = f"""
         <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-                <div class="space-y-6">
-                    <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+            <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Category overview</p>
                         <p class="mt-4 max-w-3xl text-base leading-7 text-slate-700">{html.escape(category.intro)}</p>
-                    </section>
-                    <section>
-                        <div class="mb-6 flex items-center justify-between gap-4">
-                            <h2 class="text-2xl font-bold text-slate-950">Reviews in This Category</h2>
-                            <p class="text-sm text-slate-500">{len(reviews)} review pages</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center text-sm">
+                        <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                            <div class="text-lg font-bold text-slate-950">{len(reviews)}</div>
+                            <div class="text-slate-500">In category</div>
                         </div>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            {cards}
+                        <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                            <div class="text-lg font-bold text-slate-950">{total_reviews}</div>
+                            <div class="text-slate-500">All reviews</div>
                         </div>
-                    </section>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                            <div class="text-lg font-bold text-slate-950">{len(CATEGORIES)}</div>
+                            <div class="text-slate-500">Categories</div>
+                        </div>
+                    </div>
                 </div>
-                <aside class="space-y-6">
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Quick Links</h2>
-                        <div class="mt-4 space-y-3 text-sm">
-                            <a href="reviews_index.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Browse full review index</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="research_reviews_directory.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Open research directory</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="downloads.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Source downloads</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
-                    </section>
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">At a Glance</h2>
-                        <dl class="mt-4 space-y-3 text-sm text-slate-600">
-                            <div class="flex items-center justify-between">
-                                <dt>Category pages</dt>
-                                <dd class="font-semibold text-slate-950">{len(CATEGORIES)}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>All review pages</dt>
-                                <dd class="font-semibold text-slate-950">{total_reviews}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>This category</dt>
-                                <dd class="font-semibold text-slate-950">{len(reviews)}</dd>
-                            </div>
-                        </dl>
-                    </section>
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Related Categories</h2>
-                        <div class="mt-4 flex flex-wrap gap-3">
-                            {related_category_chips(category.key)}
-                        </div>
-                    </section>
-                </aside>
-            </div>
+            </section>
+            <section class="mt-10">
+                <div class="mb-6 flex items-center justify-between gap-4">
+                    <h2 class="text-2xl font-bold text-slate-950">Reviews in This Category</h2>
+                    <a href="reviews_index.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open full index</a>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    {cards}
+                </div>
+            </section>
+            <section class="mt-10">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Related categories</p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                    {related_category_chips(category.key)}
+                </div>
+            </section>
         </section>
     """
     stat_line = f"{len(reviews)} review pages"
@@ -691,6 +705,7 @@ def render_category_page(category: Category, reviews: list[dict[str, object]], t
         accent=category.accent,
         icon=category.icon,
         stat_line=stat_line,
+        active="Reviews",
     )
 
 
@@ -771,6 +786,7 @@ def render_reviews_index(groups: dict[str, list[dict[str, object]]], reviews: li
         accent="from-slate-900 via-blue-900 to-indigo-900",
         icon="fa-book-open",
         stat_line=f"{len(reviews)} review pages across {len(CATEGORIES)} categories",
+        active="Reviews",
     ).replace(
         "</section>\n        {body}",
         "",
@@ -784,8 +800,8 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
             f"""
             <article class="catalog-card rounded-3xl border {category.border} {category.surface} p-6 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-sm">
-                        <i class="fas {category.icon}"></i>
+                    <span class="flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm" style="background:{CATEGORY_ICON_BACKGROUNDS[category.key]}">
+                        <img src="{CATEGORY_ICON_ASSETS[category.key]}" alt="" class="h-9 w-9" aria-hidden="true">
                     </span>
                     <div>
                         <h2 class="text-xl font-semibold text-slate-950">{html.escape(category.title)}</h2>
@@ -798,7 +814,7 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
                     <a href="reviews_index.html#{category.key}" class="text-sm font-medium text-slate-600 transition hover:text-slate-950">See reviews</a>
                 </div>
             </article>
-            """
+            """.strip()
         )
     featured = sorted(
         reviews,
@@ -815,74 +831,52 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
         featured_cards.append(render_review_card(review, category))
     body = f"""
         <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
-                <div class="space-y-8">
-                    <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+            <section class="glass rounded-3xl border border-white/60 p-8 shadow-sm">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
                         <h2 class="text-2xl font-bold text-slate-950">Explore the Review Collection</h2>
                         <p class="mt-4 max-w-3xl text-base leading-7 text-slate-700">
                             Use this directory to browse the full CellNucleus review collection by topic and move quickly between category pages and the complete review index.
                         </p>
-                    </section>
-                    <section>
-                        <div class="mb-6 flex items-center justify-between gap-4">
-                            <h2 class="text-2xl font-bold text-slate-950">Category Directory</h2>
-                            <a href="reviews_index.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open complete review index</a>
+                    </div>
+                    <dl class="grid min-w-full grid-cols-2 gap-3 text-sm text-slate-600 sm:min-w-0 sm:grid-cols-4">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Reviews</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">{len(reviews)}</dd>
                         </div>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            {"".join(category_cards)}
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Core</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">{sum(1 for review in reviews if review["primary"])}</dd>
                         </div>
-                    </section>
-                    <section>
-                        <div class="mb-6">
-                            <h2 class="text-2xl font-bold text-slate-950">Featured Review Pages</h2>
-                            <p class="mt-2 text-sm text-slate-600">A selection of prominent, expanded, and recently updated reviews.</p>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Editions</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">{sum(1 for review in reviews if not review["primary"])}</dd>
                         </div>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            {"".join(featured_cards)}
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <dt>Categories</dt>
+                            <dd class="mt-1 text-xl font-bold text-slate-950">{len(CATEGORIES)}</dd>
                         </div>
-                    </section>
+                    </dl>
                 </div>
-                <aside class="space-y-6">
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Summary</h2>
-                        <dl class="mt-4 space-y-3 text-sm text-slate-600">
-                            <div class="flex items-center justify-between">
-                                <dt>Review pages</dt>
-                                <dd class="font-semibold text-slate-950">{len(reviews)}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Core reviews</dt>
-                                <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if review["primary"])}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Additional editions</dt>
-                                <dd class="font-semibold text-slate-950">{sum(1 for review in reviews if not review["primary"])}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt>Category pages</dt>
-                                <dd class="font-semibold text-slate-950">{len(CATEGORIES)}</dd>
-                            </div>
-                        </dl>
-                    </section>
-                    <section class="glass rounded-3xl border border-white/60 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold text-slate-950">Next Steps</h2>
-                        <div class="mt-4 space-y-3 text-sm">
-                            <a href="downloads.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Open downloads</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="working_navigation_hub.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Legacy navigation hub</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                            <a href="structures_enhanced.html" class="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition hover:border-slate-400 hover:text-slate-950">
-                                <span>Structures resource</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
-                    </section>
-                </aside>
-            </div>
+            </section>
+            <section class="mt-10">
+                <div class="mb-6 flex items-center justify-between gap-4">
+                    <h2 class="text-2xl font-bold text-slate-950">Category Directory</h2>
+                    <a href="reviews_index.html" class="text-sm font-semibold text-slate-700 transition hover:text-slate-950">Open complete review index</a>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    {"".join(category_cards)}
+                </div>
+            </section>
+            <section class="mt-10">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-950">Featured Review Pages</h2>
+                    <p class="mt-2 text-sm text-slate-600">A selection of prominent, expanded, and recently updated reviews.</p>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    {"".join(featured_cards)}
+                </div>
+            </section>
         </section>
     """
     return page_shell(
@@ -892,6 +886,7 @@ def render_directory_page(groups: dict[str, list[dict[str, object]]], reviews: l
         accent="from-sky-700 via-blue-700 to-indigo-800",
         icon="fa-compass",
         stat_line=f"{len(reviews)} review pages across {len(CATEGORIES)} categories",
+        active="Research",
     )
 
 

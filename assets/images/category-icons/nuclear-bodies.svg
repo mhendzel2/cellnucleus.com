@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Nuclear bodies and compartments icon</title>
+  <desc id="desc">A transparent nucleus with distinct nucleolus, speckles, Cajal-body-like and PML-body-like compartments.</desc>
+  <ellipse cx="256" cy="256" rx="170" ry="132" fill="none" stroke="#f5d0fe" stroke-width="20"/>
+  <circle cx="216" cy="248" r="50" fill="#fde68a"/>
+  <circle cx="326" cy="214" r="28" fill="#bae6fd"/>
+  <circle cx="340" cy="320" r="38" fill="#fbcfe8"/>
+  <circle cx="174" cy="318" r="22" fill="#c4b5fd"/>
+  <circle cx="374" cy="266" r="16" fill="#ddd6fe"/>
+  <g fill="#ffffff">
+    <circle cx="278" cy="334" r="8"/>
+    <circle cx="296" cy="356" r="7"/>
+    <circle cx="304" cy="316" r="6"/>
+    <circle cx="166" cy="214" r="7"/>
+    <circle cx="188" cy="194" r="6"/>
+  </g>
+  <path d="M142 390c72 42 172 46 244 0" fill="none" stroke="#e9d5ff" stroke-width="12" stroke-linecap="round" opacity="0.82"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Nuclear transport and dynamics icon</title>
+  <desc id="desc">A transparent nucleus with bidirectional cargo transport through a pore.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="256" cy="256" rx="160" ry="116" stroke="#dbeafe" stroke-width="19"/>
+    <circle cx="256" cy="256" r="40" fill="#cffafe" stroke="#1e40af" stroke-width="9"/>
+    <path d="M96 256h104M164 218l38 38-38 38" stroke="#ffffff" stroke-width="17"/>
+    <path d="M416 256H312M348 218l-38 38 38 38" stroke="#ffffff" stroke-width="17"/>
+    <path d="M150 184c72 38 142 38 212 0" stroke="#bae6fd" stroke-width="10" opacity="0.82"/>
+  </g>
+  <g fill="#fde68a">
+    <circle cx="148" cy="184" r="16"/>
+    <circle cx="362" cy="328" r="16"/>
+    <circle cx="196" cy="344" r="13"/>
+  </g>
+</svg>

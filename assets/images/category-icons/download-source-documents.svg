@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Download source documents icon</title>
+  <desc id="desc">A transparent document stack with a download arrow and tray.</desc>
+  <path d="M176 86h132l66 66v190H176z" fill="#f8fafc"/>
+  <path d="M308 86v70h66" fill="#cbd5e1"/>
+  <g fill="#94a3b8">
+    <rect x="212" y="200" width="112" height="13" rx="6"/>
+    <rect x="212" y="234" width="136" height="13" rx="6"/>
+    <rect x="212" y="268" width="92" height="13" rx="6"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 166v132" stroke="#2563eb" stroke-width="24"/>
+    <path d="M214 258l42 42 42-42" stroke="#2563eb" stroke-width="24"/>
+    <path d="M132 378h248" stroke="#e2e8f0" stroke-width="30"/>
+  </g>
+</svg>
