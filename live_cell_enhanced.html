@@ -1,527 +1,970 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Live Cell Imaging Database - Enhanced | CellNucleus.com</title>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
     <style>
+
         .hover-scale { transition: transform 0.3s ease; }
+
         .hover-scale:hover { transform: scale(1.05); }
+
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+
         .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
         .methodology-card { transition: all 0.3s ease; border-left: 4px solid #3b82f6; }
+
         .methodology-card:hover { border-left-color: #1d4ed8; transform: translateY(-2px); }
+
     </style>
+
 <link rel="stylesheet" href="assets/css/cellnucleus-theme.css">
+
 <script defer src="assets/js/site-navigation.js"></script>
+
 </head>
+
 <body class="bg-gray-50 font-sans">
+
     <!-- Header -->
+
     <header class="gradient-bg text-white py-8">
+
         <div class="container mx-auto px-4">
+
             <div class="flex items-center justify-between">
+
                 <div>
+
                     <h1 class="text-4xl font-bold mb-2">Live Cell Imaging Database</h1>
+
                     <p class="text-xl opacity-90">Dynamic Nuclear Processes in Living Cells</p>
+
                 </div>
+
                 <div class="text-right">
+
                     <p class="text-lg">CellNucleus.com</p>
+
                     <p class="opacity-75">Enhanced Collection</p>
+
                 </div>
+
             </div>
+
         </div>
+
     </header>
 
     <!-- Navigation -->
+
     <nav class="bg-white shadow-md sticky top-0 z-50">
+
         <div class="container mx-auto px-4">
+
             <div class="flex flex-wrap items-center justify-between py-4">
+
                 <div class="flex items-center space-x-8">
+
                     <a href="#overview" class="text-blue-600 hover:text-blue-800 font-medium">Overview</a>
+
                     <a href="#methodologies" class="text-blue-600 hover:text-blue-800 font-medium">Methodologies</a>
+
                     <a href="#dynamic-processes" class="text-blue-600 hover:text-blue-800 font-medium">Dynamic Processes</a>
+
                     <a href="#comprehensive-reviews" class="text-blue-600 hover:text-blue-800 font-medium">Reviews</a>
+
                     <a href="#applications" class="text-blue-600 hover:text-blue-800 font-medium">Applications</a>
+
                 </div>
+
                 <a href="index.html" class="text-gray-600 hover:text-gray-800">
+
                     <i class="fas fa-home mr-2"></i>Back to Home
+
                 </a>
+
             </div>
+
         </div>
+
     </nav>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8"><div class="cn-review-status" style="margin:1rem 0;padding:1rem;border:1px solid #b45309;background:#fffbeb;color:#422006">Scientific status: unreviewed. This repair checks figure availability and page function; it does not validate the inherited scientific narrative or figure interpretation. <a href="review_audit.html">Review audit</a>.</div>
+
+    <main class="container mx-auto px-4 py-8"><div class="cn-review-status" style="margin:1rem 0;padding:1rem;border:1px solid #b45309;background:#fffbeb;color:#422006">Scientific narrative checked, 12 October 2026. Method descriptions and interpretation claims were revised against the sources below. Individual archive images and withdrawn figure attributions remain unverified. <a href="review_audit.html">Review audit</a>.</div>
+
         <!-- Overview Section -->
+
         <section id="overview" class="mb-12">
+
             <div class="bg-white rounded-lg card-shadow p-8">
+
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">
+
                     <i class="fas fa-microscope mr-3 text-blue-600"></i>
+
                     Studying Nuclear Dynamics in Living Cells
+
                 </h2>
-                
+
+
+
                 <div class="grid md:grid-cols-2 gap-8 items-center">
+
                     <div>
+
                         <p class="text-lg text-gray-700 mb-4">
-                            Live cell imaging has revolutionized our understanding of nuclear organization and dynamics. 
-                            By visualizing the living nucleus in real-time, we can observe the dynamic properties of the 
-                            genome and nuclear structures, revealing insights into transcription, replication, DNA repair, 
-                            and RNA processing that are impossible to obtain from fixed specimens.
-                        </p>
-                        
+
+                            Live imaging records changes over the acquisition interval. Reporter-based nuclear measurements include PCNA focus dynamics and single-molecule trajectories; each assay needs its own sampling and inference model.
+
+                         <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>. <a class="underline" href="https://doi.org/10.7554/eLife.33125">Tracking model and sampling study</a>.</p>
+
+
+
                         <div class="bg-blue-50 p-4 rounded-lg mb-4">
+
                             <h3 class="font-semibold text-blue-800 mb-2">Key Advantages:</h3>
+
                             <ul class="text-blue-700 space-y-1">
-                                <li>• Real-time observation of nuclear processes</li>
-                                <li>• Quantitative analysis of molecular kinetics</li>
-                                <li>• Single-cell resolution and heterogeneity</li>
-                                <li>• Temporal correlation of multiple processes</li>
+
+                                <li>Real-time observation of nuclear processes <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</li>
+
+                                <li>Quantitative analysis of molecular kinetics <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">FRAP model study</a>.</li>
+
+                                <li>Single-cell resolution and heterogeneity <a class="underline" href="https://doi.org/10.7554/eLife.33125">Tracking model and sampling study</a>.</li>
+
+                                <li>Temporal correlation of multiple processes <a class="underline" href="https://doi.org/10.1529/biophysj.103.038422">Costes et al. 2004</a>.</li>
+
                             </ul>
+
                         </div>
+
                     </div>
-                    
+
+
+
                     <div class="text-center">
+
                         <div class="rounded-lg border border-gray-300 p-4" style="overflow-wrap:anywhere"><p>Unavailable external figure withdrawn. The original figure attribution and reuse rights remain unverified.</p><p><a href="https://www.researchgate.net/publication/277489510/figure/fig3/AS:11431281177795699@1690614322914/The-GFP-tagged-PCNA-labels-subnuclear-DNA-replication-factories-A-The-subcellular.jpeg">Original ResearchGate figure address</a></p><p>Original label (unverified): GFP-tagged PCNA in replication factories</p></div>
+
                         <p class="text-sm text-gray-600 mt-2">GFP-tagged PCNA labels subnuclear DNA replication factories</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <!-- Methodologies Section -->
+
         <section id="methodologies" class="mb-12">
+
             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+
                 <i class="fas fa-cogs mr-3 text-green-600"></i>
+
                 Live Imaging Methodologies
+
             </h2>
-            
+
+
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
                 <!-- FRAP -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-chart-line text-3xl text-blue-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">FRAP Analysis</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Fluorescence Recovery After Photobleaching measures molecular diffusion and binding kinetics 
-                        within nuclear compartments.
-                    </p>
+
+                        Fluorescence recovery after photobleaching records replacement of bleached fluorescence. Diffusion and binding parameters can be estimated only with a suitable model and checks on geometry, bleaching and parameter identifiability.
+
+                     <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">FRAP model study</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Protein residence times, chromatin accessibility, 
-                        nuclear body dynamics
+
+                        <strong>Applications:</strong> Model-dependent mobility and association estimates; nuclear protein exchange
+
                     </div>
+
                 </div>
 
                 <!-- FCS -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-wave-square text-3xl text-green-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">FCS Techniques</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Fluorescence Correlation Spectroscopy analyzes fluctuations in fluorescence intensity 
-                        to measure molecular concentrations and dynamics.
-                    </p>
+
+                        Fluorescence correlation spectroscopy relates intensity fluctuations to a calibrated observation volume and a fluctuation model. It can estimate concentration and mobility; brightness, photophysics and model assumptions affect interpretation.
+
+                     <a class="underline" href="https://doi.org/10.1371/journal.pone.0005041">Dross et al. 2009</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Molecular counting, interaction analysis, 
-                        oligomerization states
+
+                        <strong>Applications:</strong> Calibrated concentration and mobility estimates; interaction or oligomerization claims need additional measurements
+
                     </div>
+
                 </div>
 
                 <!-- Time-lapse -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-clock text-3xl text-purple-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">Time-lapse Microscopy</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Long-term imaging of cellular processes to capture nuclear reorganization, 
-                        cell cycle progression, and stress responses.
-                    </p>
+
+                        Time-lapse recordings follow labelled nuclear structures over successive frames. PCNA recordings illustrate cell-cycle-dependent focus assembly and disassembly in the studied cell lines.
+
+                     <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Cell cycle analysis, stress response, 
+
+                        <strong>Applications:</strong> Cell cycle analysis, stress response,
+
                         developmental processes
+
                     </div>
+
                 </div>
 
                 <!-- Single-molecule -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-dot-circle text-3xl text-red-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">Single-Molecule Tracking</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Individual molecule visualization to understand local environments and 
-                        heterogeneity in nuclear processes.
-                    </p>
+
+                        Single-molecule tracking samples labelled molecular trajectories. Localization precision, missed fast particles, photobleaching and track assignment limit inferred motion and residence times.
+
+                     <a class="underline" href="https://doi.org/10.7554/eLife.33125">Tracking model and sampling study</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Transcription factor search, DNA repair tracking, 
+
+                        <strong>Applications:</strong> Transcription factor search, DNA repair tracking,
+
                         enzyme kinetics
+
                     </div>
+
                 </div>
 
                 <!-- Multicolor -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-palette text-3xl text-yellow-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">Multicolor Imaging</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Simultaneous visualization of multiple nuclear components to study 
-                        interactions and colocalization.
-                    </p>
+
+                        Multicolor imaging measures the relative positions of labelled components. Colocalization at the optical resolution limit does not establish direct molecular binding.
+
+                     <a class="underline" href="https://doi.org/10.1529/biophysj.103.038422">Costes et al. 2004</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Protein-protein interactions, pathway analysis, 
-                        nuclear organization
+
+                        <strong>Applications:</strong> Spatial association and organization; direct interactions require independent evidence
+
                     </div>
+
                 </div>
 
                 <!-- 4D Imaging -->
+
                 <div class="methodology-card bg-white p-6 rounded-lg card-shadow">
+
                     <div class="text-center mb-4">
+
                         <i class="fas fa-cube text-3xl text-indigo-600 mb-3"></i>
+
                         <h3 class="text-xl font-semibold">4D Microscopy</h3>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Three-dimensional imaging over time to capture the complete spatial-temporal 
-                        dynamics of nuclear processes.
-                    </p>
+
+                        Three-dimensional imaging over time samples labelled structures within the acquisition volume and time interval. Tracking models must account for out-of-focus loss and motion blur; multicolor measurements need registration and point-spread-function controls.
+
+                     <a class="underline" href="https://doi.org/10.7554/eLife.33125">Tracking model and sampling study</a>. <a class="underline" href="https://doi.org/10.1529/biophysj.103.038422">Costes et al. 2004</a>.</p>
+
                     <div class="bg-gray-50 p-3 rounded text-sm">
-                        <strong>Applications:</strong> Nuclear architecture, organelle dynamics, 
+
+                        <strong>Applications:</strong> Nuclear architecture, organelle dynamics,
+
                         chromosome movement
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <!-- Dynamic Processes Section -->
+
         <section id="dynamic-processes" class="mb-12">
+
             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+
                 <i class="fas fa-sync-alt mr-3 text-purple-600"></i>
+
                 Dynamic Nuclear Processes
+
             </h2>
-            
+
+
+
             <div class="grid lg:grid-cols-2 gap-8">
+
                 <!-- DNA Replication -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-2xl font-semibold mb-4 text-blue-800">DNA Replication Dynamics</h3>
+
                     <div class="mb-4">
-                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fncomms11231/MediaObjects/41467_2016_Article_BFncomms11231_Fig1_HTML.jpg" 
-                             alt="4D visualization of replication foci" 
+
+                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fncomms11231/MediaObjects/41467_2016_Article_BFncomms11231_Fig1_HTML.jpg"
+
+                             alt="4D visualization of replication foci"
+
                              class="w-full rounded-lg shadow-md hover-scale">
+
                         <p class="text-sm text-gray-600 mt-2">4D visualization of replication foci in mammalian cells</p>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Live imaging reveals the spatiotemporal organization of DNA replication into discrete 
-                        nuclear factories that change pattern and location throughout S-phase.
-                    </p>
+
+                        PCNA imaging follows replication-associated foci whose size, lifetime and distribution vary through S phase. In the tested cell lines, Leonhardt et al. reported focus assembly and disassembly rather than directional movement of stable factories. These optical foci do not individually resolve every replisome.
+
+                     <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</p>
+
                     <div class="bg-blue-50 p-4 rounded-lg">
+
                         <h4 class="font-semibold text-blue-800 mb-2">Key Observations:</h4>
+
                         <ul class="text-blue-700 text-sm space-y-1">
-                            <li>• Early S-phase: Small, punctate foci (euchromatin)</li>
-                            <li>• Mid S-phase: Larger foci at nuclear periphery</li>
-                            <li>• Late S-phase: Intense foci surrounding nucleolus</li>
-                            <li>• Dynamic protein exchange within stable factories</li>
+
+                            <li>Early S-phase: dispersed small foci in the illustrated pattern; activity and chromatin state require independent annotation <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</li>
+
+                            <li>Mid S-phase: changing peripheral and internal patterns, dependent on the cell and reporter <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</li>
+
+                            <li>Late S-phase: late-replicating heterochromatic patterns can include peripheral, perinucleolar and internal regions <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</li>
+
+                            <li>Focus lifetime, protein exchange and DNA synthesis are different observables <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>. <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">FRAP model study</a>.</li>
+
                         </ul>
+
                     </div>
+
                 </div>
 
                 <!-- Transcription Dynamics -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-2xl font-semibold mb-4 text-green-800">Transcriptional Dynamics</h3>
+
                     <div class="mb-4">
+
                         <div class="rounded-lg border border-gray-300 p-4" style="overflow-wrap:anywhere"><p>Unavailable external figure withdrawn. The original figure attribution and reuse rights remain unverified.</p><p><a href="https://www.researchgate.net/publication/6329399/figure/fig1/AS:667222578065422@1536089667825/Localization-of-DNA-replication-foci-and-PCNA-in-interphase-nuclei-of-individual-subphase.png">Original ResearchGate figure address</a></p><p>Original label (unverified): PCNA and replication foci dynamics</p></div>
-                        <p class="text-sm text-gray-600 mt-2">Localization of replication foci and PCNA in interphase nuclei</p>
+
+                        <p class="text-sm text-gray-600 mt-2">The withdrawn PCNA example concerns replication; it does not illustrate transcription.</p>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Real-time visualization of transcription reveals burst kinetics, polymerase trafficking, 
-                        and the formation of transcriptional condensates.
-                    </p>
+
+                        Reporter fluctuations can support inferred transcriptional bursting. Suter et al. used short-lived luciferase expressed from unstable mRNA and single-cell bioluminescence, with mathematical inference of gene-specific on/off kinetics. This is not a direct movie of nascent RNA or proof of phase separation.
+
+                     <a class="underline" href="https://doi.org/10.1126/science.1198817">Suter et al. 2011</a>.</p>
+
                     <div class="bg-green-50 p-4 rounded-lg">
+
                         <h4 class="font-semibold text-green-800 mb-2">Dynamic Features:</h4>
+
                         <ul class="text-green-700 text-sm space-y-1">
-                            <li>• Transcriptional bursting and stochastic activation</li>
-                            <li>• RNA polymerase II clustering and tracking</li>
-                            <li>• Nuclear speckle dynamics and splicing</li>
-                            <li>• Stress-induced transcriptional reorganization</li>
-                        </ul>
+<li>Gene-specific bursts and refractory inactive intervals were inferred in the reporter study. <a class="underline" href="https://doi.org/10.1126/science.1198817">Primary reporter study</a>.</li>
+<li>Reporter light output and transcriptional state are different observables. <a class="underline" href="https://doi.org/10.1126/science.1198817">Primary reporter study</a>.</li>
+<li>Cis-regulatory changes altered the inferred bursting kinetics. <a class="underline" href="https://doi.org/10.1126/science.1198817">Primary reporter study</a>.</li>
+<li>The PCNA example is replication-associated and supplies no transcription measurement. <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Leonhardt et al. 2000</a>.</li>
+</ul>
+
                     </div>
+
                 </div>
 
                 <!-- DNA Repair -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-2xl font-semibold mb-4 text-red-800">DNA Repair Focus Dynamics</h3>
+
                     <div class="mb-4">
+
                         <div class="rounded-lg border border-gray-300 p-4" style="overflow-wrap:anywhere"><p>Unavailable external figure withdrawn. The original figure attribution and reuse rights remain unverified.</p><p><a href="https://www.researchgate.net/publication/228116551/figure/fig10/AS:391693615550466@1470398443584/Evolution-of-DNA-damage-dependent-g-H2AX-green-and-53BP1-red-focus-formation-as.png">Original ResearchGate figure address</a></p><p>Original label (unverified): DNA damage foci evolution</p></div>
+
                         <p class="text-sm text-gray-600 mt-2">Evolution of DNA damage-dependent γ-H2AX and 53BP1 focus formation</p>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Live tracking of DNA repair foci reveals the temporal recruitment of repair factors 
-                        and the coordination of multiple repair pathways.
-                    </p>
+
+                        Live tracking of labelled repair factors can measure recruitment and focus persistence. Gamma-H2AX and 53BP1 are chromatin-signalling and recruitment readouts; focus disappearance alone is insufficient to establish restored DNA continuity or a particular completed repair pathway.
+
+                     <a class="underline" href="https://doi.org/10.1083/jcb.146.5.905">Rogakou et al. 1999</a>. <a class="underline" href="https://doi.org/10.15252/embj.2018101379">Kilic et al. 2019</a>.</p>
+
                     <div class="bg-red-50 p-4 rounded-lg">
+
                         <h4 class="font-semibold text-red-800 mb-2">Repair Dynamics:</h4>
+
                         <ul class="text-red-700 text-sm space-y-1">
-                            <li>• Hierarchical protein recruitment to damage sites</li>
-                            <li>• Focus formation and resolution kinetics</li>
-                            <li>• Checkpoint activation and signaling</li>
-                            <li>• Repair pathway choice and competition</li>
-                        </ul>
+<li>Gamma-H2AX domains report damage-associated chromatin signalling. <a class="underline" href="https://doi.org/10.1083/jcb.146.5.905">Primary chromatin-signalling study</a>.</li>
+<li>53BP1 recruitment identifies a repair-associated compartment. <a class="underline" href="https://doi.org/10.15252/embj.2018101379">Primary 53BP1 compartment study</a>.</li>
+<li>Focus persistence describes the reporter signal over time. <a class="underline" href="https://doi.org/10.15252/embj.2018101379">Primary 53BP1 compartment study</a>.</li>
+<li>Restored DNA continuity is not established by loss of either reporter signal alone; this is an inference limit. <a class="underline" href="https://doi.org/10.1083/jcb.146.5.905">Signalling readout</a>. <a class="underline" href="https://doi.org/10.15252/embj.2018101379">Recruitment readout</a>.</li>
+</ul>
+
                     </div>
+
                 </div>
 
                 <!-- Nuclear Bodies -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-2xl font-semibold mb-4 text-purple-800">Nuclear Body Dynamics</h3>
+
                     <div class="mb-4">
+
                         <div class="rounded-lg border border-gray-300 p-4" style="overflow-wrap:anywhere"><p>Unavailable external figure withdrawn. The original figure attribution and reuse rights remain unverified.</p><p><a href="https://www.researchgate.net/publication/277489510/figure/fig5/AS:11431281177786125@1690614323519/Dynamics-of-replication-factories-in-living-cells-A-Two-possible-models-to-explain-the.jpeg">Original ResearchGate figure address</a></p><p>Original label (unverified): Nuclear factory dynamics models</p></div>
+
                         <p class="text-sm text-gray-600 mt-2">Two models explaining nuclear factory dynamics in living cells</p>
+
                     </div>
+
                     <p class="text-gray-700 mb-4">
-                        Nuclear bodies exhibit complex dynamics including fusion, fission, movement, 
-                        and compositional changes throughout the cell cycle.
-                    </p>
+
+                        Different nuclear bodies can change position, shape or composition over time. Fusion-like appearances or fluorescence recovery do not alone determine material state or prove phase separation; body-specific measurements are needed.
+
+                     <a class="underline" href="https://doi.org/10.1016/j.cell.2016.04.047">Feric et al. 2016</a>. <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">FRAP model study</a>.</p>
+
                     <div class="bg-purple-50 p-4 rounded-lg">
+
                         <h4 class="font-semibold text-purple-800 mb-2">Body Behaviors:</h4>
+
                         <ul class="text-purple-700 text-sm space-y-1">
-                            <li>• Cajal body mobility and gene targeting</li>
-                            <li>• Nuclear speckle reorganization during stress</li>
-                            <li>• PML body formation and dissolution</li>
-                            <li>• Nucleolar dynamics during ribosome biogenesis</li>
-                        </ul>
+<li>Nucleolar layers were studied with in-vivo observations and separate in-vitro reconstitution. <a class="underline" href="https://doi.org/10.1016/j.cell.2016.04.047">Primary multiphase study</a>.</li>
+<li>FRAP recovery depends on exchange, internal mobility and the available fluorescent reservoir. <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">FRAP model study</a>.</li>
+<li>Fusion and internal mixing can occur on different timescales in reconstituted chromatin droplets. <a class="underline" href="https://doi.org/10.1016/j.cell.2019.08.037">Gibson et al. 2019</a>.</li>
+<li>A body-specific assay is needed before assigning a material state. <a class="underline" href="https://doi.org/10.1016/j.cell.2016.04.047">Primary nucleolar study</a>.</li>
+</ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <!-- Comprehensive Reviews Section -->
+
         <section id="comprehensive-reviews" class="mb-12">
+
             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+
                 <i class="fas fa-book-open mr-3 text-indigo-600"></i>
+
                 Comprehensive Reviews Collection
+
             </h2>
-            
+
+
+
             <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
+
                 <p class="text-lg text-gray-700 mb-6">
-                    Explore our extensive collection of comprehensive reviews covering all aspects of nuclear biology 
-                    and live cell imaging techniques. Each review provides in-depth analysis with the latest research findings.
+
+                    Explore our extensive collection of comprehensive reviews covering all aspects of nuclear biology
+
+                    and live cell imaging techniques. Each linked review records its evidence scope and unresolved questions.
+
                 </p>
-                
+
+
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
                     <!-- Live Cell Reviews -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+
                         <h3 class="font-semibold text-lg mb-2 text-blue-800">Live Cell Imaging</h3>
+
                         <ul class="text-sm space-y-2">
+
                             <li><a href="nuclear_biology_reviews/reviews/live-cell-transcription-imaging-review.html" class="text-blue-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Live Cell Transcription Imaging
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear-stress-response-review.html" class="text-blue-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Stress Response
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/intranuclear_transport_comprehensive_review.html" class="text-blue-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Intranuclear mRNA Transport
+
                             </a></li>
+
                         </ul>
+
                     </div>
 
                     <!-- DNA Dynamics -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+
                         <h3 class="font-semibold text-lg mb-2 text-green-800">DNA Dynamics</h3>
+
                         <ul class="text-sm space-y-2">
+
                             <li><a href="nuclear_biology_reviews/reviews/dna-replication-site-dynamics-review.html" class="text-green-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>DNA Replication Site Dynamics
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/dsb-repair-foci-comprehensive-review.html" class="text-green-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>DSB Repair Foci Architecture
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/chromatin_architecture_standardized_review.html" class="text-green-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Chromatin Architecture Dynamics
+
                             </a></li>
+
                         </ul>
+
                     </div>
 
                     <!-- Nuclear Bodies -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+
                         <h3 class="font-semibold text-lg mb-2 text-purple-800">Nuclear Bodies</h3>
+
                         <ul class="text-sm space-y-2">
+
                             <li><a href="nuclear_biology_reviews/reviews/cajal-bodies-comprehensive-review.html" class="text-purple-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Cajal Bodies Dynamics
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear-speckles-comprehensive-review.html" class="text-purple-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Speckles
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/paraspeckles-comprehensive-review.html" class="text-purple-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Paraspeckles
+
                             </a></li>
+
                         </ul>
+
                     </div>
 
                     <!-- Nuclear Architecture -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+
                         <h3 class="font-semibold text-lg mb-2 text-red-800">Nuclear Architecture</h3>
+
                         <ul class="text-sm space-y-2">
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear-envelope-comprehensive-review.html" class="text-red-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Envelope
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear_pore_complex_standardized_review.html" class="text-red-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Pore Complex
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear-lamina-comprehensive-review.html" class="text-red-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Lamina
+
                             </a></li>
+
                         </ul>
+
                     </div>
 
                     <!-- Condensates -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale">
+
                         <h3 class="font-semibold text-lg mb-2 text-yellow-800">Biomolecular Condensates</h3>
+
                         <ul class="text-sm space-y-2">
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear-condensates-comprehensive-review.html" class="text-yellow-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Condensates
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/transcriptional-condensates-comprehensive-review.html" class="text-yellow-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Transcriptional Condensates
+
                             </a></li>
+
                             <li><a href="nuclear_biology_reviews/reviews/nuclear_biophysics_comprehensive_review.html" class="text-yellow-600 hover:underline">
+
                                 <i class="fas fa-external-link-alt mr-1"></i>Nuclear Biophysical Properties
+
                             </a></li>
+
                         </ul>
+
                     </div>
 
                     <!-- Complete Collection -->
+
                     <div class="bg-white p-4 rounded-lg shadow-md hover-scale border-2 border-indigo-200">
+
                         <h3 class="font-semibold text-lg mb-2 text-indigo-800">Complete Collection</h3>
-                        <p class="text-sm text-gray-600 mb-3">Access all 25 comprehensive reviews</p>
+
+                        <p class="text-sm text-gray-600 mb-3">Browse the current research review index</p>
+
                         <a href="reviews_index.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
+
                             <i class="fas fa-list mr-2"></i>View All Reviews
+
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <!-- Applications Section -->
+
         <section id="applications" class="mb-12">
+
             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+
                 <i class="fas fa-flask mr-3 text-teal-600"></i>
+
                 Research Applications
+
             </h2>
-            
+
+
+
             <div class="grid lg:grid-cols-3 gap-6">
+
                 <!-- Basic Research -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-xl font-semibold mb-4 text-teal-800">Basic Research</h3>
+
                     <ul class="space-y-3 text-gray-700">
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+
                             <span>Nuclear organization mechanisms</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+
                             <span>Chromatin dynamics and regulation</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+
                             <span>Gene expression control</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-teal-600 mr-3 mt-1"></i>
+
                             <span>DNA repair pathway analysis</span>
+
                         </li>
+
                     </ul>
+
                 </div>
 
                 <!-- Disease Research -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-xl font-semibold mb-4 text-red-800">Disease Research</h3>
+
                     <ul class="space-y-3 text-gray-700">
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+
                             <span>Cancer cell nuclear abnormalities</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+
                             <span>Aging and senescence markers</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+
                             <span>Neurodegenerative processes</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-red-600 mr-3 mt-1"></i>
+
                             <span>Viral infection responses</span>
+
                         </li>
+
                     </ul>
+
                 </div>
 
                 <!-- Drug Development -->
+
                 <div class="bg-white rounded-lg card-shadow p-6">
+
                     <h3 class="text-xl font-semibold mb-4 text-blue-800">Drug Development</h3>
+
                     <ul class="space-y-3 text-gray-700">
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+
                             <span>Target identification and validation</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+
                             <span>Compound screening assays</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+
                             <span>Mechanism of action studies</span>
+
                         </li>
+
                         <li class="flex items-start">
+
                             <i class="fas fa-check-circle text-blue-600 mr-3 mt-1"></i>
+
                             <span>Toxicity and safety assessment</span>
+
                         </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </section>
 
         <!-- Footer Information -->
+
         <section class="bg-gray-800 text-white rounded-lg p-8">
+
             <div class="grid md:grid-cols-2 gap-8">
+
                 <div>
+
                     <h3 class="text-2xl font-bold mb-4">About This Database</h3>
+
                     <p class="text-gray-300 mb-4">
-                        This enhanced live cell imaging database integrates cutting-edge research with comprehensive 
-                        educational resources. All content is based on peer-reviewed research and provides both 
-                        methodological guidance and theoretical frameworks.
+
+                        This enhanced live cell imaging database integrates cutting-edge research with comprehensive
+
+                        educational resources. The revised teaching narrative links primary research and states interpretation limits. Specific archive figure attribution and experiment-to-image correspondence have not all been verified.
+
                     </p>
+
                     <p class="text-gray-300">
-                        Original content provided by the Michael Hendzel Laboratory, Department of Oncology, 
+
+                        Original content provided by the Michael Hendzel Laboratory, Department of Oncology,
+
                         University of Alberta, enhanced with comprehensive review collection.
+
                     </p>
+
                 </div>
-                
+
+
+
                 <div>
+
                     <h3 class="text-2xl font-bold mb-4">Navigation</h3>
+
                     <div class="grid grid-cols-2 gap-4 text-sm">
+
                         <div>
+
                             <a href="index.html" class="text-blue-300 hover:text-blue-100 block mb-2">Home</a>
+
                             <a href="reviews_index.html" class="text-blue-300 hover:text-blue-100 block mb-2">All Reviews</a>
+
                             <a href="structures_enhanced.html" class="text-blue-300 hover:text-blue-100 block mb-2">Structures Database</a>
+
                         </div>
+
                         <div>
+
                             <a href="#methodologies" class="text-blue-300 hover:text-blue-100 block mb-2">Methodologies</a>
+
                             <a href="#dynamic-processes" class="text-blue-300 hover:text-blue-100 block mb-2">Dynamic Processes</a>
+
                             <a href="#applications" class="text-blue-300 hover:text-blue-100 block mb-2">Applications</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
-            
+
+
+
             <div class="border-t border-gray-700 pt-6 mt-6 text-center text-gray-400">
+
                 <p>&copy; 2007-2025 Michael J. Hendzel, Ph.D., Department of Oncology, University of Alberta</p>
+
                 <p class="mt-2">Enhanced with comprehensive nuclear biology review collection</p>
+
             </div>
+
         </section>
-    </main>
+
+    <section id="scientific-evidence-2026" aria-labelledby="live-evidence-heading" class="bg-white rounded-lg p-6 mb-12 border border-gray-200">
+<h2 id="live-evidence-heading" class="text-2xl font-bold mb-4">Evidence behind the interpretation notes</h2>
+<p class="mb-3">Primary publication identities and reported findings were checked through Scite, with method searches in SciSpace and Consensus. Several full-text requests returned abstract-only records; numerical constants and detailed controls from inaccessible Results were not inferred.</p>
+<ul class="list-disc pl-5 space-y-2">
+<li>Leonhardt et al. (2000), <a class="underline" href="https://doi.org/10.1083/jcb.149.2.271">Dynamics of DNA replication factories in living cells</a>: PCNA-labelled foci in defined cell lines.</li>
+<li>Sprague et al. (2004), <a class="underline" href="https://doi.org/10.1529/biophysj.103.026765">Analysis of binding reactions by FRAP</a>: recovery-model and parameter-estimation limits.</li>
+<li>Magde, Elson and Webb (1972), <a class="underline" href="https://doi.org/10.1103/PhysRevLett.29.705">Fluorescence correlation spectroscopy</a>: publication identity checked for the fluctuation method; this audit does not independently calibrate any displayed measurement.</li>
+<li>Rogakou et al. (1999), <a class="underline" href="https://doi.org/10.1083/jcb.146.5.905">Megabase chromatin domains in the DNA double-strand-break response</a>, and Kilic et al. (2019), <a class="underline" href="https://doi.org/10.15252/embj.2018101379">53BP1 repair compartments</a>: primary abstracts checked for signalling and recruitment. The limit on inferring completed repair is a measurement interpretation, rather than a new endpoint demonstrated by these abstracts.</li>
+</ul><p class="mt-4 text-sm text-gray-600">Image provenance, permissions and the molecular labels of individual archived examples remain partial. Temporal correlation, optical colocalization and successful model fitting each require their own interpretation.</p>
+</section>
+</main>
+
 <footer aria-label="Site ownership">
+
 <p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="about.html">About</a> &middot; <a href="review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+
 </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Genome Causality: Structure vs. Function — CellNucleus.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .evidence-bar { height: 8px; border-radius: 4px; background: #e5e7eb; overflow: hidden; }
+        .evidence-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+        .verdict-strong   { background:#d1fae5; color:#065f46; }
+        .verdict-moderate { background:#fef3c7; color:#92400e; }
+        .verdict-contested{ background:#fee2e2; color:#991b1b; }
+        .verdict-refuted  { background:#f3f4f6; color:#374151; }
+        .section-card { border-left: 3px solid #f59e0b; }
+    </style>
+<!-- HYPOTHESIS_REVIEW_META:START -->
+<meta name="description" content="Primary-study appraisal of 3D genome causality at the EPHA4 developmental locus and after acute CTCF/cohesin/WAPL depletion in mouse stem cells.">
+<link rel="canonical" href="https://cellnucleus.com/hypothesis_reviews/3d-genome-causality.html">
+<link rel="stylesheet" href="../assets/css/hypothesis-review-updates.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://cellnucleus.com/hypothesis_reviews/3d-genome-causality.html",
+  "url": "https://cellnucleus.com/hypothesis_reviews/3d-genome-causality.html",
+  "name": "3D Genome Causality: Structure vs. Function",
+  "description": "Primary-study appraisal of 3D genome causality at the EPHA4 developmental locus and after acute CTCF/cohesin/WAPL depletion in mouse stem cells.",
+  "inLanguage": "en",
+  "dateModified": "2026-09-19",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "CellNucleus Hypothesis Review Index",
+    "url": "https://cellnucleus.com/hypothesis_reviews_index.html"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "3D genome causality"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gnometrix Labs",
+    "url": "https://cellnucleus.com"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "contentUrl": "https://cellnucleus.com/assets/images/review-figures/3d-genome-causality.png",
+    "caption": "Conceptual figure supporting the 3D Genome Causality: Structure vs. Function review."
+  }
+}
+</script>
+<!-- HYPOTHESIS_REVIEW_META:END -->
+<link rel="stylesheet" href="../assets/css/cellnucleus-theme.css">
+<script defer src="../assets/js/site-navigation.js"></script>
+<style id="cn-audit-layout">section[id],article[id],h2[id],h3[id]{scroll-margin-top:5rem}@media(max-width:767px){body>aside.cn-review-status{padding-top:3.5rem!important}}</style>
+</head>
+<body class="bg-gray-50">
+
+<header class="bg-white shadow-sm border-b sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="../index.html" class="flex items-center">
+                <img src="../assets/images/logo.png" alt="CellNucleus logo" class="h-10 w-auto mr-3">
+                <span class="text-xl font-bold text-gray-900">CellNucleus.com</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white p-1 text-sm font-semibold">
+                <a href="../index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                <a href="../reviews_index.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Reviews</a>
+                <a href="../hypothesis_reviews_index.html" class="rounded-full bg-amber-50 px-3 py-2 text-amber-700">Hypothesis</a>
+                <a href="../research_reviews_directory.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Research</a>
+                <a href="../structures_enhanced.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Nuclear Structure</a>
+                <a href="../downloads.html" class="rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">Downloads</a>
+            </nav>
+        </div>
+    </nav>
+</header>
+
+<div class="bg-amber-50 border-b border-amber-100 py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-amber-800 flex items-center gap-2">
+        <a href="../index.html" class="hover:underline">Home</a>
+        <i class="fas fa-chevron-right text-amber-400"></i>
+        <a href="../hypothesis_reviews_index.html" class="hover:underline">Hypothesis Reviews</a>
+        <i class="fas fa-chevron-right text-amber-400"></i>
+        <span class="font-semibold">Genome Organization Hypotheses</span>
+    </div>
+</div>
+
+<section class="py-12 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
+    <div class="hypothesis-hero-pattern" aria-hidden="true">
+        <img src="../assets/images/review-figures/hypothesis-review-hero-lattice.png" alt="Conceptual comparison of structure-to-function and function-to-structure models of 3D genome causality." width="1600" height="520" decoding="async" loading="lazy" decoding="async" data-figure-role="conceptual-schematic" aria-describedby="figure-3d-genome-causality-boundary">
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-amber-500 bg-opacity-20 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500 border-opacity-30">Genome Organization Hypotheses</span>
+            <span class="verdict-moderate text-xs font-semibold px-3 py-1 rounded-full">Locus- and time-dependent effects</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-3">3D Genome Causality: Structure vs. Function</h1>
+        <p class="text-slate-300 text-base mb-6">What targeted boundary rearrangements and acute architectural-protein depletion can establish about gene regulation</p>
+        <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+            <span><i class="fas fa-calendar mr-1"></i>Earlier text appraisal: 3 October 2026</span>
+            <span><i class="fas fa-file-alt mr-1"></i>Separate archived document available</span>
+            <span><i class="fas fa-user mr-1"></i>CellNucleus Hypothesis Review Series</span>
+        </div>
+    </div>
+</section>
+
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+<aside class="cn-review-status" aria-label="Scientific review status" style="max-width:72rem;margin:1rem auto;padding:1rem;border:1px solid #286449;background:#effaf3;color:#173e2b;overflow-wrap:anywhere"><strong>Scientific text and primary references rechecked &middot; 12 October 2026.</strong> <span>Scientific factual paragraphs link to primary studies. The independent audit records reference identity, claim fit and access depth, including abstract-only and selected-passage limits. Linked source documents and raw data remain separate work.</span> <a href="../review_audit.html#3d-genome-causality" style="text-decoration:underline">See audit scope and evidence</a>.</aside>
+<article class="space-y-8">
+<section id="causal-question" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">1. Define the causal claim</h2>
+<p class="mt-4 leading-7 text-slate-700">A structural contribution to regulation means that an intervention changes a specified architectural feature and a relevant expression outcome. It is stronger evidence than contact and expression merely covarying. Two useful tests are rearranging a regulatory boundary at a developmental locus and acutely removing architectural proteins while measuring both contacts and nascent transcription. Neither test automatically answers whether structure always precedes function throughout the genome. <a class="underline text-teal-700" href="#ref-lupianez2015">[1]</a> <a class="underline text-teal-700" href="#ref-hsieh2022">[2]</a></p>
+</section>
+<section id="developmental-locus" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">2. A developmental locus where boundary context matters</h2>
+<p class="mt-4 leading-7 text-slate-700">Lupiáñez and colleagues investigated human limb-malformation variants around WNT6, IHH, EPHA4 and PAX3 and engineered corresponding mouse rearrangements. Mouse embryonic limb 4C profiles and expression measurements showed ectopic contacts and activation of neighboring genes by the Epha4 regulatory neighborhood. Comparisons with deletions that spared the boundary region retained normal rather than ectopic expression of the relevant neighboring genes. This supports a causal contribution of boundary-containing sequence at this locus. <a class="underline text-teal-700" href="#ref-lupianez2015">[1]</a></p>
+<p class="mt-4 leading-7 text-slate-700">The rearrangements change genomic neighborhood and sequence as well as measured contacts. They therefore do not isolate physical geometry as the sole cause. Patient fibroblast contact profiles also cannot substitute for a direct expression measurement in human embryonic limbs. The primary abstract and figure legends were accessible here; full methods and supplementary analysis were not appraised. <a class="underline text-teal-700" href="#ref-lupianez2015">[1]</a></p>
+</section>
+<section id="acute-maintenance" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">3. Structural disruption need not immediately erase expression</h2>
+<p class="mt-4 leading-7 text-slate-700">Hsieh and colleagues depleted CTCF, RAD21 or WAPL for three hours in mouse embryonic stem cells, combining Micro-C with nascent and total RNA profiling. Removing CTCF or RAD21 strongly disrupted structural-loop features, while most enhancer–promoter contacts and gene expression remained largely maintained. The result includes a weak overall reduction in enhancer–promoter contacts and a responsive subset; it is not a claim of zero effect. <a class="underline text-teal-700" href="#ref-hsieh2022">[2]</a></p>
+<p class="mt-4 leading-7 text-slate-700">This tests short-term maintenance in an existing stem-cell state. It leaves open roles in establishing regulatory contacts, during differentiation, or after longer depletion. The authors' proposed time-buffering or molecular-memory explanation is a model, not a mechanism proven by these measurements. Moreover, a focal contact signal does not require a permanently loop-shaped enhancer–promoter configuration. <a class="underline text-teal-700" href="#ref-hsieh2022">[2]</a></p>
+</section>
+<section id="causality-assessment" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">4. Assessment: avoid a universal causal arrow</h2>
+<p class="mt-4 leading-7 text-slate-700">These results can coexist: a particular developmental boundary can restrain inappropriate enhancer action, while many established contacts and transcripts persist during short architectural-factor depletion. They support locus- and time-dependent architectural effects. They do not establish a genome-wide structure-first, transcription-first or inevitable bidirectional feedback mechanism. A causal statement should name the locus, intervention, time window and expression readout that support it. <a class="underline text-teal-700" href="#ref-lupianez2015">[1]</a> <a class="underline text-teal-700" href="#ref-hsieh2022">[2]</a></p>
+</section>
+
+<section id="scientific-audit-update" class="rounded-2xl border border-teal-200 bg-teal-50 p-6 mt-6" data-audit-date="2026-10-12"><h2 class="text-2xl font-semibold mb-4">Regulatory activation can also shape a contact pattern — 12 October 2026</h2><p class="mt-3 leading-7">In zebrafish embryos, Galitsyna and colleagues reported enhancer-associated Hi-C “fountains” during zygotic genome activation. Removing pioneer transcription factors reduced these patterns, linking an enhancer-activation perturbation to architectural change in that setting. A proposed mechanism involving facilitated cohesin loading and desynchronized extrusion came from polymer simulations. This adds evidence for regulatory activity influencing folding, while preserving the distinction between the measured contact pattern and its mechanistic model. <a class="underline text-teal-700" href="#ref-update-fountains">Galitsyna et al. (2026)</a>.</p><p class="mt-3 text-sm">This addition uses primary studies. Access depth and claim limits are recorded with each added reference; it is a dated literature appraisal, not independent experimental replication.</p></section>
+<section id="references" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">Primary studies and review scope</h2><ol class="mt-4 list-decimal pl-6 leading-7 text-slate-700"><li id="ref-lupianez2015" class="mt-3"><a class="underline text-teal-700" href="https://pubmed.ncbi.nlm.nih.gov/25959774/">Lupiáñez et al. (2015), Cell 161:1012–1025. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions.</a> DOI: 10.1016/j.cell.2015.04.004. Primary research.</li>
+<li id="ref-hsieh2022" class="mt-3"><a class="underline text-teal-700" href="https://www.nature.com/articles/s41588-022-01223-8">Hsieh et al. (2022), Nature Genetics 54:1919–1932. Enhancer–promoter interactions and transcription are largely maintained upon acute loss of CTCF, cohesin, WAPL or YY1.</a> DOI: 10.1038/s41588-022-01223-8. Primary research.</li><li id="ref-update-fountains" class="mt-4">Galitsyna AA, Ulianov SV, et al. (2026). Extrusion fountains are hallmarks of chromosome organization emerging upon zygotic genome activation. Nature Communications 17. <a class="underline" href="https://doi.org/10.1038/s41467-026-69105-9">DOI: 10.1038/s41467-026-69105-9</a>. Primary research. <p class="mt-2 text-sm">Independent update access: Consensus fetched primary abstract and Scite primary abstract inspected; full Results and supplements not independently appraised. <a class="underline" href="https://doi.org/10.1038/s41467-026-69105-9">Primary source</a>.</p></li></ol><p class="mt-4 text-sm leading-6 text-slate-600">The retained scientific text and the identity and fit of these references were checked on 3 October 2026. The discussion covers these experiments rather than an exhaustive literature search. Source-access limits and outstanding work are recorded in the audit.</p></section>
+</article>
+<section aria-labelledby="research-updates-3d-genome-causality" class="research-updates" id="research-updates">
+<p class="research-updates__eyebrow">Evidence watch</p>
+<h2 id="research-updates-3d-genome-causality">Research updates</h2><p class="cn-watch-status">Scan execution, cadence, digest operation and public-feed curation are unverified. The labels below describe proposed editorial policy.</p>
+<p class="research-updates__lead">
+    A weekly literature watch is proposed for <strong>Genome Organization Hypotheses</strong>.
+    Proposed feed policy: additions require curator review, with no automatic verdict change. Feed operation and curation are unverified.
+  </p>
+<dl class="research-updates__facts">
+<div><dt>Scan cadence</dt><dd>Proposed weekly scan; execution unverified</dd></div>
+<div><dt>Proposed publication policy</dt><dd>Curator-reviewed additions only</dd></div>
+<div><dt>Proposed verdict handling</dt><dd>No automatic score or conclusion change</dd></div>
+</dl>
+
+<p><a class="research-updates__link" href="../hypothesis_reviews_updates.html">Read the update criteria and archive →</a></p>
+<p class="mt-4 text-sm leading-6 text-slate-600">The inherited update was withdrawn from this edition because its scientific claims have not been appraised in this page’s retained evidence set. The update criteria and archive remain available.</p></section>
+<section class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 border border-amber-200">
+<div class="flex flex-col md:flex-row md:items-center gap-6">
+<div class="flex-1">
+<h2 class="text-lg font-bold text-gray-900 mb-1">Archived review document</h2>
+<p class="text-gray-600 text-sm">This separate source document has not been updated or scientifically validated with the text above.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+<a class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors" href="https://drive.google.com/drive/folders/19GaDO1OKtaWOv6qG39f5h1Ywy578ESP6?usp=drive_link" target="_blank">
+<i class="fab fa-google-drive mr-2"></i>Open in Drive
+                </a>
+<a class="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-700 font-semibold text-sm px-5 py-2.5 rounded-lg border border-gray-300 transition-colors" href="../downloads.html">
+<i class="fas fa-file-pdf mr-2 text-red-500"></i>PDF Export
+                </a>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-lg font-bold text-gray-900 mb-4">Related Reviews</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<a class="block bg-white border border-gray-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all" href="loop-extrusion-model.html">
+<div class="text-xs text-amber-600 font-semibold mb-1">Genome Organization Hypotheses</div>
+<h3 class="text-gray-900 font-bold text-sm leading-snug">Loop Extrusion Model: Evidence Review</h3>
+</a>
+<a class="block bg-white border border-gray-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all" href="tads-functional-units.html">
+<div class="text-xs text-amber-600 font-semibold mb-1">Genome Organization Hypotheses</div>
+<h3 class="text-gray-900 font-bold text-sm leading-snug">TADs: Functional Units or Overstatement?</h3>
+</a>
+<a class="block bg-white border border-gray-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all" href="llps-ab-compartments.html">
+<div class="text-xs text-amber-600 font-semibold mb-1">Phase Separation &amp; Nuclear Bodies</div>
+<h3 class="text-gray-900 font-bold text-sm leading-snug">LLPS &amp; A/B Compartment Hypothesis</h3>
+</a>
+</div>
+</section>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 text-sm py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-4">
+        <div><span class="text-white font-bold">CellNucleus.com</span> — Nuclear Biology Research Hub</div>
+        <div class="flex gap-6">
+            <a href="../index.html" class="hover:text-white">Home</a>
+            <a href="../hypothesis_reviews_index.html" class="hover:text-white">Hypothesis Reviews</a>
+            <a href="../downloads.html" class="hover:text-white">Downloads</a>
+        </div>
+    </div>
+
+<p class="cn-ownership" style="margin:1rem 0;padding:1rem;overflow-wrap:anywhere">CellNucleus.com is owned and operated by <a href="https://www.gnometrix.com/">Gnometrix Labs</a>. <a href="../about.html">About</a> &middot; <a href="../review_audit.html">Review audit</a> &middot; <a href="mailto:cellnucleus@gnometrix.com">cellnucleus@gnometrix.com</a></p>
+</footer>
+</body>
+</html>
