@@ -5,7 +5,7 @@
     "hypothesis": 17,
     "supplemental": 3,
     "review_reference_appraisals": 435,
-    "distinct_primary_studies_including_supplemental": 160
+    "distinct_primary_studies_including_supplemental": 159
   },
   "source_policy": "Scientific citations are primary experimental, observational, mathematical or method studies. Seminal reviews are eligible but none were required by this update. Correction notices accompany the affected primary papers as publication provenance.",
   "scope": "Current HTML scientific narrative, claim fit and citation identities; source access varies as recorded. No certification of raw data, supplements, archived Word drafts or individual media provenance.",
@@ -5751,21 +5751,21 @@
           "url": "https://doi.org/10.1038/s41586-021-03992-4",
           "source_type": "primary_study",
           "title": "",
-          "access_depth": "Scite metadata",
-          "claim_fit": "atlas publication identity"
+          "access_depth": "Scite metadata plus primary PubMed abstract and selected figure descriptions read, PMID34616045; full Methods not appraised.",
+          "claim_fit": "Ten whole-cell/tissue atlas datasets, FIB-SEM 4nm isotropic voxels and OpenOrganelle resource; individual local assets not authenticated."
         },
         {
           "doi": "10.1038/s41586-021-03977-3",
           "url": "https://doi.org/10.1038/s41586-021-03977-3",
           "source_type": "primary_study",
           "title": "",
-          "access_depth": "Scite metadata",
-          "claim_fit": "separate segmentation publication identity"
+          "access_depth": "Scite metadata plus primary PubMed abstract read, PMID34616042; full Methods not appraised.",
+          "claim_fit": "Original organelle annotations, deep-learning segmentation in4nm/8nm volumes, correlative registration; no authentication of every local crop."
         },
         {
           "doi": "10.1038/s41586-021-04132-8",
           "url": "https://doi.org/10.1038/s41586-021-04132-8",
-          "source_type": "primary_study",
+          "source_type": "editorial_notice",
           "title": "",
           "access_depth": "publisher correction notice full body at Nature lines 53-56",
           "claim_fit": "damaged supplementary video and axis-label formatting; no crop verification"
