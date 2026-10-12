@@ -1,0 +1,39 @@
+.cn-current-review{max-width:58rem;margin:0 auto;padding:2rem 1.5rem 4rem;color:#243f48;font-family:Inter,Aptos,system-ui,sans-serif}
+.cn-current-review nav{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.4rem;font-size:.92rem}
+.cn-current-review a{color:#087b78;text-decoration:underline;text-underline-offset:.15em}
+.cn-current-review header{padding:1.8rem 0 2rem;border-bottom:1px solid #b8d1d0}
+.cn-current-review .edition{font-size:.85rem;letter-spacing:.045em;text-transform:uppercase;color:#087b78;font-weight:650}
+.cn-current-review h1{font-size:clamp(2rem,4.3vw,3.1rem);line-height:1.15;color:#173b4c;margin:.8rem 0 1rem}
+.cn-current-review .subtitle{font-size:1.22rem;color:#527077;line-height:1.6;margin-bottom:1.4rem}
+.cn-current-review .download{display:inline-block;padding:.8rem 1rem;background:#087b78;color:#fff;border-radius:.4rem;text-decoration:none;font-weight:650}
+.cn-current-review section{margin:2.3rem 0;scroll-margin-top:1.5rem}
+.cn-current-review h2{font-size:1.55rem;color:#173b4c;line-height:1.3;margin:1.9rem 0 1rem}
+.cn-current-review p,.cn-current-review li{font-size:1rem;line-height:1.85;margin:.8rem 0}
+.cn-current-review ul,.cn-current-review ol{padding-left:1.5rem}
+.cn-current-review .abstract{background:#eaf3f3;border-radius:.5rem;padding:1.25rem 1.5rem}
+.cn-current-review .abstract h2{margin-top:.2rem}
+.cn-current-review .contents{display:block;border:1px solid #b8d1d0;border-radius:.5rem;padding:1rem 1.5rem;margin:2rem 0}
+.cn-current-review .contents h2{margin-top:.2rem}
+.cn-current-review .contents li{font-size:.95rem;line-height:1.5;margin:.4rem 0}
+.cn-current-review .citation{font-size:.83em;white-space:nowrap;font-weight:600}
+.cn-current-review .table-scroll{overflow-x:auto;border:1px solid #b8d1d0;border-radius:.35rem;margin:1.2rem 0}
+.cn-current-review table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:32rem}
+.cn-current-review th,.cn-current-review td{text-align:left;vertical-align:top;padding:.85rem;border-bottom:1px solid #d7e4e3;line-height:1.65}
+.cn-current-review th{background:#eaf3f3;color:#173b4c;font-weight:700}
+.cn-current-review tr:last-child td{border-bottom:0}
+.cn-current-review .references{list-style:none;padding-left:0;overflow-wrap:anywhere}
+.cn-current-review .references>li{border-bottom:1px solid #d7e4e3;padding:1rem 0;scroll-margin-top:1.5rem}
+.cn-current-review .reference-number{font-weight:700;color:#087b78}
+.cn-current-review details{margin-top:.8rem;font-size:.88rem}
+.cn-current-review details p{font-size:.88rem;line-height:1.7}
+.cn-current-review summary{cursor:pointer;font-weight:600;color:#527077}
+.cn-current-review .archive{border:1px solid #d7e4e3;padding:1rem;border-radius:.4rem}
+.cn-current-review footer{margin-top:3rem;border-top:1px solid #b8d1d0;padding-top:1rem}
+.cn-edition-library{max-width:72rem}
+.cn-edition-library .edition-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,21rem),1fr));gap:1.2rem}
+.cn-edition-library .edition-card{background:white;border:1px solid #b8d1d0;border-radius:.45rem;padding:1.3rem;display:flex;flex-direction:column}
+.cn-edition-library .edition-card h3{font-size:1.2rem;line-height:1.4;color:#173b4c;margin:0}
+.cn-edition-library .edition-card p{font-size:.92rem;line-height:1.7}
+.cn-edition-library .edition-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:auto;padding-top:.7rem}
+@media(max-width:600px){.cn-current-review{padding:1.2rem 1rem 3rem}.cn-current-review .abstract,.cn-current-review .contents{padding:1rem}.cn-current-review p,.cn-current-review li{line-height:1.75}}
+@media print{.cn-current-review{max-width:none;margin:0;padding:0}.cn-current-review nav,.cn-current-review .download,.cn-current-review .archive{display:none}.cn-current-review a{color:inherit}.cn-current-review table{min-width:0}.cn-current-review h2{break-after:avoid}}
